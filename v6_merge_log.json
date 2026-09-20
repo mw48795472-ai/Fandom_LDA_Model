@@ -1,0 +1,950 @@
+{
+  "before_total": 2403,
+  "after_total": 2598,
+  "actual_multiplier": 1.0811,
+  "target_multiplier": 2.0,
+  "fandoms_touched": 69,
+  "fandoms_untouched": [
+    "장윤정",
+    "정동원",
+    "김연자",
+    "나훈아",
+    "카더가든",
+    "Zion.T",
+    "이효리",
+    "엄정화",
+    "볼빨간사춘기",
+    "이승철",
+    "거미",
+    "린",
+    "백지영",
+    "김동률",
+    "조용필",
+    "박효신",
+    "NCT",
+    "동방신기",
+    "빅뱅",
+    "EXO",
+    "슈퍼주니어",
+    "샤이니",
+    "여자친구",
+    "STAYC",
+    "레드벨벳",
+    "엔믹스",
+    "마마무",
+    "아이오아이",
+    "Hearts2Hearts",
+    "워너원",
+    "아일릿"
+  ],
+  "dup_skipped": 144,
+  "per_fandom": [
+    {
+      "fandom": "이영지",
+      "new_bullets_added": 11,
+      "total_after": 39
+    },
+    {
+      "fandom": "지드래곤 (G-Dragon)",
+      "new_bullets_added": 9,
+      "total_after": 46
+    },
+    {
+      "fandom": "지코",
+      "new_bullets_added": 6,
+      "total_after": 32
+    },
+    {
+      "fandom": "박재범",
+      "new_bullets_added": 6,
+      "total_after": 25
+    },
+    {
+      "fandom": "pH-1",
+      "new_bullets_added": 2,
+      "total_after": 13
+    },
+    {
+      "fandom": "다이나믹듀오",
+      "new_bullets_added": 4,
+      "total_after": 20
+    },
+    {
+      "fandom": "에픽하이",
+      "new_bullets_added": 3,
+      "total_after": 17
+    },
+    {
+      "fandom": "창모",
+      "new_bullets_added": 2,
+      "total_after": 13
+    },
+    {
+      "fandom": "사이먼도미닉",
+      "new_bullets_added": 1,
+      "total_after": 13
+    },
+    {
+      "fandom": "BE'O",
+      "new_bullets_added": 1,
+      "total_after": 16
+    },
+    {
+      "fandom": "악동뮤지션",
+      "new_bullets_added": 4,
+      "total_after": 27
+    },
+    {
+      "fandom": "임영웅",
+      "new_bullets_added": 10,
+      "total_after": 50
+    },
+    {
+      "fandom": "송가인",
+      "new_bullets_added": 3,
+      "total_after": 27
+    },
+    {
+      "fandom": "영탁",
+      "new_bullets_added": 3,
+      "total_after": 37
+    },
+    {
+      "fandom": "김호중",
+      "new_bullets_added": 5,
+      "total_after": 41
+    },
+    {
+      "fandom": "이찬원",
+      "new_bullets_added": 3,
+      "total_after": 39
+    },
+    {
+      "fandom": "장윤정",
+      "new_bullets_added": 0,
+      "total_after": 24
+    },
+    {
+      "fandom": "정동원",
+      "new_bullets_added": 0,
+      "total_after": 32
+    },
+    {
+      "fandom": "김연자",
+      "new_bullets_added": 0,
+      "total_after": 28
+    },
+    {
+      "fandom": "나훈아",
+      "new_bullets_added": 0,
+      "total_after": 32
+    },
+    {
+      "fandom": "god",
+      "new_bullets_added": 6,
+      "total_after": 31
+    },
+    {
+      "fandom": "HOT",
+      "new_bullets_added": 4,
+      "total_after": 28
+    },
+    {
+      "fandom": "잭스키스",
+      "new_bullets_added": 1,
+      "total_after": 25
+    },
+    {
+      "fandom": "보아",
+      "new_bullets_added": 4,
+      "total_after": 20
+    },
+    {
+      "fandom": "싸이",
+      "new_bullets_added": 6,
+      "total_after": 29
+    },
+    {
+      "fandom": "아이유",
+      "new_bullets_added": 4,
+      "total_after": 25
+    },
+    {
+      "fandom": "비비",
+      "new_bullets_added": 4,
+      "total_after": 23
+    },
+    {
+      "fandom": "윤하",
+      "new_bullets_added": 4,
+      "total_after": 25
+    },
+    {
+      "fandom": "헤이즈",
+      "new_bullets_added": 5,
+      "total_after": 13
+    },
+    {
+      "fandom": "한로로",
+      "new_bullets_added": 5,
+      "total_after": 17
+    },
+    {
+      "fandom": "청하",
+      "new_bullets_added": 4,
+      "total_after": 24
+    },
+    {
+      "fandom": "최예나",
+      "new_bullets_added": 12,
+      "total_after": 36
+    },
+    {
+      "fandom": "권은비",
+      "new_bullets_added": 9,
+      "total_after": 33
+    },
+    {
+      "fandom": "츄",
+      "new_bullets_added": 6,
+      "total_after": 34
+    },
+    {
+      "fandom": "10CM",
+      "new_bullets_added": 1,
+      "total_after": 34
+    },
+    {
+      "fandom": "카더가든",
+      "new_bullets_added": 0,
+      "total_after": 29
+    },
+    {
+      "fandom": "Zion.T",
+      "new_bullets_added": 0,
+      "total_after": 22
+    },
+    {
+      "fandom": "이효리",
+      "new_bullets_added": 0,
+      "total_after": 28
+    },
+    {
+      "fandom": "엄정화",
+      "new_bullets_added": 0,
+      "total_after": 26
+    },
+    {
+      "fandom": "볼빨간사춘기",
+      "new_bullets_added": 0,
+      "total_after": 26
+    },
+    {
+      "fandom": "Crush",
+      "new_bullets_added": 6,
+      "total_after": 34
+    },
+    {
+      "fandom": "성시경",
+      "new_bullets_added": 5,
+      "total_after": 34
+    },
+    {
+      "fandom": "케이윌",
+      "new_bullets_added": 5,
+      "total_after": 31
+    },
+    {
+      "fandom": "이승철",
+      "new_bullets_added": 0,
+      "total_after": 14
+    },
+    {
+      "fandom": "거미",
+      "new_bullets_added": 0,
+      "total_after": 15
+    },
+    {
+      "fandom": "린",
+      "new_bullets_added": 0,
+      "total_after": 13
+    },
+    {
+      "fandom": "백지영",
+      "new_bullets_added": 0,
+      "total_after": 15
+    },
+    {
+      "fandom": "김동률",
+      "new_bullets_added": 0,
+      "total_after": 15
+    },
+    {
+      "fandom": "조용필",
+      "new_bullets_added": 0,
+      "total_after": 21
+    },
+    {
+      "fandom": "박효신",
+      "new_bullets_added": 0,
+      "total_after": 16
+    },
+    {
+      "fandom": "박정현",
+      "new_bullets_added": 6,
+      "total_after": 30
+    },
+    {
+      "fandom": "빅마마",
+      "new_bullets_added": 4,
+      "total_after": 38
+    },
+    {
+      "fandom": "다비치",
+      "new_bullets_added": 4,
+      "total_after": 34
+    },
+    {
+      "fandom": "로이킴",
+      "new_bullets_added": 4,
+      "total_after": 28
+    },
+    {
+      "fandom": "sg워너비",
+      "new_bullets_added": 6,
+      "total_after": 21
+    },
+    {
+      "fandom": "브라운아이즈",
+      "new_bullets_added": 7,
+      "total_after": 16
+    },
+    {
+      "fandom": "이문세",
+      "new_bullets_added": 6,
+      "total_after": 15
+    },
+    {
+      "fandom": "윤도현",
+      "new_bullets_added": 6,
+      "total_after": 16
+    },
+    {
+      "fandom": "잔나비",
+      "new_bullets_added": 5,
+      "total_after": 13
+    },
+    {
+      "fandom": "CNBLUE",
+      "new_bullets_added": 6,
+      "total_after": 13
+    },
+    {
+      "fandom": "BTS",
+      "new_bullets_added": 8,
+      "total_after": 52
+    },
+    {
+      "fandom": "SEVENTEEN",
+      "new_bullets_added": 7,
+      "total_after": 44
+    },
+    {
+      "fandom": "Stray Kids",
+      "new_bullets_added": 6,
+      "total_after": 43
+    },
+    {
+      "fandom": "RIIZE",
+      "new_bullets_added": 5,
+      "total_after": 35
+    },
+    {
+      "fandom": "NCT",
+      "new_bullets_added": 0,
+      "total_after": 28
+    },
+    {
+      "fandom": "동방신기",
+      "new_bullets_added": 0,
+      "total_after": 20
+    },
+    {
+      "fandom": "빅뱅",
+      "new_bullets_added": 0,
+      "total_after": 17
+    },
+    {
+      "fandom": "EXO",
+      "new_bullets_added": 0,
+      "total_after": 18
+    },
+    {
+      "fandom": "슈퍼주니어",
+      "new_bullets_added": 0,
+      "total_after": 16
+    },
+    {
+      "fandom": "샤이니",
+      "new_bullets_added": 0,
+      "total_after": 14
+    },
+    {
+      "fandom": "ATEEZ",
+      "new_bullets_added": 9,
+      "total_after": 30
+    },
+    {
+      "fandom": "DAY6",
+      "new_bullets_added": 6,
+      "total_after": 19
+    },
+    {
+      "fandom": "IKON",
+      "new_bullets_added": 4,
+      "total_after": 28
+    },
+    {
+      "fandom": "CORTIS",
+      "new_bullets_added": 5,
+      "total_after": 18
+    },
+    {
+      "fandom": "BTOB",
+      "new_bullets_added": 8,
+      "total_after": 26
+    },
+    {
+      "fandom": "FTISLAND",
+      "new_bullets_added": 5,
+      "total_after": 23
+    },
+    {
+      "fandom": "NewJeans",
+      "new_bullets_added": 5,
+      "total_after": 42
+    },
+    {
+      "fandom": "BLACKPINK",
+      "new_bullets_added": 5,
+      "total_after": 40
+    },
+    {
+      "fandom": "IVE",
+      "new_bullets_added": 5,
+      "total_after": 28
+    },
+    {
+      "fandom": "리센느(RESCENE)",
+      "new_bullets_added": 5,
+      "total_after": 25
+    },
+    {
+      "fandom": "(여자)아이들",
+      "new_bullets_added": 5,
+      "total_after": 26
+    },
+    {
+      "fandom": "TWICE",
+      "new_bullets_added": 6,
+      "total_after": 38
+    },
+    {
+      "fandom": "ITZY",
+      "new_bullets_added": 5,
+      "total_after": 31
+    },
+    {
+      "fandom": "LE SSERAFIM",
+      "new_bullets_added": 6,
+      "total_after": 34
+    },
+    {
+      "fandom": "aespa",
+      "new_bullets_added": 0,
+      "total_after": 28
+    },
+    {
+      "fandom": "프로미스나인",
+      "new_bullets_added": 2,
+      "total_after": 27
+    },
+    {
+      "fandom": "A-pink",
+      "new_bullets_added": 2,
+      "total_after": 24
+    },
+    {
+      "fandom": "QWER",
+      "new_bullets_added": 2,
+      "total_after": 25
+    },
+    {
+      "fandom": "BABYMONSTER",
+      "new_bullets_added": 7,
+      "total_after": 29
+    },
+    {
+      "fandom": "소녀시대",
+      "new_bullets_added": 0,
+      "total_after": 24
+    },
+    {
+      "fandom": "오마이걸",
+      "new_bullets_added": 3,
+      "total_after": 25
+    },
+    {
+      "fandom": "여자친구",
+      "new_bullets_added": 0,
+      "total_after": 18
+    },
+    {
+      "fandom": "STAYC",
+      "new_bullets_added": 0,
+      "total_after": 23
+    },
+    {
+      "fandom": "레드벨벳",
+      "new_bullets_added": 0,
+      "total_after": 17
+    },
+    {
+      "fandom": "엔믹스",
+      "new_bullets_added": 0,
+      "total_after": 19
+    },
+    {
+      "fandom": "마마무",
+      "new_bullets_added": 0,
+      "total_after": 22
+    },
+    {
+      "fandom": "아이오아이",
+      "new_bullets_added": 0,
+      "total_after": 21
+    },
+    {
+      "fandom": "Hearts2Hearts",
+      "new_bullets_added": 0,
+      "total_after": 24
+    },
+    {
+      "fandom": "워너원",
+      "new_bullets_added": 0,
+      "total_after": 24
+    },
+    {
+      "fandom": "아일릿",
+      "new_bullets_added": 0,
+      "total_after": 22
+    }
+  ],
+  "round2_added": 76,
+  "round2_dup_skipped": 16,
+  "final_total": 2674,
+  "final_multiplier": 1.1128,
+  "still_untouched_after_both_rounds": [],
+  "per_fandom_final": [
+    {
+      "fandom": "이영지",
+      "total_evidence": 39
+    },
+    {
+      "fandom": "지드래곤 (G-Dragon)",
+      "total_evidence": 46
+    },
+    {
+      "fandom": "지코",
+      "total_evidence": 32
+    },
+    {
+      "fandom": "박재범",
+      "total_evidence": 25
+    },
+    {
+      "fandom": "pH-1",
+      "total_evidence": 13
+    },
+    {
+      "fandom": "다이나믹듀오",
+      "total_evidence": 20
+    },
+    {
+      "fandom": "에픽하이",
+      "total_evidence": 17
+    },
+    {
+      "fandom": "창모",
+      "total_evidence": 13
+    },
+    {
+      "fandom": "사이먼도미닉",
+      "total_evidence": 13
+    },
+    {
+      "fandom": "BE'O",
+      "total_evidence": 16
+    },
+    {
+      "fandom": "악동뮤지션",
+      "total_evidence": 27
+    },
+    {
+      "fandom": "임영웅",
+      "total_evidence": 50
+    },
+    {
+      "fandom": "송가인",
+      "total_evidence": 27
+    },
+    {
+      "fandom": "영탁",
+      "total_evidence": 37
+    },
+    {
+      "fandom": "김호중",
+      "total_evidence": 41
+    },
+    {
+      "fandom": "이찬원",
+      "total_evidence": 39
+    },
+    {
+      "fandom": "장윤정",
+      "total_evidence": 27
+    },
+    {
+      "fandom": "정동원",
+      "total_evidence": 33
+    },
+    {
+      "fandom": "김연자",
+      "total_evidence": 30
+    },
+    {
+      "fandom": "나훈아",
+      "total_evidence": 34
+    },
+    {
+      "fandom": "god",
+      "total_evidence": 31
+    },
+    {
+      "fandom": "HOT",
+      "total_evidence": 28
+    },
+    {
+      "fandom": "잭스키스",
+      "total_evidence": 25
+    },
+    {
+      "fandom": "보아",
+      "total_evidence": 20
+    },
+    {
+      "fandom": "싸이",
+      "total_evidence": 29
+    },
+    {
+      "fandom": "아이유",
+      "total_evidence": 25
+    },
+    {
+      "fandom": "비비",
+      "total_evidence": 23
+    },
+    {
+      "fandom": "윤하",
+      "total_evidence": 25
+    },
+    {
+      "fandom": "헤이즈",
+      "total_evidence": 13
+    },
+    {
+      "fandom": "한로로",
+      "total_evidence": 17
+    },
+    {
+      "fandom": "청하",
+      "total_evidence": 24
+    },
+    {
+      "fandom": "최예나",
+      "total_evidence": 36
+    },
+    {
+      "fandom": "권은비",
+      "total_evidence": 33
+    },
+    {
+      "fandom": "츄",
+      "total_evidence": 34
+    },
+    {
+      "fandom": "10CM",
+      "total_evidence": 34
+    },
+    {
+      "fandom": "카더가든",
+      "total_evidence": 32
+    },
+    {
+      "fandom": "Zion.T",
+      "total_evidence": 23
+    },
+    {
+      "fandom": "이효리",
+      "total_evidence": 30
+    },
+    {
+      "fandom": "엄정화",
+      "total_evidence": 27
+    },
+    {
+      "fandom": "볼빨간사춘기",
+      "total_evidence": 30
+    },
+    {
+      "fandom": "Crush",
+      "total_evidence": 34
+    },
+    {
+      "fandom": "성시경",
+      "total_evidence": 34
+    },
+    {
+      "fandom": "케이윌",
+      "total_evidence": 31
+    },
+    {
+      "fandom": "이승철",
+      "total_evidence": 17
+    },
+    {
+      "fandom": "거미",
+      "total_evidence": 17
+    },
+    {
+      "fandom": "린",
+      "total_evidence": 14
+    },
+    {
+      "fandom": "백지영",
+      "total_evidence": 19
+    },
+    {
+      "fandom": "김동률",
+      "total_evidence": 16
+    },
+    {
+      "fandom": "조용필",
+      "total_evidence": 25
+    },
+    {
+      "fandom": "박효신",
+      "total_evidence": 17
+    },
+    {
+      "fandom": "박정현",
+      "total_evidence": 30
+    },
+    {
+      "fandom": "빅마마",
+      "total_evidence": 38
+    },
+    {
+      "fandom": "다비치",
+      "total_evidence": 34
+    },
+    {
+      "fandom": "로이킴",
+      "total_evidence": 28
+    },
+    {
+      "fandom": "sg워너비",
+      "total_evidence": 21
+    },
+    {
+      "fandom": "브라운아이즈",
+      "total_evidence": 16
+    },
+    {
+      "fandom": "이문세",
+      "total_evidence": 15
+    },
+    {
+      "fandom": "윤도현",
+      "total_evidence": 16
+    },
+    {
+      "fandom": "잔나비",
+      "total_evidence": 13
+    },
+    {
+      "fandom": "CNBLUE",
+      "total_evidence": 13
+    },
+    {
+      "fandom": "BTS",
+      "total_evidence": 52
+    },
+    {
+      "fandom": "SEVENTEEN",
+      "total_evidence": 44
+    },
+    {
+      "fandom": "Stray Kids",
+      "total_evidence": 43
+    },
+    {
+      "fandom": "RIIZE",
+      "total_evidence": 35
+    },
+    {
+      "fandom": "NCT",
+      "total_evidence": 33
+    },
+    {
+      "fandom": "동방신기",
+      "total_evidence": 22
+    },
+    {
+      "fandom": "빅뱅",
+      "total_evidence": 21
+    },
+    {
+      "fandom": "EXO",
+      "total_evidence": 22
+    },
+    {
+      "fandom": "슈퍼주니어",
+      "total_evidence": 18
+    },
+    {
+      "fandom": "샤이니",
+      "total_evidence": 15
+    },
+    {
+      "fandom": "ATEEZ",
+      "total_evidence": 30
+    },
+    {
+      "fandom": "DAY6",
+      "total_evidence": 19
+    },
+    {
+      "fandom": "IKON",
+      "total_evidence": 28
+    },
+    {
+      "fandom": "CORTIS",
+      "total_evidence": 18
+    },
+    {
+      "fandom": "BTOB",
+      "total_evidence": 26
+    },
+    {
+      "fandom": "FTISLAND",
+      "total_evidence": 23
+    },
+    {
+      "fandom": "NewJeans",
+      "total_evidence": 42
+    },
+    {
+      "fandom": "BLACKPINK",
+      "total_evidence": 40
+    },
+    {
+      "fandom": "IVE",
+      "total_evidence": 28
+    },
+    {
+      "fandom": "리센느(RESCENE)",
+      "total_evidence": 25
+    },
+    {
+      "fandom": "(여자)아이들",
+      "total_evidence": 26
+    },
+    {
+      "fandom": "TWICE",
+      "total_evidence": 38
+    },
+    {
+      "fandom": "ITZY",
+      "total_evidence": 31
+    },
+    {
+      "fandom": "LE SSERAFIM",
+      "total_evidence": 34
+    },
+    {
+      "fandom": "aespa",
+      "total_evidence": 28
+    },
+    {
+      "fandom": "프로미스나인",
+      "total_evidence": 27
+    },
+    {
+      "fandom": "A-pink",
+      "total_evidence": 24
+    },
+    {
+      "fandom": "QWER",
+      "total_evidence": 25
+    },
+    {
+      "fandom": "BABYMONSTER",
+      "total_evidence": 29
+    },
+    {
+      "fandom": "소녀시대",
+      "total_evidence": 24
+    },
+    {
+      "fandom": "오마이걸",
+      "total_evidence": 25
+    },
+    {
+      "fandom": "여자친구",
+      "total_evidence": 19
+    },
+    {
+      "fandom": "STAYC",
+      "total_evidence": 26
+    },
+    {
+      "fandom": "레드벨벳",
+      "total_evidence": 20
+    },
+    {
+      "fandom": "엔믹스",
+      "total_evidence": 23
+    },
+    {
+      "fandom": "마마무",
+      "total_evidence": 23
+    },
+    {
+      "fandom": "아이오아이",
+      "total_evidence": 23
+    },
+    {
+      "fandom": "Hearts2Hearts",
+      "total_evidence": 28
+    },
+    {
+      "fandom": "워너원",
+      "total_evidence": 26
+    },
+    {
+      "fandom": "아일릿",
+      "total_evidence": 25
+    }
+  ]
+}
