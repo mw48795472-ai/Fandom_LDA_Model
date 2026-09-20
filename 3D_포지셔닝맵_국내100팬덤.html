@@ -1,0 +1,353 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>국내 대표 팬덤 100개 3D 포지셔닝 맵(라이브 참고용) — 평균구획×색조명암</title>
+<style>
+  :root {
+    --surface-1: #fcfcfb; --text-primary:#0b0b0b; --text-secondary:#52514e; --text-muted:#898781;
+    --gridline:#e1e0d9; --border: #e1e0d9;
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; padding:0; background:var(--surface-1); font-family: "NanumGothic", "Noto Sans KR", system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .wrap { max-width: 1220px; margin: 0 auto; padding: 28px 32px 32px 32px; }
+  .title { font-size:19px; font-weight:700; color:var(--text-primary); margin:0 0 2px 0; }
+  .subtitle { font-size:13px; color:var(--text-secondary); margin:0 0 4px 0; }
+  .hint { font-size:12px; color:var(--text-muted); margin: 0 0 14px 0; }
+  .axis-toggle, .option-toggle { display:flex; align-items:center; gap:8px; margin: 0 0 14px 0; flex-wrap: wrap; }
+  .axis-toggle button, .option-toggle button {
+    font-size:12px; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--border);
+    background: var(--surface-1); color: var(--text-secondary); cursor: pointer; font-family: inherit;
+  }
+  .axis-toggle button.active, .option-toggle button.active { background: #2a78d6; color: #fff; border-color: #2a78d6; }
+  .opt-label { font-size:12px; color:var(--text-muted); margin-right:2px; }
+  #plot { width: 100%; height: 760px; border: 1px solid var(--border); border-radius: 8px; }
+  .badge { display:inline-block; font-size:11px; font-weight:700; color:#fff; background:#1f3864; border-radius:5px; padding:2px 8px; margin-left:8px; vertical-align:2px; }
+  .panel { display:grid; grid-template-columns: 1fr 1.25fr 1fr; gap:14px; margin-top:16px; }
+  .card { background:#fff; border:1px solid var(--border); border-radius:12px; padding:13px 15px; }
+  .card h3 { font-size:13.5px; margin:0 0 8px 0; color:var(--text-primary); }
+  table { width:100%; border-collapse:collapse; font-size:12px; }
+  th, td { padding:6px; border-bottom:1px solid #eee; text-align:left; }
+  .note { padding:9px 11px; background:#fff5f7; border-left:4px solid #B83F63; font-size:12px; line-height:1.5; }
+  .small { font-size:11px; color:var(--text-muted); line-height:1.5; }
+  .foot { font-size:11.5px; color:var(--text-muted); margin-top:16px; line-height:1.6; }
+  .swatch { width:11px; height:11px; border-radius:50%; display:inline-block; margin-right:5px; vertical-align:-1px; }
+  .stat-section { margin-top:22px; }
+  .stat-section h2 { font-size:16px; margin:0 0 3px 0; color:var(--text-primary); }
+  .stat-sub { font-size:12.5px; color:var(--text-secondary); margin:0 0 12px 0; line-height:1.5; }
+  .stat-grid { display:grid; grid-template-columns: 1.05fr 1fr; gap:14px; }
+  .stat-badge { display:inline-block; font-size:10.5px; font-weight:700; padding:1px 7px; border-radius:20px; margin-left:5px; vertical-align:1px; }
+  .stat-badge.sig { background:#dce6f1; color:#1f3864; }
+  .stat-badge.ns { background:#eaf6ee; color:#1f7a44; }
+  table.stat3d { width:100%; border-collapse:collapse; font-size:11.8px; margin-bottom:10px; }
+  table.stat3d th { background:#1f3864; color:#fff; font-weight:700; text-align:center; padding:6px 7px; }
+  table.stat3d th:first-child { text-align:left; }
+  table.stat3d td { padding:6px 7px; border-bottom:1px solid #eee; text-align:center; }
+  table.stat3d td:first-child { text-align:left; font-weight:600; }
+  table.stat3d tr.hi td { background:#fbeae7; }
+  table.stat3d tr.hi td:first-child { color:#9c2b1f; font-weight:700; }
+  .conclusion-note { padding:11px 14px; background:#f4f3ee; border-left:4px solid #1f3864; font-size:12.3px; line-height:1.65; margin-top:12px; }
+</style>
+<script src="plotly-bundle.js"></script>
+
+<div class="wrap">
+  <p class="title">국내 대표 팬덤 100개 3D 포지셔닝 맵 — 평균 기반 4구획 × 색조명암<span class="badge">라이브 참고용</span></p>
+  <p class="subtitle">100개 팬덤 전체 표시 · X=파급효과(Spillover) · Y=팬충성도(Loyalty) · Z=팬덤특성분산성(Factor Diversity) · 4구획은 전체 평균 기준(Loyalty≥0.371, Spillover≥0.266)</p>
+  <p class="hint">드래그로 회전 · 스크롤/핀치로 확대·축소 · 점에 마우스를 올리면 상세 정보(대표 팬 요인·Coverage Index 포함)가 표시됩니다. 아래 옵션에서 구획 색상·3팬덤 라벨·버블 크기를 각각 켜고 끌 수 있습니다.</p>
+  <div class="axis-toggle">
+    <button id="btn-default" class="active">기본 시점</button>
+    <button id="btn-top">위에서 보기(충성도×파급효과)</button>
+    <button id="btn-side">옆에서 보기(다양성 강조)</button>
+  </div>
+  <div class="option-toggle">
+    <span class="opt-label">표시 옵션</span>
+    <button id="opt-quadrant" class="active" type="button">✓ 4구획 색상</button>
+    <button id="opt-highlight" class="active" type="button">✓ 임영웅·BTS·리센느 강조</button>
+    <button id="opt-bubble" type="button">버블 크기(근거자료 수)</button>
+  </div>
+  <div id="plot"></div>
+
+  <div class="panel">
+    <div class="card">
+      <h3>평균 기반 4구획</h3>
+      <table>
+        <tr><th>구획</th><th>조건</th><th>N</th></tr>
+        <tr><td><span class="swatch" style="background:#B83F63"></span><b>핵심전략형</b></td><td>Loyalty≥0.371<br>Spillover≥0.266</td><td>24</td></tr>
+        <tr><td><span class="swatch" style="background:#6B5BB2"></span><b>내부결속형</b></td><td>Loyalty≥0.371<br>Spillover&lt;0.266</td><td>17</td></tr>
+        <tr><td><span class="swatch" style="background:#B86B31"></span><b>외부견인형</b></td><td>Loyalty&lt;0.371<br>Spillover≥0.266</td><td>10</td></tr>
+        <tr><td><span class="swatch" style="background:#858585"></span><b>주변부</b></td><td>Loyalty&lt;0.371<br>Spillover&lt;0.266</td><td>49</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <h3>색조·명암 설계</h3>
+      <p style="font-size:12px;margin:0 0 6px 0;"><b>색조(Hue)</b> = 구획(4유형), <b>명암(Shade)</b> = Z(팬덤특성분산성)</p>
+      <p style="font-size:12px;margin:0 0 6px 0;">핵심전략형: 장미/선홍 &nbsp;|&nbsp; 내부결속형: 보라 &nbsp;|&nbsp; 외부견인형: 주황 &nbsp;|&nbsp; 주변부: 회색</p>
+      <p class="small">같은 구획 안에서 팬 요인 다양성(Factor Diversity)이 높을수록 더 진한 색으로 표시합니다. 즉 색상 자체는 4개 유형을 구분하고, 농도는 동일 유형 내부의 다양성 차이(구간 내 실측 최소~최대 정규화)를 나타냅니다.</p>
+    </div>
+    <div class="card">
+      <h3>분석 대상 라벨</h3>
+      <div class="note">옵션을 켜면(기본 켜짐) <b>임영웅 · BTS · 리센느(RESCENE)</b> 세 점만 문자 텍스트로 라벨링됩니다. 나머지는 점으로만 표시하며 Hover에서 세부값을 확인할 수 있습니다.</div>
+      <p class="small">실측 Loyalty/Spillover/Factor Diversity 값을 그대로 사용했으며, 임의의 예측값은 포함하지 않았습니다.</p>
+    </div>
+  </div>
+
+  <div class="stat-section">
+    <h2>3축 상관계수 분석 및 통계적 검증</h2>
+    <p class="stat-sub">이 3D 맵의 세 축(X=파급효과·Y=팬충성도·Z=팬덤특성분산성)이 통계적으로 실제 독립적인지 상관분석·회귀분석으로 검증했다(n=100).</p>
+    <div class="stat-grid">
+      <div class="card">
+        <h3>세 축 쌍(pairwise) 상관계수</h3>
+        <table class="stat3d">
+          <tr><th>축 쌍</th><th>Pearson r</th><th>95% CI</th><th>Spearman ρ</th><th>유의성</th></tr>
+          <tr><td>충성도(Y) × 파급효과(X)</td><td>0.493</td><td>[0.329, 0.629]</td><td>0.380</td><td>p&lt;.001<span class="stat-badge sig">유의</span></td></tr>
+          <tr><td>충성도(Y) × 분산성(Z)</td><td>0.099</td><td>[-0.099, 0.290]</td><td>0.097</td><td>p=0.327<span class="stat-badge ns">비유의</span></td></tr>
+          <tr><td>파급효과(X) × 분산성(Z)</td><td>0.461</td><td>[0.291, 0.603]</td><td>0.487</td><td>p&lt;.001<span class="stat-badge sig">유의</span></td></tr>
+        </table>
+        <p class="small">충성도·파급효과(X·Y)는 중간~강한 유의 상관(r=0.493)을 보인다. 분산성(Z)은 충성도(Y)와는 사실상 무관하지만(r=0.099, 비유의), 파급효과(X)와는 유의한 상관(r=0.461, p&lt;.001)이 있다 — Z축은 부분적으로만 독립적이다.</p>
+        <h3 style="margin-top:12px;">정규성 검정 (Shapiro-Wilk)</h3>
+        <table class="stat3d">
+          <tr><th>변수</th><th>W</th><th>p-value</th><th>판정</th></tr>
+          <tr><td>충성도(loyalty_score)</td><td>0.954</td><td>p=0.001</td><td>정규성 기각</td></tr>
+          <tr><td>파급효과(spillover_score)</td><td>0.861</td><td>p&lt;.001</td><td>정규성 기각</td></tr>
+          <tr><td>분산성(factor_diversity)</td><td>0.975</td><td>p=0.058</td><td>정규성 기각 못함</td></tr>
+        </table>
+        <p class="small">충성도·파급효과는 정규분포 가정을 기각(α=.05)하지만, 분산성은 기각하지 못한다(p=0.058) — Pearson과 함께 Spearman을 병기했으며, 방향·유의성은 대체로 일치한다.</p>
+      </div>
+      <div class="card">
+        <h3>다중회귀 — Z(분산성) ~ X(파급효과) + Y(충성도) + VIF</h3>
+        <table class="stat3d">
+          <tr><th>항</th><th>계수</th><th>표준오차</th><th>t</th><th>p-value</th></tr>
+          <tr><td>절편</td><td>0.7168</td><td>0.0179</td><td>40.06</td><td>p&lt;.001</td></tr>
+          <tr><td>충성도(loyalty_score)</td><td>-0.0730</td><td>0.0440</td><td>-1.66</td><td>p=0.100<span class="stat-badge ns">비유의</span></td></tr>
+          <tr><td>파급효과(spillover_score)</td><td>0.3008</td><td>0.0564</td><td>5.33</td><td>p&lt;.001<span class="stat-badge sig">유의</span></td></tr>
+        </table>
+        <table class="stat3d">
+          <tr><th>모형 R²</th><th>수정 R²</th><th>F</th><th>p-value</th><th>VIF(충성도·파급효과)</th></tr>
+          <tr><td>0.2341</td><td>0.2183</td><td>14.826</td><td>p&lt;.001</td><td>1.32 / 1.32</td></tr>
+        </table>
+        <p class="small">모형 전체가 유의하다(F=14.83, p&lt;.001) — 충성도·파급효과 두 축이 분산성(Z축) 분산의 23.4%를 설명한다(R²=0.234). 다만 개별적으로는 파급효과만 유의하고(p&lt;.001) 충성도는 유의하지 않다(p=.100) — Z축과 얽힌 건 파급효과 하나뿐이다. VIF는 1.32로 다중공선성 우려는 없다.</p>
+        <h3 style="margin-top:12px;">영향점·민감도 진단</h3>
+        <p class="small">Cook's distance 기준 영향점 5개 중 가장 큰 것은 god(D=0.246)이다. leave-one-out 검증에서 충성도 계수의 최대 변화폭은 0.036으로 미미해, 소수 영향점에 의한 착시는 아니다.</p>
+      </div>
+    </div>
+    <div class="conclusion-note">
+      <b>결론</b> — 충성도(Y)와 파급효과(X)는 중간~강한 상관(r=0.493)을 보인다. 분산성(Z)은 충성도와는 실제로 독립적이지만(r=0.099, 비유의), 파급효과와는 유의하게 연관돼 있다(r=0.461, p&lt;.001; 회귀에서도 파급효과 계수만 유의). 즉 "세 축이 서로 독립적"이라는 설계 의도는 부분적으로만 성립한다 — Z축은 충성도와는 무관하지만 파급효과와는 무관하지 않다.
+    </div>
+  </div>
+
+  <p class="foot">
+    ※ <b>Z축(팬덤특성분산성)</b>: LDA 토픽을 메타 요인으로 묶은 뒤, 팬덤별 근거 문장이 이 요인들에 얼마나 고르게 분포하는지를 0~1로 정규화한 값입니다 — X·Y축(팬충성도·파급효과) 산식과는 별도로 계산됩니다.<br/>
+    ※ <b>4구획 기준</b>: 100개 팬덤의 실측 평균(Loyalty=0.371, Spillover=0.266)을 임계값으로 사용했습니다.<br/>
+    ※ 팬 요인 다양성이 높다는 것은 화제가 콘서트·소비·브랜드·차트·미디어 등 여러 유형에 고르게 걸쳐 있다는 뜻이고, 낮다는 것은 특정 유형에 집중돼 있다는 뜻입니다 — "영향력의 크기"가 아니라 "영향력의 구조"를 나타내는 지표입니다.<br/>
+    ※ 각 점에는 <b>Coverage Index</b>(수집된 근거자료의 언어·시장·출처유형·시간·개체 커버리지를 종합한 0~1 지표)도 함께 표시됩니다. 팬덤의 실제 영향력과는 별개의 "데이터 커버리지" 지표입니다.<br/>
+    ※ <b>근거 코퍼스</b>: 100개 팬덤 관련 공개 웹자료(뉴스·위키·공식자료·커뮤니티 등)를 수집해 구성한 코퍼스(현재 총 10,020건)를 기반으로 합니다.<br/>
+    ※ 본 분석은 공개 웹 자료 표본 기반 예비 분석입니다.
+  </p>
+</div>
+<script>
+const payload = {"rows": [{"fandom": "BTS", "category": "K-pop 보이그룹", "loyalty": 0.972, "spillover": 1.0, "diversity": 0.8431, "diversity_t": 0.7738, "coverage": 0.812, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 227, "quadrant": "핵심전략형", "is_target": true, "n_loyalty_bullets": 74, "n_spillover_bullets": 153}, {"fandom": "TWICE", "category": "K-pop 걸그룹", "loyalty": 0.947, "spillover": 0.821, "diversity": 0.8716, "diversity_t": 0.8449, "coverage": 0.883, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 191, "quadrant": "핵심전략형", "is_target": false, "n_loyalty_bullets": 71, "n_spillover_bullets": 120}, {"fandom": "임영웅", "category": "트로트", "loyalty": 0.95, "spillover": 0.517, "diversity": 0.8829, "diversity_t": 0.8732, "coverage": 0.685, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 131, "quadrant": "핵심전략형", "is_target": true, "n_loyalty_bullets": 59, "n_spillover_bullets": 72}, {"fandom": "BLACKPINK", "category": "K-pop 걸그룹", "loyalty": 0.674, "spillover": 0.752, "diversity": 0.9085, "diversity_t": 0.9371, "coverage": 0.896, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 195, "quadrant": "핵심전략형", "is_target": false, "n_loyalty_bullets": 60, "n_spillover_bullets": 135}, {"fandom": "NCT", "category": "K-pop 보이그룹", "loyalty": 0.832, "spillover": 0.498, "diversity": 0.8052, "diversity_t": 0.6792, "coverage": 0.876, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 164, "quadrant": "핵심전략형", "is_target": false, "n_loyalty_bullets": 67, "n_spillover_bullets": 97}, {"fandom": "Stray Kids", "category": "K-pop 보이그룹", "loyalty": 0.707, "spillover": 0.591, "diversity": 0.9057, "diversity_t": 0.9301, "coverage": 0.826, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 163, "quadrant": "핵심전략형", "is_target": false, "n_loyalty_bullets": 58, "n_spillover_bullets": 105}, {"fandom": "SEVENTEEN", "category": "K-pop 보이그룹", "loyalty": 0.88, "spillover": 0.397, "diversity": 0.8501, "diversity_t": 0.7913, "coverage": 0.855, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 157, "quadrant": "핵심전략형", "is_target": false, "n_loyalty_bullets": 71, "n_spillover_bullets": 86}, {"fandom": "god", "category": "원로그룹", "loyalty": 1.0, "spillover": 0.171, "diversity": 0.5332, "diversity_t": 0.0, "coverage": 0.576, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 99, "quadrant": "내부결속형", "is_target": false, "n_loyalty_bullets": 51, "n_spillover_bullets": 48}, {"fandom": "aespa", "category": "K-pop 걸그룹", "loyalty": 0.574, "spillover": 0.564, "diversity": 0.9017, "diversity_t": 0.9201, "coverage": 0.802, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 158, "quadrant": "핵심전략형", "is_target": false, "n_loyalty_bullets": 55, "n_spillover_bullets": 103}, {"fandom": "지드래곤 (G-Dragon)", "category": "힙합", "loyalty": 0.596, "spillover": 0.537, "diversity": 0.6676, "diversity_t": 0.3356, "coverage": 0.802, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 133, "quadrant": "핵심전략형", "is_target": false, "n_loyalty_bullets": 47, "n_spillover_bullets": 86}, {"fandom": "CORTIS", "category": "K-pop 보이그룹", "loyalty": 0.56, "spillover": 0.456, "diversity": 0.7498, "diversity_t": 0.5408, "coverage": 0.834, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 135, "quadrant": "핵심전략형", "is_target": false, "n_loyalty_bullets": 50, "n_spillover_bullets": 85}, {"fandom": "아이유", "category": "솔로", "loyalty": 0.591, "spillover": 0.421, "diversity": 0.8832, "diversity_t": 0.8739, "coverage": 0.88, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 110, "quadrant": "핵심전략형", "is_target": false, "n_loyalty_bullets": 42, "n_spillover_bullets": 68}, {"fandom": "EXO", "category": "K-pop 보이그룹", "loyalty": 0.561, "spillover": 0.388, "diversity": 0.8662, "diversity_t": 0.8315, "coverage": 0.889, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 121, "quadrant": "핵심전략형", "is_target": false, "n_loyalty_bullets": 47, "n_spillover_bullets": 74}, {"fandom": "NewJeans", "category": "K-pop 걸그룹", "loyalty": 0.385, "spillover": 0.547, "diversity": 0.9265, "diversity_t": 0.982, "coverage": 0.703, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 154, "quadrant": "핵심전략형", "is_target": false, "n_loyalty_bullets": 44, "n_spillover_bullets": 110}, {"fandom": "싸이", "category": "솔로", "loyalty": 0.354, "spillover": 0.556, "diversity": 0.7883, "diversity_t": 0.637, "coverage": 0.731, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 122, "quadrant": "외부견인형", "is_target": false, "n_loyalty_bullets": 30, "n_spillover_bullets": 92}, {"fandom": "ATEEZ", "category": "K-pop 보이그룹", "loyalty": 0.513, "spillover": 0.396, "diversity": 0.8709, "diversity_t": 0.8432, "coverage": 0.811, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 113, "quadrant": "핵심전략형", "is_target": false, "n_loyalty_bullets": 42, "n_spillover_bullets": 71}, {"fandom": "RIIZE", "category": "K-pop 보이그룹", "loyalty": 0.591, "spillover": 0.298, "diversity": 0.8906, "diversity_t": 0.8924, "coverage": 0.734, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 121, "quadrant": "핵심전략형", "is_target": false, "n_loyalty_bullets": 45, "n_spillover_bullets": 76}, {"fandom": "워너원", "category": "K-pop 보이그룹", "loyalty": 0.472, "spillover": 0.393, "diversity": 0.7382, "diversity_t": 0.5119, "coverage": 0.771, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 123, "quadrant": "핵심전략형", "is_target": false, "n_loyalty_bullets": 48, "n_spillover_bullets": 75}, {"fandom": "소녀시대", "category": "K-pop 걸그룹", "loyalty": 0.327, "spillover": 0.536, "diversity": 0.9337, "diversity_t": 1.0, "coverage": 0.727, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 122, "quadrant": "외부견인형", "is_target": false, "n_loyalty_bullets": 33, "n_spillover_bullets": 89}, {"fandom": "HOT", "category": "원로그룹", "loyalty": 0.551, "spillover": 0.31, "diversity": 0.6831, "diversity_t": 0.3743, "coverage": 0.478, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 97, "quadrant": "핵심전략형", "is_target": false, "n_loyalty_bullets": 37, "n_spillover_bullets": 60}, {"fandom": "BABYMONSTER", "category": "K-pop 걸그룹", "loyalty": 0.574, "spillover": 0.276, "diversity": 0.8324, "diversity_t": 0.7471, "coverage": 0.762, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 132, "quadrant": "핵심전략형", "is_target": false, "n_loyalty_bullets": 55, "n_spillover_bullets": 77}, {"fandom": "(여자)아이들", "category": "K-pop 걸그룹", "loyalty": 0.451, "spillover": 0.385, "diversity": 0.7839, "diversity_t": 0.626, "coverage": 0.831, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 118, "quadrant": "핵심전략형", "is_target": false, "n_loyalty_bullets": 43, "n_spillover_bullets": 75}, {"fandom": "박서진", "category": "트로트", "loyalty": 0.538, "spillover": 0.297, "diversity": 0.7337, "diversity_t": 0.5006, "coverage": 0.449, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 99, "quadrant": "핵심전략형", "is_target": false, "n_loyalty_bullets": 33, "n_spillover_bullets": 66}, {"fandom": "LE SSERAFIM", "category": "K-pop 걸그룹", "loyalty": 0.357, "spillover": 0.47, "diversity": 0.8736, "diversity_t": 0.8499, "coverage": 0.802, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 143, "quadrant": "외부견인형", "is_target": false, "n_loyalty_bullets": 44, "n_spillover_bullets": 99}, {"fandom": "GOT7", "category": "K-pop 보이그룹", "loyalty": 0.476, "spillover": 0.349, "diversity": 0.7714, "diversity_t": 0.5948, "coverage": 0.857, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 107, "quadrant": "핵심전략형", "is_target": false, "n_loyalty_bullets": 38, "n_spillover_bullets": 69}, {"fandom": "레드벨벳", "category": "K-pop 걸그룹", "loyalty": 0.56, "spillover": 0.264, "diversity": 0.7444, "diversity_t": 0.5273, "coverage": 0.828, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 118, "quadrant": "내부결속형", "is_target": false, "n_loyalty_bullets": 53, "n_spillover_bullets": 65}, {"fandom": "DAY6", "category": "K-pop 보이그룹 /록", "loyalty": 0.622, "spillover": 0.174, "diversity": 0.6033, "diversity_t": 0.175, "coverage": 0.852, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 101, "quadrant": "내부결속형", "is_target": false, "n_loyalty_bullets": 54, "n_spillover_bullets": 47}, {"fandom": "영탁", "category": "트로트", "loyalty": 0.48, "spillover": 0.28, "diversity": 0.6843, "diversity_t": 0.3773, "coverage": 0.608, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 104, "quadrant": "핵심전략형", "is_target": false, "n_loyalty_bullets": 39, "n_spillover_bullets": 65}, {"fandom": "몬스타엑스", "category": "K-pop 보이그룹", "loyalty": 0.563, "spillover": 0.183, "diversity": 0.6894, "diversity_t": 0.39, "coverage": 0.892, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 96, "quadrant": "내부결속형", "is_target": false, "n_loyalty_bullets": 41, "n_spillover_bullets": 55}, {"fandom": "이찬원", "category": "트로트", "loyalty": 0.419, "spillover": 0.322, "diversity": 0.8866, "diversity_t": 0.8824, "coverage": 0.48, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 106, "quadrant": "핵심전략형", "is_target": false, "n_loyalty_bullets": 37, "n_spillover_bullets": 69}, {"fandom": "정동원", "category": "트로트", "loyalty": 0.501, "spillover": 0.201, "diversity": 0.7914, "diversity_t": 0.6447, "coverage": 0.542, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 107, "quadrant": "내부결속형", "is_target": false, "n_loyalty_bullets": 48, "n_spillover_bullets": 59}, {"fandom": "IKON", "category": "K-pop 보이그룹", "loyalty": 0.579, "spillover": 0.116, "diversity": 0.6811, "diversity_t": 0.3693, "coverage": 0.783, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 96, "quadrant": "내부결속형", "is_target": false, "n_loyalty_bullets": 54, "n_spillover_bullets": 42}, {"fandom": "아이오아이", "category": "K-pop 걸그룹", "loyalty": 0.535, "spillover": 0.149, "diversity": 0.7209, "diversity_t": 0.4687, "coverage": 0.624, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 95, "quadrant": "내부결속형", "is_target": false, "n_loyalty_bullets": 45, "n_spillover_bullets": 50}, {"fandom": "이영지", "category": "힙합", "loyalty": 0.411, "spillover": 0.269, "diversity": 0.7958, "diversity_t": 0.6557, "coverage": 0.783, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 107, "quadrant": "핵심전략형", "is_target": false, "n_loyalty_bullets": 39, "n_spillover_bullets": 68}, {"fandom": "박효신", "category": "발라드", "loyalty": 0.49, "spillover": 0.185, "diversity": 0.7113, "diversity_t": 0.4447, "coverage": 0.611, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 91, "quadrant": "내부결속형", "is_target": false, "n_loyalty_bullets": 37, "n_spillover_bullets": 54}, {"fandom": "아일릿", "category": "K-pop 걸그룹", "loyalty": 0.33, "spillover": 0.337, "diversity": 0.8586, "diversity_t": 0.8125, "coverage": 0.663, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 107, "quadrant": "외부견인형", "is_target": false, "n_loyalty_bullets": 31, "n_spillover_bullets": 76}, {"fandom": "이효리", "category": "솔로", "loyalty": 0.006, "spillover": 0.654, "diversity": 0.7862, "diversity_t": 0.6317, "coverage": 0.573, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 120, "quadrant": "외부견인형", "is_target": false, "n_loyalty_bullets": 17, "n_spillover_bullets": 103}, {"fandom": "송가인", "category": "트로트", "loyalty": 0.343, "spillover": 0.312, "diversity": 0.6501, "diversity_t": 0.2919, "coverage": 0.522, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 92, "quadrant": "외부견인형", "is_target": false, "n_loyalty_bullets": 34, "n_spillover_bullets": 58}, {"fandom": "김동률", "category": "발라드", "loyalty": 0.496, "spillover": 0.151, "diversity": 0.6833, "diversity_t": 0.3748, "coverage": 0.574, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 83, "quadrant": "내부결속형", "is_target": false, "n_loyalty_bullets": 37, "n_spillover_bullets": 46}, {"fandom": "슈퍼주니어", "category": "K-pop 보이그룹", "loyalty": 0.354, "spillover": 0.284, "diversity": 0.7083, "diversity_t": 0.4372, "coverage": 0.71, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 89, "quadrant": "외부견인형", "is_target": false, "n_loyalty_bullets": 31, "n_spillover_bullets": 58}, {"fandom": "박재범", "category": "힙합", "loyalty": 0.4, "spillover": 0.233, "diversity": 0.6581, "diversity_t": 0.3119, "coverage": 0.823, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 110, "quadrant": "내부결속형", "is_target": false, "n_loyalty_bullets": 49, "n_spillover_bullets": 61}, {"fandom": "윤하", "category": "솔로", "loyalty": 0.467, "spillover": 0.164, "diversity": 0.7449, "diversity_t": 0.5286, "coverage": 0.727, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 83, "quadrant": "내부결속형", "is_target": false, "n_loyalty_bullets": 33, "n_spillover_bullets": 50}, {"fandom": "빅뱅", "category": "K-pop 보이그룹", "loyalty": 0.289, "spillover": 0.333, "diversity": 0.7528, "diversity_t": 0.5483, "coverage": 0.757, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 97, "quadrant": "외부견인형", "is_target": false, "n_loyalty_bullets": 31, "n_spillover_bullets": 66}, {"fandom": "리센느(RESCENE)", "category": "K-pop 걸그룹", "loyalty": 0.359, "spillover": 0.262, "diversity": 0.801, "diversity_t": 0.6687, "coverage": 0.649, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 85, "quadrant": "주변부", "is_target": true, "n_loyalty_bullets": 31, "n_spillover_bullets": 54}, {"fandom": "엔믹스", "category": "K-pop 걸그룹", "loyalty": 0.364, "spillover": 0.256, "diversity": 0.9174, "diversity_t": 0.9593, "coverage": 0.762, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 110, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 47, "n_spillover_bullets": 63}, {"fandom": "QWER", "category": "K-pop 걸그룹", "loyalty": 0.356, "spillover": 0.263, "diversity": 0.8057, "diversity_t": 0.6804, "coverage": 0.664, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 103, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 39, "n_spillover_bullets": 64}, {"fandom": "BTOB", "category": "K-pop 보이그룹", "loyalty": 0.484, "spillover": 0.127, "diversity": 0.8398, "diversity_t": 0.7655, "coverage": 0.714, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 82, "quadrant": "내부결속형", "is_target": false, "n_loyalty_bullets": 41, "n_spillover_bullets": 41}, {"fandom": "김호중", "category": "트로트", "loyalty": 0.464, "spillover": 0.145, "diversity": 0.8617, "diversity_t": 0.8202, "coverage": 0.608, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 91, "quadrant": "내부결속형", "is_target": false, "n_loyalty_bullets": 39, "n_spillover_bullets": 52}, {"fandom": "김재중", "category": "솔로", "loyalty": 0.448, "spillover": 0.159, "diversity": 0.5943, "diversity_t": 0.1526, "coverage": 0.72, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 77, "quadrant": "내부결속형", "is_target": false, "n_loyalty_bullets": 39, "n_spillover_bullets": 38}, {"fandom": "잭스키스", "category": "원로그룹", "loyalty": 0.499, "spillover": 0.103, "diversity": 0.6843, "diversity_t": 0.3773, "coverage": 0.539, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 85, "quadrant": "내부결속형", "is_target": false, "n_loyalty_bullets": 41, "n_spillover_bullets": 44}, {"fandom": "IVE", "category": "K-pop 걸그룹", "loyalty": 0.335, "spillover": 0.266, "diversity": 0.8852, "diversity_t": 0.8789, "coverage": 0.747, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 100, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 38, "n_spillover_bullets": 62}, {"fandom": "ITZY", "category": "K-pop 걸그룹", "loyalty": 0.33, "spillover": 0.253, "diversity": 0.8956, "diversity_t": 0.9049, "coverage": 0.88, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 107, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 41, "n_spillover_bullets": 66}, {"fandom": "지코", "category": "힙합", "loyalty": 0.176, "spillover": 0.388, "diversity": 0.7579, "diversity_t": 0.561, "coverage": 0.782, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 101, "quadrant": "외부견인형", "is_target": false, "n_loyalty_bullets": 28, "n_spillover_bullets": 73}, {"fandom": "오마이걸", "category": "K-pop 걸그룹", "loyalty": 0.307, "spillover": 0.249, "diversity": 0.7197, "diversity_t": 0.4657, "coverage": 0.701, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 98, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 34, "n_spillover_bullets": 64}, {"fandom": "여자친구", "category": "K-pop 걸그룹", "loyalty": 0.381, "spillover": 0.173, "diversity": 0.7164, "diversity_t": 0.4574, "coverage": 0.825, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 93, "quadrant": "내부결속형", "is_target": false, "n_loyalty_bullets": 44, "n_spillover_bullets": 49}, {"fandom": "프로미스나인", "category": "K-pop 걸그룹", "loyalty": 0.315, "spillover": 0.233, "diversity": 0.8592, "diversity_t": 0.814, "coverage": 0.73, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 89, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 34, "n_spillover_bullets": 55}, {"fandom": "Hearts2Hearts", "category": "K-pop 걸그룹", "loyalty": 0.181, "spillover": 0.359, "diversity": 0.9008, "diversity_t": 0.9179, "coverage": 0.713, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 102, "quadrant": "외부견인형", "is_target": false, "n_loyalty_bullets": 27, "n_spillover_bullets": 75}, {"fandom": "A-pink", "category": "K-pop 걸그룹", "loyalty": 0.281, "spillover": 0.258, "diversity": 0.7787, "diversity_t": 0.613, "coverage": 0.729, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 95, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 35, "n_spillover_bullets": 60}, {"fandom": "최예나", "category": "솔로", "loyalty": 0.336, "spillover": 0.195, "diversity": 0.8392, "diversity_t": 0.764, "coverage": 0.657, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 96, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 39, "n_spillover_bullets": 57}, {"fandom": "브라운아이즈", "category": "발라드", "loyalty": 0.284, "spillover": 0.225, "diversity": 0.7996, "diversity_t": 0.6652, "coverage": 0.438, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 82, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 29, "n_spillover_bullets": 53}, {"fandom": "샤이니", "category": "K-pop 보이그룹", "loyalty": 0.365, "spillover": 0.143, "diversity": 0.5869, "diversity_t": 0.1341, "coverage": 0.81, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 77, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 36, "n_spillover_bullets": 41}, {"fandom": "마마무", "category": "K-pop 걸그룹", "loyalty": 0.251, "spillover": 0.248, "diversity": 0.8422, "diversity_t": 0.7715, "coverage": 0.894, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 94, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 35, "n_spillover_bullets": 59}, {"fandom": "STAYC", "category": "K-pop 걸그룹", "loyalty": 0.333, "spillover": 0.151, "diversity": 0.8298, "diversity_t": 0.7406, "coverage": 0.738, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 92, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 42, "n_spillover_bullets": 50}, {"fandom": "동방신기", "category": "K-pop 보이그룹", "loyalty": 0.287, "spillover": 0.181, "diversity": 0.7598, "diversity_t": 0.5658, "coverage": 0.683, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 82, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 31, "n_spillover_bullets": 51}, {"fandom": "나훈아", "category": "트로트", "loyalty": 0.408, "spillover": 0.056, "diversity": 0.6107, "diversity_t": 0.1935, "coverage": 0.502, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 70, "quadrant": "내부결속형", "is_target": false, "n_loyalty_bullets": 33, "n_spillover_bullets": 37}, {"fandom": "츄", "category": "솔로", "loyalty": 0.229, "spillover": 0.234, "diversity": 0.8317, "diversity_t": 0.7453, "coverage": 0.697, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 93, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 34, "n_spillover_bullets": 59}, {"fandom": "볼빨간사춘기", "category": "솔로", "loyalty": 0.331, "spillover": 0.124, "diversity": 0.8132, "diversity_t": 0.6991, "coverage": 0.665, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 88, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 38, "n_spillover_bullets": 50}, {"fandom": "sg워너비", "category": "발라드", "loyalty": 0.369, "spillover": 0.083, "diversity": 0.7491, "diversity_t": 0.5391, "coverage": 0.547, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 75, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 36, "n_spillover_bullets": 39}, {"fandom": "10CM", "category": "솔로", "loyalty": 0.333, "spillover": 0.115, "diversity": 0.7481, "diversity_t": 0.5366, "coverage": 0.784, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 85, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 37, "n_spillover_bullets": 48}, {"fandom": "CNBLUE", "category": "K-pop 보이그룹 /록", "loyalty": 0.226, "spillover": 0.219, "diversity": 0.7643, "diversity_t": 0.577, "coverage": 0.831, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 84, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 33, "n_spillover_bullets": 51}, {"fandom": "로이킴", "category": "발라드", "loyalty": 0.235, "spillover": 0.207, "diversity": 0.6627, "diversity_t": 0.3233, "coverage": 0.602, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 89, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 30, "n_spillover_bullets": 59}, {"fandom": "성시경", "category": "발라드", "loyalty": 0.343, "spillover": 0.089, "diversity": 0.7061, "diversity_t": 0.4317, "coverage": 0.588, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 80, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 37, "n_spillover_bullets": 43}, {"fandom": "Crush", "category": "솔로", "loyalty": 0.206, "spillover": 0.222, "diversity": 0.8302, "diversity_t": 0.7416, "coverage": 0.791, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 99, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 35, "n_spillover_bullets": 64}, {"fandom": "빈지노", "category": "힙합", "loyalty": 0.246, "spillover": 0.169, "diversity": 0.7886, "diversity_t": 0.6377, "coverage": 0.56, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 79, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 27, "n_spillover_bullets": 52}, {"fandom": "빅마마", "category": "발라드", "loyalty": 0.325, "spillover": 0.088, "diversity": 0.8206, "diversity_t": 0.7176, "coverage": 0.328, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 73, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 31, "n_spillover_bullets": 42}, {"fandom": "다비치", "category": "발라드", "loyalty": 0.265, "spillover": 0.14, "diversity": 0.8506, "diversity_t": 0.7925, "coverage": 0.626, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 80, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 29, "n_spillover_bullets": 51}, {"fandom": "에픽하이", "category": "힙합", "loyalty": 0.34, "spillover": 0.061, "diversity": 0.6103, "diversity_t": 0.1925, "coverage": 0.821, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 87, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 46, "n_spillover_bullets": 41}, {"fandom": "장윤정", "category": "트로트", "loyalty": 0.14, "spillover": 0.246, "diversity": 0.7216, "diversity_t": 0.4704, "coverage": 0.569, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 92, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 27, "n_spillover_bullets": 65}, {"fandom": "보아", "category": "솔로", "loyalty": 0.278, "spillover": 0.104, "diversity": 0.6457, "diversity_t": 0.2809, "coverage": 0.633, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 76, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 30, "n_spillover_bullets": 46}, {"fandom": "거미", "category": "발라드", "loyalty": 0.23, "spillover": 0.148, "diversity": 0.6514, "diversity_t": 0.2951, "coverage": 0.711, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 87, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 34, "n_spillover_bullets": 53}, {"fandom": "조용필", "category": "발라드", "loyalty": 0.174, "spillover": 0.199, "diversity": 0.8498, "diversity_t": 0.7905, "coverage": 0.518, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 81, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 28, "n_spillover_bullets": 53}, {"fandom": "이승철", "category": "발라드", "loyalty": 0.131, "spillover": 0.229, "diversity": 0.5917, "diversity_t": 0.1461, "coverage": 0.559, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 78, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 24, "n_spillover_bullets": 54}, {"fandom": "권은비", "category": "솔로", "loyalty": 0.149, "spillover": 0.208, "diversity": 0.8167, "diversity_t": 0.7079, "coverage": 0.702, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 90, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 25, "n_spillover_bullets": 65}, {"fandom": "윤도현", "category": "록", "loyalty": 0.223, "spillover": 0.122, "diversity": 0.6279, "diversity_t": 0.2365, "coverage": 0.607, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 71, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 29, "n_spillover_bullets": 42}, {"fandom": "린", "category": "발라드", "loyalty": 0.1, "spillover": 0.216, "diversity": 0.7205, "diversity_t": 0.4677, "coverage": 0.519, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 78, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 23, "n_spillover_bullets": 55}, {"fandom": "다이나믹듀오", "category": "힙합", "loyalty": 0.208, "spillover": 0.105, "diversity": 0.5759, "diversity_t": 0.1066, "coverage": 0.632, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 68, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 26, "n_spillover_bullets": 42}, {"fandom": "악동뮤지션", "category": "혼성", "loyalty": 0.101, "spillover": 0.205, "diversity": 0.83, "diversity_t": 0.7411, "coverage": 0.701, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 74, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 23, "n_spillover_bullets": 51}, {"fandom": "FTISLAND", "category": "K-pop 보이그룹 /록", "loyalty": 0.195, "spillover": 0.102, "diversity": 0.7948, "diversity_t": 0.6532, "coverage": 0.765, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 73, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 31, "n_spillover_bullets": 42}, {"fandom": "케이윌", "category": "발라드", "loyalty": 0.287, "spillover": 0.0, "diversity": 0.7428, "diversity_t": 0.5233, "coverage": 0.585, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 71, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 36, "n_spillover_bullets": 35}, {"fandom": "청하", "category": "솔로", "loyalty": 0.066, "spillover": 0.209, "diversity": 0.9253, "diversity_t": 0.979, "coverage": 0.743, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 79, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 20, "n_spillover_bullets": 59}, {"fandom": "Zion.T", "category": "솔로", "loyalty": 0.095, "spillover": 0.17, "diversity": 0.7517, "diversity_t": 0.5456, "coverage": 0.74, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 79, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 24, "n_spillover_bullets": 55}, {"fandom": "김연자", "category": "트로트", "loyalty": 0.08, "spillover": 0.18, "diversity": 0.7407, "diversity_t": 0.5181, "coverage": 0.51, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 73, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 21, "n_spillover_bullets": 52}, {"fandom": "이문세", "category": "발라드", "loyalty": 0.054, "spillover": 0.202, "diversity": 0.6959, "diversity_t": 0.4062, "coverage": 0.514, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 70, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 20, "n_spillover_bullets": 50}, {"fandom": "카더가든", "category": "솔로", "loyalty": 0.094, "spillover": 0.133, "diversity": 0.8056, "diversity_t": 0.6801, "coverage": 0.479, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 74, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 26, "n_spillover_bullets": 48}, {"fandom": "백지영", "category": "발라드", "loyalty": 0.109, "spillover": 0.118, "diversity": 0.7596, "diversity_t": 0.5653, "coverage": 0.668, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 72, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 24, "n_spillover_bullets": 48}, {"fandom": "비비", "category": "솔로", "loyalty": 0.058, "spillover": 0.146, "diversity": 0.815, "diversity_t": 0.7036, "coverage": 0.78, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 74, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 26, "n_spillover_bullets": 48}, {"fandom": "잔나비", "category": "록", "loyalty": 0.03, "spillover": 0.155, "diversity": 0.7082, "diversity_t": 0.437, "coverage": 0.795, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 69, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 20, "n_spillover_bullets": 49}, {"fandom": "엄정화", "category": "솔로", "loyalty": 0.0, "spillover": 0.183, "diversity": 0.7578, "diversity_t": 0.5608, "coverage": 0.465, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 71, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 20, "n_spillover_bullets": 51}, {"fandom": "박정현", "category": "발라드", "loyalty": 0.003, "spillover": 0.171, "diversity": 0.7803, "diversity_t": 0.617, "coverage": 0.583, "dominant": "현장경제형(콘서트·투어·매진)", "activity": 70, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 18, "n_spillover_bullets": 52}, {"fandom": "투어스(TWS)", "category": "K-pop 보이그룹", "loyalty": 0.028, "spillover": 0.073, "diversity": 0.5611, "diversity_t": 0.0697, "coverage": 0.663, "dominant": "소비력형(초동·판매·앨범)", "activity": 90, "quadrant": "주변부", "is_target": false, "n_loyalty_bullets": 32, "n_spillover_bullets": 58}], "lmean": 0.37103, "smean": 0.26605, "dmin": 0.5332, "dmax": 0.9337, "targets": ["BTS", "임영웅", "리센느(RESCENE)"], "quadrant_counts": {"핵심전략형": 24, "내부결속형": 17, "외부견인형": 10, "주변부": 49}, "n": 100, "corpus_total_evidence": 10020, "corpus_before_v6": 2403, "corpus_multiplier": 4.1698, "corpus_after_round2": 2674, "corpus_after_market_round": 2836, "corpus_after_language_round": 3154, "corpus_after_v7_r1": 3416, "corpus_after_v7_r2": 3651, "corpus_after_v7_r3": 3955, "corpus_after_v7_r4": 4097, "corpus_after_v7_r5": 4232, "corpus_after_v7_r6": 4426, "corpus_after_v7_r7": 4523, "corpus_after_v7_r8": 4604, "corpus_after_v7_r9": 4747, "corpus_after_v7_r10": 4878, "corpus_after_v7_r11": 5021, "corpus_after_v7_r12": 5041, "corpus_after_v7_r13": 5099, "corpus_after_v7_r14": 5108, "corpus_after_v7_r15": 5123, "corpus_after_v7_r16": 5429, "corpus_after_v7_r17": 5454, "corpus_after_v7_r18": 5476, "corpus_after_v7_r19": 5557, "corpus_after_v7_r20": 5566, "corpus_after_v7_r21": 5605, "corpus_after_v7_r22": 5612, "v7_baseline_total": 1781, "v7_target_total": 17810, "v7_cumulative_multiplier": 5.6261, "selected_k": 8, "selected_m": 5, "meta_factor_silhouette": 0.046};
+const rows = payload.rows;
+
+const palettes = {
+  "핵심전략형": ["#F8D4DE", "#EDA8BA", "#D96E89", "#B83F63", "#8F2348"],
+  "내부결속형": ["#E0DBF4", "#C0B7E6", "#9587CE", "#6B5BB2", "#49398B"],
+  "외부견인형": ["#F8DFC9", "#EDBA88", "#D9904C", "#B86B31", "#87471E"],
+  "주변부": ["#EAEAEA", "#D2D2D2", "#B2B2B2", "#858585", "#5E5E5E"]
+};
+const QUADRANTS = ["핵심전략형", "내부결속형", "외부견인형", "주변부"];
+
+function hexToRgb(h) {
+  return [parseInt(h.slice(1,3),16), parseInt(h.slice(3,5),16), parseInt(h.slice(5,7),16)];
+}
+function interp(p, t) {
+  const n = p.length - 1, q = Math.max(0, Math.min(1, t)) * n;
+  const i = Math.min(n - 1, Math.floor(q)), f = q - i;
+  const a = hexToRgb(p[i]), b = hexToRgb(p[i+1]);
+  return '#' + [0,1,2].map(k => Math.round(a[k] + (b[k]-a[k]) * f).toString(16).padStart(2,'0')).join('');
+}
+
+function hoverTmpl(quadFixed) {
+  const q = quadFixed ? quadFixed : '%{customdata[6]}';
+  return '<b>%{text}</b><br>구획=' + q + '<br>카테고리=%{customdata[0]}<br>팬충성도=%{customdata[1]:.3f}<br>파급효과=%{customdata[2]:.3f}<br>팬덤특성분산성(Z)=%{customdata[3]:.3f}<br>Coverage Index=%{customdata[4]:.3f}<br>대표 팬 요인=%{customdata[5]}<br>근거자료 수=%{customdata[7]}건(충성도 %{customdata[8]} · 파급 %{customdata[9]})<extra></extra>';
+}
+
+function customdataFor(rs) {
+  return rs.map(r => [
+    r.category, r.loyalty, r.spillover, r.diversity, r.coverage, r.dominant, r.quadrant,
+    r.activity, r.n_loyalty_bullets, r.n_spillover_bullets,
+  ]);
+}
+
+// 표시 옵션 상태 — 세 옵션은 서로 독립적으로 켜고 끌 수 있다.
+const state = { quadrant: true, highlight: true, bubble: false };
+
+// 버블 크기(근거자료 수=activity) 스케일 — 지각 면적이 값에 비례하도록 반지름을 sqrt로 정규화한다.
+const ACT_MIN = Math.min(...rows.map(r => r.activity));
+const ACT_MAX = Math.max(...rows.map(r => r.activity));
+const BUBBLE_MIN_PX = 4, BUBBLE_MAX_PX = 24;
+function bubbleSize(v) {
+  const t = ACT_MAX > ACT_MIN ? (v - ACT_MIN) / (ACT_MAX - ACT_MIN) : 0;
+  return BUBBLE_MIN_PX + Math.sqrt(Math.max(0, t)) * (BUBBLE_MAX_PX - BUBBLE_MIN_PX);
+}
+const NEUTRAL_PALETTE = ["#DCEAF7", "#A9C9EA", "#6FA3D9", "#2A78D6", "#184A87"];
+
+function buildTraces() {
+  const traces = [];
+
+  if (state.quadrant) {
+    QUADRANTS.forEach(q => {
+      const qr = rows.filter(r => r.quadrant === q && !(state.highlight && r.is_target));
+      traces.push({
+        type: 'scatter3d',
+        mode: 'markers',
+        name: q,
+        x: qr.map(r => r.spillover),
+        y: qr.map(r => r.loyalty),
+        z: qr.map(r => r.diversity),
+        text: qr.map(r => r.fandom),
+        customdata: customdataFor(qr),
+        hovertemplate: hoverTmpl(q),
+        marker: {
+          size: state.bubble ? qr.map(r => bubbleSize(r.activity)) : 5.5,
+          color: qr.map(r => interp(palettes[q], r.diversity_t)),
+          opacity: 0.82,
+          line: { color: '#ffffff', width: 0.35 }
+        }
+      });
+    });
+  } else {
+    const qr = rows.filter(r => !(state.highlight && r.is_target));
+    traces.push({
+      type: 'scatter3d',
+      mode: 'markers',
+      name: '전체 100개 팬덤(구획 미표시)',
+      x: qr.map(r => r.spillover),
+      y: qr.map(r => r.loyalty),
+      z: qr.map(r => r.diversity),
+      text: qr.map(r => r.fandom),
+      customdata: customdataFor(qr),
+      hovertemplate: hoverTmpl(null),
+      marker: {
+        size: state.bubble ? qr.map(r => bubbleSize(r.activity)) : 5.5,
+        color: qr.map(r => interp(NEUTRAL_PALETTE, r.diversity_t)),
+        opacity: 0.82,
+        line: { color: '#ffffff', width: 0.35 }
+      }
+    });
+  }
+
+  if (state.highlight) {
+    const hi = rows.filter(r => r.is_target);
+    traces.push({
+      type: 'scatter3d',
+      mode: 'markers+text',
+      name: '분석 대상',
+      x: hi.map(r => r.spillover),
+      y: hi.map(r => r.loyalty),
+      z: hi.map(r => r.diversity),
+      text: hi.map(r => r.fandom),
+      textposition: 'top center',
+      textfont: { size: 15, color: '#111', family: 'NanumGothic, "Noto Sans KR", system-ui, -apple-system, Segoe UI, sans-serif' },
+      customdata: customdataFor(hi),
+      hovertemplate: hoverTmpl(null),
+      marker: {
+        size: hi.map(r => state.bubble ? bubbleSize(r.activity) + 4 : 9.5),
+        color: hi.map(r => interp(state.quadrant ? palettes[r.quadrant] : NEUTRAL_PALETTE, r.diversity_t)),
+        opacity: 1,
+        line: { color: '#ffffff', width: 1.7 }
+      },
+      showlegend: false
+    });
+  }
+
+  return traces;
+}
+
+const LMEAN = payload.lmean, SMEAN = payload.smean;
+// ZMIN/ZMAX는 과거 라운드에는 0.58~0.94로 하드코딩돼 있었는데, 코퍼스가 재확장되며 팬덤특성분산성
+// 실측 범위가 그 밖으로 벗어나면(v7 3라운드 기준 실측 0.649~0.990) 해당 팬덤이 Z축 범위 밖으로
+// 밀려나 마커·라벨이 아예 안 보이는 버그가 있었다(임영웅 0.944·리센느 0.951이 0.94 상한을 넘어서며
+// 실제로 화면에서 사라졌던 사례) — 이제 payload.dmin/dmax(실측 최소·최대)에서 매번 동적으로
+// 계산해 축 범위가 데이터를 항상 포함하도록 한다.
+const ZMIN = Math.max(0, payload.dmin - 0.03), ZMAX = Math.min(1.02, payload.dmax + 0.03);
+
+const loyaltyPlane = {
+  type: 'surface',
+  x: [[0, 1.02], [0, 1.02]],
+  y: [[LMEAN, LMEAN], [LMEAN, LMEAN]],
+  z: [[ZMIN, ZMIN], [ZMAX, ZMAX]],
+  showscale: false, opacity: 0.06, hoverinfo: 'skip',
+  colorscale: [[0, '#777777'], [1, '#777777']]
+};
+const spilloverPlane = {
+  type: 'surface',
+  x: [[SMEAN, SMEAN], [SMEAN, SMEAN]],
+  y: [[0, 1.02], [0, 1.02]],
+  z: [[ZMIN, ZMAX], [ZMIN, ZMAX]],
+  showscale: false, opacity: 0.06, hoverinfo: 'skip',
+  colorscale: [[0, '#777777'], [1, '#777777']]
+};
+
+const layout = {
+  autosize: true,
+  margin: { l: 0, r: 0, t: 12, b: 25 },
+  paper_bgcolor: '#fcfcfb',
+  font: { family: 'NanumGothic, "Noto Sans KR", system-ui, -apple-system, Segoe UI, sans-serif' },
+  scene: {
+    xaxis: { title: { text: '파급효과(전이효과) →', font: { size: 13, color: '#52514e' } }, range: [0, 1.02], gridcolor: '#e1e0d9', zerolinecolor: '#c3c2b7', color: '#52514e', backgroundcolor: '#fcfcfb' },
+    yaxis: { title: { text: '팬충성도 →', font: { size: 13, color: '#52514e' } }, range: [0, 1.02], gridcolor: '#e1e0d9', zerolinecolor: '#c3c2b7', color: '#52514e', backgroundcolor: '#fcfcfb' },
+    zaxis: { title: { text: '팬덤특성분산성(Factor Diversity) →', font: { size: 13, color: '#52514e' } }, range: [ZMIN, ZMAX], gridcolor: '#e1e0d9', zerolinecolor: '#c3c2b7', color: '#52514e', backgroundcolor: '#fcfcfb' },
+    camera: { eye: { x: 1.25, y: -1.25, z: 0.72 } },
+    aspectmode: 'cube'
+  },
+  // [갱신] "그래프만 부각"(3D map crop) 결과물에 맞춰 범례를 플롯 우측 하단에 세로로, 옅은
+  // 테두리를 두른 카드 형태로 배치한다 — 2D 포지셔닝 맵 범례 카드와 톤을 맞춘다.
+  legend: {
+    orientation: 'v', x: 0.99, y: 0.02, xanchor: 'right', yanchor: 'bottom',
+    bgcolor: 'rgba(255,255,255,0.92)', bordercolor: '#e1e0d9', borderwidth: 1,
+    font: { size: 13 },
+  },
+  showlegend: true
+};
+
+const config = { responsive: true, displaylogo: false, modeBarButtonsToRemove: ['resetCameraDefault3d'] };
+
+Plotly.newPlot('plot', [...buildTraces(), loyaltyPlane, spilloverPlane], layout, config);
+
+function redraw() {
+  Plotly.react('plot', [...buildTraces(), loyaltyPlane, spilloverPlane], layout, config);
+}
+
+const cameras = {
+  default: { eye: { x: 1.6, y: -1.6, z: 0.9 }, up: { x: 0, y: 0, z: 1 } },
+  top: { eye: { x: 0.0001, y: 0.0001, z: 2.6 }, up: { x: 0, y: 1, z: 0 } },
+  side: { eye: { x: 2.6, y: 0.0001, z: 0.0001 }, up: { x: 0, y: 0, z: 1 } }
+};
+
+function setCamera(name, btnId) {
+  Plotly.relayout('plot', { 'scene.camera': cameras[name] });
+  document.querySelectorAll('.axis-toggle button').forEach(b => b.classList.remove('active'));
+  document.getElementById(btnId).classList.add('active');
+}
+
+document.getElementById('btn-default').addEventListener('click', () => setCamera('default', 'btn-default'));
+document.getElementById('btn-top').addEventListener('click', () => setCamera('top', 'btn-top'));
+document.getElementById('btn-side').addEventListener('click', () => setCamera('side', 'btn-side'));
+
+const OPTION_LABELS = {
+  'opt-quadrant': '4구획 색상',
+  'opt-highlight': '임영웅·BTS·리센느 강조',
+  'opt-bubble': '버블 크기(근거자료 수)'
+};
+function bindOption(id, key) {
+  const btn = document.getElementById(id);
+  btn.addEventListener('click', () => {
+    state[key] = !state[key];
+    btn.classList.toggle('active', state[key]);
+    btn.textContent = (state[key] ? '✓ ' : '') + OPTION_LABELS[id];
+    redraw();
+  });
+}
+bindOption('opt-quadrant', 'quadrant');
+bindOption('opt-highlight', 'highlight');
+bindOption('opt-bubble', 'bubble');
+</script>
+
+</body></html>
