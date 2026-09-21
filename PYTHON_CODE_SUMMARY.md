@@ -1,5 +1,15 @@
 # 이 프로젝트에 적용된 파이썬 코드 총정리
 
+> **2026-09-21 갱신 주** — 이 문서의 표는 원래 `kpop-fandom-project` 저장소의 `scripts/…` 경로 기준으로 쓰였다.
+> 현재 GitHub 저장소는 폴더를 한 단계 얕게 두고 있어(`scripts/charts/` → `charts/`, `scripts/indices_csv/` →
+> `indices_csv/`, `scripts/tokenizer/` → `TOKENIZER/`), 아래 표의 경로는 그대로 두되 실제 위치는 이 대응으로 읽으면
+> 된다. 모든 스크립트의 입력·출력 경로는 이전 세션 절대경로(`/home/claude/work/...`)에서 **저장소 상대경로**로
+> 고쳤다: 최종 산출물 입력은 `data/v7_final/`, r22 스냅샷 입력은 `data/v6_r22_snapshot/`, 생성물은 `output/`.
+> 데이터 파일이 두 곳(`data/v7_final/` 10,020건 최종, `data/v6_r22_snapshot/` 5,612건)으로 정리되면서 새로 추가된
+> 스크립트는 맨 아래 "E. 2026-09-21 추가 스크립트" 절에 있다. 표의 "저장소 밖" 표시 파일(`build_notebook.py`,
+> `run_lda_v6_reconstructed.ipynb`, `build_*_pilot_v6_csv.py`, `build_corpus_growth_history_csv.py`)은 여전히 이 GitHub
+> 저장소에 없다(산출물 CSV만 `data/v6_r22_snapshot/csv/`에 있음).
+
 이 세션(샌드박스 복구 이후)에서 실제로 작성·실행한 파이썬 코드 전체를 정리한다. 전부
 `kpop-fandom-project` 저장소의 `scripts/` 아래에 커밋되어 있고, 각 스크립트는 실행 후 원본
 JSON의 집계값과 대조하는 자체 검증 루틴을 포함한다(전부 통과 확인됨).
@@ -108,7 +118,29 @@ before_total, after_total, net_new_bullets, n_touched_fandoms, note`)로 정규�
 12개 셀 전부 `jupyter nbconvert --execute`로 끝까지 실행해 에러 0건 확인. 이번 세션에서 복구된
 `data/v6_r22_snapshot/`의 실데이터(특히 `fandoms_v3_100.json`, `lda_v6_diagnostics.json`)로
 1번 데이터 로딩 셀을 교체하면, 합성 데이터가 아닌 실측 파이프라인 결과를 보여주는 노트북으로
-업그레이드할 수 있다(아직 미적용 — 원하시면 다음에 진행 가능).
+업그레이드할 수 있다(아직 미적용 — 이 노트북 자체는 현재 GitHub 저장소에 없다).
+
+실제 원본 파이프라인 `run_lda_v6.py`(v6~v7 r22 시점, 재구성본이 아닌 실물)는 저장소 루트에 있다.
+2026-09-21 정리에서 `--data`/`--out` 인자를 붙여 두 코퍼스 어디에나 돌릴 수 있게 했고(기본값: r22 스냅샷 →
+`output/lda_rerun/`), 파이프라인 로직은 건드리지 않았다. 단 최종 라이브 재적합(10,020건, K=8/M=5/실루엣 0.046)을
+만든 `run_lda_v6_live_reference_v7.py`(14개 언어 토크나이저 라우팅 반영본)는 소스가 없어, 이 스크립트로
+10,020건을 돌리면 문서 수 9,954건(구 토크나이저 기준)으로 보고서의 10,018건과 다르다.
+
+## E. 2026-09-21 추가 스크립트 — 최종 코퍼스(10,020건) 정합성·파생 파일
+
+| 스크립트 | 입력 | 출력 |
+|---|---|---|
+| `verify_v7_final_consistency.py` (루트) | `data/v7_final/*` 전부 | 보고서·KEY_FINDINGS 수치 39개 항목을 파일에서 재계산해 일치/불일치 출력 (현재 39/39 일치, χ² 값은 "재현되지 않음"으로 참고 표시) |
+| `data_export/extract_html_payloads.py` | `3D_포지셔닝맵_국내100팬덤.html`, `Persona_결정공간.html` | HTML에 리터럴로 내장된 데이터 객체를 그대로 복사 → `data/v7_final/chart3d_payload_live_reference_v7.json`(라이브 100개 팬덤 점수·4구획·라이브 재적합 진단), `persona_decision_space_v7.json`(동결 K=10 토픽명·F코드·PCA·F1~F5 비중) |
+| `data_export/build_bullets_flat_csv.py` | `fandoms_v3_100.json` (`--src`, 기본 v7_final) | `bullets_flat_v7_final.csv` 10,020행 (r22에 쓰면 기존 `bullets_flat_v6_r22.csv`와 바이트 단위 동일 결과) |
+| `data_export/build_lda_k_grid_csv.py` | LDA 진단 JSON (`--src`, 기본 라이브 참고 재적합) | `lda_k_grid_live_reference_v7.csv` (r22에 쓰면 기존 `lda_k_grid_v6.csv`와 동일) |
+| `data_export/build_live_scores_csv.py` | `chart3d_payload_live_reference_v7.json` | `fandom_scores_live_reference_v7.csv` — 라이브 점수·다양성·커버리지·activity·4구획; activity 합 10,020, 평균·4구획 카운트 재대조 |
+
+`verify_v7_final_consistency.py`가 확인하는 핵심은 **충성도·파급효과 점수의 완전 재현**이다: `METHODOLOGY.md`
+2-4절의 EvidenceScore 산식(문장당 1.0 + 0.5×수치표현 수 + 0.3×보너스 키워드 매치 수 → min-max 정규화)을
+`fandoms_v3_100.json`(10,020건)에 그대로 적용하면 3D 맵 payload의 100개 팬덤 점수가 소수점 셋째 자리까지 전부
+같고, 그 점수로 Pearson 0.493·Spearman 0.380·Cook's D(BTS 0.5749)·다중회귀 R² 0.847·VIF 1.93·민감도·LOO·3D축
+독립성까지 KEY_FINDINGS 값이 그대로 나온다. 재현되지 않는 것은 4분면 χ²(8.34/10.2273) 하나다(README 3절).
 
 ## 공통적으로 쓰인 패턴
 

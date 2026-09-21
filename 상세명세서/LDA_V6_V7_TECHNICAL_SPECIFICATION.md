@@ -55,6 +55,10 @@
 
 # 기술 상세명세서 (Technical Specification)
 
+> **2026-09-21 갱신 주** — 이 문서가 "이번 세션에 없다 / 재현 불가"라고 적은 최종 라이브 코퍼스(10,020건)와 최종 산출물이 이제 `data/v7_final/`에 있다(`fandoms_v3_100.json` 10,020건, `fandom_scores_v6.csv`·`fan_persona_v7.json`(동결 스냅샷 7,350건 기준), `language_domain_summary_v7.json`, `lda_v6_diagnostics_live_reference_v7.json`(라이브 재적합 K=8/M=5/실루엣 0.046), `chart3d_payload_live_reference_v7.json`, `member_mention_index_v7.json`). r22 스냅샷(5,612건)은 `data/v6_r22_snapshot/`으로 옮겨졌고, 이 문서의 노트북·스크립트가 참조하는 `../data/v6_r22_snapshot` 경로는 그대로 동작한다. 본문의 5,612건 기준 병행 분석은 그 시점의 기록으로 유지하며, 최종 수치와의 대응은 `README.md` 1~3절 참고.
+> 이 문서 관련: 이 명세서는 v6~v7 r22 시점(5,612건, K=8, M=6, 실루엣 0.154)의 실제 방법론 문서이며 최종 제출본(동결 스냅샷 7,350건 K=10/M=5/0.267 + 라이브 10,020건)과는 시점이 다르다. 11절이 언급하는 `run_lda_v6.py`는 저장소 루트에 실물이 있고(`--data`/`--out` 인자 추가), 병합 로그는 `data/v6_r22_snapshot/v7_rounds/`에 있다.
+
+
 **국내 대표 팬덤 100개 LDA v6 분석 — 2차 표본 확장판 상세명세서**
 
 팬충성도 × 파급효과(전이효과) × 팬 요인 다양성 — Meta Factor / Fan Factor Matrix / Coverage Index / Member Mention Pilot / Domestic Regional Pilot

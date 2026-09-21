@@ -16,6 +16,8 @@
 # 크기와 사실상 무관)을 대비시킨다.
 import json
 import csv as csv_module
+import os
+from pathlib import Path
 
 import matplotlib
 
@@ -26,13 +28,31 @@ import matplotlib.patches as mpatches
 import numpy as np
 import pandas as pd
 
-KFONT = fm.FontProperties(fname="/home/claude/work/charts/NotoSansCJKkr-Regular.otf")
-fm.fontManager.addfont("/home/claude/work/charts/NotoSansCJKkr-Regular.otf")
-plt.rcParams["font.family"] = KFONT.get_name()
+# 저장소 상대 경로 (원본은 이전 세션 작업 디렉터리 /home/claude/work/... 절대경로였음)
+BASE = Path(__file__).resolve().parents[1]
+OUT_DIR = BASE / "output" / "charts"
+OUT_DIR.mkdir(parents=True, exist_ok=True)
+
+def _find_korean_font():
+    candidates = [os.environ.get("KFONT_PATH", ""), str(BASE / "fonts" / "NotoSansCJKkr-Regular.otf"),
+                  "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc",
+                  "/usr/share/fonts/truetype/nanum/NanumGothic.ttf"]
+    for c in candidates:
+        if c and os.path.exists(c):
+            return c
+    print("[warn] 한글 폰트를 찾지 못했습니다 — KFONT_PATH 환경변수로 NotoSansCJKkr-Regular.otf 경로를 지정하세요.")
+    return None
+
+_font = _find_korean_font()
+if _font:
+    KFONT = fm.FontProperties(fname=_font)
+    fm.fontManager.addfont(_font)
+    plt.rcParams["font.family"] = KFONT.get_name()
 plt.rcParams["svg.fonttype"] = "none"
 plt.rcParams["axes.unicode_minus"] = False
 
-CSV_PATH = "../../data/silhouette_gate_timeline/corpus_silhouette_timeline_v7_62.csv"
+# 입력: 사용자가 업로드한 실측 타임라인 CSV(v4 종료~v7 61라운드). 아직 저장소에 없으면 아래 경로에 넣는다.
+CSV_PATH = BASE / "data" / "silhouette_gate_timeline" / "corpus_silhouette_timeline_v7_62.csv"
 BASELINE_SILHOUETTE = 0.267
 GATE_START, GATE_END = 46, 61
 
@@ -152,7 +172,7 @@ ax1.set_title(
 )
 
 plt.tight_layout(rect=[0, 0, 1, 0.94])
-plt.savefig("/home/claude/work/charts/silhouette_gate_timeline_v7.png", dpi=300, bbox_inches="tight", facecolor="white")
-plt.savefig("/home/claude/work/charts/silhouette_gate_timeline_v7.svg", bbox_inches="tight", facecolor="white")
+plt.savefig(OUT_DIR / "silhouette_gate_timeline_v7.png", dpi=300, bbox_inches="tight", facecolor="white")
+plt.savefig(OUT_DIR / "silhouette_gate_timeline_v7.svg", bbox_inches="tight", facecolor="white")
 plt.close()
 print("saved silhouette_gate_timeline_v7.png")

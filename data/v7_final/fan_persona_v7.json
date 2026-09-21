@@ -1,0 +1,3222 @@
+{
+  "persona_table_definition": {
+    "F1|F2": "핵심소비형",
+    "F1|F3": "집단동원형",
+    "F1|F4": "브랜드동반형",
+    "F1|F5": "글로벌결속형",
+    "F2|F3": "원정소비형",
+    "F2|F4": "소비상업형",
+    "F2|F5": "글로벌소비형",
+    "F3|F4": "현장상업형",
+    "F3|F5": "글로벌투어형",
+    "F4|F5": "산업확장형"
+  },
+  "persona_counts": {
+    "글로벌투어형": 43,
+    "집단동원형": 9,
+    "원정소비형": 17,
+    "현장상업형": 31
+  },
+  "fandoms": [
+    {
+      "fandom": "BTS",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.5119
+        },
+        {
+          "f_code": "F5",
+          "f_name": "대중·글로벌 확산 경로",
+          "share": 0.2008
+        }
+      ],
+      "persona": "글로벌투어형",
+      "loyalty_score": 0.931,
+      "spillover_score": 1.0,
+      "factor_specific_loyalty": {
+        "F3": 0.4766,
+        "F2": 0.1355,
+        "F4": 0.0592,
+        "F5": 0.1869,
+        "F1": 0.0729
+      },
+      "factor_specific_spillover": {
+        "F3": 0.5119,
+        "F2": 0.1455,
+        "F4": 0.0636,
+        "F5": 0.2008,
+        "F1": 0.0783
+      }
+    },
+    {
+      "fandom": "TWICE",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.3972
+        },
+        {
+          "f_code": "F5",
+          "f_name": "대중·글로벌 확산 경로",
+          "share": 0.252
+        }
+      ],
+      "persona": "글로벌투어형",
+      "loyalty_score": 0.944,
+      "spillover_score": 0.846,
+      "factor_specific_loyalty": {
+        "F3": 0.375,
+        "F2": 0.1784,
+        "F4": 0.0855,
+        "F5": 0.2379,
+        "F1": 0.0673
+      },
+      "factor_specific_spillover": {
+        "F3": 0.336,
+        "F2": 0.1599,
+        "F4": 0.0766,
+        "F5": 0.2132,
+        "F1": 0.0603
+      }
+    },
+    {
+      "fandom": "임영웅",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.3627
+        },
+        {
+          "f_code": "F1",
+          "f_name": "팬덤결속 경로",
+          "share": 0.2017
+        }
+      ],
+      "persona": "집단동원형",
+      "loyalty_score": 0.899,
+      "spillover_score": 0.702,
+      "factor_specific_loyalty": {
+        "F3": 0.3261,
+        "F2": 0.1331,
+        "F4": 0.1081,
+        "F5": 0.1504,
+        "F1": 0.1813
+      },
+      "factor_specific_spillover": {
+        "F3": 0.2546,
+        "F2": 0.104,
+        "F4": 0.0844,
+        "F5": 0.1174,
+        "F1": 0.1416
+      }
+    },
+    {
+      "fandom": "Stray Kids",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.4145
+        },
+        {
+          "f_code": "F5",
+          "f_name": "대중·글로벌 확산 경로",
+          "share": 0.1975
+        }
+      ],
+      "persona": "글로벌투어형",
+      "loyalty_score": 0.805,
+      "spillover_score": 0.702,
+      "factor_specific_loyalty": {
+        "F3": 0.3337,
+        "F2": 0.1287,
+        "F4": 0.0642,
+        "F5": 0.159,
+        "F1": 0.1194
+      },
+      "factor_specific_spillover": {
+        "F3": 0.291,
+        "F2": 0.1122,
+        "F4": 0.056,
+        "F5": 0.1386,
+        "F1": 0.1041
+      }
+    },
+    {
+      "fandom": "BLACKPINK",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.3216
+        },
+        {
+          "f_code": "F2",
+          "f_name": "직접소비 경로",
+          "share": 0.3096
+        }
+      ],
+      "persona": "원정소비형",
+      "loyalty_score": 0.747,
+      "spillover_score": 0.708,
+      "factor_specific_loyalty": {
+        "F3": 0.2402,
+        "F2": 0.2313,
+        "F4": 0.092,
+        "F5": 0.1379,
+        "F1": 0.0457
+      },
+      "factor_specific_spillover": {
+        "F3": 0.2277,
+        "F2": 0.2192,
+        "F4": 0.0872,
+        "F5": 0.1307,
+        "F1": 0.0433
+      }
+    },
+    {
+      "fandom": "SEVENTEEN",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.3539
+        },
+        {
+          "f_code": "F5",
+          "f_name": "대중·글로벌 확산 경로",
+          "share": 0.2399
+        }
+      ],
+      "persona": "글로벌투어형",
+      "loyalty_score": 1.0,
+      "spillover_score": 0.393,
+      "factor_specific_loyalty": {
+        "F3": 0.3539,
+        "F2": 0.1735,
+        "F4": 0.1285,
+        "F5": 0.2399,
+        "F1": 0.1042
+      },
+      "factor_specific_spillover": {
+        "F3": 0.1391,
+        "F2": 0.0682,
+        "F4": 0.0505,
+        "F5": 0.0943,
+        "F1": 0.041
+      }
+    },
+    {
+      "fandom": "지드래곤 (G-Dragon)",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.6261
+        },
+        {
+          "f_code": "F5",
+          "f_name": "대중·글로벌 확산 경로",
+          "share": 0.1373
+        }
+      ],
+      "persona": "글로벌투어형",
+      "loyalty_score": 0.558,
+      "spillover_score": 0.733,
+      "factor_specific_loyalty": {
+        "F3": 0.3494,
+        "F2": 0.033,
+        "F4": 0.0534,
+        "F5": 0.0766,
+        "F1": 0.0456
+      },
+      "factor_specific_spillover": {
+        "F3": 0.4589,
+        "F2": 0.0434,
+        "F4": 0.0701,
+        "F5": 0.1006,
+        "F1": 0.0599
+      }
+    },
+    {
+      "fandom": "NCT",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.4238
+        },
+        {
+          "f_code": "F5",
+          "f_name": "대중·글로벌 확산 경로",
+          "share": 0.1941
+        }
+      ],
+      "persona": "글로벌투어형",
+      "loyalty_score": 0.706,
+      "spillover_score": 0.479,
+      "factor_specific_loyalty": {
+        "F3": 0.2992,
+        "F2": 0.11,
+        "F4": 0.0707,
+        "F5": 0.137,
+        "F1": 0.089
+      },
+      "factor_specific_spillover": {
+        "F3": 0.203,
+        "F2": 0.0746,
+        "F4": 0.048,
+        "F5": 0.093,
+        "F1": 0.0604
+      }
+    },
+    {
+      "fandom": "CORTIS",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.4431
+        },
+        {
+          "f_code": "F5",
+          "f_name": "대중·글로벌 확산 경로",
+          "share": 0.3669
+        }
+      ],
+      "persona": "글로벌투어형",
+      "loyalty_score": 0.528,
+      "spillover_score": 0.626,
+      "factor_specific_loyalty": {
+        "F3": 0.234,
+        "F2": 0.0374,
+        "F4": 0.0234,
+        "F5": 0.1937,
+        "F1": 0.0395
+      },
+      "factor_specific_spillover": {
+        "F3": 0.2774,
+        "F2": 0.0443,
+        "F4": 0.0278,
+        "F5": 0.2297,
+        "F1": 0.0468
+      }
+    },
+    {
+      "fandom": "aespa",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.4148
+        },
+        {
+          "f_code": "F5",
+          "f_name": "대중·글로벌 확산 경로",
+          "share": 0.1978
+        }
+      ],
+      "persona": "글로벌투어형",
+      "loyalty_score": 0.578,
+      "spillover_score": 0.545,
+      "factor_specific_loyalty": {
+        "F3": 0.2398,
+        "F2": 0.0874,
+        "F4": 0.1045,
+        "F5": 0.1143,
+        "F1": 0.0321
+      },
+      "factor_specific_spillover": {
+        "F3": 0.2261,
+        "F2": 0.0824,
+        "F4": 0.0985,
+        "F5": 0.1078,
+        "F1": 0.0302
+      }
+    },
+    {
+      "fandom": "NewJeans",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.3642
+        },
+        {
+          "f_code": "F2",
+          "f_name": "직접소비 경로",
+          "share": 0.3079
+        }
+      ],
+      "persona": "원정소비형",
+      "loyalty_score": 0.428,
+      "spillover_score": 0.592,
+      "factor_specific_loyalty": {
+        "F3": 0.1559,
+        "F2": 0.1318,
+        "F4": 0.034,
+        "F5": 0.0792,
+        "F1": 0.0272
+      },
+      "factor_specific_spillover": {
+        "F3": 0.2156,
+        "F2": 0.1823,
+        "F4": 0.047,
+        "F5": 0.1095,
+        "F1": 0.0376
+      }
+    },
+    {
+      "fandom": "RIIZE",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.4572
+        },
+        {
+          "f_code": "F5",
+          "f_name": "대중·글로벌 확산 경로",
+          "share": 0.1712
+        }
+      ],
+      "persona": "글로벌투어형",
+      "loyalty_score": 0.634,
+      "spillover_score": 0.376,
+      "factor_specific_loyalty": {
+        "F3": 0.2899,
+        "F2": 0.0947,
+        "F4": 0.0449,
+        "F5": 0.1085,
+        "F1": 0.0961
+      },
+      "factor_specific_spillover": {
+        "F3": 0.1719,
+        "F2": 0.0561,
+        "F4": 0.0266,
+        "F5": 0.0644,
+        "F1": 0.057
+      }
+    },
+    {
+      "fandom": "ATEEZ",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.3716
+        },
+        {
+          "f_code": "F5",
+          "f_name": "대중·글로벌 확산 경로",
+          "share": 0.2134
+        }
+      ],
+      "persona": "글로벌투어형",
+      "loyalty_score": 0.526,
+      "spillover_score": 0.473,
+      "factor_specific_loyalty": {
+        "F3": 0.1955,
+        "F2": 0.1019,
+        "F4": 0.0553,
+        "F5": 0.1122,
+        "F1": 0.061
+      },
+      "factor_specific_spillover": {
+        "F3": 0.1758,
+        "F2": 0.0917,
+        "F4": 0.0498,
+        "F5": 0.1009,
+        "F1": 0.0548
+      }
+    },
+    {
+      "fandom": "레드벨벳",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.5804
+        },
+        {
+          "f_code": "F2",
+          "f_name": "직접소비 경로",
+          "share": 0.162
+        }
+      ],
+      "persona": "원정소비형",
+      "loyalty_score": 0.706,
+      "spillover_score": 0.292,
+      "factor_specific_loyalty": {
+        "F3": 0.4098,
+        "F2": 0.1144,
+        "F4": 0.0653,
+        "F5": 0.0602,
+        "F1": 0.0565
+      },
+      "factor_specific_spillover": {
+        "F3": 0.1695,
+        "F2": 0.0473,
+        "F4": 0.027,
+        "F5": 0.0249,
+        "F1": 0.0234
+      }
+    },
+    {
+      "fandom": "아이유",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.3473
+        },
+        {
+          "f_code": "F2",
+          "f_name": "직접소비 경로",
+          "share": 0.2171
+        }
+      ],
+      "persona": "원정소비형",
+      "loyalty_score": 0.64,
+      "spillover_score": 0.356,
+      "factor_specific_loyalty": {
+        "F3": 0.2223,
+        "F2": 0.1389,
+        "F4": 0.0619,
+        "F5": 0.1241,
+        "F1": 0.0928
+      },
+      "factor_specific_spillover": {
+        "F3": 0.1236,
+        "F2": 0.0773,
+        "F4": 0.0344,
+        "F5": 0.069,
+        "F1": 0.0516
+      }
+    },
+    {
+      "fandom": "싸이",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.4416
+        },
+        {
+          "f_code": "F5",
+          "f_name": "대중·글로벌 확산 경로",
+          "share": 0.2099
+        }
+      ],
+      "persona": "글로벌투어형",
+      "loyalty_score": 0.464,
+      "spillover_score": 0.531,
+      "factor_specific_loyalty": {
+        "F3": 0.2049,
+        "F2": 0.0702,
+        "F4": 0.0389,
+        "F5": 0.0974,
+        "F1": 0.0525
+      },
+      "factor_specific_spillover": {
+        "F3": 0.2345,
+        "F2": 0.0803,
+        "F4": 0.0446,
+        "F5": 0.1115,
+        "F1": 0.0601
+      }
+    },
+    {
+      "fandom": "GOT7",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.4705
+        },
+        {
+          "f_code": "F5",
+          "f_name": "대중·글로벌 확산 경로",
+          "share": 0.3255
+        }
+      ],
+      "persona": "글로벌투어형",
+      "loyalty_score": 0.537,
+      "spillover_score": 0.429,
+      "factor_specific_loyalty": {
+        "F3": 0.2527,
+        "F2": 0.014,
+        "F4": 0.0431,
+        "F5": 0.1748,
+        "F1": 0.0525
+      },
+      "factor_specific_spillover": {
+        "F3": 0.2018,
+        "F2": 0.0112,
+        "F4": 0.0344,
+        "F5": 0.1396,
+        "F1": 0.0419
+      }
+    },
+    {
+      "fandom": "워너원",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.4628
+        },
+        {
+          "f_code": "F2",
+          "f_name": "직접소비 경로",
+          "share": 0.1603
+        }
+      ],
+      "persona": "원정소비형",
+      "loyalty_score": 0.535,
+      "spillover_score": 0.397,
+      "factor_specific_loyalty": {
+        "F3": 0.2476,
+        "F2": 0.0858,
+        "F4": 0.0533,
+        "F5": 0.084,
+        "F1": 0.0643
+      },
+      "factor_specific_spillover": {
+        "F3": 0.1837,
+        "F2": 0.0636,
+        "F4": 0.0395,
+        "F5": 0.0624,
+        "F1": 0.0477
+      }
+    },
+    {
+      "fandom": "LE SSERAFIM",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.4428
+        },
+        {
+          "f_code": "F5",
+          "f_name": "대중·글로벌 확산 경로",
+          "share": 0.2096
+        }
+      ],
+      "persona": "글로벌투어형",
+      "loyalty_score": 0.393,
+      "spillover_score": 0.534,
+      "factor_specific_loyalty": {
+        "F3": 0.174,
+        "F2": 0.0806,
+        "F4": 0.0305,
+        "F5": 0.0824,
+        "F1": 0.0254
+      },
+      "factor_specific_spillover": {
+        "F3": 0.2365,
+        "F2": 0.1096,
+        "F4": 0.0415,
+        "F5": 0.1119,
+        "F1": 0.0345
+      }
+    },
+    {
+      "fandom": "이영지",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.5792
+        },
+        {
+          "f_code": "F5",
+          "f_name": "대중·글로벌 확산 경로",
+          "share": 0.1486
+        }
+      ],
+      "persona": "글로벌투어형",
+      "loyalty_score": 0.492,
+      "spillover_score": 0.41,
+      "factor_specific_loyalty": {
+        "F3": 0.285,
+        "F2": 0.0284,
+        "F4": 0.0486,
+        "F5": 0.0731,
+        "F1": 0.0569
+      },
+      "factor_specific_spillover": {
+        "F3": 0.2375,
+        "F2": 0.0237,
+        "F4": 0.0405,
+        "F5": 0.0609,
+        "F1": 0.0474
+      }
+    },
+    {
+      "fandom": "EXO",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.3973
+        },
+        {
+          "f_code": "F4",
+          "f_name": "산업전이 경로",
+          "share": 0.2176
+        }
+      ],
+      "persona": "현장상업형",
+      "loyalty_score": 0.486,
+      "spillover_score": 0.411,
+      "factor_specific_loyalty": {
+        "F3": 0.1931,
+        "F2": 0.0807,
+        "F4": 0.1058,
+        "F5": 0.0726,
+        "F1": 0.0338
+      },
+      "factor_specific_spillover": {
+        "F3": 0.1633,
+        "F2": 0.0683,
+        "F4": 0.0894,
+        "F5": 0.0614,
+        "F1": 0.0286
+      }
+    },
+    {
+      "fandom": "DAY6",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.548
+        },
+        {
+          "f_code": "F4",
+          "f_name": "산업전이 경로",
+          "share": 0.1487
+        }
+      ],
+      "persona": "현장상업형",
+      "loyalty_score": 0.642,
+      "spillover_score": 0.254,
+      "factor_specific_loyalty": {
+        "F3": 0.3518,
+        "F2": 0.0722,
+        "F4": 0.0955,
+        "F5": 0.0596,
+        "F1": 0.0629
+      },
+      "factor_specific_spillover": {
+        "F3": 0.1392,
+        "F2": 0.0285,
+        "F4": 0.0378,
+        "F5": 0.0236,
+        "F1": 0.0249
+      }
+    },
+    {
+      "fandom": "아일릿",
+      "top2_factors": [
+        {
+          "f_code": "F5",
+          "f_name": "대중·글로벌 확산 경로",
+          "share": 0.3989
+        },
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.3227
+        }
+      ],
+      "persona": "글로벌투어형",
+      "loyalty_score": 0.478,
+      "spillover_score": 0.404,
+      "factor_specific_loyalty": {
+        "F3": 0.1543,
+        "F2": 0.0716,
+        "F4": 0.0286,
+        "F5": 0.1907,
+        "F1": 0.0329
+      },
+      "factor_specific_spillover": {
+        "F3": 0.1304,
+        "F2": 0.0605,
+        "F4": 0.0242,
+        "F5": 0.1612,
+        "F1": 0.0278
+      }
+    },
+    {
+      "fandom": "영탁",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.4225
+        },
+        {
+          "f_code": "F4",
+          "f_name": "산업전이 경로",
+          "share": 0.2068
+        }
+      ],
+      "persona": "현장상업형",
+      "loyalty_score": 0.54,
+      "spillover_score": 0.319,
+      "factor_specific_loyalty": {
+        "F3": 0.2282,
+        "F2": 0.0862,
+        "F4": 0.1117,
+        "F5": 0.0398,
+        "F1": 0.0741
+      },
+      "factor_specific_spillover": {
+        "F3": 0.1348,
+        "F2": 0.0509,
+        "F4": 0.066,
+        "F5": 0.0235,
+        "F1": 0.0438
+      }
+    },
+    {
+      "fandom": "(여자)아이들",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.3863
+        },
+        {
+          "f_code": "F5",
+          "f_name": "대중·글로벌 확산 경로",
+          "share": 0.224
+        }
+      ],
+      "persona": "글로벌투어형",
+      "loyalty_score": 0.405,
+      "spillover_score": 0.447,
+      "factor_specific_loyalty": {
+        "F3": 0.1565,
+        "F2": 0.059,
+        "F4": 0.0574,
+        "F5": 0.0907,
+        "F1": 0.0414
+      },
+      "factor_specific_spillover": {
+        "F3": 0.1727,
+        "F2": 0.0651,
+        "F4": 0.0634,
+        "F5": 0.1001,
+        "F1": 0.0457
+      }
+    },
+    {
+      "fandom": "BABYMONSTER",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.3466
+        },
+        {
+          "f_code": "F5",
+          "f_name": "대중·글로벌 확산 경로",
+          "share": 0.2215
+        }
+      ],
+      "persona": "글로벌투어형",
+      "loyalty_score": 0.597,
+      "spillover_score": 0.255,
+      "factor_specific_loyalty": {
+        "F3": 0.2069,
+        "F2": 0.1154,
+        "F4": 0.0928,
+        "F5": 0.1322,
+        "F1": 0.0496
+      },
+      "factor_specific_spillover": {
+        "F3": 0.0884,
+        "F2": 0.0493,
+        "F4": 0.0397,
+        "F5": 0.0565,
+        "F1": 0.0212
+      }
+    },
+    {
+      "fandom": "송가인",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.5475
+        },
+        {
+          "f_code": "F1",
+          "f_name": "팬덤결속 경로",
+          "share": 0.1456
+        }
+      ],
+      "persona": "집단동원형",
+      "loyalty_score": 0.43,
+      "spillover_score": 0.378,
+      "factor_specific_loyalty": {
+        "F3": 0.2354,
+        "F2": 0.0405,
+        "F4": 0.058,
+        "F5": 0.0335,
+        "F1": 0.0626
+      },
+      "factor_specific_spillover": {
+        "F3": 0.207,
+        "F2": 0.0356,
+        "F4": 0.051,
+        "F5": 0.0295,
+        "F1": 0.055
+      }
+    },
+    {
+      "fandom": "엔믹스",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.5022
+        },
+        {
+          "f_code": "F5",
+          "f_name": "대중·글로벌 확산 경로",
+          "share": 0.1581
+        }
+      ],
+      "persona": "글로벌투어형",
+      "loyalty_score": 0.505,
+      "spillover_score": 0.298,
+      "factor_specific_loyalty": {
+        "F3": 0.2536,
+        "F2": 0.0734,
+        "F4": 0.0608,
+        "F5": 0.0798,
+        "F1": 0.0374
+      },
+      "factor_specific_spillover": {
+        "F3": 0.1497,
+        "F2": 0.0433,
+        "F4": 0.0358,
+        "F5": 0.0471,
+        "F1": 0.0221
+      }
+    },
+    {
+      "fandom": "IKON",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.4449
+        },
+        {
+          "f_code": "F2",
+          "f_name": "직접소비 경로",
+          "share": 0.1926
+        }
+      ],
+      "persona": "원정소비형",
+      "loyalty_score": 0.599,
+      "spillover_score": 0.193,
+      "factor_specific_loyalty": {
+        "F3": 0.2665,
+        "F2": 0.1154,
+        "F4": 0.0885,
+        "F5": 0.1008,
+        "F1": 0.0278
+      },
+      "factor_specific_spillover": {
+        "F3": 0.0859,
+        "F2": 0.0372,
+        "F4": 0.0285,
+        "F5": 0.0325,
+        "F1": 0.009
+      }
+    },
+    {
+      "fandom": "박재범",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.5888
+        },
+        {
+          "f_code": "F2",
+          "f_name": "직접소비 경로",
+          "share": 0.1384
+        }
+      ],
+      "persona": "원정소비형",
+      "loyalty_score": 0.437,
+      "spillover_score": 0.316,
+      "factor_specific_loyalty": {
+        "F3": 0.2573,
+        "F2": 0.0605,
+        "F4": 0.0475,
+        "F5": 0.0459,
+        "F1": 0.0257
+      },
+      "factor_specific_spillover": {
+        "F3": 0.1861,
+        "F2": 0.0437,
+        "F4": 0.0344,
+        "F5": 0.0332,
+        "F1": 0.0186
+      }
+    },
+    {
+      "fandom": "지코",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.4665
+        },
+        {
+          "f_code": "F5",
+          "f_name": "대중·글로벌 확산 경로",
+          "share": 0.3418
+        }
+      ],
+      "persona": "글로벌투어형",
+      "loyalty_score": 0.278,
+      "spillover_score": 0.473,
+      "factor_specific_loyalty": {
+        "F3": 0.1297,
+        "F2": 0.0091,
+        "F4": 0.0235,
+        "F5": 0.095,
+        "F1": 0.0207
+      },
+      "factor_specific_spillover": {
+        "F3": 0.2207,
+        "F2": 0.0155,
+        "F4": 0.04,
+        "F5": 0.1617,
+        "F1": 0.0352
+      }
+    },
+    {
+      "fandom": "리센느(RESCENE)",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.469
+        },
+        {
+          "f_code": "F5",
+          "f_name": "대중·글로벌 확산 경로",
+          "share": 0.2489
+        }
+      ],
+      "persona": "글로벌투어형",
+      "loyalty_score": 0.444,
+      "spillover_score": 0.304,
+      "factor_specific_loyalty": {
+        "F3": 0.2082,
+        "F2": 0.0389,
+        "F4": 0.0397,
+        "F5": 0.1105,
+        "F1": 0.0466
+      },
+      "factor_specific_spillover": {
+        "F3": 0.1426,
+        "F2": 0.0266,
+        "F4": 0.0272,
+        "F5": 0.0757,
+        "F1": 0.0319
+      }
+    },
+    {
+      "fandom": "김호중",
+      "top2_factors": [
+        {
+          "f_code": "F1",
+          "f_name": "팬덤결속 경로",
+          "share": 0.2413
+        },
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.2232
+        }
+      ],
+      "persona": "집단동원형",
+      "loyalty_score": 0.537,
+      "spillover_score": 0.205,
+      "factor_specific_loyalty": {
+        "F3": 0.1199,
+        "F2": 0.0969,
+        "F4": 0.1168,
+        "F5": 0.0739,
+        "F1": 0.1296
+      },
+      "factor_specific_spillover": {
+        "F3": 0.0458,
+        "F2": 0.037,
+        "F4": 0.0446,
+        "F5": 0.0282,
+        "F1": 0.0495
+      }
+    },
+    {
+      "fandom": "아이오아이",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.3869
+        },
+        {
+          "f_code": "F5",
+          "f_name": "대중·글로벌 확산 경로",
+          "share": 0.2146
+        }
+      ],
+      "persona": "글로벌투어형",
+      "loyalty_score": 0.605,
+      "spillover_score": 0.122,
+      "factor_specific_loyalty": {
+        "F3": 0.2341,
+        "F2": 0.0867,
+        "F4": 0.0553,
+        "F5": 0.1298,
+        "F1": 0.0991
+      },
+      "factor_specific_spillover": {
+        "F3": 0.0472,
+        "F2": 0.0175,
+        "F4": 0.0112,
+        "F5": 0.0262,
+        "F1": 0.02
+      }
+    },
+    {
+      "fandom": "최예나",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.4523
+        },
+        {
+          "f_code": "F2",
+          "f_name": "직접소비 경로",
+          "share": 0.1696
+        }
+      ],
+      "persona": "원정소비형",
+      "loyalty_score": 0.393,
+      "spillover_score": 0.332,
+      "factor_specific_loyalty": {
+        "F3": 0.1778,
+        "F2": 0.0667,
+        "F4": 0.0436,
+        "F5": 0.0577,
+        "F1": 0.0473
+      },
+      "factor_specific_spillover": {
+        "F3": 0.1502,
+        "F2": 0.0563,
+        "F4": 0.0368,
+        "F5": 0.0487,
+        "F1": 0.04
+      }
+    },
+    {
+      "fandom": "BTOB",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.4139
+        },
+        {
+          "f_code": "F4",
+          "f_name": "산업전이 경로",
+          "share": 0.1775
+        }
+      ],
+      "persona": "현장상업형",
+      "loyalty_score": 0.563,
+      "spillover_score": 0.159,
+      "factor_specific_loyalty": {
+        "F3": 0.233,
+        "F2": 0.0951,
+        "F4": 0.0999,
+        "F5": 0.0845,
+        "F1": 0.0503
+      },
+      "factor_specific_spillover": {
+        "F3": 0.0658,
+        "F2": 0.0269,
+        "F4": 0.0282,
+        "F5": 0.0239,
+        "F1": 0.0142
+      }
+    },
+    {
+      "fandom": "god",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.4567
+        },
+        {
+          "f_code": "F1",
+          "f_name": "팬덤결속 경로",
+          "share": 0.1719
+        }
+      ],
+      "persona": "집단동원형",
+      "loyalty_score": 0.602,
+      "spillover_score": 0.112,
+      "factor_specific_loyalty": {
+        "F3": 0.2749,
+        "F2": 0.0781,
+        "F4": 0.0854,
+        "F5": 0.0601,
+        "F1": 0.1035
+      },
+      "factor_specific_spillover": {
+        "F3": 0.0512,
+        "F2": 0.0145,
+        "F4": 0.0159,
+        "F5": 0.0112,
+        "F1": 0.0193
+      }
+    },
+    {
+      "fandom": "이찬원",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.3521
+        },
+        {
+          "f_code": "F1",
+          "f_name": "팬덤결속 경로",
+          "share": 0.2291
+        }
+      ],
+      "persona": "집단동원형",
+      "loyalty_score": 0.374,
+      "spillover_score": 0.333,
+      "factor_specific_loyalty": {
+        "F3": 0.1317,
+        "F2": 0.0628,
+        "F4": 0.0625,
+        "F5": 0.0313,
+        "F1": 0.0857
+      },
+      "factor_specific_spillover": {
+        "F3": 0.1172,
+        "F2": 0.0559,
+        "F4": 0.0557,
+        "F5": 0.0279,
+        "F1": 0.0763
+      }
+    },
+    {
+      "fandom": "소녀시대",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.3567
+        },
+        {
+          "f_code": "F2",
+          "f_name": "직접소비 경로",
+          "share": 0.273
+        }
+      ],
+      "persona": "원정소비형",
+      "loyalty_score": 0.323,
+      "spillover_score": 0.375,
+      "factor_specific_loyalty": {
+        "F3": 0.1152,
+        "F2": 0.0882,
+        "F4": 0.0303,
+        "F5": 0.0682,
+        "F1": 0.0211
+      },
+      "factor_specific_spillover": {
+        "F3": 0.1338,
+        "F2": 0.1024,
+        "F4": 0.0352,
+        "F5": 0.0791,
+        "F1": 0.0245
+      }
+    },
+    {
+      "fandom": "빅뱅",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.5235
+        },
+        {
+          "f_code": "F2",
+          "f_name": "직접소비 경로",
+          "share": 0.2094
+        }
+      ],
+      "persona": "원정소비형",
+      "loyalty_score": 0.324,
+      "spillover_score": 0.34,
+      "factor_specific_loyalty": {
+        "F3": 0.1696,
+        "F2": 0.0678,
+        "F4": 0.0388,
+        "F5": 0.0305,
+        "F1": 0.0172
+      },
+      "factor_specific_spillover": {
+        "F3": 0.178,
+        "F2": 0.0712,
+        "F4": 0.0407,
+        "F5": 0.032,
+        "F1": 0.0181
+      }
+    },
+    {
+      "fandom": "박서진",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.5297
+        },
+        {
+          "f_code": "F1",
+          "f_name": "팬덤결속 경로",
+          "share": 0.2653
+        }
+      ],
+      "persona": "집단동원형",
+      "loyalty_score": 0.416,
+      "spillover_score": 0.239,
+      "factor_specific_loyalty": {
+        "F3": 0.2204,
+        "F2": 0.0079,
+        "F4": 0.0534,
+        "F5": 0.024,
+        "F1": 0.1104
+      },
+      "factor_specific_spillover": {
+        "F3": 0.1266,
+        "F2": 0.0045,
+        "F4": 0.0307,
+        "F5": 0.0138,
+        "F1": 0.0634
+      }
+    },
+    {
+      "fandom": "CNBLUE",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.3855
+        },
+        {
+          "f_code": "F5",
+          "f_name": "대중·글로벌 확산 경로",
+          "share": 0.2151
+        }
+      ],
+      "persona": "글로벌투어형",
+      "loyalty_score": 0.323,
+      "spillover_score": 0.331,
+      "factor_specific_loyalty": {
+        "F3": 0.1245,
+        "F2": 0.0667,
+        "F4": 0.0473,
+        "F5": 0.0695,
+        "F1": 0.015
+      },
+      "factor_specific_spillover": {
+        "F3": 0.1276,
+        "F2": 0.0684,
+        "F4": 0.0485,
+        "F5": 0.0712,
+        "F1": 0.0153
+      }
+    },
+    {
+      "fandom": "정동원",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.4084
+        },
+        {
+          "f_code": "F1",
+          "f_name": "팬덤결속 경로",
+          "share": 0.1997
+        }
+      ],
+      "persona": "집단동원형",
+      "loyalty_score": 0.421,
+      "spillover_score": 0.228,
+      "factor_specific_loyalty": {
+        "F3": 0.1719,
+        "F2": 0.0509,
+        "F4": 0.0634,
+        "F5": 0.0507,
+        "F1": 0.0841
+      },
+      "factor_specific_spillover": {
+        "F3": 0.0931,
+        "F2": 0.0275,
+        "F4": 0.0343,
+        "F5": 0.0275,
+        "F1": 0.0455
+      }
+    },
+    {
+      "fandom": "프로미스나인",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.4047
+        },
+        {
+          "f_code": "F5",
+          "f_name": "대중·글로벌 확산 경로",
+          "share": 0.2642
+        }
+      ],
+      "persona": "글로벌투어형",
+      "loyalty_score": 0.305,
+      "spillover_score": 0.341,
+      "factor_specific_loyalty": {
+        "F3": 0.1234,
+        "F2": 0.0413,
+        "F4": 0.0457,
+        "F5": 0.0806,
+        "F1": 0.0139
+      },
+      "factor_specific_spillover": {
+        "F3": 0.138,
+        "F2": 0.0462,
+        "F4": 0.0512,
+        "F5": 0.0901,
+        "F1": 0.0155
+      }
+    },
+    {
+      "fandom": "샤이니",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.6011
+        },
+        {
+          "f_code": "F5",
+          "f_name": "대중·글로벌 확산 경로",
+          "share": 0.1644
+        }
+      ],
+      "persona": "글로벌투어형",
+      "loyalty_score": 0.394,
+      "spillover_score": 0.251,
+      "factor_specific_loyalty": {
+        "F3": 0.2368,
+        "F2": 0.0259,
+        "F4": 0.0264,
+        "F5": 0.0648,
+        "F1": 0.0401
+      },
+      "factor_specific_spillover": {
+        "F3": 0.1509,
+        "F2": 0.0165,
+        "F4": 0.0168,
+        "F5": 0.0413,
+        "F1": 0.0255
+      }
+    },
+    {
+      "fandom": "오마이걸",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.4064
+        },
+        {
+          "f_code": "F4",
+          "f_name": "산업전이 경로",
+          "share": 0.183
+        }
+      ],
+      "persona": "현장상업형",
+      "loyalty_score": 0.388,
+      "spillover_score": 0.257,
+      "factor_specific_loyalty": {
+        "F3": 0.1577,
+        "F2": 0.0527,
+        "F4": 0.071,
+        "F5": 0.0439,
+        "F1": 0.0627
+      },
+      "factor_specific_spillover": {
+        "F3": 0.1044,
+        "F2": 0.0349,
+        "F4": 0.047,
+        "F5": 0.0291,
+        "F1": 0.0416
+      }
+    },
+    {
+      "fandom": "A-pink",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.4363
+        },
+        {
+          "f_code": "F4",
+          "f_name": "산업전이 경로",
+          "share": 0.1566
+        }
+      ],
+      "persona": "현장상업형",
+      "loyalty_score": 0.42,
+      "spillover_score": 0.214,
+      "factor_specific_loyalty": {
+        "F3": 0.1832,
+        "F2": 0.0561,
+        "F4": 0.0658,
+        "F5": 0.056,
+        "F1": 0.059
+      },
+      "factor_specific_spillover": {
+        "F3": 0.0934,
+        "F2": 0.0286,
+        "F4": 0.0335,
+        "F5": 0.0285,
+        "F1": 0.03
+      }
+    },
+    {
+      "fandom": "마마무",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.4065
+        },
+        {
+          "f_code": "F5",
+          "f_name": "대중·글로벌 확산 경로",
+          "share": 0.1931
+        }
+      ],
+      "persona": "글로벌투어형",
+      "loyalty_score": 0.38,
+      "spillover_score": 0.252,
+      "factor_specific_loyalty": {
+        "F3": 0.1545,
+        "F2": 0.0578,
+        "F4": 0.0488,
+        "F5": 0.0734,
+        "F1": 0.0456
+      },
+      "factor_specific_spillover": {
+        "F3": 0.1024,
+        "F2": 0.0384,
+        "F4": 0.0324,
+        "F5": 0.0487,
+        "F1": 0.0302
+      }
+    },
+    {
+      "fandom": "동방신기",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.3845
+        },
+        {
+          "f_code": "F5",
+          "f_name": "대중·글로벌 확산 경로",
+          "share": 0.2073
+        }
+      ],
+      "persona": "글로벌투어형",
+      "loyalty_score": 0.34,
+      "spillover_score": 0.288,
+      "factor_specific_loyalty": {
+        "F3": 0.1307,
+        "F2": 0.0672,
+        "F4": 0.0287,
+        "F5": 0.0705,
+        "F1": 0.0429
+      },
+      "factor_specific_spillover": {
+        "F3": 0.1107,
+        "F2": 0.0569,
+        "F4": 0.0243,
+        "F5": 0.0597,
+        "F1": 0.0364
+      }
+    },
+    {
+      "fandom": "로이킴",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.3986
+        },
+        {
+          "f_code": "F4",
+          "f_name": "산업전이 경로",
+          "share": 0.1865
+        }
+      ],
+      "persona": "현장상업형",
+      "loyalty_score": 0.336,
+      "spillover_score": 0.283,
+      "factor_specific_loyalty": {
+        "F3": 0.1339,
+        "F2": 0.0273,
+        "F4": 0.0627,
+        "F5": 0.0515,
+        "F1": 0.0606
+      },
+      "factor_specific_spillover": {
+        "F3": 0.1128,
+        "F2": 0.023,
+        "F4": 0.0528,
+        "F5": 0.0434,
+        "F1": 0.051
+      }
+    },
+    {
+      "fandom": "Hearts2Hearts",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.3677
+        },
+        {
+          "f_code": "F5",
+          "f_name": "대중·글로벌 확산 경로",
+          "share": 0.229
+        }
+      ],
+      "persona": "글로벌투어형",
+      "loyalty_score": 0.272,
+      "spillover_score": 0.344,
+      "factor_specific_loyalty": {
+        "F3": 0.1,
+        "F2": 0.0534,
+        "F4": 0.0243,
+        "F5": 0.0623,
+        "F1": 0.032
+      },
+      "factor_specific_spillover": {
+        "F3": 0.1265,
+        "F2": 0.0675,
+        "F4": 0.0308,
+        "F5": 0.0788,
+        "F1": 0.0405
+      }
+    },
+    {
+      "fandom": "권은비",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.4737
+        },
+        {
+          "f_code": "F2",
+          "f_name": "직접소비 경로",
+          "share": 0.1782
+        }
+      ],
+      "persona": "원정소비형",
+      "loyalty_score": 0.24,
+      "spillover_score": 0.373,
+      "factor_specific_loyalty": {
+        "F3": 0.1137,
+        "F2": 0.0428,
+        "F4": 0.027,
+        "F5": 0.0317,
+        "F1": 0.0249
+      },
+      "factor_specific_spillover": {
+        "F3": 0.1767,
+        "F2": 0.0665,
+        "F4": 0.0419,
+        "F5": 0.0492,
+        "F1": 0.0387
+      }
+    },
+    {
+      "fandom": "성시경",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.4293
+        },
+        {
+          "f_code": "F1",
+          "f_name": "팬덤결속 경로",
+          "share": 0.1853
+        }
+      ],
+      "persona": "집단동원형",
+      "loyalty_score": 0.408,
+      "spillover_score": 0.197,
+      "factor_specific_loyalty": {
+        "F3": 0.1752,
+        "F2": 0.0645,
+        "F4": 0.0667,
+        "F5": 0.0261,
+        "F1": 0.0756
+      },
+      "factor_specific_spillover": {
+        "F3": 0.0846,
+        "F2": 0.0311,
+        "F4": 0.0322,
+        "F5": 0.0126,
+        "F1": 0.0365
+      }
+    },
+    {
+      "fandom": "슈퍼주니어",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.4526
+        },
+        {
+          "f_code": "F2",
+          "f_name": "직접소비 경로",
+          "share": 0.2361
+        }
+      ],
+      "persona": "원정소비형",
+      "loyalty_score": 0.347,
+      "spillover_score": 0.257,
+      "factor_specific_loyalty": {
+        "F3": 0.1571,
+        "F2": 0.0819,
+        "F4": 0.0428,
+        "F5": 0.0362,
+        "F1": 0.029
+      },
+      "factor_specific_spillover": {
+        "F3": 0.1163,
+        "F2": 0.0607,
+        "F4": 0.0317,
+        "F5": 0.0268,
+        "F1": 0.0215
+      }
+    },
+    {
+      "fandom": "츄",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.4338
+        },
+        {
+          "f_code": "F4",
+          "f_name": "산업전이 경로",
+          "share": 0.1647
+        }
+      ],
+      "persona": "현장상업형",
+      "loyalty_score": 0.348,
+      "spillover_score": 0.254,
+      "factor_specific_loyalty": {
+        "F3": 0.151,
+        "F2": 0.0547,
+        "F4": 0.0573,
+        "F5": 0.0373,
+        "F1": 0.0476
+      },
+      "factor_specific_spillover": {
+        "F3": 0.1102,
+        "F2": 0.04,
+        "F4": 0.0418,
+        "F5": 0.0273,
+        "F1": 0.0348
+      }
+    },
+    {
+      "fandom": "Crush",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.4012
+        },
+        {
+          "f_code": "F4",
+          "f_name": "산업전이 경로",
+          "share": 0.2053
+        }
+      ],
+      "persona": "현장상업형",
+      "loyalty_score": 0.329,
+      "spillover_score": 0.271,
+      "factor_specific_loyalty": {
+        "F3": 0.132,
+        "F2": 0.0452,
+        "F4": 0.0675,
+        "F5": 0.0667,
+        "F1": 0.0175
+      },
+      "factor_specific_spillover": {
+        "F3": 0.1087,
+        "F2": 0.0373,
+        "F4": 0.0556,
+        "F5": 0.055,
+        "F1": 0.0144
+      }
+    },
+    {
+      "fandom": "QWER",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.4548
+        },
+        {
+          "f_code": "F5",
+          "f_name": "대중·글로벌 확산 경로",
+          "share": 0.2251
+        }
+      ],
+      "persona": "글로벌투어형",
+      "loyalty_score": 0.379,
+      "spillover_score": 0.216,
+      "factor_specific_loyalty": {
+        "F3": 0.1724,
+        "F2": 0.0593,
+        "F4": 0.0248,
+        "F5": 0.0853,
+        "F1": 0.0373
+      },
+      "factor_specific_spillover": {
+        "F3": 0.0982,
+        "F2": 0.0338,
+        "F4": 0.0141,
+        "F5": 0.0486,
+        "F1": 0.0212
+      }
+    },
+    {
+      "fandom": "여자친구",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.49
+        },
+        {
+          "f_code": "F2",
+          "f_name": "직접소비 경로",
+          "share": 0.1764
+        }
+      ],
+      "persona": "원정소비형",
+      "loyalty_score": 0.427,
+      "spillover_score": 0.166,
+      "factor_specific_loyalty": {
+        "F3": 0.2092,
+        "F2": 0.0753,
+        "F4": 0.0541,
+        "F5": 0.0583,
+        "F1": 0.0301
+      },
+      "factor_specific_spillover": {
+        "F3": 0.0813,
+        "F2": 0.0293,
+        "F4": 0.021,
+        "F5": 0.0227,
+        "F1": 0.0117
+      }
+    },
+    {
+      "fandom": "ITZY",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.4374
+        },
+        {
+          "f_code": "F5",
+          "f_name": "대중·글로벌 확산 경로",
+          "share": 0.2236
+        }
+      ],
+      "persona": "글로벌투어형",
+      "loyalty_score": 0.35,
+      "spillover_score": 0.242,
+      "factor_specific_loyalty": {
+        "F3": 0.1531,
+        "F2": 0.0751,
+        "F4": 0.0247,
+        "F5": 0.0783,
+        "F1": 0.0188
+      },
+      "factor_specific_spillover": {
+        "F3": 0.1059,
+        "F2": 0.052,
+        "F4": 0.0171,
+        "F5": 0.0541,
+        "F1": 0.013
+      }
+    },
+    {
+      "fandom": "나훈아",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.5377
+        },
+        {
+          "f_code": "F2",
+          "f_name": "직접소비 경로",
+          "share": 0.1968
+        }
+      ],
+      "persona": "원정소비형",
+      "loyalty_score": 0.459,
+      "spillover_score": 0.128,
+      "factor_specific_loyalty": {
+        "F3": 0.2468,
+        "F2": 0.0903,
+        "F4": 0.0523,
+        "F5": 0.0441,
+        "F1": 0.0254
+      },
+      "factor_specific_spillover": {
+        "F3": 0.0688,
+        "F2": 0.0252,
+        "F4": 0.0146,
+        "F5": 0.0123,
+        "F1": 0.0071
+      }
+    },
+    {
+      "fandom": "STAYC",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.4651
+        },
+        {
+          "f_code": "F5",
+          "f_name": "대중·글로벌 확산 경로",
+          "share": 0.183
+        }
+      ],
+      "persona": "글로벌투어형",
+      "loyalty_score": 0.376,
+      "spillover_score": 0.205,
+      "factor_specific_loyalty": {
+        "F3": 0.1749,
+        "F2": 0.0506,
+        "F4": 0.0527,
+        "F5": 0.0688,
+        "F1": 0.029
+      },
+      "factor_specific_spillover": {
+        "F3": 0.0953,
+        "F2": 0.0276,
+        "F4": 0.0287,
+        "F5": 0.0375,
+        "F1": 0.0158
+      }
+    },
+    {
+      "fandom": "다비치",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.3411
+        },
+        {
+          "f_code": "F4",
+          "f_name": "산업전이 경로",
+          "share": 0.2801
+        }
+      ],
+      "persona": "현장상업형",
+      "loyalty_score": 0.395,
+      "spillover_score": 0.168,
+      "factor_specific_loyalty": {
+        "F3": 0.1347,
+        "F2": 0.0433,
+        "F4": 0.1106,
+        "F5": 0.0751,
+        "F1": 0.0313
+      },
+      "factor_specific_spillover": {
+        "F3": 0.0573,
+        "F2": 0.0184,
+        "F4": 0.0471,
+        "F5": 0.0319,
+        "F1": 0.0133
+      }
+    },
+    {
+      "fandom": "악동뮤지션",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.3699
+        },
+        {
+          "f_code": "F5",
+          "f_name": "대중·글로벌 확산 경로",
+          "share": 0.2396
+        }
+      ],
+      "persona": "글로벌투어형",
+      "loyalty_score": 0.252,
+      "spillover_score": 0.311,
+      "factor_specific_loyalty": {
+        "F3": 0.0932,
+        "F2": 0.0342,
+        "F4": 0.0476,
+        "F5": 0.0604,
+        "F1": 0.0167
+      },
+      "factor_specific_spillover": {
+        "F3": 0.115,
+        "F2": 0.0422,
+        "F4": 0.0587,
+        "F5": 0.0745,
+        "F1": 0.0206
+      }
+    },
+    {
+      "fandom": "IVE",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.3267
+        },
+        {
+          "f_code": "F2",
+          "f_name": "직접소비 경로",
+          "share": 0.2523
+        }
+      ],
+      "persona": "원정소비형",
+      "loyalty_score": 0.314,
+      "spillover_score": 0.243,
+      "factor_specific_loyalty": {
+        "F3": 0.1026,
+        "F2": 0.0792,
+        "F4": 0.0218,
+        "F5": 0.0703,
+        "F1": 0.0401
+      },
+      "factor_specific_spillover": {
+        "F3": 0.0794,
+        "F2": 0.0613,
+        "F4": 0.0169,
+        "F5": 0.0544,
+        "F1": 0.0311
+      }
+    },
+    {
+      "fandom": "10CM",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.3771
+        },
+        {
+          "f_code": "F5",
+          "f_name": "대중·글로벌 확산 경로",
+          "share": 0.2798
+        }
+      ],
+      "persona": "글로벌투어형",
+      "loyalty_score": 0.386,
+      "spillover_score": 0.17,
+      "factor_specific_loyalty": {
+        "F3": 0.1456,
+        "F2": 0.0467,
+        "F4": 0.0396,
+        "F5": 0.108,
+        "F1": 0.0461
+      },
+      "factor_specific_spillover": {
+        "F3": 0.0641,
+        "F2": 0.0206,
+        "F4": 0.0174,
+        "F5": 0.0476,
+        "F1": 0.0203
+      }
+    },
+    {
+      "fandom": "김재중",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.4949
+        },
+        {
+          "f_code": "F5",
+          "f_name": "대중·글로벌 확산 경로",
+          "share": 0.2427
+        }
+      ],
+      "persona": "글로벌투어형",
+      "loyalty_score": 0.322,
+      "spillover_score": 0.223,
+      "factor_specific_loyalty": {
+        "F3": 0.1594,
+        "F2": 0.0099,
+        "F4": 0.0314,
+        "F5": 0.0781,
+        "F1": 0.0432
+      },
+      "factor_specific_spillover": {
+        "F3": 0.1104,
+        "F2": 0.0069,
+        "F4": 0.0217,
+        "F5": 0.0541,
+        "F1": 0.0299
+      }
+    },
+    {
+      "fandom": "HOT",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.4463
+        },
+        {
+          "f_code": "F5",
+          "f_name": "대중·글로벌 확산 경로",
+          "share": 0.2062
+        }
+      ],
+      "persona": "글로벌투어형",
+      "loyalty_score": 0.315,
+      "spillover_score": 0.212,
+      "factor_specific_loyalty": {
+        "F3": 0.1406,
+        "F2": 0.0578,
+        "F4": 0.0324,
+        "F5": 0.065,
+        "F1": 0.0192
+      },
+      "factor_specific_spillover": {
+        "F3": 0.0946,
+        "F2": 0.0389,
+        "F4": 0.0218,
+        "F5": 0.0437,
+        "F1": 0.013
+      }
+    },
+    {
+      "fandom": "이효리",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.4549
+        },
+        {
+          "f_code": "F4",
+          "f_name": "산업전이 경로",
+          "share": 0.1895
+        }
+      ],
+      "persona": "현장상업형",
+      "loyalty_score": 0.0,
+      "spillover_score": 0.521,
+      "factor_specific_loyalty": {
+        "F3": 0.0,
+        "F2": 0.0,
+        "F4": 0.0,
+        "F5": 0.0,
+        "F1": 0.0
+      },
+      "factor_specific_spillover": {
+        "F3": 0.237,
+        "F2": 0.0758,
+        "F4": 0.0987,
+        "F5": 0.0634,
+        "F1": 0.0462
+      }
+    },
+    {
+      "fandom": "보아",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.3354
+        },
+        {
+          "f_code": "F4",
+          "f_name": "산업전이 경로",
+          "share": 0.2218
+        }
+      ],
+      "persona": "현장상업형",
+      "loyalty_score": 0.36,
+      "spillover_score": 0.152,
+      "factor_specific_loyalty": {
+        "F3": 0.1207,
+        "F2": 0.0512,
+        "F4": 0.0798,
+        "F5": 0.0692,
+        "F1": 0.039
+      },
+      "factor_specific_spillover": {
+        "F3": 0.051,
+        "F2": 0.0216,
+        "F4": 0.0337,
+        "F5": 0.0292,
+        "F1": 0.0165
+      }
+    },
+    {
+      "fandom": "에픽하이",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.5744
+        },
+        {
+          "f_code": "F5",
+          "f_name": "대중·글로벌 확산 경로",
+          "share": 0.1619
+        }
+      ],
+      "persona": "글로벌투어형",
+      "loyalty_score": 0.412,
+      "spillover_score": 0.065,
+      "factor_specific_loyalty": {
+        "F3": 0.2367,
+        "F2": 0.0273,
+        "F4": 0.0431,
+        "F5": 0.0667,
+        "F1": 0.0383
+      },
+      "factor_specific_spillover": {
+        "F3": 0.0373,
+        "F2": 0.0043,
+        "F4": 0.0068,
+        "F5": 0.0105,
+        "F1": 0.006
+      }
+    },
+    {
+      "fandom": "청하",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.3509
+        },
+        {
+          "f_code": "F5",
+          "f_name": "대중·글로벌 확산 경로",
+          "share": 0.1893
+        }
+      ],
+      "persona": "글로벌투어형",
+      "loyalty_score": 0.166,
+      "spillover_score": 0.293,
+      "factor_specific_loyalty": {
+        "F3": 0.0582,
+        "F2": 0.0245,
+        "F4": 0.023,
+        "F5": 0.0314,
+        "F1": 0.0289
+      },
+      "factor_specific_spillover": {
+        "F3": 0.1028,
+        "F2": 0.0432,
+        "F4": 0.0407,
+        "F5": 0.0555,
+        "F1": 0.0509
+      }
+    },
+    {
+      "fandom": "윤하",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.358
+        },
+        {
+          "f_code": "F5",
+          "f_name": "대중·글로벌 확산 경로",
+          "share": 0.2712
+        }
+      ],
+      "persona": "글로벌투어형",
+      "loyalty_score": 0.314,
+      "spillover_score": 0.144,
+      "factor_specific_loyalty": {
+        "F3": 0.1124,
+        "F2": 0.0327,
+        "F4": 0.0483,
+        "F5": 0.0852,
+        "F1": 0.0355
+      },
+      "factor_specific_spillover": {
+        "F3": 0.0516,
+        "F2": 0.015,
+        "F4": 0.0221,
+        "F5": 0.0391,
+        "F1": 0.0163
+      }
+    },
+    {
+      "fandom": "케이윌",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.326
+        },
+        {
+          "f_code": "F4",
+          "f_name": "산업전이 경로",
+          "share": 0.2793
+        }
+      ],
+      "persona": "현장상업형",
+      "loyalty_score": 0.398,
+      "spillover_score": 0.056,
+      "factor_specific_loyalty": {
+        "F3": 0.1297,
+        "F2": 0.0612,
+        "F4": 0.1112,
+        "F5": 0.0439,
+        "F1": 0.0519
+      },
+      "factor_specific_spillover": {
+        "F3": 0.0183,
+        "F2": 0.0086,
+        "F4": 0.0156,
+        "F5": 0.0062,
+        "F1": 0.0073
+      }
+    },
+    {
+      "fandom": "조용필",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.3452
+        },
+        {
+          "f_code": "F5",
+          "f_name": "대중·글로벌 확산 경로",
+          "share": 0.2416
+        }
+      ],
+      "persona": "글로벌투어형",
+      "loyalty_score": 0.244,
+      "spillover_score": 0.206,
+      "factor_specific_loyalty": {
+        "F3": 0.0842,
+        "F2": 0.0487,
+        "F4": 0.0384,
+        "F5": 0.059,
+        "F1": 0.0137
+      },
+      "factor_specific_spillover": {
+        "F3": 0.0711,
+        "F2": 0.0411,
+        "F4": 0.0324,
+        "F5": 0.0498,
+        "F1": 0.0116
+      }
+    },
+    {
+      "fandom": "잭스키스",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.3399
+        },
+        {
+          "f_code": "F1",
+          "f_name": "팬덤결속 경로",
+          "share": 0.2167
+        }
+      ],
+      "persona": "집단동원형",
+      "loyalty_score": 0.341,
+      "spillover_score": 0.083,
+      "factor_specific_loyalty": {
+        "F3": 0.1159,
+        "F2": 0.0624,
+        "F4": 0.0605,
+        "F5": 0.0283,
+        "F1": 0.0739
+      },
+      "factor_specific_spillover": {
+        "F3": 0.0282,
+        "F2": 0.0152,
+        "F4": 0.0147,
+        "F5": 0.0069,
+        "F1": 0.018
+      }
+    },
+    {
+      "fandom": "박정현",
+      "top2_factors": [
+        {
+          "f_code": "F4",
+          "f_name": "산업전이 경로",
+          "share": 0.3799
+        },
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.3054
+        }
+      ],
+      "persona": "현장상업형",
+      "loyalty_score": 0.151,
+      "spillover_score": 0.252,
+      "factor_specific_loyalty": {
+        "F3": 0.0461,
+        "F2": 0.0156,
+        "F4": 0.0574,
+        "F5": 0.0241,
+        "F1": 0.0079
+      },
+      "factor_specific_spillover": {
+        "F3": 0.077,
+        "F2": 0.026,
+        "F4": 0.0957,
+        "F5": 0.0402,
+        "F1": 0.0131
+      }
+    },
+    {
+      "fandom": "김연자",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.4125
+        },
+        {
+          "f_code": "F4",
+          "f_name": "산업전이 경로",
+          "share": 0.204
+        }
+      ],
+      "persona": "현장상업형",
+      "loyalty_score": 0.159,
+      "spillover_score": 0.242,
+      "factor_specific_loyalty": {
+        "F3": 0.0656,
+        "F2": 0.0283,
+        "F4": 0.0324,
+        "F5": 0.0222,
+        "F1": 0.0105
+      },
+      "factor_specific_spillover": {
+        "F3": 0.0998,
+        "F2": 0.0431,
+        "F4": 0.0494,
+        "F5": 0.0337,
+        "F1": 0.016
+      }
+    },
+    {
+      "fandom": "빅마마",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.3374
+        },
+        {
+          "f_code": "F5",
+          "f_name": "대중·글로벌 확산 경로",
+          "share": 0.2839
+        }
+      ],
+      "persona": "글로벌투어형",
+      "loyalty_score": 0.301,
+      "spillover_score": 0.098,
+      "factor_specific_loyalty": {
+        "F3": 0.1016,
+        "F2": 0.029,
+        "F4": 0.0561,
+        "F5": 0.0855,
+        "F1": 0.0289
+      },
+      "factor_specific_spillover": {
+        "F3": 0.0331,
+        "F2": 0.0094,
+        "F4": 0.0183,
+        "F5": 0.0278,
+        "F1": 0.0094
+      }
+    },
+    {
+      "fandom": "볼빨간사춘기",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.2838
+        },
+        {
+          "f_code": "F4",
+          "f_name": "산업전이 경로",
+          "share": 0.2042
+        }
+      ],
+      "persona": "현장상업형",
+      "loyalty_score": 0.267,
+      "spillover_score": 0.126,
+      "factor_specific_loyalty": {
+        "F3": 0.0758,
+        "F2": 0.0514,
+        "F4": 0.0545,
+        "F5": 0.0513,
+        "F1": 0.034
+      },
+      "factor_specific_spillover": {
+        "F3": 0.0358,
+        "F2": 0.0243,
+        "F4": 0.0257,
+        "F5": 0.0242,
+        "F1": 0.016
+      }
+    },
+    {
+      "fandom": "엄정화",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.46
+        },
+        {
+          "f_code": "F4",
+          "f_name": "산업전이 경로",
+          "share": 0.1798
+        }
+      ],
+      "persona": "현장상업형",
+      "loyalty_score": 0.094,
+      "spillover_score": 0.278,
+      "factor_specific_loyalty": {
+        "F3": 0.0432,
+        "F2": 0.011,
+        "F4": 0.0169,
+        "F5": 0.0163,
+        "F1": 0.0066
+      },
+      "factor_specific_spillover": {
+        "F3": 0.1279,
+        "F2": 0.0326,
+        "F4": 0.05,
+        "F5": 0.0482,
+        "F1": 0.0194
+      }
+    },
+    {
+      "fandom": "FTISLAND",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.3148
+        },
+        {
+          "f_code": "F2",
+          "f_name": "직접소비 경로",
+          "share": 0.2312
+        }
+      ],
+      "persona": "원정소비형",
+      "loyalty_score": 0.19,
+      "spillover_score": 0.168,
+      "factor_specific_loyalty": {
+        "F3": 0.0598,
+        "F2": 0.0439,
+        "F4": 0.036,
+        "F5": 0.0324,
+        "F1": 0.0179
+      },
+      "factor_specific_spillover": {
+        "F3": 0.0529,
+        "F2": 0.0388,
+        "F4": 0.0318,
+        "F5": 0.0286,
+        "F1": 0.0158
+      }
+    },
+    {
+      "fandom": "다이나믹듀오",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.5732
+        },
+        {
+          "f_code": "F5",
+          "f_name": "대중·글로벌 확산 경로",
+          "share": 0.1358
+        }
+      ],
+      "persona": "글로벌투어형",
+      "loyalty_score": 0.267,
+      "spillover_score": 0.07,
+      "factor_specific_loyalty": {
+        "F3": 0.153,
+        "F2": 0.0267,
+        "F4": 0.0319,
+        "F5": 0.0363,
+        "F1": 0.0191
+      },
+      "factor_specific_spillover": {
+        "F3": 0.0401,
+        "F2": 0.007,
+        "F4": 0.0084,
+        "F5": 0.0095,
+        "F1": 0.005
+      }
+    },
+    {
+      "fandom": "비비",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.5138
+        },
+        {
+          "f_code": "F4",
+          "f_name": "산업전이 경로",
+          "share": 0.1521
+        }
+      ],
+      "persona": "현장상업형",
+      "loyalty_score": 0.188,
+      "spillover_score": 0.147,
+      "factor_specific_loyalty": {
+        "F3": 0.0966,
+        "F2": 0.0281,
+        "F4": 0.0286,
+        "F5": 0.0226,
+        "F1": 0.0122
+      },
+      "factor_specific_spillover": {
+        "F3": 0.0755,
+        "F2": 0.0219,
+        "F4": 0.0224,
+        "F5": 0.0176,
+        "F1": 0.0095
+      }
+    },
+    {
+      "fandom": "카더가든",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.33
+        },
+        {
+          "f_code": "F4",
+          "f_name": "산업전이 경로",
+          "share": 0.2878
+        }
+      ],
+      "persona": "현장상업형",
+      "loyalty_score": 0.142,
+      "spillover_score": 0.193,
+      "factor_specific_loyalty": {
+        "F3": 0.0469,
+        "F2": 0.0228,
+        "F4": 0.0409,
+        "F5": 0.0123,
+        "F1": 0.0192
+      },
+      "factor_specific_spillover": {
+        "F3": 0.0637,
+        "F2": 0.031,
+        "F4": 0.0555,
+        "F5": 0.0168,
+        "F1": 0.026
+      }
+    },
+    {
+      "fandom": "sg워너비",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.3289
+        },
+        {
+          "f_code": "F4",
+          "f_name": "산업전이 경로",
+          "share": 0.2831
+        }
+      ],
+      "persona": "현장상업형",
+      "loyalty_score": 0.212,
+      "spillover_score": 0.084,
+      "factor_specific_loyalty": {
+        "F3": 0.0697,
+        "F2": 0.0308,
+        "F4": 0.06,
+        "F5": 0.043,
+        "F1": 0.0084
+      },
+      "factor_specific_spillover": {
+        "F3": 0.0276,
+        "F2": 0.0122,
+        "F4": 0.0238,
+        "F5": 0.017,
+        "F1": 0.0033
+      }
+    },
+    {
+      "fandom": "장윤정",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.391
+        },
+        {
+          "f_code": "F4",
+          "f_name": "산업전이 경로",
+          "share": 0.1899
+        }
+      ],
+      "persona": "현장상업형",
+      "loyalty_score": 0.092,
+      "spillover_score": 0.195,
+      "factor_specific_loyalty": {
+        "F3": 0.036,
+        "F2": 0.0145,
+        "F4": 0.0175,
+        "F5": 0.0116,
+        "F1": 0.0125
+      },
+      "factor_specific_spillover": {
+        "F3": 0.0762,
+        "F2": 0.0307,
+        "F4": 0.037,
+        "F5": 0.0246,
+        "F1": 0.0264
+      }
+    },
+    {
+      "fandom": "이승철",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.4146
+        },
+        {
+          "f_code": "F4",
+          "f_name": "산업전이 경로",
+          "share": 0.2344
+        }
+      ],
+      "persona": "현장상업형",
+      "loyalty_score": 0.093,
+      "spillover_score": 0.169,
+      "factor_specific_loyalty": {
+        "F3": 0.0386,
+        "F2": 0.0158,
+        "F4": 0.0218,
+        "F5": 0.0124,
+        "F1": 0.0044
+      },
+      "factor_specific_spillover": {
+        "F3": 0.0701,
+        "F2": 0.0288,
+        "F4": 0.0396,
+        "F5": 0.0225,
+        "F1": 0.0081
+      }
+    },
+    {
+      "fandom": "윤도현",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.4553
+        },
+        {
+          "f_code": "F4",
+          "f_name": "산업전이 경로",
+          "share": 0.2314
+        }
+      ],
+      "persona": "현장상업형",
+      "loyalty_score": 0.144,
+      "spillover_score": 0.102,
+      "factor_specific_loyalty": {
+        "F3": 0.0656,
+        "F2": 0.0135,
+        "F4": 0.0333,
+        "F5": 0.0093,
+        "F1": 0.0223
+      },
+      "factor_specific_spillover": {
+        "F3": 0.0464,
+        "F2": 0.0095,
+        "F4": 0.0236,
+        "F5": 0.0066,
+        "F1": 0.0158
+      }
+    },
+    {
+      "fandom": "린",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.4047
+        },
+        {
+          "f_code": "F4",
+          "f_name": "산업전이 경로",
+          "share": 0.2706
+        }
+      ],
+      "persona": "현장상업형",
+      "loyalty_score": 0.133,
+      "spillover_score": 0.105,
+      "factor_specific_loyalty": {
+        "F3": 0.0538,
+        "F2": 0.0169,
+        "F4": 0.036,
+        "F5": 0.0144,
+        "F1": 0.0119
+      },
+      "factor_specific_spillover": {
+        "F3": 0.0425,
+        "F2": 0.0134,
+        "F4": 0.0284,
+        "F5": 0.0114,
+        "F1": 0.0094
+      }
+    },
+    {
+      "fandom": "잔나비",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.4268
+        },
+        {
+          "f_code": "F4",
+          "f_name": "산업전이 경로",
+          "share": 0.3087
+        }
+      ],
+      "persona": "현장상업형",
+      "loyalty_score": 0.114,
+      "spillover_score": 0.122,
+      "factor_specific_loyalty": {
+        "F3": 0.0487,
+        "F2": 0.0106,
+        "F4": 0.0352,
+        "F5": 0.0138,
+        "F1": 0.0058
+      },
+      "factor_specific_spillover": {
+        "F3": 0.0521,
+        "F2": 0.0113,
+        "F4": 0.0377,
+        "F5": 0.0148,
+        "F1": 0.0062
+      }
+    },
+    {
+      "fandom": "백지영",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.4413
+        },
+        {
+          "f_code": "F4",
+          "f_name": "산업전이 경로",
+          "share": 0.24
+        }
+      ],
+      "persona": "현장상업형",
+      "loyalty_score": 0.11,
+      "spillover_score": 0.114,
+      "factor_specific_loyalty": {
+        "F3": 0.0485,
+        "F2": 0.0209,
+        "F4": 0.0264,
+        "F5": 0.0089,
+        "F1": 0.0053
+      },
+      "factor_specific_spillover": {
+        "F3": 0.0503,
+        "F2": 0.0216,
+        "F4": 0.0274,
+        "F5": 0.0092,
+        "F1": 0.0055
+      }
+    },
+    {
+      "fandom": "김동률",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.5687
+        },
+        {
+          "f_code": "F2",
+          "f_name": "직접소비 경로",
+          "share": 0.1576
+        }
+      ],
+      "persona": "원정소비형",
+      "loyalty_score": 0.165,
+      "spillover_score": 0.028,
+      "factor_specific_loyalty": {
+        "F3": 0.0938,
+        "F2": 0.026,
+        "F4": 0.0214,
+        "F5": 0.0199,
+        "F1": 0.0039
+      },
+      "factor_specific_spillover": {
+        "F3": 0.0159,
+        "F2": 0.0044,
+        "F4": 0.0036,
+        "F5": 0.0034,
+        "F1": 0.0007
+      }
+    },
+    {
+      "fandom": "Zion.T",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.3785
+        },
+        {
+          "f_code": "F4",
+          "f_name": "산업전이 경로",
+          "share": 0.2337
+        }
+      ],
+      "persona": "현장상업형",
+      "loyalty_score": 0.049,
+      "spillover_score": 0.116,
+      "factor_specific_loyalty": {
+        "F3": 0.0185,
+        "F2": 0.0092,
+        "F4": 0.0115,
+        "F5": 0.0079,
+        "F1": 0.0019
+      },
+      "factor_specific_spillover": {
+        "F3": 0.0439,
+        "F2": 0.0218,
+        "F4": 0.0271,
+        "F5": 0.0187,
+        "F1": 0.0045
+      }
+    },
+    {
+      "fandom": "박효신",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.404
+        },
+        {
+          "f_code": "F4",
+          "f_name": "산업전이 경로",
+          "share": 0.2579
+        }
+      ],
+      "persona": "현장상업형",
+      "loyalty_score": 0.164,
+      "spillover_score": 0.0,
+      "factor_specific_loyalty": {
+        "F3": 0.0663,
+        "F2": 0.0233,
+        "F4": 0.0423,
+        "F5": 0.0174,
+        "F1": 0.0148
+      },
+      "factor_specific_spillover": {
+        "F3": 0.0,
+        "F2": 0.0,
+        "F4": 0.0,
+        "F5": 0.0,
+        "F1": 0.0
+      }
+    },
+    {
+      "fandom": "pH-1",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.6161
+        },
+        {
+          "f_code": "F5",
+          "f_name": "대중·글로벌 확산 경로",
+          "share": 0.1249
+        }
+      ],
+      "persona": "글로벌투어형",
+      "loyalty_score": 0.109,
+      "spillover_score": 0.041,
+      "factor_specific_loyalty": {
+        "F3": 0.0672,
+        "F2": 0.0107,
+        "F4": 0.012,
+        "F5": 0.0136,
+        "F1": 0.0055
+      },
+      "factor_specific_spillover": {
+        "F3": 0.0253,
+        "F2": 0.004,
+        "F4": 0.0045,
+        "F5": 0.0051,
+        "F1": 0.0021
+      }
+    },
+    {
+      "fandom": "한로로",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.4335
+        },
+        {
+          "f_code": "F5",
+          "f_name": "대중·글로벌 확산 경로",
+          "share": 0.2108
+        }
+      ],
+      "persona": "글로벌투어형",
+      "loyalty_score": 0.117,
+      "spillover_score": 0.019,
+      "factor_specific_loyalty": {
+        "F3": 0.0507,
+        "F2": 0.0126,
+        "F4": 0.0214,
+        "F5": 0.0247,
+        "F1": 0.0076
+      },
+      "factor_specific_spillover": {
+        "F3": 0.0082,
+        "F2": 0.002,
+        "F4": 0.0035,
+        "F5": 0.004,
+        "F1": 0.0012
+      }
+    },
+    {
+      "fandom": "이문세",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.4277
+        },
+        {
+          "f_code": "F4",
+          "f_name": "산업전이 경로",
+          "share": 0.2726
+        }
+      ],
+      "persona": "현장상업형",
+      "loyalty_score": 0.007,
+      "spillover_score": 0.115,
+      "factor_specific_loyalty": {
+        "F3": 0.003,
+        "F2": 0.0009,
+        "F4": 0.0019,
+        "F5": 0.0007,
+        "F1": 0.0005
+      },
+      "factor_specific_spillover": {
+        "F3": 0.0492,
+        "F2": 0.0149,
+        "F4": 0.0313,
+        "F5": 0.0112,
+        "F1": 0.0083
+      }
+    },
+    {
+      "fandom": "브라운아이즈",
+      "top2_factors": [
+        {
+          "f_code": "F4",
+          "f_name": "산업전이 경로",
+          "share": 0.2998
+        },
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.2812
+        }
+      ],
+      "persona": "현장상업형",
+      "loyalty_score": 0.064,
+      "spillover_score": 0.037,
+      "factor_specific_loyalty": {
+        "F3": 0.018,
+        "F2": 0.0081,
+        "F4": 0.0192,
+        "F5": 0.013,
+        "F1": 0.0057
+      },
+      "factor_specific_spillover": {
+        "F3": 0.0104,
+        "F2": 0.0047,
+        "F4": 0.0111,
+        "F5": 0.0075,
+        "F1": 0.0033
+      }
+    },
+    {
+      "fandom": "거미",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.3621
+        },
+        {
+          "f_code": "F4",
+          "f_name": "산업전이 경로",
+          "share": 0.3533
+        }
+      ],
+      "persona": "현장상업형",
+      "loyalty_score": 0.083,
+      "spillover_score": 0.006,
+      "factor_specific_loyalty": {
+        "F3": 0.0301,
+        "F2": 0.0132,
+        "F4": 0.0293,
+        "F5": 0.0047,
+        "F1": 0.0057
+      },
+      "factor_specific_spillover": {
+        "F3": 0.0022,
+        "F2": 0.001,
+        "F4": 0.0021,
+        "F5": 0.0003,
+        "F1": 0.0004
+      }
+    },
+    {
+      "fandom": "BE'O",
+      "top2_factors": [
+        {
+          "f_code": "F3",
+          "f_name": "현장경제 경로",
+          "share": 0.5065
+        },
+        {
+          "f_code": "F5",
+          "f_name": "대중·글로벌 확산 경로",
+          "share": 0.145
+        }
+      ],
+      "persona": "글로벌투어형",
+      "loyalty_score": 0.07,
+      "spillover_score": 0.011,
+      "factor_specific_loyalty": {
+        "F3": 0.0355,
+        "F2": 0.0097,
+        "F4": 0.0089,
+        "F5": 0.0102,
+        "F1": 0.0059
+      },
+      "factor_specific_spillover": {
+        "F3": 0.0056,
+        "F2": 0.0015,
+        "F4": 0.0014,
+        "F5": 0.0016,
+        "F1": 0.0009
+      }
+    }
+  ]
+}

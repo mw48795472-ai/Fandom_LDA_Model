@@ -1,5 +1,9 @@
 # 실루엣 게이트 정책 (Silhouette Gate Governance) — 정리 및 검증
 
+> **2026-09-21 갱신 주** — 이 문서가 "이번 세션에 없다 / 재현 불가"라고 적은 최종 라이브 코퍼스(10,020건)와 최종 산출물이 이제 `data/v7_final/`에 있다(`fandoms_v3_100.json` 10,020건, `fandom_scores_v6.csv`·`fan_persona_v7.json`(동결 스냅샷 7,350건 기준), `language_domain_summary_v7.json`, `lda_v6_diagnostics_live_reference_v7.json`(라이브 재적합 K=8/M=5/실루엣 0.046), `chart3d_payload_live_reference_v7.json`, `member_mention_index_v7.json`). r22 스냅샷(5,612건)은 `data/v6_r22_snapshot/`으로 옮겨졌고, 이 문서의 노트북·스크립트가 참조하는 `../data/v6_r22_snapshot` 경로는 그대로 동작한다. 본문의 5,612건 기준 병행 분석은 그 시점의 기록으로 유지하며, 최종 수치와의 대응은 `README.md` 1~3절 참고.
+> 이 문서 관련: 타임라인 CSV `corpus_silhouette_timeline_v7_62.csv`는 아직 저장소에 없다(스크립트는 `data/silhouette_gate_timeline/` 경로를 읽도록 정리). 최종 라이브 코퍼스 10,020건 시점의 참고 재적합(K=8, M=5, 실루엣 0.046, 게이트 기각)은 `data/v7_final/lda_v6_diagnostics_live_reference_v7.json`에 있어, 표의 r46~r61 구간 이후에도 기준선 0.267에 도달하지 못했음을 보여준다.
+
+
 ## 이 문서가 다루는 것
 
 "실루엣 게이트"는 `docs/METHODOLOGY.md` 4절("실루엣 게이트 거버넌스")이 이미 정의하고 있는

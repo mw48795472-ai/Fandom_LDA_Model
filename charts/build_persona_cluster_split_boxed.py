@@ -17,15 +17,45 @@ from scipy.cluster.hierarchy import linkage, dendrogram, fcluster
 from scipy.spatial.distance import squareform
 from sklearn.decomposition import PCA
 
-KFONT = fm.FontProperties(fname="/home/claude/work/charts/NotoSansCJKkr-Regular.otf")
-fm.fontManager.addfont("/home/claude/work/charts/NotoSansCJKkr-Regular.otf")
-plt.rcParams["font.family"] = KFONT.get_name()
+import os
+from pathlib import Path
+
+# 저장소 상대 경로 (원본은 이전 세션 작업 디렉터리 /home/claude/work/... 절대경로였음)
+BASE = Path(__file__).resolve().parents[1]
+DATA_DIR = BASE / "data" / "v7_final"
+OUT_DIR = BASE / "output" / "charts"
+OUT_DIR.mkdir(parents=True, exist_ok=True)
+
+def _find_korean_font():
+    """NotoSansCJKkr 폰트를 환경변수(KFONT_PATH) -> 저장소 fonts/ -> 시스템 경로 순으로 찾는다.
+    없으면 matplotlib 기본 폰트로 진행(한글이 깨질 수 있음을 경고)."""
+    candidates = [os.environ.get("KFONT_PATH", ""), str(BASE / "fonts" / "NotoSansCJKkr-Regular.otf"),
+                  "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc",
+                  "/usr/share/fonts/truetype/nanum/NanumGothic.ttf"]
+    for c in candidates:
+        if c and os.path.exists(c):
+            return c
+    print("[warn] 한글 폰트를 찾지 못했습니다 — KFONT_PATH 환경변수로 NotoSansCJKkr-Regular.otf 경로를 지정하세요.")
+    return None
+
+_font = _find_korean_font()
+if _font:
+    KFONT = fm.FontProperties(fname=_font)
+    fm.fontManager.addfont(_font)
+    plt.rcParams["font.family"] = KFONT.get_name()
+else:
+    KFONT = fm.FontProperties()
 plt.rcParams["svg.fonttype"] = "none"
 plt.rcParams["axes.unicode_minus"] = False
 
-with open("/home/claude/work/data/factor_clustering_structure_v7.json", encoding="utf-8") as f:
+# 입력 1: K→M 군집 구조(토픽 코사인거리 행렬 + 팬덤별 F1~F5 비중). 동결 스냅샷 v7-40(7,350건) 기준.
+#   원본 factor_clustering_structure_v7.json은 아직 저장소에 없다. 같은 스냅샷의 K=10 토픽 명칭·F코드·
+#   덴드로그램 병합 순서·PCA 좌표는 data/v7_final/persona_decision_space_v7.json(Persona_결정공간.html에서
+#   추출)에 있으나 코사인거리 행렬 자체는 포함돼 있지 않아 이 스크립트가 바로 쓰지는 못한다.
+with open(DATA_DIR / "factor_clustering_structure_v7.json", encoding="utf-8") as f:
     cs = json.load(f)
-with open("/home/claude/work/data/fan_persona_v7.json", encoding="utf-8") as f:
+# 입력 2: 팬덤별 페르소나(동결 스냅샷 기준, 저장소에 있음)
+with open(DATA_DIR / "fan_persona_v7.json", encoding="utf-8") as f:
     persona_data = json.load(f)
 
 K, M = cs["K"], cs["M"]
@@ -106,7 +136,7 @@ ax1.grid(axis="y", alpha=0.2)
 # 제목(① K→M ...) 생략 — 요청에 따라 그래프만
 
 fig1.subplots_adjust(left=0.11, right=0.97, top=0.97, bottom=0.40)
-fig1.savefig("/home/claude/work/charts/persona_cluster_left_dendrogram_v7_sharp.png",
+fig1.savefig(OUT_DIR / "persona_cluster_left_dendrogram_v7_sharp.png",
              dpi=450, facecolor="white")
 plt.close(fig1)
 print("saved persona_cluster_left_dendrogram_v7.png")
@@ -180,7 +210,7 @@ ax2.set_aspect("equal", adjustable="datalim")
 # 제목(② Persona 결정 공간 ...) 생략 — 요청에 따라 그래프만
 
 fig2.subplots_adjust(left=0.08, right=0.97, top=0.97, bottom=0.08)
-fig2.savefig("/home/claude/work/charts/persona_cluster_right_pca_v7_boxed.png",
+fig2.savefig(OUT_DIR / "persona_cluster_right_pca_v7_boxed.png",
              dpi=450, facecolor="white", bbox_inches="tight")
 plt.close(fig2)
 print("saved persona_cluster_right_pca_v7_boxed.png")

@@ -25,7 +25,7 @@ import pythainlp
 from pythainlp.corpus import thai_stopwords, thai_words
 from pythainlp.tokenize import word_tokenize as thai_word_tokenize
 
-BASE = Path(__file__).resolve().parents[2]
+BASE = Path(__file__).resolve().parents[1]  # 저장소 루트 (원본 scripts/tokenizer/ 2단 깊이 -> 이 저장소는 1단)
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from build_bullet_token_frequency_csv import (  # noqa: E402
     RE_HANZI,

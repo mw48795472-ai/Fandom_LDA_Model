@@ -9,13 +9,38 @@ import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
 import numpy as np
 
-KFONT = fm.FontProperties(fname="/home/claude/work/charts/NotoSansCJKkr-Regular.otf")
-fm.fontManager.addfont("/home/claude/work/charts/NotoSansCJKkr-Regular.otf")
-plt.rcParams["font.family"] = KFONT.get_name()
+import os
+from pathlib import Path
+
+# 저장소 상대 경로 (원본은 이전 세션 작업 디렉터리 /home/claude/work/... 절대경로였음)
+BASE = Path(__file__).resolve().parents[1]
+DATA_DIR = BASE / "data" / "v7_final"
+OUT_DIR = BASE / "output" / "charts"
+OUT_DIR.mkdir(parents=True, exist_ok=True)
+
+def _find_korean_font():
+    """NotoSansCJKkr 폰트를 환경변수(KFONT_PATH) -> 저장소 fonts/ -> 시스템 경로 순으로 찾는다.
+    없으면 matplotlib 기본 폰트로 진행(한글이 깨질 수 있음을 경고)."""
+    candidates = [os.environ.get("KFONT_PATH", ""), str(BASE / "fonts" / "NotoSansCJKkr-Regular.otf"),
+                  "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc",
+                  "/usr/share/fonts/truetype/nanum/NanumGothic.ttf"]
+    for c in candidates:
+        if c and os.path.exists(c):
+            return c
+    print("[warn] 한글 폰트를 찾지 못했습니다 — KFONT_PATH 환경변수로 NotoSansCJKkr-Regular.otf 경로를 지정하세요.")
+    return None
+
+_font = _find_korean_font()
+if _font:
+    KFONT = fm.FontProperties(fname=_font)
+    fm.fontManager.addfont(_font)
+    plt.rcParams["font.family"] = KFONT.get_name()
+else:
+    KFONT = fm.FontProperties()
 plt.rcParams["svg.fonttype"] = "none"
 plt.rcParams["axes.unicode_minus"] = False
 
-with open("/home/claude/work/data/fandom_cohesion_index_v7.json", encoding="utf-8") as f:
+with open(DATA_DIR / "fandom_cohesion_index_v7.json", encoding="utf-8") as f:
     data = json.load(f)
 
 CAT_ORDER = ["A_공식팬클럽·회원제", "B_팬카페·온라인커뮤니티", "C_팬덤정체성·문화",
@@ -76,8 +101,8 @@ ax2.tick_params(axis="x", labelsize=20)
 ax2.grid(axis="x", alpha=0.25)
 
 plt.tight_layout()
-plt.savefig("/home/claude/work/charts/cohesion_index_v7_right_only.png", dpi=400, bbox_inches="tight", facecolor="white")
-plt.savefig("/home/claude/work/charts/cohesion_index_v7_right_only.svg", bbox_inches="tight", facecolor="white")
+plt.savefig(OUT_DIR / "cohesion_index_v7_right_only.png", dpi=400, bbox_inches="tight", facecolor="white")
+plt.savefig(OUT_DIR / "cohesion_index_v7_right_only.svg", bbox_inches="tight", facecolor="white")
 plt.close()
 
 # 데이터 무결성 재검증 — 원본 JSON과 그대로 대조

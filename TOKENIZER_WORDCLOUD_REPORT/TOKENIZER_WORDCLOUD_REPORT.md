@@ -1,5 +1,9 @@
 # 팬덤 텍스트 분석 결과 보고서 (v7) — 별도 보고서
 
+> **2026-09-21 갱신 주** — 이 문서가 "이번 세션에 없다 / 재현 불가"라고 적은 최종 라이브 코퍼스(10,020건)와 최종 산출물이 이제 `data/v7_final/`에 있다(`fandoms_v3_100.json` 10,020건, `fandom_scores_v6.csv`·`fan_persona_v7.json`(동결 스냅샷 7,350건 기준), `language_domain_summary_v7.json`, `lda_v6_diagnostics_live_reference_v7.json`(라이브 재적합 K=8/M=5/실루엣 0.046), `chart3d_payload_live_reference_v7.json`, `member_mention_index_v7.json`). r22 스냅샷(5,612건)은 `data/v6_r22_snapshot/`으로 옮겨졌고, 이 문서의 노트북·스크립트가 참조하는 `../data/v6_r22_snapshot` 경로는 그대로 동작한다. 본문의 5,612건 기준 병행 분석은 그 시점의 기록으로 유지하며, 최종 수치와의 대응은 `README.md` 1~3절 참고.
+> 이 문서 관련: 라이브 코퍼스 10,020건 자체는 이제 있으나, 표 2의 토큰 통계를 만든 14개 언어 문자권별 라우팅 토크나이저(`run_lda_v6_live_reference_v7.py`)의 소스는 여전히 없다. 저장소의 `run_lda_v6.py`(구 토크나이저)를 10,020건에 돌리면 3토큰 미만 제외 후 문서 수가 9,954건으로 보고서의 10,018건과 다르다.
+
+
 **토크나이저 사용 현황 정리 + 언어(문자권)별 워드클라우드**
 
 문서화·시각화 전용 (코퍼스·토크나이저 코드 변경 없음) · 2026년 9월
