@@ -19,6 +19,7 @@
 | `member_mention_pilot_v7.json` | 라이브 10,020건 | 멤버 언급 파일럿 v7 (아카이브 원본명). `member_mention_index_v7.json`과 값이 동일하고 키 이름만 pilot/index |
 | `v7_progress.json` | v7 48라운드 시점(8,311건) | 10배 확대 프로젝트 진행 추적 후속본(r22판은 `data/v6_r22_snapshot/`). `current_total_note`가 동결/라이브 이원 구조를 명시 |
 | `ARCHIVE_README_original.md` | — | 최종 보고서 docx가 읽은 원본 데이터 아카이브(zip)의 README 원문 — 파일 전량 목록. 저장소 미보유분 대조는 루트 README 3절 |
+| `corpus_growth_history_v6_v7_full.csv` | v6 → v7 r72 | `data/v7_rounds/` 로그 전량에서 만든 코퍼스 성장 이력 69단계(마지막 10,020건), 로스터 교체·체인 불연속 표기 (`data_export/build_corpus_growth_history_csv.py`) |
 | `k9_validation_v7.json` | 중간 라운드 9,614문서 | K=9 추가 검증 실험(승자 K=8 유지, 미디어 토픽 분리 여부 M-grid) |
 | `lda_v6_diagnostics_live_reference_v7.json` | 라이브 10,020건 | 라이브 재적합 진단: K-grid(8~30), selected_k=8, M=5, 실루엣 0.046, 토픽 상위어, 토픽→F 배정 — 실루엣 게이트에 기각되어 해석 계층에 미반영 |
 | `lda_k_grid_live_reference_v7.csv` | 라이브 10,020건 | 위 k_grid를 CSV로 (`data_export/build_lda_k_grid_csv.py`) |
@@ -32,6 +33,9 @@
 | `topic_cards_v7.json` | 동결 스냅샷 7,350건 | K=10 토픽 카드: 명칭(METHODOLOGY.md 2-1 표와 동일)·상위 10개 키워드·대표 불릿 3건·대표 팬덤 5개·연결 F 경로 |
 | `fandom_scores_v6.csv` | 동결 스냅샷 7,350건 | 팬덤별 loyalty/spillover/coverage/factor_diversity/dominant_factor/activity + F1~F5 비중(컬럼: 현장경제형=F3, 소비력형=F2, 미디어노출형=F4, 차트·확산형=F5, 결속형=F1). activity 합 = 7,350. 파일명의 v6은 파이프라인 버전 |
 | `lda_v6_diagnostics_frozen_v7_40.json` | 동결 스냅샷 7,350건 | 동결 진단 원본(업로드 파일명 `lda_v6_diagnostics.json`): K-grid, selected_k=10, M=5, 실루엣 0.267, 토픽 상위어(=topic_cards), 토픽→F 배정 |
+| `fandom_scores_v6.json` | 동결 스냅샷 7,350건 | 위 CSV의 JSON 원본: loyalty_raw/spillover_raw, 불릿 수, factor_share(M=5), coverage_detail(13개 언어 카운트 — 아랍어 추가 전, 언어 엔트로피 분모 ln(13)). r22판(5,612건, M=6)은 `data/v6_r22_snapshot/`에 별도 |
+| `supplementary_csv/fandom_bullet_share_v6.csv` | v7 r17 (5,454건) | 팬덤별 근거문장 수·비중 (창모·사이먼도미닉·헤이즈 포함 구 로스터) |
+| `supplementary_csv/domestic_regional_pilot_v6_top3.csv` | v7 r24 (5,998건) | 팬덤별 지역 언급·검출 지역 수·다양성·대표지역 top3 요약 (지역 값은 r22 파일럿과 99/100 동일) |
 | `fan_persona_v7.json` | 동결 스냅샷 7,350건 | 페르소나 조합표(10개)·카운트(43/31/17/9)·팬덤별 top2 F·factor_specific_loyalty/spillover(= 비중 × 점수) |
 | `persona_decision_space_v7.json` | 동결 스냅샷 7,350건 | Persona_결정공간.html 내장 데이터: K=10 토픽명·F코드·덴드로그램 병합 순서·PCA loading/좌표·팬덤별 F1~F5 비중 (`data_export/extract_html_payloads.py`) |
 

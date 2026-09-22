@@ -2,14 +2,17 @@
 
 보고서·대화에서 반복 인용된 수치를 한곳에 모은 참고 문서. 2026-09-21 정리에서 최종 라이브 코퍼스(10,020건)와
 최종 산출물이 `data/v7_final/`에 들어오면서 **각 수치의 근거 파일과 계층(동결 스냅샷 7,350건 vs 라이브 10,020건)을
-확정**했고, `verify_v7_final_consistency.py`로 재계산해 대조했다(86/86 일치).
+확정**했고, `verify_v7_final_consistency.py`로 재계산해 대조했다(97/97 일치).
 
 ## 코퍼스 규모 — 라이브 코퍼스 `data/v7_final/fandoms_v3_100.json`
 - 분석 대상 팬덤: 100개
 - 근거 문장 총계: 10,020건 (데이터 파일 저장 기준) / 10,018건 (보고서 표 2-1 "LDA 실제 재적합 문서 수 기준") — 3토큰 미만
   2건 제외: ATEEZ 태국어 감탄문 1건, 레드벨벳 "맥도날드 조이 (2026)" 1건 (`lda_excluded_bullets_v7.json`, 코퍼스 위치 확인)
 - 로스터: 동결 스냅샷(7,350건)과 라이브(10,020건)의 100개 팬덤은 3개가 다름 — 동결에만 한로로·pH-1·BE'O, 라이브에만
-  몬스타엑스·투어스(TWS)·빈지노
+  몬스타엑스·투어스(TWS)·빈지노 (교체 로그 `data/v7_rounds/merge_log_r58.json`·`swap_log_r62.json`·`swap_log_r63.json`;
+  그 이전 r29·r34에 사이먼도미닉→GOT7, 창모→김재중, 헤이즈→박서진 교체)
+- 코퍼스 성장 이력(`data/v7_rounds/` 병합 로그 60개 → `corpus_growth_history_v6_v7_full.csv`): v6 2,403건 → r22 5,612 → r39 7,350(동결)
+  → r59 9,042 → r66(2차) 9,680 → r68 아랍어·r69 프랑스어·r71 스페인어 보강 → **r72 10,020건**. after_total이 타임라인 CSV와 56건 전부 일치
 - 언어권: 14개 (`language_domain_summary_v7.json`, 14개 언어 불릿 합 = 10,020). 같은 분류가 `fandom_scores_live_reference_v7.json`의
   팬덤별 coverage_detail.language_counts와 세계 언어 지수 원본에도 들어 있어 세 파일의 언어별 합이 일치
 - 토크나이저 실행 결과(`wordcloud_by_language_v7.json`): 총 토큰 170,725개, 문자권별 불릿 수 한국어 8,942(89.2%)·영어 6,425·중국어 398·
@@ -26,7 +29,9 @@
   단독 메타팩터로 분리됨
 - 페르소나 4유형: 글로벌투어형(F3+F5, n=43) · 현장상업형(F3+F4, n=31) · 원정소비형(F2+F3, n=17) ·
   집단동원형(F1+F3, n=9) — F3(현장경제 경로)가 4유형 전부의 공통 기반 — `fan_persona_v7.json`
-- 팬덤별 F1~F5 비중과 동결 스냅샷 점수: `fandom_scores_v6.csv` (activity 합 = 7,350)
+- 팬덤별 F1~F5 비중과 동결 스냅샷 점수: `fandom_scores_v6.csv` / `.json` (activity 합 = 7,350). JSON의 raw 점수·coverage_detail로
+  min-max 정규화·F 다양성·coverage 가중합이 재현되며, 동결 시점 언어 커버리지 분모는 ln(13)(아랍어 추가 전; 라이브는 ln(14)).
+  동결 7,350건 언어 분포: ko 4,183 · en 1,751 · ja 333 · id 193 · th 181 · zh 153 · tl 133 · es 121 · pt 87 · ru 72 · vi 71 · tr 68 · fr 4
 - 라이브 코퍼스(10,020건) 재적합은 K=8, M=5, silhouette=0.046으로 게이트 기각 → 해석 계층에 미반영
   (`lda_v6_diagnostics_live_reference_v7.json`). 그 재적합의 팬덤별 F 비중 5개(현장경제·소비력·결속·브랜드상업·차트확산)와
   factor_diversity·coverage_index·dominant_factor 원본은 `fandom_scores_live_reference_v7.csv` — 99개 팬덤이 현장경제형 우세, 투어스만 소비력형

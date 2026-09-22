@@ -550,6 +550,87 @@ check("5개 라벨 → F 코드 = 검증 스크립트의 LAB2F 표(결속 F1·�
       {k: v["f_code"] for k, v in fpm["mapping"].items()} == LAB2F and fpm["qa"]["n_mapped_topics"] == 10 and fpm["qa"]["unmapped_topic_ratio"] == 0.0)
 
 # ---------------------------------------------------------------------------
+# [Z] 2026-09-22 6차 추가: 동결 스냅샷 점수 JSON · 보조 CSV 2종
+# ---------------------------------------------------------------------------
+print("\n[Z] fandom_scores_v6.json (동결 스냅샷 v7-40 점수 원본 JSON — 같은 이름 CSV의 원본)")
+with open(D / "fandom_scores_v6.json", encoding="utf-8") as f:
+    fzj = json.load(f)
+fz_row = {r["fandom"]: r for r in frozen}
+check("100개 팬덤, activity 합 7,350, 점수·F 비중 5개·coverage·dominant = fandom_scores_v6.csv (100/100)",
+      len(fzj) == 100 and sum(r["activity"] for r in fzj) == 7350 and all(
+          abs(r["loyalty_score"] - float(fz_row[r["fandom"]]["loyalty_score"])) < 1e-9 and abs(r["coverage_index"] - float(fz_row[r["fandom"]]["coverage_index"])) < 1e-9
+          and all(abs(r["factor_share"][c] - float(fz_row[r["fandom"]][c])) < 1e-9 for c in F_COLS.values()) and r["dominant_factor"] == fz_row[r["fandom"]]["dominant_factor"] for r in fzj))
+Lr = [r["loyalty_raw"] for r in fzj]; Sr = [r["spillover_raw"] for r in fzj]
+check("loyalty/spillover_score = raw 점수의 min-max 정규화 (식 2), factor_diversity = 정규화 엔트로피 ln(5), coverage = 5요소 가중합",
+      all(abs(round((r["loyalty_raw"] - min(Lr)) / (max(Lr) - min(Lr)), 3) - r["loyalty_score"]) < 0.002 and abs(round((r["spillover_raw"] - min(Sr)) / (max(Sr) - min(Sr)), 3) - r["spillover_score"]) < 0.002
+          and abs(-sum(p * math.log(p) for p in r["factor_share"].values() if p > 0) / math.log(5) - r["factor_diversity"]) < 0.0011
+          and abs(round(sum(Wc[k] * r["coverage_detail"][k + "_coverage"] for k in Wc), 3) - r["coverage_index"]) < 0.0015 for r in fzj))
+def _lang_ent_n(lc, n):
+    tot = sum(lc.values()); return -sum(c / tot * math.log(c / tot) for c in lc.values() if c > 0) / math.log(n)
+n13 = sum(1 for r in fzj if abs(_lang_ent_n(r["coverage_detail"]["language_counts"], 13) - r["coverage_detail"]["language_coverage"]) < 0.0015)
+n14 = sum(1 for r in fzj if abs(_lang_ent_n(r["coverage_detail"]["language_counts"], 14) - r["coverage_detail"]["language_coverage"]) < 0.0015)
+check("동결 스냅샷의 언어 커버리지 분모는 ln(13) (아랍어 추가 전 13개 언어; 라이브 10,020건은 ln(14))", n13 == 100, f"ln(13) 일치 {n13}/100, ln(14) 일치 {n14}/100")
+fz_lang = Counter()
+for r in fzj:
+    fz_lang.update(r["coverage_detail"]["language_counts"])
+info("동결 스냅샷 7,350건 언어 분포", f"{dict(fz_lang)} (합 {sum(fz_lang.values())}, 아랍어 없음)")
+
+print("\n[AA] supplementary_csv/ (아카이브 보조 CSV)")
+with open(D / "supplementary_csv" / "fandom_bullet_share_v6.csv", encoding="utf-8-sig") as f:
+    bsh = list(csv.DictReader(f))
+bs_tot = sum(int(r["근거 문장 수"]) for r in bsh)
+check("fandom_bullet_share_v6.csv: 100개 팬덤, 합 5,454건 = 타임라인 r17, 비중(%) = 건수/합", len(bsh) == 100 and bs_tot == 5454
+      and any(r["라운드"] == "r17" and r["코퍼스(불릿수)"] == "5454" for r in real_rows) and all(abs(int(r["근거 문장 수"]) / bs_tot * 100 - float(r["비중(%)"])) < 0.006 for r in bsh),
+      f"합 {bs_tot}, 로스터에 창모·사이먼도미닉·헤이즈 포함(r22 이전 로스터)")
+with open(D / "supplementary_csv" / "domestic_regional_pilot_v6_top3.csv", encoding="utf-8-sig") as f:
+    top3 = list(csv.DictReader(f))
+with open(BASE / "data" / "v6_r22_snapshot" / "domestic_regional_pilot_v6.json", encoding="utf-8") as f:
+    pj = json.load(f)
+t3_sum = sum(int(r["근거 문장 수"]) for r in top3)
+t3_match = sum(1 for r in top3 if int(r["총 지역언급"]) == pj[r["팬덤"]]["total_region_mentions"] and int(r["검출 지역 수"]) == pj[r["팬덤"]]["n_regions_hit"] and abs(float(r["요인 다양성"]) - pj[r["팬덤"]]["region_diversity"]) < 1e-6)
+check("domestic_regional_pilot_v6_top3.csv: 100개 팬덤, 근거문장수 합 5,998 = 타임라인 r24; 지역언급·검출지역수·다양성이 r22 파일럿 JSON과 99/100 일치(송가인만 갱신)",
+      len(top3) == 100 and t3_sum == 5998 and t3_match == 99, f"합 {t3_sum}, r22 파일럿 일치 {t3_match}/100")
+
+# ---------------------------------------------------------------------------
+# [AB] data/v7_rounds/ — 사용자가 GitHub에 직접 업로드한 v7 라운드별 병합·교체 로그 전량 (r1~r72)
+# ---------------------------------------------------------------------------
+print("\n[AB] data/v7_rounds/ (v7 병합·교체 로그 전량)")
+RD = BASE / "data" / "v7_rounds"
+def _rk(n):
+    m = re.search(r"r(\d+)(?:_(p2|2ch))?", n); return (int(m.group(1)), {"": 0, "p2": 1, "2ch": 2}[m.group(2) or ""])
+mlogs = sorted(RD.glob("merge_log_r*.json"), key=lambda p: _rk(p.name))
+same22 = sum(1 for p in (BASE / "data" / "v6_r22_snapshot" / "v7_rounds").glob("merge_log_r*.json")
+             if (RD / p.name).exists() and json.load(open(p, encoding="utf-8")) == json.load(open(RD / p.name, encoding="utf-8")))
+check("r1~r22 병합 로그 22개 = data/v6_r22_snapshot/v7_rounds/ 사본과 동일", same22 == 22, f"{same22}/22")
+def _ba(d): return d.get("before_total", d.get("before_total_bullets")), d.get("after_total", d.get("after_total_bullets"))
+last = json.load(open(mlogs[-1], encoding="utf-8"))
+check("마지막 병합 로그 r72: 9,939 → 10,020 (최종 라이브 코퍼스 규모)", mlogs[-1].name == "merge_log_r72.json" and _ba(last) == (9939, 10020))
+tl_map = {r["라운드"]: r["코퍼스(불릿수)"] for r in real_rows}
+ok = bad = 0
+for p in mlogs:
+    d = json.load(open(p, encoding="utf-8")); b, a = _ba(d)
+    if a is None: continue
+    n, suf = _rk(p.name); key = f"r{n}" + ("_p2" if suf == 1 else "")
+    c = [k for k in tl_map if (k == key or k.startswith(key + "(")) and (("2차" in k) == (suf == 2))]
+    if c:
+        ok += int(tl_map[c[0]]) == a; bad += int(tl_map[c[0]]) != a
+check("병합 로그 after_total = 실루엣 타임라인 CSV의 같은 라운드 코퍼스 (불일치 0)", bad == 0, f"대조 {ok + bad}건 중 일치 {ok}")
+swaps = {}
+for p in RD.glob("swap_log_r*.json"):
+    d = json.load(open(p, encoding="utf-8"))
+    for sw in (d.get("swaps") or [d]):
+        swaps[sw["removed_fandom"]] = sw["added_fandom"]
+r58 = json.load(open(RD / "merge_log_r58.json", encoding="utf-8"))
+if r58.get("round_type") == "roster_swap":
+    swaps[r58["removed_fandom"]] = r58["added_fandom"]
+check("로스터 교체 로그 6건 = 동결→라이브 로스터 차이 (한로로→몬스타엑스 r62, pH-1→투어스 r63, BE'O→빈지노 r58) + r22 이전 교체 (사이먼도미닉→GOT7 r29, 창모→김재중·헤이즈→박서진 r34)",
+      swaps == {"사이먼도미닉": "GOT7", "창모": "김재중", "헤이즈": "박서진", "BE'O": "빈지노", "한로로": "몬스타엑스", "pH-1": "투어스(TWS)"}, f"{swaps}")
+check("교체된 팬덤 6개는 최종 코퍼스에 없고, 추가된 6개는 있음", not (set(swaps) & set(corpus_cnt)) and set(swaps.values()) <= set(corpus_cnt))
+sa = json.load(open(RD / "schema_audit_r74.json", encoding="utf-8"))
+check("schema_audit_r74: 10,020건 스캔, 팬덤 100, LDA 3토큰 미만 제외 2건(= lda_excluded_bullets_v7.json)", sa["total_bullets_scanned"] == 10020 and sa["n_fandoms"] == 100 and sa["lda_sub_3_token_excluded_bullets"] == 2)
+info("성장 이력 전체 CSV", "data_export/build_corpus_growth_history_csv.py -> data/v7_final/corpus_growth_history_v6_v7_full.csv (v6 1차 ~ v7 r72)")
+
+# ---------------------------------------------------------------------------
 n_ok = sum(1 for _, ok in results if ok); n_all = len(results)
 print(f"\n=== 결과: {n_ok}/{n_all} 항목 일치 ({n_all - n_ok}건 불일치) ===")
 sys.exit(0 if n_ok == n_all else 1)

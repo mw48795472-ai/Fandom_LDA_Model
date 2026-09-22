@@ -1,0 +1,70 @@
+﻿stage,kind,before_total,after_total,net_new_bullets,n_touched_fandoms,roster_change,chain_gap,note
+v6_round1,merge,2403,2598,195,69,,,v6 1차 병합
+v6_round2,merge,2598,2674,76,,,,v6 2차 병합(같은 로그 파일)
+v6.3_market_research,merge,2674,2836,162,80,,,v6.3_market_research
+v6.4_language_research,merge,2836,3154,318,70,,,v6.4_language_research
+v7_r1,merge,3154,3416,262,93,,,v7_r1
+v7_r2,merge,3416,3651,235,80,,,v7_r2
+v7_r3,merge,3651,3955,304,96,,,v7_r3
+v7_r4,merge,3955,4097,142,41,,,v7_r4
+v7_r5,merge,4097,4232,135,,,,v7_r5_member_pilot
+v7_r6,merge,4232,4426,194,61,,,v7_r6_reinforcement_and_member_pilot_expansion
+v7_r7,merge,4426,4523,97,47,,,v7_r7_domestic_regional_research
+v7_r8,merge,4523,4604,81,44,,,v7_r8_event_review_research
+v7_r9,merge,4604,4747,143,27,,,v7_r9_minority_language_research
+v7_r10,merge,4747,4878,131,79,,,v7_r10_media_crossover_research
+v7_r11,merge,4878,5021,143,68,,,v7_r11_media_crossover_reinforcement
+v7_r12,merge,5021,5041,20,14,,,v7_r12_domestic_regional_backfill
+v7_r13,merge,5041,5099,58,33,,,v7_r13_event_review_not_attempted_r8_backfill
+v7_r14,merge,5099,5108,9,5,,,v7_r14_media_crossover_not_attempted_r11_backfill
+v7_r15,merge,5108,5123,15,5,,,v7_r15_media_crossover_not_attempted_r14_backfill
+v7_r16,merge,5123,5429,306,39,,,v7_r16_minority_language_research_resumed_cap10
+v7_r17,merge,5429,5454,25,10,,,v7_r17_domestic_regional_diversity_reinforcement
+v7_r18,merge,5454,5476,22,8,,,v7_r18_domestic_regional_not_attempted_r17_backfill
+v7_r19,merge,5476,5557,81,36,,,v7_r19_minority_language_ru_vi_fr
+v7_r20,merge,5557,5566,9,3,,,v7_r20_minority_language_fr_backfill
+v7_r21,merge,5566,5605,39,28,,,v7_r21_domestic_regional_2x_expansion_batch1
+v7_r22,merge,5606,5613,7,4,,prev after 5605 != before 5606,v7_r22_domestic_regional_2x_expansion_batch2_kopis_alt
+v7_r23,merge,5612,5794,182,94,,prev after 5613 != before 5612,v7_r23_media_crossover_full100_relaxed_sourcing
+v7_r24,merge,5794,5998,204,60,,,v7_r24_new_languages_tl_pt
+v7_r27,merge,5998,6040,42,21,,,v7_r27_persona_diversity_reinforcement
+v7_r28,merge,6040,6631,591,98,,,v7_r28_media_crossover_multilingual
+v7_r29_swap,roster_swap,6631,6687,56,,사이먼도미닉→GOT7,,v7_r29_roster_swap_got7
+v7_r30,merge,6687,6787,100,55,,,v7_r30_policy_pr_public_interest
+v7_r31,merge,6787,6843,56,25,,,v7_r31_ad_economic_impact
+v7_r32,merge,6843,6913,70,62,,,v7_r32_turkish_language
+v7_r34_swap,roster_swap,6913,6911,-2,,"창모→김재중, 헤이즈→박서진",,v7_r34_roster_swap_x2
+v7_r35,merge,6911,6955,44,2,,,v7_r35_reinforcement_kimjaejoong_parkseojin
+v7_r36,merge,6955,7019,64,46,,,v7_r36_media_exposure_recent_2026_08_09
+v7_r37,merge,7019,7103,84,56,,,v7_r37_broad_recent_2026_08_09
+v7_r38,merge,7103,7103,0,0,,,v7_r38_tokenizer_stopword_fix
+v7_r39,merge,7103,7350,247,81,,,v7_r39_ad_commercial_index
+v7_r41,merge,7513,7513,0,0,,prev after 7350 != before 7513,v7_r41_industry_concentration_diagnosis
+v7_r42,merge,7513,7548,35,8,,,v7_r42_industry_concentration_gapfillB
+v7_r43,merge,7548,7664,116,42,,,v7_r43_industry_concentration_2nd_refill
+v7_r44,merge,7664,7692,28,14,,,v7_r44_industry_concentration_3rd_refill_and_h2_sweep
+v7_r45,merge,7692,8122,430,93,,,v7_r45_silhouette_stability_corpus_reinforcement
+v7_r46,merge,8122,8228,106,15,,,v7_r46_balanced_underrepresented_fandom_research_1st
+v7_r48,merge,8228,8311,83,15,,,v7_r48_balanced_underrepresented_fandom_research_2nd
+v7_r49,merge,8311,8530,219,15,,,v7_r49_balanced_underrepresented_fandom_research_3rd
+v7_r50,merge,8530,8642,112,15,,,v7_r50_non_english_spillover_targeted_research
+v7_r51,merge,8642,8717,75,40,,,v7_r51_non_english_media_all100_phase1
+v7_r51_p2,merge,8717,8773,56,45,,,v7_r51_non_english_media_all100_phase2
+v7_r53,merge,8773,8865,92,22,,,v7_r53_member_level_dedicated_research_new22groups_phase1
+v7_r54,merge,8865,8966,101,21,,,v7_r54_member_level_dedicated_research_original23groups_phase2_complete
+v7_r55,merge,8966,8981,15,3,,,v7_r55_roster_audit_hearts2hearts_cortis_nmixx_plus_new_member_research
+v7_r56,merge,8981,9029,48,10,,,v7_r56_ad_commercial_index_etc_bucket_resolution_plus_brand_research
+v7_r57,merge,9029,9048,19,5,,,v7_r57_s1_residual_recovery_deep_dive
+v7_r58,roster_swap,9048,9015,-33,,BE'O→빈지노,,v7_r58
+v7_r59,reinforcement,9015,9042,27,,,,v7_r59
+v7_r62_swap,roster_swap,9440,9464,24,,한로로→몬스타엑스,prev after 9042 != before 9440,v7_r62_roster_swap_monstax
+v7_r63_swap,roster_swap,9464,9477,13,,pH-1→투어스(TWS),,v7_r63_roster_swap_tws
+v7_r64,merge,9477,9609,132,31,,,v7_r64_english_region_diversification
+v7_r65,merge,9609,9619,10,2,,,v7_r65_ad_commercial_index_etc_census_reclassification
+v7_r66,merge,9619,9665,46,31,,,v7_r66_latest_2wk_trend_sweep
+v7_r66_2ch,merge,9665,9680,15,12,,,v7_r66_2ch_not_attempted_priority_sweep
+v7_r68,merge,9680,9753,73,64,,,v7_r68_arabic_language
+v7_r69,merge,9753,9829,76,63,,,v7_r69_french_reresearch
+v7_r70,reclassify,9829,9829,0,,,,"언어별 도메인 표 갱신, 재분류 1건"
+v7_r71,merge,9829,9939,110,72,,,v7_r71_spanish_country_diversification
+v7_r72,merge,9939,10020,81,15,,,v7 72
