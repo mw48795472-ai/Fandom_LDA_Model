@@ -130,7 +130,7 @@ before_total, after_total, net_new_bullets, n_touched_fandoms, note`)로 정규�
 
 | 스크립트 | 입력 | 출력 |
 |---|---|---|
-| `verify_v7_final_consistency.py` (루트) | `data/v7_final/*` 전부 | 보고서·KEY_FINDINGS 수치 75개 항목을 파일에서 재계산해 일치/불일치 출력 (현재 75/75 일치. χ²는 `positioning_map_correlation_live_v7.json`의 0.5 임계값 분할표로 재현) |
+| `verify_v7_final_consistency.py` (루트) | `data/v7_final/*` 전부 | 보고서·KEY_FINDINGS 수치 86개 항목을 파일에서 재계산해 일치/불일치 출력 (현재 86/86 일치. χ²는 `positioning_map_correlation_live_v7.json`의 0.5 임계값 분할표로 재현) |
 | `data_export/extract_html_payloads.py` | `3D_포지셔닝맵_국내100팬덤.html`, `Persona_결정공간.html` | HTML에 리터럴로 내장된 데이터 객체를 그대로 복사 → `data/v7_final/chart3d_payload_live_reference_v7.json`(라이브 100개 팬덤 점수·4구획·라이브 재적합 진단), `persona_decision_space_v7.json`(동결 K=10 토픽명·F코드·PCA·F1~F5 비중) |
 | `data_export/build_bullets_flat_csv.py` | `fandoms_v3_100.json` (`--src`, 기본 v7_final) | `bullets_flat_v7_final.csv` 10,020행 (r22에 쓰면 기존 `bullets_flat_v6_r22.csv`와 바이트 단위 동일 결과) |
 | `data_export/build_lda_k_grid_csv.py` | LDA 진단 JSON (`--src`, 기본 라이브 참고 재적합) | `lda_k_grid_live_reference_v7.csv` (r22에 쓰면 기존 `lda_k_grid_v6.csv`와 동일) |

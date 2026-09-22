@@ -7,6 +7,11 @@
 | `language_domain_summary_v7.json` | 라이브 10,020건 | 14개 언어권별 근거 건수·도메인 수·상위 도메인 (보고서 표 2-2). 합 10,020건 |
 | `chart3d_payload_live_reference_v7.json` | 라이브 10,020건 | 3D 포지셔닝맵 HTML 내장 payload: 100개 팬덤 loyalty/spillover/diversity/coverage/activity/quadrant, 표본 평균 0.37103/0.26605, 4구획 24/17/10/49, 라이브 재적합 K=8/M=5/실루엣 0.046 (`data_export/extract_html_payloads.py`) |
 | `fandom_scores_live_reference_v7.csv` | 라이브 10,020건 | **원본 산출물**: 팬덤별 loyalty/spillover/coverage/factor_diversity/dominant_factor/activity + 라이브 재적합(K=8→M=5) F 비중 5개(현장경제형·소비력형·결속형·브랜드·상업형·차트·확산형). 점수는 payload와 100/100 동일 |
+| `fandom_scores_live_reference_v7.json` | 라이브 10,020건 | 위 CSV의 JSON 원본: loyalty_raw/spillover_raw, 불릿 수, factor_share, coverage_detail(14개 언어 카운트·시장·출처유형·연도·개체·가중치) 포함 |
+| `worldwide_language_pilot_live_reference_v7.json` / `worldwide_language_index_v7.csv` | 라이브 10,020건 | 세계 언어 지수 원본(아카이브명) + `indices_csv/build_worldwide_language_index_csv.py` 산출 CSV |
+| `wordcloud_by_language_v7.json` | 라이브 10,020건 | 최종 토크나이저(문자권별 라우팅) 실행 결과: 8개 버킷별 불릿 수·토큰 수·상위 30단어, 총 토큰 170,725 |
+| `_explore_r45_meta_factor.json` | v7 r45 1차 (8,122건, K=12) | K=12 토픽 코사인거리 행렬·상위어·M 2~11 실루엣 그리드(최대 M=2, 0.136) — 게이트 기각 라운드의 실물 |
+| `factor_pathway_map_v7.json` | 동결 스냅샷 7,350건 | raw Factor 라벨 5개 → F1~F5 경로(F 이름·경로·rationale) 매핑 |
 | `chart3d_positioning_rows_live_v7.csv` | 라이브 10,020건 | payload rows를 CSV로 푼 파생 파일(4구획 컬럼 포함; `data_export/build_live_scores_csv.py`) |
 | `lda_excluded_bullets_v7.json` | 라이브 10,020건 | LDA 재적합에서 제외된 3토큰 미만 불릿 2건 → 문서 10,018건 |
 | `media_crossover_index_v7.json` / `.csv` | 라이브 10,020건 | 매체 크로스오버 지수: news_media 불릿 6,712건(67.0%), 코퍼스 고유 매체 1,298개, 팬덤별 매체 수·다양성 비율·상위 매체 |
@@ -32,6 +37,5 @@
 
 정합성 검증: 저장소 루트의 `verify_v7_final_consistency.py`.
 실루엣 게이트 타임라인 CSV는 `../silhouette_gate_timeline/corpus_silhouette_timeline_v7_66_2ch.csv`.
-아직 없는 최종 산출물(넣으면 해당 스크립트가 바로 읽음): 세계 언어 지수(`worldwide_language_pilot_live_reference_v7.json` 또는
-`worldwide_language_index_live_reference_v7.json`), 국내 지역 지수 라이브판(아카이브명 `domestic_regional_pilot_v6.json` 또는
+아직 없는 최종 산출물(넣으면 해당 스크립트가 바로 읽음): 국내 지역 지수 라이브판(아카이브명 `domestic_regional_pilot_v6.json` 또는
 `domestic_regional_index_live_reference_v7.json`), `factor_clustering_structure_v7.json`. 그 밖의 아카이브 미보유분은 루트 README 3절.

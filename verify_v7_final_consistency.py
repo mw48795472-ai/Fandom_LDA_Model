@@ -486,6 +486,70 @@ check("current_total 8,311 = 타임라인 CSV r48 행 (r22판 5,612과 다른 �
 info("current_total_note 원문이 이원 구조를 명시", vp.get("current_total_note", "")[:120] + "…")
 
 # ---------------------------------------------------------------------------
+# [U] 2026-09-22 5차 추가: 세계 언어 지수 · 라이브 점수 JSON · 워드클라우드 · r45 탐색 · F 경로 맵
+# ---------------------------------------------------------------------------
+print("\n[U] worldwide_language_pilot_live_reference_v7.json (세계 언어 지수 원본, 라이브 10,020건)")
+with open(D / "worldwide_language_pilot_live_reference_v7.json", encoding="utf-8") as f:
+    wl = json.load(f)
+wl_lang = Counter()
+for _f, dd in wl.items():
+    wl_lang.update(dd["language_mention_counts"])
+check("100개 팬덤, total_group_bullets = 코퍼스, 14개 언어 언급 합 = language_domain_summary_v7.json (ko 5,551 … 합 10,020)",
+      len(wl) == 100 and all(corpus_cnt[g] == dd["total_group_bullets"] for g, dd in wl.items()) and dict(wl_lang) == {x["lang_code"]: x["total_bullets"] for x in langs})
+check("KEY_FINDINGS 하이라이트: BTS 해외 근거 135건(비중 60% — 원값 0.595의 반올림), 해외언어다양성 0.66",
+      wl["BTS"]["foreign_bullets"] == 135 and abs(wl["BTS"]["foreign_ratio"] - 0.595) < 1e-9 and wl["BTS"]["foreign_diversity"] == 0.66, f"{wl['BTS']['foreign_bullets']}건, {wl['BTS']['foreign_ratio']:.1%}, {wl['BTS']['foreign_diversity']}")
+check("foreign_bullets = 언어별 언급 중 ko 제외 합 (100/100)", all(dd["foreign_bullets"] == sum(v for k, v in dd["language_mention_counts"].items() if k != "ko") for dd in wl.values()))
+
+print("\n[V] fandom_scores_live_reference_v7.json (라이브 점수 원본 JSON — raw 점수·coverage_detail 포함)")
+with open(D / "fandom_scores_live_reference_v7.json", encoding="utf-8") as f:
+    sj = json.load(f)
+check("loyalty_raw/spillover_raw = EvidenceScore 산식 재계산 (100/100, 오차 1e-6)",
+      all(abs(evidence_score(byf[r["fandom"]]["loyalty"], LOYALTY_BONUS_KW) - r["loyalty_raw"]) < 1e-6 and abs(evidence_score(byf[r["fandom"]]["spillover"], SPILLOVER_BONUS_KW) - r["spillover_raw"]) < 1e-6 for r in sj))
+Wc = {"language": 0.30, "market": 0.25, "source_type": 0.20, "time": 0.15, "entity": 0.10}
+def _lang_ent(lc):
+    tot = sum(lc.values()); return -sum(c / tot * math.log(c / tot) for c in lc.values() if c > 0) / math.log(14)
+check("coverage_index = 0.30·언어 + 0.25·시장 + 0.20·출처유형 + 0.15·시간 + 0.10·개체, 언어 커버리지 = 14개 언어 정규화 엔트로피 ln(14)",
+      all(abs(round(sum(Wc[k] * r["coverage_detail"][k + "_coverage"] for k in Wc), 3) - r["coverage_index"]) < 0.0015 and abs(_lang_ent(r["coverage_detail"]["language_counts"]) - r["coverage_detail"]["language_coverage"]) < 0.0015 for r in sj))
+sj_lang = Counter()
+for r in sj:
+    sj_lang.update(r["coverage_detail"]["language_counts"])
+check("coverage_detail.language_counts 합 = language_domain_summary (14개 언어, 10,020건) — 세계 언어 지수와 같은 분류", dict(sj_lang) == {x["lang_code"]: x["total_bullets"] for x in langs})
+check("JSON 점수·coverage·activity = 같은 이름 CSV (100/100)", all(abs(r["loyalty_score"] - float(next(c for c in live_csv if c["fandom"] == r["fandom"])["loyalty_score"])) < 1e-9 and r["activity"] == int(next(c for c in live_csv if c["fandom"] == r["fandom"])["activity"]) for r in sj))
+
+print("\n[W] wordcloud_by_language_v7.json (최종 토크나이저 실행 결과, TOKENIZER_WORDCLOUD_REPORT 표 2의 원본)")
+with open(D / "wordcloud_by_language_v7.json", encoding="utf-8") as f:
+    wcd = json.load(f)
+wc_b = {b["bucket"].split("(")[0]: b for b in wcd["buckets"]}
+check("총 토큰 170,725개(보고서 값), 버킷 8개 토큰 합 = 총계, 한국어 8,942불릿(89.2%)·중국어 398·일본어 155·태국어 56·러시아어 45·베트남어 30",
+      wcd["total_tokens"] == 170725 and sum(b["n_total_tokens"] for b in wcd["buckets"]) == 170725 and wc_b["한국어"]["n_bullets_with_any_token"] == 8942
+      and wc_b["중국어"]["n_bullets_with_any_token"] == 398 and wc_b["일본어"]["n_bullets_with_any_token"] == 155 and wc_b["태국어"]["n_bullets_with_any_token"] == 56)
+info("보고서 표 2와의 차이", f"영어 {wc_b['영어']['n_bullets_with_any_token']}불릿·비영어 {wc_b['비영어']['n_bullets_with_any_token']}불릿 (문서 표 2: 6,438 / 158) — 이 파일은 wordfreq 재검증으로 순수 ASCII 토큰 219개를 비영어로 재분류한 후속판(methodology 필드 참고)")
+
+print("\n[X] _explore_r45_meta_factor.json (v7 r45 1차 K=12 재적합의 M 그리드 탐색)")
+with open(D / "_explore_r45_meta_factor.json", encoding="utf-8") as f:
+    r45 = json.load(f)
+check("K=12, M 2~11 전수 탐색 최댓값 M=2 실루엣 0.136 = 타임라인 'r45(1차)' 행 (K=12, M=2, 0.136)",
+      r45["K"] == 12 and r45["best_m_full_grid"] == 2 and round(r45["best_silhouette_full_grid"], 3) == 0.136
+      and any(r["라운드"].startswith("r45(1차") and r["실루엣"] == "0.136" and r["K"] == "12" and r["M"] == "2" for r in real_rows))
+try:
+    from sklearn.cluster import AgglomerativeClustering
+    from sklearn.metrics import silhouette_score
+    dm = np.array(r45["topic_cosine_distance_matrix"])
+    ok = True
+    for g in r45["full_grid_2_to_11"]:
+        lab = AgglomerativeClustering(n_clusters=g["m"], metric="precomputed", linkage="average").fit_predict(dm)
+        ok &= abs(silhouette_score(dm, lab, metric="precomputed") - g["silhouette"]) < 1e-6
+    check("코사인거리 행렬로 average-linkage 재군집화 → M 2~11 실루엣 10개 전부 재현", ok)
+except ImportError:
+    info("scikit-learn 미설치로 M 그리드 재계산 생략")
+
+print("\n[Y] factor_pathway_map_v7.json (raw Factor 라벨 → F1~F5 경로 매핑)")
+with open(D / "factor_pathway_map_v7.json", encoding="utf-8") as f:
+    fpm = json.load(f)
+check("5개 라벨 → F 코드 = 검증 스크립트의 LAB2F 표(결속 F1·소비력 F2·현장경제 F3·미디어노출 F4·차트확산 F5), 10개 토픽 전부 매핑",
+      {k: v["f_code"] for k, v in fpm["mapping"].items()} == LAB2F and fpm["qa"]["n_mapped_topics"] == 10 and fpm["qa"]["unmapped_topic_ratio"] == 0.0)
+
+# ---------------------------------------------------------------------------
 n_ok = sum(1 for _, ok in results if ok); n_all = len(results)
 print(f"\n=== 결과: {n_ok}/{n_all} 항목 일치 ({n_all - n_ok}건 불일치) ===")
 sys.exit(0 if n_ok == n_all else 1)
