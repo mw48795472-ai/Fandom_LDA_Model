@@ -354,8 +354,10 @@ display(summary)
 md('''
 ## 한계
 
-1. 토픽 간 **코사인 거리 행렬과 LDA φ분포는 저장소에 없다.** 그래서 2절의 병합 높이는 HTML 기록값을 그대로 쓰며, average-linkage
+1. 동결 스냅샷의 **코사인 거리 행렬과 LDA φ분포는 저장소에 없다.** 그래서 2절의 병합 높이는 HTML 기록값을 그대로 쓰며, average-linkage
    계산 자체를 다시 하지는 않는다. 절단선 위치·군집 구성·잎 순서·가지 색 규칙은 그 기록값에서 완전히 재현된다.
+   같은 방법(같은 토크나이저·벡터라이저·LDA 설정)을 최종 코퍼스 10,020건에 적용해 실제로 산출한 φ·코사인 거리 행렬·병합 트리·M-grid 실루엣은
+   `topic_phi_cosine/`(CSV + `TOPIC_PHI_COSINE_DISTANCE_V7.md`, `build_topic_phi_cosine_v7.py`)에 있다.
 2. PCA는 부호(축 방향)가 구현마다 달라질 수 있어 HTML 좌표와 상관 부호를 맞춘 뒤 비교했다. 맞춘 뒤 좌표·loading은 수치 오차 범위에서 같다.
 3. HTML의 `RADAR_MAX`는 페이지 소스에서 읽는다. 저장소 루트에 HTML이 없으면 0.6을 쓴다.
 '''),
