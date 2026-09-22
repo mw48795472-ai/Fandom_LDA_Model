@@ -8,9 +8,16 @@ worldwide_language_index_live_reference_v7.json -> worldwide_language_index_v7.c
 """
 import json
 import csv
+from pathlib import Path
 
-SRC = "/home/claude/work/data/worldwide_language_index_live_reference_v7.json"
-OUT = "/home/claude/work/output/worldwide_language_index_v7.csv"
+# 저장소 상대 경로 (원본은 이전 세션 작업 디렉터리 /home/claude/work/... 절대경로였음).
+# 입력 JSON은 최종 라이브 코퍼스(10,020건) 기준 산출물이며, 아직 저장소에 없으면 data/v7_final/ 에 넣는다.
+BASE = Path(__file__).resolve().parents[1]
+OUT_DIR = BASE / "output" / "indices_csv"
+OUT_DIR.mkdir(parents=True, exist_ok=True)
+
+SRC = BASE / "data" / "v7_final" / "worldwide_language_index_live_reference_v7.json"
+OUT = OUT_DIR / "worldwide_language_index_v7.csv"
 
 with open(SRC, encoding="utf-8") as f:
     data = json.load(f)

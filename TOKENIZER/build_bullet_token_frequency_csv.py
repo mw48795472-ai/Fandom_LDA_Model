@@ -30,7 +30,7 @@ import jieba
 from pythainlp.corpus import thai_stopwords
 from pythainlp.tokenize import word_tokenize as thai_word_tokenize
 
-BASE = Path(__file__).resolve().parents[2]
+BASE = Path(__file__).resolve().parents[1]  # 저장소 루트 (원본 scripts/tokenizer/ 2단 깊이 -> 이 저장소는 1단)
 CORPUS_PATH = BASE / "data" / "v6_r22_snapshot" / "fandoms_v3_100.json"
 OUT_PATH = BASE / "data" / "v6_r22_snapshot" / "csv" / "bullet_token_frequency_v6_r22.csv"
 

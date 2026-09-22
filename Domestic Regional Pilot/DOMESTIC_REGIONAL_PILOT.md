@@ -1,5 +1,9 @@
 # Domestic Regional Pilot 정리
 
+> **2026-09-21 갱신 주** — 이 문서가 "이번 세션에 없다 / 재현 불가"라고 적은 최종 라이브 코퍼스(10,020건)와 최종 산출물이 이제 `data/v7_final/`에 있다(`fandoms_v3_100.json` 10,020건, `fandom_scores_v6.csv`·`fan_persona_v7.json`(동결 스냅샷 7,350건 기준), `language_domain_summary_v7.json`, `lda_v6_diagnostics_live_reference_v7.json`(라이브 재적합 K=8/M=5/실루엣 0.046), `chart3d_payload_live_reference_v7.json`, `member_mention_index_v7.json`). r22 스냅샷(5,612건)은 `data/v6_r22_snapshot/`으로 옮겨졌고, 이 문서의 노트북·스크립트가 참조하는 `../data/v6_r22_snapshot` 경로는 그대로 동작한다. 본문의 5,612건 기준 병행 분석은 그 시점의 기록으로 유지하며, 최종 수치와의 대응은 `README.md` 1~3절 참고.
+> 이 문서 관련: 최종 국내 지역 지수 원본 `domestic_regional_index_live_reference_v7.json`은 아직 저장소에 없다. 파일럿 JSON/CSV는 `data/v6_r22_snapshot/domestic_regional_pilot_v6.json`, `data/v6_r22_snapshot/csv/domestic_regional_pilot_v6.csv`.
+
+
 이 문서는 `docs/LDA_V6_V7_TECHNICAL_SPECIFICATION.md`(업로드해주신 v6/v7
 기술 상세명세서) 7.5절 전체 — "Domestic Regional Pilot" — 를 별도로 뽑아
 정리한 것입니다. 원본 문서 안에 흩어져 있던 것이 아니라 처음부터 하나의

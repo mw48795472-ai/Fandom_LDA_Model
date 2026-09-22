@@ -17,7 +17,8 @@ import json
 import math
 from pathlib import Path
 
-DATA_PATH = Path("../../data/v6_r22_snapshot/fandom_scores_v6.json")
+BASE = Path(__file__).resolve().parents[1]  # 저장소 루트
+DATA_PATH = BASE / "data" / "v6_r22_snapshot" / "fandom_scores_v6.json"
 
 # ---------------------------------------------------------------------------
 # 식(1) EvidenceScore — 문서 원문 그대로의 보너스 키워드 (수정판)

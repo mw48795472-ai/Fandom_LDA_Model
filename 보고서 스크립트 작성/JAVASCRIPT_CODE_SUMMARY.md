@@ -1,5 +1,8 @@
 # 이 프로젝트에 적용된 자바스크립트(Node.js + 브라우저 인라인 JS) 총정리
 
+> **2026-09-21 갱신 주** — 3D 포지셔닝맵이 참조하는 Plotly 번들은 저장소에 `3D matrix.js`라는 이름으로 있어 HTML의 `<script src="plotly-bundle.js">`와 맞지 않았다. `plotly-bundle.js`로 이름을 바꿔 같은 폴더에서 HTML을 열면 바로 동작한다. `build_summary_report_2026_contest.js`의 출력 경로는 저장소 상대 `output/`으로 고쳤다. HTML 2종에 내장된 데이터 객체는 `data_export/extract_html_payloads.py`로 `data/v7_final/*.json`에 추출해 두었다(3D 맵 payload: 라이브 10,020건 점수·4구획; Persona: 동결 스냅샷 K=10 구조).
+
+
 `docs/PYTHON_CODE_SUMMARY.md`(파이썬 총정리)의 짝이 되는 문서다. 이 프로젝트에서 JavaScript가
 쓰인 곳은 딱 두 갈래뿐이다 — ① 워드 문서를 빌드하는 Node.js 스크립트 1개(저장소 안,
 `scripts/reports/`), ② 결과를 브라우저에서 보여주는 시각화 산출물 3종에 들어있는 인라인

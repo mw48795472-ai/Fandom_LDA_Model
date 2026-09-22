@@ -30,18 +30,42 @@ per-fandom before/after breakdown.
 No bullet text or URL used here is invented — everything is read from fandoms_v3_100.json,
 which itself is 100% sourced to real URLs collected by prior research passes in this project.
 """
-import json, re, math, csv, itertools
+import json, re, math, csv, itertools, argparse, os
 from collections import defaultdict, Counter
 from urllib.parse import urlparse
+from pathlib import Path
 import numpy as np
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.decomposition import LatentDirichletAllocation
 from sklearn.cluster import AgglomerativeClustering
 from sklearn.metrics import silhouette_score
 
-DATA = "/home/claude/work/data/fandoms_v3_100.json"
+# ------------------------------------------------------------------------------------------
+# 입력/출력 경로 (2026-09-21 저장소 정리: 이전 세션 작업 디렉터리 /home/claude/work/data 절대경로를
+# 저장소 상대경로 + CLI 인자로 교체. 파이프라인 로직은 변경하지 않았다.)
+#
+#   기본값: v6 r22 스냅샷 코퍼스(data/v6_r22_snapshot/fandoms_v3_100.json, 5,612건)
+#           -> 출력은 output/lda_rerun/ (스냅샷 원본 산출물을 덮어쓰지 않도록 별도 폴더)
+#   예)   python run_lda_v6.py --data data/v7_final/fandoms_v3_100.json --out output/lda_rerun_v7_final
+#
+# 주의: 이 파일은 v6~v7 r22 시점의 파이프라인이다. 최종 제출본의 라이브 참고 재적합
+# (data/v7_final/lda_v6_diagnostics_live_reference_v7.json, 10,020건, K=8/M=5/실루엣 0.046)은
+# 이후 토크나이저 개편(v7 38~39라운드, 14개 언어 문자권별 라우팅)을 거친
+# run_lda_v6_live_reference_v7.py(소스 유실)로 산출된 것이라, 이 스크립트를 10,020건 코퍼스에 그대로
+# 돌리면 문서 수·어휘·K-grid 수치가 달라진다(README.md "재현성 범위" 참고).
+# ------------------------------------------------------------------------------------------
+_BASE = Path(__file__).resolve().parent
+_ap = argparse.ArgumentParser(description="LDA v6 pipeline (K-grid -> Meta Factor -> Fan Factor Matrix -> scores)")
+_ap.add_argument("--data", default=str(_BASE / "data" / "v6_r22_snapshot" / "fandoms_v3_100.json"),
+                 help="근거문장 코퍼스 JSON (fandoms_v3_100.json 스키마)")
+_ap.add_argument("--out", default=str(_BASE / "output" / "lda_rerun"), help="산출물 저장 디렉터리")
+_args = _ap.parse_args()
+DATA = _args.data
+OUT = _args.out
+os.makedirs(OUT, exist_ok=True)
 with open(DATA, encoding="utf-8") as f:
     fandoms = json.load(f)
+print(f"[0] DATA={DATA}\n[0] OUT={OUT}")
 
 # ============================================================
 # 1. Corpus construction (v6.1 FIX: English function words were leaking through the v3
@@ -721,7 +745,6 @@ print(f"\n[7] Member Mention Pilot: {n_pilot_with_data}/{len(MEMBER_ALIASES)} Ti
 # ============================================================
 # 8. Save all outputs
 # ============================================================
-OUT = "/home/claude/work/data"
 with open(f"{OUT}/lda_v6_diagnostics.json", "w", encoding="utf-8") as f:
     json.dump({"k_grid": grid, "selected_k": K, "selected_m_meta_factors": M,
                "meta_factor_silhouette": round(float(best_sil), 3),

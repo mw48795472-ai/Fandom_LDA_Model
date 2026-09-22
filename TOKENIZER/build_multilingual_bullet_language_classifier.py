@@ -35,7 +35,7 @@ import re
 from collections import Counter, defaultdict
 from pathlib import Path
 
-BASE = Path(__file__).resolve().parents[2]
+BASE = Path(__file__).resolve().parents[1]  # 저장소 루트 (원본 scripts/tokenizer/ 2단 깊이 -> 이 저장소는 1단)
 CORPUS_PATH = BASE / "data" / "v6_r22_snapshot" / "fandoms_v3_100.json"
 SCORES_PATH = BASE / "data" / "v6_r22_snapshot" / "fandom_scores_v6.json"
 
