@@ -6,7 +6,11 @@
 | `bullets_flat_v7_final.csv` | 라이브 10,020건 | 위 JSON을 `fandom, category, bullet_type, text, url` 평면 CSV로 펼친 것 (`data_export/build_bullets_flat_csv.py`) |
 | `language_domain_summary_v7.json` | 라이브 10,020건 | 14개 언어권별 근거 건수·도메인 수·상위 도메인 (보고서 표 2-2). 합 10,020건 |
 | `chart3d_payload_live_reference_v7.json` | 라이브 10,020건 | 3D 포지셔닝맵 HTML 내장 payload: 100개 팬덤 loyalty/spillover/diversity/coverage/activity/quadrant, 표본 평균 0.37103/0.26605, 4구획 24/17/10/49, 라이브 재적합 K=8/M=5/실루엣 0.046 (`data_export/extract_html_payloads.py`) |
-| `fandom_scores_live_reference_v7.csv` | 라이브 10,020건 | 위 payload rows를 CSV로 (`data_export/build_live_scores_csv.py`) |
+| `fandom_scores_live_reference_v7.csv` | 라이브 10,020건 | **원본 산출물**: 팬덤별 loyalty/spillover/coverage/factor_diversity/dominant_factor/activity + 라이브 재적합(K=8→M=5) F 비중 5개(현장경제형·소비력형·결속형·브랜드·상업형·차트·확산형). 점수는 payload와 100/100 동일 |
+| `chart3d_positioning_rows_live_v7.csv` | 라이브 10,020건 | payload rows를 CSV로 푼 파생 파일(4구획 컬럼 포함; `data_export/build_live_scores_csv.py`) |
+| `lda_excluded_bullets_v7.json` | 라이브 10,020건 | LDA 재적합에서 제외된 3토큰 미만 불릿 2건 → 문서 10,018건 |
+| `media_crossover_index_v7.json` | 라이브 10,020건 | 매체 크로스오버 지수: news_media 불릿 6,712건(67.0%), 코퍼스 고유 매체 1,298개, 팬덤별 매체 수·다양성 비율·상위 매체 |
+| `k9_validation_v7.json` | 중간 라운드 9,614문서 | K=9 추가 검증 실험(승자 K=8 유지, 미디어 토픽 분리 여부 M-grid) |
 | `lda_v6_diagnostics_live_reference_v7.json` | 라이브 10,020건 | 라이브 재적합 진단: K-grid(8~30), selected_k=8, M=5, 실루엣 0.046, 토픽 상위어, 토픽→F 배정 — 실루엣 게이트에 기각되어 해석 계층에 미반영 |
 | `lda_k_grid_live_reference_v7.csv` | 라이브 10,020건 | 위 k_grid를 CSV로 (`data_export/build_lda_k_grid_csv.py`) |
 | `member_mention_index_v7.json` | 라이브 10,020건 | 멤버 집중도 지수(MCI) 45개 그룹 |
@@ -18,6 +22,7 @@
 | `chart3d_correlation_live_v7.json` | 라이브 10,020건 | 3D 매트릭스 축 독립성: 3축 쌍별 상관·정규성·다중회귀(factor_diversity ~ loyalty + spillover)·VIF·영향점·LOO·민감도 |
 | `topic_cards_v7.json` | 동결 스냅샷 7,350건 | K=10 토픽 카드: 명칭(METHODOLOGY.md 2-1 표와 동일)·상위 10개 키워드·대표 불릿 3건·대표 팬덤 5개·연결 F 경로 |
 | `fandom_scores_v6.csv` | 동결 스냅샷 7,350건 | 팬덤별 loyalty/spillover/coverage/factor_diversity/dominant_factor/activity + F1~F5 비중(컬럼: 현장경제형=F3, 소비력형=F2, 미디어노출형=F4, 차트·확산형=F5, 결속형=F1). activity 합 = 7,350. 파일명의 v6은 파이프라인 버전 |
+| `lda_v6_diagnostics_frozen_v7_40.json` | 동결 스냅샷 7,350건 | 동결 진단 원본(업로드 파일명 `lda_v6_diagnostics.json`): K-grid, selected_k=10, M=5, 실루엣 0.267, 토픽 상위어(=topic_cards), 토픽→F 배정 |
 | `fan_persona_v7.json` | 동결 스냅샷 7,350건 | 페르소나 조합표(10개)·카운트(43/31/17/9)·팬덤별 top2 F·factor_specific_loyalty/spillover(= 비중 × 점수) |
 | `persona_decision_space_v7.json` | 동결 스냅샷 7,350건 | Persona_결정공간.html 내장 데이터: K=10 토픽명·F코드·덴드로그램 병합 순서·PCA loading/좌표·팬덤별 F1~F5 비중 (`data_export/extract_html_payloads.py`) |
 

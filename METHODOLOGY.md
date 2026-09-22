@@ -9,7 +9,7 @@
 
 - 분석 대상: 국내 대표 팬덤 100개 (K-pop 보이/걸그룹, 트로트, 솔로, 밴드, 발라드 등)
 - 데이터 규모: 근거 문장 총 10,020건 (데이터 파일 `data/v7_final/fandoms_v3_100.json` 저장 건수) / 10,018건
-  (보고서 표 2-1 "LDA 실제 재적합 문서 수 기준" — 토크나이저 통과 후 문서 수)
+  (보고서 표 2-1 "LDA 실제 재적합 문서 수 기준" — 토큰 3개 미만 2건 제외, `data/v7_final/lda_excluded_bullets_v7.json`)
 - 수집 범위: 14개 언어권(한국어·영어·일본어·중국어·마인어·태국어·필리핀어·스페인어·프랑스어·포르투갈어·
   베트남어·아랍어·러시아어·튀르키예어), 뉴스·SNS·팬사이트·위키 등. 언어별 근거 건수·도메인 수는
   `data/v7_final/language_domain_summary_v7.json`(한국어 5,551건·704개 도메인, 영어 2,195건·79개, 일본어 520건·86개,
@@ -33,7 +33,8 @@
 LDA(K=10, Latent Dirichlet Allocation, random_state=0)로 **동결 스냅샷 v7-40 시점 근거문장 7,350건**을 토픽화
 (보고서 표 2-1: "K=10·M=5·실루엣=0.267 (근거 코퍼스 7,350건 시점)"; 4절 참고. 최종 라이브 코퍼스 10,020건의
 재적합은 K=8·M=5·실루엣 0.046으로 게이트에 기각되어 해석 계층에 쓰지 않았다 —
-`data/v7_final/lda_v6_diagnostics_live_reference_v7.json`). 각 토픽은 φ분포 상위 4개 키워드를 그대로 조합해
+`data/v7_final/lda_v6_diagnostics_live_reference_v7.json`. 동결 스냅샷 진단 원본은 `lda_v6_diagnostics_frozen_v7_40.json`:
+K-grid 7개 중 K=10의 합성순위 합이 8로 최솟값, K=8은 9). 각 토픽은 φ분포 상위 4개 키워드를 그대로 조합해
 자동 명명(재현 가능, 사람이 임의로 붙인 이름 아님). 아래 표의 명칭·F코드는 `data/v7_final/topic_cards_v7.json`(토픽별 상위 10개
 키워드, 대표 불릿 3건, 대표 팬덤 5개 포함)과 동일하다. F코드 배정은 `Persona_결정공간.html`에 내장된
 같은 스냅샷의 재적합 결과(`data/v7_final/persona_decision_space_v7.json`)와 10/10 일치한다. 토픽 명칭은 재적합

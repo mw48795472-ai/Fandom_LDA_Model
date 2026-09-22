@@ -392,6 +392,73 @@ info("타임라인 마지막 실측 코퍼스", f"{after40[-1]['코퍼스(불릿
 check("r22 행 5,613건 = merge_log_r22의 after_total (실제 평탄화 5,612건과 1건 차이는 기존 문서에 기록됨)", any(r["라운드"] == "r22" and r["코퍼스(불릿수)"] == "5613" for r in real_rows))
 
 # ---------------------------------------------------------------------------
+# [M] 2026-09-22 3차 추가 파일: 라이브 점수 원본 CSV · 제외 불릿 · 동결 진단 · 매체 크로스오버 · K=9 검증
+# ---------------------------------------------------------------------------
+print("\n[M] fandom_scores_live_reference_v7.csv (라이브 10,020건 점수 + 라이브 재적합 F 비중 원본)")
+with open(D / "fandom_scores_live_reference_v7.csv", encoding="utf-8-sig") as f:
+    live_csv = list(csv.DictReader(f))
+LIVE_COLS = ["현장경제형(콘서트·투어·매진)", "소비력형(초동·판매·앨범)", "결속형(팬클럽·기부·커뮤니티)", "브랜드·상업형(광고·앰버서더)", "차트·확산형(1위·빌보드·기록)"]
+prow = {r["fandom"]: r for r in rows}
+lc_bad = [r["fandom"] for r in live_csv if abs(float(r["loyalty_score"]) - prow[r["fandom"]]["loyalty"]) > 1e-9
+          or abs(float(r["spillover_score"]) - prow[r["fandom"]]["spillover"]) > 1e-9 or abs(float(r["factor_diversity"]) - prow[r["fandom"]]["diversity"]) > 1e-9
+          or abs(float(r["coverage_index"]) - prow[r["fandom"]]["coverage"]) > 1e-9 or int(r["activity"]) != prow[r["fandom"]]["activity"] or r["dominant_factor"] != prow[r["fandom"]]["dominant"]]
+check("100개 팬덤 loyalty/spillover/diversity/coverage/activity/dominant = 3D 맵 payload (불일치 0)", not lc_bad, f"{lc_bad}")
+check("F 비중 5개 컬럼 = 라이브 재적합 factor_labels, factor_diversity = 정규화 엔트로피(ln 5), dominant = argmax",
+      sorted(LIVE_COLS) == sorted(diag["factor_labels"].values()) and all(
+          abs(-sum(float(r[c]) * math.log(float(r[c])) for c in LIVE_COLS if float(r[c]) > 0) / math.log(5) - float(r["factor_diversity"])) < 0.0011
+          and max(LIVE_COLS, key=lambda c: float(r[c])) == r["dominant_factor"] for r in live_csv))
+live_set = {r["fandom"] for r in live_csv}; frozen_set = {r["fandom"] for r in frozen}
+check("라이브 100개 팬덤 = 코퍼스 팬덤 집합", live_set == {fd["fandom"] for fd in fandoms})
+info("로스터 차이: 동결 스냅샷(7,350건)에만 있는 팬덤 / 라이브(10,020건)에만 있는 팬덤",
+     f"동결만 {sorted(frozen_set - live_set)} / 라이브만 {sorted(live_set - frozen_set)} — 타임라인 r62(한로로→몬스타엑스)·r63(pH-1→투어스) 교체 + BE'O→빈지노. "
+     f"따라서 페르소나·F1~F5 비중(동결)은 라이브 3개 팬덤을 포함하지 않는다")
+
+print("\n[N] lda_excluded_bullets_v7.json (10,020 → 10,018 재적합 문서 수의 근거)")
+with open(D / "lda_excluded_bullets_v7.json", encoding="utf-8") as f:
+    exb = json.load(f)
+byf = {fd["fandom"]: fd for fd in fandoms}
+check("10,020건 중 2건 제외(3토큰 미만) → LDA 문서 10,018건 (보고서 표 2-1 값)", exb["total_bullets"] == 10020 and exb["excluded_count"] == 2 and exb["lda_document_count"] == 10018)
+check("제외된 2건이 코퍼스의 해당 위치에 실재 (ATEEZ spillover[30] 태국어 2토큰, 레드벨벳 spillover[56] '맥도날드 조이 (2026)')",
+      all(byf[e["fandom"]][e["tag"]][e["idx"]]["t"] == e["t"] and byf[e["fandom"]][e["tag"]][e["idx"]]["u"] == e["u"] for e in exb["excluded"]))
+
+print("\n[O] lda_v6_diagnostics_frozen_v7_40.json (동결 스냅샷 진단 — 업로드 원본 파일명 lda_v6_diagnostics.json)")
+with open(D / "lda_v6_diagnostics_frozen_v7_40.json", encoding="utf-8") as f:
+    fdg = json.load(f)
+check("selected_k=10, M=5, silhouette=0.267, composite_rank_sum 최솟값 = K=10 (rank_sum 8 < K=8의 9)",
+      fdg["selected_k"] == 10 and fdg["selected_m_meta_factors"] == 5 and fdg["meta_factor_silhouette"] == 0.267 and min(fdg["k_grid"], key=lambda g: g["composite_rank_sum"])["k"] == 10)
+check("topics_top_words 10개 = topic_cards_v7.json top_keywords (10/10 동일)", all(fdg["topics_top_words"][str(i)] == cards[i]["top_keywords"] for i in range(10)))
+LAB2F = {"결속형(팬클럽·기부·커뮤니티)": "F1", "소비력형(초동·판매·앨범)": "F2", "현장경제형(콘서트·투어·매진)": "F3", "미디어노출형(방송·조회수)": "F4", "차트·확산형(1위·빌보드·기록)": "F5"}
+fmap = {f"K{k}": LAB2F[fdg["factor_labels"][str(v)]] for k, v in fdg["topic_to_factor"].items()}
+check("topic_to_factor + factor_labels → METHODOLOGY.md 2-1 표의 F코드 배정과 일치", fmap == METHOD_TABLE, f"{fmap}")
+
+print("\n[P] media_crossover_index_v7.json (매체 크로스오버 지수, 라이브 10,020건)")
+with open(D / "media_crossover_index_v7.json", encoding="utf-8") as f:
+    mcx = json.load(f)
+check("news_media 불릿 6,712건(67.0%) — 보고서 표 2-1 '매체 크로스오버 6,712건(67.0%)'", mcx["total_news_media_bullets"] == 6712 and round(mcx["corpus_news_media_share"], 3) == 0.670 and mcx["total_bullets"] == 10020)
+check("팬덤별 n_total_bullets = 코퍼스, Σn_news_media_bullets = 6,712, outlet_diversity_ratio = n_distinct/n_news",
+      all(corpus_cnt[x["fandom"]] == x["n_total_bullets"] for x in mcx["fandoms"]) and sum(x["n_news_media_bullets"] for x in mcx["fandoms"]) == 6712
+      and all(abs(x["n_distinct_outlets"] / x["n_news_media_bullets"] - x["outlet_diversity_ratio"]) < 1e-3 for x in mcx["fandoms"] if x["n_news_media_bullets"]))
+COMM = {"reddit.com", "x.com", "twitter.com", "facebook.com", "instagram.com", "threads.com"}; WIKI = {"en.wikipedia.org", "ko.wikipedia.org", "namu.wiki", "wikipedia.org"}
+def _dom(u):
+    m = re.match(r"https?://([^/\s]+)", u.strip()); d = (m.group(1) if m else "").lower(); return d[4:] if d.startswith("www.") else d
+def _in(d, S): return any(d == x or d.endswith("." + x) for x in S)
+n_news = Counter()
+for fd in fandoms:
+    for k in ("loyalty", "spillover"):
+        for b in fd[k]:
+            d = _dom(b.get("u", ""))
+            if not (_in(d, COMM) or _in(d, WIKI)):
+                n_news[d] += 1
+info("run_lda_v6.py의 source_type_of() 도메인 목록(v6판)으로 재계산", f"news_media {sum(n_news.values()):,}건 / 고유 매체 {len(n_news):,}개 (원본 6,712 / 1,298 — 라이브판 목록이 약간 더 넓음), 상위 3개 {n_news.most_common(3)} = 원본 top_outlets와 동일")
+
+print("\n[Q] k9_validation_v7.json (K=9 미검증 지적에 대한 추가 검증 실험)")
+with open(D / "k9_validation_v7.json", encoding="utf-8") as f:
+    k9 = json.load(f)
+check("K=9를 추가한 K-grid에서도 합성순위 승자는 K=8 (rank_sum 9 vs K=9 13)", k9["k_grid_winner"]["k"] == 8 and min(k9["k_grid"], key=lambda g: g["composite_rank_sum"])["k"] == 8)
+info("실험 코퍼스는 9,614 문서(중간 라운드, 10,018과 다름). K=9 phi에서 미디어 토픽은 M≥6에서만 단독 메타팩터로 분리(M=5 실루엣 0.099, M=6 0.081)",
+     f"corpus_docs={k9['corpus_docs']}, vocab={k9['vocab_size']}")
+
+# ---------------------------------------------------------------------------
 n_ok = sum(1 for _, ok in results if ok); n_all = len(results)
 print(f"\n=== 결과: {n_ok}/{n_all} 항목 일치 ({n_all - n_ok}건 불일치) ===")
 sys.exit(0 if n_ok == n_all else 1)
