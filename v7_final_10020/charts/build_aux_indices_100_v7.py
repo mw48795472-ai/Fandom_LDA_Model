@@ -8,7 +8,7 @@ README 6절의 그림은 상위 20·25개만 보여 주므로, 같은 지표를 
   aux4_media_crossover_100.png      매체 크로스오버 지수 — 서로 다른 뉴스 매체 수
   aux5_domestic_regional_100.png    국내 지역 지수 — 17개 시/도 전부(권역별 색 계열) 누적 막대
   aux6_member_mci_45.png            멤버 집중도(MCI) — 45개 그룹, 구조적 하한 1/멤버수 표시
-  aux7_worldwide_language_100.png   세계 언어 지수 — 해외언어 구성(상위 7개 언어 + 그 외) 누적 막대
+  aux7_worldwide_language_100.png   세계 언어 지수 — 해외언어 13개 전부 누적 막대
 
 색: 범주형 7색(고정 순서, 명도·색각이상 검증 통과) + '그 외'는 중립 회색. 팬덤 100개는 1~50위 / 51~100위 두 패널로 나누고 x축 범위를 공유한다.
 한글 폰트: KFONT_PATH(본문)·KFONT_BOLD_PATH(제목) 환경변수 → 없으면 시스템 후보(Noto Sans KR/CJK, 맑은 고딕, 나눔고딕 등).
@@ -298,17 +298,17 @@ for v in ww.values():
     for k, c in v["language_mention_counts"].items():
         if k != "ko":
             ltot[k] = ltot.get(k, 0) + c
-lang7 = top_keys(ltot)
+lang_all = top_keys(ltot, len(ltot))   # 해외언어 13개 전부, 전체 합계 순
+# 범주형 8색(고정 순서) 뒤에 서로 구분되는 5색을 이어 붙인다 — 그룹화 없이 언어마다 고유 색
+LANG_COLORS = SERIES + [SERIES8, "#7fb2ee", "#a0782f", "#b3406c", "#7a9a00", "#1f93a8"]   # 13색 인접쌍 검증 통과(validate_palette.js)
 rows = []
 for name, v in ww.items():
     lc = v["language_mention_counts"]
-    d = {k: lc.get(k, 0) for k in lang7}
-    d["_other"] = sum(c for k, c in lc.items() if k not in lang7 and k != "ko")
-    rows.append((name, d, (v["foreign_bullets"], v["foreign_ratio"], v["n_foreign_languages_hit"])))
+    rows.append((name, {k: lc.get(k, 0) for k in lang_all}, (v["foreign_bullets"], v["foreign_ratio"], v["n_foreign_languages_hit"])))
 rows.sort(key=lambda r: (-r[2][0], -r[2][1], r[0]))
-stacked_100(rows, lang7 + ["_other"], SERIES + [OTHER], [LANG[k] for k in lang7] + ["그 외 6개 언어"],
+stacked_100(rows, lang_all, LANG_COLORS[:len(lang_all)], [f"{LANG[k]} {ltot[k]:,}" for k in lang_all],
             lambda r: f"{r[2][0]}건 · {r[2][1] * 100:.0f}% · {r[2][2]}개 언어",
             "세계 언어 지수 — 100개 팬덤 전체",
-            f"해외언어 출처 문장 {sum(ltot.values()):,}건 · 해외언어 문장 수 순 정렬 · 막대 = 출처 매체 언어별 문장 수(한국어 제외) · 끝 라벨 = 해외언어 문장 수 · 팬덤 내 비중 · 해외 언어 수",
+            f"해외언어 출처 문장 {sum(ltot.values()):,}건 · 해외언어 문장 수 순 정렬 · 막대 = 출처 매체 언어별 문장 수(한국어 제외, 13개 언어 전부) · 범례 숫자 = 코퍼스 전체 합계 · 끝 라벨 = 해외언어 문장 수 · 팬덤 내 비중 · 해외 언어 수",
             "해외언어별 근거문장 수", "자료: data/v7_final/worldwide_language_pilot_live_reference_v7.json · 언어는 문장 본문이 아니라 출처 매체 기준(Coverage Index의 language_counts 재사용)",
-            "aux7_worldwide_language_100.png")
+            "aux7_worldwide_language_100.png", ncol=len(lang_all))
