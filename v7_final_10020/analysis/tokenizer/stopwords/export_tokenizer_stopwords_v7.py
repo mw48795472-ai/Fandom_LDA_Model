@@ -13,7 +13,8 @@
   tokenizer_stopwords_by_language_v7.csv   컬럼: 출처, 스크립트, 목록명, 언어, 세부언어, 불용어, 비고
   TOKENIZER_STOPWORDS_BY_LANGUAGE.md       언어별 표 + 개수 요약 + 원 보고서(14개 언어 라우팅 토크나이저)와의 관계
 
-실행: python v7_final_10020/analysis/tokenizer/stopwords/export_tokenizer_stopwords_v7.py
+실행: python v7_final_10020/analysis/tokenizer/stopwords/export_tokenizer_stopwords_v7.py  (저장소 안 어느 폴더에서든; Spyder F5 도 됨)
+필요 패키지: fugashi unidic-lite jieba pythainlp
 """
 import ast
 import csv
@@ -22,13 +23,36 @@ import sys
 from collections import OrderedDict
 from pathlib import Path
 
-HERE = Path(__file__).resolve().parent
-TOK_DIR = HERE.parent
-REPO = HERE.parents[3]
+try:
+    HERE = Path(__file__).resolve().parent
+except NameError:  # Spyder 셀 실행 등 __file__ 이 없을 때
+    HERE = Path.cwd()
+
+
+def find_repo_root():
+    """저장소 루트(run_lda_v6.py 와 data/v7_final 이 있는 폴더)를 스크립트 위치와 현재 폴더에서 위로 올라가며 찾는다."""
+    for start in (HERE, Path.cwd()):
+        for p in [start, *start.parents]:
+            if (p / "run_lda_v6.py").exists() and (p / "v7_final_10020" / "analysis" / "tokenizer").exists():
+                return p
+    raise SystemExit("저장소 루트를 찾지 못했습니다. 이 스크립트는 GitHub 저장소(Fandom_LDA_Model)를 통째로 받은 폴더 안에서 실행해야 합니다 — "
+                     "run_lda_v6.py 와 v7_final_10020/analysis/tokenizer/build_bullet_token_frequency_csv_v7.py 를 읽기 때문입니다.")
+
+
+REPO = find_repo_root()
+TOK_DIR = REPO / "v7_final_10020" / "analysis" / "tokenizer"
 RUN_LDA = REPO / "run_lda_v6.py"
 TOK_SCRIPT = TOK_DIR / "build_bullet_token_frequency_csv_v7.py"
-OUT_CSV = HERE / "tokenizer_stopwords_by_language_v7.csv"
-OUT_MD = HERE / "TOKENIZER_STOPWORDS_BY_LANGUAGE.md"
+OUT_DIR = TOK_DIR / "stopwords"
+OUT_DIR.mkdir(parents=True, exist_ok=True)
+OUT_CSV = OUT_DIR / "tokenizer_stopwords_by_language_v7.csv"
+OUT_MD = OUT_DIR / "TOKENIZER_STOPWORDS_BY_LANGUAGE.md"
+
+for mod in ("fugashi", "jieba", "pythainlp"):
+    try:
+        __import__(mod)
+    except ImportError:
+        raise SystemExit(f"패키지 {mod} 가 없습니다. 먼저 설치하세요:  pip install fugashi unidic-lite jieba pythainlp")
 
 
 # --- A. run_lda_v6.py — ast 로 리터럴만 추출 -----------------------------------
