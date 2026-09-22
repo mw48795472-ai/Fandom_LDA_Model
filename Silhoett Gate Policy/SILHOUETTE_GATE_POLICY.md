@@ -1,7 +1,7 @@
 # 실루엣 게이트 정책 (Silhouette Gate Governance) — 정리 및 검증
 
 > **2026-09-21 갱신 주** — 이 문서가 "이번 세션에 없다 / 재현 불가"라고 적은 최종 라이브 코퍼스(10,020건)와 최종 산출물이 이제 `data/v7_final/`에 있다(`fandoms_v3_100.json` 10,020건, `fandom_scores_v6.csv`·`fan_persona_v7.json`(동결 스냅샷 7,350건 기준), `language_domain_summary_v7.json`, `lda_v6_diagnostics_live_reference_v7.json`(라이브 재적합 K=8/M=5/실루엣 0.046), `chart3d_payload_live_reference_v7.json`, `member_mention_index_v7.json`). r22 스냅샷(5,612건)은 `data/v6_r22_snapshot/`으로 옮겨졌고, 이 문서의 노트북·스크립트가 참조하는 `../data/v6_r22_snapshot` 경로는 그대로 동작한다. 본문의 5,612건 기준 병행 분석은 그 시점의 기록으로 유지하며, 최종 수치와의 대응은 `README.md` 1~3절 참고.
-> 이 문서 관련: 타임라인 CSV `corpus_silhouette_timeline_v7_62.csv`는 아직 저장소에 없다(스크립트는 `data/silhouette_gate_timeline/` 경로를 읽도록 정리). 최종 라이브 코퍼스 10,020건 시점의 참고 재적합(K=8, M=5, 실루엣 0.046, 게이트 기각)은 `data/v7_final/lda_v6_diagnostics_live_reference_v7.json`에 있어, 표의 r46~r61 구간 이후에도 기준선 0.267에 도달하지 못했음을 보여준다.
+> 이 문서 관련 (2026-09-22): 타임라인 CSV의 확장판 `data/silhouette_gate_timeline/corpus_silhouette_timeline_v7_66_2ch.csv`(v4 종료~v7 r66 2차, 9,680건)가 추가됐다. 이 문서가 검증한 v7_62 판의 값(r46~61 실측 14건, r=-0.1025, 1,781→9,042 +408%)은 새 CSV에서도 그대로 재현되며, r62~r66(2차) 실측 6개 지점(0.076·0.096·0.141·0.141·0.102·0.097)이 더해져 v7-40 이후 실측 22개 지점 전부 기준선 미달이다. 46~66.5 구간 전체의 코퍼스-실루엣 상관은 r=+0.15로 여전히 무관 수준. `build_silhouette_gate_timeline_v7.py`는 새 CSV를 읽고 게이트 구간 끝을 마지막 실측 라운드로 자동 잡도록 수정했다. 최종 라이브 코퍼스 10,020건 시점의 참고 재적합(K=8, M=5, 실루엣 0.046, 게이트 기각)은 `data/v7_final/lda_v6_diagnostics_live_reference_v7.json`에 있어, 표의 r46~r61 구간 이후에도 기준선 0.267에 도달하지 못했음을 보여준다.
 
 
 ## 이 문서가 다루는 것

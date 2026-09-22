@@ -1,0 +1,3896 @@
+{
+  "methodology": "raw bullet-text substring matching, ad_commercial_index_v7.py(v7 39라운드)와 동일한 two-stage 설계 원칙 — LDA 토픽이나 K→M→F Impact Pathway 재군집화를 전혀 참조하지 않고 원문 문자열 매칭만으로 계산해 재군집화 변덕에서 자유로운 독립 보조지표. (1) 5개 결속 활동 유형(A 공식 팬클럽·회원제, B 팬카페·온라인 커뮤니티, C 팬덤 정체성·문화, D 기부· 후원 캠페인, E 오프라인 결집·이벤트) 키워드 중 하나라도 매칭되면 '팬덤결속 불릿'으로 카운트. (2) D(기부·후원)는 그 자체로는 신호가 아니며 '팬클럽/팬카페/팬덤/팬들/함께/자발적/정회원/회원' 중 하나가 같은 문장에 공존해야만 카운트한다 — 아티스트 개인 선행과 팬덤 주도 기부 캠페인을 구분하기 위한 정밀도 게이트(광고 지수의 부정 표현 가드와 동일한 역할). 한 불릿이 여러 카테고리에 매칭되면 모두 카운트(멀티라벨).",
+  "d_gate_precision_check": {
+    "note": "D 카테고리 게이트가 실제로 아티스트 개인 선행을 걸러내고 있는지의 재현 가능한 검증치.",
+    "기부·후원류_전체_언급": 364,
+    "게이트로_제외된_건수": 166,
+    "제외_비율": 0.456
+  },
+  "categories": [
+    "A_공식팬클럽·회원제",
+    "B_팬카페·온라인커뮤니티",
+    "C_팬덤정체성·문화",
+    "E_오프라인결집·이벤트",
+    "D_기부·후원캠페인(팬덤주도)"
+  ],
+  "total_bullets": 10020,
+  "total_cohesion_bullets": 923,
+  "corpus_cohesion_share": 0.0921,
+  "category_totals": {
+    "B_팬카페·온라인커뮤니티": 190,
+    "D_기부·후원캠페인(팬덤주도)": 198,
+    "A_공식팬클럽·회원제": 480,
+    "C_팬덤정체성·문화": 122,
+    "E_오프라인결집·이벤트": 173
+  },
+  "n_fandoms_with_any_cohesion_bullet": 99,
+  "fandoms": [
+    {
+      "fandom": "임영웅",
+      "category": "트로트",
+      "n_total_bullets": 131,
+      "n_cohesion_bullets": 30,
+      "cohesion_share": 0.229,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 18,
+        "B_팬카페·온라인커뮤니티": 13,
+        "C_팬덤정체성·문화": 2,
+        "E_오프라인결집·이벤트": 1,
+        "D_기부·후원캠페인(팬덤주도)": 11
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "팬카페 '영웅시대'는 데뷔 초 약 80여 명에서 9주년(2026년)을 맞아 회원 수 19만 명 이상으로 성장해 '국민 팬덤'으로 불린다.",
+          "u": "https://v.daum.net/v/20260512130916112",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "B_팬카페·온라인커뮤니티"
+          ]
+        },
+        {
+          "t": "팬클럽 지회별로 쌀 기부, 경로당 봉사, 성금 전달 등 선행을 이어가며 이에 화답하듯 임영웅 본인도 기부에 나서는 '기부 선순환' 구조가 형성돼 있다(홍천 지회 쌀 100포대 기부, 거제 지회 1004만원 기부 등).",
+          "u": "https://biz.heraldcorp.com/article/10844882",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "D_기부·후원캠페인(팬덤주도)"
+          ]
+        },
+        {
+          "t": "공식 팬클럽 '영웅시대'는 20만 명 이상의 회원을 보유하고 있으며, 아이돌 차트에서 팬덤 규모와 결속력을 측정하는 '좋아요' 항목에서 3만2589표로 최다 득표를 기록했다",
+          "u": "https://www.scmp.com/lifestyle/entertainment/article/3273660/trot-singer-lim-young-woong-more-popular-bts-loved-north-and-south-koreans, https://sports.khan.co.kr/en/article/202603170927007/",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "C_팬덤정체성·문화"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "김재중",
+      "category": "솔로",
+      "n_total_bullets": 77,
+      "n_cohesion_bullets": 25,
+      "cohesion_share": 0.3247,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 9,
+        "B_팬카페·온라인커뮤니티": 4,
+        "C_팬덤정체성·문화": 2,
+        "E_오프라인결집·이벤트": 11,
+        "D_기부·후원캠페인(팬덤주도)": 1
+      },
+      "top_category": "E_오프라인결집·이벤트",
+      "sample_bullets": [
+        {
+          "t": "김재중의 글로벌 팬클럽명 'BOSS BABIES'는 2023년 6월 22일 전 세계 팬 투표를 통해 확정되었으며, 팬덤 컬러는 그린이다.",
+          "u": "https://namu.wiki/w/BOSS%20BABIES",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "'BOSS BABIES' 이전에는 한국(JAEREA), 일본(JAEFANS), 중국(HWABOON) 등 국가별로 팬덤명이 나뉘어 있었으며, 김재중이 직접 한국·일본 팬덤명을 지었다.",
+          "u": "https://namu.wiki/w/BOSS%20BABIES",
+          "tag": "loyalty",
+          "categories": [
+            "C_팬덤정체성·문화"
+          ]
+        },
+        {
+          "t": "김재중이 디시인사이드 디시트렌드 K-POP 남자 투표에서 15일 연속 1위를 기록하며 '15관왕'을 달성해 BOSS BABIES 팬덤의 화력과 결집력을 입증했다.",
+          "u": "https://www.job-post.co.kr/news/articleView.html?idxno=150889",
+          "tag": "loyalty",
+          "categories": [
+            "B_팬카페·온라인커뮤니티"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "박서진",
+      "category": "트로트",
+      "n_total_bullets": 99,
+      "n_cohesion_bullets": 25,
+      "cohesion_share": 0.2525,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 18,
+        "B_팬카페·온라인커뮤니티": 7,
+        "C_팬덤정체성·문화": 2,
+        "E_오프라인결집·이벤트": 1,
+        "D_기부·후원캠페인(팬덤주도)": 12
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "박서진 공식 팬클럽 이름은 '닻별'이며 공식 색상은 진한 옐로우로, 다음카페를 기반으로 활발히 운영되고 있다.",
+          "u": "https://namu.wiki/w/%EB%B0%95%EC%84%9C%EC%A7%84(1995)",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "닻별은 박서진 생일을 맞아 8월 11~14일 나흘간 팬카페 기부릴레이를 벌여 1,092명이 참여해 5,821만 원을 사랑의열매에 기부했다.",
+          "u": "https://ibabynews.com/news/articleView.html?idxno=120233",
+          "tag": "loyalty",
+          "categories": [
+            "B_팬카페·온라인커뮤니티",
+            "D_기부·후원캠페인(팬덤주도)"
+          ]
+        },
+        {
+          "t": "해당 기부로 닻별은 누적 기부 1억 원을 넘겨 사랑의열매 '착한팬클럽' 골드 회원에 가입했다.",
+          "u": "https://www.newsis.com/view/NISX20240827_0002863864",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "D_기부·후원캠페인(팬덤주도)"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "정동원",
+      "category": "트로트",
+      "n_total_bullets": 107,
+      "n_cohesion_bullets": 24,
+      "cohesion_share": 0.2243,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 19,
+        "B_팬카페·온라인커뮤니티": 5,
+        "D_기부·후원캠페인(팬덤주도)": 15
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "공식 팬카페는 2020년 5월 개설됐으며 2022년 10월 기준 약 2만9,293명의 회원을 보유했다.",
+          "u": "https://namu.wiki/w/%EC%9A%B0%EC%A3%BC%EC%B4%9D%EB%8F%99%EC%9B%90",
+          "tag": "loyalty",
+          "categories": [
+            "B_팬카페·온라인커뮤니티"
+          ]
+        },
+        {
+          "t": "팬클럽은 2020년 8월 하동군 수해 피해 지원, 2020년 12월 한국소아암재단에 6,800만원, 2021년 3월 703만1,900원을 각각 기부하는 등 선행 활동을 이어왔다.",
+          "u": "https://namu.wiki/w/%EC%9A%B0%EC%A3%BC%EC%B4%9D%EB%8F%99%EC%9B%90",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "D_기부·후원캠페인(팬덤주도)"
+          ]
+        },
+        {
+          "t": "팬클럽이 자체적으로 지하철 광고를 진행한 사례가 광고대행사 페이지에 게재돼 있어 적극적인 팬 활동이 확인된다.",
+          "u": "https://tkad.co.kr/product/%EB%A7%88%EC%9D%B4%ED%8A%B8%EB%A1%AF-%EC%A0%95%EB%8F%99%EC%9B%90-%ED%8C%AC%ED%81%B4%EB%9F%BD-%EC%A7%80%ED%95%98%EC%B2%A0-%EA%B4%91%EA%B3%A0%EC%A7%84%ED%96%89/1610/",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "김호중",
+      "category": "트로트",
+      "n_total_bullets": 91,
+      "n_cohesion_bullets": 22,
+      "cohesion_share": 0.2418,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 9,
+        "B_팬카페·온라인커뮤니티": 13,
+        "C_팬덤정체성·문화": 2,
+        "D_기부·후원캠페인(팬덤주도)": 8
+      },
+      "top_category": "B_팬카페·온라인커뮤니티",
+      "sample_bullets": [
+        {
+          "t": "공식 팬카페 '트바로티' 회원수는 2020년 8월 7만 명, 같은 해 12월 10만 명을 돌파할 정도로 빠르게 성장했다.",
+          "u": "https://www.koreatowndaily.com/articles/20200826032545",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "B_팬카페·온라인커뮤니티"
+          ]
+        },
+        {
+          "t": "2024년 5월 음주운전 인정 파문 직후 팬카페 회원이 하루 만에 15만615명에서 15만281명으로 330명 이상 줄었지만, 15만 명대 규모 자체는 유지됐다.",
+          "u": "https://v.daum.net/v/20240521101757858?f=m",
+          "tag": "loyalty",
+          "categories": [
+            "B_팬카페·온라인커뮤니티"
+          ]
+        },
+        {
+          "t": "팬덤은 소속사에 \"아리스는 하나, 끝까지 함께 할 것\"이라는 성명을 내고 소속사 측에 팬카페 탈퇴를 요구하는 등 결속력을 보였다.",
+          "u": "https://v.daum.net/v/84mYIewMNV?f=p",
+          "tag": "loyalty",
+          "categories": [
+            "B_팬카페·온라인커뮤니티",
+            "C_팬덤정체성·문화"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "이찬원",
+      "category": "트로트",
+      "n_total_bullets": 106,
+      "n_cohesion_bullets": 20,
+      "cohesion_share": 0.1887,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 7,
+        "B_팬카페·온라인커뮤니티": 10,
+        "C_팬덤정체성·문화": 2,
+        "D_기부·후원캠페인(팬덤주도)": 9
+      },
+      "top_category": "B_팬카페·온라인커뮤니티",
+      "sample_bullets": [
+        {
+          "t": "2020년 7월 출범한 공식 팬카페 '찬스'는 2026년 7월 기준 회원 7만2,613명을 넘어섰다.",
+          "u": "https://www.starnewskorea.com/music/2026/07/10/2026071005195886486",
+          "tag": "loyalty",
+          "categories": [
+            "B_팬카페·온라인커뮤니티"
+          ]
+        },
+        {
+          "t": "이보다 앞서 팬카페가 5만 명을 돌파했다는 보도도 있어 꾸준한 팬덤 성장세가 확인된다.",
+          "u": "https://www.xportsnews.com/article/1636936",
+          "tag": "loyalty",
+          "categories": [
+            "B_팬카페·온라인커뮤니티"
+          ]
+        },
+        {
+          "t": "팬들은 '오내언사(오늘도 내일도 언제나 사랑합니다)'라는 시그널 인사를 공유하며 생일 등 기념일마다 후원금을 모아 기부 활동을 진행한다.",
+          "u": "https://www.starnewskorea.com/music/2026/07/10/2026071005195886486",
+          "tag": "loyalty",
+          "categories": [
+            "D_기부·후원캠페인(팬덤주도)"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "잭스키스",
+      "category": "원로그룹",
+      "n_total_bullets": 85,
+      "n_cohesion_bullets": 18,
+      "cohesion_share": 0.2118,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 15,
+        "B_팬카페·온라인커뮤니티": 1,
+        "C_팬덤정체성·문화": 3,
+        "E_오프라인결집·이벤트": 2,
+        "D_기부·후원캠페인(팬덤주도)": 4
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "재결합 첫 공식 팬미팅 'Yellowkies Day'(2017.7.15)를 통해 팬클럽명을 YELLOWKIES로 정하며 옛 팬덤(D.S.F.)을 계승·재조직했다",
+          "u": "https://ko.wikipedia.org/wiki/%EC%A0%9D%EC%8A%A4%ED%82%A4%EC%8A%A4",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "E_오프라인결집·이벤트"
+          ]
+        },
+        {
+          "t": "공식 팬클럽 '옐로우키스'는 \"아이돌 팬덤 문화의 시초\"로 평가받는 선구적 팬덤 조직이었다",
+          "u": "https://namu.wiki/w/젝스키스",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "C_팬덤정체성·문화"
+          ]
+        },
+        {
+          "t": "1997년 7월 21일 팬클럽 'D.S.F.'가 창단되며 조직적 팬덤 활동이 시작됐다",
+          "u": "https://ko.wikipedia.org/wiki/젝스키스",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "C_팬덤정체성·문화"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "리센느(RESCENE)",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 85,
+      "n_cohesion_bullets": 18,
+      "cohesion_share": 0.2118,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 2,
+        "B_팬카페·온라인커뮤니티": 3,
+        "C_팬덤정체성·문화": 3,
+        "E_오프라인결집·이벤트": 4,
+        "D_기부·후원캠페인(팬덤주도)": 8
+      },
+      "top_category": "D_기부·후원캠페인(팬덤주도)",
+      "sample_bullets": [
+        {
+          "t": "2025년 6월 거제 미니 팬미팅은 안전상 이유로 50명 한정·추첨제로 운영됐음에도 다수의 팬이 응모하며 지역 행사에도 높은 결집력을 보였다.",
+          "u": "https://www.threads.com/@_tripgoing/post/DZt3vFskqcV/",
+          "tag": "loyalty",
+          "categories": [
+            "E_오프라인결집·이벤트"
+          ]
+        },
+        {
+          "t": "공식 팬덤명 'REMINE(리마인)'은 RESCENE와 MINE을 결합한 명칭으로, 소속사가 공식 SNS를 통해 발표하며 팬덤과의 정체성 결속을 강조했다.",
+          "u": "https://x.com/RESCENEofficial/status/1810999602549862838",
+          "tag": "loyalty",
+          "categories": [
+            "C_팬덤정체성·문화"
+          ]
+        },
+        {
+          "t": "멤버 메이 팬 서포트 프로젝트가 오픈 11일 만에 목표 100%를 달성했고 최종 130.44%로 마감되어, 건대입구역 지하철 광고가 2026년 8월 19~25일 진행되었다.",
+          "u": "https://sports.khan.co.kr/article/202608192044003/",
+          "tag": "loyalty",
+          "categories": [
+            "E_오프라인결집·이벤트"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "송가인",
+      "category": "트로트",
+      "n_total_bullets": 92,
+      "n_cohesion_bullets": 17,
+      "cohesion_share": 0.1848,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 10,
+        "B_팬카페·온라인커뮤니티": 8,
+        "C_팬덤정체성·문화": 2,
+        "E_오프라인결집·이벤트": 1,
+        "D_기부·후원캠페인(팬덤주도)": 7
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "공식 팬클럽 'AGAIN'은 2020년 6월 기준 회원 수 약 5만 7500명을 넘어섰다.",
+          "u": "https://namu.wiki/w/%EC%86%A1%EA%B0%80%EC%9D%B8",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "팬클럽 'AGAIN'은 온라인 악플 대응을 위해 자체적으로 전담 고문 변호사를 두고 있을 만큼 조직적 결속력을 보이는 것으로 알려졌다.",
+          "u": "https://www.huffingtonpost.kr/entry/song-ga-in-again_kr_61ea11aae4b0c24d4dd3be6d",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "C_팬덤정체성·문화"
+          ]
+        },
+        {
+          "t": "팬클럽명은 '어게인(Again)'이며, 기존 팬카페와의 시너지를 통해 다양한 연령대 팬들과의 소통을 강화하는 방향으로 공식 채널이 운영되고 있다",
+          "u": "https://bstage.in/article/launches-official-homepage-for-trot-queen-song-ga-in-en/",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "B_팬카페·온라인커뮤니티"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "god",
+      "category": "원로그룹",
+      "n_total_bullets": 99,
+      "n_cohesion_bullets": 17,
+      "cohesion_share": 0.1717,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 12,
+        "C_팬덤정체성·문화": 2,
+        "E_오프라인결집·이벤트": 4,
+        "D_기부·후원캠페인(팬덤주도)": 2
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "2025년 8월, god는 데뷔 26주년을 맞아 공식 팬클럽 fangod 7기를 모집했으며 국내외 전 연령 팬이 가입 가능할 정도로 팬클럽이 장기간 안정적으로 운영되고 있다",
+          "u": "https://www.starnewskorea.com/music/2025/07/29/2025072910061316853",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "초기 fangod(2~3기) 팬미팅은 참가 인원이 많아 3일에 걸쳐 진행되거나 서울종합운동장에서 개최될 정도로 규모가 컸다",
+          "u": "https://namu.wiki/w/fangod",
+          "tag": "loyalty",
+          "categories": [
+            "E_오프라인결집·이벤트"
+          ]
+        },
+        {
+          "t": "2026년 5월 데뷔 10,000일을 맞아 에버랜드에서 \"ONE FAMILY, 10,000 DAYS\"를 슬로건으로 내건 대형 팬 행사 \"Sky Blue Balloon Week\"를 열고 플래시몹, 팝업스토어, 전시 등으로 팬들과 밀착 교류함",
+          "u": "https://www.starnewskorea.com/en/music/2026/06/01/2026060115403617941",
+          "tag": "loyalty",
+          "categories": [
+            "C_팬덤정체성·문화"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "영탁",
+      "category": "트로트",
+      "n_total_bullets": 104,
+      "n_cohesion_bullets": 17,
+      "cohesion_share": 0.1635,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 13,
+        "B_팬카페·온라인커뮤니티": 4,
+        "C_팬덤정체성·문화": 4,
+        "D_기부·후원캠페인(팬덤주도)": 10
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "2020년 2월 미스터트롯 경연 당시 개설된 팬카페 '영탁이딱이야'는 2023년 5월 회원 수 6만 명을 돌파했다.",
+          "u": "https://sports.khan.co.kr/article/202305070204003",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "B_팬카페·온라인커뮤니티"
+          ]
+        },
+        {
+          "t": "이 팬카페는 2022년과 2023년 연속으로 사랑의열매 희망나눔캠페인에 '팬덤기부 1호'로 참여하는 등 결속력 있는 선행 활동을 이어왔다.",
+          "u": "https://sports.khan.co.kr/article/202305070204003",
+          "tag": "loyalty",
+          "categories": [
+            "B_팬카페·온라인커뮤니티",
+            "C_팬덤정체성·문화",
+            "D_기부·후원캠페인(팬덤주도)"
+          ]
+        },
+        {
+          "t": "2024년 5월 새로운 공식 팬덤명 '영탁앤블루스(YOUNGTAK&BLUES)'를 발표했고, 같은 해 9월 팬클럽 창단을 기념해 본인 명의로 1억원을 기부했다.",
+          "u": "https://www.mksports.co.kr/news/entertain/11014099",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "C_팬덤정체성·문화",
+            "D_기부·후원캠페인(팬덤주도)"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "레드벨벳",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 118,
+      "n_cohesion_bullets": 17,
+      "cohesion_share": 0.1441,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 9,
+        "B_팬카페·온라인커뮤니티": 1,
+        "C_팬덤정체성·문화": 3,
+        "E_오프라인결집·이벤트": 4,
+        "D_기부·후원캠페인(팬덤주도)": 4
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "공식 팬클럽명은 'ReVeluv'이며 일본에서는 'ReVeluv-Baby'로 불린다.",
+          "u": "https://en.wikipedia.org/wiki/Red_Velvet_(group)",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "2018년 4월 시카고 첫 미국 팬미팅에 4천 명이 참석했다.",
+          "u": "https://en.wikipedia.org/wiki/Red_Velvet_(group)",
+          "tag": "loyalty",
+          "categories": [
+            "E_오프라인결집·이벤트"
+          ]
+        },
+        {
+          "t": "레드벨벳이 데뷔 10주년을 기념해 팬콘서트 투어 '해피니스 : 마이 디어, 레베럽'을 개최해 팬클럽 레베럽과 함께 기념 행사를 열었다",
+          "u": "https://news.mt.co.kr/mtview.php?no=2024061411160519981",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "RIIZE",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 121,
+      "n_cohesion_bullets": 17,
+      "cohesion_share": 0.1405,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 11,
+        "C_팬덤정체성·문화": 1,
+        "E_오프라인결집·이벤트": 5,
+        "D_기부·후원캠페인(팬덤주도)": 10
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "2025년 1월 팬덤 브리즈(BRIIZE)는 취약계층 청소년 예술지원 단체 '위드어스'에 1억원을 기부하며 팬덤 차원의 선행 활동을 보여줬다.",
+          "u": "https://en.wikipedia.org/wiki/Riize",
+          "tag": "loyalty",
+          "categories": [
+            "D_기부·후원캠페인(팬덤주도)"
+          ]
+        },
+        {
+          "t": "데뷔 쇼케이스에서 팬덤명을 'Sunz'로 발표했으나 부정적 해석 우려로 이틀 만에 'Briize'로 변경했고, 이후 브리즈라는 이름으로 조직적 팬덤 활동이 이어졌다",
+          "u": "https://en.wikipedia.org/wiki/Riize",
+          "tag": "loyalty",
+          "categories": [
+            "C_팬덤정체성·문화"
+          ]
+        },
+        {
+          "t": "라이즈가 데뷔 3주년을 맞아 2026년 9월 인천에서 팬클럽 '브리즈'와 팬미팅을 개최한다는 보도",
+          "u": "https://v.daum.net/v/PnyuozUZtH?f=p",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "E_오프라인결집·이벤트"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "성시경",
+      "category": "발라드",
+      "n_total_bullets": 80,
+      "n_cohesion_bullets": 15,
+      "cohesion_share": 0.1875,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 7,
+        "B_팬카페·온라인커뮤니티": 6,
+        "E_오프라인결집·이벤트": 4
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "성시경은 데뷔 21년 만인 2021년에 처음으로 공식 팬클럽 '퍼플오션'을 창단해 팬덤과의 공식적 소통 채널을 마련했다.",
+          "u": "https://news.nate.com/view/20211031n13434?mid=e1100",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "2026년 '축가' 콘서트는 공식 팬클럽 PURPLEOCEAN KOREA 회원 대상 선예매 절차를 별도로 운영하는 등 팬클럽 우대 시스템을 지속하고 있다.",
+          "u": "https://tickets.interpark.com/contents/notice/detail/12477",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "팬미팅 '사월'이 장충체육관에서 전석 매진되었고, 팬클럽 회원 수가 약 6천 명에서 8천 명으로 늘었음에도 \"너무 큰 공연장을 고르면 팬미팅 느낌이 안 날까봐\" 같은 장소를 택했다고 밝혔다",
+          "u": "https://www.allkpop.com/article/2026/03/sung-si-kyung-thanks-fans-for-sold-out-fan-meeting-asks-fans-to-avoid-scalped-tickets",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "E_오프라인결집·이벤트"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "BTS",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 227,
+      "n_cohesion_bullets": 15,
+      "cohesion_share": 0.0661,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 4,
+        "B_팬카페·온라인커뮤니티": 4,
+        "C_팬덤정체성·문화": 1,
+        "E_오프라인결집·이벤트": 4,
+        "D_기부·후원캠페인(팬덤주도)": 4
+      },
+      "top_category": "D_기부·후원캠페인(팬덤주도)",
+      "sample_bullets": [
+        {
+          "t": "2025년 슈가의 50억원 기부 발표 하루 만에 아미 팬덤이 자발적으로 2억원을 추가 기부했고, 이 흐름은 일본 아미의 기부 참여로도 이어지며 팬덤의 결속력과 선행 문화를 보여줬다.",
+          "u": "https://www.fnnews.com/news/202506241026058019",
+          "tag": "loyalty",
+          "categories": [
+            "C_팬덤정체성·문화",
+            "D_기부·후원캠페인(팬덤주도)"
+          ]
+        },
+        {
+          "t": "팬 커뮤니티 플랫폼 위버스가 2026년 완전체 컴백을 앞두고 구독자 3천만 명을 돌파해 위버스 역사상 최초로 이 규모에 도달한 아티스트가 되었다.",
+          "u": "https://www.koreaherald.com/article/10535450",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "B_팬카페·온라인커뮤니티"
+          ]
+        },
+        {
+          "t": "지민 팬들이 2026년 6월 한 달간 부산 지하철·열차를 활용한 '지민로드' 대규모 팬 서포트를 진행했다.",
+          "u": "https://www.starnewskorea.com/music/2026/06/12/2026061207341127680",
+          "tag": "loyalty",
+          "categories": [
+            "E_오프라인결집·이벤트"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "EXO",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 121,
+      "n_cohesion_bullets": 14,
+      "cohesion_share": 0.1157,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 7,
+        "B_팬카페·온라인커뮤니티": 1,
+        "C_팬덤정체성·문화": 3,
+        "E_오프라인결집·이벤트": 3,
+        "D_기부·후원캠페인(팬덤주도)": 2
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "2014년 8월 기준 엑소 공식 팬클럽 EXO-L(당시 명칭 포함) 회원 수가 120만 명을 돌파했다는 보도가 있었다.",
+          "u": "http://star.mt.co.kr/stview.php?no=2014081108161098589",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "첸백시(첸·백현·시우민)를 제외한 6인조로 진행된 엑소 팬미팅 'EXO'verse'(12월 14일, 인천 인스파이어 아레나)가 공식 팬클럽 선예매만으로 2회차 전석 매진됨",
+          "u": "https://v.daum.net/v/20251031170302077?f=p",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "E_오프라인결집·이벤트"
+          ]
+        },
+        {
+          "t": "엑소의 월드투어 'EXO PLANET #6 - EXhOrizon' 서울 공연(4월 10~12일, 올림픽공원 KSPO 돔) 3회차가 멜론티켓 팬클럽 선예매 및 일반예매에서 모두 매진됨. 데뷔 후 정규앨범 5장 연속 밀리언셀러를 달성했다는 점도 함께 보도됨",
+          "u": "https://www.wolyo.co.kr/news/articleView.html?idxno=308871",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "보아",
+      "category": "솔로",
+      "n_total_bullets": 76,
+      "n_cohesion_bullets": 13,
+      "cohesion_share": 0.1711,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 11,
+        "C_팬덤정체성·문화": 4
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "국내 공식 팬클럽은 'Jumping BoA'(공식색 Pearl Yellow), 일본 팬클럽은 'SOUL'로 별도 운영되며 데뷔 이후 장기간 체계적인 팬덤 조직을 유지해왔다",
+          "u": "https://namu.wiki/w/%EB%B3%B4%EC%95%84",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "C_팬덤정체성·문화"
+          ]
+        },
+        {
+          "t": "팬클럽명 '점핑보아'는 PC통신 시절 팬들이 쓰던 이름을 SM이 양도받아 공식화한 것으로, 2~3집 시절(2000년대 초) 입덕한 80년대 중후반~90년대 초반생 팬들이 현재 30대 직장인이 되어서도 20년 넘게 팬덤을 유지하고 있음",
+          "u": "https://namu.wiki/w/%EC%A0%90%ED%95%91%EB%B3%B4%EC%95%84",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "한국 팬클럽 '점핑보아'와 일본 팬덤 'SOUL'이라는 이원화된 공식 팬덤 조직을 20년 넘게 유지해왔다",
+          "u": "https://namu.wiki/w/보아",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "C_팬덤정체성·문화"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "윤하",
+      "category": "솔로",
+      "n_total_bullets": 83,
+      "n_cohesion_bullets": 13,
+      "cohesion_share": 0.1566,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 10,
+        "B_팬카페·온라인커뮤니티": 1,
+        "C_팬덤정체성·문화": 1,
+        "E_오프라인결집·이벤트": 2,
+        "D_기부·후원캠페인(팬덤주도)": 3
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "윤하의 공식 팬클럽 Y.HOLICS(홀릭스)는 2025년 기준 9~10기까지 지속적으로 모집을 이어가고 있으며 국내외 팬을 대상으로 운영된다",
+          "u": "https://www.facebook.com/officialyounha/posts/1555710682585175/",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "홀릭스 팬클럽은 윤하 데뷔 20주년을 기념해 401만원을 사회복지시설에 기부하는 등 팬덤 차원의 선행을 이어가고 있다",
+          "u": "https://m.news.nate.com/view/20240904n04323?mid=e01",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "D_기부·후원캠페인(팬덤주도)"
+          ]
+        },
+        {
+          "t": "공식 팬클럽 Y.HOLICS는 2023년 1월 7기 모집을 진행할 정도로 다회차 운영 체계를 갖춘 장기 팬덤 조직임이 확인됨",
+          "u": "https://world.nol.com/en/ticket/places/11010671/products/23000295",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "C_팬덤정체성·문화"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "지드래곤 (G-Dragon)",
+      "category": "힙합",
+      "n_total_bullets": 133,
+      "n_cohesion_bullets": 13,
+      "cohesion_share": 0.0977,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 10,
+        "B_팬카페·온라인커뮤니티": 2,
+        "C_팬덤정체성·문화": 2,
+        "E_오프라인결집·이벤트": 2,
+        "D_기부·후원캠페인(팬덤주도)": 4
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "같은 해 11월 앵콜 콘서트의 팬클럽 선예매가 오픈 34분 만에 매진됐다.",
+          "u": "https://news.nate.com/view/20251111n09855",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "공식 팬클럽 'V.I.P'는 약 10년 만에 6기 모집을 재개할 만큼 장기간 유지되어 온 결속력 있는 팬덤 조직이다.",
+          "u": "https://www.threads.com/@tripin.ko/post/DX0915ulLm2/",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "C_팬덤정체성·문화"
+          ]
+        },
+        {
+          "t": "2025년 2월 7일 오후 6시 b.stage 앱을 통해 글로벌 팬 커뮤니티 공식 멤버십을 오픈하고 2월 7~11일 얼리버드 가입 기간을 운영했다",
+          "u": "https://v.daum.net/v/20250207143035836",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "B_팬카페·온라인커뮤니티"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "BTOB",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 82,
+      "n_cohesion_bullets": 12,
+      "cohesion_share": 0.1463,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 7,
+        "E_오프라인결집·이벤트": 3,
+        "D_기부·후원캠페인(팬덤주도)": 6
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "공식 팬클럽 'Melody'는 데뷔 초부터 운영되어 왔으며 청소년 당뇨병 협회 후원 등 지속적인 기부 활동을 이어오고 있다.",
+          "u": "https://en.wikipedia.org/wiki/BTOB",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "D_기부·후원캠페인(팬덤주도)"
+          ]
+        },
+        {
+          "t": "팬덤 주도로 2017년 포항 지진 피해 성금 5천만 원, 2019년 속초 산불 성금 195만 원, 2020년 코로나19 의료진 지원 성금 321만 원을 기부했다.",
+          "u": "https://en.wikipedia.org/wiki/BTOB",
+          "tag": "loyalty",
+          "categories": [
+            "D_기부·후원캠페인(팬덤주도)"
+          ]
+        },
+        {
+          "t": "인도네시아 매체 detikcom은 2024년 10월 17일 BTOB 공식 팬클럽 '멜로디(Melody)' 인도네시아 대표단이 취소된 '2024 BTOB Fancon Our Dream' 티켓 환불 문제로 인도네시아 소비자보호기구(BPKN RI)를 직접 방문해 항의했다고 보도했다",
+          "u": "https://www.detik.com/pop/korean-wave/d-7596080/fans-btob-di-gedung-bpkn-ri-kami-mau-seraph-ent-kembalikan-uang",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "볼빨간사춘기",
+      "category": "솔로",
+      "n_total_bullets": 88,
+      "n_cohesion_bullets": 12,
+      "cohesion_share": 0.1364,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 6,
+        "B_팬카페·온라인커뮤니티": 2,
+        "C_팬덤정체성·문화": 5,
+        "E_오프라인결집·이벤트": 3
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "공식 팬클럽 '러볼리(LoBoly)'가 기수별로 모집되며 공식 응원봉 '나만봉'까지 갖추는 등 체계적으로 운영되고 있다.",
+          "u": "https://namu.wiki/w/%EB%B3%BC%EB%B9%A8%EA%B0%84%EC%82%AC%EC%B6%98%EA%B8%B0",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "C_팬덤정체성·문화"
+          ]
+        },
+        {
+          "t": "공식 팬클럽 'LoBoly(러볼리)'는 공식 팬카페를 통해 팬들에게 명칭을 공모받아 아티스트 본인이 최종 선정한 이름이다",
+          "u": "https://namu.wiki/w/LoBoly",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "B_팬카페·온라인커뮤니티"
+          ]
+        },
+        {
+          "t": "2016년 데뷔 후 8년 만인 2024년 10월에야 1기 공식 팬클럽 모집을 시작했으며(가입비 15,000원, 활동기간 2024.10.8~2025.11.8), 세대별 응원봉에 중앙 연동·앱 지원 기능이 추가되는 등 팬 서비스가 점진적으로 고도화되고 있다",
+          "u": "https://namu.wiki/w/LoBoly",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "C_팬덤정체성·문화"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "최예나",
+      "category": "솔로",
+      "n_total_bullets": 96,
+      "n_cohesion_bullets": 12,
+      "cohesion_share": 0.125,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 7,
+        "B_팬카페·온라인커뮤니티": 1,
+        "C_팬덤정체성·문화": 3,
+        "E_오프라인결집·이벤트": 2,
+        "D_기부·후원캠페인(팬덤주도)": 3
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "2022년 소속사가 공식 팬클럽명을 '지구미(Jigumi)'로 공식 발표했다.",
+          "u": "https://x.com/YENA_OFFICIAL/status/1483069678222123010",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "공식 팬클럽명 '지구미'가 2기 모집을 인터파크/NOL 티켓을 통해 진행할 정도로 정례화된 멤버십 구조를 갖추고 있음",
+          "u": "https://tickets.interpark.com/goods/24017063",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "팬클럽명은 YENA_OFFICIAL 공식 계정을 통해 정식 발표된 바 있음",
+          "u": "https://x.com/YENA_OFFICIAL/status/1483069678222123010",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "HOT",
+      "category": "원로그룹",
+      "n_total_bullets": 97,
+      "n_cohesion_bullets": 12,
+      "cohesion_share": 0.1237,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 8,
+        "C_팬덤정체성·문화": 1,
+        "E_오프라인결집·이벤트": 3
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "공식 팬클럽 'Club H.O.T.' 유료 회원이 약 22만 명, 비공식 팬덤까지 합치면 약 70만 명에 달했다",
+          "u": "https://v.daum.net/v/20250907060349263",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "H.O.T.는 전성기 10만 명 규모의 공식 유료 팬클럽 'Club H.O.T.'를 운영했으며, 2018년 재결합 콘서트는 예매 오픈 즉시 8만 석이 매진되고 양일간 10만 명이 동원됨",
+          "u": "https://namu.wiki/w/H.O.T./%EC%9D%B8%EA%B8%B0%20%EB%B0%8F%20%EC%9C%84%EC%83%81",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "H.O.T.의 공식 유료 팬클럽 'Club H.O.T.'는 2000년 기준 회원 수 10만명에 달했다.",
+          "u": "https://namu.wiki/w/Club%20H.O.T.",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "QWER",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 103,
+      "n_cohesion_bullets": 12,
+      "cohesion_share": 0.1165,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 5,
+        "B_팬카페·온라인커뮤니티": 1,
+        "C_팬덤정체성·문화": 4,
+        "E_오프라인결집·이벤트": 1,
+        "D_기부·후원캠페인(팬덤주도)": 3
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "공식 팬클럽 '바위게' 1기가 2024년 결성된 데 이어 2기 모집까지 이어지며 팬덤 조직화가 빠르게 진행됐다.",
+          "u": "https://wvzine.com/?p=1529",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "C_팬덤정체성·문화"
+          ]
+        },
+        {
+          "t": "팬덤 '바위게'가 멤버 히나의 생일을 기념해 유기견·유기묘 보호소 봉사를 진행하고, 별도로 기후·에너지 취약계층에 연탄 2,500장을 기부하는 등 선행 활동을 이어가고 있다.",
+          "u": "https://v.daum.net/v/20260217223146065",
+          "tag": "loyalty",
+          "categories": [
+            "D_기부·후원캠페인(팬덤주도)"
+          ]
+        },
+        {
+          "t": "QWER은 위버스 샵을 통해 공식 팬클럽 멤버십 2기 '바위게'를 2025년 7월 28일~8월 11일 모집했다",
+          "u": "https://wvzine.com/?p=7193",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "워너원",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 123,
+      "n_cohesion_bullets": 12,
+      "cohesion_share": 0.0976,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 3,
+        "C_팬덤정체성·문화": 2,
+        "E_오프라인결집·이벤트": 7
+      },
+      "top_category": "E_오프라인결집·이벤트",
+      "sample_bullets": [
+        {
+          "t": "학술 연구 \"케이팝 팬덤의 군중 형태 변화 과정 연구 - 워너원(Wanna One) 팬덤을 중심으로\"(earticle 게재)는 워너원 팬덤이 활동 초기 '축제 군중'·'추적 군중'에서 중기 '금지 군중'·'역전 군중'을 거쳐 해체 후 '도피 군중'으로 이행하는 독자적 팬덤 생애주기를 보였다고 분석했다 — 프로젝트 그룹 특유의 팬덤 결속력을 학술적으로 조명",
+          "u": "https://www.earticle.net/Article/A437807",
+          "tag": "loyalty",
+          "categories": [
+            "C_팬덤정체성·문화"
+          ]
+        },
+        {
+          "t": "워너원의 '프리미어 쇼케이스 콘서트' 팬클럽 선예매 티켓이 오픈 1분 만에 전량 매진됐다",
+          "u": "https://nocutnews.co.kr/news/4814640",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "워너원이 마지막 콘서트에서 \"가장 찬란했던 순간, 워너블과의 추억을 잊지 않겠다\"고 밝히며 팬클럽 워너블과의 유대를 마무리 무대에서 강조했다",
+          "u": "https://enews.imbc.com/News/RetrieveNewsInfo/253209",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "NCT",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 164,
+      "n_cohesion_bullets": 12,
+      "cohesion_share": 0.0732,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 3,
+        "B_팬카페·온라인커뮤니티": 7,
+        "C_팬덤정체성·문화": 1,
+        "E_오프라인결집·이벤트": 2,
+        "D_기부·후원캠페인(팬덤주도)": 1
+      },
+      "top_category": "B_팬카페·온라인커뮤니티",
+      "sample_bullets": [
+        {
+          "t": "팬클럽이 NCT 127·NCT DREAM·WayV(WayZenNi)·NCT WISH 등 유닛별 유료 멤버십(가입비 3만원) 체제로 통합 운영되며, WISH는 2024년 1월 30일 신규 멤버십을 오픈하는 등 그룹 확장에 맞춰 팬덤 조직이 지속적으로 재정비됨",
+          "u": "https://namu.wiki/w/NCTzen",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "C_팬덤정체성·문화"
+          ]
+        },
+        {
+          "t": "NCT DREAM 쿠알라룸푸르 공연이 매진됐다는 소식이 팬 커뮤니티를 통해 확산됐다(2025.12.13-14, Axiata Arena)",
+          "u": "https://x.com/NCTDREAMCENTER/status/1983884477291229562",
+          "tag": "loyalty",
+          "categories": [
+            "B_팬카페·온라인커뮤니티"
+          ]
+        },
+        {
+          "t": "NCT 서브유닛 JNJM(제노·재민)이 '2026 NCT JNJM FANMEETING TOUR DUALITY'로 서울-도쿄-자카르타(7월 4일, 테니스 인도어 스타디움)-마카오-가오슝-방콕(8월 8일)을 순회한다고 인도네시아 detikPop이 보도, 동남아 3개국을 아우르는 팬미팅 투어임을 보여준다",
+          "u": "https://www.detik.com/pop/korean-wave/d-8432954/nct-jnjm-manggung-di-jakarta-juli",
+          "tag": "loyalty",
+          "categories": [
+            "E_오프라인결집·이벤트"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "TWICE",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 191,
+      "n_cohesion_bullets": 12,
+      "cohesion_share": 0.0628,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 4,
+        "B_팬카페·온라인커뮤니티": 4,
+        "C_팬덤정체성·문화": 1,
+        "E_오프라인결집·이벤트": 3,
+        "D_기부·후원캠페인(팬덤주도)": 2
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "트와이스 데뷔 10주년 기념 팬미팅 '10VE UNIVERSE', 2025년 9월26일 팬클럽 선예매만으로 전석 솔드아웃 달성 후 10월18일 서울 고려대 화정체육관에서 개최",
+          "u": "https://www.starnewskorea.com/music/2025/09/27/2025092710181884248",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "E_오프라인결집·이벤트"
+          ]
+        },
+        {
+          "t": "TWICE 공식 팬클럽 ONCE는 2017년 1기 출범 이후 2025년 4월 29일부터 5기가 운영 중이며, 국내 ONCE CANDY와 해외 ONCE JELLY로 구분해 지속적으로 팬덤을 조직해왔다",
+          "u": "https://namu.wiki/w/ONCE(TWICE)",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "인도네시아 매체 Kompas는 2023년 12월 'Ready To Beg' 콘서트에서 TWICE가 ONCE 인도네시아가 준비한 팬 프로젝트를 보고 보인 반응을 보도했다",
+          "u": "https://www.kompas.com/hype/read/2023/12/24/161411766/reaksi-twice-lihat-fan-project-dari-once-indonesia-di-konser-ready-to-beg",
+          "tag": "loyalty",
+          "categories": [
+            "E_오프라인결집·이벤트"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "로이킴",
+      "category": "발라드",
+      "n_total_bullets": 89,
+      "n_cohesion_bullets": 11,
+      "cohesion_share": 0.1236,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 7,
+        "C_팬덤정체성·문화": 1,
+        "E_오프라인결집·이벤트": 3,
+        "D_기부·후원캠페인(팬덤주도)": 1
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "2026년 7월 공식 팬클럽 '로이로제' 3기를 모집하며 데뷔 이후 매년 갱신되는 팬클럽 운영을 이어가고 있음.",
+          "u": "https://www.newspim.com/news/view/20260723001072",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "팬클럽 회원에게 콘서트 선예매 특전을 제공하는 방식으로 팬덤 결속과 공연 흥행이 직접 연동되어 있음.",
+          "u": "https://www.trotnews.co.kr/article/3029",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "공식 팬클럽명은 \"ROYROSE\"이다",
+          "u": "https://en.namu.wiki/w/%EB%A1%9C%EC%9D%B4%ED%82%B4",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "아이유",
+      "category": "솔로",
+      "n_total_bullets": 110,
+      "n_cohesion_bullets": 11,
+      "cohesion_share": 0.1,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 9,
+        "B_팬카페·온라인커뮤니티": 2,
+        "E_오프라인결집·이벤트": 1,
+        "D_기부·후원캠페인(팬덤주도)": 8
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "아이유는 생일마다 팬클럽 유애나 명의로 대규모 기부를 이어가고 있다. 2019년·2020년 각 1억 원, 2026년(생일)에는 서울아산병원 등 5개 단체에 총 3억 원을 기부했다",
+          "u": "https://www.g-enews.com/article/Distribution/2019/12/201912311132371837c4c55f9b3d_1",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "D_기부·후원캠페인(팬덤주도)"
+          ]
+        },
+        {
+          "t": "2025년 8월 공식 팬클럽 '유애나' 대상 팬미팅 '2025 IU FAN MEET-UP [Bye, Summer]'(9월 13~14일, KSPO돔) 선예매가 오픈과 동시에 전석 매진되었고, 동시 접속 폭주로 멜론티켓 서버 접속 지연이 발생함",
+          "u": "https://www.cineplay.co.kr/en-us/articles/20043",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "E_오프라인결집·이벤트"
+          ]
+        },
+        {
+          "t": "공식 팬클럽 '유애나(Uena)'가 다음 공식 팬카페를 중심으로 장기간 운영되고 있다",
+          "u": "https://namu.wiki/w/아이유",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "B_팬카페·온라인커뮤니티"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "BABYMONSTER",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 132,
+      "n_cohesion_bullets": 11,
+      "cohesion_share": 0.0833,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 2,
+        "B_팬카페·온라인커뮤니티": 5,
+        "C_팬덤정체성·문화": 2,
+        "E_오프라인결집·이벤트": 3
+      },
+      "top_category": "B_팬카페·온라인커뮤니티",
+      "sample_bullets": [
+        {
+          "t": "베이비몬스터, 2024년5월 팬미팅 투어 도쿄 공연 한 회차에서만 티켓 2만6000장 판매",
+          "u": "https://www.barks.jp/news/?id=1000247297",
+          "tag": "loyalty",
+          "categories": [
+            "E_오프라인결집·이벤트"
+          ]
+        },
+        {
+          "t": "공식 팬클럽 'MONSTIEZ'는 2024년 7월 27일 팬덤명으로 발표되었고 같은 해 10월 18일부터 위버스샵을 통해 25,000원 유료 가입(가입일로부터 365일 활동)으로 상시 모집 중이며 응원봉·공식 응원법 등 팬덤 전용 콘텐츠를 운영한다",
+          "u": "https://namu.wiki/w/MONSTIEZ",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "C_팬덤정체성·문화"
+          ]
+        },
+        {
+          "t": "태국 방콕 팬미팅(2024.8.30)에서 파리타·치키타가 가족·친구 앞 첫 무대",
+          "u": "https://yg-life.com/archives/190335?lang=en",
+          "tag": "loyalty",
+          "categories": [
+            "E_오프라인결집·이벤트"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "CORTIS",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 135,
+      "n_cohesion_bullets": 11,
+      "cohesion_share": 0.0815,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 5,
+        "B_팬카페·온라인커뮤니티": 3,
+        "C_팬덤정체성·문화": 2,
+        "E_오프라인결집·이벤트": 2
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "공식 팬클럽명은 'Coer(코어)'로, 그룹명과 'core'를 결합해 팬들이 그룹의 핵심 지지층이라는 의미를 담았다.",
+          "u": "https://en.wikipedia.org/wiki/CORTIS",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "유튜브 채널 개설 52일 만에 구독자 100만 명을 달성했다.",
+          "u": "https://namu.wiki/w/CORTIS",
+          "tag": "loyalty",
+          "categories": [
+            "B_팬카페·온라인커뮤니티"
+          ]
+        },
+        {
+          "t": "공식 팬덤명이 '코어(COER)'로 확정되었다.",
+          "u": "https://namu.wiki/w/CORTIS",
+          "tag": "loyalty",
+          "categories": [
+            "C_팬덤정체성·문화"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "NewJeans",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 154,
+      "n_cohesion_bullets": 11,
+      "cohesion_share": 0.0714,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 7,
+        "C_팬덤정체성·문화": 7,
+        "E_오프라인결집·이벤트": 2,
+        "D_기부·후원캠페인(팬덤주도)": 2
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "공식 팬클럽명은 'Bunnies(버니즈)'이며, 팬미팅은 'Bunnies Camp'라는 명칭으로 진행된다.",
+          "u": "https://en.wikipedia.org/wiki/NewJeans",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "E_오프라인결집·이벤트"
+          ]
+        },
+        {
+          "t": "태국 매체 TNN Thailand는 NewJeans가 데뷔 100일을 맞아 공식 팬클럽명 'Bunnies(토끼)'와 토끼 머리 모양의 응원봉 디자인을 공개했다고 보도했다",
+          "u": "https://www.tnnthailand.com/entertainment/129069/",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "C_팬덤정체성·문화"
+          ]
+        },
+        {
+          "t": "뉴진스 멤버들이 팀명이 아닌 팬클럽 '버니즈(Bunnies)' 이름으로 2024년 12월 19일 아동복지전문기관 초록우산에 1억 원을 기부했다. 기부금은 전국 가족돌봄아동·청소년 가정 30가구의 생계·주거·학습·의료 등 생활안정과 자립 지원에 사용될 예정이라고 밝혔다",
+          "u": "https://www.hankookilbo.com/News/Read/A2024122009220001140, https://www.nocutnews.co.kr/news/6264545",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "D_기부·후원캠페인(팬덤주도)"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "BLACKPINK",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 195,
+      "n_cohesion_bullets": 11,
+      "cohesion_share": 0.0564,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 2,
+        "B_팬카페·온라인커뮤니티": 4,
+        "C_팬덤정체성·문화": 3,
+        "E_오프라인결집·이벤트": 2,
+        "D_기부·후원캠페인(팬덤주도)": 1
+      },
+      "top_category": "B_팬카페·온라인커뮤니티",
+      "sample_bullets": [
+        {
+          "t": "공식 팬클럽명은 2017년 1월 공개된 'BLINK(블링크)'다.",
+          "u": "https://en.wikipedia.org/wiki/Blackpink",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "공식 팬덤명 '블링크(BLINK)'가 2017년 1월 17일 공개되었다.",
+          "u": "https://en.wikipedia.org/wiki/Blackpink",
+          "tag": "loyalty",
+          "categories": [
+            "C_팬덤정체성·문화"
+          ]
+        },
+        {
+          "t": "인도네시아 매체 디틱(Detik.com)은 블랙핑크 데뷔 10주년(2026년 8월 8일) 기념 행사가 서울 국립중앙박물관에서 단 40명의 팬만 초청된 소규모 밋앤그릿으로 진행되자 팬덤의 반발이 커졌고, 이에 네 멤버 전원이 위버스·버블을 통해 블링크에 공식 사과했다고 보도했다 - 팬덤이 소속사에 강하게 책임을 묻는 결속력을 보여준다",
+          "u": "https://www.detik.com/pop/trending/d-8624615/semua-member-blackpink-resmi-mohon-maaf-ke-blink",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "C_팬덤정체성·문화"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "케이윌",
+      "category": "발라드",
+      "n_total_bullets": 71,
+      "n_cohesion_bullets": 10,
+      "cohesion_share": 0.1408,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 3,
+        "E_오프라인결집·이벤트": 8,
+        "D_기부·후원캠페인(팬덤주도)": 1
+      },
+      "top_category": "E_오프라인결집·이벤트",
+      "sample_bullets": [
+        {
+          "t": "2025년 일본 팬미팅 '윌다방'을 성료한 뒤 \"형나잇 덕분에 힐링한 시간\"이라며 팬클럽 형나잇에 대한 애정을 직접 언급했다.",
+          "u": "https://www.newdaily.co.kr/site/data/html/2025/07/28/2025072800044.html",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "E_오프라인결집·이벤트"
+          ]
+        },
+        {
+          "t": "2025년 팬미팅 '윌다방' 티켓은 예매 시작 30초 만에 초고속 매진됐다.",
+          "u": "https://enews.imbc.com/News/RetrieveNewsInfo/226560",
+          "tag": "loyalty",
+          "categories": [
+            "E_오프라인결집·이벤트"
+          ]
+        },
+        {
+          "t": "2025년 7월 도쿄 팬미팅 '윌다방'에서 \"형나잇 덕분에 따뜻하고 힐링되는 시간이었다\"고 언급하며 일본 팬들에게도 애정을 표현했다",
+          "u": "https://www.starnewskorea.com/music/2025/07/28/2025072807383944109",
+          "tag": "loyalty",
+          "categories": [
+            "E_오프라인결집·이벤트"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "카더가든",
+      "category": "솔로",
+      "n_total_bullets": 74,
+      "n_cohesion_bullets": 10,
+      "cohesion_share": 0.1351,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 1,
+        "B_팬카페·온라인커뮤니티": 6,
+        "C_팬덤정체성·문화": 2,
+        "E_오프라인결집·이벤트": 1
+      },
+      "top_category": "B_팬카페·온라인커뮤니티",
+      "sample_bullets": [
+        {
+          "t": "개인 유튜브 채널 '카더정원'이 130만 명 이상의 구독자를 확보해 강력한 온라인 팬 기반을 보여준다.",
+          "u": "https://namu.wiki/w/%EC%B9%B4%EB%8D%94%EC%A0%95%EC%9B%90",
+          "tag": "loyalty",
+          "categories": [
+            "B_팬카페·온라인커뮤니티"
+          ]
+        },
+        {
+          "t": "2024년부터 운영 중인 개인 유튜브 채널 '카더정원'은 구독자 130만 명을 보유하고 있으며, 보드게임·아바타 소개팅 등 예능 콘텐츠로 팬 참여를 이끈다 (음악 팬덤과는 별개의 예능 팬층)",
+          "u": "https://namu.wiki/w/%EC%B9%B4%EB%8D%94%EC%A0%95%EC%9B%90",
+          "tag": "loyalty",
+          "categories": [
+            "B_팬카페·온라인커뮤니티"
+          ]
+        },
+        {
+          "t": "케이팝레이더(K-POP RADAR)가 인스타그램·유튜브·팬카페 등 플랫폼별 팔로워·화제성 지표를 실시간으로 추적하는 별도 페이지를 운영할 만큼 팬덤 데이터가 상시 관리 대상이다",
+          "u": "https://www.kpop-radar.com/Carthegarden",
+          "tag": "loyalty",
+          "categories": [
+            "B_팬카페·온라인커뮤니티"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "CNBLUE",
+      "category": "K-pop 보이그룹 /록",
+      "n_total_bullets": 84,
+      "n_cohesion_bullets": 10,
+      "cohesion_share": 0.119,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 6,
+        "B_팬카페·온라인커뮤니티": 1,
+        "C_팬덤정체성·문화": 1,
+        "E_오프라인결집·이벤트": 2
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "팬클럽 '보이스(BOICE)'는 FNC엔터테인먼트가 공식 로고까지 안내할 만큼 공식적으로 관리되는 팬덤으로 자리잡고 있다.",
+          "u": "https://fncent.com/?bid=korea&cat=2&m=bbs&uid=2145",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "팬덤명 BOICE는 'BLUE'와 'Voice'의 합성어로 2010년 4월 23일 공식 발표됐으며, 이는 데뷔 앨범을 포함해 여덟 개 앨범 연속 음악방송 1위라는 밴드 최초 기록의 배경이 된 팬층 지지 기반으로 소개된다",
+          "u": "https://namu.wiki/w/CNBLUE",
+          "tag": "loyalty",
+          "categories": [
+            "C_팬덤정체성·문화"
+          ]
+        },
+        {
+          "t": "태국 팬클럽 BOICE를 위해 2026년 6월 6일 방콕 썬더돔(뮹통타니)에서 '2026 CNBLUE LIVE WORLD TOUR 3LOGY IN BANGKOK'이 열리며, ZONE B 구매자에게 방콕 한정판 티셔츠를 제공하는 등 태국 매체 MGR Online이 \"태국 BOICE만을 위한\" 특전이라고 소개했다",
+          "u": "https://mgronline.com/entertainment/detail/9690000049638",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "권은비",
+      "category": "솔로",
+      "n_total_bullets": 90,
+      "n_cohesion_bullets": 10,
+      "cohesion_share": 0.1111,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 3,
+        "C_팬덤정체성·문화": 2,
+        "E_오프라인결집·이벤트": 5
+      },
+      "top_category": "E_오프라인결집·이벤트",
+      "sample_bullets": [
+        {
+          "t": "일본에서 단독 팬미팅 'RUBI's ROOM' 시리즈를 이어가며 2023년에 이어 2023년 12월 2회차 행사를 개최했다.",
+          "u": "https://www.cbci.co.kr/news/articleView.html?idxno=454842",
+          "tag": "loyalty",
+          "categories": [
+            "E_오프라인결집·이벤트"
+          ]
+        },
+        {
+          "t": "공식 팬클럽 RUBI는 위버스샵을 통해 4th membership까지 갱신 모집을 진행하며 지속적인 팬 결속 구조를 유지하고 있다.",
+          "u": "https://x.com/weverseshop/status/1924691606784929886",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "2026년 8월 13일 위버스에서 공식 팬클럽 멤버십 명칭이 기존 'RUBI'에서 'DANBI'로 변경될 수 있음을 시사하는 티저가 포착됨",
+          "u": "https://x.com/KEB_INTL/status/2087791259532525810",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "박효신",
+      "category": "발라드",
+      "n_total_bullets": 91,
+      "n_cohesion_bullets": 10,
+      "cohesion_share": 0.1099,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 6,
+        "B_팬카페·온라인커뮤니티": 1,
+        "E_오프라인결집·이벤트": 2,
+        "D_기부·후원캠페인(팬덤주도)": 2
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "2025년 11월, 2년 만에 공식 팬클럽 '소울트리'를 새롭게 모집하며 글로벌 팬 커뮤니티를 오픈함.",
+          "u": "https://sports.khan.co.kr/article/202511141033003",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "B_팬카페·온라인커뮤니티"
+          ]
+        },
+        {
+          "t": "공식 팬클럽 \"Soul Tree\"는 2004년 \"Primero\"에서 개칭되었으며 회원들은 스스로를 '대장'(대장나무)이라 부른다",
+          "u": "https://en.namu.wiki/w/%EB%B0%95%ED%9A%A8%EC%8B%A0",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "박효신은 2023년 9월 9~10일 서울 올림픽공원 88잔디마당에서 4년 만의 팬미팅을 열었고 약 2만 5천여 명의 팬이 참석했으며 티켓은 오픈 즉시 전석 매진됐다.",
+          "u": "https://www.hankookilbo.com/news/article/A2023091209570003531",
+          "tag": "loyalty",
+          "categories": [
+            "E_오프라인결집·이벤트"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "츄",
+      "category": "솔로",
+      "n_total_bullets": 93,
+      "n_cohesion_bullets": 10,
+      "cohesion_share": 0.1075,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 7,
+        "B_팬카페·온라인커뮤니티": 2,
+        "C_팬덤정체성·문화": 3
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "공식 팬클럽 '꼬띠(KKOTI)'를 기존 기수제에서 가입 시점부터 365일간 혜택을 주는 상시모집제로 전환해 국경 제한 없이 전 세계 팬을 받아들이는 구조로 바꿨다.",
+          "u": "https://biz.heraldcorp.com/article/10588063",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "공식 팬클럽 'KKOTI'(핀란드어로 '집'을 의미) 멤버십이 2025년 9월 30일 위버스샵을 통해 상시 가입 형태로 개설되었으며, 가입일로부터 365일간 혜택이 제공되고 국가 제한 없이 전 세계에서 가입 가능함",
+          "u": "https://kstationtv.com/2025/10/01/chuu-official-fanclub-membership-now-open/?lang=en",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "팬클럽명 'KKOTI'가 공식 응원봉 '꾹까(Kkukka)'와 연계되어 아티스트와 팬이 함께 만드는 '집'이라는 정체성을 형성함",
+          "u": "https://kstationtv.com/2025/10/01/chuu-official-fanclub-membership-now-open/?lang=en",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "C_팬덤정체성·문화"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "IKON",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 96,
+      "n_cohesion_bullets": 10,
+      "cohesion_share": 0.1042,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 3,
+        "C_팬덤정체성·문화": 1,
+        "E_오프라인결집·이벤트": 7
+      },
+      "top_category": "E_오프라인결집·이벤트",
+      "sample_bullets": [
+        {
+          "t": "오사카 팬미팅에는 약 40,000명, 베이징 팬미팅에는 50,000명 이상이 응모해 해외 팬덤의 높은 수요를 보여주었다.",
+          "u": "https://en.wikipedia.org/wiki/IKon_(band)",
+          "tag": "loyalty",
+          "categories": [
+            "E_오프라인결집·이벤트"
+          ]
+        },
+        {
+          "t": "2014년 일본 오사카 팬미팅 2천 석에 약 4만 명, 베이징 팬미팅에 5만여 명의 중국 팬이 신청했다.",
+          "u": "https://en.wikipedia.org/wiki/IKon",
+          "tag": "loyalty",
+          "categories": [
+            "E_오프라인결집·이벤트"
+          ]
+        },
+        {
+          "t": "2014년 오사카 팬미팅에 2,000석 모집에 일본 팬 약 4만 명 응모, 베이징 팬미팅에 중국 팬 5만 명 이상 응모",
+          "u": "https://en.wikipedia.org/wiki/IKON_(South_Korean_band)",
+          "tag": "loyalty",
+          "categories": [
+            "E_오프라인결집·이벤트"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "오마이걸",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 98,
+      "n_cohesion_bullets": 10,
+      "cohesion_share": 0.102,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 8,
+        "B_팬카페·온라인커뮤니티": 3,
+        "E_오프라인결집·이벤트": 1,
+        "D_기부·후원캠페인(팬덤주도)": 3
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "공식 팬클럽명 '미라클'은 2016년 3월 'Pink Ocean' 컴백 쇼케이스에서 공식 발표됐다.",
+          "u": "https://en.wikipedia.org/wiki/Oh_My_Girl",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "오마이걸 공식 팬클럽 '미라클' 3기는 2020년 12월 14일부터 1년간 상시 모집으로 진행되었으며 네이버 V LIVE 팬멤버십을 통해 가입할 수 있었다.",
+          "u": "https://www.hankyung.com/entertainment/article/202012166759H",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "오마이걸 공식 팬카페 회원 수는 약 9만 명, 멜론 팬가입자는 약 12만 명으로 집계된 바 있다.",
+          "u": "https://maily.so/kimlou/posts/72nzn7ykrp5",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "B_팬카페·온라인커뮤니티"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "Crush",
+      "category": "솔로",
+      "n_total_bullets": 99,
+      "n_cohesion_bullets": 10,
+      "cohesion_share": 0.101,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 6,
+        "E_오프라인결집·이벤트": 5
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "공식 팬클럽 '크러쉬밤(CrushBomb)'이 2024년 9월 2기, 이후 3기까지 순차적으로 모집되며 팬키트 판매 등 지속적인 팬 소통 구조를 갖췄다.",
+          "u": "https://sports.khan.co.kr/article/202409131239003",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "2025년 3월 개최한 팬미팅 '찐밤팅'은 티켓 오픈 1분 만에 전석 매진됐다.",
+          "u": "https://www.newsis.com/view/NISX20250324_0003110785",
+          "tag": "loyalty",
+          "categories": [
+            "E_오프라인결집·이벤트"
+          ]
+        },
+        {
+          "t": "공식 팬클럽 'CrushBomb(크러쉬밤)'은 데뷔 10년 만인 2023년(전년도)에 처음 개설되었고, 2024년 9월 13일~25일 글로벌 팬덤 플랫폼 비스테이지(b.stage)를 통해 2기 모집을 진행했다",
+          "u": "https://sports.khan.co.kr/article/202409131239003",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "LE SSERAFIM",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 143,
+      "n_cohesion_bullets": 10,
+      "cohesion_share": 0.0699,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 4,
+        "B_팬카페·온라인커뮤니티": 3,
+        "C_팬덤정체성·문화": 3,
+        "E_오프라인결집·이벤트": 1
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "르세라핌의 자체 오프라인 팬 커뮤니티 '핌즈클럽'이 멤버 개별 세계관을 반영한 콘텐츠로 오프라인 접점을 넓히며 팬덤 결속을 강화하고 있다는 보도가 있음",
+          "u": "https://www.cbci.co.kr/news/articleView.html?idxno=601389",
+          "tag": "loyalty",
+          "categories": [
+            "B_팬카페·온라인커뮤니티"
+          ]
+        },
+        {
+          "t": "태국 thairath.co.th는 2025년 8월 9~10일 방콕 ThunderDome에서 열린 LE SSERAFIM의 태국 첫 단독 콘서트를 보도하며, 공식 팬덤명 'FEARNOT(피어나)'과 팬덤 3주년을 기념한 'FEARNOT DAY'(8월 8일), 그리고 팬들이 준비한 'รักนะฟิม(사랑해 피어나)' 응원 라이트스틱 이벤트를 상세히 전했다",
+          "u": "https://www.thairath.co.th/entertain/music/2876636",
+          "tag": "loyalty",
+          "categories": [
+            "C_팬덤정체성·문화"
+          ]
+        },
+        {
+          "t": "태국 kapook.com은 같은 방콕 콘서트의 티켓 정보를 전하며 FEARNOT 팬클럽 선예매(5월 30일)와 일반 예매(5월 31일) 일정을 안내했다",
+          "u": "https://musicstation.kapook.com/view291207.html",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "샤이니",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 77,
+      "n_cohesion_bullets": 9,
+      "cohesion_share": 0.1169,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 2,
+        "C_팬덤정체성·문화": 2,
+        "E_오프라인결집·이벤트": 5
+      },
+      "top_category": "E_오프라인결집·이벤트",
+      "sample_bullets": [
+        {
+          "t": "공식 팬클럽 SHINee WORLD는 2009년 1기(가입비 1만 원) 출범 이후 여러 플랫폼(ACE, Weverse 등)을 거치며 현재까지 연 단위 유료 멤버십(3만 원)으로 지속 운영되고 있다.",
+          "u": "https://namu.wiki/w/SHINee%20WORLD",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "2023년 잠실실내체육관 팬미팅 전석 매진; 2014년 고베 월드메모리얼홀 12/13-14일 공연 16,000석 매진",
+          "u": "https://en.wikipedia.org/wiki/Shinee",
+          "tag": "loyalty",
+          "categories": [
+            "E_오프라인결집·이벤트"
+          ]
+        },
+        {
+          "t": "2026년 1월 17~18일 자카르타 'KOREA 360 X HUG K-POP' 팬미팅에서 민호가 신곡 'Tempo' 공연 시 인도네시아 샤월들이 이미 가사와 팬챈트를 완벽히 외우고 있는 데 놀랐고, 팬들은 \"SHINee 콘서트!\"를 연호하며 인도네시아 콘서트 재개를 요청했다고 인도네시아 매체 detik과 안타라가 각각 보도했다",
+          "u": "https://www.detik.com/pop/korean-wave/d-8312765/shawol-teriak-ke-minho-minta-shinee-konser-di-indonesia-lagi , https://www.antaranews.com/berita/5358634/minho-shinee-energi-penggemar-indonesia-luar-biasa",
+          "tag": "loyalty",
+          "categories": [
+            "E_오프라인결집·이벤트"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "장윤정",
+      "category": "트로트",
+      "n_total_bullets": 92,
+      "n_cohesion_bullets": 9,
+      "cohesion_share": 0.0978,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 3,
+        "B_팬카페·온라인커뮤니티": 5,
+        "D_기부·후원캠페인(팬덤주도)": 3
+      },
+      "top_category": "B_팬카페·온라인커뮤니티",
+      "sample_bullets": [
+        {
+          "t": "공식 팬카페 '레모네이드'가 스케줄 게시판·소통 게시판 등을 통해 꾸준히 운영되고 있음이 확인된다.",
+          "u": "https://m.cafe.daum.net/LemonadeFanclub/W0fR?boardType=Q",
+          "tag": "loyalty",
+          "categories": [
+            "B_팬카페·온라인커뮤니티"
+          ]
+        },
+        {
+          "t": "공식 팬클럽명은 '레모네이드'이며 상징색은 노란색이다.",
+          "u": "https://namu.wiki/w/%EC%9E%A5%EC%9C%A4%EC%A0%95",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "공식 팬카페 '레모네이드'가 스케줄 공유 등 팬 커뮤니티 활동을 지속하고 있다.",
+          "u": "https://m.cafe.daum.net/LemonadeFanclub/W0fR?boardType=Q",
+          "tag": "loyalty",
+          "categories": [
+            "B_팬카페·온라인커뮤니티"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "A-pink",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 95,
+      "n_cohesion_bullets": 9,
+      "cohesion_share": 0.0947,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 5,
+        "C_팬덤정체성·문화": 1,
+        "E_오프라인결집·이벤트": 1,
+        "D_기부·후원캠페인(팬덤주도)": 3
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "2014년 11월 기준 온라인 팬클럽 가입자가 10만 명을 돌파했다.",
+          "u": "https://en.wikipedia.org/wiki/Apink",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "온라인 팬클럽 회원 수가 2014년 11월 10만 명을 돌파했다",
+          "u": "https://en.wikipedia.org/wiki/Apink",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "에이핑크, 2014년 9월 온라인 팬클럽 회원 10만명 돌파",
+          "u": "http://www.kpopherald.com/view.php?ud=20140923001058_2",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "몬스타엑스",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 96,
+      "n_cohesion_bullets": 9,
+      "cohesion_share": 0.0938,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 6,
+        "C_팬덤정체성·문화": 1,
+        "D_기부·후원캠페인(팬덤주도)": 2
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "몬스타엑스 공식 팬클럽 몬베베(MONBEBE)는 2015년 9월 26일 창단되었으며, 매년 이 날짜를 팬클럽 생일로 기념해왔다(2020년 5주년, 2023년 8주년, 2025년 10주년 등 연속 확인).",
+          "u": "https://www.gukjenews.com/news/articleView.html?idxno=3388619",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "2025년 9월 26일, 몬스타엑스는 몬베베 창단 10주년을 맞아 \"WELCOME TO MONBEBE BIRTHDAY CAFE\"라는 유튜브 생중계를 열고 멤버 전원이 바리스타로 분장해 라떼아트 챌린지·시그니처 케이크 만들기 등 팬 소통 콘텐츠를 진행했다.",
+          "u": "https://sports.khan.co.kr/article/202509271024003",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "몬스타엑스는 몬베베 창단 10주년 기념 손편지를 공식 SNS에 게재하며 \"사랑한다 몬베베\"라는 메시지로 감사를 전했다.",
+          "u": "https://news.tf.co.kr/read/entertain/2248225.htm",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "(여자)아이들",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 118,
+      "n_cohesion_bullets": 9,
+      "cohesion_share": 0.0763,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 4,
+        "B_팬카페·온라인커뮤니티": 1,
+        "C_팬덤정체성·문화": 2,
+        "E_오프라인결집·이벤트": 3
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "2019년 첫 팬미팅 티켓이 오픈 2분 만에 전석 매진되며 초기 팬덤 결집력을 보여줬다",
+          "u": "https://en.wikipedia.org/wiki/(G)I-DLE",
+          "tag": "loyalty",
+          "categories": [
+            "E_오프라인결집·이벤트"
+          ]
+        },
+        {
+          "t": "첫 팬미팅 티켓 2분 만에 매진; 팬덤명 '네버랜드(Neverland)'",
+          "u": "https://en.wikipedia.org/wiki/(G)I-dle",
+          "tag": "loyalty",
+          "categories": [
+            "C_팬덤정체성·문화",
+            "E_오프라인결집·이벤트"
+          ]
+        },
+        {
+          "t": "(여자)아이들 월드투어 서울 콘서트(5월 16일 공연분)의 공식 팬클럽 'NEVERLAND' 2단계 선예매가 2회차 모두 전석 매진되었으며, 해당 월드투어는 총 16개 도시에서 진행된다고 조세일보가 보도함",
+          "u": "https://m.joseilbo.com/news/view.htm?newsid=455036",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "소녀시대",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 122,
+      "n_cohesion_bullets": 9,
+      "cohesion_share": 0.0738,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 4,
+        "C_팬덤정체성·문화": 1,
+        "E_오프라인결집·이벤트": 5,
+        "D_기부·후원캠페인(팬덤주도)": 2
+      },
+      "top_category": "E_오프라인결집·이벤트",
+      "sample_bullets": [
+        {
+          "t": "2022년 KSPO DOME 팬미팅이 예매 오픈과 동시에 전석 매진되고 시야제한석까지 추가 매진되며 데뷔 15년 차에도 티켓파워를 유지했다.",
+          "u": "https://namu.wiki/w/%EC%86%8C%EB%85%80%EC%8B%9C%EB%8C%80",
+          "tag": "loyalty",
+          "categories": [
+            "E_오프라인결집·이벤트"
+          ]
+        },
+        {
+          "t": "2022년 9월 소녀시대의 KSPO DOME 팬미팅이 전석 매진을 기록해, 데뷔 15년이 지난 시점에도 강한 티켓 파워를 유지했다",
+          "u": "https://namu.wiki/w/%EC%86%8C%EB%85%80%EC%8B%9C%EB%8C%80",
+          "tag": "loyalty",
+          "categories": [
+            "E_오프라인결집·이벤트"
+          ]
+        },
+        {
+          "t": "소녀시대 15주년 기념 팬미팅(2022년 9월 3일, 올림픽공원 체조경기장)에서 팬들은 '다음 생에도 소녀시대 해 줘', '그럼 나는 또 소원 할게' 등의 슬로건 이벤트로 화답했고, 소녀시대는 앙코르곡 '파티' 등으로 응답했다.",
+          "u": "https://www.nocutnews.co.kr/news/5812227",
+          "tag": "loyalty",
+          "categories": [
+            "C_팬덤정체성·문화",
+            "E_오프라인결집·이벤트"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "청하",
+      "category": "솔로",
+      "n_total_bullets": 79,
+      "n_cohesion_bullets": 8,
+      "cohesion_share": 0.1013,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 4,
+        "B_팬카페·온라인커뮤니티": 1,
+        "E_오프라인결집·이벤트": 1,
+        "D_기부·후원캠페인(팬덤주도)": 4
+      },
+      "top_category": "D_기부·후원캠페인(팬덤주도)",
+      "sample_bullets": [
+        {
+          "t": "2021년 10월 12일 누적 기부액 1억원 이상 회원에게 주어지는 '그린노블클럽'에 가입했다",
+          "u": "https://en.wikipedia.org/wiki/Chungha",
+          "tag": "loyalty",
+          "categories": [
+            "D_기부·후원캠페인(팬덤주도)"
+          ]
+        },
+        {
+          "t": "2018년 소속사가 발표한 최초 팬클럽명 '별하랑(BYULHARANG)'이 2024년 1월 'HAART(하트)'로 개편되었으며, 소속사는 데뷔 초부터 함께한 팬들과 새 출발을 계속 함께한다는 '영원한 사랑'의 의미를 부여함",
+          "u": "https://www.soompi.com/article/1181429wpp/chungha-new-fanclub-name-loving, https://x.com/ChunghaGlobal/status/1744360454393073921",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "2026년 9월 1일 발매 예정인 디지털 싱글 'México'의 앨범 커버 이미지를 위버스에서 3종 후보로 공개하고 2026년 8월 21일 23:59까지 팬 투표로 최종 커버를 결정하는 방식을 진행했다",
+          "u": "https://tenbizt.com/entertainment/article/290928/",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "에픽하이",
+      "category": "힙합",
+      "n_total_bullets": 87,
+      "n_cohesion_bullets": 8,
+      "cohesion_share": 0.092,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 4,
+        "B_팬카페·온라인커뮤니티": 1,
+        "E_오프라인결집·이벤트": 3
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "데뷔 23년 만인 2026년 5월 처음으로 비스테이지(b.stage) 기반 공식 글로벌 팬 커뮤니티를 열었다.",
+          "u": "https://sports.khan.co.kr/article/202605041813013",
+          "tag": "loyalty",
+          "categories": [
+            "B_팬카페·온라인커뮤니티"
+          ]
+        },
+        {
+          "t": "데뷔 첫 팬미팅 '동창회'(2026년 7월, 블루스퀘어 우리WON뱅킹홀) 티켓이 5월 18일 일반예매 오픈과 동시에 전 회차 매진됐다.",
+          "u": "https://www.mhns.co.kr/news/articleView.html?idxno=747860",
+          "tag": "loyalty",
+          "categories": [
+            "E_오프라인결집·이벤트"
+          ]
+        },
+        {
+          "t": "공식 팬클럽명은 'High Skool', 공식 팬 컬러는 검정색으로 확인됨",
+          "u": "https://kpopisforeveryone.wordpress.com/2023/10/17/epik-high-guide/",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "STAYC",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 92,
+      "n_cohesion_bullets": 8,
+      "cohesion_share": 0.087,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 4,
+        "B_팬카페·온라인커뮤니티": 1,
+        "C_팬덤정체성·문화": 1,
+        "E_오프라인결집·이벤트": 4
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "공식 팬클럽명은 'SWITH'이며 팬덤 슬로건은 \"STAYC girls, it's going down\"이다.",
+          "u": "https://namu.wiki/w/STAYC",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "C_팬덤정체성·문화"
+          ]
+        },
+        {
+          "t": "STAYC의 글로벌 공식 팬클럽 'SWiTH(스윗)'가 2025년 6월 16일 오후 2시부터 기수별 모집을 폐지하고 위버스샵을 통한 상시 가입제로 전환되어, 전 세계 팬이 시기 제약 없이 언제든 가입할 수 있게 됨 — 월드투어와 맞물린 글로벌 팬층 확대 전략의 일환",
+          "u": "https://enews.imbc.com/News/RetrieveNewsInfo/465016",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "2022년 12월 3일 첫 마닐라 팬미팅을 개최했다고 연말결산 기사에서 확인",
+          "u": "https://mb.com.ph/2022/12/29/k-pop-korean-stars-who-visited-ph-in-2022",
+          "tag": "loyalty",
+          "categories": [
+            "E_오프라인결집·이벤트"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "아이오아이",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 95,
+      "n_cohesion_bullets": 8,
+      "cohesion_share": 0.0842,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 5,
+        "B_팬카페·온라인커뮤니티": 1,
+        "C_팬덤정체성·문화": 2,
+        "E_오프라인결집·이벤트": 1,
+        "D_기부·후원캠페인(팬덤주도)": 1
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "I.O.I의 팬클럽은 2016년 데뷔 당시 공식 명칭이 없었으나, 2021년 5월 4일 5주년 라이브 방송에서 리더 임나영이 \"앙둥이\"라는 이름을 임시로 붙였고, 이것이 10년간 팬들 사이에서 자연스럽게 굳어져 2026년 4월 13일 공식 팬클럽명으로 정식 채택되었다 — 데뷔 후 10년 만에 공식화된 이례적 사례",
+          "u": "https://gulfnews.com/entertainment/ioi-reveal-fan-club-name-after-10-years-1.500505157, https://namu.wiki/w/%EC%95%99%EB%91%A5%EC%9D%B4",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "Kim Sejeong's fan club (\"팬클럽 세상\") donated 140kg of dog food to a stray-dog shelter to commemorate her 10th debut anniversary and I.O.I's 10th-anniversary reunion concert (reported May 30, 2026).",
+          "u": "https://www.starnewskorea.com/star/2026/05/31/2026053110290633057",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "데뷔 10주년을 맞아 2026년 5월 19일 임나영·청하·김세정·정채연·김소혜·유연정·최유정·김도연·전소미 9인으로 공식 재결합했으며, 미니 3집 'I.O.I : LOOP'를 발매하고 'LOOP' 콘서트 투어(5월 29일~)를 진행했다. 재결합과 함께 팬클럽명이 새로 공모되어 '앙둥이', 응원봉은 '앙봉'으로 확정됐다",
+          "u": "https://namu.wiki/w/아이오아이",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "C_팬덤정체성·문화"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "Hearts2Hearts",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 102,
+      "n_cohesion_bullets": 8,
+      "cohesion_share": 0.0784,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 5,
+        "B_팬카페·온라인커뮤니티": 2,
+        "C_팬덤정체성·문화": 2,
+        "D_기부·후원캠페인(팬덤주도)": 2
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "2026년 2월 데뷔 1주년을 맞아 팬덤 'S2U(하츄)'의 이름으로 5000만 원을 기부하고 생리대 키트를 제작해 배포하는 등 팬덤명을 내건 자선 활동을 진행했다",
+          "u": "https://news.nate.com/view/20260223n30723, https://www.joynews24.com/view/1941727",
+          "tag": "loyalty",
+          "categories": [
+            "C_팬덤정체성·문화",
+            "D_기부·후원캠페인(팬덤주도)"
+          ]
+        },
+        {
+          "t": "공식 위버스 멤버십 가입자가 2026년 8월 기준 214만 명에 달한다.",
+          "u": "https://en.wikipedia.org/wiki/Hearts2Hearts",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "유튜브 구독자 361만 명, 인스타그램 팔로워 550만 명, 틱톡 팔로워 770만 명(2026년 8월 기준)으로 데뷔 1년 반 만에 대규모 글로벌 팬덤을 형성했다.",
+          "u": "https://en.wikipedia.org/wiki/Hearts2Hearts",
+          "tag": "loyalty",
+          "categories": [
+            "B_팬카페·온라인커뮤니티"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "이영지",
+      "category": "힙합",
+      "n_total_bullets": 107,
+      "n_cohesion_bullets": 8,
+      "cohesion_share": 0.0748,
+      "category_counts": {
+        "B_팬카페·온라인커뮤니티": 4,
+        "D_기부·후원캠페인(팬덤주도)": 4
+      },
+      "top_category": "B_팬카페·온라인커뮤니티",
+      "sample_bullets": [
+        {
+          "t": "케이팝레이더(K-POP RADAR)가 이영지의 유튜브·스포티파이·틱톡 팔로워, 팬카페 구독자 수를 실시간 지표로 추적·관리하고 있다.",
+          "u": "https://www.kpop-radar.com/LeeYoungji",
+          "tag": "loyalty",
+          "categories": [
+            "B_팬카페·온라인커뮤니티"
+          ]
+        },
+        {
+          "t": "2026년 2월 모바일 게임 '경찰과 도둑'을 통해 팬들과 함께 아동병원에 3억 원을 기부하는 캠페인을 진행, 팬덤과의 협업형 선행이 이루어졌다",
+          "u": "https://en.wikipedia.org/wiki/Lee_Young-ji",
+          "tag": "loyalty",
+          "categories": [
+            "D_기부·후원캠페인(팬덤주도)"
+          ]
+        },
+        {
+          "t": "자체 유튜브 채널 '차린건 쥐뿔도 없지만'이 2022년 10월 26일 BTS 진 출연분으로 구독자 200만을 돌파했고, 개설 4개월 만에 누적 조회수 1억2000만 회를 기록했다",
+          "u": "https://news.tf.co.kr/read/entertain/1974654.htm",
+          "tag": "loyalty",
+          "categories": [
+            "B_팬카페·온라인커뮤니티"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "아일릿",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 107,
+      "n_cohesion_bullets": 8,
+      "cohesion_share": 0.0748,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 2,
+        "C_팬덤정체성·문화": 3,
+        "E_오프라인결집·이벤트": 2,
+        "D_기부·후원캠페인(팬덤주도)": 1
+      },
+      "top_category": "C_팬덤정체성·문화",
+      "sample_bullets": [
+        {
+          "t": "팬클럽 'GLLIT'은 2024년 9월 1일 그룹 결성 1년을 기념해 공식 출범했으며(\"가장 반짝반짝 빛나는 존재들\"이라는 의미), 위버스를 통한 상시 가입 체제로 흩어져 있던 해외 팬들을 하나로 결집시켰다",
+          "u": "https://namu.wiki/w/GLLIT, https://www.soompi.com/article/1685400wpp/illit-announces-new-official-fan-club-name",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "미니 3집 초동 판매량이 40만1,000장을 기록하며, 공식 팬덤명 'GLLIT'과 함께 데뷔 초부터 이어진 강한 앨범 소비력을 입증함",
+          "u": "https://namu.wiki/w/ILLIT",
+          "tag": "loyalty",
+          "categories": [
+            "C_팬덤정체성·문화"
+          ]
+        },
+        {
+          "t": "2026년 5월 신곡 'It's Me'가 멜론·애플뮤직·유튜브 등 주요 음원 차트 '톱10'에 안착, 발매 직후 국내 팬덤의 즉각적인 스트리밍 총공 화력을 보여줌",
+          "u": "https://v.daum.net/v/20260511073916421",
+          "tag": "loyalty",
+          "categories": [
+            "E_오프라인결집·이벤트"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "SEVENTEEN",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 157,
+      "n_cohesion_bullets": 8,
+      "cohesion_share": 0.051,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 6,
+        "E_오프라인결집·이벤트": 2,
+        "D_기부·후원캠페인(팬덤주도)": 2
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "팬클럽명 'CARAT'은 2016년 3월 공식 1기 모집을 시작했으며, 보석 단위에서 유래해 '세븐틴을 빛내는 존재'라는 의미를 담고 있다.",
+          "u": "https://namu.wiki/w/CARAT",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "세븐틴은 데뷔 기념일마다 캐럿과 함께하는 기부 전통을 이어왔으며, 5주년(다문화가정 등 교육지원), 6주년(학대 피해자 지원), 7주년(유네스코 교육 프로젝트) 기부에 이어 2025년 3월에는 산불 피해 지원을 위해 10억원을 기부했다.",
+          "u": "https://en.wikipedia.org/wiki/Seventeen_(South_Korean_band)",
+          "tag": "loyalty",
+          "categories": [
+            "D_기부·후원캠페인(팬덤주도)"
+          ]
+        },
+        {
+          "t": "팬클럽 명칭 '캐럿'은 2016년 2월 14일 공식 발표됐으며, 데뷔 EP 'Al1'(17 Carat)과 수록곡 'Shining Diamond'에서 착안한 이름이다",
+          "u": "https://en.wikipedia.org/wiki/Seventeen_(South_Korean_band)",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "비비",
+      "category": "솔로",
+      "n_total_bullets": 74,
+      "n_cohesion_bullets": 7,
+      "cohesion_share": 0.0946,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 5,
+        "D_기부·후원캠페인(팬덤주도)": 2
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "BIBI는 위버스를 통해 공식 팬클럽 'pookïe' 멤버십을 운영하고 있으며, 2026년 3월에는 글로벌 대상으로 멤버십을 리뉴얼 오픈했다",
+          "u": "https://x.com/nakedbibi/status/2031595992647356758",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "2025년 데뷔 6년 만에 첫 단독 월드투어 'EVE'를 진행했으며 서울 공연은 올림픽공원 올림픽홀에서 3회(5/16~18) 열려 팬클럽 선예매까지 별도로 진행됐다",
+          "u": "https://en.wikipedia.org/wiki/Bibi_(singer)",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "위버스 기반 공식 팬클럽 'pookïe'를 운영하고 있다",
+          "u": "https://namu.wiki/w/비비(가수)",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "린",
+      "category": "발라드",
+      "n_total_bullets": 78,
+      "n_cohesion_bullets": 7,
+      "cohesion_share": 0.0897,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 4,
+        "B_팬카페·온라인커뮤니티": 5,
+        "C_팬덤정체성·문화": 2,
+        "D_기부·후원캠페인(팬덤주도)": 1
+      },
+      "top_category": "B_팬카페·온라인커뮤니티",
+      "sample_bullets": [
+        {
+          "t": "팬덤명은 '린사사'(린을 사랑하는 사람들)이며, 2024년 3월 18일 공식 팬 컬러로 '팬지 퍼플'을 지정하는 등 팬덤 정체성을 공고히 하고 있다.",
+          "u": "https://namu.wiki/w/린(가수)",
+          "tag": "loyalty",
+          "categories": [
+            "C_팬덤정체성·문화"
+          ]
+        },
+        {
+          "t": "공식 팬카페/팬클럽 명칭이 '린사사'(린을 사랑하는 사람들의 줄임말)로 확인됨",
+          "u": "https://namu.wiki/w/%EB%A6%B0(%EA%B0%80%EC%88%98)",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "B_팬카페·온라인커뮤니티"
+          ]
+        },
+        {
+          "t": "린의 공식 팬덤명은 '린을 사랑하는 사람들(린사사)'이며, 2024년 3월 18일 팬카페를 통해 공식 팬클럽 색상으로 '팬지 퍼플'이 지정됐다.",
+          "u": "https://namu.wiki/w/%EB%A6%B0(%EA%B0%80%EC%88%98)",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "B_팬카페·온라인커뮤니티",
+            "C_팬덤정체성·문화"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "동방신기",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 82,
+      "n_cohesion_bullets": 7,
+      "cohesion_share": 0.0854,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 6,
+        "E_오프라인결집·이벤트": 3,
+        "D_기부·후원캠페인(팬덤주도)": 2
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "동방신기는 2008년 기네스 세계기록에 \"세계에서 가장 큰 유료 공식 팬클럽\"으로 등재됐으며, 당시 한국 공식 팬클럽 카시오페아 회원 수만 80만 명을 넘어섰다.",
+          "u": "https://www.allkpop.com/article/2019/01/10-facts-you-probably-didnt-know-about-tvxq",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "2008년 팬클럽 카시오페아가 공식 회원 80만 명 이상으로 집계돼 당시 언론에서 '기네스북에 등재된 세계 최대 팬클럽'으로 보도됐다(이후 기네스 측은 공식 인증 근거가 없다고 반박).",
+          "u": "https://en.wikipedia.org/wiki/TVXQ",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "데뷔 17주년(2020년) 온라인 팬미팅에서 롤러코스터·농구·두더지 게임 등 미션으로 모은 비상금을 팬클럽 카시오페아 이름으로 기부하기로 했다",
+          "u": "https://www.starnewskorea.com/music/2020/12/27/2020122709014473832",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "E_오프라인결집·이벤트",
+            "D_기부·후원캠페인(팬덤주도)"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "여자친구",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 93,
+      "n_cohesion_bullets": 7,
+      "cohesion_share": 0.0753,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 1,
+        "B_팬카페·온라인커뮤니티": 1,
+        "E_오프라인결집·이벤트": 6
+      },
+      "top_category": "E_오프라인결집·이벤트",
+      "sample_bullets": [
+        {
+          "t": "GFRIEND 6인, 4월8일 태국 버디들 위한 팬미팅 예고",
+          "u": "https://www.sanook.com/music/2386053/",
+          "tag": "loyalty",
+          "categories": [
+            "E_오프라인결집·이벤트"
+          ]
+        },
+        {
+          "t": "GFRIEND 6인, 4월8일 첫 팬미팅으로 태국 팬들 향한 애정 표현",
+          "u": "https://mgronline.com/entertainment/detail/9600000020983",
+          "tag": "loyalty",
+          "categories": [
+            "E_오프라인결집·이벤트"
+          ]
+        },
+        {
+          "t": "여자친구의 2017년 4월 2일 첫 팬미팅은 서울 올림픽공원 올림픽홀 3천석 규모로 열려 오픈 1분 만에 전석 매진됐으며, 암표가 35만 원까지 치솟을 정도로 인기를 끌었다.",
+          "u": "https://namu.wiki/w/%EC%97%AC%EC%9E%90%EC%B9%9C%EA%B5%AC(%EC%95%84%EC%9D%B4%EB%8F%8C)/%EA%B3%B5%EC%97%B0%20%EB%B0%8F%20%ED%96%89%EC%82%AC",
+          "tag": "loyalty",
+          "categories": [
+            "E_오프라인결집·이벤트"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "마마무",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 94,
+      "n_cohesion_bullets": 7,
+      "cohesion_share": 0.0745,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 3,
+        "B_팬카페·온라인커뮤니티": 2,
+        "E_오프라인결집·이벤트": 2
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "공식 팬클럽명은 '무무(MOOMOO)'다.",
+          "u": "https://namu.wiki/w/MAMAMOO",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "2015년 8월 23일 첫 팬미팅 티켓 1,200석이 1분 만에 매진돼 같은 날 저녁 1,200석 규모의 2차 팬미팅이 추가 편성됐다.",
+          "u": "https://en.wikipedia.org/wiki/Mamamoo",
+          "tag": "loyalty",
+          "categories": [
+            "E_오프라인결집·이벤트"
+          ]
+        },
+        {
+          "t": "\"ソロ曲のシャッフルも！MAMAMOOが3年ぶり日本公演でMOOMOOに愛伝える（ライブレポート）\" (3년 만의 일본 공연에서 팬클럽 MOOMOO에게 사랑 전달)",
+          "u": "https://natalie.mu/music/news/503211",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "빅뱅",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 97,
+      "n_cohesion_bullets": 7,
+      "cohesion_share": 0.0722,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 5,
+        "C_팬덤정체성·문화": 1,
+        "E_오프라인결집·이벤트": 1
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "2026년 5월, 빅뱅은 5기 이후 약 11년 만에 공식 팬클럽 'V.I.P' 6기 모집을 재개했으며, 이는 데뷔 20주년 프로젝트의 출발점으로 자리매김했고 글로벌 팬덤의 높은 관심을 받았다.",
+          "u": "https://v.daum.net/v/20260518141716711",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "오리콘이 빅뱅 데뷔 20주년을 맞아 팬클럽이 리뉴얼되고 재결성을 향한 움직임이 본격화됐다고 보도했다",
+          "u": "https://www.oricon.co.jp/news/2453208/full/",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "빅뱅이 데뷔 20주년을 맞아 2015년 5기 이후 11년 만에 공식 팬클럽 'V.I.P' 6기 모집을 2026년 5월 18일 재개했으며, 비스테이지(bstage) 플랫폼을 통해 글로벌 팬덤의 활발한 참여가 기대된다고 보도됨",
+          "u": "https://v.daum.net/v/20260518141716711",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "DAY6",
+      "category": "K-pop 보이그룹 /록",
+      "n_total_bullets": 101,
+      "n_cohesion_bullets": 7,
+      "cohesion_share": 0.0693,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 6,
+        "E_오프라인결집·이벤트": 1
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "2017년 6월 공식 팬클럽명 'My Day'가 발표되었으며 이후 여러 기수에 걸쳐 회원을 모집해왔다.",
+          "u": "https://en.wikipedia.org/wiki/Day6",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "공식 팬클럽 '마이데이(My Day)' 1기 모집이 2018년 1월 5일~25일 진행되었다.",
+          "u": "https://en.wikipedia.org/wiki/Day6",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "공식 팬클럽 'My Day' 5기 대상 선예매(2025년 11월 17일)로 2025년 12월 19~21일 KSPO DOME 연말 스페셜 콘서트 총 3회 공연이 선예매만으로 즉시 전 회차 전석 매진됐다",
+          "u": "https://www.starnewskorea.com/music/2025/11/19/2025111909372264423, https://www.newsinside.kr/news/articleView.html?idxno=4180548",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "GOT7",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 107,
+      "n_cohesion_bullets": 7,
+      "cohesion_share": 0.0654,
+      "category_counts": {
+        "B_팬카페·온라인커뮤니티": 1,
+        "C_팬덤정체성·문화": 1,
+        "E_오프라인결집·이벤트": 1,
+        "D_기부·후원캠페인(팬덤주도)": 4
+      },
+      "top_category": "D_기부·후원캠페인(팬덤주도)",
+      "sample_bullets": [
+        {
+          "t": "잭슨의 생일을 맞아 팬덤 아가새는 중국, 캐나다, 태국, 스페인, 멕시코, 칠레, 페루 등 20여 개국에서 총 26개 단체에 기부를 진행했다.",
+          "u": "https://www.hellokpop.com/news/ahgases-various-donations-got7-jackson-birthday/",
+          "tag": "loyalty",
+          "categories": [
+            "D_기부·후원캠페인(팬덤주도)"
+          ]
+        },
+        {
+          "t": "이란의 아가새 팬들은 잭슨 생일 기부 캠페인으로 1600만 리알을 모금해 어린이 1414명분의 위생·생필품 세트를 마련했다.",
+          "u": "https://www.hellokpop.com/news/ahgases-various-donations-got7-jackson-birthday/",
+          "tag": "loyalty",
+          "categories": [
+            "D_기부·후원캠페인(팬덤주도)"
+          ]
+        },
+        {
+          "t": "필리핀의 아가새 팬들은 잭슨 생일을 기념해 크립스 재단에 3만 페소를 기부했고, 호주 팬들은 WWF 호주 지부에 852호주달러를 후원했다.",
+          "u": "https://www.hellokpop.com/news/ahgases-various-donations-got7-jackson-birthday/",
+          "tag": "loyalty",
+          "categories": [
+            "D_기부·후원캠페인(팬덤주도)"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "박재범",
+      "category": "힙합",
+      "n_total_bullets": 110,
+      "n_cohesion_bullets": 7,
+      "cohesion_share": 0.0636,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 5,
+        "B_팬카페·온라인커뮤니티": 1,
+        "E_오프라인결집·이벤트": 1,
+        "D_기부·후원캠페인(팬덤주도)": 1
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "공식 팬클럽 JWalkerz는 2024년 10월 1기 출범 후 2025년 10월부터 2기가 운영 중이며, 모토는 \"I GOT YOUR BACK\"이다.",
+          "u": "https://namu.wiki/w/JWalkerz",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "박재범은 팬클럽 이름을 자신의 등에 \"JWALKERZ\" 타투로 새길 만큼 팬덤과 강한 유대를 드러냈다.",
+          "u": "https://namu.wiki/w/JWalkerz",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "박재범의 팬클럽 J-Effect(J-Walkerz)는 한국백혈병소아암협회에 헌혈증 514매와 행사 기념 떡을 기부했다",
+          "u": "https://www.diodeo.com/news/view/42042",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "D_기부·후원캠페인(팬덤주도)"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "ATEEZ",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 113,
+      "n_cohesion_bullets": 7,
+      "cohesion_share": 0.0619,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 3,
+        "B_팬카페·온라인커뮤니티": 1,
+        "C_팬덤정체성·문화": 1,
+        "D_기부·후원캠페인(팬덤주도)": 3
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "'2026 ATEEZ FANMEETING ~DAWN:26~'은 공식 팬클럽 선예매(2025년 12월 19~21일)와 일반예매(12월 22일~2026년 1월 13일)로 나뉘어 NOL티켓을 통해 진행됐다",
+          "u": "https://x.com/DMZENT_offical/status/2000551444295176286",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "ATEEZ의 홍중은 2022년 11월 17일 팬클럽 ATINY의 창립 기념일을 맞아 ATINY 명의로 월드비전에 1,000만원을 기부했으며, 이 기금은 '꿈꾸는 아이들' 프로젝트에 사용됐다",
+          "u": "https://www.koreajoongangdaily.com/entertainment/ateezs-hongjoong-donates-10-million-won-to-world-vision-under-fan-club-name/11791500",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "D_기부·후원캠페인(팬덤주도)"
+          ]
+        },
+        {
+          "t": "영어 위키백과에 따르면 ATINY 팬들은 폭력 생존자 트라우마 예방 단체 '폴리시드 맨(Polished Man)'을 후원하는 모금 페이지를 2019~2020년에 개설했고, 2021년 7월 기준 후원금이 3만 달러를 넘어섰으며, 멤버 민기와 여상은 오디오북 기부로 200만원을 모으는 '스타 북스토어' 릴레이 기부에 참여했다",
+          "u": "https://en.wikipedia.org/wiki/Ateez",
+          "tag": "loyalty",
+          "categories": [
+            "D_기부·후원캠페인(팬덤주도)"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "aespa",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 158,
+      "n_cohesion_bullets": 7,
+      "cohesion_share": 0.0443,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 5,
+        "B_팬카페·온라인커뮤니티": 2,
+        "D_기부·후원캠페인(팬덤주도)": 2
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "aespa 공식 팬클럽 'MY' 멤버십이 위버스샵을 통해 정식 오픈되었으며 한국어/일본어/중국어 등 다국어로 공지되어 글로벌 팬덤 가입을 지원함",
+          "u": "https://shop.weverse.io/en/shop/USD/artists/133/notices/4468",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "2026년 8월 서울 올림픽공원 KSPO DOME에서 진행된 3일간의 콘서트가 팬클럽 선예매(8/26)와 일반 예매(8/27) 단계에서 시야 제한석까지 전 좌석 매진되었으며, 신곡 'Dirty Work' 음반 선주문 수량이 101만 장을 돌파했다고 보도됨",
+          "u": "https://v.daum.net/v/pRQyeA41oW?f=p",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "태국 매체 thairath.co.th는 aespa의 태국 세 번째 단독 콘서트('SYNK: aeXIS LINE in BANGKOK', 2025년 11월 15~16일, Impact Arena)의 티켓 판매 일정을 상세 보도했다. MY 멤버십·JOY CLUB 회원 대상 단계별 선판매(10월 3~4일)를 거쳐 일반판매(10월 5일)가 이뤄지는 구조와 7-Eleven 연계 판매까지 소개하며 태국 팬덤의 조직적 소비 행태를 보여준다",
+          "u": "https://www.thairath.co.th/entertain/music/2885412",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "Stray Kids",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 163,
+      "n_cohesion_bullets": 7,
+      "cohesion_share": 0.0429,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 2,
+        "B_팬카페·온라인커뮤니티": 2,
+        "C_팬덤정체성·문화": 2,
+        "E_오프라인결집·이벤트": 1
+      },
+      "top_category": "C_팬덤정체성·문화",
+      "sample_bullets": [
+        {
+          "t": "공식 팬덤명 'STAY'는 \"YOU MAKE STRAY KIDS STAY\"라는 그룹 슬로건에서 비롯됐다.",
+          "u": "https://namu.wiki/w/Stray%20Kids",
+          "tag": "loyalty",
+          "categories": [
+            "C_팬덤정체성·문화"
+          ]
+        },
+        {
+          "t": "팬덤명 'STAY' 공개 4주년을 기념해 2022년 8월 깜짝 싱글 'Mixtape: Time Out'을 발매했는데, 이를 통해 팬덤명이 2018년경 발표됐음을 알 수 있다",
+          "u": "https://en.wikipedia.org/wiki/Stray_Kids",
+          "tag": "loyalty",
+          "categories": [
+            "C_팬덤정체성·문화"
+          ]
+        },
+        {
+          "t": "Stray Kids 공식 팬클럽 'STAY' 4기가 예스24를 통해 모집(2024년 1월 15일~28일)되었으며, JYP Fan's EDM Stray Kids 체크카드 결제 시 가입비 최대 5% 캐시백 등 팬덤 전용 결제 인프라가 운영됨",
+          "u": "https://m.ticket.yes24.com/Perf/48237",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "악동뮤지션",
+      "category": "혼성",
+      "n_total_bullets": 74,
+      "n_cohesion_bullets": 6,
+      "cohesion_share": 0.0811,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 3,
+        "B_팬카페·온라인커뮤니티": 3,
+        "C_팬덤정체성·문화": 1,
+        "E_오프라인결집·이벤트": 1
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "데뷔 10주년을 맞아 2024년 3월 처음으로 공식 팬덤명 '악카데미(AKKADEMY)'를 발표하고 위버스 멤버십을 통해 가입을 받기 시작했다.",
+          "u": "https://www.spotvnews.co.kr/news/articleView.html?idxno=666501",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "C_팬덤정체성·문화"
+          ]
+        },
+        {
+          "t": "공식 팬클럽명은 '악카데미(AKKADEMY)'이며 유튜브 채널이 골드 플레이 버튼(구독자 100만 명 이상)을 획득했다.",
+          "u": "https://namu.wiki/w/AKMU",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "B_팬카페·온라인커뮤니티"
+          ]
+        },
+        {
+          "t": "악동뮤지션(AKMU)이 2026년 10월 9~11일 서울 KSPO DOME에서 여는 콘서트 '소문의 낙원(Paradise of Rumors)'의 팬클럽 선예매가 2026년 8월 5일 오후 8시부터 8월 7일 오전 11시 59분까지 진행되며 일반예매는 8월 7일 오후 8시 시작된다고 8월 5일 공지됐다.",
+          "u": "https://thankuinfo.shinnyhyonae300.com/2026/08/akmu-paradise-of-rumors-2026-ticket-guide.html",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "sg워너비",
+      "category": "발라드",
+      "n_total_bullets": 75,
+      "n_cohesion_bullets": 6,
+      "cohesion_share": 0.08,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 3,
+        "B_팬카페·온라인커뮤니티": 2,
+        "E_오프라인결집·이벤트": 1
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "공식 팬클럽 '사랑방'은 펄 골드 색상을 상징색으로 사용하며 장기간 유지되어 옴.",
+          "u": "https://namu.wiki/w/SG%EC%9B%8C%EB%84%88%EB%B9%84",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "공식 팬카페 \"사랑방\"은 2004년부터 운영되어 왔으며, 2016년 계약 종료 후 CJ ENM으로 운영 주체가 이관되었다",
+          "u": "https://en.namu.wiki/w/SG%EC%9B%8C%EB%84%88%EB%B9%84",
+          "tag": "loyalty",
+          "categories": [
+            "B_팬카페·온라인커뮤니티"
+          ]
+        },
+        {
+          "t": "SG워너비의 공식 팬클럽 명칭은 '사랑방'이다.",
+          "u": "https://namu.wiki/w/SG%EC%9B%8C%EB%84%88%EB%B9%84",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "다비치",
+      "category": "발라드",
+      "n_total_bullets": 80,
+      "n_cohesion_bullets": 6,
+      "cohesion_share": 0.075,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 1,
+        "B_팬카페·온라인커뮤니티": 3,
+        "C_팬덤정체성·문화": 2
+      },
+      "top_category": "B_팬카페·온라인커뮤니티",
+      "sample_bullets": [
+        {
+          "t": "공식 팬카페 '다비치코드'가 오랜 기간 운영되며 팬 커뮤니티의 구심점 역할을 하고 있음.",
+          "u": "https://m.cafe.daum.net/-.-...../_rec",
+          "tag": "loyalty",
+          "categories": [
+            "B_팬카페·온라인커뮤니티"
+          ]
+        },
+        {
+          "t": "공식 팬클럽 \"Davichi Code\"는 2015년 소속사 이적(버드나무엔터테인먼트) 후 결성되었다",
+          "u": "https://en.namu.wiki/w/%EB%8B%A4%EB%B9%84%EC%B9%98",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "팬덤명 '다비치코드'를 중심으로 2008년 데뷔 후 18주년(약 6739일)까지 활동을 지속하고 있다",
+          "u": "https://namu.wiki/w/%EB%8B%A4%EB%B9%84%EC%B9%98",
+          "tag": "loyalty",
+          "categories": [
+            "C_팬덤정체성·문화"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "10CM",
+      "category": "솔로",
+      "n_total_bullets": 85,
+      "n_cohesion_bullets": 6,
+      "cohesion_share": 0.0706,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 3,
+        "C_팬덤정체성·문화": 3
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "공식 팬클럽 '센치너(Centiner)'가 2024년 4월 25일 정식 발족되어 활동 중이다.",
+          "u": "https://namu.wiki/w/10CM",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "10CM은 위버스샵을 통해 공식 팬클럽 멤버십 'Centiner(센티너)'를 운영하며 가입자 전용 멤버십 키트를 판매한다",
+          "u": "https://x.com/weverseshop/status/1783360286466187774",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "2024년 4월 25일 공식 팬덤명 '센치너'를 발표했다",
+          "u": "https://namu.wiki/w/10CM",
+          "tag": "loyalty",
+          "categories": [
+            "C_팬덤정체성·문화"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "슈퍼주니어",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 89,
+      "n_cohesion_bullets": 6,
+      "cohesion_share": 0.0674,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 6,
+        "D_기부·후원캠페인(팬덤주도)": 3
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "은혁은 2025년 슈퍼주니어 데뷔 20주년(11월 6일)을 기념해 팬클럽 'E.L.F.' 명의로 2,005만 원, 본인 명의로 1,106만 원 등 총 3,111만 원을 초록우산에 기부했으며, 이는 가족돌봄아동 116명을 지원하는 데 쓰였다.",
+          "u": "https://edaily.co.kr/News/Read?mediaCodeNo=257&newsId=04467366642363096",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "D_기부·후원캠페인(팬덤주도)"
+          ]
+        },
+        {
+          "t": "2008년 팬클럽 E.L.F. 회원들이 SM엔터테인먼트 주식 5만8206주(지분 0.3%)를 매입해 경영 현안에 영향력을 행사하고자 했다.",
+          "u": "https://en.wikipedia.org/wiki/Super_Junior",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "데뷔 20주년을 맞은 슈퍼주니어의 콘서트 'SUPER SHOW 10'이 공식 팬클럽 ELF 대상 선예매만으로 전석 매진됨",
+          "u": "https://www.smentertainment.com/en/newsroom/%EC%8A%88%ED%8D%BC%EC%A3%BC%EB%8B%88%EC%96%B4-%EC%BD%98%EC%84%9C%ED%8A%B8-%EC%8A%88%ED%8D%BC%EC%87%BC-10-%ED%8C%AC%ED%81%B4%EB%9F%BD-%EC%84%A0%EC%98%88%EB%A7%A4%EB%A1%9C-%EC%A0%84/",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "IVE",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 100,
+      "n_cohesion_bullets": 6,
+      "cohesion_share": 0.06,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 3,
+        "C_팬덤정체성·문화": 1,
+        "E_오프라인결집·이벤트": 2,
+        "D_기부·후원캠페인(팬덤주도)": 1
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "팬클럽명은 DIVE(다이브)이며, 나무위키 아이브 문서에도 공식 팬덤명으로 명시되어 있다.",
+          "u": "https://namu.wiki/w/%EC%95%84%EC%9D%B4%EB%B8%8C",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "C_팬덤정체성·문화"
+          ]
+        },
+        {
+          "t": "공식 팬클럽 'DIVE' 3기 유료회원 대상 선예매(2월 17~18일, 1인 1매)를 거쳐 '2025 IVE THE 3RD FAN CONCERT <IVE SCOUT>'가 4월 5~6일 KSPO DOME에서 전석 132,000원, 약 120분 공연(온라인 스트리밍 병행)으로 열렸다",
+          "u": "https://m.cafe.daum.net/IVEstarship/Y1rM/159",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "태국 매체 Thairath는 2023년 7월 IVE 멤버 6인이 방콕 팬미팅 기자회견에서 \"사랑해, 그리워, 고마워\" 등 한국식 인사말을 태국어로 배우며 팬덤 '다이브(DIVE)'와 친밀감을 표한 모습을 보도했다. 원영은 \"만날 때마다 에너지를 얻는다\", 리즈는 \"좋은 추억을 만들어줘 감사하다\"고 언급했다.",
+          "u": "https://www.thairath.co.th/entertain/celeb/2707795",
+          "tag": "loyalty",
+          "categories": [
+            "E_오프라인결집·이벤트"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "엔믹스",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 110,
+      "n_cohesion_bullets": 6,
+      "cohesion_share": 0.0545,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 3,
+        "B_팬카페·온라인커뮤니티": 1,
+        "E_오프라인결집·이벤트": 4
+      },
+      "top_category": "E_오프라인결집·이벤트",
+      "sample_bullets": [
+        {
+          "t": "공식 팬클럽명은 'NSWER'로, 팬미팅 행사명 'NSWER Vacation'에서도 확인된다.",
+          "u": "https://en.wikipedia.org/wiki/NMIXX",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "E_오프라인결집·이벤트"
+          ]
+        },
+        {
+          "t": "NMIXX가 2025년 7월 12일 데뷔 후 최초의 공식 팬미팅 'NSWER VACATION'을 서울 고려대 화정체육관에서 하루 2회(오후 1시·7시) 개최했으며, 공식 팬클럽 대상 선예매(6월 9일)를 별도로 진행했다",
+          "u": "https://sports.khan.co.kr/article/202506052315003",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "E_오프라인결집·이벤트"
+          ]
+        },
+        {
+          "t": "공식 팬클럽 'NSWER'가 2기, 3기로 순차 모집을 이어가며 예스24 티켓을 통해 신규 팬을 지속적으로 유입시키고 있다",
+          "u": "https://m.ticket.yes24.com/Perf/48817 , https://m.ticket.yes24.com/Perf/53273",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "이문세",
+      "category": "발라드",
+      "n_total_bullets": 70,
+      "n_cohesion_bullets": 5,
+      "cohesion_share": 0.0714,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 4,
+        "B_팬카페·온라인커뮤니티": 2
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "공식 팬클럽 \"팬문(Fanmoon)\"이 있으며 공식 홈페이지에 팬 커뮤니티 링크로 연결되어 있다",
+          "u": "https://en.namu.wiki/w/%EC%9D%B4%EB%AC%B8%EC%84%B8",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "B_팬카페·온라인커뮤니티"
+          ]
+        },
+        {
+          "t": "팬 커뮤니티 '마굿간'을 중심으로 유튜브·인스타그램 등에서 활발히 소통하고 있으며, 2025년 7월 7일부터 MBC FM4U 새 라디오 프로그램을 진행 중이다",
+          "u": "https://namu.wiki/w/이문세",
+          "tag": "loyalty",
+          "categories": [
+            "B_팬카페·온라인커뮤니티"
+          ]
+        },
+        {
+          "t": "이문세는 2019년 10월 11일부터 12일간 팬클럽 '마굿간'을 포함한 약 30명의 봉사단과 함께 네팔로 출국해 11년 전 설립한 학교의 보수 봉사활동을 진행했다.",
+          "u": "https://www.hankookilbo.com/News/Read/201910110878330131",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "윤도현",
+      "category": "록",
+      "n_total_bullets": 71,
+      "n_cohesion_bullets": 5,
+      "cohesion_share": 0.0704,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 4,
+        "B_팬카페·온라인커뮤니티": 1,
+        "D_기부·후원캠페인(팬덤주도)": 2
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "YB(윤도현밴드)의 공식 팬클럽 '와이비즈(ybeez)'는 2018년 윤도현의 생일을 계기로 \"본인을 위한 선물보다 어려운 아이들에게 나눔할 기회를 갖고 싶다\"는 윤도현의 뜻에 따라, 멤버 생일마다 기부금을 모아 관련 단체에 전달하는 캠페인을 이어오고 있다",
+          "u": "https://hope.greenkorea.org/ybandybees/",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "D_기부·후원캠페인(팬덤주도)"
+          ]
+        },
+        {
+          "t": "YB와 팬클럽 ybeez는 어쿠스틱 포레스트 부산 공연에서 부산녹색연합과 함께 이기대 해안 쓰레기 모니터링 및 정화 활동을 진행했으며, 텀블러·장바구니·손수건·천연세제 사용, 자전거 이용 등 팬들의 일상 환경실천을 독려하는 '선한영향력' 캠페인을 함께 운영하고 있다",
+          "u": "https://hope.greenkorea.org/ybandybees/",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "YB 팬클럽 '와이비즈(ybeez)'는 2020년 2월 19일 밴드 기타리스트 스캇 할로웰의 생일을 기념해 굿네이버스를 통해 국내 다문화가정·저소득층 아동의 코로나19 예방 물품 지원을 위한 네 번째 생일 기부 캠페인을 진행했다.",
+          "u": "https://www.goodneighbors.kr/story/gnnews/2637/view.gn",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "D_기부·후원캠페인(팬덤주도)"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "FTISLAND",
+      "category": "K-pop 보이그룹 /록",
+      "n_total_bullets": 73,
+      "n_cohesion_bullets": 5,
+      "cohesion_share": 0.0685,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 5
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "공식 팬클럽명은 'Primadonna(프리마돈나)'로 확인된다.",
+          "u": "https://en.wikipedia.org/wiki/FTIsland",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "태국 kapook.com은 FTISLAND의 2026년 8월 8일 방콕 콘서트('2026 FTISLAND TOUR 0—XIX—III FaTe in BANGKOK', MCC Hall) 소식과 함께 공식 팬클럽명이 '프리마돈나(Primadonna)'임을 명시하며 팬들의 기대감을 전했다",
+          "u": "https://musicstation.kapook.com/view302214.html",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "FT아일랜드와 팬클럽 프리마돈나는 2012년 국제구호단체 기아대책을 통해 아프리카 코트디부아르 어린이센터에 도서 120여 권과 컴퓨터 1대를 기증했으며, 해당 도서관은 하루 600명의 어린이가 이용할 정도로 활성화됐다.",
+          "u": "https://www.ajunews.com/view/20121204000245",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "이효리",
+      "category": "솔로",
+      "n_total_bullets": 120,
+      "n_cohesion_bullets": 5,
+      "cohesion_share": 0.0417,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 1,
+        "B_팬카페·온라인커뮤니티": 3,
+        "C_팬덤정체성·문화": 1,
+        "E_오프라인결집·이벤트": 1,
+        "D_기부·후원캠페인(팬덤주도)": 1
+      },
+      "top_category": "B_팬카페·온라인커뮤니티",
+      "sample_bullets": [
+        {
+          "t": "팬카페 '효리투게더'가 공식 팬덤 명칭(색상: 펄 레드)으로 나무위키 팬덤 목록에 등재돼 있으며 현재도 다음카페로 운영 중이다.",
+          "u": "https://namu.wiki/w/%ED%8C%AC%EB%8D%A4/%EB%AA%A9%EB%A1%9D",
+          "tag": "loyalty",
+          "categories": [
+            "B_팬카페·온라인커뮤니티"
+          ]
+        },
+        {
+          "t": "이효리는 2025년 5월 19일 남편 이상순과 함께 자립준비청년 지원을 위해 아름다운재단에 2억 원을 기부했다.",
+          "u": "https://www.starnewskorea.com/star/2025/05/20/2025052008114012054",
+          "tag": "loyalty",
+          "categories": [
+            "D_기부·후원캠페인(팬덤주도)"
+          ]
+        },
+        {
+          "t": "이효리의 팬카페 '효리투게더'(다음카페)는 회원 수 약 1만 4,977명이며, 회원 등급 시스템을 운영하고 이효리의 요가원 오픈을 응원하는 서포트 활동을 벌이는 등 팬 활동이 이어지고 있다.",
+          "u": "https://m.cafe.daum.net/hyolee79/_rec",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "B_팬카페·온라인커뮤니티",
+            "E_오프라인결집·이벤트"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "김연자",
+      "category": "트로트",
+      "n_total_bullets": 73,
+      "n_cohesion_bullets": 4,
+      "cohesion_share": 0.0548,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 3,
+        "D_기부·후원캠페인(팬덤주도)": 3
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "팬클럽 '모아나'는 2026년 1월 고향 광주 남구에서 열린 김연자 노래비 제막식을 기념해 지역 독거노인·불우이웃을 위한 쌀 140포를 기부했다.",
+          "u": "https://v.daum.net/v/20260122151501524",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "D_기부·후원캠페인(팬덤주도)"
+          ]
+        },
+        {
+          "t": "'아모르파티'는 2018년 무렵 엑소(EXO) 팬클럽의 지지 덕에 역주행 화제를 모았다는 보도가 있어 세대를 넘나드는 팬덤 반응이 확인된다.",
+          "u": "https://m.news.nate.com/view/20180125n46537?mid=e02",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "2011년 동일본대지진 당시 예능 '도전!1000곡' 우승 상금 전액을 재해 구호에 기부해 한일 양국 팬들의 지지를 받았다.",
+          "u": "https://namu.wiki/w/%EA%B9%80%EC%97%B0%EC%9E%90",
+          "tag": "loyalty",
+          "categories": [
+            "D_기부·후원캠페인(팬덤주도)"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "빅마마",
+      "category": "발라드",
+      "n_total_bullets": 73,
+      "n_cohesion_bullets": 4,
+      "cohesion_share": 0.0548,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 2,
+        "B_팬카페·온라인커뮤니티": 2,
+        "C_팬덤정체성·문화": 1
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "데뷔 때부터 이어진 공식 팬클럽 '둥지'가 오랜 기간 결속력을 유지하고 있음.",
+          "u": "https://namu.wiki/w/%EB%B9%85%EB%A7%88%EB%A7%88(%EA%B0%80%EC%88%98)",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "C_팬덤정체성·문화"
+          ]
+        },
+        {
+          "t": "공식 팬카페 \"nest\"는 2003년 데뷔 이후 지금까지 운영되고 있다",
+          "u": "https://en.namu.wiki/w/%EB%B9%85%EB%A7%88%EB%A7%88(%EA%B0%80%EC%88%98)",
+          "tag": "loyalty",
+          "categories": [
+            "B_팬카페·온라인커뮤니티"
+          ]
+        },
+        {
+          "t": "팬카페 '둥지'를 중심으로 2012년 활동 중단 이후에도 팬덤이 유지되어 2021년 재결합으로 이어졌다",
+          "u": "https://namu.wiki/w/%EB%B9%85%EB%A7%88%EB%A7%88(%EA%B0%80%EC%88%98)",
+          "tag": "loyalty",
+          "categories": [
+            "B_팬카페·온라인커뮤니티"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "브라운아이즈",
+      "category": "발라드",
+      "n_total_bullets": 82,
+      "n_cohesion_bullets": 4,
+      "cohesion_share": 0.0488,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 1,
+        "B_팬카페·온라인커뮤니티": 1,
+        "C_팬덤정체성·문화": 1,
+        "D_기부·후원캠페인(팬덤주도)": 1
+      },
+      "top_category": "D_기부·후원캠페인(팬덤주도)",
+      "sample_bullets": [
+        {
+          "t": "2003년 활동 중단(해체) 기간에도 팬들이 자발적으로 콘서트 홍보 크라우드펀딩(모금)을 진행",
+          "u": "https://namu.wiki/w/브라운",
+          "tag": "loyalty",
+          "categories": [
+            "D_기부·후원캠페인(팬덤주도)"
+          ]
+        },
+        {
+          "t": "나무위키 '팬덤/목록' 문서에 따르면 브라운아이즈의 공식 팬덤명은 'B.E(비이)'이며 공식 색깔은 갈색이다.",
+          "u": "https://namu.wiki/w/%ED%8C%AC%EB%8D%A4/%EB%AA%A9%EB%A1%9D",
+          "tag": "loyalty",
+          "categories": [
+            "C_팬덤정체성·문화"
+          ]
+        },
+        {
+          "t": "공식 팬클럽 '백투더소울플라이트(Back To The Soul Flight)'가 운영되었으며, 멤버 생일 등을 계기로 팬들과의 소통이 2015년까지 이어졌다.",
+          "u": "https://namu.wiki/w/%EB%B8%8C%EB%9D%BC%EC%9A%B4%20%EC%95%84%EC%9D%B4%EC%A6%88",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "지코",
+      "category": "힙합",
+      "n_total_bullets": 101,
+      "n_cohesion_bullets": 4,
+      "cohesion_share": 0.0396,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 4
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "2019년 11월 공식 팬클럽 'COMMON'을 개설했고, 팬들은 '코몬이들'이라는 애칭으로 불린다.",
+          "u": "https://namu.wiki/w/%EC%A7%80%EC%BD%94",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "소속사 KOZ Entertainment가 2019년 12월 공식 팬클럽 'COMMON(코몬)' 1기 모집을 공지, 웰컴키트를 제공함",
+          "u": "https://x.com/koz_entofficial/status/1204267092461023235",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "지코의 공식 팬클럽 '코몬(COMMON)'은 2019년 11월에 창설됐으며, 팬덤 애칭은 '코몬이들'이다",
+          "u": "https://namu.wiki/w/%EC%A7%80%EC%BD%94",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "ITZY",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 107,
+      "n_cohesion_bullets": 4,
+      "cohesion_share": 0.0374,
+      "category_counts": {
+        "B_팬카페·온라인커뮤니티": 1,
+        "C_팬덤정체성·문화": 1,
+        "E_오프라인결집·이벤트": 2
+      },
+      "top_category": "E_오프라인결집·이벤트",
+      "sample_bullets": [
+        {
+          "t": "ITZY의 다섯 번째 팬미팅 'ALL IN, MIDZY'가 개최되어 믿지(MIDZY)와의 공식 팬미팅 하이라이트가 공개됨",
+          "u": "https://www.youtube.com/watch?v=SdSl8U5RRRk",
+          "tag": "loyalty",
+          "categories": [
+            "E_오프라인결집·이벤트"
+          ]
+        },
+        {
+          "t": "ITZY(있지)의 공식 유튜브 채널 구독자 수가 700만을 돌파했다. ITZY는 4일 오후 공식 유튜브 채널 구독자 수 700만을 달성했다.",
+          "u": "https://sports.khan.co.kr/article/202204051652013",
+          "tag": "loyalty",
+          "categories": [
+            "B_팬카페·온라인커뮤니티"
+          ]
+        },
+        {
+          "t": "ITZY는 2022년 4월, 2023년 2월, 2024년 11월, 2025년 9~10월까지 총 네 차례 정식 팬미팅을 진행하며 팬덤과의 직접 소통을 이어왔다.",
+          "u": "https://namu.wiki/w/ITZY/%EA%B3%B5%EC%97%B0%20%EB%B0%8F%20%ED%96%89%EC%82%AC",
+          "tag": "loyalty",
+          "categories": [
+            "E_오프라인결집·이벤트"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "박정현",
+      "category": "발라드",
+      "n_total_bullets": 70,
+      "n_cohesion_bullets": 3,
+      "cohesion_share": 0.0429,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 1,
+        "B_팬카페·온라인커뮤니티": 2,
+        "C_팬덤정체성·문화": 1
+      },
+      "top_category": "B_팬카페·온라인커뮤니티",
+      "sample_bullets": [
+        {
+          "t": "공식 팬덤명 \"Piece Of Lena\"는 본인도 현재 잘 사용하지 않으며, 유튜브 구독자는 \"엘랑\"으로 불린다",
+          "u": "https://en.namu.wiki/w/%EB%B0%95%EC%A0%95%ED%98%84",
+          "tag": "loyalty",
+          "categories": [
+            "B_팬카페·온라인커뮤니티",
+            "C_팬덤정체성·문화"
+          ]
+        },
+        {
+          "t": "'나는 가수다' 출연 이후 디시인사이드에 \"박정현 갤러리\"(일명 '박개'/'빨대갤')라는 비공식 팬 커뮤니티가 생겼다",
+          "u": "https://en.namu.wiki/w/%EB%B0%95%EC%A0%95%ED%98%84",
+          "tag": "loyalty",
+          "categories": [
+            "B_팬카페·온라인커뮤니티"
+          ]
+        },
+        {
+          "t": "박정현의 옛 공식 팬클럽 명칭은 'Piece Of Lena'였다.",
+          "u": "https://namu.wiki/w/박정현",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "엄정화",
+      "category": "솔로",
+      "n_total_bullets": 71,
+      "n_cohesion_bullets": 3,
+      "cohesion_share": 0.0423,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 3,
+        "C_팬덤정체성·문화": 1
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "팬클럽 '템테이션(Temtation)'이 나무위키 팬덤 목록에 공식 팬덤명(색상: 분홍)으로 등재돼 있으며, 일본에서는 본인 공인 팬클럽 'Temptation Japan'이 별도로 운영된 바 있다.",
+          "u": "https://namu.wiki/w/%ED%8C%AC%EB%8D%A4/%EB%AA%A9%EB%A1%9D",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "C_팬덤정체성·문화"
+          ]
+        },
+        {
+          "t": "일본 현지에 공식 인정 팬클럽 사이트 'Temptation Japan'(우리말: 오므 정화 일본 공식 팬사이트)이 개설되어 일본 내 팬베이스가 형성되어 있음(현재는 신규 팬클럽 모집·활동은 중단 상태로 안내됨)",
+          "u": "https://www.uhmjunghwa.com/en",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        },
+        {
+          "t": "일본어판 위키백과에 따르면 엄정화의 공식 팬클럽 'Temptation'은 입회비·연회비를 받지 않으며, 생일파티 행사도 약 100명 규모로 제한해 참가비 약 1,000엔 정도의 저렴한 비용으로 운영된다.",
+          "u": "https://ja.wikipedia.org/wiki/%E3%82%AA%E3%83%A0%E3%83%BB%E3%82%B8%E3%83%A7%E3%83%B3%E3%83%95%E3%82%A1",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "백지영",
+      "category": "발라드",
+      "n_total_bullets": 72,
+      "n_cohesion_bullets": 3,
+      "cohesion_share": 0.0417,
+      "category_counts": {
+        "B_팬카페·온라인커뮤니티": 2,
+        "C_팬덤정체성·문화": 1
+      },
+      "top_category": "B_팬카페·온라인커뮤니티",
+      "sample_bullets": [
+        {
+          "t": "나무위키에 따르면 백지영의 공식 유튜브 채널 '백지영 Baek Z Young'은 구독자 30만2000명을 보유하고 있으며, 2024년 12월 미니 4집 'Ordinary Grace'를 발매하는 등 데뷔 25년이 넘은 시점까지도 팬덤과의 장기 소통 채널을 유지하고 있다",
+          "u": "https://namu.wiki/w/백지영",
+          "tag": "loyalty",
+          "categories": [
+            "B_팬카페·온라인커뮤니티"
+          ]
+        },
+        {
+          "t": "백지영의 공식 팬덤명은 '루즈'이다.",
+          "u": "https://namu.wiki/w/백지영",
+          "tag": "loyalty",
+          "categories": [
+            "C_팬덤정체성·문화"
+          ]
+        },
+        {
+          "t": "백지영의 공식 유튜브 채널 '백지영 Baek Z Young'은 구독자 30.2만 명을 보유하고 있다.",
+          "u": "https://namu.wiki/w/백지영",
+          "tag": "spillover",
+          "categories": [
+            "B_팬카페·온라인커뮤니티"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "조용필",
+      "category": "발라드",
+      "n_total_bullets": 81,
+      "n_cohesion_bullets": 3,
+      "cohesion_share": 0.037,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 2,
+        "B_팬카페·온라인커뮤니티": 1,
+        "C_팬덤정체성·문화": 1
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "광복 80주년을 맞아 KBS가 기획한 \"조용필 이 순간을 영원히\" 콘서트가 2025년 9월 6일 개최 예정으로, 데뷔 58년차에도 대형 특집 공연을 여는 팬덤 결속력을 보여준다",
+          "u": "https://namu.wiki/w/조용필",
+          "tag": "loyalty",
+          "categories": [
+            "C_팬덤정체성·문화"
+          ]
+        },
+        {
+          "t": "팬클럽이 위대한탄생, 이터널리, 미지의세계 등 복수의 사이트로 장기간 운영되며 결속된 팬 커뮤니티를 유지하고 있음.",
+          "u": "http://choyongpil.net/",
+          "tag": "spillover",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "B_팬카페·온라인커뮤니티"
+          ]
+        },
+        {
+          "t": "조용필 공식 팬클럽 '미지의 세계' 홈페이지에 2026년 9월 3일 '2026-27 조용필&위대한탄생 콘서트' 신규 일정(서울 11월 27~29일 등)이 공지되며 새 시즌 전국투어 개최 소식이 전해졌다.",
+          "u": "https://choyongpil.co.kr/",
+          "tag": "spillover",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "다이나믹듀오",
+      "category": "힙합",
+      "n_total_bullets": 68,
+      "n_cohesion_bullets": 2,
+      "cohesion_share": 0.0294,
+      "category_counts": {
+        "C_팬덤정체성·문화": 1,
+        "D_기부·후원캠페인(팬덤주도)": 1
+      },
+      "top_category": "C_팬덤정체성·문화",
+      "sample_bullets": [
+        {
+          "t": "군 복무 후 동반 제대할 당시 300여 명의 팬과 슈프림팀이 현장에서 환영할 정도로 팬덤의 결속력이 강했다.",
+          "u": "https://www.nocutnews.co.kr/news/4210780",
+          "tag": "loyalty",
+          "categories": [
+            "C_팬덤정체성·문화"
+          ]
+        },
+        {
+          "t": "위키트리에 따르면 하이트진로가 후원하는 '2026 이슬라이브 페스티벌'(9월 12일, 인천 송도달빛축제공원)이 2년 만에 규모를 키워 관람 인원을 기존 1만 8천 명에서 2만 5천 명으로 늘렸으며, 다이나믹듀오가 헤드라이너로 이영지·멜로망스·우즈 등과 함께 출연이 확정되었다",
+          "u": "https://www.wikitree.co.kr/articles/1151084",
+          "tag": "spillover",
+          "categories": [
+            "D_기부·후원캠페인(팬덤주도)"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "이승철",
+      "category": "발라드",
+      "n_total_bullets": 78,
+      "n_cohesion_bullets": 2,
+      "cohesion_share": 0.0256,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 1,
+        "B_팬카페·온라인커뮤니티": 2
+      },
+      "top_category": "B_팬카페·온라인커뮤니티",
+      "sample_bullets": [
+        {
+          "t": "공식 다음 팬카페 '새침떼기'는 회원수 6,603명을 보유하며 콘서트 공지 등 팬 소통 창구로 운영되고 있다.",
+          "u": "https://m.cafe.daum.net/SEUNGCHUL/4G5I",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "B_팬카페·온라인커뮤니티"
+          ]
+        },
+        {
+          "t": "이승철 팬카페 '새침떼기'는 2026년 8월 기준으로도 활발히 운영되며, 12월 4~6일 서울 올림픽 체조경기장에서 열리는 40주년 기념 콘서트 티켓 예매 공지에 팬들의 조회가 이어지고 있다.",
+          "u": "https://m.cafe.daum.net/SEUNGCHUL/4G5I",
+          "tag": "loyalty",
+          "categories": [
+            "B_팬카페·온라인커뮤니티"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "김동률",
+      "category": "발라드",
+      "n_total_bullets": 83,
+      "n_cohesion_bullets": 2,
+      "cohesion_share": 0.0241,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 1,
+        "C_팬덤정체성·문화": 1
+      },
+      "top_category": "C_팬덤정체성·문화",
+      "sample_bullets": [
+        {
+          "t": "나무위키 '팬덤/목록' 문서에 따르면 김동률의 공식 팬덤명은 과거 'Dongwook Holic(동욱홀릭)'에서 현재 'Noehee(너희)'로 바뀌었다.",
+          "u": "https://namu.wiki/w/%ED%8C%AC%EB%8D%A4/%EB%AA%A9%EB%A1%9D",
+          "tag": "loyalty",
+          "categories": [
+            "C_팬덤정체성·문화"
+          ]
+        },
+        {
+          "t": "24인조 오케스트라, 7인조 밴드, 6인조 브라스, 8인조 합창단 등 약 60명 규모의 공연진을 동원한 대형 프로덕션으로, 국내 솔로 콘서트 중 손꼽히는 스케일을 구현했다",
+          "u": "https://www.dipe.co.kr/2335098",
+          "tag": "spillover",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "거미",
+      "category": "발라드",
+      "n_total_bullets": 87,
+      "n_cohesion_bullets": 2,
+      "cohesion_share": 0.023,
+      "category_counts": {
+        "B_팬카페·온라인커뮤니티": 2
+      },
+      "top_category": "B_팬카페·온라인커뮤니티",
+      "sample_bullets": [
+        {
+          "t": "공식 다음 팬카페 명칭은 '지연민트향기'로, 스케줄 공지 등을 통해 팬과 소통하고 있다.",
+          "u": "https://m.cafe.daum.net/jymint/HzQW?boardType=Q",
+          "tag": "loyalty",
+          "categories": [
+            "B_팬카페·온라인커뮤니티"
+          ]
+        },
+        {
+          "t": "거미는 본명(박지연)을 딴 공식 팬카페 '지연민트향기'를 통해 팬들과 소통하고 있다.",
+          "u": "http://cafe311.daum.net/_c21_/home?grpid=I4w2",
+          "tag": "loyalty",
+          "categories": [
+            "B_팬카페·온라인커뮤니티"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "프로미스나인",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 89,
+      "n_cohesion_bullets": 2,
+      "cohesion_share": 0.0225,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 2,
+        "E_오프라인결집·이벤트": 1
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "프로미스나인은 2026년 9월 아시아 투어 서울 공연 개막 당시 팬클럽 플로버의 서포트 속에 힘찬 출발을 알렸다.",
+          "u": "https://bbs.ruliweb.com/news/board/1005/read/3801147",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "E_오프라인결집·이벤트"
+          ]
+        },
+        {
+          "t": "kpopna.com이 프로미스나인은 서바이벌 '아이돌학교'로 결성돼 2018년 1월 24일 데뷔(이후 플레디스 이적), 공식 팬클럽명 '플로버(Flover)'라고 아랍어로 소개함(WebFetch로 확인).",
+          "u": "https://kpopna.com/%D8%AA%D9%82%D8%B1%D9%8A%D8%B1-%D9%83%D8%A7%D9%85%D9%84-%D8%B9%D9%86-%D9%81%D8%B1%D9%82%D8%A9-%D9%81%D8%B1%D9%88%D9%85%D9%8A%D8%B3-%D9%86%D8%A7%D9%8A%D9%86-fromis_9/",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "잔나비",
+      "category": "록",
+      "n_total_bullets": 69,
+      "n_cohesion_bullets": 1,
+      "cohesion_share": 0.0145,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 1,
+        "B_팬카페·온라인커뮤니티": 1
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "잔나비 공식 팬카페 'MONKEY HOTEL'은 회원 수 약 3만4천명, 누적 방문자 수 1,760만명 이상을 기록하며 2015년 개설 이후 꾸준히 활동해왔다.",
+          "u": "https://borathis.com/entry/%EC%9E%94%EB%82%98%EB%B9%84",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제",
+            "B_팬카페·온라인커뮤니티"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "나훈아",
+      "category": "트로트",
+      "n_total_bullets": 70,
+      "n_cohesion_bullets": 1,
+      "cohesion_share": 0.0143,
+      "category_counts": {
+        "A_공식팬클럽·회원제": 1
+      },
+      "top_category": "A_공식팬클럽·회원제",
+      "sample_bullets": [
+        {
+          "t": "11년 공백 후 연 콘서트 티켓이 약 10분 만에 매진됐고, 공식 팬클럽 '나사모' 회원들은 공연 전날부터 텐트를 치고 기다리는 등 아이돌 팬덤 못지않은 조직적 응원 문화를 보였다",
+          "u": "https://www.munhwa.com/article/11058027",
+          "tag": "loyalty",
+          "categories": [
+            "A_공식팬클럽·회원제"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "빈지노",
+      "category": "힙합",
+      "n_total_bullets": 79,
+      "n_cohesion_bullets": 1,
+      "cohesion_share": 0.0127,
+      "category_counts": {
+        "B_팬카페·온라인커뮤니티": 1
+      },
+      "top_category": "B_팬카페·온라인커뮤니티",
+      "sample_bullets": [
+        {
+          "t": "2020년 11월 19일 빈지노가 개인 유튜브 채널 '개인사업자 임성빈'에 전 소속사 일리네어레코즈의 요청으로 포털사이트 프로필을 직접 수정하는 과정을 담은 '빈지노는 Profile을 부를 자격이 있는가 EP.1' 영상을 올리자 하루 만에 구독자가 2만 명 늘었다.",
+          "u": "https://www.segye.com/newsView/20201120510664",
+          "tag": "loyalty",
+          "categories": [
+            "B_팬카페·온라인커뮤니티"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "투어스(TWS)",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 90,
+      "n_cohesion_bullets": 1,
+      "cohesion_share": 0.0111,
+      "category_counts": {
+        "E_오프라인결집·이벤트": 1
+      },
+      "top_category": "E_오프라인결집·이벤트",
+      "sample_bullets": [
+        {
+          "t": "A dedicated fan-run streaming/voting account, '투어스 음원총공팀' (@TWS_247STREAM), organizes coordinated award-voting pushes for fandom '42' and publishes real-time vote tallies, e.g. reporting TWS ranked 1st in the 2024 MMA 'Best New Artist' fan-vote category with 246,000 votes at the time of posting.",
+          "u": "https://x.com/TWS_247STREAM/status/1858107561213653380",
+          "tag": "loyalty",
+          "categories": [
+            "E_오프라인결집·이벤트"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "싸이",
+      "category": "솔로",
+      "n_total_bullets": 122,
+      "n_cohesion_bullets": 1,
+      "cohesion_share": 0.0082,
+      "category_counts": {
+        "B_팬카페·온라인커뮤니티": 1
+      },
+      "top_category": "B_팬카페·온라인커뮤니티",
+      "sample_bullets": [
+        {
+          "t": "2017년 5월 25일 유튜브 다이아몬드 버튼을 받으며 아시아 솔로 아티스트 최초로 구독자 1000만 명을 돌파했다",
+          "u": "https://en.wikipedia.org/wiki/Psy",
+          "tag": "loyalty",
+          "categories": [
+            "B_팬카페·온라인커뮤니티"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "Zion.T",
+      "category": "솔로",
+      "n_total_bullets": 79,
+      "n_cohesion_bullets": 0,
+      "cohesion_share": 0.0,
+      "category_counts": {},
+      "top_category": null,
+      "sample_bullets": []
+    }
+  ]
+}

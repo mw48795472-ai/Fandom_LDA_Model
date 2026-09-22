@@ -10,7 +10,7 @@
 > 없어 재현 불가"라고 적혀 있었다. 이번 정리에서 최종 코퍼스와 산출물을 `data/v7_final/`로 추가하고,
 > 5,612건 스냅샷은 `data/v6_r22_snapshot/`으로 옮겨 두 데이터가 같은 파일명으로 섞이지 않게 했다.
 > 최종 수치가 저장소 파일에서 실제로 재현되는지는 `verify_v7_final_consistency.py`가 항목별로 검증한다
-> (현재 49/49 일치. 지난 정리에서 유일하게 재현되지 않던 χ² 값도 2026-09-22 추가 파일로 해소, 아래 "재현성 범위" 참고).
+> (현재 60/60 일치. 지난 정리에서 유일하게 재현되지 않던 χ² 값도 2026-09-22 추가 파일로 해소, 아래 "재현성 범위" 참고).
 
 ---
 
@@ -43,6 +43,9 @@
 | 라이브 재적합 K=8/M=5/실루엣 0.046 (게이트 기각) | `lda_v6_diagnostics_live_reference_v7.json` = 3D 맵 payload 값 | 일치 |
 | 4분면 독립성 χ²=8.34, p=0.0039 (라이브) / χ²=10.2273, p=0.0014 (동결) | `positioning_map_correlation_live_v7.json`의 분할표 [[7,17],[4,72]] — 표본 평균 4구획이 아니라 **점수 0.5 초과 여부** 2×2표. 동결 CSV에 같은 0.5 기준을 적용하면 [[8,17],[4,71]] → 10.2273 | 일치 (2026-09-22 추가 파일로 해소) |
 | K=10 토픽 명칭·대표 불릿·대표 팬덤 | `topic_cards_v7.json` (METHODOLOGY.md 2-1 표와 명칭 10/10 일치) | 일치 |
+| 광고·상업성 1,302건(13.0%) / 팬덤결속 923건(9.2%), 하이라이트 결속 15·18·30건 | `ad_commercial_index_v7.json`, `fandom_cohesion_index_v7.json` (둘 다 10,020건 기준, 팬덤별 합·업종/유형별 합 전부 원본 집계와 일치) | 일치 |
+| 3D축 독립성 회귀 계수·영향점(god·이효리·BTS) | `chart3d_correlation_live_v7.json` | 일치 |
+| 동결 기준선 0.267 이후 실측 재적합 전부 기각, 최신 v7-65 0.141 | `data/silhouette_gate_timeline/corpus_silhouette_timeline_v7_66_2ch.csv` (v4 종료~r66 2차, 실측 22개 지점 전부 < 0.267) | 일치 |
 | MCI ↔ 충성도 r=-0.393 (45개 그룹) | `member_pilot_mci_correlation_v7.json` (MCI는 v7-55 시점 8,981건 기준). 저장소의 10,020건 MCI로 재계산하면 r=-0.385 | 근사 일치 |
 
 ## 3. 재현성 범위 — 정직하게
@@ -62,12 +65,13 @@
   토크나이저 라우팅 반영본)는 소스가 남아있지 않다. 저장소의 `run_lda_v6.py`는 v6~r22 시점 파이프라인이라
   10,020건에 돌리면 문서 수가 9,954건(구 토크나이저 3토큰 미만 제외)으로 보고서의 10,018건과 다르고
   K-grid 수치도 다르다. 이 스크립트는 로직 참고용이며 최종 진단값의 재현 수단이 아니다.
-- **보조지표 7종의 원본 JSON**(`ad_commercial_index_v7.json`, `fandom_cohesion_index_v7.json`,
-  `domestic_regional_index_live_reference_v7.json`, `worldwide_language_index_live_reference_v7.json`,
-  `factor_clustering_structure_v7.json`, 실루엣 타임라인 CSV)은 아직 저장소에 없다. 해당 스크립트는
-  `data/v7_final/` 아래 그 파일명을 읽도록 경로만 정리해 두었으므로, 파일을 넣으면 바로 실행된다.
-  단 `member_mention_index_v7.json`(멤버 집중도 지수, 45개 그룹, 10,020건 기준)과 MCI 상관 분석
-  (`member_pilot_mci_correlation_v7.json`, MCI는 v7-55 시점 8,981건 기준이라 10,020건 MCI와 값이 조금 다름)은 있다.
+- **보조지표 원본 JSON**: 광고·상업성(`ad_commercial_index_v7.json`)과 팬덤결속(`fandom_cohesion_index_v7.json`)은
+  2026-09-22에 추가됐고, `indices_csv/build_ad_commercial_index_csv.py`·`charts/build_cohesion_index_v7*.py`가 그 파일로
+  실제 실행됨을 확인했다(광고·상업성 CSV는 `data/v7_final/ad_commercial_index_v7.csv`로 커밋). 실루엣 타임라인 CSV도
+  `data/silhouette_gate_timeline/`에 추가돼 차트 스크립트가 실행된다. **아직 없는 것**:
+  `domestic_regional_index_live_reference_v7.json`, `worldwide_language_index_live_reference_v7.json`(국내지역·세계언어
+  지수 원본), `factor_clustering_structure_v7.json`(K→M 코사인거리 행렬), v7-55 시점 MCI 파일. 해당 스크립트는
+  `data/v7_final/` 아래 그 파일명을 읽도록 정리돼 있어 파일을 넣으면 바로 실행된다.
 
 ## 4. 폴더 구성
 
@@ -76,7 +80,7 @@ README.md / KEY_FINDINGS.md / METHODOLOGY.md / FINAL_REPORT_SUMMARY.md / PYTHON_
 (분석보고서)…최종.pdf, (요약보고서)…최종.pdf         제출본
 3D_포지셔닝맵_국내100팬덤.html + plotly-bundle.js    라이브 10,020건 3D 맵 (같은 폴더에서 열면 동작)
 Persona_결정공간.html                                동결 스냅샷 K=10→M=5 덴드로그램·PCA·레이더
-verify_v7_final_consistency.py                       최종 수치 ↔ 파일 정합성 검증 (49개 항목)
+verify_v7_final_consistency.py                       최종 수치 ↔ 파일 정합성 검증 (60개 항목)
 run_lda_v6.py                                        LDA 파이프라인(v6~r22 시점) — --data/--out 인자
 data/
   v7_final/            최종 라이브 코퍼스 10,020건 + 최종 산출물 (1절 표 참고)

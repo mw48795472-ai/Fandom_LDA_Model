@@ -333,6 +333,65 @@ if stats is not None:
     check("MCI~loyalty 음의 상관 방향·크기 근사 재현 (|Δr| < 0.02)", abs(r_idx - mcc["correlations_mci_raw"]["loyalty_score"]["pearson_r"]) < 0.02, f"Δr={abs(r_idx + 0.3932):.4f}")
 
 # ---------------------------------------------------------------------------
+# [J] 보조지표 원본 JSON (라이브 10,020건) — 광고·상업성 / 팬덤결속
+# ---------------------------------------------------------------------------
+print("\n[J] ad_commercial_index_v7.json / fandom_cohesion_index_v7.json (라이브 10,020건 보조지표)")
+corpus_cnt = {fd["fandom"]: len(fd.get("loyalty", [])) + len(fd.get("spillover", [])) for fd in fandoms}
+with open(D / "ad_commercial_index_v7.json", encoding="utf-8") as f:
+    ad = json.load(f)
+check("광고·상업성: total_bullets 10,020, 광고성 불릿 1,302건(13.0%), 20개 업종", ad["total_bullets"] == 10020 and ad["total_ad_bullets"] == 1302
+      and round(ad["corpus_ad_share"], 3) == 0.130 and len(ad["industries"]) == 20, f"{ad['total_ad_bullets']} ({ad['corpus_ad_share']:.1%})")
+check("광고·상업성: 팬덤별 n_total_bullets = 코퍼스 불릿 수, Σn_ad_bullets = 1,302, Σ업종별 = industry_totals",
+      all(corpus_cnt[x["fandom"]] == x["n_total_bullets"] for x in ad["fandoms"]) and sum(x["n_ad_bullets"] for x in ad["fandoms"]) == 1302
+      and all(sum(x["industry_counts"].get(i, 0) for x in ad["fandoms"]) == ad["industry_totals"].get(i, 0) for i in ad["industries"]))
+with open(D / "fandom_cohesion_index_v7.json", encoding="utf-8") as f:
+    co = json.load(f)
+check("팬덤결속: total_bullets 10,020, 결속 불릿 923건(9.2%), 유형 5개(A~E)", co["total_bullets"] == 10020 and co["total_cohesion_bullets"] == 923
+      and round(co["corpus_cohesion_share"], 3) == 0.092 and len(co["categories"]) == 5, f"{co['total_cohesion_bullets']} ({co['corpus_cohesion_share']:.1%})")
+check("팬덤결속: 팬덤별 n_total_bullets = 코퍼스 불릿 수, Σn_cohesion_bullets = 923, Σ유형별 = category_totals",
+      all(corpus_cnt[x["fandom"]] == x["n_total_bullets"] for x in co["fandoms"]) and sum(x["n_cohesion_bullets"] for x in co["fandoms"]) == 923
+      and all(sum(x["category_counts"].get(c, 0) for x in co["fandoms"]) == co["category_totals"][c] for c in co["categories"]))
+coh = {x["fandom"]: x for x in co["fandoms"]}
+check("팬덤결속 하이라이트 (KEY_FINDINGS 표): BTS 15건(6.6%) · 리센느 18건(21.2%) · 임영웅 30건(23%, 전체 1위)",
+      coh["BTS"]["n_cohesion_bullets"] == 15 and coh["리센느(RESCENE)"]["n_cohesion_bullets"] == 18 and coh["임영웅"]["n_cohesion_bullets"] == 30
+      and max(co["fandoms"], key=lambda x: x["n_cohesion_bullets"])["fandom"] == "임영웅",
+      f"BTS {coh['BTS']['cohesion_share']:.1%}, 리센느 {coh['리센느(RESCENE)']['cohesion_share']:.1%}, 임영웅 {coh['임영웅']['cohesion_share']:.1%}")
+
+# ---------------------------------------------------------------------------
+# [K] chart3d_correlation_live_v7.json (3D 축 독립성 원본 파일)
+# ---------------------------------------------------------------------------
+print("\n[K] chart3d_correlation_live_v7.json (3D 매트릭스 축 독립성 검증 원본)")
+with open(D / "chart3d_correlation_live_v7.json", encoding="utf-8") as f:
+    c3 = json.load(f)
+if stats is not None:
+    m3c = sm.OLS(Dv, sm.add_constant(np.column_stack([L, S]))).fit()
+    cd3 = m3c.get_influence().cooks_distance[0]
+    top3 = [n for _, n in sorted(zip(cd3, names), reverse=True)[:5]]
+    check("다양성 회귀 계수 (절편 0.7168, loyalty -0.073, spillover 0.3008) 및 Cook's D top5 (god·이효리·BTS·투어스·지드래곤) 재현",
+          [round(v, 4) for v in m3c.params] == [0.7168, -0.073, 0.3008] and top3 == [x["fandom"] for x in c3["influence_top5"]],
+          f"coef={m3c.params.round(4).tolist()}, top5={top3}")
+    check("factor_diversity 정규성 Shapiro p=0.058 (정규성 유지), Spearman ρ(S,D)=0.4869",
+          round(stats.shapiro(Dv).pvalue, 3) == 0.058 and round(stats.spearmanr(S, Dv)[0], 4) == 0.4869)
+
+# ---------------------------------------------------------------------------
+# [L] 실루엣 게이트 타임라인 CSV (v4 종료 ~ v7 r66(2차))
+# ---------------------------------------------------------------------------
+print("\n[L] data/silhouette_gate_timeline/corpus_silhouette_timeline_v7_66_2ch.csv")
+tl_path = BASE / "data" / "silhouette_gate_timeline" / "corpus_silhouette_timeline_v7_66_2ch.csv"
+with open(tl_path, encoding="utf-8-sig") as f:
+    tl = list(csv.DictReader(f))
+real_rows = [r for r in tl if "[추정" not in r["라운드"]]
+meas_rows = [r for r in real_rows if r["실루엣"]]
+after40 = [r for r in meas_rows if float(r["순서"]) > 40]
+check("v7-40 동결 기준선 행: 7,350건, 실루엣 0.267, K=10, M=5", any(r["순서"] == "40" and r["코퍼스(불릿수)"] == "7350" and r["실루엣"] == "0.267" and r["K"] == "10" and r["M"] == "5" for r in real_rows))
+check("v7-40 이후 실측 지점 전부 0.267 미만 (게이트 기각)", len(after40) > 0 and all(float(r["실루엣"]) < 0.267 for r in after40),
+      f"실측 {len(after40)}개 지점, 최대 {max(float(r['실루엣']) for r in after40)}, 마지막 {after40[-1]['라운드']} {after40[-1]['코퍼스(불릿수)']}건 {after40[-1]['실루엣']}")
+check("KEY_FINDINGS '최신 v7-65 라운드 silhouette=0.141'", any(r["라운드"].startswith("r65") and r["실루엣"] == "0.141" for r in meas_rows))
+info("'누적 26회 연속 기각'(보고서)은 라운드 횟수 기준으로 보이며, 이 CSV의 실측 지점 수로는 22개(r45 2개 변형 포함) — 재적합 없이 지나간 라운드까지 세면 26에 가깝지만 CSV만으로는 확정 불가")
+info("타임라인 마지막 실측 코퍼스", f"{after40[-1]['코퍼스(불릿수)']}건 (r66 2차) — 최종 라이브 코퍼스 10,020건은 이 이후 라운드의 결과이며, 그 시점 재적합(K=8/M=5/0.046)은 lda_v6_diagnostics_live_reference_v7.json")
+check("r22 행 5,613건 = merge_log_r22의 after_total (실제 평탄화 5,612건과 1건 차이는 기존 문서에 기록됨)", any(r["라운드"] == "r22" and r["코퍼스(불릿수)"] == "5613" for r in real_rows))
+
+# ---------------------------------------------------------------------------
 n_ok = sum(1 for _, ok in results if ok); n_all = len(results)
 print(f"\n=== 결과: {n_ok}/{n_all} 항목 일치 ({n_all - n_ok}건 불일치) ===")
 sys.exit(0 if n_ok == n_all else 1)

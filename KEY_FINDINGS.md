@@ -2,7 +2,7 @@
 
 보고서·대화에서 반복 인용된 수치를 한곳에 모은 참고 문서. 2026-09-21 정리에서 최종 라이브 코퍼스(10,020건)와
 최종 산출물이 `data/v7_final/`에 들어오면서 **각 수치의 근거 파일과 계층(동결 스냅샷 7,350건 vs 라이브 10,020건)을
-확정**했고, `verify_v7_final_consistency.py`로 재계산해 대조했다(49/49 일치).
+확정**했고, `verify_v7_final_consistency.py`로 재계산해 대조했다(60/60 일치).
 
 ## 코퍼스 규모 — 라이브 코퍼스 `data/v7_final/fandoms_v3_100.json`
 - 분석 대상 팬덤: 100개
@@ -42,6 +42,8 @@
   loyalty~activity r=0.694, spillover~activity r=0.9019, 이효리 표준화 잔차 +3.59
 
 ## 3D 매트릭스 축 독립성 — 라이브 점수 기준 (재현 확인)
+- 원본 파일 `chart3d_correlation_live_v7.json` (회귀 계수 절편 0.7168 / loyalty -0.073(p=0.10) / spillover 0.3008(p<.001),
+  factor_diversity는 Shapiro p=0.058로 정규성 유지, Cook's D 상위 god 0.246 · 이효리 0.181 · BTS 0.160, LOO 최대 |Δβ|=0.036(god))
 - Loyalty-Diversity r = 0.099 (p=0.327, 유의하지 않음)
 - Spillover-Diversity r = 0.461 (p<.001, 유의함)
 - 다중회귀 R² = 0.234 (F=14.83, p<.001)
@@ -54,7 +56,10 @@
 
 ## 실루엣 게이트 거버넌스
 - 동결 기준선(v7-40 스냅샷): 7,350건, K=10, M=5, silhouette=0.267
-- 누적 게이트 기각: 26회 연속 (v7-65 라운드 silhouette=0.141). 최종 라이브 코퍼스 10,020건 시점 재적합은
+- 누적 게이트 기각: 26회 연속 (v7-65 라운드 silhouette=0.141). 실측 타임라인
+  `data/silhouette_gate_timeline/corpus_silhouette_timeline_v7_66_2ch.csv`(v4 종료 1,781건 → r66 2차 9,680건)에서 v7-40
+  이후 실측 재적합 22개 지점(r45 변형 2개 포함)이 전부 0.267 미만(최대 0.148, r49)이고 r64·r65가 0.141. "26회"는 라운드
+  횟수 기준으로 보이며 CSV 실측 지점 수(22)와는 세는 단위가 다르다. 최종 라이브 코퍼스 10,020건 시점 재적합은
   silhouette=0.046 (K=8, M=5) — `lda_v6_diagnostics_live_reference_v7.json`, 3D 맵 payload 동일 값
 
 ## 하이라이트 3사례 비교
@@ -74,10 +79,16 @@
 
 세계언어·국내지역·팬덤결속 지수 행은 보고서 본문 값이며, 원본 지수 JSON은 아직 저장소에 없다(README 3절).
 
-## 보조지표 산출 CSV (이전 세션에서 직접 생성·검증)
-- 국내 지역 지수: 100건, 17개 시도별 언급수 합 ↔ total_region_mentions 재검증 (mismatch=0)
-- 세계 언어 지수: 100건, 14개 언어별 언급수 합 ↔ total_group_bullets / foreign_bullets 재검증 (mismatch=0)
-- 광고·상업성 지수: 100건, 20개 업종별 매칭수 합 ↔ industry_totals(1,302건) 재검증 (전부 일치)
+## 보조지표 (라이브 10,020건 기준)
+- 광고·상업성 지수 (`ad_commercial_index_v7.json` → `ad_commercial_index_v7.csv`): 광고성 불릿 1,302건(13.0%), 98개 팬덤에
+  1건 이상, 20개 업종 태깅 합 1,488(불릿당 복수 업종). 상위: aespa 47건·이효리 47건(비중 39.2%)·TWICE·BTS(37건, 16.3%)·NewJeans.
+  업종별 상위: 복지/행정 228, 패션/의류 209, 미용 177, 식음료 169. v7-39(795건, 기타 33%) → v7-40 '기타' 전수 재분류 후 기타 79건.
+  스크립트 `indices_csv/build_ad_commercial_index_csv.py` 재실행: 팬덤별 합 = 1,302, 업종별 합 = industry_totals 전부 일치
+- 팬덤결속 지수 (`fandom_cohesion_index_v7.json`): 결속 불릿 923건(9.2%), 99개 팬덤. 유형별 A 공식팬클럽 480 · D 기부·후원(팬덤주도)
+  198 · B 팬카페 190 · E 오프라인결집 173 · C 정체성·문화 122. D는 팬덤 공존어 게이트로 기부 언급 364건 중 166건(45.6%) 제외.
+  하이라이트: 임영웅 30건(22.9%, 전체 1위) · 리센느 18건(21.2%) · BTS 15건(6.6%) — 차트 스크립트 2종 재실행 확인
+- 국내 지역 지수: 100건, 17개 시도별 언급수 합 ↔ total_region_mentions 재검증 (mismatch=0) — 원본 JSON 미보유
+- 세계 언어 지수: 100건, 14개 언어별 언급수 합 ↔ total_group_bullets / foreign_bullets 재검증 (mismatch=0) — 원본 JSON 미보유
 - 멤버 집중도 지수(MCI): `data/v7_final/member_mention_index_v7.json` — 45개 그룹, 10,020건 코퍼스 기준
   (예: BTS 근거문장 227건 중 멤버명 언급 101건, MCI=0.241). 동결 스냅샷(7,350건) 시점 파일럿(23개 그룹, BTS 170건 중
   73건, MCI 0.24)은 `member_mention_pilot_v6.json`
