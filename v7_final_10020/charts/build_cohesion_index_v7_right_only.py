@@ -23,7 +23,9 @@ def _find_korean_font():
     없으면 matplotlib 기본 폰트로 진행(한글이 깨질 수 있음을 경고)."""
     candidates = [os.environ.get("KFONT_PATH", ""), str(BASE / "fonts" / "NotoSansCJKkr-Regular.otf"),
                   "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc",
-                  "/usr/share/fonts/truetype/nanum/NanumGothic.ttf"]
+                  "/usr/share/fonts/truetype/nanum/NanumGothic.ttf",
+                  "C:/Windows/Fonts/malgun.ttf", "/System/Library/Fonts/AppleSDGothicNeo.ttc",
+                  "/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc"]
     for c in candidates:
         if c and os.path.exists(c):
             return c
