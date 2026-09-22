@@ -1,12 +1,11 @@
 # 광고·상업성 지수(Ad/Commercial Index) — 최종 코퍼스 10,020건 판
 
-> 이 문서는 `archive/v6_r22_era/Ad_Commercial Pilot/AD_COMMERCIAL_PILOT.md`(r22, 5,612건, 원본 JSON 없음 → LDA 메타요인 대체)의
-> **10,020건 기준 새 판**이다. 아카이브 문서는 수정하지 않고, 최종 원본 `data/v7_final/ad_commercial_index_v7.json`을 입력으로 새로 구성했다.
-> 실행 노트북: `ad_commercial_index_v7.ipynb` (출력 포함, `python v7_final_10020/analysis/build_notebooks_v7.py ad_commercial` 로 재생성).
+> 입력: 최종 원본 `data/v7_final/ad_commercial_index_v7.json`(10,020건). 실행 노트북: `ad_commercial_index_v7.ipynb`
+> (출력 포함, `python v7_final_10020/analysis/build_notebooks_v7.py ad_commercial` 로 재생성).
 
 ## 이 문서가 다루는 것
 
-r22 시점에는 원본 지수 JSON이 없어 "브랜드·상업형(광고·앰버서더)" LDA 비중을 대체 지표로 썼다. 최종 데이터에는 원본이 있다.
+광고·상업성 지수는 LDA와 무관한 원문 키워드 매칭 보조지표다.
 
 | 항목 | 값 (10,020건) | 출처 |
 |---|---|---|
@@ -39,7 +38,6 @@ r22 시점에는 원본 지수 JSON이 없어 "브랜드·상업형(광고·앰�
 
 - `data/v7_final/ad_commercial_index_v7.json` / `.csv` — 원본과 CSV(`v7_final_10020/indices_csv/build_ad_commercial_index_csv.py` 산출).
 - `ad_commercial_index_v7.ipynb` — 위 1∼7절 실행 기록.
-- `archive/v6_r22_era/Ad_Commercial Pilot/` — r22 시점 문서·노트북(LDA 대체 지표 판).
 
 ## 한계
 

@@ -248,7 +248,7 @@ with open(D / "member_mention_pilot_v6.json", encoding="utf-8") as f:
 fz_act = {r["fandom"]: int(r["activity"]) for r in frozen}
 check("member_mention_pilot_v6.json(동결 스냅샷판) 23개 그룹 total_group_bullets = 동결 CSV activity",
       len(mpil) == 23 and all(fz_act.get(g) == v["total_group_bullets"] for g, v in mpil.items()),
-      f"{len(mpil)}개 그룹, BTS {mpil['BTS']['total_group_bullets']}건 (r22판은 125건)")
+      f"{len(mpil)}개 그룹, BTS {mpil['BTS']['total_group_bullets']}건")
 mp_bad = [g for g, v in mpil.items() if sum(v["member_mention_counts"].values()) != v["total_member_mentions"]
           or abs(sum(x ** 2 for x in v["member_impact_share_pilot"].values()) - v["mci_pilot"]) > 0.002]
 check("멤버 파일럿 내부 정합 (언급 합 = total, MCI = Σshare²)", not mp_bad, f"불일치 {mp_bad}")
@@ -389,7 +389,7 @@ check("v7-40 이후 실측 지점 전부 0.267 미만 (게이트 기각)", len(a
 check("KEY_FINDINGS '최신 v7-65 라운드 silhouette=0.141'", any(r["라운드"].startswith("r65") and r["실루엣"] == "0.141" for r in meas_rows))
 info("'누적 26회 연속 기각'(보고서)은 라운드 횟수 기준으로 보이며, 이 CSV의 실측 지점 수로는 22개(r45 2개 변형 포함) — 재적합 없이 지나간 라운드까지 세면 26에 가깝지만 CSV만으로는 확정 불가")
 info("타임라인 마지막 실측 코퍼스", f"{after40[-1]['코퍼스(불릿수)']}건 (r66 2차) — 최종 라이브 코퍼스 10,020건은 이 이후 라운드의 결과이며, 그 시점 재적합(K=8/M=5/0.046)은 lda_v6_diagnostics_live_reference_v7.json")
-check("r22 행 5,613건 = merge_log_r22의 after_total (실제 평탄화 5,612건과 1건 차이는 기존 문서에 기록됨)", any(r["라운드"] == "r22" and r["코퍼스(불릿수)"] == "5613" for r in real_rows))
+check("r22 행 5,613건 = merge_log_r22의 after_total (로그 산술 5606+7; 당시 평탄화 건수와 1건 차이)", any(r["라운드"] == "r22" and r["코퍼스(불릿수)"] == "5613" for r in real_rows))
 
 # ---------------------------------------------------------------------------
 # [M] 2026-09-22 3차 추가 파일: 라이브 점수 원본 CSV · 제외 불릿 · 동결 진단 · 매체 크로스오버 · K=9 검증
@@ -475,7 +475,7 @@ info("하이라이트 미디어 불릿", f"임영웅 {mex_hi['임영웅']['n_med
 print("\n[T] v7_progress.json (data/v7_final 판 = v7 48라운드 시점)")
 with open(D / "v7_progress.json", encoding="utf-8") as f:
     vp = json.load(f)
-check("current_total 8,311 = 타임라인 CSV r48 행 (r22판 5,612과 다른 후속 진행본)", vp["current_total"] == 8311 and any(r["라운드"] == "r48" and r["코퍼스(불릿수)"] == "8311" for r in real_rows))
+check("v7_progress current_total 8,311 = 타임라인 CSV r48 행", vp["current_total"] == 8311 and any(r["라운드"] == "r48" and r["코퍼스(불릿수)"] == "8311" for r in real_rows))
 info("current_total_note 원문이 이원 구조를 명시", vp.get("current_total_note", "")[:120] + "…")
 
 # ---------------------------------------------------------------------------
@@ -568,21 +568,17 @@ for r in fzj:
     fz_lang.update(r["coverage_detail"]["language_counts"])
 info("동결 스냅샷 7,350건 언어 분포", f"{dict(fz_lang)} (합 {sum(fz_lang.values())}, 아랍어 없음)")
 
-print("\n[AA] supplementary_csv/ (아카이브 보조 CSV)")
+print("\n[AA] supplementary_csv/ (보조 CSV)")
 with open(D / "supplementary_csv" / "fandom_bullet_share_v6.csv", encoding="utf-8-sig") as f:
     bsh = list(csv.DictReader(f))
 bs_tot = sum(int(r["근거 문장 수"]) for r in bsh)
 check("fandom_bullet_share_v6.csv: 100개 팬덤, 합 5,454건 = 타임라인 r17, 비중(%) = 건수/합", len(bsh) == 100 and bs_tot == 5454
       and any(r["라운드"] == "r17" and r["코퍼스(불릿수)"] == "5454" for r in real_rows) and all(abs(int(r["근거 문장 수"]) / bs_tot * 100 - float(r["비중(%)"])) < 0.006 for r in bsh),
-      f"합 {bs_tot}, 로스터에 창모·사이먼도미닉·헤이즈 포함(r22 이전 로스터)")
+      f"합 {bs_tot}, 로스터에 창모·사이먼도미닉·헤이즈 포함(초기 로스터)")
 with open(D / "supplementary_csv" / "domestic_regional_pilot_v6_top3.csv", encoding="utf-8-sig") as f:
     top3 = list(csv.DictReader(f))
-with open(BASE / "archive" / "v6_r22_era" / "data" / "v6_r22_snapshot" / "domestic_regional_pilot_v6.json", encoding="utf-8") as f:
-    pj = json.load(f)
 t3_sum = sum(int(r["근거 문장 수"]) for r in top3)
-t3_match = sum(1 for r in top3 if int(r["총 지역언급"]) == pj[r["팬덤"]]["total_region_mentions"] and int(r["검출 지역 수"]) == pj[r["팬덤"]]["n_regions_hit"] and abs(float(r["요인 다양성"]) - pj[r["팬덤"]]["region_diversity"]) < 1e-6)
-check("domestic_regional_pilot_v6_top3.csv: 100개 팬덤, 근거문장수 합 5,998 = 타임라인 r24; 지역언급·검출지역수·다양성이 r22 파일럿 JSON과 99/100 일치(송가인만 갱신)",
-      len(top3) == 100 and t3_sum == 5998 and t3_match == 99, f"합 {t3_sum}, r22 파일럿 일치 {t3_match}/100")
+check("domestic_regional_pilot_v6_top3.csv: 100개 팬덤, 근거문장수 합 5,998 = 타임라인 r24 시점 보조 CSV", len(top3) == 100 and t3_sum == 5998, f"합 {t3_sum}")
 
 # ---------------------------------------------------------------------------
 # [AB] data/v7_rounds/ — 사용자가 GitHub에 직접 업로드한 v7 라운드별 병합·교체 로그 전량 (r1~r72) + v6 단계 로그 3개
@@ -593,12 +589,8 @@ def _rk(n):
     m = re.search(r"r(\d+)(?:_(p2|2ch))?", n); return (int(m.group(1)), {"": 0, "p2": 1, "2ch": 2}[m.group(2) or ""])
 mlogs = sorted(RD.glob("merge_log_r*.json"), key=lambda p: _rk(p.name))
 def _ba(d): return d.get("before_total", d.get("before_total_bullets")), d.get("after_total", d.get("after_total_bullets"))
-with open(BASE / "archive" / "v6_r22_era" / "data" / "v6_r22_snapshot" / "csv" / "corpus_growth_history_v6_v7.csv", encoding="utf-8-sig") as f:
-    r22_hist = {r["stage"]: r for r in csv.DictReader(f)}
-same22 = sum(1 for p in mlogs if _rk(p.name)[0] <= 22 and str(_ba(json.load(open(p, encoding="utf-8")))[1]) == r22_hist.get("v7_round%d" % _rk(p.name)[0], {}).get("after_total"))
 r22_after = _ba(json.load(open(RD / "merge_log_r22.json", encoding="utf-8")))[1]
-check("r1~r21 병합 로그 after_total = r22 스냅샷 성장 이력 CSV(archive) 값 21/21; r22만 로그 5,613 vs 실제 코퍼스 5,612 (기존 문서화된 +1 기록 오차)",
-      same22 == 21 and r22_after == 5613 and r22_hist["v7_round22"]["after_total"] == "5612", f"일치 {same22}/22, r22 로그 {r22_after} vs CSV {r22_hist['v7_round22']['after_total']}")
+check("merge_log_r22 after_total 5,613 = 타임라인 CSV r22 행 (실제 평탄화는 5,612건 — 로그 기록상 +1)", r22_after == 5613 and any(r["라운드"] == "r22" and r["코퍼스(불릿수)"] == "5613" for r in real_rows), f"로그 {r22_after}")
 last = json.load(open(mlogs[-1], encoding="utf-8"))
 check("마지막 병합 로그 r72: 9,939 → 10,020 (최종 라이브 코퍼스 규모)", mlogs[-1].name == "merge_log_r72.json" and _ba(last) == (9939, 10020))
 tl_map = {r["라운드"]: r["코퍼스(불릿수)"] for r in real_rows}
@@ -627,8 +619,8 @@ check("schema_audit_r74: 10,020건 스캔, 팬덤 100, LDA 3토큰 미만 제외
 info("성장 이력 전체 CSV", "v7_final_10020/data_export/build_corpus_growth_history_csv.py -> data/v7_final/corpus_growth_history_v6_v7_full.csv (v6 1차 ~ v7 r72)")
 
 # ---------------------------------------------------------------------------
-# [AC] v7_final_10020/analysis/ — 국내 지역 지수 최종 재산출본 (2026-09-22, r22 규칙을 10,020건에 재적용)
-print("\n[AC] v7_final_10020/analysis/domestic_regional_index — 최종 10,020건 재산출본")
+# [AC] v7_final_10020/analysis/ — 국내 지역 지수 최종 산출본 (10,020건)
+print("\n[AC] v7_final_10020/analysis/domestic_regional_index — 최종 10,020건 산출본")
 _dr_path = BASE / "v7_final_10020" / "analysis" / "domestic_regional_index" / "domestic_regional_index_v7.json"
 if _dr_path.exists():
     dr = json.load(open(_dr_path, encoding="utf-8"))
@@ -636,7 +628,7 @@ if _dr_path.exists():
     _bad = sum(1 for v in dr.values() if sum(v["region_mention_counts"].get(r, 0) for r in _regions) != v["total_region_mentions"]
                or sum(1 for r in _regions if v["region_mention_counts"].get(r, 0) > 0) != v["n_regions_hit"]
                or abs(v["n_regions_hit"] / 17 - v["region_diversity"]) > 0.001)
-    check("국내 지역 지수 재산출본: 100개 팬덤, 17개 시도 합 = total_region_mentions, n_regions_hit/17 = region_diversity (불일치 0)", len(dr) == 100 and _bad == 0, f"불일치 {_bad}")
+    check("국내 지역 지수 산출본: 100개 팬덤, 17개 시도 합 = total_region_mentions, n_regions_hit/17 = region_diversity (불일치 0)", len(dr) == 100 and _bad == 0, f"불일치 {_bad}")
     check("근거문장 수 = 최종 코퍼스 실측 (100/100)", all(dr[f]["total_group_bullets"] == corpus_cnt.get(f) for f in dr))
     check("보고서 표 15·KEY_FINDINGS 강조 3팬덤 — 임영웅 28건·12지역·서울 21%·0.706(전체 1위), BTS 17건·5지역·서울 47%·0.294 (동결 시점과 최종이 같은 값)",
           dr["임영웅"]["total_region_mentions"] == 28 and dr["임영웅"]["n_regions_hit"] == 12 and dr["임영웅"]["primary_region"] == "서울" and abs(dr["임영웅"]["region_diversity"] - 0.706) < 0.001

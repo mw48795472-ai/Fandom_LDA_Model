@@ -12,7 +12,7 @@ import numpy as np
 import os
 from pathlib import Path
 
-# 저장소 상대 경로 (원본은 이전 세션 작업 디렉터리 /home/claude/work/... 절대경로였음)
+# 저장소 상대 경로
 BASE = Path(__file__).resolve().parents[2]
 DATA_DIR = BASE / "data" / "v7_final"
 OUT_DIR = BASE / "output" / "charts"

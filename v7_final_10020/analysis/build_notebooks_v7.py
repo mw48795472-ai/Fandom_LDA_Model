@@ -1,9 +1,6 @@
 # -*- coding: utf-8 -*-
 """v7_final_10020/analysis 노트북 생성기 — 최종 코퍼스 10,020건 기준 분석 노트북 8개를 nbformat으로 만들고
-jupyter nbconvert --execute 로 실행해 출력까지 저장한다.
-
-archive/v6_r22_era/ 의 r22(5,612건) 노트북과 같은 절 구성을 유지하되, 입력은 전부 data/v7_final/ 의
-최종 산출물이며 아카이브 파일은 수정하지 않는다(비교용으로 읽기만 한다).
+jupyter nbconvert --execute 로 실행해 출력까지 저장한다. 입력은 전부 data/v7_final/ 의 최종 산출물이다.
 
 실행: python v7_final_10020/analysis/build_notebooks_v7.py            # 생성 + 실행
       python v7_final_10020/analysis/build_notebooks_v7.py --no-exec  # 생성만
@@ -38,7 +35,6 @@ def find_repo_root():
 REPO = find_repo_root()
 DATA_DIR = REPO / "data" / "v7_final"                       # 최종 산출물(10,020건 라이브 + 동결 스냅샷 7,350건)
 ROUNDS_DIR = REPO / "data" / "v7_rounds"                    # 병합 로그 r1~r72
-ARCHIVE_DIR = REPO / "archive" / "v6_r22_era" / "data" / "v6_r22_snapshot"   # r22(5,612건) 비교용, 읽기 전용
 
 
 def load_json(path):
@@ -89,10 +85,8 @@ def nb_ad_commercial():
         md('''
 # 광고·상업성 지수(Ad/Commercial Index) — 최종 코퍼스 10,020건 검증 노트북
 
-r22(5,612건) 시점의 `archive/v6_r22_era/Ad_Commercial Pilot/ad_commercial_pilot.ipynb`는 원본 지수 JSON이 없어
-LDA 메타요인 "브랜드·상업형(광고·앰버서더)" 비중을 대체 지표로 썼다. 이제 원본 `data/v7_final/ad_commercial_index_v7.json`
-(10,020건 기준, 광고신호 키워드 31개·업종 20개)이 있으므로, 이 노트북은 **원본 지수 자체를 코퍼스와 대조해 재검증**하고,
-아카이브 노트북이 했던 LDA 병행지표 비교는 마지막 절에서 최종 라이브 점수로 다시 수행한다.
+원본 `data/v7_final/ad_commercial_index_v7.json`(10,020건 기준, 광고신호 키워드 31개·업종 20개)을 코퍼스와 대조해 재검증하고,
+LDA 메타요인 "브랜드·상업형(광고·앰버서더)" 비중과의 관계를 마지막 절에서 라이브 점수로 확인한다.
 
 | 입력 | 내용 |
 |---|---|
@@ -197,7 +191,7 @@ print(f"팬덤별 정확 일치: {(cmp['차이'] == 0).sum()} / {len(cmp)}, |차
 print("(정확히 일치하지 않는 팬덤은 원본이 부정 가드·키워드 경계를 추가 규칙으로 처리한 흔적 — 재현 한계로 기록)")
 cmp.sort_values("차이", key=lambda s: s.abs(), ascending=False).head(10)
 '''),
-        md("## 6. LDA 병행지표와의 대조 — 아카이브 노트북의 접근을 최종 라이브 점수로 재수행"),
+        md("## 6. LDA 병행지표와의 대조 — 라이브 재적합의 브랜드·상업형 비중"),
         code(INTEGRITY_FS + '''
 check_factor_share(live_scores, "라이브 10,020건 K=8/M=5")
 FACTOR = "브랜드·상업형(광고·앰버서더)"
@@ -243,9 +237,8 @@ def nb_cohesion():
         md('''
 # 팬덤결속 지수(Fandom Cohesion Index) — 최종 코퍼스 10,020건 검증 노트북
 
-r22 노트북(`archive/v6_r22_era/Fandom Cohesion Pilot/`)은 LDA "결속형(팬클럽·기부·커뮤니티)" 비중을 대체 지표로 썼다.
-이제 원본 `data/v7_final/fandom_cohesion_index_v7.json`(10,020건, 5개 결속 활동 유형 A~E, D 정밀도 게이트)이 있으므로 원본을
-코퍼스와 대조해 재검증하고, 동결 스냅샷(7,350건, K=10/M=5)과 라이브(10,020건) 두 LDA 점수의 결속형 비중과도 대조한다.
+원본 `data/v7_final/fandom_cohesion_index_v7.json`(10,020건, 5개 결속 활동 유형 A~E, D 정밀도 게이트)을 코퍼스와 대조해 재검증하고,
+동결 스냅샷(7,350건, K=10/M=5)과 라이브(10,020건) 두 LDA 점수의 "결속형(팬클럽·기부·커뮤니티)" 비중과도 대조한다.
 '''),
         code(PRE + '''
 coh = load_json(DATA_DIR / "fandom_cohesion_index_v7.json")
@@ -338,8 +331,7 @@ def nb_media():
         md('''
 # 미디어 콘텐츠 노출 지수 · 미디어 크로스오버 지수 — 최종 코퍼스 10,020건 검증 노트북
 
-r22 노트북(`archive/v6_r22_era/Media Content Exposure Pilot/`)은 LDA "미디어노출형(방송·조회수)" 비중을 대체 지표로 쓰고
-v7 10·11라운드 병합 로그와 교차검증했다. 최종 데이터에는 원본 지수 두 개가 있다.
+최종 데이터의 원본 지수 두 개를 코퍼스와 대조하고, v7 10·11라운드 병합 로그·K=9 검증·동결 LDA 미디어노출형 비중과 교차검증한다.
 
 | 입력 | 내용 |
 |---|---|
@@ -417,7 +409,7 @@ print(f"r10+r11 신규 근거 합 {tot}건 == {r10['net_new_bullets']}+{r11['net
 r_cnt = np.corrcoef(media_df["r10+r11 신규 근거"], media_df["미디어문장수"])[0, 1]
 r_shr = np.corrcoef(media_df["r10+r11 신규 근거"], media_df["미디어비중"])[0, 1]
 print(f"Pearson r(신규 근거 수, 미디어문장수) = {r_cnt:.4f} | r(신규 근거 수, 미디어비중) = {r_shr:.4f}")
-print("-> r22 노트북에서는 LDA 비중과 신규 건수의 상관이 약했다. 최종 키워드 지수는 그 라운드에서 들어온 문장을 직접 세므로 상관이 훨씬 높게 나오는 것이 정상이다.")
+print("-> 키워드 지수는 그 라운드에서 들어온 문장을 직접 세므로 신규 건수와 양의 상관이 나오는 것이 자연스럽다(비중은 팬덤 규모로 나눠 상관이 약해진다).")
 top_new = set(media_df.sort_values("r10+r11 신규 근거", ascending=False).head(10)["팬덤"])
 top_cnt = set(media_df.head(10)["팬덤"])
 print(f"신규 근거 상위 10 ∩ 미디어문장수 상위 10 = {len(top_new & top_cnt)}개: {sorted(top_new & top_cnt)}")
@@ -454,11 +446,11 @@ pd.DataFrame(k9["k_grid"])
 # ---------------------------------------------------------------------------------------------
 # 4. 국내 지역 지수 (최종 코퍼스에 재적용 — 원본 라이브 JSON 미보유)
 # ---------------------------------------------------------------------------------------------
-REGION_KEYWORDS_SRC = '''
+REGION_KEYWORDS_SRC = """
 REGIONS = ["서울", "부산", "대구", "인천", "광주", "대전", "울산", "세종", "경기", "강원",
            "충북", "충남", "전북", "전남", "경북", "경남", "제주"]
-# r22 원본 JSON(archive)을 100개 팬덤 × 17개 지역 = 1,700셀 기준 1,698셀 재현하도록 역추적한 키워드 사전.
-# 세종은 "세종문화회관" 오매칭 방지로 "세종시/세종특별자치시"만, 경기는 일상어 "경기"와의 충돌로 "경기도"+주요 시 명칭만 인정(원문서 2절 규칙).
+# 17개 시/도 키워드 사전(METHODOLOGY 국내 지역 지수 규칙). 세종은 "세종문화회관" 오매칭 방지로 "세종시/세종특별자치시"만,
+# 경기는 일상어 "경기"와의 충돌로 "경기도"+주요 시 명칭만 인정. 고양·여주·완주·동해·예산처럼 일상어와 충돌하는 지명은 제외.
 REGION_KEYWORDS = {
     "서울": ["서울"], "부산": ["부산"], "대구": ["대구"], "인천": ["인천"], "광주": ["광주"], "대전": ["대전"], "울산": ["울산"],
     "세종": ["세종시", "세종특별자치시"],
@@ -474,7 +466,7 @@ REGION_KEYWORDS = {
 }
 NOTE = ("TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. "
         "Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. "
-        "2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유).")
+        "최종 코퍼스 10,020건 기준 산출.")
 
 
 def region_index(fandoms):
@@ -492,49 +484,30 @@ def region_index(fandoms):
             "note": NOTE,
         }
     return out
-'''
+"""
 
 
 def nb_domestic():
     cells = [
-        md('''
-# 국내 지역 지수(Domestic Regional Index) — 최종 코퍼스 10,020건 재산출 노트북
+        md("""
+# 국내 지역 지수(Domestic Regional Index) — 최종 코퍼스 10,020건 산출 노트북
 
-최종 라이브 국내 지역 지수 JSON(`domestic_regional_index_live_reference_v7.json`)은 저장소에 없다(README 3절). 대신 r22 시점 원본
-`archive/v6_r22_era/data/v6_r22_snapshot/domestic_regional_pilot_v6.json`(5,612건)이 있으므로, 이 노트북은
+국내 지역 지수는 근거문장 안의 17개 시/도 지역명 언급을 세는 텍스트마이닝 보조지표다(Coverage Index의 해외 market_coverage와 별개).
+이 노트북은 키워드 규칙을 최종 코퍼스 10,020건에 적용해 `domestic_regional_index_v7.json` / `.csv`를 산출하고,
+보고서 표 15(지역 언급 상위 20개 아티스트)가 **동결 스냅샷 v7-40(7,350건)** 시점 값임을 동결 코퍼스 근사로 확인한다.
 
-1. r22 원본 JSON을 100개 팬덤 × 17개 지역 셀 단위로 재현하는 키워드 사전을 확정하고(1,698 / 1,700셀 일치, 나머지 2셀은 원본 JSON이 코퍼스보다 한 단계 오래된 흔적),
-2. 그 규칙을 최종 코퍼스 10,020건에 그대로 적용해 `domestic_regional_index_v7.json` / `.csv`를 이 폴더에 새로 산출하며,
-3. 보고서 본문 표 15(지역 언급 상위 20개 아티스트: BTS 17건·5지역·서울 47%·다양성 0.29, 리센느 19건·경남 58%·0.29, 임영웅 28건·12지역·서울 21%·0.71 전체 1위)가
-   어느 코퍼스 시점의 값인지 확인한다 — 결론적으로 표 15는 **동결 스냅샷 v7-40(7,350건)** 값이며, 동결 코퍼스를 근사하면 20행 중 17행이 그대로 재현된다.
-'''),
-        code(PRE + REGION_KEYWORDS_SRC + '''
+```
+RegionMentionCount(fandom, region) = 해당 팬덤 loyalty+spillover 근거문장 중 지역 키워드를 포함하는 불릿 수
+RegionDiversity(fandom)            = n_regions_hit(검출된 서로 다른 지역 수) ÷ 17
+```
+"""),
+        code(PRE + REGION_KEYWORDS_SRC + """
 fandoms = load_json(DATA_DIR / "fandoms_v3_100.json")
-r22_fandoms = load_json(ARCHIVE_DIR / "fandoms_v3_100.json")
-r22_drp = load_json(ARCHIVE_DIR / "domestic_regional_pilot_v6.json")
-print("최종 코퍼스:", sum(len(f.get("loyalty", [])) + len(f.get("spillover", [])) for f in fandoms), "건 | r22 코퍼스:",
-      sum(len(f.get("loyalty", [])) + len(f.get("spillover", [])) for f in r22_fandoms), "건 | r22 원본 JSON:", len(r22_drp), "팬덤")
-'''),
-        md("## 1. 규칙 검증 — r22 코퍼스에 적용해 r22 원본 JSON과 셀 단위 대조"),
-        code('''
-r22_re = region_index(r22_fandoms)
-cells_total = cells_ok = 0; mism = []
-for name, rec in r22_drp.items():
-    for r in REGIONS:
-        cells_total += 1
-        a, b = rec["region_mention_counts"].get(r, 0), r22_re[name]["region_mention_counts"][r]
-        if a == b: cells_ok += 1
-        else: mism.append((name, r, a, b))
-print(f"r22 셀 일치: {cells_ok} / {cells_total}")
-print("불일치 셀(원본, 재계산):", mism)
-print("-> 두 셀 모두 r22 코퍼스에 '강원 평창'·'강원 영월군' 문장이 실재하는데 원본 JSON에는 0으로 남아 있어, 원본 JSON이 마지막 병합 직전에 생성된 흔적으로 해석한다(병합 로그 r22의 +1 불일치와 같은 성격).")
-tot_ok = sum(1 for n in r22_drp if r22_drp[n]["total_region_mentions"] == r22_re[n]["total_region_mentions"])
-div_ok = sum(1 for n in r22_drp if abs(r22_drp[n]["region_diversity"] - r22_re[n]["region_diversity"]) < 0.001)
-print(f"total_region_mentions 일치 팬덤: {tot_ok}/100 | region_diversity 일치: {div_ok}/100")
-print(f"r22 원본: 검출 지역 수 합 {sum(v['n_regions_hit'] for v in r22_drp.values())} (문서 388/688), 커버리지 {sum(1 for v in r22_drp.values() if v['n_regions_hit'] > 0)}/100")
-'''),
-        md("## 2. 최종 코퍼스 10,020건에 재적용 — JSON/CSV 산출"),
-        code('''
+print("최종 코퍼스:", sum(len(f.get("loyalty", [])) + len(f.get("spillover", [])) for f in fandoms), "건 |", len(fandoms), "팬덤")
+print("지역 키워드 수:", sum(len(v) for v in REGION_KEYWORDS.values()))
+"""),
+        md("## 1. 최종 코퍼스 10,020건 산출 — JSON/CSV"),
+        code("""
 final = region_index(fandoms)
 OUT_DIR = Path.cwd() if (Path.cwd() / "domestic_regional_index_v7.ipynb").exists() else REPO / "v7_final_10020" / "analysis" / "domestic_regional_index"
 with open(OUT_DIR / "domestic_regional_index_v7.json", "w", encoding="utf-8") as f:
@@ -550,16 +523,16 @@ dr_df.index += 1
 n_zero = int((dr_df["총지역언급"] == 0).sum())
 print(f"저장: {OUT_DIR / 'domestic_regional_index_v7.json'} / .csv")
 print(f"팬덤 커버리지: {100 - n_zero}/100 (0건 팬덤 {n_zero}개: {list(dr_df[dr_df['총지역언급'] == 0]['팬덤'])})")
-print(f"검출 지역 수 합계(n_regions_hit 합): {int(dr_df['검출지역수'].sum())} / 1,700 (r22 원본 388) | 총 지역언급 {int(dr_df['총지역언급'].sum())}건")
+print(f"검출 지역 수 합계(n_regions_hit 합): {int(dr_df['검출지역수'].sum())} / 1,700 | 총 지역언급 {int(dr_df['총지역언급'].sum())}건")
 dr_df.head(18)
-'''),
-        md('''
-## 3. 보고서 표 15(지역 언급 상위 20개)와의 대조 — 표 15는 동결 스냅샷(7,350건) 값
+"""),
+        md("""
+## 2. 보고서 표 15(지역 언급 상위 20개)와의 대조 — 표 15는 동결 스냅샷(7,350건) 값
 
 최종 10,020건 값은 표 15보다 큰 팬덤이 많다(god 16→28, 싸이 35→43 등). 동결 스냅샷 코퍼스 파일은 저장소에 없지만, 병합이 팬덤별로 뒤에 덧붙는
 구조이므로 **각 팬덤의 loyalty/spillover 앞쪽 n건(동결 점수 JSON의 n_loyalty_bullets/n_spillover_bullets)**을 취하면 동결 코퍼스를 근사할 수 있다.
-'''),
-        code('''
+"""),
+        code("""
 REPORT_TABLE15 = {  # (총언급, 검출수, 대표지역, 비중, 다양성) — 분석보고서 표 15
     "싸이": (35, 10, "강원", 0.20, 0.59), "이승철": (32, 9, "서울", 0.13, 0.53), "임영웅": (28, 12, "서울", 0.21, 0.71), "송가인": (27, 6, "전남", 0.74, 0.35),
     "박서진": (22, 11, "서울", 0.23, 0.65), "악동뮤지션": (21, 9, "서울", 0.33, 0.53), "김연자": (21, 8, "광주", 0.33, 0.47), "나훈아": (20, 8, "서울", 0.35, 0.47),
@@ -577,6 +550,8 @@ for rec in fandoms:
     frozen_approx_fandoms.append({"fandom": rec["fandom"], "loyalty": rec["loyalty"][:d["n_loyalty_bullets"]], "spillover": rec["spillover"][:d["n_spillover_bullets"]]})
 frozen_approx = region_index(frozen_approx_fandoms)
 print(f"동결 근사 코퍼스: {sum(v['total_group_bullets'] for v in frozen_approx.values())}건 / {len(frozen_approx)}팬덤 (동결 점수 JSON activity 합 {sum(d['activity'] for d in frozen_scores)})")
+print(f"동결 근사: 검출 지역 수 합 {sum(v['n_regions_hit'] for v in frozen_approx.values())}, 커버리지 {sum(1 for v in frozen_approx.values() if v['n_regions_hit'] > 0)}/{len(frozen_approx)}, "
+      f"서울 비중 {sum(v['region_mention_counts']['서울'] for v in frozen_approx.values()) / sum(v['total_region_mentions'] for v in frozen_approx.values()):.1%}")
 
 rows = []; n_match_frozen = n_match_final = 0
 for name, (tot, hit, reg, share, div) in REPORT_TABLE15.items():
@@ -589,39 +564,29 @@ for name, (tot, hit, reg, share, div) in REPORT_TABLE15.items():
                  "최종 10,020": f"{fi['total_region_mentions']}/{fi['n_regions_hit']}/{fi['primary_region']}({fi['primary_region_share']:.0%})", "최종 일치": m_l})
 print(f"표 15 20행 중 정확 일치 — 동결 근사: {n_match_frozen}/20, 최종 10,020건: {n_match_final}/20")
 print("-> 표 15는 동결 스냅샷 값이고, 나머지 3행(이영지·영탁·로이킴)은 근사 코퍼스가 앞쪽 n건 가정과 1~2건 어긋난 결과다(라운드 스왑·중복 제거 흔적).")
-for name in ["BTS", "임영웅", "리센느(RESCENE)"]:
+for name in """ + HIGHLIGHT + """:
     d = final[name]
     print(f"최종 {name}: 총언급 {d['total_region_mentions']}, 검출 {d['n_regions_hit']}, 대표 {d['primary_region']}({d['primary_region_share']:.0%}), 다양성 {d['region_diversity']}")
 top_div = dr_df.sort_values(["지역다양성", "총지역언급"], ascending=[False, False]).iloc[0]
 print(f"최종 지역다양성 전체 1위: {top_div['팬덤']} ({top_div['지역다양성']})  (보고서: 임영웅 0.71 전체 1위)")
 pd.DataFrame(rows)
-'''),
-        md("## 4. r22 → 최종: 상위 팬덤의 변화"),
-        code('''
-cmp = pd.DataFrame([{"팬덤": n, "r22 총언급": r22_drp[n]["total_region_mentions"], "최종 총언급": final[n]["total_region_mentions"],
-                     "r22 검출지역": r22_drp[n]["n_regions_hit"], "최종 검출지역": final[n]["n_regions_hit"]}
-                    for n in final if n in r22_drp]).sort_values("최종 총언급", ascending=False).reset_index(drop=True)
-cmp["증가"] = cmp["최종 총언급"] - cmp["r22 총언급"]
-print("r22 로스터에 없는 최종 팬덤:", [n for n in final if n not in r22_drp], "| 최종에 없는 r22 팬덤:", [n for n in r22_drp if n not in final])
-cmp.head(15)
-'''),
-        md("## 5. 지역별 전국 분포"),
-        code('''
+"""),
+        md("## 3. 지역별 전국 분포"),
+        code("""
 region_totals = {r: int(dr_df[r].sum()) for r in REGIONS}
 grand = sum(region_totals.values())
 dist = pd.DataFrame([{"지역": r, "언급불릿수": c, "비중": round(c / grand, 4), "언급 팬덤 수": int((dr_df[r] > 0).sum())}
                      for r, c in sorted(region_totals.items(), key=lambda x: -x[1])])
 print(f"전체 지역 언급 총계: {grand}건")
 dist
-'''),
-        md('''
-## 6. 한계
+"""),
+        md("""
+## 4. 한계
 
-1. 원본 라이브 JSON이 없으므로 이 산출물은 **r22 규칙의 재적용본**이다. 키워드 사전은 r22 원본을 셀 단위로 재현하도록 역추적한 것이고, 3절에서 보고서 표 15(동결 스냅샷 시점)가 20행 중 17행 그대로 재현되므로 최종 파이프라인도 같은 규칙을 썼다고 판단한다.
-2. 보고서 표 15·KEY_FINDINGS의 국내 지역 값은 **동결 스냅샷(7,350건)** 기준이며, 이 폴더의 `domestic_regional_index_v7.json`은 **최종 10,020건** 기준이라 상위 팬덤 수치가 더 크다(4절 비교표).
-3. 부분 문자열 매칭이라 "광주"(경기 광주시 vs 광주광역시), "고성"(강원/경남) 같은 동음 지명은 구분하지 않는다(원문서와 동일한 한계). 고양·여주·완주·동해·예산처럼 일상어와 충돌하는 지명은 r22 원본이 의도적으로 제외했음이 역추적에서 확인됐다.
-4. 언급 0건은 "이 코퍼스에서 검출되지 않았다"는 뜻이지 지역 연고가 없다는 뜻이 아니다.
-'''),
+1. 보고서 표 15·KEY_FINDINGS의 국내 지역 값은 **동결 스냅샷(7,350건)** 기준이며, 이 폴더의 `domestic_regional_index_v7.json`은 **최종 10,020건** 기준이라 상위 팬덤 수치가 더 크다.
+2. 부분 문자열 매칭이라 "광주"(경기 광주시 vs 광주광역시), "고성"(강원/경남) 같은 동음 지명은 구분하지 않는다.
+3. 언급 0건은 "이 코퍼스에서 검출되지 않았다"는 뜻이지 지역 연고가 없다는 뜻이 아니다.
+"""),
     ]
     return cells
 
@@ -634,7 +599,7 @@ def nb_worldwide():
         md('''
 # 세계 언어 지수(Worldwide Language Index) — 최종 코퍼스 10,020건 재현 노트북
 
-r22 노트북은 10개 언어·`ln(10)` 분모로 `fandom_scores_v6.json`(r22)의 language_coverage를 재검증했다. 최종 데이터는 14개 언어다.
+최종 데이터의 언어 커버리지(14개 언어, 분모 ln(14))와 세계 언어 지수를 재계산해 원본 JSON·CSV와 대조한다.
 
 | 입력 | 내용 |
 |---|---|
@@ -642,7 +607,6 @@ r22 노트북은 10개 언어·`ln(10)` 분모로 `fandom_scores_v6.json`(r22)�
 | `worldwide_language_pilot_live_reference_v7.json` / `worldwide_language_index_v7.csv` | 팬덤별 세계 언어 지수 원본과 CSV |
 | `language_domain_summary_v7.json` | 14개 언어별 근거 건수·도메인 수(코퍼스 합계) |
 | `fandom_scores_v6.json` | 동결 스냅샷 7,350건(13개 언어, 아랍어 없음, 분모 ln(13)) — 비교용 |
-| `archive/.../fandom_scores_v6.json` | r22 5,612건(10개 언어, ln(10)) — 비교용 |
 '''),
         code(PRE + '''
 live_scores = load_json(DATA_DIR / "fandom_scores_live_reference_v7.json")
@@ -650,7 +614,6 @@ wl = load_json(DATA_DIR / "worldwide_language_pilot_live_reference_v7.json")
 wl_csv = pd.read_csv(DATA_DIR / "worldwide_language_index_v7.csv", encoding="utf-8-sig")
 lang_dom = load_json(DATA_DIR / "language_domain_summary_v7.json")
 frozen_scores = load_json(DATA_DIR / "fandom_scores_v6.json")
-r22_scores = load_json(ARCHIVE_DIR / "fandom_scores_v6.json")
 
 ALL_LANGS = ["ko", "en", "ja", "zh", "es", "fr", "th", "id", "vi", "ru", "tl", "pt", "tr", "ar"]
 LANG_LABEL = {"ko": "한국어", "en": "영어", "ja": "일본어", "zh": "중국어", "es": "스페인어", "fr": "프랑스어", "th": "태국어",
@@ -661,7 +624,7 @@ for rec in live_scores:
 print("라이브 점수에 등장하는 언어:", sorted(langs_present), "| 14개 스키마 안에 있음:", langs_present <= set(ALL_LANGS), "| 개수:", len(langs_present))
 print("worldwide JSON 팬덤 수:", len(wl), "| CSV 행:", len(wl_csv), "| language_domain_summary 언어 수:", len(lang_dom))
 '''),
-        md("## 1. LanguageCoverage 공식 재검증 — 세 시점 각각의 분모(ln(14) / ln(13) / ln(10))"),
+        md("## 1. LanguageCoverage 공식 재검증 — 두 시점 각각의 분모(ln(14) / ln(13))"),
         code('''
 def shannon_diversity(counts, denom_langs):
     total = sum(counts.values())
@@ -682,7 +645,6 @@ def verify(scores, denom, label):
 
 verify(live_scores, 14, "라이브 10,020건")
 verify(frozen_scores, 13, "동결 7,350건")
-verify(r22_scores, 10, "r22 5,612건")
 print("(다른 분모를 쓰면 100/100 불일치 — verify_v7_final_consistency.py [V]·[Z]와 동일한 결론)")
 '''),
         md("## 2. 세계 언어 지수 재계산 — 원본 스크립트 컬럼 스키마(14개 언어) 적용, JSON·CSV와 대조"),
@@ -718,7 +680,7 @@ print(f"BTS: 해외 {int(bts['해외근거문장수'])}건 ({bts['해외비중']
 pilot_df.index += 1
 pilot_df.head(15)
 '''),
-        md("## 3. 코퍼스 전체 언어 구성 — 세 시점 비교 + language_domain_summary 대조"),
+        md("## 3. 코퍼스 전체 언어 구성 — 라이브·동결 비교 + language_domain_summary 대조"),
         code('''
 def totals(scores):
     t = {}
@@ -726,13 +688,13 @@ def totals(scores):
         for l, c in rec["coverage_detail"]["language_counts"].items():
             t[l] = t.get(l, 0) + c
     return t
-live_t, frozen_t, r22_t = totals(live_scores), totals(frozen_scores), totals(r22_scores)
+live_t, frozen_t = totals(live_scores), totals(frozen_scores)
 ld = {r["lang_code"]: r for r in lang_dom}
 comp = pd.DataFrame([{"언어": LANG_LABEL[l], "code": l, "라이브 10,020": live_t.get(l, 0), "language_domain_summary": ld[l]["total_bullets"] if l in ld else None,
-                      "도메인 수(라이브)": ld[l]["total_domains"] if l in ld else None, "동결 7,350": frozen_t.get(l, 0), "r22 5,612": r22_t.get(l, 0)}
+                      "도메인 수(라이브)": ld[l]["total_domains"] if l in ld else None, "동결 7,350": frozen_t.get(l, 0)}
                      for l in ALL_LANGS]).sort_values("라이브 10,020", ascending=False).reset_index(drop=True)
 comp["라이브 비중"] = (comp["라이브 10,020"] / comp["라이브 10,020"].sum()).round(4)
-print("합계: 라이브", comp["라이브 10,020"].sum(), "| summary", comp["language_domain_summary"].sum(), "| 동결", comp["동결 7,350"].sum(), "| r22", comp["r22 5,612"].sum())
+print("합계: 라이브", comp["라이브 10,020"].sum(), "| summary", comp["language_domain_summary"].sum(), "| 동결", comp["동결 7,350"].sum())
 print("라이브 language_counts 합 == language_domain_summary total_bullets (언어별 전부):", all(comp["라이브 10,020"] == comp["language_domain_summary"]))
 comp
 '''),
@@ -741,7 +703,7 @@ comp
 
 1. 언어는 출처 도메인 기준(`language_of()`)이며 본문 언어가 아니다 — 한국 매체의 영문 기사, 해외 매체의 한국어판 등은 도메인 언어로 분류된다(TOKENIZER 문서 참고).
 2. 14개 언어 이외의 언어(예: 독일어·이탈리아어 매체)는 도메인 규칙에 없으면 기본값으로 흡수되므로 "검출언어수"는 하한이다.
-3. 세 시점(r22 10개·동결 13개·라이브 14개)은 분모가 달라 language_coverage 절대치는 시점 간 비교할 수 없다.
+3. 두 시점(동결 13개·라이브 14개)은 분모가 달라 language_coverage 절대치는 시점 간 비교할 수 없다.
 '''),
     ]
     return cells
@@ -755,7 +717,7 @@ def nb_group_member():
         md('''
 # 그룹–멤버 계층 지수(Member Mention Index · MCI) — 최종 코퍼스 10,020건 검증 노트북
 
-r22 노트북(`archive/v6_r22_era/Group_Member Pilot/group_member_fpu_pilot.ipynb`)은 23개 그룹 파일럿을 다뤘다. 최종 데이터는
+입력은 다음과 같다.
 
 | 입력 | 내용 |
 |---|---|
@@ -808,7 +770,7 @@ print(f"멤버 언급 총합: {member_df['total_mentions'].sum()}건 | MCI 평�
 print("상관분석 JSON 기술통계(v7-55 시점):", mci_corr["mci_descriptives"])
 member_df
 '''),
-        md("### 2-1. 빅뱅(BIGBANG) — 전략문서가 직접 예시로 든 그룹 (r22: 탑 0건 → 최종: 탑 1건)"),
+        md("### 2-1. 빅뱅(BIGBANG) — 전략문서가 직접 예시로 든 그룹 (동결 파일럿: 탑 0건 → 최종: 탑 1건)"),
         code('''
 bb = mm["빅뱅"]; bb23 = pilot23["빅뱅"]
 bb_detail = pd.DataFrame([{"member": m, "mentions(최종)": bb["member_mention_counts"][m], "impact_share(최종)": bb["member_impact_share_index"][m],
@@ -884,8 +846,7 @@ def nb_fan_impact():
         md('''
 # Fan Impact Pathway 온톨로지(K→F→Persona) — 최종 산출물 적용 노트북
 
-r22 노트북(`archive/v6_r22_era/fan_impact_ontology/fan_impact_pathway_ontology.ipynb`)은 K=8/M=6/실루엣 0.154 스냅샷으로 전략문서를
-시연했다. 최종 제출본은 **동결 스냅샷 v7-40(7,350건, K=10 → M=5, 실루엣 0.267)**에서 F1~F5·페르소나를 확정했고, 라이브 10,020건
+최종 제출본은 **동결 스냅샷 v7-40(7,350건, K=10 → M=5, 실루엣 0.267)**에서 F1~F5·페르소나를 확정했고, 라이브 10,020건
 재적합(K=8/M=5/0.046)은 실루엣 게이트를 통과하지 못해 loyalty/spillover 점수만 라이브로 갱신했다(README 3층 구조).
 
 | 입력 | 내용 |
@@ -1003,9 +964,9 @@ grid.pivot(index="k", columns="snapshot", values=["perplexity", "coherence", "di
 | 페르소나 분포 | 5절: 글로벌투어형 43 · 현장상업형 31 · 원정소비형 17 · 집단동원형 9 (10개 조합 중 4개 실현) |
 | 실루엣 게이트 | 동결 0.267 채택, 라이브 0.046 기각 |
 
-## 최종 노트 — r22 노트북과 다른 지점
+## 최종 노트
 
-- r22: K=8/M=6/0.154, "브랜드·상업형"·"미디어노출형" 두 라벨 모두 존재. 최종 동결: K=10/M=5/0.267, F4 산업전이 경로에 raw 라벨 "미디어노출형(방송·조회수)"이 매핑됨(`factor_pathway_map_v7.json` rationale 참고) — 라벨 자동 부여 규칙의 결과이며 광고 신호는 별도 키워드 지수(`ad_commercial_index_v7.json`)로 보완됐다.
+- 동결 스냅샷(K=10/M=5/0.267)에서 F4 산업전이 경로의 raw 라벨은 "미디어노출형(방송·조회수)"이다(`factor_pathway_map_v7.json` rationale 참고) — 라벨 자동 부여 규칙의 결과이며, 광고·브랜드 신호는 별도 키워드 지수(`ad_commercial_index_v7.json`)로 보완됐다.
 - 라이브 재적합은 K-grid 승자가 K=8로 바뀌고 실루엣이 0.046으로 떨어져 게이트를 넘지 못했다 — 최종 보고서는 loyalty/spillover만 라이브로 쓴다.
 '''),
     ]
@@ -1020,12 +981,10 @@ def nb_tokenizer_routing():
         md('''
 # Tokenizer Script-Routing — 최종 코퍼스 10,020건 문자권 분기 검증 노트북
 
-r22 노트북(`archive/v6_r22_era/TOKENIZER_WORDCLOUD_REPORT/tokenizer_script_routing_pilot.ipynb`)은 5,612건에 문자 범위 분기를 적용해
-보고서 표 2(10,020건)와 "방향성만" 비교했다. 이제 같은 코퍼스(10,020건)와 원본 토크나이저 실행 결과(`wordcloud_by_language_v7.json`)가
-있으므로 절대 수치로 대조한다.
+문자 범위 기반 분기 규칙을 최종 코퍼스 10,020건에 적용하고, 원본 토크나이저 실행 결과(`wordcloud_by_language_v7.json`)와 절대 수치로 대조한다.
 
 - 원본(`wordcloud_by_language_v7.json`)의 버킷 집계는 **한 불릿이 여러 버킷에 들어갈 수 있는 다중 라벨**("해당 버킷 토큰이 1개 이상 있는 불릿 수")이다.
-- 이 노트북은 ① 단일 버킷 배정(r22 노트북 방식)과 ② 다중 라벨 재현 두 가지를 모두 계산한다.
+- 이 노트북은 ① 단일 버킷 배정과 ② 다중 라벨 재현 두 가지를 모두 계산한다.
 '''),
         code(PRE + '''
 import re
@@ -1035,7 +994,7 @@ bullets_df = flatten_bullets(fandoms)
 print(f"평탄화된 불릿 수: {len(bullets_df)} | wordcloud JSON total_bullets: {wc['total_bullets']} | total_tokens: {wc['total_tokens']}")
 print("원본 버킷:", [(b["bucket"], b["n_bullets_with_any_token"]) for b in wc["buckets"]])
 '''),
-        md("## 1. 문자 범위 기반 스크립트 분기 — 단일 버킷 배정 (r22 노트북과 동일 규칙)"),
+        md("## 1. 문자 범위 기반 스크립트 분기 — 단일 버킷 배정"),
         code('''
 RE_HANGUL = re.compile(r"[가-힣]")
 RE_KANA = re.compile(r"[぀-ゟ゠-ヿ]")

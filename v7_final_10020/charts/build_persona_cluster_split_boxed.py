@@ -1,5 +1,5 @@
 # 그림 4-2(Fan Persona 군집화 세부 구조)를 좌/우 패널로 분리해 각각 별도 PNG로 생성.
-# 원본: /home/claude/work/charts/build_persona_cluster_structure_v7.py 의 계산 로직을 그대로 유지
+# 원본 build_persona_cluster_structure_v7.py(그림 4-2 통합판)의 계산 로직을 그대로 유지
 # (데이터·통계 계산은 전혀 바꾸지 않음), 다음만 변경:
 #   - 왼쪽(덴드로그램)·오른쪽(PCA biplot)을 완전히 별도의 figure/PNG로 분리
 #   - 전체 제목(fig.suptitle)과 하단 각주(fig.text)를 각각 생략
@@ -20,7 +20,7 @@ from sklearn.decomposition import PCA
 import os
 from pathlib import Path
 
-# 저장소 상대 경로 (원본은 이전 세션 작업 디렉터리 /home/claude/work/... 절대경로였음)
+# 저장소 상대 경로
 BASE = Path(__file__).resolve().parents[2]
 DATA_DIR = BASE / "data" / "v7_final"
 OUT_DIR = BASE / "output" / "charts"

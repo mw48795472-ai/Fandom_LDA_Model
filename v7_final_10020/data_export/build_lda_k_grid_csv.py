@@ -5,7 +5,7 @@ CSV로 풀고, selected_k와 일치하는 행에 selected=True 플래그를 붙�
 
 기본값: 최종 라이브 참고 재적합(data/v7_final/lda_v6_diagnostics_live_reference_v7.json,
 10,020건 코퍼스, selected_k=8) -> data/v7_final/lda_k_grid_live_reference_v7.csv
---src/--out 으로 v6 r22 스냅샷(lda_v6_diagnostics.json)에도 사용 가능.
+--src/--out 으로 동결 진단(lda_v6_diagnostics_frozen_v7_40.json)에도 사용 가능.
 """
 import argparse
 import csv

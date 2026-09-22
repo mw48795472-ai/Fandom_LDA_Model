@@ -1,7 +1,6 @@
 # Fan Impact Pathway 온톨로지(K→F→Persona) — 최종 산출물 적용판
 
-> `archive/v6_r22_era/fan_impact_ontology/FANDOM_LDA_ONTOLOGY_STRATEGY.md`(전략 문서, 5,794건 시점) + `fan_impact_pathway_ontology.ipynb`(r22 K=8/M=6 재적합)의
-> **최종 산출물 기준 새 판**. 전략 문서 본문은 아카이브에 두고, 여기서는 최종 제출본이 그 전략을 어떻게 구현했는지와 재현 결과만 정리한다.
+> Fan Impact Pathway 전략(K Topic 카드 → F 영향경로 → Persona → Factor-specific Impact)이 최종 제출본에서 어떻게 구현됐는지와 재현 결과를 정리한다.
 > 실행 노트북: `fan_impact_pathway_v7.ipynb`.
 
 ## 1. 세 계층 — 어느 코퍼스에서 무엇이 확정됐나
@@ -43,7 +42,6 @@ K6 단독콘서트월드투어형 · K7 브랜드앰버서더형 · K8 월드투
 | 페르소나 분포 | 43/31/17/9 (JSON·PCA JSON·재계산 일치) |
 | 실루엣 게이트 | 동결 0.267 채택 / 라이브 0.046 기각 |
 
-## 5. r22 판과 달라진 점
+## 5. 라벨에 관한 참고
 
-- r22: K=8/M=6/실루엣 0.154, 라벨에 "브랜드·상업형"과 "미디어노출형"이 모두 있었다. 최종 동결: K=10/M=5/0.267, F4(산업전이 경로)의 raw 라벨은 "미디어노출형(방송·조회수)"이며 K7 브랜드앰버서더형은 F3에 묶였다(`factor_pathway_map_v7.json` rationale). 광고·브랜드 신호는 별도 키워드 지수(`ad_commercial_index_v7.json`)로 보완됐다.
-- r22 노트북의 "M=6 기준 Top-2 조합" 절은 M=5 기준으로 바뀌었고, 결과는 `fan_persona_v7.json`과 동일하다.
+- 동결 스냅샷(K=10/M=5/0.267)에서 F4(산업전이 경로)의 raw 라벨은 "미디어노출형(방송·조회수)"이며 K7 브랜드앰버서더형은 F3에 묶였다(`factor_pathway_map_v7.json` rationale). 광고·브랜드 신호는 별도 키워드 지수(`ad_commercial_index_v7.json`)로 보완됐다.

@@ -41,13 +41,12 @@ from sklearn.cluster import AgglomerativeClustering
 from sklearn.metrics import silhouette_score
 
 # ------------------------------------------------------------------------------------------
-# 입력/출력 경로 (2026-09-21 저장소 정리: 이전 세션 작업 디렉터리 /home/claude/work/data 절대경로를
+# 입력/출력 경로 (저장소 상대경로;
 # 저장소 상대경로 + CLI 인자로 교체. 파이프라인 로직은 변경하지 않았다.)
 #
 #   기본값: 최종 라이브 코퍼스(data/v7_final/fandoms_v3_100.json, 10,020건) -> 출력 output/lda_rerun/
-#   r22 스냅샷(5,612건)은 archive/v6_r22_era/data/v6_r22_snapshot/fandoms_v3_100.json 으로 --data 지정
 #
-# 주의: 이 파일은 v6~v7 r22 시점의 파이프라인이다. 최종 제출본의 라이브 참고 재적합
+# 주의: 이 파일은 최종 토크나이저 개편 이전 판의 파이프라인이다. 최종 제출본의 라이브 참고 재적합
 # (data/v7_final/lda_v6_diagnostics_live_reference_v7.json, 10,020건, K=8/M=5/실루엣 0.046)은
 # 이후 토크나이저 개편(v7 38~39라운드, 14개 언어 문자권별 라우팅)을 거친
 # run_lda_v6_live_reference_v7.py(소스 유실)로 산출된 것이라, 이 스크립트를 10,020건 코퍼스에 그대로

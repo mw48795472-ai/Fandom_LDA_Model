@@ -1,7 +1,6 @@
 # jieba(중국어)·pythainlp newmm(태국어) 토크나이저 엔진 상세명세서 — 최종 코퍼스 10,020건 판
 
-> `archive/v6_r22_era/TOKENIZER/JIEBA_AND_THAI_TOKENIZER_ENGINE_SPEC.md`(r22)의 **10,020건 기준 새 판**. 엔진 설명(1·2절)은 설치된 패키지에서 다시 조회한 값이고,
-> 코퍼스 적용 결과(3절)는 최종 코퍼스에 새로 실행한 값이다. 스크립트: `jieba_and_thai_engine_details_v7.py`, `build_bullet_token_frequency_csv_v7.py`.
+> 엔진 설명(1·2절)은 설치된 패키지에서 조회한 값이고, 코퍼스 적용 결과(3절)는 최종 코퍼스 10,020건에 실행한 값이다. 스크립트: `jieba_and_thai_engine_details_v7.py`, `build_bullet_token_frequency_csv_v7.py`.
 
 ## 1. jieba — 중국어 형태소 분석 엔진 (jieba 0.42.1, 기본 사전 349,046 표제어)
 
@@ -51,4 +50,4 @@ CSV의 문자권은 토큰 표면형에 어떤 문자가 있는지로 사후 분
 
 1. 원본 불용어 목록(STOPWORDS 41종·ENGLISH 64종·CHINESE 60여종·JAPANESE 28종 등)은 저장소에 없다 — 이 구현의 목록은 새로 만든 것이며 태국어만 pythainlp 내장 불용어를 그대로 쓴다.
 2. 따라서 절대 빈도는 원본과 비교할 수 없고, 상위 어휘의 존재 여부(3절)와 문자권 분기(노트북)만 대조한다.
-3. fugashi(unidic-lite)·jieba·pythainlp 설치가 필요하다(이 세션에서는 jieba·unidic-lite를 sdist에서 수동 설치했다).
+3. fugashi(unidic-lite)·jieba·pythainlp 설치가 필요하다(wheel이 없는 환경에서는 jieba·unidic-lite를 sdist에서 수동 설치).

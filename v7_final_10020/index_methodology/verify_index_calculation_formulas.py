@@ -1,6 +1,5 @@
 # 「Ⅲ. 지표 산정 방법」(업로드 문서)의 식 1~7을 함수로 정리하고, 실제 복구된
 # 최종 라이브 코퍼스 산출물 data/v7_final/fandom_scores_live_reference_v7.json(100개 팬덤, 10,020건)에 대해 재검증한다.
-# (2026-09-22 정리 전에는 r22 스냅샷 fandom_scores_v6.json(M=6)을 읽었다 — 현재는 archive/v6_r22_era/ 에 있음)
 # 문서 원문: docs/INDEX_CALCULATION_METHODOLOGY.md 참고.
 #
 # 이 스크립트가 하는 것:
@@ -8,8 +7,8 @@
 #   2) 식(4)/(6) 정규화 섀넌 엔트로피(팩터 다양성) 재검증
 #   3) 식(7) Activity 재검증
 #   4) 식(1) EvidenceScore의 보너스 키워드 목록을 "문서 원문 그대로" 정리하고,
-#      기존 재구성 코드(scripts/notebook_generator/build_notebook.py)의 키워드 목록과
-#      한 글자 단위로 대조해 실제 불일치를 코드로 재현한다.
+#      구현 시 흔히 어긋나는 형태("창단"→"창당" 오기, n_num을 숫자 문자 개수로 세는 것)와
+#      한 글자 단위로 대조해 그 차이가 실제로 결과를 바꾸는지 코드로 보여준다.
 #
 # 무결성 원칙: 이 프로젝트의 다른 검증 스크립트와 동일하게, "결과를 눈으로 믿지 않고
 # 프로그램이 재대조"한다 — 아래 각 절은 재계산값과 원본 값을 직접 비교해 불일치 건수를
@@ -52,7 +51,7 @@ def n_num_by_pattern(text: str) -> int:
 
 
 def n_num_by_digit_count(text: str) -> int:
-    """기존 재구성 코드(build_notebook.py)의 실제 구현: 개별 숫자 문자 수."""
+    """어긋난 구현 예시: 수치표현 패턴이 아니라 개별 숫자 문자 수를 센다."""
     return len(re.findall(r"\d", text))
 
 
@@ -81,24 +80,24 @@ def activity(n_loyalty_bullets: int, n_spillover_bullets: int) -> int:
 
 # ---------------------------------------------------------------------------
 def check_keyword_lists():
-    """기존 재구성 코드의 키워드 목록(build_notebook.py에서 그대로 옮김)과 문서 원문을 대조."""
+    """어긋난 구현 예시의 키워드 목록과 문서 원문을 대조."""
     reconstructed_loyalty_kw = [
         "기부", "돌파", "매진", "출범", "창당", "결성", "총공", "역사", "지속",
         "확장", "1위", "최초", "신기록", "밀리언셀러", "팬클럽", "팬카페", "결속",
         "충성", "세대",
-    ]  # scripts/notebook_generator/build_notebook.py LOYALTY_BONUS_KW (그대로 옮김)
+    ]  # "창단"이 "창당"으로 어긋난 구현 예시
     reconstructed_spillover_kw = SPILLOVER_BONUS_KW  # 이 목록은 문서와 완전히 동일
 
     loyalty_diff = set(LOYALTY_BONUS_KW) ^ set(reconstructed_loyalty_kw)
     spillover_diff = set(SPILLOVER_BONUS_KW) ^ set(reconstructed_spillover_kw)
 
-    print("[검증] 충성도 보너스 키워드 — 문서 원문 vs 기존 재구성 코드")
+    print("[검증] 충성도 보너스 키워드 — 문서 원문 vs 어긋난 구현 예시")
     print(f"  문서: {len(LOYALTY_BONUS_KW)}개 / 코드: {len(reconstructed_loyalty_kw)}개")
     print(f"  불일치 키워드: {loyalty_diff if loyalty_diff else '없음'}")
     if loyalty_diff:
         print("  -> '창단'(문서, 그룹 결성)과 '창당'(코드, 정당 결성)의 한 글자 차이 오기로 추정")
 
-    print("[검증] 파급효과 보너스 키워드 — 문서 원문 vs 기존 재구성 코드")
+    print("[검증] 파급효과 보너스 키워드 — 문서 원문 vs 어긋난 구현 예시")
     print(f"  문서: {len(SPILLOVER_BONUS_KW)}개 / 코드: {len(reconstructed_spillover_kw)}개")
     print(f"  불일치 키워드: {spillover_diff if spillover_diff else '없음'}")
 
@@ -109,12 +108,12 @@ def check_n_num_definitions():
         "EP 《16 Fantasy》는 피지컬 1만 3,653장이 판매되었다",
         "2024년 발매, 빌보드 200에도 이름을 올렸다",
     ]
-    print("\n[검증] n_num 정의 차이 — 문서(패턴 개수) vs 기존 코드(숫자 문자 개수) 실제 비교")
+    print("\n[검증] n_num 정의 차이 — 문서(패턴 개수) vs 어긋난 구현(숫자 문자 개수) 실제 비교")
     for t in samples:
         by_pattern = n_num_by_pattern(t)
         by_digit = n_num_by_digit_count(t)
         flag = "  <- 다름" if by_pattern != by_digit else ""
-        print(f'  "{t}"\n    문서 정의(패턴 개수)={by_pattern}, 기존 코드(숫자문자 개수)={by_digit}{flag}')
+        print(f'  "{t}"\n    문서 정의(패턴 개수)={by_pattern}, 어긋난 구현(숫자문자 개수)={by_digit}{flag}')
 
 
 def verify_against_real_data():

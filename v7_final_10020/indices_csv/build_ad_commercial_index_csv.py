@@ -9,7 +9,7 @@ import json
 import csv
 from pathlib import Path
 
-# 저장소 상대 경로 (원본은 이전 세션 작업 디렉터리 /home/claude/work/... 절대경로였음).
+# 저장소 상대 경로
 # 입력 JSON은 최종 라이브 코퍼스(10,020건) 기준 산출물이며, 아직 저장소에 없으면 data/v7_final/ 에 넣는다.
 BASE = Path(__file__).resolve().parents[2]
 OUT_DIR = BASE / "output" / "indices_csv"

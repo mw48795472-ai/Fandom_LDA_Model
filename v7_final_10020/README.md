@@ -1,20 +1,19 @@
 # v7_final_10020 — 최종 근거 코퍼스 10,020건 기준 문서·코드·노트북
 
-최신 근거 코퍼스(라이브 10,020건)와 그로부터 동결된 해석 계층(v7-40 스냅샷 7,350건)을 기준으로 집계된 **모든 MD·파이썬 코드·노트북**을
-이 폴더 하나에 모았다(2026-09-22 재구성). 데이터 파일은 그대로 `data/v7_final/`·`data/v7_rounds/`에 있고, 이전 시점(r22, 5,612건) 자료는
-`archive/v6_r22_era/`에 분리돼 있다. 루트에는 README·제출 PDF·HTML 2종·`verify_v7_final_consistency.py`·`run_lda_v6.py`만 남긴다.
+최종 근거 코퍼스(라이브 10,020건)와 그로부터 동결된 해석 계층(v7-40 스냅샷 7,350건)을 기준으로 집계된 **모든 MD·파이썬 코드·노트북**을
+이 폴더 하나에 둔다. 데이터 파일은 `data/v7_final/`·`data/v7_rounds/`에 있고, 루트에는 README·제출 PDF·HTML 2종·`verify_v7_final_consistency.py`·`run_lda_v6.py`만 둔다.
 
-| 하위 폴더 | 내용 | 이전 위치 |
-|---|---|---|
-| `docs/` | `KEY_FINDINGS.md`(인용 수치·근거 파일), `METHODOLOGY.md`(방법론), `FINAL_REPORT_SUMMARY.md`(보고서 요약), `PYTHON_CODE_SUMMARY.md`(코드 총정리) | 루트 |
-| `analysis/` | 보조지표 7종·Fan Impact Pathway·토크나이저 라우팅 **노트북 8개(실행 결과 포함) + 문서**, `build_notebooks_v7.py` 생성기, 토크나이저 스크립트 3종·토큰 빈도 CSV, 최종 기술 상세명세서, 국내 지역 지수 최종 재산출 JSON/CSV | `v7_final_analysis/` |
-| `charts/` | 최종 보고서 그림 스크립트(팬덤결속 지수 2종, 페르소나 덴드로그램·PCA) | `charts/` |
-| `indices_csv/` | 지수 CSV 산출(광고·상업성, 국내 지역, 세계 언어) | `indices_csv/` |
-| `data_export/` | HTML 내장 데이터 추출, 코퍼스 평탄화, K-grid·결속/크로스오버 CSV, 성장 이력 CSV | `data_export/` |
-| `silhouette_gate_policy/` | 실루엣 게이트 정책 문서 + 타임라인 차트 스크립트 | `Silhoett Gate Policy/` |
-| `tokenizer_wordcloud_report/` | 토크나이저·워드클라우드 보고서(10,020건 실행 결과) + 이미지 | `TOKENIZER_WORDCLOUD_REPORT/` |
-| `index_methodology/` | 지표 산식 문서 + 라이브 점수 JSON으로 식(2)(3)(6)(7) 재검증 스크립트 | `지표 산정 방법론/` |
-| `report_scripts/` | 요약보고서 docx 빌드 스크립트(Node.js) + JS 정리 문서 | `보고서 스크립트 작성/` |
+| 하위 폴더 | 내용 |
+|---|---|
+| `docs/` | `KEY_FINDINGS.md`(인용 수치·근거 파일), `METHODOLOGY.md`(방법론), `FINAL_REPORT_SUMMARY.md`(보고서 요약), `PYTHON_CODE_SUMMARY.md`(코드 총정리) |
+| `analysis/` | 보조지표 7종·Fan Impact Pathway·토크나이저 라우팅 **노트북 8개(실행 결과 포함) + 문서**, `build_notebooks_v7.py` 생성기, 토크나이저 스크립트 3종·토큰 빈도 CSV, 최종 기술 상세명세서, 국내 지역 지수 JSON/CSV |
+| `charts/` | 최종 보고서 그림 스크립트(팬덤결속 지수 2종, 페르소나 덴드로그램·PCA) |
+| `indices_csv/` | 지수 CSV 산출(광고·상업성, 국내 지역, 세계 언어) |
+| `data_export/` | HTML 내장 데이터 추출, 코퍼스 평탄화, K-grid·결속/크로스오버 CSV, 성장 이력 CSV |
+| `silhouette_gate_policy/` | 실루엣 게이트 정책 문서 + 타임라인 차트 스크립트 |
+| `tokenizer_wordcloud_report/` | 토크나이저·워드클라우드 보고서(10,020건 실행 결과) + 이미지 |
+| `index_methodology/` | 지표 산식 문서 + 라이브 점수 JSON으로 식(2)(3)(6)(7) 재검증 스크립트 |
+| `report_scripts/` | 요약보고서 docx 빌드 스크립트(Node.js) + JS 정리 문서 |
 
 ## 경로 규칙
 

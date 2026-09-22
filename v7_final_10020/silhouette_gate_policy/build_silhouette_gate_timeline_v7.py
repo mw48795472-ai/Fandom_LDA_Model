@@ -1,20 +1,18 @@
 # Figure: 팬덤100 LDA 파이프라인 — 근거 코퍼스 규모 vs. Meta-Factor 실루엣 계수 타임라인
-# (v4 종료 ~ v7 61라운드, 이중축)
+# (v4 종료 ~ v7 r66(2차), 이중축)
 #
-# 입력: data/silhouette_gate_timeline/corpus_silhouette_timeline_v7_66_2ch.csv (2026-09-22 추가, v4 종료~v7 r66(2차))
-#   (문서 작성 당시 버전은 ..._v7_62.csv, r61까지. 새 CSV는 r62~r66(2차) 실측 6개 지점이 더 있다.)
-#   - 사용자가 이번 세션에 직접 업로드한 실측 타임라인 데이터. "실측" 행(순서 -4~61)과
-#     "[추정·선형보간]" 행(구 토크나이저가 일관되게 쓰인 두 구간, v5~r27 · r29~r34에서만
-#     양 끝 실측값을 선형보간한 것) 두 종류가 라운드 컬럼 문자열로 구분되어 있다.
-#   - v7 38~39라운드 사이(토크나이저 개편)와 v7 40~45라운드 구간은 방법론이 바뀌어
-#     보간 자체가 불가능하므로, 실측점만 점선으로 잇는다(중간값을 추정하지 않는다).
+# 입력: data/silhouette_gate_timeline/corpus_silhouette_timeline_v7_66_2ch.csv
+#   - 실측 타임라인 데이터. "실측" 행과 "[추정·선형보간]" 행(토크나이저가 일관되게 쓰인
+#     구간에서만 양 끝 실측값을 선형보간한 것) 두 종류가 라운드 컬럼 문자열로 구분되어 있다.
+#   - v7 38~39라운드 사이(토크나이저 개편) 등 방법론이 바뀐 지점은 보간 자체가 불가능하므로,
+#     실측점만 점선으로 잇는다(중간값을 추정하지 않는다).
 #
-# 이 스크립트는 "실루엣 게이트" 거버넌스 정책(docs/SILHOUETTE_GATE_POLICY.md 참고 — 새
+# 이 스크립트는 "실루엣 게이트" 거버넌스 정책(SILHOUETTE_GATE_POLICY.md 참고 — 새
 # K→M 재군집화 결과가 동결 기준선(v7-40 스냅샷, silhouette=0.267)을 넘지 못하면 해석
-# 계층에 반영하지 않고 자동 기각)을 시각적으로 보여주기 위해, 코퍼스가 61라운드 동안
-# 1,781건→9,042건(+408%)으로 계속 성장하는데도 게이트 정책 구간(v7 46~61, 14회 연속
-# 기각)의 실루엣은 기준선에 전혀 접근하지 못하고 등락만 반복함(상관계수 r≈-0.10, 코퍼스
-# 크기와 사실상 무관)을 대비시킨다.
+# 계층에 반영하지 않고 자동 기각)을 시각적으로 보여주기 위해, 코퍼스가
+# 1,781건→9,680건(+443%, 최종 10,020건)으로 계속 성장하는데도 게이트 정책 구간(v7 46~66 2차,
+# 실측 20회 연속 기각)의 실루엣은 기준선에 전혀 접근하지 못하고 등락만 반복함(상관계수
+# r≈+0.15, 코퍼스 크기와 사실상 무관)을 대비시킨다.
 import json
 import csv as csv_module
 import os
@@ -29,7 +27,7 @@ import matplotlib.patches as mpatches
 import numpy as np
 import pandas as pd
 
-# 저장소 상대 경로 (원본은 이전 세션 작업 디렉터리 /home/claude/work/... 절대경로였음)
+# 저장소 상대 경로
 BASE = Path(__file__).resolve().parents[2]
 OUT_DIR = BASE / "output" / "charts"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -63,7 +61,7 @@ df["라운드_clean"] = df["라운드"].astype(str).str.replace(r"\s*\[추정.*\
 
 real = df[~df["is_estimate"]].sort_values("순서").reset_index(drop=True)
 interp = df[df["is_estimate"]].sort_values("순서").reset_index(drop=True)
-# 게이트 구간 끝은 CSV의 마지막 실측 라운드(v7_62 판=61, v7_66_2ch 판=66.5)로 자동 결정
+# 게이트 구간 끝은 CSV의 마지막 실측 라운드(현재 r66(2차)=66.5)로 자동 결정
 GATE_END = float(real.dropna(subset=["실루엣"])["순서"].max())
 LAST_ROW = real.dropna(subset=["실루엣"]).sort_values("순서").iloc[-1]
 
@@ -81,9 +79,9 @@ gate_61 = real[(real["순서"] >= GATE_START) & (real["순서"] <= 61)].dropna(s
 r39_40 = real[real["순서"].isin([39, 40])]
 
 print(f"[검증] 게이트 구간(v7 {GATE_START}~{GATE_END:g}) 실측 라운드 수: {len(gate_rows)}건, 전부 기준선 미달: {(gate_rows['실루엣'] < BASELINE_SILHOUETTE).all()}")
-print(f"[검증] 문서 기준 구간(v7 46~61) 실측 {len(gate_61)}건 (문서: 14회 연속 기각), 상관 r={np.corrcoef(gate_61['코퍼스(불릿수)'], gate_61['실루엣'])[0, 1]:.4f} (문서: r≈-0.10)")
+print(f"[검증] 부분 구간(v7 46~61) 실측 {len(gate_61)}건, 상관 r={np.corrcoef(gate_61['코퍼스(불릿수)'], gate_61['실루엣'])[0, 1]:.4f}")
 print(f"[검증] 게이트 구간 전체({GATE_START}~{GATE_END:g}) 코퍼스-실루엣 상관계수 r={gate_corr:.4f}")
-print(f"[검증] 코퍼스 성장: {int(v4_end)}건 -> r61 {int(r61_val)}건 (문서: 1,781→9,042, +408%) -> 마지막 실측 {LAST_ROW['라운드_clean']} {int(last_val)}건 (+{growth_pct:.0f}%)")
+print(f"[검증] 코퍼스 성장: {int(v4_end)}건 -> r61 {int(r61_val)}건  -> 마지막 실측 {LAST_ROW['라운드_clean']} {int(last_val)}건 (+{growth_pct:.0f}%)")
 print(f"[검증] v7 39~40라운드(동결 기준선) 실루엣={r39_40['실루엣'].unique().tolist()}, "
       f"K={r39_40['K'].unique().tolist()}, M={r39_40['M'].unique().tolist()} (기준: 0.267/K=10/M=5)")
 

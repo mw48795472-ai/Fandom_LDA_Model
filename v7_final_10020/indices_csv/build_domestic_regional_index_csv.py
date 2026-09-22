@@ -9,17 +9,17 @@ import json
 import csv
 from pathlib import Path
 
-# 저장소 상대 경로 (원본은 이전 세션 작업 디렉터리 /home/claude/work/... 절대경로였음).
+# 저장소 상대 경로
 # 입력 JSON은 최종 라이브 코퍼스(10,020건) 기준 산출물이며, 아직 저장소에 없으면 data/v7_final/ 에 넣는다.
 BASE = Path(__file__).resolve().parents[2]
 OUT_DIR = BASE / "output" / "indices_csv"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
-# 데이터 아카이브 README(data/v7_final/ARCHIVE_README_original.md)에는 domestic_regional_pilot_v6.json(라이브판)으로
-# 등재되어 있다. 두 이름 중 v7_final 에 존재하는 쪽을 읽는다(r22 파일럿판은 data/v6_r22_snapshot/ 에 별도).
+# 원본 데이터 묶음 README(data/v7_final/ARCHIVE_README_original.md)에는 domestic_regional_pilot_v6.json(라이브판)으로
+# 등재되어 있다. 두 이름 중 v7_final 에 존재하는 쪽을 읽는다
 _CANDS = [BASE / "data" / "v7_final" / "domestic_regional_index_live_reference_v7.json",
           BASE / "data" / "v7_final" / "domestic_regional_pilot_v6.json",
-          # 원본 라이브 JSON 미보유 시: r22 규칙을 최종 코퍼스 10,020건에 재적용한 재산출본(2026-09-22, analysis/domestic_regional_index/)
+          # 최종 코퍼스 10,020건 산출본(analysis/domestic_regional_index/)
           BASE / "v7_final_10020" / "analysis" / "domestic_regional_index" / "domestic_regional_index_v7.json"]
 SRC = next((c for c in _CANDS if c.exists()), _CANDS[0])
 OUT = OUT_DIR / "domestic_regional_index_v7.csv"
