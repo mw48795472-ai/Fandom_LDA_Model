@@ -459,7 +459,7 @@ info("실험 코퍼스는 9,614 문서(중간 라운드, 10,018과 다름). K=9 
      f"corpus_docs={k9['corpus_docs']}, vocab={k9['vocab_size']}")
 
 # ---------------------------------------------------------------------------
-# [R] 2026-09-22 4차 추가: 미디어·콘텐츠 노출 지수 · 멤버 파일럿 v7 · v7_progress(r48)
+# [R] 2026-09-22 4차 추가: 미디어·콘텐츠 노출 지수 · v7_progress(r48)
 # ---------------------------------------------------------------------------
 print("\n[R] media_exposure_v7.json (미디어·콘텐츠 노출 지수, 라이브 10,020건)")
 with open(D / "media_exposure_v7.json", encoding="utf-8") as f:
@@ -471,13 +471,6 @@ check("팬덤별 n_total_bullets = 코퍼스, Σn_media_bullets = 1,025, Σ서�
       and all(sum(x["subtag_counts"].get(t, 0) for x in mex["fandoms"]) == mex["subtag_totals"][t] for t in mex["subtags"]))
 mex_hi = {x["fandom"]: x for x in mex["fandoms"]}
 info("하이라이트 미디어 불릿", f"임영웅 {mex_hi['임영웅']['n_media_bullets']}건({mex_hi['임영웅']['media_share']:.1%}, 전체 1위) · 리센느 {mex_hi['리센느(RESCENE)']['n_media_bullets']}건 · BTS {mex_hi['BTS']['n_media_bullets']}건")
-
-print("\n[S] member_mention_pilot_v7.json (아카이브 원본명) ↔ member_mention_index_v7.json")
-with open(D / "member_mention_pilot_v7.json", encoding="utf-8") as f:
-    mp7 = json.load(f)
-check("45개 그룹, 언급 카운트·비중·MCI 값이 member_mention_index_v7.json과 전부 동일 (키 이름만 pilot/index)",
-      set(mp7) == set(midx) and all(mp7[g]["member_mention_counts"] == midx[g]["member_mention_counts"] and mp7[g]["mci_pilot"] == midx[g]["mci_index"]
-                                    and mp7[g]["total_group_bullets"] == corpus_cnt[g] for g in mp7))
 
 print("\n[T] v7_progress.json (data/v7_final 판 = v7 48라운드 시점)")
 with open(D / "v7_progress.json", encoding="utf-8") as f:
@@ -584,7 +577,7 @@ check("fandom_bullet_share_v6.csv: 100개 팬덤, 합 5,454건 = 타임라인 r1
       f"합 {bs_tot}, 로스터에 창모·사이먼도미닉·헤이즈 포함(r22 이전 로스터)")
 with open(D / "supplementary_csv" / "domestic_regional_pilot_v6_top3.csv", encoding="utf-8-sig") as f:
     top3 = list(csv.DictReader(f))
-with open(BASE / "data" / "v6_r22_snapshot" / "domestic_regional_pilot_v6.json", encoding="utf-8") as f:
+with open(BASE / "archive" / "v6_r22_era" / "data" / "v6_r22_snapshot" / "domestic_regional_pilot_v6.json", encoding="utf-8") as f:
     pj = json.load(f)
 t3_sum = sum(int(r["근거 문장 수"]) for r in top3)
 t3_match = sum(1 for r in top3 if int(r["총 지역언급"]) == pj[r["팬덤"]]["total_region_mentions"] and int(r["검출 지역 수"]) == pj[r["팬덤"]]["n_regions_hit"] and abs(float(r["요인 다양성"]) - pj[r["팬덤"]]["region_diversity"]) < 1e-6)
@@ -592,17 +585,20 @@ check("domestic_regional_pilot_v6_top3.csv: 100개 팬덤, 근거문장수 합 5
       len(top3) == 100 and t3_sum == 5998 and t3_match == 99, f"합 {t3_sum}, r22 파일럿 일치 {t3_match}/100")
 
 # ---------------------------------------------------------------------------
-# [AB] data/v7_rounds/ — 사용자가 GitHub에 직접 업로드한 v7 라운드별 병합·교체 로그 전량 (r1~r72)
+# [AB] data/v7_rounds/ — 사용자가 GitHub에 직접 업로드한 v7 라운드별 병합·교체 로그 전량 (r1~r72) + v6 단계 로그 3개
 # ---------------------------------------------------------------------------
 print("\n[AB] data/v7_rounds/ (v7 병합·교체 로그 전량)")
 RD = BASE / "data" / "v7_rounds"
 def _rk(n):
     m = re.search(r"r(\d+)(?:_(p2|2ch))?", n); return (int(m.group(1)), {"": 0, "p2": 1, "2ch": 2}[m.group(2) or ""])
 mlogs = sorted(RD.glob("merge_log_r*.json"), key=lambda p: _rk(p.name))
-same22 = sum(1 for p in (BASE / "data" / "v6_r22_snapshot" / "v7_rounds").glob("merge_log_r*.json")
-             if (RD / p.name).exists() and json.load(open(p, encoding="utf-8")) == json.load(open(RD / p.name, encoding="utf-8")))
-check("r1~r22 병합 로그 22개 = data/v6_r22_snapshot/v7_rounds/ 사본과 동일", same22 == 22, f"{same22}/22")
 def _ba(d): return d.get("before_total", d.get("before_total_bullets")), d.get("after_total", d.get("after_total_bullets"))
+with open(BASE / "archive" / "v6_r22_era" / "data" / "v6_r22_snapshot" / "csv" / "corpus_growth_history_v6_v7.csv", encoding="utf-8-sig") as f:
+    r22_hist = {r["stage"]: r for r in csv.DictReader(f)}
+same22 = sum(1 for p in mlogs if _rk(p.name)[0] <= 22 and str(_ba(json.load(open(p, encoding="utf-8")))[1]) == r22_hist.get("v7_round%d" % _rk(p.name)[0], {}).get("after_total"))
+r22_after = _ba(json.load(open(RD / "merge_log_r22.json", encoding="utf-8")))[1]
+check("r1~r21 병합 로그 after_total = r22 스냅샷 성장 이력 CSV(archive) 값 21/21; r22만 로그 5,613 vs 실제 코퍼스 5,612 (기존 문서화된 +1 기록 오차)",
+      same22 == 21 and r22_after == 5613 and r22_hist["v7_round22"]["after_total"] == "5612", f"일치 {same22}/22, r22 로그 {r22_after} vs CSV {r22_hist['v7_round22']['after_total']}")
 last = json.load(open(mlogs[-1], encoding="utf-8"))
 check("마지막 병합 로그 r72: 9,939 → 10,020 (최종 라이브 코퍼스 규모)", mlogs[-1].name == "merge_log_r72.json" and _ba(last) == (9939, 10020))
 tl_map = {r["라운드"]: r["코퍼스(불릿수)"] for r in real_rows}

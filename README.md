@@ -7,9 +7,9 @@
 > **2026-09-21 정리** — 그동안 이 저장소에는 v7 라운드22 스냅샷(근거문장 5,612건)만 있었고, 최종 제출본이
 > 근거로 삼은 **라이브 코퍼스 10,020건과 최종 산출물은 없어서** 문서·코드 곳곳이 "10,020건은 이 세션에
 > 없어 재현 불가"라고 적혀 있었다. 이번 정리에서 최종 코퍼스와 산출물을 `data/v7_final/`로 추가하고,
-> 5,612건 스냅샷은 `data/v6_r22_snapshot/`으로 옮겨 두 데이터가 같은 파일명으로 섞이지 않게 했다.
+> 5,612건 스냅샷은 `archive/v6_r22_era/data/v6_r22_snapshot/`으로 옮겨 두 데이터가 같은 파일명으로 섞이지 않게 했다.
 > 최종 수치가 저장소 파일에서 실제로 재현되는지는 `verify_v7_final_consistency.py`가 항목별로 검증한다
-> (현재 97/97 일치. 지난 정리에서 유일하게 재현되지 않던 χ² 값도 2026-09-22 추가 파일로 해소, 아래 "재현성 범위" 참고).
+> (현재 96/96 일치. 지난 정리에서 유일하게 재현되지 않던 χ² 값도 2026-09-22 추가 파일로 해소, 아래 "재현성 범위" 참고).
 
 ---
 
@@ -23,13 +23,13 @@
 |---|---|---|---|
 | **동결 스냅샷 v7-40** (해석 계층) | 7,350건 | LDA K=10 → M=5 메타요인(실루엣 0.267), 팬덤별 F1~F5 비중, 페르소나 4유형(글로벌투어형 43·현장상업형 31·원정소비형 17·집단동원형 9), KEY_FINDINGS 하이라이트 표의 loyalty/spillover(BTS 0.931/1.000, 임영웅 0.899/0.702, 리센느 0.444/0.304) | `data/v7_final/fandom_scores_v6.csv` / `.json` (activity 합 = 7,350; JSON에 raw 점수·coverage_detail), `fan_persona_v7.json`, `topic_cards_v7.json`, `lda_v6_diagnostics_frozen_v7_40.json`, `persona_decision_space_v7.json`, `Persona_결정공간.html` |
 | **라이브 코퍼스 (최종)** | 10,020건 (14개 언어권) | 충성도·파급효과 점수(표본 평균 0.3710 / 0.2661), 4구획(핵심전략형 24·내부결속형 17·외부견인형 10·주변부 49), 상관·회귀·Cook's D 등 강건성 통계, 보조지표 7종, 언어·도메인 표, 3D 포지셔닝 맵, 게이트에 기각된 라이브 재적합(K=8, M=5, 실루엣 0.046) | `data/v7_final/fandoms_v3_100.json` (**근거문장 원본 10,020건**), `fandom_scores_live_reference_v7.csv`(원본 산출물, 라이브 재적합 F 비중 포함), `chart3d_payload_live_reference_v7.json`, `chart3d_positioning_rows_live_v7.csv`, `media_crossover_index_v7.json`, `lda_excluded_bullets_v7.json`, `language_domain_summary_v7.json`, `lda_v6_diagnostics_live_reference_v7.json`, `member_mention_index_v7.json`, `bullets_flat_v7_final.csv`, `3D_포지셔닝맵_국내100팬덤.html` |
-| **v6 r22 스냅샷** (과거 시점) | 5,612건 | K=8, M=6, 실루엣 0.154 — 최종 수치가 아니다. 파이프라인이 실제로 어떻게 동작했는지 보여주는 실물 증거이며, 각 파일럿 노트북(`*/…_pilot.ipynb`)의 입력 | `data/v6_r22_snapshot/` 전체 |
+| **v6 r22 스냅샷** (과거 시점) | 5,612건 | K=8, M=6, 실루엣 0.154 — 최종 수치가 아니다. 파이프라인이 실제로 어떻게 동작했는지 보여주는 실물 증거이며, 각 파일럿 노트북(`*/…_pilot.ipynb`)의 입력 | `archive/v6_r22_era/data/v6_r22_snapshot/` 전체 |
 
 **로스터 차이**: 동결 스냅샷의 100개 팬덤과 라이브 코퍼스의 100개 팬덤은 3개가 다르다(동결에만 한로로·pH-1·BE'O, 라이브에만
 몬스타엑스·투어스(TWS)·빈지노 — v7 r62~ 로스터 교체). 페르소나·F1~F5 비중은 동결 로스터, 점수·4구획·보조지표는 라이브 로스터 기준이다.
 
 `fandom_scores_v6.csv`, `run_lda_v6.py` 등 이름의 **"v6"은 파이프라인 버전명**이지 데이터 시점이 아니다.
-`data/v7_final/fandom_scores_v6.csv`(7,350건 동결 스냅샷 산출)와 `data/v6_r22_snapshot/fandom_scores_v6.csv`
+`data/v7_final/fandom_scores_v6.csv`(7,350건 동결 스냅샷 산출)와 `archive/v6_r22_era/data/v6_r22_snapshot/fandom_scores_v6.csv`
 (5,612건 r22 산출)는 이름만 같은 다른 파일이다.
 
 ## 2. 보고서 수치 ↔ 저장소 파일 대응 (verify_v7_final_consistency.py 결과)
@@ -93,30 +93,36 @@
   `domestic_regional_pilot_v6_top3.csv`는 r24 5,998건 시점). 6차 추가분에는 동결 스냅샷 점수 JSON(`fandom_scores_v6.json`)도 있다. 아카이브 README에 `factor_clustering_structure_v7.json`은 없으므로 페르소나 덴드로그램 차트 입력은
   아카이브 밖에서 만들어진 파일로 보인다(같은 K→M 코사인거리 행렬 형식의 예는 `_explore_r45_meta_factor.json`에 있음).
 
-## 4. 폴더 구성
+## 4. 폴더 구성 (2026-09-22 정리 후)
+
+루트에는 최종 코퍼스(10,020건)·동결 스냅샷(7,350건) 기준 자료만 두고, r22(5,612건) 시점 자료·병행 분석 노트북·문서는
+`archive/v6_r22_era/`로 옮겼다. 완전 중복이던 파일은 삭제했다(아래 "정리 내역").
 
 ```
 README.md / KEY_FINDINGS.md / METHODOLOGY.md / FINAL_REPORT_SUMMARY.md / PYTHON_CODE_SUMMARY.md
 (분석보고서)…최종.pdf, (요약보고서)…최종.pdf         제출본
 3D_포지셔닝맵_국내100팬덤.html + plotly-bundle.js    라이브 10,020건 3D 맵 (같은 폴더에서 열면 동작)
 Persona_결정공간.html                                동결 스냅샷 K=10→M=5 덴드로그램·PCA·레이더
-verify_v7_final_consistency.py                       최종 수치 ↔ 파일 정합성 검증 (97개 항목)
-run_lda_v6.py                                        LDA 파이프라인(v6~r22 시점) — --data/--out 인자
+verify_v7_final_consistency.py                       최종 수치 ↔ 파일 정합성 검증
+run_lda_v6.py                                        LDA 파이프라인(v6~r22 시점 코드, --data/--out 인자; 기본 입력 = 최종 코퍼스)
 data/
-  v7_final/            최종 라이브 코퍼스 10,020건 + 최종 산출물 (1절 표 참고)
-  v6_r22_snapshot/     v7 라운드22 스냅샷 5,612건 (+ v7_rounds/ r1~r22 병합로그, csv/ 파생 CSV)
-  v7_rounds/           v7 병합·교체 로그 전량 r1~r74 (사용자 직접 업로드; 마지막 r72가 10,020건)
-  silhouette_gate_timeline/  실루엣 게이트 타임라인 CSV
-data_export/           코퍼스 평탄화·K-grid·라이브 점수 CSV·HTML 내장 데이터 추출 스크립트
-charts/ indices_csv/   최종 보고서 그림·지수 CSV 스크립트 (입력 JSON은 data/v7_final/ 에서 읽음)
+  v7_final/            최종 라이브 코퍼스 10,020건 + 최종 산출물 + 동결 스냅샷 산출물 (1절 표, 폴더 README 참고)
+  v7_rounds/           v6 단계 로그 3개 + v7 병합·교체 로그 전량 r1~r74 (마지막 r72가 10,020건)
+  silhouette_gate_timeline/  실루엣 게이트 타임라인 CSV (v4 종료~r66 2차)
+data_export/           HTML 내장 데이터 추출, 코퍼스 평탄화, K-grid·지수·성장 이력 CSV 산출 스크립트
+charts/ indices_csv/   최종 보고서 그림·지수 CSV 스크립트 (입력 JSON은 data/v7_final/)
 Silhoett Gate Policy/  실루엣 게이트 정책 문서 + 타임라인 차트 스크립트
-TOKENIZER/, TOKENIZER_WORDCLOUD_REPORT/   토크나이저·언어 분류 문서와 스크립트·노트북
-Ad_Commercial Pilot/ Fandom Cohesion Pilot/ Media Content Exposure Pilot/ Domestic Regional Pilot/
-Worldwide Language Pilot/ Group_Member Pilot/ fan_impact_ontology/ 지표 산정 방법론/ 상세명세서/
-                       각 보조지표·전략 문서와 r22 스냅샷 기반 병행 분석 노트북
-reports/, 보고서 스크립트 작성/   요약보고서 docx 빌드 스크립트(Node.js, 동일 파일 2부)
-kpop-fandom-project.tar.gz        초기 저장소 구조(scripts/docs/data) 원본 아카이브
+TOKENIZER_WORDCLOUD_REPORT/   토크나이저·워드클라우드 보고서(10,020건 실행 결과) + 이미지
+지표 산정 방법론/      지표 산식 문서 + 최종 라이브 점수 JSON으로 식(2)(3)(6)(7) 재검증 스크립트
+보고서 스크립트 작성/  요약보고서 docx 빌드 스크립트(Node.js) + JS 정리 문서
+archive/v6_r22_era/    r22(5,612건) 시점 자료 일체 — data/v6_r22_snapshot/, 파일럿 6종 문서+노트북, TOKENIZER 스크립트·문서,
+                       상세명세서, 온톨로지 전략, 토크나이저 라우팅 노트북 (폴더 README 참고; 노트북 상대경로 그대로 동작)
 ```
+
+**정리 내역 (2026-09-22)**: 삭제 — `reports/`(보고서 스크립트 작성/과 동일 파일), `kpop-fandom-project.tar.gz`(초기 저장소
+아카이브, 내용 전부 저장소에 있음), `data/v6_r22_snapshot/v7_rounds/`(data/v7_rounds/와 동일한 r1~r22 로그),
+`member_mention_pilot_v7.json`(member_mention_index_v7.json과 값 동일), payload 파생 `chart3d_positioning_rows_live_v7.csv`와
+그 스크립트(원본 `fandom_scores_live_reference_v7.csv`가 있음). 이동 — 위 archive/ 항목. v6 단계 병합 로그 3개는 `data/v7_rounds/`로.
 
 ## 5. 재현 절차
 
@@ -130,16 +136,13 @@ python verify_v7_final_consistency.py
 python data_export/extract_html_payloads.py      # HTML 2종 내장 데이터 -> data/v7_final/*.json
 python data_export/build_bullets_flat_csv.py     # fandoms_v3_100.json -> bullets_flat_v7_final.csv (10,020행)
 python data_export/build_lda_k_grid_csv.py       # 라이브 재적합 k_grid -> lda_k_grid_live_reference_v7.csv
-python data_export/build_live_scores_csv.py      # 3D 맵 payload -> chart3d_positioning_rows_live_v7.csv
 python data_export/build_cohesion_media_index_csv.py   # 팬덤결속·매체 크로스오버 지수 JSON -> CSV 2종
 python indices_csv/build_ad_commercial_index_csv.py    # 광고·상업성 지수 JSON -> output/indices_csv/ad_commercial_index_v7.csv
-#   r22 스냅샷에도 동일 스크립트 사용 가능:
-python data_export/build_bullets_flat_csv.py --src data/v6_r22_snapshot/fandoms_v3_100.json \
-       --out data/v6_r22_snapshot/csv/bullets_flat_v6_r22.csv --expected 5612
+python data_export/build_corpus_growth_history_csv.py  # data/v7_rounds 로그 -> corpus_growth_history_v6_v7_full.csv
 
-# 3) LDA 파이프라인(v6~r22 로직) — 기본값은 r22 스냅샷, 결과는 output/ 아래(원본 산출물을 덮지 않음)
-python run_lda_v6.py                                     # data/v6_r22_snapshot -> output/lda_rerun/
-python run_lda_v6.py --data data/v7_final/fandoms_v3_100.json --out output/lda_rerun_v7_final
+# 3) LDA 파이프라인(v6~r22 로직) — 기본 입력은 최종 코퍼스, 결과는 output/ 아래(원본 산출물을 덮지 않음)
+python run_lda_v6.py                                     # data/v7_final/fandoms_v3_100.json -> output/lda_rerun/
+python run_lda_v6.py --data archive/v6_r22_era/data/v6_r22_snapshot/fandoms_v3_100.json --out output/lda_rerun_r22
 ```
 
 한글 폰트가 필요한 차트 스크립트는 `KFONT_PATH=/path/to/NotoSansCJKkr-Regular.otf`를 지정하거나
@@ -150,7 +153,7 @@ python run_lda_v6.py --data data/v7_final/fandoms_v3_100.json --out output/lda_r
 - `KEY_FINDINGS.md` — 보고서 인용 수치 요약 + 각 수치의 근거 파일·계층
 - `METHODOLOGY.md` — 데이터 수집, K→M→Persona→Impact 4단계, 강건성 검증, 실루엣 게이트, 보조지표, DID
 - `FINAL_REPORT_SUMMARY.md` — 분석보고서 20페이지 챕터 요약
-- `PYTHON_CODE_SUMMARY.md` — 저장소 파이썬 스크립트 총정리(입력·출력·경로)
-- 각 폴더의 `*_PILOT.md`, `*_STRATEGY.md`, `*_SPECIFICATION.md` — 문서 상단의 "2026-09-21 갱신 주"가
-  10,020건 코퍼스 추가 이후 달라진 점을 밝힌다. 본문 중 "이번 세션에 없다/재현 불가"라는 서술은
-  r22 스냅샷만 있던 시점의 기록이다.
+- `PYTHON_CODE_SUMMARY.md` — 파이썬 스크립트 총정리(입력·출력·경로)
+- `data/v7_final/README.md`, `data/v7_rounds/README.md` — 데이터 파일별 계층·내용
+- `archive/v6_r22_era/README.md` — r22 시점 자료·문서 목록. 그 안의 문서 상단 "2026-09-21 갱신 주"가 10,020건 코퍼스
+  추가 이후 달라진 점을 밝히며, 본문의 "이번 세션에 없다/재현 불가" 서술은 r22 스냅샷만 있던 시점의 기록이다.

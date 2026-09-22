@@ -1,6 +1,6 @@
 # 팬덤 텍스트 분석 결과 보고서 (v7) — 별도 보고서
 
-> **2026-09-21 갱신 주** — 이 문서가 "이번 세션에 없다 / 재현 불가"라고 적은 최종 라이브 코퍼스(10,020건)와 최종 산출물이 이제 `data/v7_final/`에 있다(`fandoms_v3_100.json` 10,020건, `fandom_scores_v6.csv`·`fan_persona_v7.json`(동결 스냅샷 7,350건 기준), `language_domain_summary_v7.json`, `lda_v6_diagnostics_live_reference_v7.json`(라이브 재적합 K=8/M=5/실루엣 0.046), `chart3d_payload_live_reference_v7.json`, `member_mention_index_v7.json`). r22 스냅샷(5,612건)은 `data/v6_r22_snapshot/`으로 옮겨졌고, 이 문서의 노트북·스크립트가 참조하는 `../data/v6_r22_snapshot` 경로는 그대로 동작한다. 본문의 5,612건 기준 병행 분석은 그 시점의 기록으로 유지하며, 최종 수치와의 대응은 `README.md` 1~3절 참고.
+> **2026-09-21 갱신 주** — 이 문서가 "이번 세션에 없다 / 재현 불가"라고 적은 최종 라이브 코퍼스(10,020건)와 최종 산출물이 이제 `data/v7_final/`에 있다(`fandoms_v3_100.json` 10,020건, `fandom_scores_v6.csv`·`fan_persona_v7.json`(동결 스냅샷 7,350건 기준), `language_domain_summary_v7.json`, `lda_v6_diagnostics_live_reference_v7.json`(라이브 재적합 K=8/M=5/실루엣 0.046), `chart3d_payload_live_reference_v7.json`, `member_mention_index_v7.json`). r22 스냅샷(5,612건)은 `archive/v6_r22_era/data/v6_r22_snapshot/`으로 옮겨졌고, 이 문서의 노트북·스크립트가 참조하는 `../archive/v6_r22_era/data/v6_r22_snapshot` 경로는 그대로 동작한다. 본문의 5,612건 기준 병행 분석은 그 시점의 기록으로 유지하며, 최종 수치와의 대응은 `README.md` 1~3절 참고.
 > 이 문서 관련: 라이브 코퍼스 10,020건 자체는 이제 있으나, 표 2의 토큰 통계를 만든 14개 언어 문자권별 라우팅 토크나이저(`run_lda_v6_live_reference_v7.py`)의 소스는 여전히 없다. 저장소의 `run_lda_v6.py`(구 토크나이저)를 10,020건에 돌리면 3토큰 미만 제외 후 문서 수가 9,954건으로 보고서의 10,018건과 다르다.
 > 추가 (2026-09-22): 이 문서 표 2의 원본 실행 결과 `data/v7_final/wordcloud_by_language_v7.json`이 추가됐다(총 토큰 170,725개, 8개 버킷별 불릿 수·토큰 수·상위 30단어). 한국어 8,942·중국어 398·일본어 155·태국어 56·러시아어 45·베트남어 30은 표 2와 동일하고, 영어 6,425·비영어 219는 표 2(6,438/158)와 다른데 파일의 methodology 필드대로 wordfreq 재검증으로 순수 ASCII 토큰 219개를 비영어로 재분류한 후속판이기 때문이다. 재적합 제외 2건은 `lda_excluded_bullets_v7.json`(→ 10,018건).
 
@@ -20,7 +20,7 @@
 > 이 문서가 언급하는 원본 파이프라인 코드(`run_lda_v6.py`,
 > `run_lda_v6_live_reference_v7.py`)와 라이브 코퍼스 전체(10,020건)는 이번
 > 세션에 존재하지 않습니다 — 이번 세션에서 실제로 복구된 것은 이보다 이전
-> 시점인 v7 라운드22 스냅샷(5,612건, `data/v6_r22_snapshot/`)뿐입니다. 따라서
+> 시점인 v7 라운드22 스냅샷(5,612건, `archive/v6_r22_era/data/v6_r22_snapshot/`)뿐입니다. 따라서
 > 이 문서의 표 2 수치(10,020건 기준)를 이번 세션에서 재현할 수는 없습니다.
 > 대신 첨부하는 노트북(`analysis/tokenizer_script_routing_pilot.ipynb`)은,
 > 이 문서 7절이 설명하는 **"본문 문자 실측 기반 분기"** 로직(가나·한자·태국
@@ -231,7 +231,7 @@ jieba는 건너뛰도록 해 이중 토큰화를 막았다(원인7, v7 76라운�
   후분류)는 유니코드 범위 검사만으로 구현 가능하며, 비공개 불용어 목록이나
   형태소 분석기 없이도 독립적으로 재현할 수 있다.
 - 이 로직을, 이번 세션에 실제로 복구된 v7 라운드22 코퍼스(5,612건,
-  `data/v6_r22_snapshot/fandoms_v3_100.json`)에 적용해 문자권별 불릿 수·
+  `archive/v6_r22_era/data/v6_r22_snapshot/fandoms_v3_100.json`)에 적용해 문자권별 불릿 수·
   비중을 계산하는 것은 가능하다. 첨부 노트북
   (`analysis/tokenizer_script_routing_pilot.ipynb`)에서 실행했다.
 

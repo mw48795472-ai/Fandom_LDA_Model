@@ -3,7 +3,7 @@
 v6~v7 전체 병합·교체 로그 -> 코퍼스 성장 이력 CSV (v6 1차 ~ v7 r72, 최종 10,020건).
 
 입력 (data/v7_rounds/ 는 사용자가 GitHub에 직접 업로드한 원본 로그 전량):
-  data/v6_r22_snapshot/v6_merge_log.json, v6_3_market_merge_log.json, v6_4_language_merge_log.json
+  data/v7_rounds/v6_merge_log.json, v6_3_market_merge_log.json, v6_4_language_merge_log.json (v6 단계 로그 3개)
   data/v7_rounds/merge_log_r*.json (r1~r72; r36~r59는 before_total_bullets/after_total_bullets 키 사용)
   data/v7_rounds/swap_log_r*.json (로스터 교체 r29·r34·r62·r63; r58 교체는 merge_log_r58에 round_type=roster_swap로 기록)
   data/v7_rounds/round_log_r70.json (재분류만, 순증 0)
@@ -20,7 +20,7 @@ from pathlib import Path
 
 BASE = Path(__file__).resolve().parents[1]
 R = BASE / "data" / "v7_rounds"
-S = BASE / "data" / "v6_r22_snapshot"
+S = R  # v6 단계 병합 로그 3개도 data/v7_rounds/ 에 함께 둔다
 OUT = BASE / "data" / "v7_final" / "corpus_growth_history_v6_v7_full.csv"
 
 

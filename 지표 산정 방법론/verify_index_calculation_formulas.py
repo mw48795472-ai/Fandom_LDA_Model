@@ -1,5 +1,6 @@
 # 「Ⅲ. 지표 산정 방법」(업로드 문서)의 식 1~7을 함수로 정리하고, 실제 복구된
-# data/v6_r22_snapshot/fandom_scores_v6.json(100개 팬덤)에 대해 재검증한다.
+# 최종 라이브 코퍼스 산출물 data/v7_final/fandom_scores_live_reference_v7.json(100개 팬덤, 10,020건)에 대해 재검증한다.
+# (2026-09-22 정리 전에는 r22 스냅샷 fandom_scores_v6.json(M=6)을 읽었다 — 현재는 archive/v6_r22_era/ 에 있음)
 # 문서 원문: docs/INDEX_CALCULATION_METHODOLOGY.md 참고.
 #
 # 이 스크립트가 하는 것:
@@ -18,7 +19,7 @@ import math
 from pathlib import Path
 
 BASE = Path(__file__).resolve().parents[1]  # 저장소 루트
-DATA_PATH = BASE / "data" / "v6_r22_snapshot" / "fandom_scores_v6.json"
+DATA_PATH = BASE / "data" / "v7_final" / "fandom_scores_live_reference_v7.json"
 
 # ---------------------------------------------------------------------------
 # 식(1) EvidenceScore — 문서 원문 그대로의 보너스 키워드 (수정판)
@@ -133,7 +134,7 @@ def verify_against_real_data():
         1 for d, v in zip(scores, recomputed_spillover) if abs(round(v, 3) - d["spillover_score"]) > 0.002
     )
 
-    # 식(6): FactorDiversity 재검증 (M=6 메타팩터)
+    # 식(6): FactorDiversity 재검증 (메타팩터 수 = factor_share 길이; 라이브 M=5)
     fd_mismatch = 0
     for d in scores:
         shares = list(d["factor_share"].values())

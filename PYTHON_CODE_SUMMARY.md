@@ -1,14 +1,16 @@
 # 이 프로젝트에 적용된 파이썬 코드 총정리
 
+> **2026-09-22 정리 주** — r22 시점 스크립트·노트북(`TOKENIZER/`, 파일럿 노트북, 상세명세서 등)은 `archive/v6_r22_era/`로 옮겼고, `reports/`(중복)와 payload 파생 CSV 스크립트는 삭제했다. `지표 산정 방법론/verify_index_calculation_formulas.py`는 최종 라이브 점수 JSON(`fandom_scores_live_reference_v7.json`)을 읽도록 바꿨고 식(2)(3)(6)(7) 불일치 0/100을 확인했다.
+>
 > **2026-09-21 갱신 주** — 이 문서의 표는 원래 `kpop-fandom-project` 저장소의 `scripts/…` 경로 기준으로 쓰였다.
 > 현재 GitHub 저장소는 폴더를 한 단계 얕게 두고 있어(`scripts/charts/` → `charts/`, `scripts/indices_csv/` →
 > `indices_csv/`, `scripts/tokenizer/` → `TOKENIZER/`), 아래 표의 경로는 그대로 두되 실제 위치는 이 대응으로 읽으면
 > 된다. 모든 스크립트의 입력·출력 경로는 이전 세션 절대경로(`/home/claude/work/...`)에서 **저장소 상대경로**로
-> 고쳤다: 최종 산출물 입력은 `data/v7_final/`, r22 스냅샷 입력은 `data/v6_r22_snapshot/`, 생성물은 `output/`.
-> 데이터 파일이 두 곳(`data/v7_final/` 10,020건 최종, `data/v6_r22_snapshot/` 5,612건)으로 정리되면서 새로 추가된
+> 고쳤다: 최종 산출물 입력은 `data/v7_final/`, r22 스냅샷 입력은 `archive/v6_r22_era/data/v6_r22_snapshot/`, 생성물은 `output/`.
+> 데이터 파일이 두 곳(`data/v7_final/` 10,020건 최종, `archive/v6_r22_era/data/v6_r22_snapshot/` 5,612건)으로 정리되면서 새로 추가된
 > 스크립트는 맨 아래 "E. 2026-09-21 추가 스크립트" 절에 있다. 표의 "저장소 밖" 표시 파일(`build_notebook.py`,
 > `run_lda_v6_reconstructed.ipynb`, `build_*_pilot_v6_csv.py`, `build_corpus_growth_history_csv.py`)은 여전히 이 GitHub
-> 저장소에 없다(산출물 CSV만 `data/v6_r22_snapshot/csv/`에 있음).
+> 저장소에 없다(산출물 CSV만 `archive/v6_r22_era/data/v6_r22_snapshot/csv/`에 있음).
 
 이 세션(샌드박스 복구 이후)에서 실제로 작성·실행한 파이썬 코드 전체를 정리한다. 전부
 `kpop-fandom-project` 저장소의 `scripts/` 아래에 커밋되어 있고, 각 스크립트는 실행 후 원본
@@ -24,8 +26,8 @@ JSON의 집계값과 대조하는 자체 검증 루틴을 포함한다(전부 �
 | 지수 CSV(v7 최종) | `scripts/indices_csv/build_domestic_regional_index_csv.py` | `domestic_regional_index_live_reference_v7.json` | `domestic_regional_index_v7.csv` |
 | 지수 CSV(v7 최종) | `scripts/indices_csv/build_worldwide_language_index_csv.py` | `worldwide_language_index_live_reference_v7.json` | `worldwide_language_index_v7.csv` |
 | 지수 CSV(v7 최종) | `scripts/indices_csv/build_ad_commercial_index_csv.py` | `ad_commercial_index_v7.json` | `ad_commercial_index_v7.csv` |
-| 지수 CSV(v6 파일럿, 복구데이터) | `scripts/indices_csv/build_domestic_regional_pilot_v6_csv.py` | `data/v6_r22_snapshot/domestic_regional_pilot_v6.json` | `domestic_regional_pilot_v6.csv` |
-| 지수 CSV(v6 파일럿, 복구데이터) | `scripts/indices_csv/build_member_mention_pilot_v6_csv.py` | `data/v6_r22_snapshot/member_mention_pilot_v6.json` | `member_concentration_pilot_v6.csv` + `member_mentions_pilot_v6_long.csv` |
+| 지수 CSV(v6 파일럿, 복구데이터) | `scripts/indices_csv/build_domestic_regional_pilot_v6_csv.py` | `archive/v6_r22_era/data/v6_r22_snapshot/domestic_regional_pilot_v6.json` | `domestic_regional_pilot_v6.csv` |
+| 지수 CSV(v6 파일럿, 복구데이터) | `scripts/indices_csv/build_member_mention_pilot_v6_csv.py` | `archive/v6_r22_era/data/v6_r22_snapshot/member_mention_pilot_v6.json` | `member_concentration_pilot_v6.csv` + `member_mentions_pilot_v6_long.csv` |
 | 데이터 export(복구데이터) | `scripts/data_export/build_lda_k_grid_csv.py` | `lda_v6_diagnostics.json` | `lda_k_grid_v6.csv` |
 | 데이터 export(복구데이터) | `scripts/data_export/build_corpus_growth_history_csv.py` | 4개 병합로그 + `v7_progress.json` | `corpus_growth_history_v6_v7.csv` |
 | 데이터 export(복구데이터) | `scripts/data_export/build_bullets_flat_csv.py` | `fandoms_v3_100.json` | `bullets_flat_v6_r22.csv` |
@@ -116,7 +118,7 @@ before_total, after_total, net_new_bullets, n_touched_fandoms, note`)로 정규�
    거버넌스 함수
 
 12개 셀 전부 `jupyter nbconvert --execute`로 끝까지 실행해 에러 0건 확인. 이번 세션에서 복구된
-`data/v6_r22_snapshot/`의 실데이터(특히 `fandoms_v3_100.json`, `lda_v6_diagnostics.json`)로
+`archive/v6_r22_era/data/v6_r22_snapshot/`의 실데이터(특히 `fandoms_v3_100.json`, `lda_v6_diagnostics.json`)로
 1번 데이터 로딩 셀을 교체하면, 합성 데이터가 아닌 실측 파이프라인 결과를 보여주는 노트북으로
 업그레이드할 수 있다(아직 미적용 — 이 노트북 자체는 현재 GitHub 저장소에 없다).
 
@@ -130,13 +132,12 @@ before_total, after_total, net_new_bullets, n_touched_fandoms, note`)로 정규�
 
 | 스크립트 | 입력 | 출력 |
 |---|---|---|
-| `verify_v7_final_consistency.py` (루트) | `data/v7_final/*` 전부 | 보고서·KEY_FINDINGS 수치 97개 항목을 파일에서 재계산해 일치/불일치 출력 (현재 97/97 일치. χ²는 `positioning_map_correlation_live_v7.json`의 0.5 임계값 분할표로 재현) |
+| `verify_v7_final_consistency.py` (루트) | `data/v7_final/*` 전부 | 보고서·KEY_FINDINGS 수치 96개 항목을 파일에서 재계산해 일치/불일치 출력 (현재 96/96 일치. χ²는 `positioning_map_correlation_live_v7.json`의 0.5 임계값 분할표로 재현) |
 | `data_export/extract_html_payloads.py` | `3D_포지셔닝맵_국내100팬덤.html`, `Persona_결정공간.html` | HTML에 리터럴로 내장된 데이터 객체를 그대로 복사 → `data/v7_final/chart3d_payload_live_reference_v7.json`(라이브 100개 팬덤 점수·4구획·라이브 재적합 진단), `persona_decision_space_v7.json`(동결 K=10 토픽명·F코드·PCA·F1~F5 비중) |
 | `data_export/build_bullets_flat_csv.py` | `fandoms_v3_100.json` (`--src`, 기본 v7_final) | `bullets_flat_v7_final.csv` 10,020행 (r22에 쓰면 기존 `bullets_flat_v6_r22.csv`와 바이트 단위 동일 결과) |
 | `data_export/build_lda_k_grid_csv.py` | LDA 진단 JSON (`--src`, 기본 라이브 참고 재적합) | `lda_k_grid_live_reference_v7.csv` (r22에 쓰면 기존 `lda_k_grid_v6.csv`와 동일) |
-| `data_export/build_corpus_growth_history_csv.py` | `data/v6_r22_snapshot/v6*_merge_log.json` + `data/v7_rounds/merge_log_r*.json`·`swap_log_r*.json`·`round_log_r70.json` | `corpus_growth_history_v6_v7_full.csv` — v6 1차~v7 r72(10,020건) 69단계 성장 이력, 체인 불연속 4곳을 `chain_gap`에 기록, 타임라인 CSV와 56건 대조 (표의 `scripts/data_export/build_corpus_growth_history_csv.py`(r22까지) 재작성판) |
+| `data_export/build_corpus_growth_history_csv.py` | `archive/v6_r22_era/data/v6_r22_snapshot/v6*_merge_log.json` + `data/v7_rounds/merge_log_r*.json`·`swap_log_r*.json`·`round_log_r70.json` | `corpus_growth_history_v6_v7_full.csv` — v6 1차~v7 r72(10,020건) 69단계 성장 이력, 체인 불연속 4곳을 `chain_gap`에 기록, 타임라인 CSV와 56건 대조 (표의 `scripts/data_export/build_corpus_growth_history_csv.py`(r22까지) 재작성판) |
 | `data_export/build_cohesion_media_index_csv.py` | `fandom_cohesion_index_v7.json`, `media_crossover_index_v7.json` | `fandom_cohesion_index_v7.csv`, `media_crossover_index_v7.csv` — 팬덤별 유형/매체 집계 CSV, 합계를 원본 집계 필드와 재대조 |
-| `data_export/build_live_scores_csv.py` | `chart3d_payload_live_reference_v7.json` | `chart3d_positioning_rows_live_v7.csv` — 라이브 점수·다양성·커버리지·activity·4구획; activity 합 10,020, 평균·4구획 카운트 재대조 (원본 산출물 `fandom_scores_live_reference_v7.csv`가 추가되면서 파생 파일명을 변경) |
 
 `verify_v7_final_consistency.py`가 확인하는 핵심은 **충성도·파급효과 점수의 완전 재현**이다: `METHODOLOGY.md`
 2-4절의 EvidenceScore 산식(문장당 1.0 + 0.5×수치표현 수 + 0.3×보너스 키워드 매치 수 → min-max 정규화)을
