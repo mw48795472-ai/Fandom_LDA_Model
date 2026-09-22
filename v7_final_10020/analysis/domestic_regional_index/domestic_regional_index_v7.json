@@ -25,7 +25,7 @@
     "region_diversity": 0.647,
     "primary_region": "서울",
     "primary_region_share": 0.364,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "지드래곤 (G-Dragon)": {
     "total_group_bullets": 133,
@@ -53,7 +53,7 @@
     "region_diversity": 0.235,
     "primary_region": "서울",
     "primary_region_share": 0.471,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "지코": {
     "total_group_bullets": 101,
@@ -81,7 +81,7 @@
     "region_diversity": 0.235,
     "primary_region": "서울",
     "primary_region_share": 0.5,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "박재범": {
     "total_group_bullets": 110,
@@ -109,7 +109,7 @@
     "region_diversity": 0.353,
     "primary_region": "서울",
     "primary_region_share": 0.444,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "다이나믹듀오": {
     "total_group_bullets": 68,
@@ -137,7 +137,7 @@
     "region_diversity": 0.353,
     "primary_region": "서울",
     "primary_region_share": 0.316,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "에픽하이": {
     "total_group_bullets": 87,
@@ -165,7 +165,7 @@
     "region_diversity": 0.118,
     "primary_region": "대구",
     "primary_region_share": 0.5,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "악동뮤지션": {
     "total_group_bullets": 74,
@@ -193,7 +193,7 @@
     "region_diversity": 0.529,
     "primary_region": "서울",
     "primary_region_share": 0.333,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "임영웅": {
     "total_group_bullets": 131,
@@ -221,7 +221,7 @@
     "region_diversity": 0.706,
     "primary_region": "서울",
     "primary_region_share": 0.214,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "송가인": {
     "total_group_bullets": 92,
@@ -249,7 +249,7 @@
     "region_diversity": 0.353,
     "primary_region": "전남",
     "primary_region_share": 0.742,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "영탁": {
     "total_group_bullets": 104,
@@ -277,7 +277,7 @@
     "region_diversity": 0.412,
     "primary_region": "서울",
     "primary_region_share": 0.273,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "김호중": {
     "total_group_bullets": 91,
@@ -305,7 +305,7 @@
     "region_diversity": 0.353,
     "primary_region": "경북",
     "primary_region_share": 0.353,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "이찬원": {
     "total_group_bullets": 106,
@@ -333,7 +333,7 @@
     "region_diversity": 0.353,
     "primary_region": "서울",
     "primary_region_share": 0.417,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "장윤정": {
     "total_group_bullets": 92,
@@ -361,7 +361,7 @@
     "region_diversity": 0.412,
     "primary_region": "경기",
     "primary_region_share": 0.353,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "정동원": {
     "total_group_bullets": 107,
@@ -389,7 +389,7 @@
     "region_diversity": 0.471,
     "primary_region": "경남",
     "primary_region_share": 0.316,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "김연자": {
     "total_group_bullets": 73,
@@ -417,7 +417,7 @@
     "region_diversity": 0.471,
     "primary_region": "광주",
     "primary_region_share": 0.28,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "나훈아": {
     "total_group_bullets": 70,
@@ -445,7 +445,7 @@
     "region_diversity": 0.529,
     "primary_region": "서울",
     "primary_region_share": 0.333,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "god": {
     "total_group_bullets": 99,
@@ -473,7 +473,7 @@
     "region_diversity": 0.235,
     "primary_region": "서울",
     "primary_region_share": 0.536,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "HOT": {
     "total_group_bullets": 97,
@@ -501,7 +501,7 @@
     "region_diversity": 0.118,
     "primary_region": "서울",
     "primary_region_share": 0.636,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "잭스키스": {
     "total_group_bullets": 85,
@@ -529,7 +529,7 @@
     "region_diversity": 0.412,
     "primary_region": "부산",
     "primary_region_share": 0.44,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "보아": {
     "total_group_bullets": 76,
@@ -557,7 +557,7 @@
     "region_diversity": 0.059,
     "primary_region": "서울",
     "primary_region_share": 1.0,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "싸이": {
     "total_group_bullets": 122,
@@ -585,7 +585,7 @@
     "region_diversity": 0.588,
     "primary_region": "강원",
     "primary_region_share": 0.163,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "아이유": {
     "total_group_bullets": 110,
@@ -613,7 +613,7 @@
     "region_diversity": 0.294,
     "primary_region": "서울",
     "primary_region_share": 0.611,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "비비": {
     "total_group_bullets": 74,
@@ -641,7 +641,7 @@
     "region_diversity": 0.294,
     "primary_region": "서울",
     "primary_region_share": 0.5,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "윤하": {
     "total_group_bullets": 83,
@@ -669,7 +669,7 @@
     "region_diversity": 0.353,
     "primary_region": "서울",
     "primary_region_share": 0.438,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "청하": {
     "total_group_bullets": 79,
@@ -697,7 +697,7 @@
     "region_diversity": 0.235,
     "primary_region": "서울",
     "primary_region_share": 0.25,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "최예나": {
     "total_group_bullets": 96,
@@ -725,7 +725,7 @@
     "region_diversity": 0.176,
     "primary_region": "경북",
     "primary_region_share": 0.692,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "권은비": {
     "total_group_bullets": 90,
@@ -753,7 +753,7 @@
     "region_diversity": 0.294,
     "primary_region": "서울",
     "primary_region_share": 0.545,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "츄": {
     "total_group_bullets": 93,
@@ -781,7 +781,7 @@
     "region_diversity": 0.412,
     "primary_region": "서울",
     "primary_region_share": 0.273,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "10CM": {
     "total_group_bullets": 85,
@@ -809,7 +809,7 @@
     "region_diversity": 0.235,
     "primary_region": "서울",
     "primary_region_share": 0.571,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "카더가든": {
     "total_group_bullets": 74,
@@ -837,7 +837,7 @@
     "region_diversity": 0.235,
     "primary_region": "대구",
     "primary_region_share": 0.25,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "Zion.T": {
     "total_group_bullets": 79,
@@ -865,7 +865,7 @@
     "region_diversity": 0.235,
     "primary_region": "서울",
     "primary_region_share": 0.667,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "이효리": {
     "total_group_bullets": 120,
@@ -893,7 +893,7 @@
     "region_diversity": 0.176,
     "primary_region": "제주",
     "primary_region_share": 0.556,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "엄정화": {
     "total_group_bullets": 71,
@@ -921,7 +921,7 @@
     "region_diversity": 0.235,
     "primary_region": "부산",
     "primary_region_share": 0.333,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "볼빨간사춘기": {
     "total_group_bullets": 88,
@@ -949,7 +949,7 @@
     "region_diversity": 0.118,
     "primary_region": "인천",
     "primary_region_share": 0.667,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "Crush": {
     "total_group_bullets": 99,
@@ -977,7 +977,7 @@
     "region_diversity": 0.176,
     "primary_region": "서울",
     "primary_region_share": 0.333,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "성시경": {
     "total_group_bullets": 80,
@@ -1005,7 +1005,7 @@
     "region_diversity": 0.294,
     "primary_region": "서울",
     "primary_region_share": 0.429,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "케이윌": {
     "total_group_bullets": 71,
@@ -1033,7 +1033,7 @@
     "region_diversity": 0.235,
     "primary_region": "서울",
     "primary_region_share": 0.25,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "이승철": {
     "total_group_bullets": 78,
@@ -1061,7 +1061,7 @@
     "region_diversity": 0.529,
     "primary_region": "경기",
     "primary_region_share": 0.158,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "거미": {
     "total_group_bullets": 87,
@@ -1089,7 +1089,7 @@
     "region_diversity": 0.706,
     "primary_region": "서울",
     "primary_region_share": 0.2,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "린": {
     "total_group_bullets": 78,
@@ -1117,7 +1117,7 @@
     "region_diversity": 0.412,
     "primary_region": "서울",
     "primary_region_share": 0.389,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "백지영": {
     "total_group_bullets": 72,
@@ -1145,7 +1145,7 @@
     "region_diversity": 0.235,
     "primary_region": "서울",
     "primary_region_share": 0.4,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "김동률": {
     "total_group_bullets": 83,
@@ -1173,7 +1173,7 @@
     "region_diversity": 0.118,
     "primary_region": "서울",
     "primary_region_share": 0.778,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "조용필": {
     "total_group_bullets": 81,
@@ -1201,7 +1201,7 @@
     "region_diversity": 0.353,
     "primary_region": "서울",
     "primary_region_share": 0.3,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "박효신": {
     "total_group_bullets": 91,
@@ -1229,7 +1229,7 @@
     "region_diversity": 0.294,
     "primary_region": "인천",
     "primary_region_share": 0.467,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "박정현": {
     "total_group_bullets": 70,
@@ -1257,7 +1257,7 @@
     "region_diversity": 0.176,
     "primary_region": "서울",
     "primary_region_share": 0.5,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "빅마마": {
     "total_group_bullets": 73,
@@ -1285,7 +1285,7 @@
     "region_diversity": 0.412,
     "primary_region": "서울",
     "primary_region_share": 0.269,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "다비치": {
     "total_group_bullets": 80,
@@ -1313,7 +1313,7 @@
     "region_diversity": 0.235,
     "primary_region": "서울",
     "primary_region_share": 0.5,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "로이킴": {
     "total_group_bullets": 89,
@@ -1341,7 +1341,7 @@
     "region_diversity": 0.412,
     "primary_region": "서울",
     "primary_region_share": 0.556,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "sg워너비": {
     "total_group_bullets": 75,
@@ -1369,7 +1369,7 @@
     "region_diversity": 0.412,
     "primary_region": "서울",
     "primary_region_share": 0.5,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "브라운아이즈": {
     "total_group_bullets": 82,
@@ -1397,7 +1397,7 @@
     "region_diversity": 0.118,
     "primary_region": "서울",
     "primary_region_share": 0.833,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "이문세": {
     "total_group_bullets": 70,
@@ -1425,7 +1425,7 @@
     "region_diversity": 0.588,
     "primary_region": "서울",
     "primary_region_share": 0.238,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "윤도현": {
     "total_group_bullets": 71,
@@ -1453,7 +1453,7 @@
     "region_diversity": 0.471,
     "primary_region": "서울",
     "primary_region_share": 0.471,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "잔나비": {
     "total_group_bullets": 69,
@@ -1481,7 +1481,7 @@
     "region_diversity": 0.235,
     "primary_region": "서울",
     "primary_region_share": 0.727,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "CNBLUE": {
     "total_group_bullets": 84,
@@ -1509,7 +1509,7 @@
     "region_diversity": 0.176,
     "primary_region": "서울",
     "primary_region_share": 0.6,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "BTS": {
     "total_group_bullets": 227,
@@ -1537,7 +1537,7 @@
     "region_diversity": 0.294,
     "primary_region": "서울",
     "primary_region_share": 0.471,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "SEVENTEEN": {
     "total_group_bullets": 157,
@@ -1565,7 +1565,7 @@
     "region_diversity": 0.294,
     "primary_region": "제주",
     "primary_region_share": 0.455,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "Stray Kids": {
     "total_group_bullets": 163,
@@ -1593,7 +1593,7 @@
     "region_diversity": 0.353,
     "primary_region": "서울",
     "primary_region_share": 0.167,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "RIIZE": {
     "total_group_bullets": 121,
@@ -1621,7 +1621,7 @@
     "region_diversity": 0.235,
     "primary_region": "서울",
     "primary_region_share": 0.538,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "NCT": {
     "total_group_bullets": 164,
@@ -1649,7 +1649,7 @@
     "region_diversity": 0.235,
     "primary_region": "서울",
     "primary_region_share": 0.692,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "동방신기": {
     "total_group_bullets": 82,
@@ -1677,7 +1677,7 @@
     "region_diversity": 0.176,
     "primary_region": "광주",
     "primary_region_share": 0.5,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "빅뱅": {
     "total_group_bullets": 97,
@@ -1705,7 +1705,7 @@
     "region_diversity": 0.176,
     "primary_region": "서울",
     "primary_region_share": 0.333,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "EXO": {
     "total_group_bullets": 121,
@@ -1733,7 +1733,7 @@
     "region_diversity": 0.176,
     "primary_region": "서울",
     "primary_region_share": 0.8,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "슈퍼주니어": {
     "total_group_bullets": 89,
@@ -1761,7 +1761,7 @@
     "region_diversity": 0.176,
     "primary_region": "서울",
     "primary_region_share": 0.75,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "샤이니": {
     "total_group_bullets": 77,
@@ -1789,7 +1789,7 @@
     "region_diversity": 0.118,
     "primary_region": "서울",
     "primary_region_share": 0.8,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "ATEEZ": {
     "total_group_bullets": 113,
@@ -1817,7 +1817,7 @@
     "region_diversity": 0.235,
     "primary_region": "경남",
     "primary_region_share": 0.5,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "DAY6": {
     "total_group_bullets": 101,
@@ -1845,7 +1845,7 @@
     "region_diversity": 0.235,
     "primary_region": "부산",
     "primary_region_share": 0.429,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "IKON": {
     "total_group_bullets": 96,
@@ -1873,7 +1873,7 @@
     "region_diversity": 0.176,
     "primary_region": "서울",
     "primary_region_share": 0.778,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "CORTIS": {
     "total_group_bullets": 135,
@@ -1901,7 +1901,7 @@
     "region_diversity": 0.294,
     "primary_region": "서울",
     "primary_region_share": 0.286,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "BTOB": {
     "total_group_bullets": 82,
@@ -1929,7 +1929,7 @@
     "region_diversity": 0.294,
     "primary_region": "강원",
     "primary_region_share": 0.333,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "FTISLAND": {
     "total_group_bullets": 73,
@@ -1957,7 +1957,7 @@
     "region_diversity": 0.235,
     "primary_region": "서울",
     "primary_region_share": 0.625,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "NewJeans": {
     "total_group_bullets": 154,
@@ -1985,7 +1985,7 @@
     "region_diversity": 0.176,
     "primary_region": "서울",
     "primary_region_share": 0.667,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "BLACKPINK": {
     "total_group_bullets": 195,
@@ -2013,7 +2013,7 @@
     "region_diversity": 0.176,
     "primary_region": "서울",
     "primary_region_share": 0.333,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "IVE": {
     "total_group_bullets": 100,
@@ -2041,7 +2041,7 @@
     "region_diversity": 0.176,
     "primary_region": "서울",
     "primary_region_share": 0.667,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "리센느(RESCENE)": {
     "total_group_bullets": 85,
@@ -2069,7 +2069,7 @@
     "region_diversity": 0.294,
     "primary_region": "경남",
     "primary_region_share": 0.636,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "(여자)아이들": {
     "total_group_bullets": 118,
@@ -2097,7 +2097,7 @@
     "region_diversity": 0.235,
     "primary_region": "서울",
     "primary_region_share": 0.727,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "TWICE": {
     "total_group_bullets": 191,
@@ -2125,7 +2125,7 @@
     "region_diversity": 0.176,
     "primary_region": "울산",
     "primary_region_share": 0.5,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "ITZY": {
     "total_group_bullets": 107,
@@ -2153,7 +2153,7 @@
     "region_diversity": 0.118,
     "primary_region": "서울",
     "primary_region_share": 0.667,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "LE SSERAFIM": {
     "total_group_bullets": 143,
@@ -2181,7 +2181,7 @@
     "region_diversity": 0.294,
     "primary_region": "서울",
     "primary_region_share": 0.333,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "aespa": {
     "total_group_bullets": 158,
@@ -2209,7 +2209,7 @@
     "region_diversity": 0.235,
     "primary_region": "서울",
     "primary_region_share": 0.6,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "프로미스나인": {
     "total_group_bullets": 89,
@@ -2237,7 +2237,7 @@
     "region_diversity": 0.294,
     "primary_region": "서울",
     "primary_region_share": 0.6,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "A-pink": {
     "total_group_bullets": 95,
@@ -2265,7 +2265,7 @@
     "region_diversity": 0.353,
     "primary_region": "서울",
     "primary_region_share": 0.222,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "QWER": {
     "total_group_bullets": 103,
@@ -2293,7 +2293,7 @@
     "region_diversity": 0.353,
     "primary_region": "서울",
     "primary_region_share": 0.684,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "BABYMONSTER": {
     "total_group_bullets": 132,
@@ -2321,7 +2321,7 @@
     "region_diversity": 0.176,
     "primary_region": "서울",
     "primary_region_share": 0.571,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "소녀시대": {
     "total_group_bullets": 122,
@@ -2349,7 +2349,7 @@
     "region_diversity": 0.235,
     "primary_region": "서울",
     "primary_region_share": 0.75,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "오마이걸": {
     "total_group_bullets": 98,
@@ -2377,7 +2377,7 @@
     "region_diversity": 0.235,
     "primary_region": "서울",
     "primary_region_share": 0.375,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "여자친구": {
     "total_group_bullets": 93,
@@ -2405,7 +2405,7 @@
     "region_diversity": 0.059,
     "primary_region": "서울",
     "primary_region_share": 1.0,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "STAYC": {
     "total_group_bullets": 92,
@@ -2433,7 +2433,7 @@
     "region_diversity": 0.176,
     "primary_region": "서울",
     "primary_region_share": 0.667,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "레드벨벳": {
     "total_group_bullets": 118,
@@ -2461,7 +2461,7 @@
     "region_diversity": 0.176,
     "primary_region": "서울",
     "primary_region_share": 0.5,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "엔믹스": {
     "total_group_bullets": 110,
@@ -2489,7 +2489,7 @@
     "region_diversity": 0.176,
     "primary_region": "인천",
     "primary_region_share": 0.5,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "마마무": {
     "total_group_bullets": 94,
@@ -2517,7 +2517,7 @@
     "region_diversity": 0.118,
     "primary_region": "서울",
     "primary_region_share": 0.5,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "아이오아이": {
     "total_group_bullets": 95,
@@ -2545,7 +2545,7 @@
     "region_diversity": 0.118,
     "primary_region": "서울",
     "primary_region_share": 0.857,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "Hearts2Hearts": {
     "total_group_bullets": 102,
@@ -2573,7 +2573,7 @@
     "region_diversity": 0.176,
     "primary_region": "서울",
     "primary_region_share": 0.778,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "워너원": {
     "total_group_bullets": 123,
@@ -2601,7 +2601,7 @@
     "region_diversity": 0.118,
     "primary_region": "서울",
     "primary_region_share": 0.8,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "아일릿": {
     "total_group_bullets": 107,
@@ -2629,7 +2629,7 @@
     "region_diversity": 0.176,
     "primary_region": "서울",
     "primary_region_share": 0.6,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "GOT7": {
     "total_group_bullets": 107,
@@ -2657,7 +2657,7 @@
     "region_diversity": 0.059,
     "primary_region": "서울",
     "primary_region_share": 1.0,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "김재중": {
     "total_group_bullets": 77,
@@ -2685,7 +2685,7 @@
     "region_diversity": 0.176,
     "primary_region": "서울",
     "primary_region_share": 0.833,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "박서진": {
     "total_group_bullets": 99,
@@ -2713,7 +2713,7 @@
     "region_diversity": 0.647,
     "primary_region": "서울",
     "primary_region_share": 0.258,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "빈지노": {
     "total_group_bullets": 79,
@@ -2741,7 +2741,7 @@
     "region_diversity": 0.118,
     "primary_region": "서울",
     "primary_region_share": 0.833,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "몬스타엑스": {
     "total_group_bullets": 96,
@@ -2769,7 +2769,7 @@
     "region_diversity": 0.235,
     "primary_region": "서울",
     "primary_region_share": 0.625,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   },
   "투어스(TWS)": {
     "total_group_bullets": 90,
@@ -2797,6 +2797,6 @@
     "region_diversity": 0.0,
     "primary_region": null,
     "primary_region_share": 0.0,
-    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 2026-09-22 최종 코퍼스 10,020건에 r22 파일럿 규칙을 재적용해 산출(원본 라이브 JSON 미보유)."
+    "note": "TEXT-MINING INDEX: 이미 수집된 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 불릿 수 기반. Coverage Index의 market_coverage(해외 시장)와는 별개 지표이며, 지역 연고(고향)와 지역 활동(투어·행사)을 구분하지 않고 합산한 1차 신호다. 최종 코퍼스 10,020건 기준 산출."
   }
 }

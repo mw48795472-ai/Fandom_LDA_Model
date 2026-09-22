@@ -1,21 +1,20 @@
-# [10,020건 판] archive/v6_r22_era/TOKENIZER/build_bullet_token_frequency_csv.py(r22, 5,612건)를 최종 코퍼스로 옮긴 것.
-#   달라진 것: 입력 data/v7_final/fandoms_v3_100.json, 출력 csv/bullet_token_frequency_v7_final.csv, 불릿 수 검증 10,020,
-#   그리고 원본 토크나이저 실행 결과(wordcloud_by_language_v7.json)의 버킷별 상위 단어와의 대조 절 추가.
+# 입력 data/v7_final/fandoms_v3_100.json(10,020건), 출력 csv/bullet_token_frequency_v7_final.csv,
+# 원본 토크나이저 실행 결과(wordcloud_by_language_v7.json)의 버킷별 상위 단어와 대조.
 # 코퍼스 불릿(근거문장) 전체를 토큰화해 "토큰별 등장횟수·비중" CSV를 산출한다.
 #
-# 배경(정직한 위치 표시): `docs/TOKENIZER_WORDCLOUD_REPORT.md`는 원본 토크나이저
+# 배경(정직한 위치 표시): `v7_final_10020/tokenizer_wordcloud_report/TOKENIZER_WORDCLOUD_REPORT.md`는 원본 토크나이저
 # `tokenize(text, url)`가 (1) "일반 경로"(정규식, 공백 구분 언어 전부: 한국어·영어·
 # 스페인어·프랑스어·포르투갈어·인도네시아어·베트남어·튀르키예어·러시아어)를 항상
 # 먼저 실행하고, (2) 불릿 본문에 가나·한자·태국 문자가 실제로 등장하면 그 위에
 # 일본어(fugashi)·중국어(jieba)·태국어(pythainlp) 형태소 분석 결과를 추가로
 # 얹는다고 설명한다. 그러나 원본 코드(`run_lda_v6.py`)와 정확한 불용어 목록
 # (STOPWORDS 41종·ENGLISH_STOPWORDS 64종·CHINESE_STOPWORDS 60여종·
-# JAPANESE_STOPWORDS 28종 등)은 이 세션에 존재하지 않는다 — 이미
-# `analysis/tokenizer_script_routing_pilot.ipynb`의 한계 1번이 밝힌 대로다.
+# JAPANESE_STOPWORDS 28종 등)은 저장소에 포함되어 있지 않다(같은 폴더
+# `tokenizer_script_routing_v7.ipynb`의 한계 항목 참고).
 #
 # 이 스크립트는 그 한계를 메우는 것이 아니라, "동일한 구조(일반 경로 + 문자권별
-# 추가 경로)를 새로 구현한 병행 파일럿"이다 — 불용어 목록은 이 세션이 새로 만든
-# 것이며 원본과 개수·내용이 다르다(태국어만 예외 — pythainlp가 실제로 내장하는
+# 추가 경로)를 새로 구현한 병행 파일럿"이다 — 불용어 목록은 이 스크립트가 독자적으로
+# 정의한 것이며 원본과 개수·내용이 다르다(태국어만 예외 — pythainlp가 실제로 내장하는
 # 진짜 불용어 코퍼스를 그대로 사용했다, 아래 참고). 원본 결과와 절대값을 비교할
 # 수 없으므로, 이 CSV는 "최종 코퍼스(10,020건)에 새로
 # 적용한 병행 산출물"로 취급해야 한다.
@@ -55,7 +54,7 @@ def is_pure_numeric(tok: str) -> bool:
     return bool(PURE_NUMERIC_RE.match(tok))
 
 
-# --- 불용어 목록(이 세션에서 새로 작성 — 원본과 다름, 참고용) -------------------
+# --- 불용어 목록(이 스크립트 독자 정의 — 원본과 다름, 참고용) ---------------------
 KOREAN_STOPWORDS = {
     "그리고", "그러나", "하지만", "또한", "그래서", "따라서", "이는", "이를", "이에",
     "등이", "등을", "등의", "등은", "등에", "등", "및", "이", "그", "저", "것",
@@ -158,8 +157,7 @@ def tokenize_th_extra(text: str) -> list[str]:
 
 
 def script_of(tok: str) -> str:
-    """토큰 표면형의 문자권 사후 분류(어느 하위 토크나이저가 만들었는지가 아님). r22 판에서는 main() 안에 있었으나
-    jieba_and_thai_engine_details_v7.py가 import하므로 모듈 수준으로 올렸다."""
+    """토큰 표면형의 문자권 사후 분류(어느 하위 토크나이저가 만들었는지가 아님). jieba_and_thai_engine_details_v7.py가 import하므로 모듈 수준에 둔다."""
     if RE_KANA.search(tok):
         return "일본어"
     if RE_HANZI.search(tok):
@@ -233,7 +231,7 @@ def main():
     share_sum = sum(r["비중(%)"] for r in csv_rows)
     share_sum_exact = sum(cnt / total_tokens * 100 for _, cnt in rows)
     print(f"[검증] 비중(%) 합계(정확값): {share_sum_exact:.6f}% | 소수 4자리 반올림 후 합계: {share_sum:.2f}% "
-          f"(고유 토큰 {len(csv_rows):,}개 × 최대 0.00005 반올림 오차 → r22 판의 0.5%p 허용치보다 커질 수 있음)")
+          f"(고유 토큰 {len(csv_rows):,}개 × 최대 0.00005 반올림 오차 → 고정 0.5%p 허용치보다 커질 수 있음)")
     assert abs(share_sum_exact - 100.0) < 1e-6
     assert abs(share_sum - 100.0) < 0.00005 * len(csv_rows) + 0.01
     print(f"[검증] 마지막 행 누적비중: {csv_rows[-1]['누적비중(%)']:.2f}% (기대: 100.00%)")

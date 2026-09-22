@@ -1,7 +1,6 @@
 # 미디어·콘텐츠 노출 지수 · 매체 크로스오버 지수 — 최종 코퍼스 10,020건 판
 
-> `archive/v6_r22_era/Media Content Exposure Pilot/MEDIA_CONTENT_EXPOSURE_PILOT.md`(r22, LDA "미디어노출형" 비중 대체 + r10·r11 로그 교차검증)의
-> **10,020건 기준 새 판**. 입력은 최종 원본 두 개(`media_exposure_v7.json`, `media_crossover_index_v7.json`)와 K=9 검증 파일. 실행 노트북: `media_content_exposure_v7.ipynb`.
+> 입력: 최종 원본 두 개(`media_exposure_v7.json`, `media_crossover_index_v7.json`)와 K=9 검증 파일, v7 10·11라운드 병합 로그. 실행 노트북: `media_content_exposure_v7.ipynb`.
 
 ## 두 지수의 정의
 
@@ -17,7 +16,7 @@
 2. **상위 팬덤** — 노출: 임영웅 27건(20.6%, 1위) · 카더가든 26(35.1%) · 오마이걸 21 · SEVENTEEN 20 · EXO 19; BTS 13건(5.7%, 28위) · 리센느 10건(11.8%).
    크로스오버 고유 매체: BTS 96개(뉴스 177건, 다양성 0.542) · TWICE 90 · BLACKPINK 83 · 지드래곤 80 · 싸이 76; 임영웅 60개(0.496) · 리센느 36개(0.529).
 3. **v7 10·11라운드 교차검증** — 두 라운드 신규 근거 274건(131+143, `per_group_added` 합 일치). 신규 근거 수와 미디어문장수 Pearson r = 0.426
-   (r22 판에서 LDA 비중과의 상관은 약했으나, 키워드 지수는 그 라운드 문장을 직접 세므로 상관이 올라간다). 신규 근거 상위 10 ∩ 미디어문장수 상위 10 = 2개(이찬원·임영웅).
+   (키워드 지수는 그 라운드에서 들어온 문장을 직접 세므로 양의 상관이 자연스럽다). 신규 근거 상위 10 ∩ 미디어문장수 상위 10 = 2개(이찬원·임영웅).
 4. **LDA 미디어노출형(동결 스냅샷, 보고서 본문)과의 대조** — n=97, Pearson r = 0.520, Spearman ρ = 0.469. 동결에서 미디어노출형이 dominant인 팬덤: 박정현·브라운아이즈.
 5. **K=9 검증(`k9_validation_v7.json`, 9,614문서 시점)** — K=9를 그리드에 넣어도 승자는 K=8(합성순위 9). K=9 phi의 M-grid에서 미디어 토픽이 단독 메타요인으로
    분리되는 것은 M=6∼8뿐이고 그때 실루엣은 0.081/0.042/0.023 → 독립 미디어 메타요인은 채택하지 않고 키워드 지수로 대체.
@@ -25,7 +24,6 @@
 ## 이 문서와 함께 보는 파일
 
 - `data/v7_final/media_exposure_v7.json`, `media_crossover_index_v7.json` / `.csv`, `k9_validation_v7.json`, `data/v7_rounds/merge_log_r10.json`·`r11`.
-- `archive/v6_r22_era/Media Content Exposure Pilot/` — r22 판.
 
 ## 한계
 

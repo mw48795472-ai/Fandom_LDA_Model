@@ -210,9 +210,9 @@ const doc = new Document({
 });
 
 Packer.toBuffer(doc).then((buf) => {
-  // 출력 경로: 저장소 상대 output/ (원본은 이전 세션 작업 디렉터리 /home/claude/work/output 절대경로였음)
+  // 출력 경로: 저장소 루트의 output/
   const path = require("path");
-  const outDir = path.join(__dirname, "..", "output");
+  const outDir = path.join(__dirname, "..", "..", "output");
   fs.mkdirSync(outDir, { recursive: true });
   fs.writeFileSync(path.join(outDir, "요약보고서_2026_문화체육관광통계활용대회.docx"), buf);
   console.log("done", buf.length);

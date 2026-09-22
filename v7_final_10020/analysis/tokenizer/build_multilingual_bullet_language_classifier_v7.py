@@ -1,7 +1,6 @@
 # 다국어 불릿 단위 언어 분류 재구성 — 최종 코퍼스 10,020건 · 14개 언어 판
 #
-# archive/v6_r22_era/TOKENIZER/build_multilingual_bullet_language_classifier.py(r22, 10개 언어)의
-# 10,020건 판이다. 원본 language_of()(도메인 허용목록 기반)는 최종 토크나이저 소스
+# 최종 코퍼스 10,020건 · 14개 언어 판. 원본 language_of()(도메인 허용목록 기반)는 최종 토크나이저 소스
 # run_lda_v6_live_reference_v7.py 안에 있고 그 파일은 저장소에 없다. 대신 그 함수의 **결과물**은
 # 두 곳에 남아 있다:
 #   - data/v7_final/fandom_scores_live_reference_v7.json  coverage_detail.language_counts (팬덤별, 14개 언어)
@@ -11,7 +10,7 @@
 #   1) 팬덤별 language_counts를 합산해 language_domain_summary_v7.json의 언어별 total_bullets와
 #      14개 언어 전부 정확히 일치하는지 확인한다(합 10,020).
 #   2) 도메인 → 언어 근사 분류기(재구성, 원본 아님)를 코퍼스 원문 URL에 직접 적용해 (1)과 비교한다.
-#      r22 판의 TLD 규칙·수동 매핑에 필리핀어(tl)·포르투갈어(pt)·튀르키예어(tr)·아랍어(ar) 규칙을 더했다.
+#      TLD 규칙·수동 매핑에 필리핀어(tl)·포르투갈어(pt)·튀르키예어(tr)·아랍어(ar) 규칙을 더했다.
 #   3) 언어 버킷별 상위 기여 도메인과, '기본값(en)'으로 떨어진 도메인 상위 목록을 출력해 분류기의
 #      커버리지 한계를 투명하게 보인다.
 #
@@ -213,7 +212,7 @@ def main():
                 stage2_totals[lang] += 1
 
     print(f"\n[코퍼스] 불릿 {n_bullets}건")
-    print(f"[데이터 무결성] 'u' 필드에 세션 Agent 도구의 핸드백 문구가 남아있는 사례: {len(agent_id_leak_hits)}건 (r22 판에서는 5건)")
+    print(f"[데이터 무결성] 'u' 필드에 세션 Agent 도구의 핸드백 문구가 남아있는 사례: {len(agent_id_leak_hits)}건")
     for fandom, tag, raw in agent_id_leak_hits[:5]:
         print(f"  - {fandom}/{tag}: {raw[:70]}...")
     print(f"  -> URL이 없는 참고문구 불릿(예: '위와 동일'): {no_url_reference_notes}건 (분류 대상에서 제외)")

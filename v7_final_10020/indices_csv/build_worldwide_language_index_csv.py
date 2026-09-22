@@ -10,13 +10,13 @@ import json
 import csv
 from pathlib import Path
 
-# 저장소 상대 경로 (원본은 이전 세션 작업 디렉터리 /home/claude/work/... 절대경로였음).
+# 저장소 상대 경로
 # 입력 JSON은 최종 라이브 코퍼스(10,020건) 기준 산출물이며, 아직 저장소에 없으면 data/v7_final/ 에 넣는다.
 BASE = Path(__file__).resolve().parents[2]
 OUT_DIR = BASE / "output" / "indices_csv"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
-# 데이터 아카이브 README(data/v7_final/ARCHIVE_README_original.md)상의 원본 파일명은
+# 원본 데이터 묶음 README(data/v7_final/ARCHIVE_README_original.md)상의 원본 파일명은
 # worldwide_language_pilot_live_reference_v7.json 이다. 두 이름 중 존재하는 쪽을 읽는다.
 _CANDS = [BASE / "data" / "v7_final" / "worldwide_language_index_live_reference_v7.json",
           BASE / "data" / "v7_final" / "worldwide_language_pilot_live_reference_v7.json"]

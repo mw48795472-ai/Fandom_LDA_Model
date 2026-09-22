@@ -1,8 +1,7 @@
 # 핵심 수치 요약 (Quick Reference)
 
-보고서·대화에서 반복 인용된 수치를 한곳에 모은 참고 문서. 2026-09-21 정리에서 최종 라이브 코퍼스(10,020건)와
-최종 산출물이 `data/v7_final/`에 들어오면서 **각 수치의 근거 파일과 계층(동결 스냅샷 7,350건 vs 라이브 10,020건)을
-확정**했고, `verify_v7_final_consistency.py`로 재계산해 대조했다(101/101 일치).
+보고서에서 반복 인용되는 수치를 한곳에 모은 참고 문서. 각 수치의 근거 파일(`data/v7_final/`)과 계층(동결 스냅샷 7,350건 vs
+라이브 10,020건)을 함께 적었고, `verify_v7_final_consistency.py`로 재계산해 대조했다(101/101 일치).
 
 ## 코퍼스 규모 — 라이브 코퍼스 `data/v7_final/fandoms_v3_100.json`
 - 분석 대상 팬덤: 100개
@@ -11,7 +10,7 @@
 - 로스터: 동결 스냅샷(7,350건)과 라이브(10,020건)의 100개 팬덤은 3개가 다름 — 동결에만 한로로·pH-1·BE'O, 라이브에만
   몬스타엑스·투어스(TWS)·빈지노 (교체 로그 `data/v7_rounds/merge_log_r58.json`·`swap_log_r62.json`·`swap_log_r63.json`;
   그 이전 r29·r34에 사이먼도미닉→GOT7, 창모→김재중, 헤이즈→박서진 교체)
-- 코퍼스 성장 이력(`data/v7_rounds/` 병합 로그 60개 → `corpus_growth_history_v6_v7_full.csv`): v6 2,403건 → r22 5,612 → r39 7,350(동결)
+- 코퍼스 성장 이력(`data/v7_rounds/` 병합 로그 60개 → `corpus_growth_history_v6_v7_full.csv`): v6 2,403건 → r39 7,350(동결)
   → r59 9,042 → r66(2차) 9,680 → r68 아랍어·r69 프랑스어·r71 스페인어 보강 → **r72 10,020건**. after_total이 타임라인 CSV와 56건 전부 일치
 - 언어권: 14개 (`language_domain_summary_v7.json`, 14개 언어 불릿 합 = 10,020). 같은 분류가 `fandom_scores_live_reference_v7.json`의
   팬덤별 coverage_detail.language_counts와 세계 언어 지수 원본에도 들어 있어 세 파일의 언어별 합이 일치
@@ -70,11 +69,10 @@
 
 ## 실루엣 게이트 거버넌스
 - 동결 기준선(v7-40 스냅샷): 7,350건, K=10, M=5, silhouette=0.267
-- 누적 게이트 기각: 26회 연속 (v7-65 라운드 silhouette=0.141). 실측 타임라인
+- 누적 게이트 기각: 28회 연속 (v7-46∼v7-77, 최종 보고서 docx 기준; 제출 PDF 시점은 26회·v7-65 0.141). 실측 타임라인
   `data/silhouette_gate_timeline/corpus_silhouette_timeline_v7_66_2ch.csv`(v4 종료 1,781건 → r66 2차 9,680건)에서 v7-40
-  이후 실측 재적합 22개 지점(r45 변형 2개 포함)이 전부 0.267 미만(최대 0.148, r49)이고 r64·r65가 0.141. "26회"는 라운드
-  횟수 기준으로 보이며 CSV 실측 지점 수(22)와는 세는 단위가 다르다. 최종 라이브 코퍼스 10,020건 시점 재적합은
-  silhouette=0.046 (K=8, M=5) — `lda_v6_diagnostics_live_reference_v7.json`, 3D 맵 payload 동일 값
+  이후 실측 재적합 22개 지점(r45 변형 2개 포함)이 전부 0.267 미만(최대 0.148, r49). r68∼r77의 8회는 CSV 범위 밖이며
+  최종 라이브 코퍼스 10,020건 시점(r77) 재적합 silhouette=0.046 (K=8, M=5)만 `lda_v6_diagnostics_live_reference_v7.json`·3D 맵 payload로 확인된다
 
 ## 하이라이트 3사례 비교
 
@@ -89,13 +87,12 @@
 | Cook's D (라이브) | 0.575(최댓값) | — | — |
 | 세계언어지수 | 해외비중 60%, 135건, 해외언어다양성 0.66 | — | — |
 | 국내지역지수 — 동결 스냅샷 시점(보고서 표 15) | 17건·5지역, 대표지역 서울(47%), 다양성 0.29 | 19건·5지역, 대표지역 경남(58%), 다양성 0.29 | 28건·12지역, 대표지역 서울(21%), 다양성 0.71(전체 1위) |
-| 국내지역지수 — 최종 10,020건 재산출 (`v7_final_10020/analysis/domestic_regional_index/`) | 17건·5지역, 서울(47%), 0.29 | 22건·5지역, 경남(64%), 0.29 | 28건·12지역, 서울(21%), 0.71(전체 1위) |
+| 국내지역지수 — 최종 10,020건 (`v7_final_10020/analysis/domestic_regional_index/`) | 17건·5지역, 서울(47%), 0.29 | 22건·5지역, 경남(64%), 0.29 | 28건·12지역, 서울(21%), 0.71(전체 1위) |
 | 팬덤결속지수 | 15건(6.6%) | 18건(21.2%) | 30건(23%, 전체 1위) |
 
 팬덤결속·세계언어 지수 행은 `fandom_cohesion_index_v7.json`·`worldwide_language_pilot_live_reference_v7.json`에서 재현 확인.
-국내지역 지수: 원본 라이브 JSON은 저장소에 없으나, r22 원본을 1,698/1,700셀 재현하는 키워드 규칙으로 최종 코퍼스에 재산출한 JSON이
-`v7_final_10020/analysis/domestic_regional_index/domestic_regional_index_v7.json`에 있다. 보고서 표 15는 동결 스냅샷(7,350건) 시점 값으로,
-동결 코퍼스를 근사하면 20행 중 17행이 재현된다(이전 판의 BTS "서울(29%)"은 다양성 0.29를 비중으로 잘못 옮긴 오기 — 표 15·재계산 모두 47%).
+국내지역 지수: 17개 시/도 키워드 규칙을 최종 코퍼스에 적용한 JSON이 `v7_final_10020/analysis/domestic_regional_index/domestic_regional_index_v7.json`에 있다.
+보고서 표 15는 동결 스냅샷(7,350건) 시점 값으로, 동결 코퍼스를 근사하면 20행 중 17행이 재현된다.
 
 ## 보조지표 (라이브 10,020건 기준)
 - 광고·상업성 지수 (`ad_commercial_index_v7.json` → `ad_commercial_index_v7.csv`): 광고성 불릿 1,302건(13.0%), 98개 팬덤에
@@ -114,14 +111,14 @@
 - 세계 언어 지수 (`worldwide_language_pilot_live_reference_v7.json` → `worldwide_language_index_v7.csv`): 팬덤별 14개 언어 언급수,
   언어다양성, 해외비중(ko 제외), 해외언어다양성, 대표해외언어. 14개 언어 합이 언어 표(10,020건)와 정확히 같고 스크립트 재실행 결과
   불일치 0. 해외 근거문장수 상위: BLACKPINK·BTS(135건, 59.5%→60%, 해외언어다양성 0.66)·Stray Kids·TWICE·SEVENTEEN
-- 국내 지역 지수: 원본 라이브 JSON 미보유. `v7_final_10020/analysis/domestic_regional_index/domestic_regional_index_v7.json`(최종 10,020건 재산출: 지역 언급 1,226건,
-  검출 지역 합 469, 커버리지 99/100 — 투어스(TWS)만 0건; 상위 싸이 43·이승철 38·박서진 31·송가인 31·나훈아 30·god 28·임영웅 28). 규칙 검증: r22 원본 1,698/1,700셀,
+- 국내 지역 지수: `v7_final_10020/analysis/domestic_regional_index/domestic_regional_index_v7.json`(최종 10,020건: 지역 언급 1,226건,
+  검출 지역 합 469, 커버리지 99/100 — 투어스(TWS)만 0건; 상위 싸이 43·이승철 38·박서진 31·송가인 31·나훈아 30·god 28·임영웅 28).
   보고서 표 15(동결 시점) 17/20행 재현. 17개 시도별 언급수 합 ↔ total_region_mentions 100/100
 - 멤버 집중도 지수(MCI): `data/v7_final/member_mention_index_v7.json` — 45개 그룹, 10,020건 코퍼스 기준
-  (예: BTS 근거문장 227건 중 멤버명 언급 101건, MCI=0.241). 아카이브 원본명 `member_mention_pilot_v7.json`은 같은 값(키 이름만 다름).
+  (예: BTS 근거문장 227건 중 멤버명 언급 101건, MCI=0.241).
   동결 스냅샷(7,350건) 시점 파일럿(23개 그룹, BTS 170건 중 73건, MCI 0.24)은 `member_mention_pilot_v6.json`
 - MCI ↔ outcome 상관(`member_pilot_mci_correlation_v7.json`, 45개 그룹, MCI는 v7-55 시점 8,981건): 원시 MCI∼loyalty
   r=-0.393(p=0.008, R²=0.155)이 가장 크지만 MCI∼멤버 수 r=-0.749로, 멤버 수를 뺀 MCI_excess 기준으로는 어떤 outcome과도
-  유의하지 않음(최대 R²=0.036). 저장소의 10,020건 MCI로 재계산하면 r=-0.385로 근사 재현
+  유의하지 않음(최대 R²=0.036). 최종 10,020건 MCI로 재계산하면 r=-0.385 (상세 보고서 7.4절 값)
 - K=10 토픽 카드(`topic_cards_v7.json`): 토픽별 상위 키워드·대표 불릿 3건·대표 팬덤 5개·연결 F 경로. 명칭은 METHODOLOGY.md
   2-1 표와 동일

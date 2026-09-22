@@ -1,7 +1,6 @@
 # 팬덤결속 지수(Fandom Cohesion Index) — 최종 코퍼스 10,020건 판
 
-> `archive/v6_r22_era/Fandom Cohesion Pilot/FANDOM_COHESION_PILOT.md`(r22, LDA "결속형" 비중 대체)의 **10,020건 기준 새 판**.
-> 입력은 최종 원본 `data/v7_final/fandom_cohesion_index_v7.json`. 실행 노트북: `fandom_cohesion_index_v7.ipynb`.
+> 입력: 최종 원본 `data/v7_final/fandom_cohesion_index_v7.json`(10,020건). 실행 노트북: `fandom_cohesion_index_v7.ipynb`.
 
 ## 지수 정의(원문 `methodology`)
 
@@ -32,7 +31,6 @@
 ## 이 문서와 함께 보는 파일
 
 - `data/v7_final/fandom_cohesion_index_v7.json` / `.csv`, 차트 스크립트 `v7_final_10020/charts/build_cohesion_index_v7*.py`.
-- `archive/v6_r22_era/Fandom Cohesion Pilot/` — r22 판.
 
 ## 한계
 

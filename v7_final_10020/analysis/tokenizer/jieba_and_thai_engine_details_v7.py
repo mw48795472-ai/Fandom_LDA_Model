@@ -2,7 +2,7 @@
 # 상세 스펙을 실제 설치된 패키지에서 직접 읽어 정리하고, 이 프로젝트의 실제
 # 코퍼스(최종 10,020건)에 적용한 결과를 재검증한다.
 #
-# 문서: JIEBA_AND_THAI_TOKENIZER_ENGINE_SPEC_V7.md 참고. (r22 판: archive/v6_r22_era/TOKENIZER/jieba_and_thai_engine_details.py)
+# 문서: JIEBA_AND_THAI_TOKENIZER_ENGINE_SPEC_V7.md 참고.
 #
 # 이 스크립트가 하는 것:
 #   1) 설치된 jieba·pythainlp의 버전, 사전 크기, 불용어 코퍼스 크기를 "패키지
