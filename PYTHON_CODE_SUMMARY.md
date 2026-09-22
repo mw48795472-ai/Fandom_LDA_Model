@@ -130,10 +130,11 @@ before_total, after_total, net_new_bullets, n_touched_fandoms, note`)로 정규�
 
 | 스크립트 | 입력 | 출력 |
 |---|---|---|
-| `verify_v7_final_consistency.py` (루트) | `data/v7_final/*` 전부 | 보고서·KEY_FINDINGS 수치 91개 항목을 파일에서 재계산해 일치/불일치 출력 (현재 91/91 일치. χ²는 `positioning_map_correlation_live_v7.json`의 0.5 임계값 분할표로 재현) |
+| `verify_v7_final_consistency.py` (루트) | `data/v7_final/*` 전부 | 보고서·KEY_FINDINGS 수치 97개 항목을 파일에서 재계산해 일치/불일치 출력 (현재 97/97 일치. χ²는 `positioning_map_correlation_live_v7.json`의 0.5 임계값 분할표로 재현) |
 | `data_export/extract_html_payloads.py` | `3D_포지셔닝맵_국내100팬덤.html`, `Persona_결정공간.html` | HTML에 리터럴로 내장된 데이터 객체를 그대로 복사 → `data/v7_final/chart3d_payload_live_reference_v7.json`(라이브 100개 팬덤 점수·4구획·라이브 재적합 진단), `persona_decision_space_v7.json`(동결 K=10 토픽명·F코드·PCA·F1~F5 비중) |
 | `data_export/build_bullets_flat_csv.py` | `fandoms_v3_100.json` (`--src`, 기본 v7_final) | `bullets_flat_v7_final.csv` 10,020행 (r22에 쓰면 기존 `bullets_flat_v6_r22.csv`와 바이트 단위 동일 결과) |
 | `data_export/build_lda_k_grid_csv.py` | LDA 진단 JSON (`--src`, 기본 라이브 참고 재적합) | `lda_k_grid_live_reference_v7.csv` (r22에 쓰면 기존 `lda_k_grid_v6.csv`와 동일) |
+| `data_export/build_corpus_growth_history_csv.py` | `data/v6_r22_snapshot/v6*_merge_log.json` + `data/v7_rounds/merge_log_r*.json`·`swap_log_r*.json`·`round_log_r70.json` | `corpus_growth_history_v6_v7_full.csv` — v6 1차~v7 r72(10,020건) 69단계 성장 이력, 체인 불연속 4곳을 `chain_gap`에 기록, 타임라인 CSV와 56건 대조 (표의 `scripts/data_export/build_corpus_growth_history_csv.py`(r22까지) 재작성판) |
 | `data_export/build_cohesion_media_index_csv.py` | `fandom_cohesion_index_v7.json`, `media_crossover_index_v7.json` | `fandom_cohesion_index_v7.csv`, `media_crossover_index_v7.csv` — 팬덤별 유형/매체 집계 CSV, 합계를 원본 집계 필드와 재대조 |
 | `data_export/build_live_scores_csv.py` | `chart3d_payload_live_reference_v7.json` | `chart3d_positioning_rows_live_v7.csv` — 라이브 점수·다양성·커버리지·activity·4구획; activity 합 10,020, 평균·4구획 카운트 재대조 (원본 산출물 `fandom_scores_live_reference_v7.csv`가 추가되면서 파생 파일명을 변경) |
 

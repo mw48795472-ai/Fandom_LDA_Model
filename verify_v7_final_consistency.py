@@ -592,6 +592,45 @@ check("domestic_regional_pilot_v6_top3.csv: 100개 팬덤, 근거문장수 합 5
       len(top3) == 100 and t3_sum == 5998 and t3_match == 99, f"합 {t3_sum}, r22 파일럿 일치 {t3_match}/100")
 
 # ---------------------------------------------------------------------------
+# [AB] data/v7_rounds/ — 사용자가 GitHub에 직접 업로드한 v7 라운드별 병합·교체 로그 전량 (r1~r72)
+# ---------------------------------------------------------------------------
+print("\n[AB] data/v7_rounds/ (v7 병합·교체 로그 전량)")
+RD = BASE / "data" / "v7_rounds"
+def _rk(n):
+    m = re.search(r"r(\d+)(?:_(p2|2ch))?", n); return (int(m.group(1)), {"": 0, "p2": 1, "2ch": 2}[m.group(2) or ""])
+mlogs = sorted(RD.glob("merge_log_r*.json"), key=lambda p: _rk(p.name))
+same22 = sum(1 for p in (BASE / "data" / "v6_r22_snapshot" / "v7_rounds").glob("merge_log_r*.json")
+             if (RD / p.name).exists() and json.load(open(p, encoding="utf-8")) == json.load(open(RD / p.name, encoding="utf-8")))
+check("r1~r22 병합 로그 22개 = data/v6_r22_snapshot/v7_rounds/ 사본과 동일", same22 == 22, f"{same22}/22")
+def _ba(d): return d.get("before_total", d.get("before_total_bullets")), d.get("after_total", d.get("after_total_bullets"))
+last = json.load(open(mlogs[-1], encoding="utf-8"))
+check("마지막 병합 로그 r72: 9,939 → 10,020 (최종 라이브 코퍼스 규모)", mlogs[-1].name == "merge_log_r72.json" and _ba(last) == (9939, 10020))
+tl_map = {r["라운드"]: r["코퍼스(불릿수)"] for r in real_rows}
+ok = bad = 0
+for p in mlogs:
+    d = json.load(open(p, encoding="utf-8")); b, a = _ba(d)
+    if a is None: continue
+    n, suf = _rk(p.name); key = f"r{n}" + ("_p2" if suf == 1 else "")
+    c = [k for k in tl_map if (k == key or k.startswith(key + "(")) and (("2차" in k) == (suf == 2))]
+    if c:
+        ok += int(tl_map[c[0]]) == a; bad += int(tl_map[c[0]]) != a
+check("병합 로그 after_total = 실루엣 타임라인 CSV의 같은 라운드 코퍼스 (불일치 0)", bad == 0, f"대조 {ok + bad}건 중 일치 {ok}")
+swaps = {}
+for p in RD.glob("swap_log_r*.json"):
+    d = json.load(open(p, encoding="utf-8"))
+    for sw in (d.get("swaps") or [d]):
+        swaps[sw["removed_fandom"]] = sw["added_fandom"]
+r58 = json.load(open(RD / "merge_log_r58.json", encoding="utf-8"))
+if r58.get("round_type") == "roster_swap":
+    swaps[r58["removed_fandom"]] = r58["added_fandom"]
+check("로스터 교체 로그 6건 = 동결→라이브 로스터 차이 (한로로→몬스타엑스 r62, pH-1→투어스 r63, BE'O→빈지노 r58) + r22 이전 교체 (사이먼도미닉→GOT7 r29, 창모→김재중·헤이즈→박서진 r34)",
+      swaps == {"사이먼도미닉": "GOT7", "창모": "김재중", "헤이즈": "박서진", "BE'O": "빈지노", "한로로": "몬스타엑스", "pH-1": "투어스(TWS)"}, f"{swaps}")
+check("교체된 팬덤 6개는 최종 코퍼스에 없고, 추가된 6개는 있음", not (set(swaps) & set(corpus_cnt)) and set(swaps.values()) <= set(corpus_cnt))
+sa = json.load(open(RD / "schema_audit_r74.json", encoding="utf-8"))
+check("schema_audit_r74: 10,020건 스캔, 팬덤 100, LDA 3토큰 미만 제외 2건(= lda_excluded_bullets_v7.json)", sa["total_bullets_scanned"] == 10020 and sa["n_fandoms"] == 100 and sa["lda_sub_3_token_excluded_bullets"] == 2)
+info("성장 이력 전체 CSV", "data_export/build_corpus_growth_history_csv.py -> data/v7_final/corpus_growth_history_v6_v7_full.csv (v6 1차 ~ v7 r72)")
+
+# ---------------------------------------------------------------------------
 n_ok = sum(1 for _, ok in results if ok); n_all = len(results)
 print(f"\n=== 결과: {n_ok}/{n_all} 항목 일치 ({n_all - n_ok}건 불일치) ===")
 sys.exit(0 if n_ok == n_all else 1)

@@ -9,7 +9,7 @@
 > 없어 재현 불가"라고 적혀 있었다. 이번 정리에서 최종 코퍼스와 산출물을 `data/v7_final/`로 추가하고,
 > 5,612건 스냅샷은 `data/v6_r22_snapshot/`으로 옮겨 두 데이터가 같은 파일명으로 섞이지 않게 했다.
 > 최종 수치가 저장소 파일에서 실제로 재현되는지는 `verify_v7_final_consistency.py`가 항목별로 검증한다
-> (현재 91/91 일치. 지난 정리에서 유일하게 재현되지 않던 χ² 값도 2026-09-22 추가 파일로 해소, 아래 "재현성 범위" 참고).
+> (현재 97/97 일치. 지난 정리에서 유일하게 재현되지 않던 χ² 값도 2026-09-22 추가 파일로 해소, 아래 "재현성 범위" 참고).
 
 ---
 
@@ -49,6 +49,7 @@
 | r45(1차) K=12, M=2, 실루엣 0.136 | `_explore_r45_meta_factor.json` (코사인거리 행렬로 M 2~11 실루엣 전부 재현) | 일치 |
 | 미디어·콘텐츠 노출 1,025건(10.2%), 서브태그 예능·유튜브·영화·드라마 | `media_exposure_v7.json` (팬덤별·서브태그별 합 전부 일치) | 일치 |
 | 매체 크로스오버 6,712건(67.0%), 고유 매체 1,298개 | `media_crossover_index_v7.json` (팬덤별 news_media 불릿·매체 수·다양성 비율) | 일치 |
+| 코퍼스 성장 이력: v6 2,403건 → v7 r72 10,020건, 로스터 교체 6건 | `data/v7_rounds/` 병합·교체 로그 전량 → `corpus_growth_history_v6_v7_full.csv` (타임라인 CSV와 56건 일치) | 일치 |
 | 라이브 재적합 K=8/M=5/실루엣 0.046 (게이트 기각) | `lda_v6_diagnostics_live_reference_v7.json` = 3D 맵 payload 값 | 일치 |
 | 4분면 독립성 χ²=8.34, p=0.0039 (라이브) / χ²=10.2273, p=0.0014 (동결) | `positioning_map_correlation_live_v7.json`의 분할표 [[7,17],[4,72]] — 표본 평균 4구획이 아니라 **점수 0.5 초과 여부** 2×2표. 동결 CSV에 같은 0.5 기준을 적용하면 [[8,17],[4,71]] → 10.2273 | 일치 (2026-09-22 추가 파일로 해소) |
 | K=10 토픽 명칭·대표 불릿·대표 팬덤 | `topic_cards_v7.json` (METHODOLOGY.md 2-1 표와 명칭 10/10 일치) | 일치 |
@@ -88,8 +89,7 @@
   `worldwide_language_pilot_live_reference_v7.json`(세계 언어 지수 — 스크립트가 기대하던 `..._index_...` 이름과 달라 두 이름 모두
   읽도록 수정, CSV 산출 완료), `factor_pathway_map_v7.json`이 들어왔다. **아카이브에 있으나 아직 없는 파일**: `chart3d_correlation_v7.json`
   (3D 축 검증의 동결 스냅샷판), 아카이브판 `domestic_regional_pilot_v6.json`(국내 지역 지수 라이브판 — 스크립트가 두 이름 모두 읽음),
-  `v7_rounds/`의 r23 이후 병합·교체 로그(`swap_log_r*.json`, `round_log_r70.json`, `member_pilot_r53~55_compare.json`),
-  `supplementary_csv/팬덤100_언어비중.csv`(같은 폴더의 다른 2종은 6차 추가로 들어옴 — `fandom_bullet_share_v6.csv`는 r17 5,454건,
+  `supplementary_csv/팬덤100_언어비중.csv`(`v7_rounds/` 로그 전량은 사용자가 GitHub에 직접 올려 `data/v7_rounds/`에 있음)(같은 폴더의 다른 2종은 6차 추가로 들어옴 — `fandom_bullet_share_v6.csv`는 r17 5,454건,
   `domestic_regional_pilot_v6_top3.csv`는 r24 5,998건 시점). 6차 추가분에는 동결 스냅샷 점수 JSON(`fandom_scores_v6.json`)도 있다. 아카이브 README에 `factor_clustering_structure_v7.json`은 없으므로 페르소나 덴드로그램 차트 입력은
   아카이브 밖에서 만들어진 파일로 보인다(같은 K→M 코사인거리 행렬 형식의 예는 `_explore_r45_meta_factor.json`에 있음).
 
@@ -100,11 +100,13 @@ README.md / KEY_FINDINGS.md / METHODOLOGY.md / FINAL_REPORT_SUMMARY.md / PYTHON_
 (분석보고서)…최종.pdf, (요약보고서)…최종.pdf         제출본
 3D_포지셔닝맵_국내100팬덤.html + plotly-bundle.js    라이브 10,020건 3D 맵 (같은 폴더에서 열면 동작)
 Persona_결정공간.html                                동결 스냅샷 K=10→M=5 덴드로그램·PCA·레이더
-verify_v7_final_consistency.py                       최종 수치 ↔ 파일 정합성 검증 (91개 항목)
+verify_v7_final_consistency.py                       최종 수치 ↔ 파일 정합성 검증 (97개 항목)
 run_lda_v6.py                                        LDA 파이프라인(v6~r22 시점) — --data/--out 인자
 data/
   v7_final/            최종 라이브 코퍼스 10,020건 + 최종 산출물 (1절 표 참고)
-  v6_r22_snapshot/     v7 라운드22 스냅샷 5,612건 (+ v7_rounds/ 병합로그, csv/ 파생 CSV)
+  v6_r22_snapshot/     v7 라운드22 스냅샷 5,612건 (+ v7_rounds/ r1~r22 병합로그, csv/ 파생 CSV)
+  v7_rounds/           v7 병합·교체 로그 전량 r1~r74 (사용자 직접 업로드; 마지막 r72가 10,020건)
+  silhouette_gate_timeline/  실루엣 게이트 타임라인 CSV
 data_export/           코퍼스 평탄화·K-grid·라이브 점수 CSV·HTML 내장 데이터 추출 스크립트
 charts/ indices_csv/   최종 보고서 그림·지수 CSV 스크립트 (입력 JSON은 data/v7_final/ 에서 읽음)
 Silhoett Gate Policy/  실루엣 게이트 정책 문서 + 타임라인 차트 스크립트

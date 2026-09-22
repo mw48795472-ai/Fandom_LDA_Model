@@ -19,6 +19,7 @@
 | `member_mention_pilot_v7.json` | 라이브 10,020건 | 멤버 언급 파일럿 v7 (아카이브 원본명). `member_mention_index_v7.json`과 값이 동일하고 키 이름만 pilot/index |
 | `v7_progress.json` | v7 48라운드 시점(8,311건) | 10배 확대 프로젝트 진행 추적 후속본(r22판은 `data/v6_r22_snapshot/`). `current_total_note`가 동결/라이브 이원 구조를 명시 |
 | `ARCHIVE_README_original.md` | — | 최종 보고서 docx가 읽은 원본 데이터 아카이브(zip)의 README 원문 — 파일 전량 목록. 저장소 미보유분 대조는 루트 README 3절 |
+| `corpus_growth_history_v6_v7_full.csv` | v6 → v7 r72 | `data/v7_rounds/` 로그 전량에서 만든 코퍼스 성장 이력 69단계(마지막 10,020건), 로스터 교체·체인 불연속 표기 (`data_export/build_corpus_growth_history_csv.py`) |
 | `k9_validation_v7.json` | 중간 라운드 9,614문서 | K=9 추가 검증 실험(승자 K=8 유지, 미디어 토픽 분리 여부 M-grid) |
 | `lda_v6_diagnostics_live_reference_v7.json` | 라이브 10,020건 | 라이브 재적합 진단: K-grid(8~30), selected_k=8, M=5, 실루엣 0.046, 토픽 상위어, 토픽→F 배정 — 실루엣 게이트에 기각되어 해석 계층에 미반영 |
 | `lda_k_grid_live_reference_v7.csv` | 라이브 10,020건 | 위 k_grid를 CSV로 (`data_export/build_lda_k_grid_csv.py`) |
