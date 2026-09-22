@@ -145,9 +145,9 @@ flowchart LR
 | 멤버 집중도 MCI | 그룹 내 멤버 쏠림 | Σ(멤버 점유율)² (허핀달 방식, 하한 1/멤버수) | 45개 그룹. MCI∼멤버 수 r=−0.728, 멤버 수 통제 후 outcome 설명력 R²<0.05 |
 | 세계 언어 지수 | 해외 확산 | Coverage의 언어 분포 재구성 | 해외언어 4,469건(44.6%), 100/100 팬덤. 영어 2,195(49.1%) · 일본어 · 중국어 순 |
 
-| 업종별 광고·상업성 순위 | 팬덤별 업종 구성 (상위 25) |
+| 업종별 광고·상업성 순위 | 팬덤별 해외언어 구성 (상위 20, Worldwide Language Pilot) |
 |---|---|
-| ![ad rank](assets/readme/fig08_ad_industry_rank.png) | ![ad by fandom](assets/readme/fig09_ad_by_fandom.png) |
+| ![ad rank](assets/readme/fig08_ad_industry_rank.png) | ![worldwide by fandom](assets/readme/fig14_worldwide_language_by_fandom.png) |
 
 | 미디어·콘텐츠 노출 (상위 20) | 팬덤결속 지수 (유형별 순위 · 상위 25) |
 |---|---|
@@ -157,7 +157,9 @@ flowchart LR
 |---|---|
 | ![domestic](assets/readme/fig12_domestic_regional.png) | ![worldwide rank](assets/readme/fig13_worldwide_language_rank.png) |
 
-![해외언어 구성 상위 20](assets/readme/fig14_worldwide_language_by_fandom.png)
+![팬덤별 광고·상업성 업종 구성 상위 25](assets/readme/fig09_ad_by_fandom.png)
+
+*그림. 팬덤별 광고·상업성 업종 구성(상위 25) — 20개 업종 누적 막대, 팬덤 내 다중분류 포함.*
 
 **MCI 상위·하위와 설명력** (`member_mention_index_v7.json`, 상관은 상세 보고서 7.4절 표)
 
