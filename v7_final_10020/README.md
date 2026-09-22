@@ -12,7 +12,7 @@
 | `data_export/` | HTML 내장 데이터 추출, 코퍼스 평탄화, K-grid·결속/크로스오버 CSV, 성장 이력 CSV |
 | `silhouette_gate_policy/` | 실루엣 게이트 정책 문서 + 타임라인 차트 스크립트 |
 | `tokenizer_wordcloud_report/` | 토크나이저·워드클라우드 보고서(10,020건 실행 결과) + 이미지 |
-| `index_methodology/` | 지표 산식 문서 + 라이브 점수 JSON으로 식(2)(3)(6)(7) 재검증 스크립트 |
+| `index_methodology/` | 지표 산식 문서 + 식(1)∼(7)로 지표를 직접 산정하는 노트북(`index_calculation_v7.ipynb`/`.html`, 결과 CSV) + 식(2)(3)(6)(7) 재검증 스크립트 |
 | `report_scripts/` | 요약보고서 docx 빌드 스크립트(Node.js) + JS 정리 문서 |
 
 ## 경로 규칙
@@ -29,6 +29,7 @@ python v7_final_10020/analysis/build_notebooks_v7.py                          # 
 python v7_final_10020/indices_csv/build_ad_commercial_index_csv.py            # -> output/indices_csv/
 python v7_final_10020/data_export/build_corpus_growth_history_csv.py          # -> data/v7_final/corpus_growth_history_v6_v7_full.csv (동일 결과)
 python v7_final_10020/index_methodology/verify_index_calculation_formulas.py  # 식(2)(3)(6)(7) 0/100 불일치
+python v7_final_10020/index_methodology/build_index_calculation_notebook.py    # 지표 산정 노트북 생성+실행+HTML
 python v7_final_10020/silhouette_gate_policy/build_silhouette_gate_timeline_v7.py
 python v7_final_10020/analysis/tokenizer/build_bullet_token_frequency_csv_v7.py   # fugashi·jieba·pythainlp 필요
 ```
