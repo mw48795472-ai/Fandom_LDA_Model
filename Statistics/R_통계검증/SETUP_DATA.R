@@ -48,6 +48,26 @@ norm <- function(p) normalizePath(p, winslash = "/", mustWork = FALSE)
 
 cat("\n[SETUP_DATA] 프로젝트:", norm(HERE), "\n")
 
+# 0) 이 패키지가 GitHub 저장소(Fandom_LDA_Model) 안에 있으면 저장소 원본 data/v7_final 에서 바로 채운다.
+#    (member_mention_pilot_v7.json 은 저장소에 없으므로 이 패키지 data/ 에 그대로 두고, 나머지는 복사한다.)
+REPO_DATA <- file.path(HERE, "..", "..", "data", "v7_final")
+REPO_MAP  <- c(fandom_scores_live_reference_v7.json    = "fandom_scores_live_reference_v7.json",
+               fandom_scores_v6.json                    = "fandom_scores_v6.json",
+               positioning_map_correlation_live_v7.json = "positioning_map_correlation_live_v7.json",
+               chart3d_correlation_live_v7.json         = "chart3d_correlation_live_v7.json",
+               k9_validation_v7.json                    = "k9_validation_v7.json",
+               member_pilot_mci_correlation_v7.json     = "member_pilot_mci_correlation_v7.json",
+               lda_v6_diagnostics.json                  = "lda_v6_diagnostics_frozen_v7_40.json")
+if (dir.exists(REPO_DATA)) {
+  dir.create(DATA, showWarnings = FALSE)
+  for (to in names(REPO_MAP)) {
+    from <- file.path(REPO_DATA, REPO_MAP[[to]])
+    if (!file.exists(file.path(DATA, to)) && file.exists(from)) {
+      file.copy(from, file.path(DATA, to)); cat("  저장소 원본에서 복사:", to, "\n")
+    }
+  }
+}
+
 have <- file.exists(file.path(DATA, REQUIRED))
 if (all(have)) {
   cat("  data/ 준비됨 — 필요한 7개 파일이 모두 있습니다. 할 일 없음.\n")

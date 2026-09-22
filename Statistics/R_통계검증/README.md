@@ -166,7 +166,8 @@ fandom_stats_r/
 ├── README.md
 ├── RUN_ALL.R                                  ★ 이 파일 하나만 Source 하면 전부 실행
 ├── install_packages.R
-├── data/                                      Python 패키지와 동일한 원본 JSON
+├── data/                                      검증 입력 JSON. 저장소에서는 member_mention_pilot_v7.json 만 커밋되어 있고,
+│                                              나머지 7개는 RUN_ALL.R·SETUP_DATA.R 이 저장소 원본 data/v7_final 에서 자동 복사한다(중복 보관 금지)
 │   ├── fandom_scores_live_reference_v7.json   라이브 참고용 점수 (n=100)
 │   ├── fandom_scores_v6.json                  v7-40 동결 스냅샷 — 7.4절 outcome
 │   ├── member_mention_pilot_v7.json           45개 그룹 멤버별 언급·MCI

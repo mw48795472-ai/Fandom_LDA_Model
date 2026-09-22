@@ -233,6 +233,31 @@ script_dir <- function() {
   NA_character_
 }
 
+# 저장소 안에서 실행할 때: data/ 에 없는 JSON 은 저장소 원본 data/v7_final 에서 복사해 채운다.
+# (원본과 바이트 단위로 같은 파일을 두 곳에 두지 않기 위해 이 패키지의 data/ 에는
+#  저장소에 없는 member_mention_pilot_v7.json 만 커밋되어 있다. 나머지는 여기서 채워진다.)
+REPO_MAP <- c(fandom_scores_live_reference_v7.json      = "fandom_scores_live_reference_v7.json",
+              fandom_scores_v6.json                      = "fandom_scores_v6.json",
+              positioning_map_correlation_live_v7.json   = "positioning_map_correlation_live_v7.json",
+              chart3d_correlation_live_v7.json           = "chart3d_correlation_live_v7.json",
+              k9_validation_v7.json                      = "k9_validation_v7.json",
+              member_pilot_mci_correlation_v7.json       = "member_pilot_mci_correlation_v7.json",
+              lda_v6_diagnostics.json                    = "lda_v6_diagnostics_frozen_v7_40.json")
+fill_data_from_repo <- function() {
+  sd <- script_dir(); if (is.na(sd)) return(invisible(FALSE))
+  repo_data <- file.path(sd, "..", "..", "data", "v7_final")
+  if (!dir.exists(repo_data)) return(invisible(FALSE))
+  dst <- file.path(sd, "data"); dir.create(dst, showWarnings = FALSE)
+  n <- 0
+  for (to in names(REPO_MAP)) {
+    from <- file.path(repo_data, REPO_MAP[[to]])
+    if (!file.exists(file.path(dst, to)) && file.exists(from)) { file.copy(from, file.path(dst, to)); n <- n + 1 }
+  }
+  if (n > 0) cat("      저장소 data/v7_final 에서", n, "개 파일을 data/ 로 복사\n")
+  invisible(TRUE)
+}
+fill_data_from_repo()
+
 find_data_dir <- function() {
   sd <- script_dir()
   cands <- character(0)

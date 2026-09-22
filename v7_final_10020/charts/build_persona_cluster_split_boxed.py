@@ -31,7 +31,9 @@ def _find_korean_font():
     없으면 matplotlib 기본 폰트로 진행(한글이 깨질 수 있음을 경고)."""
     candidates = [os.environ.get("KFONT_PATH", ""), str(BASE / "fonts" / "NotoSansCJKkr-Regular.otf"),
                   "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc",
-                  "/usr/share/fonts/truetype/nanum/NanumGothic.ttf"]
+                  "/usr/share/fonts/truetype/nanum/NanumGothic.ttf",
+                  "C:/Windows/Fonts/malgun.ttf", "/System/Library/Fonts/AppleSDGothicNeo.ttc",
+                  "/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc"]
     for c in candidates:
         if c and os.path.exists(c):
             return c
@@ -49,11 +51,28 @@ plt.rcParams["svg.fonttype"] = "none"
 plt.rcParams["axes.unicode_minus"] = False
 
 # 입력 1: K→M 군집 구조(토픽 코사인거리 행렬 + 팬덤별 F1~F5 비중). 동결 스냅샷 v7-40(7,350건) 기준.
-#   원본 factor_clustering_structure_v7.json은 아직 저장소에 없다. 같은 스냅샷의 K=10 토픽 명칭·F코드·
-#   덴드로그램 병합 순서·PCA 좌표는 data/v7_final/persona_decision_space_v7.json(Persona_결정공간.html에서
-#   추출)에 있으나 코사인거리 행렬 자체는 포함돼 있지 않아 이 스크립트가 바로 쓰지는 못한다.
-with open(DATA_DIR / "factor_clustering_structure_v7.json", encoding="utf-8") as f:
-    cs = json.load(f)
+#   원본 factor_clustering_structure_v7.json 이 있으면 그대로 쓰고, 없으면(저장소 기본) 같은 스냅샷의
+#   Persona_결정공간.html 내장 데이터 data/v7_final/persona_decision_space_v7.json 으로 대체한다:
+#   덴드로그램은 그 안의 average-linkage 병합 기록(merges)으로 linkage 행렬을 만들고, PCA 입력은 팬덤별 shares 를 쓴다.
+_cs_path = DATA_DIR / "factor_clustering_structure_v7.json"
+if _cs_path.exists():
+    with open(_cs_path, encoding="utf-8") as f:
+        cs = json.load(f)
+    _Z_from_merges = None
+else:
+    with open(DATA_DIR / "persona_decision_space_v7.json", encoding="utf-8") as f:
+        _pd = json.load(f)
+    _d, _p = _pd["dendro"], _pd["pca"]
+    cs = {"K": _d["K"], "M": _d["M"], "silhouette": _d["silhouette"], "topic_ids": _d["topic_ids"],
+          "topic_names": _d["topic_names"], "topic_f_codes": _d["topic_f_codes"],
+          "fandom_factor_share_full": {r["name"]: r["shares"] for r in _p["fandoms"]}}
+    _size = {i: 1 for i in range(_d["K"])}
+    _rows = []
+    for m in sorted(_d["merges"], key=lambda m: m["id"]):
+        _size[m["id"]] = _size[m["left"]] + _size[m["right"]]
+        _rows.append([m["left"], m["right"], m["height"], _size[m["id"]]])
+    _Z_from_merges = np.array(_rows, dtype=float)
+    print("[input] factor_clustering_structure_v7.json 없음 → persona_decision_space_v7.json(HTML 내장 병합 기록·shares)으로 대체")
 # 입력 2: 팬덤별 페르소나(동결 스냅샷 기준, 저장소에 있음)
 with open(DATA_DIR / "fan_persona_v7.json", encoding="utf-8") as f:
     persona_data = json.load(f)
@@ -80,10 +99,13 @@ print(f"[verify] K={K} M={M} silhouette={cs['silhouette']:.4f} n_fandoms={len(pe
 # ============================================================
 fig1, ax1 = plt.subplots(figsize=(11.5, 10), dpi=450)
 
-dist = np.array(cs["topic_cosine_distance_matrix"])
-np.fill_diagonal(dist, 0.0)
-condensed = squareform(dist, checks=False)
-Z = linkage(condensed, method="average")
+if _Z_from_merges is None:
+    dist = np.array(cs["topic_cosine_distance_matrix"])
+    np.fill_diagonal(dist, 0.0)
+    condensed = squareform(dist, checks=False)
+    Z = linkage(condensed, method="average")
+else:
+    Z = _Z_from_merges          # HTML 내장 병합 기록 = 같은 average-linkage 결과
 
 merge_heights = np.sort(Z[:, 2])
 cut_height = (merge_heights[K - M - 1] + merge_heights[K - M]) / 2 if M < K else merge_heights[-1] + 1

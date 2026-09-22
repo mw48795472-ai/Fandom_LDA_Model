@@ -2,3 +2,7 @@ __pycache__/
 *.pyc
 output/
 .ipynb_checkpoints/
+
+# R 패키지 data/ 는 저장소 원본(data/v7_final)에서 실행 시 복사되는 사본 — member_mention_pilot_v7.json 만 커밋
+Statistics/R_통계검증/data/*.json
+!Statistics/R_통계검증/data/member_mention_pilot_v7.json
