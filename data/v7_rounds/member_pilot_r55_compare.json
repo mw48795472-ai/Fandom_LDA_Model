@@ -1,0 +1,32 @@
+{
+  "Hearts2Hearts": {
+    "bullets_before": 77,
+    "bullets_after": 84,
+    "mentions_before": 9,
+    "mentions_after": 25,
+    "mci_before": 1.0,
+    "mci_after": 0.194,
+    "member_count_before": 1,
+    "member_count_after": 8
+  },
+  "CORTIS": {
+    "bullets_before": 118,
+    "bullets_after": 123,
+    "mentions_before": 7,
+    "mentions_after": 15,
+    "mci_before": 1.0,
+    "mci_after": 0.298,
+    "member_count_before": 1,
+    "member_count_after": 5
+  },
+  "엔믹스": {
+    "bullets_before": 104,
+    "bullets_after": 107,
+    "mentions_before": 15,
+    "mentions_after": 23,
+    "mci_before": 0.28,
+    "mci_after": 0.228,
+    "member_count_before": 6,
+    "member_count_after": 6
+  }
+}

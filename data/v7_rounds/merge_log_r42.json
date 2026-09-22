@@ -1,0 +1,53 @@
+{
+  "round": "v7_r42_industry_concentration_gapfillB",
+  "description": "사용자가 v7 41 업종 편중 진단에서 미해결로 남은 72개 팬덤('확인 안 됨' 28 + '리서치 공백일 가능성' 44)을 보고 '우리 아직 미해결된 부분있지 요거 해결하자'고 요청. 세션 WebSearch 예산이 새로 갱신된 상태였고 디바이스 브라우저는 일시 연결 불가 상태였기에, WebSearch로 나무위키 '광고 및 화보' 하위문서 URL을 먼저 찾고 그 URL만 WebFetch로 열람하는 방식으로 '확인 안 됨' 28개 중 코퍼스 상위 20위 안에 드는 10개 팬덤을 우선 재조사했다. 8개 팬덤(SEVENTEEN·리센느· LE SSERAFIM·STAYC·오마이걸·QWER·BABYMONSTER·아이오아이)에서 자동차·게임·금융·정보통신· 여행·교육 등 저대표 업종의 나무위키 공식 광고 기록을 확인해 리서치 공백이 해소됐다. 2개 팬덤(EXO·IKON)은 신뢰할 수 있는 1차 출처를 확보하지 못해 '확인 안 됨'으로 유지했다.",
+  "before_total_fandoms": 100,
+  "after_total_fandoms": 100,
+  "before_total_bullets": 7513,
+  "after_total_bullets": 7548,
+  "net_new_bullets": 35,
+  "added_loyalty": 0,
+  "added_spillover": 35,
+  "skipped_dupe": 0,
+  "n_touched_fandoms": 8,
+  "names_not_found": [],
+  "per_fandom_added": {
+    "SEVENTEEN": 1,
+    "리센느(RESCENE)": 4,
+    "LE SSERAFIM": 3,
+    "STAYC": 3,
+    "오마이걸": 6,
+    "QWER": 11,
+    "BABYMONSTER": 2,
+    "아이오아이": 5
+  },
+  "resolved_this_round": [
+    "SEVENTEEN",
+    "리센느(RESCENE)",
+    "LE SSERAFIM",
+    "STAYC",
+    "오마이걸",
+    "QWER",
+    "BABYMONSTER",
+    "아이오아이"
+  ],
+  "still_unresolved_this_round": [
+    "EXO",
+    "IKON"
+  ],
+  "diagnostic_notes_summary": {
+    "n_fandoms_with_notes": 100,
+    "assessment_counts": {
+      "실제 부재로 보임": 19,
+      "리서치 공백일 가능성": 44,
+      "확인 안 됨": 20,
+      "부분적으로 리서치 공백 해소, 그 외는 실제 편중으로 보임": 3,
+      "리서치 공백이었음 (해소)": 13,
+      "리서치 공백은 일부 해소, 나머지는 실제 부재로 보임": 1
+    },
+    "n_fandoms_with_confirmed_underrepresented_deal": 21,
+    "methodology_note": "batchN_notes.json(1~10) + gapfillA_notes.json(v7 41) + gapfillB_notes.json(v7 42)을 팬덤명 기준으로 병합했다. 동일 팬덤이 여러 라운드에서 평가된 경우 가장 나중에 로드되는 gapfillB_notes의 평가를 최종값으로 채택했다(가장 최근·신뢰도 높은 근거)."
+  },
+  "target_fandoms_total": 100,
+  "honest_disclosure": "v7 41에서 미해결로 남았던 72개 팬덤(확인 안 됨 28 + 리서치 공백일 가능성 44) 중 이번 v7 42 라운드에서 다룬 것은 10개뿐이며, 그마저도 8개만 해소됐다(EXO·IKON은 여전히 확인 안 됨). '리서치 공백일 가능성' 44개 팬덤은 이번 라운드에서 전혀 손대지 못했다. 즉 72개 중 62개(확인 안 됨 20개 + 리서치 공백일 가능성 44개, 겹침 없음)가 여전히 미해결로 남아 있다. 이는 부재의 증거가 아니라 조사 범위의 한계이며, 후속 라운드에서 계속 다뤄야 할 과제다."
+}

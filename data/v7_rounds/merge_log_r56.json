@@ -1,0 +1,49 @@
+{
+  "round": "v7_r56_ad_commercial_index_etc_bucket_resolution_plus_brand_research",
+  "before_total_fandoms": 100,
+  "after_total_fandoms": 100,
+  "before_total_bullets": 8981,
+  "after_total_bullets": 9029,
+  "net_new_bullets": 48,
+  "added_loyalty": 0,
+  "added_spillover": 48,
+  "skipped_dupe": 0,
+  "n_touched_fandoms": 10,
+  "names_not_found": [],
+  "per_fandom_added": {
+    "임영웅": 2,
+    "이찬원": 3,
+    "TWICE": 5,
+    "소녀시대": 7,
+    "워너원": 4,
+    "아이유": 7,
+    "싸이": 4,
+    "aespa": 7,
+    "NewJeans": 7,
+    "RIIZE": 2
+  },
+  "text_clarifications": [
+    {
+      "fandom": "여자친구",
+      "found": true,
+      "old": "앰버서더 위촉 이후 해당 플랫폼의 한국 상품 판매량이 8배 증가하고 브랜드 순위가 인도네시아 1위·세계 7위로 상승하는 등 실질적 매출 기여가 확인됐다.",
+      "new": "앰버서더 위촉 이후 쇼피(Shopee)의 한국 상품 판매량이 8배 증가하고 브랜드 순위가 인도네시아 1위·세계 7위로 상승하는 등 실질적 매출 기여가 확인됐다.",
+      "reason": "위키피디아(en.wikipedia.org/wiki/GFriend) 원문 재확인 결과 이 문장은 원래 같은 문단의 앞 문장(이미 corpus에 '쇼피(Shopee)'로 명시돼 있음)과 한 문장이었으나 두 불릿으로 분리되며 '해당 플랫폼'이라는 대명사만 남아 브랜드명이 소실됐다. 학술 논문 1건(PT. Shopee Indonesia의 GFriend 앰버서더 마케팅 연구)으로 추가 교차 검증함."
+    }
+  ],
+  "methodology_note": "기타(Other) 업종 버킷 축소를 위해 (1) build_ad_commercial_index_v7.py의 INDUSTRY_KEYWORDS에 충돌-검증을 거친 신규 키워드 약 25개를 9개 업종에 추가 (기타 101건 -> 75건, -25.7%), (2) 3건의 실제 오탐(false positive)을 FALSE_POSITIVE_EXCLUSION_SUBSTRINGS로 제외, (3) 남은 75건 중 집계형 표현 뒤에 숨겨진 구체적 브랜드명을 10개 아티스트/그룹 대상 11개 병렬 리서치 에이전트로 조사해 48건의 신규 브랜드-확인 불릿을 추가(각 2개 이상 독립 출처로 교차 검증). 집계형 원문 불릿은 삭제하지 않고 그대로 유지했다 (정보 손실 없음, 신규 불릿은 추가적 근거로 병합).",
+  "silhouette_gate": {
+    "baseline_silhouette": 0.267,
+    "test_fit_k_grid_selected_k": 8,
+    "test_fit_m_grid": {
+      "5": 0.11,
+      "6": 0.104,
+      "7": 0.084
+    },
+    "test_fit_selected_m": 5,
+    "test_fit_silhouette": 0.11,
+    "test_fit_result": "REJECTED",
+    "consecutive_rejections": 10,
+    "note": "v7 56 라운드 신규 병합분(9,027건, 텍스트 정정 1건 포함) 기준 격리 시험 재적합. 3~7장·Persona 스냅샷은 v7 40 시점(7,350건)에 그대로 고정."
+  }
+}

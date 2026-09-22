@@ -1,0 +1,36 @@
+{
+  "round": "v7_r34_roster_swap_x2",
+  "description": "사용자가 한 메시지에서 2건의 교체를 동시에 요청: (1) \"창모\"(힙합)를 빼고 \"김재중\"(솔로)을 추가, (2) \"헤이즈\"(솔로)를 빼고 \"박서진\"(트로트)을 추가. 각 신규 아티스트는 별도 리서치 에이전트로 단일 아티스트 딥다이브 조사를 진행했다. 팬덤 총원 100개는 그대로 유지.",
+  "swaps": [
+    {
+      "removed_fandom": "창모",
+      "removed_fandom_category": "힙합",
+      "removed_fandom_bullet_count": 27,
+      "added_fandom": "김재중",
+      "added_fandom_category": "솔로",
+      "added_fandom_loyalty": 12,
+      "added_fandom_spillover": 11,
+      "added_fandom_bullet_count": 23
+    },
+    {
+      "removed_fandom": "헤이즈",
+      "removed_fandom_category": "솔로",
+      "removed_fandom_bullet_count": 39,
+      "added_fandom": "박서진",
+      "added_fandom_category": "트로트",
+      "added_fandom_loyalty": 17,
+      "added_fandom_spillover": 24,
+      "added_fandom_bullet_count": 41
+    }
+  ],
+  "before_total_fandoms": 100,
+  "after_total_fandoms": 100,
+  "before_total_bullets": 6913,
+  "after_total_bullets": 6911,
+  "net_bullet_change": -2,
+  "methodology_note": "김재중(23건: loyalty 12 + spillover 11)은 BOSS BABIES 글로벌 팬덤 개편, 일본 공식 팬클럽 JAEFANS, 팬미팅 시리즈(J-Party Home 등), 2019년 일본 커버앨범 'Love Covers' 오리콘·빌보드재팬 동시 1위, 브랜드 앰버서더 등을 확인했다. 박서진(41건: loyalty 17 + spillover 24)은 공식 팬클럽 '닻별'의 누적 1억5천만원대 기부 이력(사랑의열매 골드회원), 미스터트롯2·현역가왕2 서바이벌 이력, 문경시 홍보대사·명예시민 위촉 등 지역 연계 활동(7.5절 Domestic Regional Pilot과 연관성 있음)을 확인했다. 두 아티스트 모두 모든 URL은 에이전트가 WebFetch/WebSearch로 실제 확인한 것만 채택했다 (지어낸 URL 없음). 창모의 기존 27건(loyalty 10 + spillover 17), 헤이즈의 기존 39건(loyalty 13 + spillover 26)은 완전히 삭제되어 코퍼스에서 더 이상 등장하지 않는다.",
+  "before_total": 6913,
+  "after_total": 6911,
+  "net_new_bullets": -2,
+  "n_touched_fandoms": 2
+}

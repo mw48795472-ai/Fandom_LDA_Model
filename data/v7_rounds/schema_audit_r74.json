@@ -1,0 +1,19 @@
+{
+  "round": "v7 74",
+  "total_bullets_scanned": 10020,
+  "n_fandoms": 100,
+  "fandom_level_issues": 0,
+  "missing_or_empty_field": 0,
+  "u_unparseable": 1,
+  "u_multiple_urls_benign": 19,
+  "t_html_tag_false_positive": 27,
+  "contamination_agentId": 3,
+  "malformed_u_causing_misclassification": 1,
+  "invalid_source_type_enum_value": 1,
+  "lda_sub_3_token_excluded_bullets": 2,
+  "before_total": 10020,
+  "after_total": 10020,
+  "net_new_bullets": 0,
+  "crush_foreign_ratio_before": 0.475,
+  "crush_foreign_ratio_after": 0.485
+}

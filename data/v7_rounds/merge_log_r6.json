@@ -1,0 +1,114 @@
+{
+  "round": "v7_r6_reinforcement_and_member_pilot_expansion",
+  "description": "v7 4라운드에서 미조사로 남았던 59개 팬덤 재조사 보강 리서치 + Member Mention Pilot 다국적 멤버 현지시장 개인 이슈 보강(LE SSERAFIM/RIIZE/아일릿/NewJeans/엔믹스/Hearts2Hearts/CORTIS 7개 그룹 신규 편입, 파일럿 16개→23개 그룹 확장). 각 언어권(일본어/베트남어/영어권 오세아니아 등) 현지 커뮤니티·매체를 반영.",
+  "before_total": 4232,
+  "after_total": 4426,
+  "net_new_bullets": 194,
+  "added_loyalty": 79,
+  "added_spillover": 115,
+  "skipped_dupe": 0,
+  "n_touched_fandoms": 61,
+  "names_not_found": [],
+  "per_group_added": {
+    "LE SSERAFIM": 10,
+    "RIIZE": 5,
+    "아일릿": 8,
+    "NewJeans": 19,
+    "엔믹스": 5,
+    "Hearts2Hearts": 8,
+    "CORTIS": 5,
+    "이영지": 6,
+    "지코": 3,
+    "박재범": 5,
+    "pH-1": 1,
+    "다이나믹듀오": 2,
+    "에픽하이": 2,
+    "창모": 2,
+    "사이먼도미닉": 1,
+    "악동뮤지션": 3,
+    "싸이": 1,
+    "비비": 4,
+    "윤하": 2,
+    "헤이즈": 2,
+    "한로로": 5,
+    "청하": 5,
+    "임영웅": 4,
+    "송가인": 3,
+    "영탁": 3,
+    "김호중": 2,
+    "장윤정": 2,
+    "정동원": 2,
+    "김연자": 1,
+    "나훈아": 2,
+    "god": 2,
+    "HOT": 1,
+    "이승철": 2,
+    "거미": 1,
+    "린": 3,
+    "백지영": 3,
+    "권은비": 4,
+    "10CM": 2,
+    "카더가든": 2,
+    "이효리": 2,
+    "엄정화": 2,
+    "볼빨간사춘기": 2,
+    "김동률": 2,
+    "조용필": 1,
+    "박효신": 1,
+    "박정현": 1,
+    "다비치": 3,
+    "로이킴": 3,
+    "sg워너비": 1,
+    "이문세": 3,
+    "CNBLUE": 3,
+    "BTS": 3,
+    "DAY6": 2,
+    "IKON": 3,
+    "FTISLAND": 3,
+    "리센느(RESCENE)": 5,
+    "aespa": 3,
+    "오마이걸": 2,
+    "STAYC": 2,
+    "레드벨벳": 2,
+    "아이오아이": 2
+  },
+  "newly_added_pilot_groups": [
+    "LE SSERAFIM",
+    "RIIZE",
+    "아일릿",
+    "NewJeans",
+    "엔믹스",
+    "Hearts2Hearts",
+    "CORTIS"
+  ],
+  "member_collection_cap": "멤버 1인당 신규 근거 최대 8건(수집 상한) — 특정 멤버가 언급 빈도를 독식하지 않도록 하는 보정 장치 (r5와 동일 기준 유지)",
+  "targeted_multinational_members": {
+    "LE SSERAFIM": [
+      "사쿠라(일본)",
+      "카즈하(일본)"
+    ],
+    "RIIZE": [
+      "쇼타로(일본)"
+    ],
+    "아일릿": [
+      "모카(일본)",
+      "이로하(일본)"
+    ],
+    "NewJeans": [
+      "하니(베트남·호주)",
+      "다니엘(호주, 2026년 전속계약 해지·소송 진행 중 — 현재 상태 유동적)"
+    ],
+    "엔믹스": [
+      "릴리(한국계 호주인)"
+    ],
+    "Hearts2Hearts": [
+      "카르멘(인도네시아)"
+    ],
+    "CORTIS": [
+      "제임스(태국·대만 배경)"
+    ]
+  },
+  "post_merge_fixes": [
+    "중복 판정 기준을 URL 단독 → (텍스트, URL) 페어로 변경 — 동일 URL 내 서로 다른 복수 사실 인용이 오탐 스킵되는 r5의 한계를 이번 라운드부터 수정"
+  ]
+}

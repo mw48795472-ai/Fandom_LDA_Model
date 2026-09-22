@@ -1,0 +1,50 @@
+{
+  "round": "v7_r66_2ch_not_attempted_priority_sweep",
+  "description": "사용자가 v7 66(1차)라운드의 '미시도'(47개 팬덤, WebSearch 공유 예산 소진으로 검색 자체를 못함) 목록을 정확히 지목하며 '다음 라운드에 우선 리서치해달라'고 명시적으로 요청. 이번 라운드는 v7 66(1차)의 실패(10개 병렬 에이전트가 각각 12~18회 이상 검색을 시도해 세션 공유 풀 200회를 크게 초과 신청, 배치 6·9번 등 다수가 예산 소진으로 담당 팬덤을 전혀 검색하지 못함)를 교훈 삼아, 9개 배치 에이전트 각각에 '팬덤당 최대 2~3회 WebSearch, 예산 소진 메시지 감지 시 즉시 중단하고 남은 팬덤은 not_attempted로 표시'라는 엄격한 상한을 명시적으로 부여해 재파견했다. 파견 전 카나리아 쿼리로 WebSearch 예산이 실제로 리프레시됐음을 먼저 확인했다.",
+  "before_total": 9665,
+  "after_total": 9680,
+  "net_new_bullets": 15,
+  "added_loyalty": 9,
+  "added_spillover": 6,
+  "skipped_dupe": 0,
+  "n_touched_fandoms": 12,
+  "names_not_found": [],
+  "per_group_added": {
+    "비비": 1,
+    "이효리": 1,
+    "성시경": 2,
+    "김재중": 1,
+    "BTS": 2,
+    "Stray Kids": 1,
+    "투어스(TWS)": 1,
+    "NCT": 1,
+    "DAY6": 1,
+    "CORTIS": 1,
+    "aespa": 1,
+    "소녀시대": 2
+  },
+  "coverage_outcome": {
+    "note": "이번 라운드는 v7 66(1차)의 미시도 47개 팬덤 전원에 대해 실제 검색을 시도했다(미시도 0건 — 전원 최소 1회 이상의 실질적 WebSearch 수행). 총 사용량은 9개 배치 합계 약 128회로 세션 공유 풀(200회) 이내에 안전하게 머물렀다. 47개 팬덤 중 성과가 있었던 팬덤은 아래 결과 테이블 및 병합된 불릿 목록 참조. 성과가 없었던 나머지 팬덤은 '0건 확인'(충분한 검색 노력 후 날짜창 내 신규 근거 미발견)으로 분류하며, v7 66(1차)의 '미시도'와는 인식론적으로 구분된다.",
+    "not_attempted_this_round": 0,
+    "fandoms_researched": 47,
+    "raw_candidates_found": 20
+  },
+  "dedup_review": {
+    "raw_candidates": 20,
+    "excluded_window_noncompliance": 2,
+    "excluded_window_noncompliance_detail": "SEVENTEEN(기사 게재일 2026-08-10, 날짜창 2026-08-28~09-11 이전 — 서비스 입대 사실 자체는 9/10로 창 내지만 이를 보도한 기사 게재일이 창 밖이라 제외), 박서진(기사 원 게재일 2026-08-24, 날짜창 이전 — 9/1 '갱신' 표기가 있으나 SEVENTEEN과 동일한 '원 게재일 기준' 원칙을 일관되게 적용해 제외).",
+    "excluded_near_duplicate_within_batch": 1,
+    "excluded_near_duplicate_within_batch_detail": "aespa: 상파울루 9/4 공연을 다루는 2건의 후보 중 1건(bomdianews, '브라질 두 번째 공연' 프레이밍만 다르고 사실관계는 거의 동일)을 근접중복으로 제외, 나머지 1건(Rio Times, 남미 투어 전체 일정 포함)만 유지.",
+    "excluded_corpus_url_collision": 2,
+    "excluded_corpus_url_collision_detail": "god: 새 후보의 모든 사실(28년차·팬god·데뷔 10000일 하늘색 풍선 주간·Bstage 팀워크 1위·손호영 개인 1위)이 기존 코퍼스의 동일 URL 인용 불릿 3건에 이미 전부 기록돼 있어 전면 중복으로 제외. 김재중 spillover(뮤직뱅크 출연): 기존 불릿과 완전 동일 사실이라 제외(같은 URL의 김재중 loyalty 불릿은 별개 사실〈THE WAVE 콘서트〉이므로 유지). 투어스(TWS): 같은 URL의 새 후보에서 기존 불릿과 중복된 '트윅스 첫 앰버서더' 문구만 제거하고, 신규 사실인 'SODA SODA 일본 싱글 차트 1위'는 유지하도록 텍스트를 다듬었다.",
+    "final_net_new": 15
+  },
+  "gate_retest": {
+    "selected_k": 8,
+    "selected_m_meta_factors": 5,
+    "meta_factor_silhouette": 0.097,
+    "baseline_silhouette": 0.267,
+    "meets_gate": false,
+    "consecutive_rejections": 20
+  }
+}

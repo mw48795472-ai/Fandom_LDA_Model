@@ -1,0 +1,172 @@
+{
+  "round": "v7_r54_member_level_dedicated_research_original23groups_phase2_complete",
+  "before_total_fandoms": 100,
+  "after_total_fandoms": 100,
+  "before_total_bullets": 8865,
+  "after_total_bullets": 8966,
+  "net_new_bullets": 101,
+  "added_loyalty": 1,
+  "added_spillover": 100,
+  "skipped_dupe_multimember_sentence": 0,
+  "n_touched_fandoms": 21,
+  "n_members_researched_total": 141,
+  "n_members_credited": 93,
+  "names_not_found": [],
+  "per_fandom_added": {
+    "BTS": 6,
+    "빅뱅": 5,
+    "BLACKPINK": 4,
+    "EXO": 8,
+    "샤이니": 2,
+    "마마무": 2,
+    "슈퍼주니어": 6,
+    "(여자)아이들": 4,
+    "aespa": 1,
+    "소녀시대": 5,
+    "IVE": 6,
+    "TWICE": 4,
+    "NCT": 9,
+    "Stray Kids": 6,
+    "SEVENTEEN": 10,
+    "BABYMONSTER": 3,
+    "LE SSERAFIM": 4,
+    "RIIZE": 5,
+    "아일릿": 3,
+    "NewJeans": 4,
+    "엔믹스": 4
+  },
+  "target_groups_23": [
+    "BTS",
+    "빅뱅",
+    "BLACKPINK",
+    "EXO",
+    "슈퍼주니어",
+    "샤이니",
+    "소녀시대",
+    "(여자)아이들",
+    "마마무",
+    "IVE",
+    "TWICE",
+    "NCT",
+    "aespa",
+    "Stray Kids",
+    "SEVENTEEN",
+    "BABYMONSTER",
+    "LE SSERAFIM",
+    "RIIZE",
+    "아일릿",
+    "NewJeans",
+    "엔믹스",
+    "Hearts2Hearts",
+    "CORTIS"
+  ],
+  "consolidated_members": [],
+  "unverified_roster_flag": {
+    "group": "엔믹스",
+    "issue": "batch8 에이전트가 '지니'는 2022년 12월 탈퇴했고 현재 6번째 멤버는 '해원'이라고 namu.wiki에서 보고했으나, 세션 WebSearch 예산 소진으로 교차 검증하지 못해 MEMBER_ALIASES는 이번 라운드에서 수정하지 않았다. 다음 라운드에서 최우선 검증 필요.",
+    "not_attempted_due_to_budget": [
+      "Hearts2Hearts::카르멘",
+      "CORTIS::제임스"
+    ]
+  },
+  "research_stage_zero_result_members": {
+    "BTS": [
+      "슈가"
+    ],
+    "EXO": [
+      "디오",
+      "카이",
+      "레이"
+    ],
+    "샤이니": [
+      "키",
+      "온유"
+    ],
+    "마마무": [
+      "문별",
+      "휘인"
+    ],
+    "슈퍼주니어": [
+      "이특",
+      "은혁",
+      "동해"
+    ],
+    "(여자)아이들": [
+      "미연"
+    ],
+    "aespa": [
+      "윈터",
+      "닝닝",
+      "지젤"
+    ],
+    "소녀시대": [
+      "태연",
+      "효연",
+      "써니",
+      "제시카",
+      "이서"
+    ],
+    "TWICE": [
+      "나연",
+      "모모",
+      "사나",
+      "미나",
+      "쯔위"
+    ],
+    "NCT": [
+      "도영",
+      "지성",
+      "윈윈"
+    ],
+    "Stray Kids": [
+      "창빈",
+      "현진"
+    ],
+    "SEVENTEEN": [
+      "디에잇",
+      "승관",
+      "민규",
+      "준"
+    ],
+    "BABYMONSTER": [
+      "아현",
+      "로라",
+      "아사",
+      "파리타"
+    ],
+    "LE SSERAFIM": [
+      "사쿠라"
+    ],
+    "RIIZE": [
+      "쇼타로"
+    ],
+    "아일릿": [
+      "원희",
+      "이로하"
+    ],
+    "NewJeans": [
+      "민지",
+      "하니"
+    ],
+    "엔믹스": [
+      "규진"
+    ]
+  },
+  "n_members_research_zero": 45,
+  "research_stage_zero_result_note": "이 45명은 에이전트가 실제 1~2회의 WebSearch(+WebFetch)를 수행했으나 기존 코퍼스와 중복되지 않는 개인 단위 새 소식을 찾지 못해 정직하게 0건으로 보고한 경우다. 이 중 aespa 윈터·닝닝·지젤은 세션 WebSearch 예산 소진으로 2회가 아닌 1회 검색만 수행된 뒤 0건 처리됐다고 담당 에이전트가 명시했다 — 잠정적(provisional) 0건으로, 다음 라운드에서 예산이 확보되면 재검토가 필요하다.",
+  "description": "v7 53에서 사용자가 요청한 'member mention pilot 관련해서는 아무래도 선택 그룹에서 전수조사로 리서치보강이 필요해 보인다. 설명력이 어느 정도인지 통계적으로 검증까지'의 후속으로, AskUserQuestion 으로 확인된 '45개 그룹 전체(기존 23개 포함)' 범위 중 v7 53에서 처리하지 못하고 이월했던 기존 23개 원년 그룹(BTS·빅뱅·BLACKPINK·EXO·슈퍼주니어·샤이니·소녀시대·(여자)아이들·마마무·IVE·TWICE·NCT·aespa·Stray Kids·SEVENTEEN·BABYMONSTER·LE SSERAFIM·RIIZE·아일릿·NewJeans·엔믹스·Hearts2Hearts·CORTIS)에 대한 멤버별 전수조사를 완결했다. 141명 중 93명(66%)이 신규 개인 단위 근거를 확보했고, 신규 근거 101건이 코퍼스에 병합됐다(8,865건→8,966건). 45명은 검색 후에도 정직하게 0건으로 보고됐고, 2명(Hearts2Hearts 카르멘·CORTIS 제임스)은 세션 WebSearch 예산 소진으로 검색 자체를 시도하지 못했다(0건이 아니라 '미시도'). 부수적으로 엔믹스(NMIXX)의 현재 멤버 로스터에 잠재적 오류('지니' 탈퇴, '해원'이 현재 멤버라는 미검증 정보)가 발견됐으나, 예산 소진으로 교차 검증하지 못해 이번 라운드에서는 별칭 사전을 고치지 않고 unverified_roster_flag로만 남겼다. 이로써 v7 53과 합쳐 45개 그룹 전체(신규 22개+원년 23개) 멤버별 전수조사가 완결됐다.",
+  "silhouette_gate": {
+    "policy": "live corpus always merges into fandoms_v3_100.json; frozen v7-40 snapshot promotion requires isolated re-fit test achieving Meta-Factor silhouette >= 0.267 (fixed baseline)",
+    "baseline_silhouette": 0.267,
+    "test_fit_result": "REJECTED",
+    "test_fit_k_grid_selected_k": 8,
+    "test_fit_selected_m": 6,
+    "test_fit_silhouette": 0.091,
+    "test_fit_note": "v7 54 격리 재적합 시험: 코퍼스 8,966건(토큰화 필터링 후 8,964건 문서) 기준 K=8, M=6 실루엣=0.091로 기준치 0.267 미달, 기각. v7 46 이후 8회 연속 기각(46,48,49,50,51(1차),51(2차),53,54). 운영(production) 파일(fandom_scores_v6.json, lda_v6_diagnostics.json)은 격리 스크래치 디렉토리에서 시험을 수행해 변경되지 않았음을 타임스탬프로 확인함(1788925088, 시험 전후 동일)."
+  },
+  "n_members_not_attempted_budget": 2,
+  "members_not_attempted_budget": [
+    "Hearts2Hearts::카르멘",
+    "CORTIS::제임스"
+  ]
+}

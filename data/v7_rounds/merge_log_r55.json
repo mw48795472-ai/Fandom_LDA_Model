@@ -1,0 +1,90 @@
+{
+  "round": "v7_r55_roster_audit_hearts2hearts_cortis_nmixx_plus_new_member_research",
+  "before_total_fandoms": 100,
+  "after_total_fandoms": 100,
+  "before_total_bullets": 8966,
+  "after_total_bullets": 8981,
+  "net_new_bullets": 15,
+  "added_loyalty": 1,
+  "added_spillover": 14,
+  "skipped_dupe": 0,
+  "n_touched_fandoms": 3,
+  "n_members_researched_total": 12,
+  "n_members_credited": 12,
+  "names_not_found": [],
+  "per_fandom_added": {
+    "Hearts2Hearts": 7,
+    "엔믹스": 3,
+    "CORTIS": 5
+  },
+  "roster_corrections": {
+    "엔믹스": {
+      "removed": [
+        "지니"
+      ],
+      "added": [
+        "해원"
+      ],
+      "reason": "JYP 공식 입장(2022-12-09, enews.imbc.com)으로 지니 탈퇴를 1차 출처 확인. 현재 6인 체제: 릴리·해원·설윤·배이·지우·규진."
+    },
+    "Hearts2Hearts": {
+      "removed": [],
+      "added": [
+        "지우",
+        "유하",
+        "스텔라",
+        "주은",
+        "에이나",
+        "이안",
+        "예온"
+      ],
+      "reason": "마리끌레르 코리아(2025.2)·kprofiles.com 2개 독립 출처로 8인조 전원 확인."
+    },
+    "CORTIS": {
+      "removed": [],
+      "added": [
+        "주훈",
+        "마틴",
+        "성현",
+        "건호"
+      ],
+      "reason": "kprofiles.com·namu.wiki 2개 독립 출처로 5인조 전원 확인."
+    }
+  },
+  "roster_correction_sources": {
+    "엔믹스": [
+      "https://enews.imbc.com/News/ViewAmp/367663 (JYP 공식 입장, 2022-12-09)"
+    ],
+    "Hearts2Hearts": [
+      "https://www.marieclairekorea.com/celebrity/2025/02/hearts2hearts-2/",
+      "https://kprofiles.com/hearts2hearts-members-profile/"
+    ],
+    "CORTIS": [
+      "https://kprofiles.com/cortis-members-profile/",
+      "https://namu.wiki/w/CORTIS"
+    ]
+  },
+  "credited_members": [
+    "CORTIS::건호",
+    "CORTIS::마틴",
+    "CORTIS::성현",
+    "CORTIS::주훈",
+    "Hearts2Hearts::스텔라",
+    "Hearts2Hearts::에이나",
+    "Hearts2Hearts::예온",
+    "Hearts2Hearts::유하",
+    "Hearts2Hearts::이안",
+    "Hearts2Hearts::주은",
+    "Hearts2Hearts::지우",
+    "엔믹스::해원"
+  ],
+  "silhouette_gate": {
+    "policy": "live corpus always merges into fandoms_v3_100.json; frozen v7-40 snapshot promotion requires isolated re-fit test achieving Meta-Factor silhouette >= 0.267 (fixed baseline)",
+    "baseline_silhouette": 0.267,
+    "test_fit_result": "REJECTED",
+    "test_fit_k_grid_selected_k": 8,
+    "test_fit_selected_m": 5,
+    "test_fit_silhouette": 0.069,
+    "test_fit_note": "v7 55 격리 재적합 시험: 코퍼스 8,981건(토큰화 필터링 후 8,979건 문서) 기준 K=8, M=5 실루엣=0.069로 기준치 0.267 미달, 기각. v7 46 이후 9회 연속 기각(46,48,49,50,51(1차),51(2차),53,54,55). 운영(production) 파일(fandom_scores_v6.json, lda_v6_diagnostics.json)은 격리 스크래치 디렉토리에서 시험을 수행해 변경되지 않았음을 타임스탬프로 확인함(1788925088, 시험 전후 동일)."
+  }
+}

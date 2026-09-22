@@ -1,0 +1,186 @@
+{
+  "BTS": {
+    "bullets_before": 189,
+    "bullets_after": 195,
+    "mentions_before": 79,
+    "mentions_after": 86,
+    "mci_before": 0.247,
+    "mci_after": 0.238
+  },
+  "빅뱅": {
+    "bullets_before": 86,
+    "bullets_after": 91,
+    "mentions_before": 26,
+    "mentions_after": 30,
+    "mci_before": 0.393,
+    "mci_after": 0.358
+  },
+  "BLACKPINK": {
+    "bullets_before": 159,
+    "bullets_after": 163,
+    "mentions_before": 43,
+    "mentions_after": 47,
+    "mci_before": 0.312,
+    "mci_after": 0.302
+  },
+  "EXO": {
+    "bullets_before": 97,
+    "bullets_after": 105,
+    "mentions_before": 57,
+    "mentions_after": 77,
+    "mci_before": 0.143,
+    "mci_after": 0.122
+  },
+  "슈퍼주니어": {
+    "bullets_before": 72,
+    "bullets_after": 78,
+    "mentions_before": 25,
+    "mentions_after": 31,
+    "mci_before": 0.206,
+    "mci_after": 0.17
+  },
+  "샤이니": {
+    "bullets_before": 72,
+    "bullets_after": 74,
+    "mentions_before": 33,
+    "mentions_after": 35,
+    "mci_before": 0.275,
+    "mci_after": 0.278
+  },
+  "소녀시대": {
+    "bullets_before": 101,
+    "bullets_after": 106,
+    "mentions_before": 34,
+    "mentions_after": 39,
+    "mci_before": 0.135,
+    "mci_after": 0.134
+  },
+  "(여자)아이들": {
+    "bullets_before": 89,
+    "bullets_after": 93,
+    "mentions_before": 28,
+    "mentions_after": 32,
+    "mci_before": 0.263,
+    "mci_after": 0.252
+  },
+  "마마무": {
+    "bullets_before": 82,
+    "bullets_after": 84,
+    "mentions_before": 27,
+    "mentions_after": 30,
+    "mci_before": 0.289,
+    "mci_after": 0.289
+  },
+  "IVE": {
+    "bullets_before": 77,
+    "bullets_after": 83,
+    "mentions_before": 18,
+    "mentions_after": 25,
+    "mci_before": 0.253,
+    "mci_after": 0.229
+  },
+  "TWICE": {
+    "bullets_before": 155,
+    "bullets_after": 159,
+    "mentions_before": 54,
+    "mentions_after": 59,
+    "mci_before": 0.128,
+    "mci_after": 0.122
+  },
+  "NCT": {
+    "bullets_before": 129,
+    "bullets_after": 138,
+    "mentions_before": 46,
+    "mentions_after": 56,
+    "mci_before": 0.122,
+    "mci_after": 0.112
+  },
+  "aespa": {
+    "bullets_before": 132,
+    "bullets_after": 133,
+    "mentions_before": 33,
+    "mentions_after": 34,
+    "mci_before": 0.25,
+    "mci_after": 0.251
+  },
+  "Stray Kids": {
+    "bullets_before": 142,
+    "bullets_after": 148,
+    "mentions_before": 34,
+    "mentions_after": 39,
+    "mci_before": 0.341,
+    "mci_after": 0.299
+  },
+  "SEVENTEEN": {
+    "bullets_before": 136,
+    "bullets_after": 146,
+    "mentions_before": 57,
+    "mentions_after": 68,
+    "mci_before": 0.135,
+    "mci_after": 0.112
+  },
+  "BABYMONSTER": {
+    "bullets_before": 108,
+    "bullets_after": 111,
+    "mentions_before": 35,
+    "mentions_after": 38,
+    "mci_before": 0.177,
+    "mci_after": 0.171
+  },
+  "LE SSERAFIM": {
+    "bullets_before": 117,
+    "bullets_after": 121,
+    "mentions_before": 21,
+    "mentions_after": 25,
+    "mci_before": 0.32,
+    "mci_after": 0.277
+  },
+  "RIIZE": {
+    "bullets_before": 106,
+    "bullets_after": 111,
+    "mentions_before": 16,
+    "mentions_after": 21,
+    "mci_before": 0.602,
+    "mci_after": 0.378
+  },
+  "아일릿": {
+    "bullets_before": 97,
+    "bullets_after": 100,
+    "mentions_before": 28,
+    "mentions_after": 31,
+    "mci_before": 0.288,
+    "mci_after": 0.257
+  },
+  "NewJeans": {
+    "bullets_before": 131,
+    "bullets_after": 135,
+    "mentions_before": 28,
+    "mentions_after": 32,
+    "mci_before": 0.353,
+    "mci_after": 0.305
+  },
+  "엔믹스": {
+    "bullets_before": 100,
+    "bullets_after": 104,
+    "mentions_before": 11,
+    "mentions_after": 15,
+    "mci_before": 0.323,
+    "mci_after": 0.28
+  },
+  "Hearts2Hearts": {
+    "bullets_before": 77,
+    "bullets_after": 77,
+    "mentions_before": 9,
+    "mentions_after": 9,
+    "mci_before": 1.0,
+    "mci_after": 1.0
+  },
+  "CORTIS": {
+    "bullets_before": 118,
+    "bullets_after": 118,
+    "mentions_before": 7,
+    "mentions_after": 7,
+    "mci_before": 1.0,
+    "mci_after": 1.0
+  }
+}
