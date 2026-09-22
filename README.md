@@ -1,142 +1,240 @@
-# 국내 대표 팬덤 100개 LDA 토픽모델링 — 팬충성도 × 파급효과 분석 저장소
+# 국내 대표 팬덤 100개 LDA 토픽모델링 — 팬충성도 × 파급효과 × 팬 요인 구조
 
-"국내 100대 팬덤 충성도×파급효과 유형 분석: LDA 토픽 모델링"의 데이터·코드·문서를 모아둔 저장소다.
-제출본 PDF 2종(`(분석보고서)…최종.pdf`, `(요약보고서)…최종.pdf`)이 루트에 있으며, 저장소의 모든 수치는
-이 PDF의 수치를 기준으로 정합성을 맞췄다.
+> **핵심 요약판.** 「2026년 문화체육관광 통계 활용대회」 제출 보고서(`(분석보고서)…최종.pdf`, `(요약보고서)…최종.pdf`)의 최종 결과·대표 차트·모델 설명을
+> 한 페이지로 압축했다. 라운드별 진행 이력은 생략하고, 저장소의 모든 수치는 `verify_v7_final_consistency.py`(101/101)와 R 교차검증(238/238)으로 파일에서 재현된다.
 
-> 분석은 **최종 근거 코퍼스 10,020건**(`data/v7_final/fandoms_v3_100.json`, 100개 팬덤, 14개 언어권)과 그로부터 동결된
-> 해석 계층 스냅샷(v7-40, 7,350건)을 기준으로 한다. 최종 수치가 저장소 파일에서 실제로 재현되는지는
-> `verify_v7_final_consistency.py`가 항목별로 검증한다(101/101 일치, 아래 "재현성 범위" 참고).
+| 항목 | 내용 |
+|---|---|
+| 분석 대상 | 국내 대표 팬덤 100개 (K-pop 보이·걸그룹, 트로트, 솔로, 밴드, 원로그룹, 힙합 등) |
+| 데이터 | 뉴스·위키·공식자료·커뮤니티 등 공개 웹 자료 기반 **근거 문장 10,020건** (14개 언어권, LDA 재적합 문서 10,018건) — `data/v7_final/fandoms_v3_100.json` |
+| 핵심 모델 | **LDA 토픽(K=10) → 메타팩터(M=5) → 파급경로(F1∼F5) → 페르소나(4유형)** 4단계 해석 계층. 해석 계층은 실루엣 게이트를 통과한 **동결 스냅샷(v7-40, 7,350건, silhouette 0.267)** 에 고정 |
+| 점수 | 근거문장별 EvidenceScore 합산 → min-max 정규화한 **팬충성도·파급효과**, 메타팩터 분포 엔트로피 **팬 요인 다양성**(3D 맵 Z축), 언어·시장·출처·시간·엔티티 가중합 **Coverage Index** |
+| 보조지표 7종 | 광고·상업성 1,302건(13.0%) · 팬덤결속 923건(9.2%) · 미디어·콘텐츠 노출 1,025건(10.2%) · 매체 크로스오버 6,712건(67.0%, 매체 1,298개) · 국내 지역 · 멤버 집중도(MCI) · 세계 언어 — LDA와 무관한 원문 키워드·도메인 매칭 |
+| 인터랙티브 산출물 | [`3D_포지셔닝맵_국내100팬덤.html`](3D_포지셔닝맵_국내100팬덤.html) (+`plotly-bundle.js`) · [`Persona_결정공간.html`](Persona_결정공간.html) · QR 코드 [`qr_codes/`](qr_codes/) |
 
 ---
 
-## 1. 데이터는 두 계층이다 — 파일을 열기 전에 반드시 구분할 것
+## 1. 핵심 발견 3가지
 
-최종 보고서는 **해석 계층은 동결 스냅샷(7,350건)**, **점수·구획·보조지표는 라이브 코퍼스(10,020건)**를
-쓰는 이원 구조다(`v7_final_10020/docs/METHODOLOGY.md` 4절 "실루엣 게이트 거버넌스"). 같은 팬덤의 loyalty_score가 파일마다
-다르게 보이는 것은 오류가 아니라 이 구조 때문이다.
+1. **영향력의 크기보다 구조가 갈린다.** 팬충성도·파급효과 종합 점수와 Coverage Index·팬 요인 다양성은 서로 다른 것을 재며 같은 방향으로 움직이지 않는다. 단일 점수 순위보다 요인 구성의 다양성이 팬덤 간 차이를 더 잘 설명한다.
+2. **선두는 근거가 쌓일 때마다 바뀌었다.** 파급효과 1위(BTS → TWICE → … → BTS), 팬충성도 1위(임영웅 → SEVENTEEN 등)가 라운드마다 교체됐다. 데이터를 조정한 결과가 아니라 새로 확인된 근거를 그대로 반영한 결과다.
+3. **리서치를 늘려도 군집 안정성은 좋아지지 않았다.** 코퍼스가 1,781건→9,680건(+444%)으로 자라는 동안 K→M 재군집화의 실루엣은 0.058∼0.148을 등락했고 기준선 0.267에 한 번도 닿지 못했다(게이트 구간 20회 실측, 최종 보고서 시점 누적 **28회 연속 기각**). 그래서 해석 계층은 v7-40 스냅샷에 고정하고, 라이브 코퍼스는 보조지표에만 반영하는 **이원 구조**를 택했다.
 
-| 계층 | 코퍼스 | 이 계층에서 나온 수치 | 저장소 파일 |
-|---|---|---|---|
-| **동결 스냅샷 v7-40** (해석 계층) | 7,350건 | LDA K=10 → M=5 메타요인(실루엣 0.267), 팬덤별 F1∼F5 비중, 페르소나 4유형(글로벌투어형 43·현장상업형 31·원정소비형 17·집단동원형 9), KEY_FINDINGS 하이라이트 표의 loyalty/spillover(BTS 0.931/1.000, 임영웅 0.899/0.702, 리센느 0.444/0.304), 국내 지역 지수 표 15 | `data/v7_final/fandom_scores_v6.csv` / `.json` (activity 합 = 7,350; JSON에 raw 점수·coverage_detail), `fan_persona_v7.json`, `topic_cards_v7.json`, `lda_v6_diagnostics_frozen_v7_40.json`, `persona_decision_space_v7.json`, `Persona_결정공간.html` |
-| **라이브 코퍼스 (최종)** | 10,020건 (14개 언어권) | 충성도·파급효과 점수(표본 평균 0.3710 / 0.2661), 4구획(핵심전략형 24·내부결속형 17·외부견인형 10·주변부 49), 상관·회귀·Cook's D 등 강건성 통계, 보조지표 7종, 언어·도메인 표, 3D 포지셔닝 맵, 게이트에 기각된 라이브 재적합(K=8, M=5, 실루엣 0.046) | `data/v7_final/fandoms_v3_100.json` (**근거문장 원본 10,020건**), `fandom_scores_live_reference_v7.csv/.json`(라이브 재적합 F 비중 포함), `chart3d_payload_live_reference_v7.json`, 지수 JSON 7종, `lda_excluded_bullets_v7.json`, `language_domain_summary_v7.json`, `lda_v6_diagnostics_live_reference_v7.json`, `member_mention_index_v7.json`, `bullets_flat_v7_final.csv`, `3D_포지셔닝맵_국내100팬덤.html` |
+![코퍼스 규모 대비 실루엣 계수 추이](assets/readme/fig01_silhouette_gate_timeline.png)
 
-**로스터 차이**: 동결 스냅샷의 100개 팬덤과 라이브 코퍼스의 100개 팬덤은 3개가 다르다(동결에만 한로로·pH-1·BE'O, 라이브에만
-몬스타엑스·투어스(TWS)·빈지노 — v7 r58∼r63 로스터 교체). 페르소나·F1∼F5 비중은 동결 로스터, 점수·4구획·보조지표는 라이브 로스터 기준이다.
+*그림 1. 코퍼스 규모(막대) vs 메타팩터 실루엣(선). 게이트 구간(r46∼r66 2차)의 코퍼스–실루엣 상관은 r=+0.15로 사실상 무관하다. 재현: `v7_final_10020/silhouette_gate_policy/`*
 
-`fandom_scores_v6.csv`, `run_lda_v6.py` 등 이름의 **"v6"은 파이프라인 버전명**이지 데이터 시점이 아니다.
+---
 
-## 2. 보고서 수치 ↔ 저장소 파일 대응 (verify_v7_final_consistency.py 결과)
+## 2. 모델 구조
 
-| 보고서·KEY_FINDINGS 수치 | 근거 파일 | 검증 결과 |
+```mermaid
+flowchart LR
+    A["근거 문장 10,020건<br/>(100개 팬덤 × loyalty/spillover)"] --> B["토크나이저<br/>일반 경로 + 일·중·태 형태소 추가 경로"]
+    B --> C["LDA K=10<br/>(perplexity·coherence·diversity·stability 합성순위)"]
+    C --> D["메타팩터 M=5<br/>φ 코사인거리 average-linkage, 실루엣 최대 M"]
+    D --> E["파급경로 F1∼F5<br/>Fan→Fan / Market / Event·Local / Brand·Industry / Media·Global"]
+    E --> F["페르소나 4유형<br/>팬덤별 상위 2개 F 조합"]
+    A --> G["EvidenceScore → 팬충성도·파급효과<br/>Coverage Index · 팬 요인 다양성"]
+    A --> H["보조지표 7종<br/>키워드·도메인 매칭(LDA 무관)"]
+    D -. "실루엣 게이트: 0.267 미만이면 기각 → v7-40 스냅샷 유지" .-> D
+```
+
+**지표 산식** (전체 정의와 검증: [`v7_final_10020/index_methodology/`](v7_final_10020/index_methodology/))
+
+| 지표 | 식 | 저장소 재현 |
 |---|---|---|
-| 팬덤 100개, 근거문장 10,020건 / LDA 재적합 문서 10,018건 | `data/v7_final/fandoms_v3_100.json`; 10,018은 3토큰 미만 2건(ATEEZ 태국어 1건, 레드벨벳 '맥도날드 조이 (2026)') 제외 — `lda_excluded_bullets_v7.json` | 일치 |
-| 14개 언어권, 한국어 5,551(55.4%)·영어 2,195(21.9%)·일본어 520(5.2%)·중국어 458(4.6%) | `language_domain_summary_v7.json` (14개 언어 합 = 10,020) | 일치 |
-| "704개 도메인" | 같은 파일의 **한국어권 도메인 수**(보고서 표 2-2 한국어 행). 14개 언어권 도메인 수 합은 1,149개, 코퍼스 URL 고유 호스트는 1,315개 | 일치(의미 명확화) |
-| loyalty/spillover 100개 팬덤 점수, 평균 0.3710/0.2661, 4구획 24/17/10/49 | `fandoms_v3_100.json`에 `v7_final_10020/docs/METHODOLOGY.md` 2-4절 EvidenceScore 산식을 그대로 적용 → `chart3d_payload_live_reference_v7.json`과 100/100 일치 | 일치 |
-| Pearson 0.493·Spearman 0.380·Cook's D(BTS 0.5749, god 0.284, 이효리 0.2538)·R² 0.243→0.847·VIF 1.93·민감도·LOO·3D축 독립성(r 0.099/0.461, R² 0.234, VIF 1.321) | 라이브 점수(`chart3d_payload_live_reference_v7.json`), `positioning_map_correlation_live_v7.json`, `chart3d_correlation_live_v7.json` | 전부 일치 |
-| K=10, M=5, 실루엣 0.267, 페르소나 43/31/17/9, 토픽→F 배정 | `lda_v6_diagnostics_frozen_v7_40.json`(K-grid에서 K=10 rank_sum 8 < K=8 9), `fan_persona_v7.json`, `persona_decision_space_v7.json`, `fandom_scores_v6.csv` | 일치 |
-| 동결 스냅샷 점수 JSON: min-max 정규화·F 다양성·coverage 가중합 재현, 언어 커버리지 분모 ln(13) | `fandom_scores_v6.json` (동결 7,350건 언어 분포 ko 4,183·en 1,751·ja 333 … 아랍어 없음) | 일치 |
-| 세계 언어 지수: BTS 해외 근거 135건(60%), 해외언어다양성 0.66; 14개 언어 합 = 언어 표 | `worldwide_language_pilot_live_reference_v7.json` → `worldwide_language_index_v7.csv` (스크립트 재실행, 불일치 0) | 일치 |
-| 라이브 점수 원본 JSON의 raw 점수·coverage_index 5요소 가중합·언어 엔트로피 ln(14) | `fandom_scores_live_reference_v7.json` | 일치 |
-| 토크나이저 출력 토큰 170,725개, 문자권별 불릿 수(한국어 8,942 …) | `wordcloud_by_language_v7.json` | 일치 |
-| r45(1차) K=12, M=2, 실루엣 0.136 | `_explore_r45_meta_factor.json` (코사인거리 행렬로 M 2∼11 실루엣 전부 재현) | 일치 |
-| 미디어·콘텐츠 노출 1,025건(10.2%), 서브태그 예능·유튜브·영화·드라마 | `media_exposure_v7.json` (팬덤별·서브태그별 합 전부 일치) | 일치 |
-| 매체 크로스오버 6,712건(67.0%), 고유 매체 1,298개 | `media_crossover_index_v7.json` | 일치 |
-| 코퍼스 성장 이력: v6 2,403건 → v7 r72 10,020건, 로스터 교체 6건 | `data/v7_rounds/` 병합·교체 로그 전량 → `corpus_growth_history_v6_v7_full.csv` (타임라인 CSV와 56건 일치) | 일치 |
-| 라이브 재적합 K=8/M=5/실루엣 0.046 (게이트 기각) | `lda_v6_diagnostics_live_reference_v7.json` = 3D 맵 payload 값 | 일치 |
-| 4분면 독립성 χ²=8.34, p=0.0039 (라이브) / χ²=10.2273, p=0.0014 (동결) | `positioning_map_correlation_live_v7.json`의 분할표 [[7,17],[4,72]] — 표본 평균 4구획이 아니라 **점수 0.5 초과 여부** 2×2표. 동결 CSV에 같은 0.5 기준을 적용하면 [[8,17],[4,71]] → 10.2273 | 일치 |
-| K=10 토픽 명칭·대표 불릿·대표 팬덤 | `topic_cards_v7.json` (METHODOLOGY 2-1 표와 명칭 10/10 일치) | 일치 |
-| 광고·상업성 1,302건(13.0%) / 팬덤결속 923건(9.2%), 하이라이트 결속 15·18·30건 | `ad_commercial_index_v7.json`, `fandom_cohesion_index_v7.json` (팬덤별 합·업종/유형별 합 전부 원본 집계와 일치) | 일치 |
-| 국내 지역 지수 표 15(BTS 17건·서울 47%·다양성 0.29, 임영웅 28건·12지역·0.71 전체 1위) | 키워드 규칙을 10,020건에 적용한 `v7_final_10020/analysis/domestic_regional_index/domestic_regional_index_v7.json`; 표 15는 동결 시점 값(동결 코퍼스 근사로 20행 중 17행 재현) | 일치 |
-| 동결 기준선 0.267 이후 실측 재적합 전부 기각 | `data/silhouette_gate_timeline/corpus_silhouette_timeline_v7_66_2ch.csv` (v4 종료∼r66 2차, 실측 지점 전부 < 0.267), 최종 r77 0.046 | 일치 |
-| MCI ↔ 충성도 r=-0.393 (45개 그룹) | `member_pilot_mci_correlation_v7.json` (MCI는 v7-55 시점 8,981건 기준). 최종 10,020건 MCI로 재계산하면 r=-0.385(상세 보고서 7.4절 값) | 일치 |
+| EvidenceScore | Σ_t [1.0 + 0.5·n_num(t) + 0.3·n_kx(t)] — 문장당 기본 1점 + 수치표현 0.5 + 보너스 키워드(충성도 19·파급효과 18) 0.3 | 코퍼스에서 100/100 원점수 재현 |
+| 팬충성도·파급효과 | 원점수의 표본 내 min-max 정규화 (0∼1) | 3D 맵 payload와 100/100 일치 |
+| Coverage Index | 0.30·언어 엔트로피(ln 14) + 0.25·시장/6 + 0.20·출처유형/3 + 0.15·연도/12 + 0.10·엔티티/6 | 0/100 불일치 |
+| 팬 요인 다양성 | −Σ pₘ ln pₘ / ln M — 메타팩터 비중 분포의 정규화 엔트로피 | 0/100 불일치 |
+| 활동량 | 충성도 + 파급효과 근거문장 수 (합 10,020) | 0/100 불일치 |
 
-## 3. 재현성 범위 — 정직하게
+**두 데이터 계층** — 같은 팬덤의 점수가 파일마다 다르게 보이는 이유
 
-- **재현되는 것**: 위 표의 "일치" 항목 전부. 특히 충성도·파급효과 점수는 LDA와 무관한 원문 규칙 산식이라
-  `fandoms_v3_100.json`만 있으면 소수점 셋째 자리까지 그대로 나온다.
-- **χ² 검정의 분할표**: 보고서 그림의 4구획(표본 평균 기준 24/17/10/49)이 아니라 **loyalty·spillover 각각 0.5 초과 여부**로 나눈
-  2×2표([[7,17],[4,72]])다. 같은 0.5 기준을 동결 CSV에 적용하면 [[8,17],[4,71]]로 10.2273이 나온다. 즉 "4분면 독립성 검정"의 4분면과
-  포지셔닝 맵의 4구획은 기준선이 다르다(평균 기준 표로 계산하면 χ²=16.84).
-- **K=10 토픽 명칭**: METHODOLOGY 2-1 표의 명칭(출처: `topic_cards_v7.json`, 예: K1 동남아현지보도형)과 `Persona_결정공간.html`에
-  내장된 명칭(예: K1 해외현지보도형)은 상위 4개 키워드가 일부 다르다. 둘 다 같은 7,350건 동결 스냅샷의 K=10 적합이고
-  **토픽→F코드 배정은 10/10 동일**하다. 명칭은 φ분포 상위 키워드 자동 조합이라 재적합 시 순서가 바뀔 수 있다.
-- **LDA 재적합 자체**: 최종 라이브 재적합을 만든 `run_lda_v6_live_reference_v7.py`(14개 언어 문자권별 토크나이저 라우팅 반영본)는
-  저장소에 없다. `run_lda_v6.py`는 그 이전 판 토크나이저의 파이프라인이라 10,020건에 돌리면 문서 수가 9,954건으로 보고서의
-  10,018건과 다르고 K-grid 수치도 다르다. 로직 참고용이며 최종 진단값의 재현 수단이 아니다.
-- **저장소에 없는 최종 산출물**: 국내 지역 지수 라이브 JSON(대신 규칙을 재적용한 산출본이 `v7_final_10020/analysis/domestic_regional_index/`에 있음),
-  `factor_clustering_structure_v7.json`(K→M 코사인거리 행렬 — 페르소나 덴드로그램 차트 스크립트 입력), `chart3d_correlation_v7.json`(3D 축 검증의 동결판),
-  v7-55 시점 MCI 파일, `supplementary_csv/팬덤100_언어비중.csv`. 원본 데이터 아카이브의 파일 전량 목록은 `data/v7_final/ARCHIVE_README_original.md`.
-- **광고 지수 키워드**: `ad_commercial_index_v7.json`의 광고신호 키워드는 31개다(보고서 본문의 "24개"는 신설 당시 수).
+| 계층 | 코퍼스 | 이 계층에서 나온 수치 | 대표 파일 |
+|---|---|---|---|
+| 동결 스냅샷 v7-40 (해석 계층) | 7,350건 | K=10→M=5(실루엣 0.267), F1∼F5 비중, 페르소나 43/31/17/9, 전체 순위표 | `fandom_scores_v6.json`, `fan_persona_v7.json`, `lda_v6_diagnostics_frozen_v7_40.json` |
+| 라이브 코퍼스 (최종) | 10,020건 | 팬충성도·파급효과 점수(평균 0.371/0.266), 4구획 24/17/10/49, 통계 검정, 보조지표 7종, 3D 맵 | `fandoms_v3_100.json`, `fandom_scores_live_reference_v7.json`, `chart3d_payload_live_reference_v7.json` |
 
-## 4. 폴더 구성
+---
 
-루트에는 README·제출 PDF·HTML 2종·검증/파이프라인 스크립트 2개와 `data/`만 두고, **10,020건·동결 스냅샷 기준으로
-집계된 모든 MD·코드·노트북은 `v7_final_10020/`** 한 폴더에 둔다.
+## 3. 3D 포지셔닝 맵과 통계적 가설검정 (라이브 코퍼스 기준)
 
-```
-README.md                                            이 문서
-(분석보고서)…최종.pdf, (요약보고서)…최종.pdf         제출본
-3D_포지셔닝맵_국내100팬덤.html + plotly-bundle.js    라이브 10,020건 3D 맵 (같은 폴더에서 열면 동작)
-Persona_결정공간.html                                동결 스냅샷 K=10→M=5 덴드로그램·PCA·레이더
-qr_codes/                                            위 HTML 2종의 QR 코드 이미지 + 아티팩트 링크·해시 대조 (폴더 README)
-verify_v7_final_consistency.py                       최종 수치 ↔ 파일 정합성 검증 (101/101)
-run_lda_v6.py                                        LDA 파이프라인 참고 구현(--data/--out 인자; 기본 입력 = 최종 코퍼스)
-data/
-  v7_final/            최종 라이브 코퍼스 10,020건 + 최종 산출물 + 동결 스냅샷 산출물 (1절 표, 폴더 README 참고)
-  v7_rounds/           v6 단계 로그 3개 + v7 병합·교체 로그 전량 r1~r74 (마지막 r72가 10,020건)
-  silhouette_gate_timeline/  실루엣 게이트 타임라인 CSV (v4 종료~r66 2차)
-v7_final_10020/        ★ 10,020건 기준 문서·코드·노트북 전부 (폴더 README 참고)
-  docs/                  KEY_FINDINGS.md · METHODOLOGY.md · FINAL_REPORT_SUMMARY.md · PYTHON_CODE_SUMMARY.md · REPORT_DOCX_VERIFICATION.md
-  analysis/              보조지표 7종·Fan Impact Pathway·토크나이저 라우팅 노트북 8개(실행 결과 포함)+문서, build_notebooks_v7.py,
-                         Persona_결정공간.html 로직 재현 노트북(persona_decision_space/, Spyder용 .py 포함),
-                         토크나이저 스크립트 3종+문서 2종+토큰 빈도 CSV+언어별 불용어 정리(stopwords/), 기술 상세명세서, 국내 지역 지수 JSON/CSV
-  charts/  indices_csv/  최종 보고서 그림·지수 CSV 스크립트 (입력 JSON은 data/v7_final/, 출력은 output/)
-  data_export/           HTML 내장 데이터 추출, 코퍼스 평탄화, K-grid·지수·성장 이력 CSV 산출 스크립트
-  silhouette_gate_policy/     실루엣 게이트 정책 문서 + 타임라인 차트 스크립트
-  tokenizer_wordcloud_report/ 토크나이저·워드클라우드 보고서(10,020건 실행 결과) + 이미지
-  index_methodology/     지표 산식 문서 + 식(1)~(7) 지표 산정 노트북(index_calculation_v7.ipynb, 결과 CSV) + 재검증 스크립트
-  report_scripts/        요약보고서 docx 빌드 스크립트(Node.js) + JS 정리 문서
-Statistics/R_통계검증/   보고서 2.1·2.2·3.8·7.4절 통계량을 R 표준 함수로 재계산해 대조(238/238 일치, RUN_ALL.R 하나로 실행). 입력 JSON은 data/v7_final/ 사본
-Statistics/verify_r_sections_python.py   같은 238개 항목을 scipy·statsmodels로 재현하는 파이썬 판(R 미설치 환경용)
-archive/v6_r22_era_backup.zip   최종 코퍼스 확정 이전(v7 r22, 5,612건) 시점 자료의 압축 백업 — 저장소 본문은 참조하지 않음 (안의 NOTES_특이사항.md 참고)
-```
+![3D 포지셔닝 맵](assets/readme/fig02_3d_positioning_map.png)
 
-## 5. 재현 절차
+*그림 2. 100개 팬덤 3D 포지셔닝 맵 — X 파급효과 × Y 팬충성도 × Z 팬 요인 다양성. Z축은 영향력의 크기가 아니라 구조(화제가 여러 경로에 고르게 분포하는지)를 잰다.*
+
+| 검정 | 결과 | 해석 |
+|---|---|---|
+| 정규성(Shapiro-Wilk) | 두 점수 모두 p<.05 | 정규분포 아님 → 순위 검정 병행 |
+| Pearson r | **0.493** (p<.001, R²=0.243) | 설계 기준 \|r\|<0.5 충족 (동결 스냅샷은 미충족) |
+| Spearman ρ | 0.380 (p<.001) | 방향·유의성 일치 |
+| 다중회귀 R² (+활동량 통제) | 0.243 → **0.847** | 두 점수가 근거문장 수를 공통 기반으로 함 |
+| 충성도 회귀계수 (+활동량 통제) | **−0.200** (p<.001) | 부호 반전 → 같은 근거 예산 안에서 트레이드오프 |
+| VIF | 1.93 | 다중공선성 문제 없음 |
+| 4분면 독립성 χ² (0.5 기준 2×2) | **8.34**, p=0.0039 | 두 축 독립 가정 기각 |
+| Loyalty–Diversity / Spillover–Diversity | r=0.099 (n.s.) / **0.461** (p<.001) | Z축은 충성도와 독립, 파급효과와는 상관 |
+
+영향점(Cook's D) 상위: BTS 0.575 · god 0.284 · 이효리 0.254 · TWICE 0.232 · BLACKPINK 0.094. 이효리는 충성도 0.006에 파급효과 0.654로 표준화 잔차 +3.59의 극단 사례다.
+
+| 2D 포지셔닝 맵 (0.5 기준 4구획) | Q-Q Plot |
+|---|---|
+| ![2D](assets/readme/fig03_2d_positioning_map.png) | ![QQ](assets/readme/fig04_qq_plot.png) |
+
+*그림 3·4. 왼쪽은 규칙 기반 4구획(핵심전략·내부결속·외부견인·주변부), 오른쪽은 충성도·활동량·파급효과가 우측 꼬리에서 정규선을 벗어나는 모습. 통계량 전부는 `Statistics/R_통계검증/`(R)과 `Statistics/verify_r_sections_python.py`로 238/238 재현.*
+
+---
+
+## 4. 팬충성도 + 파급효과 상위 15개 팬덤 (동결 스냅샷)
+
+| 순위 | 팬덤 | 팬충성도 | 파급효과 | 대표 요인 | 구획 |
+|---|---|---|---|---|---|
+| 1 | BTS | 0.93 | 1.00 | 현장경제형 | 핵심전략형 |
+| 2 | TWICE | 0.94 | 0.85 | 현장경제형 | 핵심전략형 |
+| 3 | 임영웅 | 0.90 | 0.70 | 현장경제형 | 핵심전략형 |
+| 4 | Stray Kids | 0.81 | 0.70 | 현장경제형 | 핵심전략형 |
+| 5 | BLACKPINK | 0.75 | 0.71 | 현장경제형 | 핵심전략형 |
+| 6 | SEVENTEEN | 1.00 | 0.39 | 현장경제형 | 내부결속형 |
+| 7 | 지드래곤 (G-Dragon) | 0.56 | 0.73 | 현장경제형 | 핵심전략형 |
+| 8 | NCT | 0.71 | 0.48 | 현장경제형 | 내부결속형 |
+| 9 | CORTIS | 0.53 | 0.63 | 현장경제형 | 핵심전략형 |
+| 10 | aespa | 0.58 | 0.55 | 현장경제형 | 핵심전략형 |
+| 11 | NewJeans | 0.43 | 0.59 | 현장경제형 | 외부견인형 |
+| 12 | RIIZE | 0.63 | 0.38 | 현장경제형 | 내부결속형 |
+| 13 | ATEEZ | 0.53 | 0.47 | 현장경제형 | 내부결속형 |
+| 14 | 레드벨벳 | 0.71 | 0.29 | 현장경제형 | 내부결속형 |
+| 15 | 아이유 | 0.64 | 0.36 | 현장경제형 | 내부결속형 |
+
+---
+
+## 5. K → F → 페르소나 해석 계층
+
+| 계층 | 답하는 질문 | 정의 | 파일 |
+|---|---|---|---|
+| K (Topic) | 무엇을 하는가 | LDA 토픽 10개 (음원차트기록·해외현지보도·예능출연·글로벌음반판매·팬클럽공식활동·단독콘서트투어·브랜드앰버서더·미디어크로스오버 등) | `topic_cards_v7.json` |
+| F (Impact Pathway) | 어디로 전이되는가 | 메타팩터 5개를 파급경로로 재명명 — F1 팬덤결속(Fan→Fan) · F2 직접소비(Fan→Market) · F3 현장경제(Fan→Event→Local) · F4 산업전이(Fan→Brand/Industry) · F5 대중·글로벌 확산(Fan→Media→Global) | `factor_pathway_map_v7.json` |
+| Persona | 어떤 방식으로 작동하는가 | 상위 2개 F 조합 10가지 중 실현 4유형: **글로벌투어형 43**(F3+F5) · **현장상업형 31**(F3+F4) · **원정소비형 17**(F2+F3) · **집단동원형 9**(F1+F3) — 전부 F3 공유 | `fan_persona_v7.json` |
+| Loyalty·Spillover | 얼마나 강한가 | 점수를 F별로 분해한 Factor-specific Impact = 비중 × 점수 | `fan_persona_v7.json` |
+
+| Fan Persona Map | 경로별(F1∼F5) 점수 분해 |
+|---|---|
+| ![Persona map](assets/readme/fig05_persona_map.png) | ![Factor-specific](assets/readme/fig06_factor_specific_impact.png) |
+
+![Persona 군집화 세부 구조](assets/readme/fig07_persona_cluster_structure.png)
+
+*그림 5∼7. 왼쪽 덴드로그램은 토픽 φ분포의 코사인 거리로 K=10을 M=5로 묶는 과정(실루엣 최대 M 자동 선택), 오른쪽 PCA는 페르소나를 결정하는 F1∼F5 비중 공간(PC1 40.8%, PC2 30.8%). 재현 노트북: `v7_final_10020/analysis/persona_decision_space/` (K→F 10/10, 페르소나 100/100, PCA 좌표 차이 5e-6).*
+
+---
+
+## 6. 보조지표 7종 (라이브 코퍼스 10,020건)
+
+| 지표 | 무엇을 재나 | 산정 | 결과 요약 |
+|---|---|---|---|
+| 광고·상업성 지수 | 광고 계약·앰버서더·협찬 문장 비중과 20개 업종 구성 | 광고신호 키워드 31개 → 업종 사전 다중분류 | 1,302건(13.0%). 복지/행정 228 · 패션/의류 209 · 미용 177 · 식음료 169 · 정보/통신 94 |
+| 미디어·콘텐츠 노출 지수 | 예능·유튜브·영화·드라마 노출 | 4개 서브태그 키워드 매칭 | 1,025건(10.2%), 99/100 팬덤 (투어스 0건) |
+| 팬덤결속 지수 | 조직적 결속력 5유형(A 공식팬클럽 · B 팬카페 · C 정체성 · D 기부 · E 오프라인 결집) | 유형별 키워드 매칭 | 923건(9.2%), 상위 임영웅·김재중·김호중·이찬원·정동원 |
+| 매체 크로스오버 지수 | 매체 확산 폭 | 출처 URL의 뉴스 도메인 수 | news_media 6,712건, 서로 다른 매체 1,298개 |
+| 국내 지역 지수 | 17개 시/도 밀착도 | 지역명 텍스트마이닝 | 지역 언급 1,226건, 검출 469, 99/100 팬덤. 서울 편중 뚜렷, 다양성 1위 임영웅(12지역, 0.71) |
+| 멤버 집중도 MCI | 그룹 내 멤버 쏠림 | Σ(멤버 점유율)² (허핀달 방식, 하한 1/멤버수) | 45개 그룹. MCI∼멤버 수 r=−0.728, 멤버 수 통제 후 outcome 설명력 R²<0.05 |
+| 세계 언어 지수 | 해외 확산 | Coverage의 언어 분포 재구성 | 해외언어 4,469건(44.6%), 100/100 팬덤. 영어 2,195(49.1%) · 일본어 · 중국어 순 |
+
+| 업종별 광고·상업성 순위 | 팬덤별 업종 구성 (상위 25) |
+|---|---|
+| ![ad rank](assets/readme/fig08_ad_industry_rank.png) | ![ad by fandom](assets/readme/fig09_ad_by_fandom.png) |
+
+| 미디어·콘텐츠 노출 (상위 20) | 팬덤결속 지수 (유형별 순위 · 상위 25) |
+|---|---|
+| ![media](assets/readme/fig10_media_exposure.png) | ![cohesion](assets/readme/fig11_cohesion_index.png) |
+
+| 국내 지역 언급 순위 | 해외언어별 근거 순위 |
+|---|---|
+| ![domestic](assets/readme/fig12_domestic_regional.png) | ![worldwide rank](assets/readme/fig13_worldwide_language_rank.png) |
+
+![해외언어 구성 상위 20](assets/readme/fig14_worldwide_language_by_fandom.png)
+
+**MCI 상위·하위와 설명력** (`member_mention_index_v7.json`, 상관은 상세 보고서 7.4절 표)
+
+| 그룹 | 멤버 언급 | 상위 멤버(점유율) | MCI |
+|---|---|---|---|
+| FTISLAND | 23 | 이홍기 0.78 · 이재진 0.22 | 0.660 |
+| 동방신기 | 33 | 유노윤호 0.58 · 최강창민 0.42 | 0.512 |
+| CNBLUE | 24 | 정용화 0.67 · 강민혁 0.21 · 이정신 0.13 | 0.504 |
+| … | | | |
+| SEVENTEEN | 68 | 승관 0.15 · 버논 0.15 · 조슈아 0.13 | 0.112 |
+| NCT | 61 | 마크 0.16 · 도영 0.15 · 윈윈 0.15 | 0.111 |
+
+원시 MCI가 가장 잘 설명하는 outcome은 팬충성도(r=−0.385, R²=0.148)지만, 멤버 수를 뺀 MCI_excess로는 어떤 outcome도 유의하지 않다(최대 R²=0.046). MCI는 집중도보다 멤버 수를 대리하는 지표에 가깝다.
+
+---
+
+## 7. 토크나이저와 언어(문자권)별 워드클라우드
+
+`tokenize(text, url)`은 2단 구조다. **일반 경로**(정규식 + 언어별 불용어)가 모든 문장에 먼저 적용되고, 본문에 가나·한자·태국 문자가 실제로 있을 때만 **fugashi(일본어)·jieba(중국어)·pythainlp(태국어)** 형태소 분석 결과를 위에 얹는다. 출처 도메인 태그가 아니라 본문 문자로 분기하는 이유는, 일본·중국 매체를 인용한 문장 대다수가 한국어 요약문이라 태그 기준 분기가 콘텐츠를 날려 버렸기 때문이다.
+
+| 문자권 | 불릿 수 | 토큰 총계 | 어휘 종수 |
+|---|---:|---:|---:|
+| 한국어 | 8,942 | 134,027 | 21,279 |
+| 영어 | 6,425 | 32,332 | 7,226 |
+| 중국어 | 398 | 1,816 | 1,211 |
+| 일본어 | 155 | 895 | 549 |
+| 러시아어 | 45 | 471 | 367 |
+| 비영어(라틴) | 219 | 470 | 338 |
+| 태국어 | 56 | 411 | 278 |
+| 베트남어 | 30 | 303 | 205 |
+
+![언어별 워드클라우드](assets/readme/fig15_wordcloud_by_language.jpg)
+
+*그림 15. 10,020건 전체에 토크나이저를 실제 실행한 결과(토큰 170,725개, `wordcloud_by_language_v7.json`). 언어별 불용어 목록은 `v7_final_10020/analysis/tokenizer/stopwords/`, 보고서 전문은 `v7_final_10020/tokenizer_wordcloud_report/`.*
+
+---
+
+## 8. 한계 및 결론
+
+- 전수조사가 아니라 뉴스·위키·공개 커뮤니티 표본이며, SNS는 2차 보도로만 반영된다.
+- 해석 계층(K→F→페르소나, 전체 순위표)은 v7-40 스냅샷(7,350건)에 고정되어 있고, 로스터 교체 3건(BE'O→빈지노 · 한로로→몬스타엑스 · pH-1→투어스)을 포함한 라이브 코퍼스는 보조지표에만 반영된다.
+- 판별타당도(|r|<0.5)와 Z축 독립성은 스냅샷에 따라 결론이 뒤집혔다. 단일 스냅샷만으로 통계적 결론을 확정하기 어렵다는 근거다.
+- 보조지표는 사전에 없는 표현(다큐멘터리·라디오, 사전 밖 브랜드명)을 포착하지 못하고, MCI는 멤버 수가 적을수록 구조적으로 높다.
+- 그럼에도 다중회귀·4구획·민감도 분석의 트레이드오프 구조는 두 스냅샷 모두에서 같았다. 팬덤 영향력은 **크기(점수)와 구조(요인 다양성·경로)를 함께** 봐야 한다는 것이 이 분석의 결론이다.
+
+---
+
+## 9. 저장소 안내
+
+**재현 명령 (저장소 루트, Python 3.10+; scipy·statsmodels·scikit-learn·pandas·matplotlib, 토크나이저는 fugashi unidic-lite jieba pythainlp)**
 
 ```bash
-pip install numpy scipy statsmodels scikit-learn pandas matplotlib
-
-# 1) 최종 수치 정합성 검증 — 보고서 수치가 data/v7_final/ 파일에서 재계산되는지 항목별 확인
-python verify_v7_final_consistency.py
-
-# 2) 파생 파일 재생성 (이미 커밋되어 있음; 다시 만들면 같은 결과)
-python v7_final_10020/data_export/extract_html_payloads.py      # HTML 2종 내장 데이터 -> data/v7_final/*.json
-python v7_final_10020/data_export/build_bullets_flat_csv.py     # fandoms_v3_100.json -> bullets_flat_v7_final.csv (10,020행)
-python v7_final_10020/data_export/build_lda_k_grid_csv.py       # 라이브 재적합 k_grid -> lda_k_grid_live_reference_v7.csv
-python v7_final_10020/data_export/build_cohesion_media_index_csv.py   # 팬덤결속·매체 크로스오버 지수 JSON -> CSV 2종
-python v7_final_10020/indices_csv/build_ad_commercial_index_csv.py    # 광고·상업성 지수 JSON -> output/indices_csv/ad_commercial_index_v7.csv
-python v7_final_10020/data_export/build_corpus_growth_history_csv.py  # data/v7_rounds 로그 -> corpus_growth_history_v6_v7_full.csv
-
-# 2-1) 분석 노트북·토크나이저 스크립트 (v7_final_10020/analysis/, README 참고)
-pip install nbformat nbconvert ipykernel && python v7_final_10020/analysis/build_notebooks_v7.py   # 노트북 8개 생성+실행
-python v7_final_10020/analysis/tokenizer/build_multilingual_bullet_language_classifier_v7.py
-python v7_final_10020/analysis/tokenizer/build_bullet_token_frequency_csv_v7.py                   # fugashi·jieba·pythainlp 필요
-
-# 3) LDA 파이프라인 참고 실행 — 결과는 output/ 아래(원본 산출물을 덮지 않음)
-python run_lda_v6.py                                     # data/v7_final/fandoms_v3_100.json -> output/lda_rerun/
+python verify_v7_final_consistency.py                                        # 보고서 수치 ↔ data/v7_final 101/101
+python Statistics/verify_r_sections_python.py                                # 통계 검정 238개 항목 (R 패키지와 같은 정답지)
+python v7_final_10020/index_methodology/build_index_calculation_notebook.py  # 식(1)~(7) 지표 산정 노트북
+python v7_final_10020/analysis/build_notebooks_v7.py                          # 보조지표·페르소나·토크나이저 노트북 8개
+python v7_final_10020/analysis/persona_decision_space/build_persona_decision_space_notebook.py
 ```
 
-한글 폰트가 필요한 차트 스크립트는 `KFONT_PATH=/path/to/NotoSansCJKkr-Regular.otf`를 지정하거나
-`fonts/NotoSansCJKkr-Regular.otf`에 두면 된다(없으면 경고 후 기본 폰트로 진행).
+**저장소에 없는 것**: 최종 참고 재적합을 만든 14개 언어 라우팅 토크나이저(`run_lda_v6_live_reference_v7.py`), 동결 스냅샷의 φ·코사인 거리 행렬(`factor_clustering_structure_v7.json`), 동결 7,350건 코퍼스. 저장소의 `run_lda_v6.py`는 이전 판 토크나이저의 파이프라인이라 10,020건에서 문서 수 9,954건으로 보고서와 다르며 로직 참고용이다. 같은 방법을 최종 코퍼스에 적용한 φ·코사인 거리 산출물은 `v7_final_10020/analysis/persona_decision_space/topic_phi_cosine/`에 있다.
 
-## 6. 문서 안내
+```
+README.md                                   이 문서 (핵심 요약판)
+(분석보고서)…최종.pdf, (요약보고서)…최종.pdf  제출본
+3D_포지셔닝맵_국내100팬덤.html + plotly-bundle.js / Persona_결정공간.html   인터랙티브 산출물 (같은 폴더에서 열면 동작)
+qr_codes/                                   두 HTML의 QR 코드 + 아티팩트 링크·해시 대조
+assets/readme/                              이 문서의 그림 15장 (요약보고서 원본 그림)
+verify_v7_final_consistency.py              최종 수치 ↔ 파일 정합성 검증 (101/101)
+run_lda_v6.py                               LDA 파이프라인 참고 구현 (--data/--out)
+data/
+  v7_final/            최종 코퍼스 10,020건 + 최종 산출물 + 동결 스냅샷 산출물 (폴더 README)
+  v7_rounds/           v6 단계 로그 3개 + v7 병합·교체 로그 전량 (마지막 r72가 10,020건)
+  silhouette_gate_timeline/  실루엣 게이트 타임라인 CSV (v4 종료~r66 2차)
+v7_final_10020/        ★ 10,020건 기준 문서·코드·노트북 전부 (폴더 README)
+  docs/                  KEY_FINDINGS · METHODOLOGY · FINAL_REPORT_SUMMARY · PYTHON_CODE_SUMMARY · REPORT_DOCX_VERIFICATION
+  analysis/              보조지표 7종·Fan Impact Pathway·토크나이저 노트북 8개 + 문서, 페르소나 결정공간 노트북(+φ·코사인 거리 산출),
+                         토크나이저 스크립트·불용어 정리(stopwords/), 기술 상세명세서, 국내 지역 지수 JSON/CSV
+  index_methodology/     지표 산식 문서 + 식(1)~(7) 산정 노트북(ipynb + Spyder용 .py) + 재검증 스크립트
+  charts/ indices_csv/ data_export/   그림·지수 CSV·데이터 추출 스크립트 (출력은 output/)
+  silhouette_gate_policy/  tokenizer_wordcloud_report/  report_scripts/
+Statistics/R_통계검증/  보고서 2.1·2.2·3.8·7.4절 통계량을 R 표준 함수로 재계산 (238/238, RUN_ALL.R 하나로 실행)
+Statistics/verify_r_sections_python.py   같은 238개 항목의 파이썬 판
+archive/v6_r22_era_backup.zip   최종 코퍼스 확정 이전(v7 r22, 5,612건) 시점 자료 백업 — 본문은 참조하지 않음
+```
 
-- `v7_final_10020/docs/KEY_FINDINGS.md` — 보고서 인용 수치 요약 + 각 수치의 근거 파일·계층
-- `v7_final_10020/docs/METHODOLOGY.md` — 데이터 수집, K→M→Persona→Impact 4단계, 강건성 검증, 실루엣 게이트, 보조지표, DID
-- `v7_final_10020/docs/FINAL_REPORT_SUMMARY.md` — 분석보고서 챕터 요약
-- `v7_final_10020/docs/PYTHON_CODE_SUMMARY.md` — 파이썬 스크립트 총정리(입력·출력·경로)
-- `v7_final_10020/docs/REPORT_DOCX_VERIFICATION.md` — 보고서 docx 2종의 표·수치를 저장소 데이터와 대조한 기록
-- `data/v7_final/README.md`, `data/v7_rounds/README.md` — 데이터 파일별 계층·내용
-- `v7_final_10020/analysis/README.md` — 분석 노트북·문서·코드, `technical_specification/LDA_V7_FINAL_TECHNICAL_SPECIFICATION.md`가 상세명세서
+**검증 상태**: 파이썬 26개 컴파일 · 노트북 10개 실행 오류 0 · 스크립트 22개 실행 및 재실행 산출물 동일 · 보고서 docx 대조 47/58 수치 일치(문장 오기 12건은 `REPORT_DOCX_VERIFICATION.md`).
