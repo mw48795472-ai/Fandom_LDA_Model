@@ -80,9 +80,9 @@ flowchart LR
 
 ![2D 포지셔닝 맵](assets/readme/fig03_2d_positioning_map.png)
 
-![4구획 카드](assets/readme/fig03b_quadrant_cards.png)
+*그림 3. 팬충성도 × 파급효과 2D 포지셔닝 맵(제출 보고서 2-6절). 버블 크기는 근거문장 수다. 3절 표의 χ²는 이와 별도로 0.5 기준 2×2표([[7,17],[4,72]])로 계산한 값이다.*
 
-*그림 3. 팬충성도 × 파급효과 2D 포지셔닝 맵(제출 보고서 2-6절). 표본 평균(충성도 0.371 · 파급효과 0.266)을 기준선으로 핵심전략형 24 · 내부결속형 17 · 외부견인형 10 · 주변부 49로 나뉘며, 버블 크기는 근거문장 수다. 3절 표의 χ²는 이와 별도로 0.5 기준 2×2표([[7,17],[4,72]])로 계산한 값이다.*
+**4구획 읽는 법.** 기준선은 100개 팬덤의 표본 평균이다(팬충성도 0.371, 파급효과 0.266). 두 축이 모두 평균 이상이면 **핵심전략형(24개)** 으로, 결속력과 파급력을 모두 갖춘 팬덤이며 BTS·TWICE·임영웅·Stray Kids·BLACKPINK가 여기 속한다. 충성도만 평균 이상이면 **내부결속형(17개)** 으로, 결속력은 높으나 외부로 퍼지는 파급력은 낮은 유형이다(SEVENTEEN·NCT·RIIZE·레드벨벳 등). 파급효과만 평균 이상이면 **외부견인형(10개)** 으로, 언론·브랜드가 먼저 끌어 주지만 팬덤 결속 근거는 상대적으로 적은 유형이다(NewJeans 등). 둘 다 평균 이하인 **주변부(49개)** 가 절반 가까이를 차지하는데, 이는 근거문장 수가 적은 팬덤이 두 점수 모두 낮게 나오는 구조와 맞물린다(두 점수 모두 활동량과 상관 0.69·0.90). 4구획은 통계적 군집이 아니라 평균선 기준의 규칙 분류이므로, 경계 근처 팬덤은 근거가 몇 건만 더해져도 구획이 바뀔 수 있다.
 
 ![Q-Q Plot](assets/readme/fig04_qq_plot.png)
 
@@ -145,17 +145,17 @@ flowchart LR
 | 멤버 집중도 MCI | 그룹 내 멤버 쏠림 | Σ(멤버 점유율)² (허핀달 방식, 하한 1/멤버수) | 45개 그룹. MCI∼멤버 수 r=−0.728, 멤버 수 통제 후 outcome 설명력 R²<0.05 |
 | 세계 언어 지수 | 해외 확산 | Coverage의 언어 분포 재구성 | 해외언어 4,469건(44.6%), 100/100 팬덤. 영어 2,195(49.1%) · 일본어 · 중국어 순 |
 
-| 업종별 광고·상업성 순위 | 팬덤별 해외언어 구성 (상위 20, Worldwide Language Pilot) |
+| 해외언어별 근거 순위 | 팬덤별 해외언어 구성 (상위 20, Worldwide Language Pilot) |
 |---|---|
-| ![ad rank](assets/readme/fig08_ad_industry_rank.png) | ![worldwide by fandom](assets/readme/fig14_worldwide_language_by_fandom.png) |
+| ![worldwide rank](assets/readme/fig13_worldwide_language_rank.png) | ![worldwide by fandom](assets/readme/fig14_worldwide_language_by_fandom.png) |
 
 | 미디어·콘텐츠 노출 (상위 20) | 팬덤결속 지수 (유형별 순위 · 상위 25) |
 |---|---|
 | ![media](assets/readme/fig10_media_exposure.png) | ![cohesion](assets/readme/fig11_cohesion_index.png) |
 
-| 국내 지역 언급 순위 | 해외언어별 근거 순위 |
+| 국내 지역 언급 순위 | 업종별 광고·상업성 순위 |
 |---|---|
-| ![domestic](assets/readme/fig12_domestic_regional.png) | ![worldwide rank](assets/readme/fig13_worldwide_language_rank.png) |
+| ![domestic](assets/readme/fig12_domestic_regional.png) | ![ad rank](assets/readme/fig08_ad_industry_rank.png) |
 
 ![팬덤별 광고·상업성 업종 구성 상위 25](assets/readme/fig09_ad_by_fandom.png)
 
@@ -226,7 +226,7 @@ README.md                                   이 문서 (핵심 요약판)
 (분석보고서)…최종.pdf, (요약보고서)…최종.pdf  제출본
 3D_포지셔닝맵_국내100팬덤.html + plotly-bundle.js / Persona_결정공간.html   인터랙티브 산출물 (같은 폴더에서 열면 동작)
 qr_codes/                                   두 HTML의 QR 코드 + 아티팩트 링크·해시 대조
-assets/readme/                              이 문서의 그림 18장 (제출 보고서 PDF·핵심 요약판 docx 원본 그림, 가로 최대 2,400px)
+assets/readme/                              이 문서의 그림 17장 (제출 보고서 PDF·핵심 요약판 docx 원본 그림, 가로 최대 2,400px)
 verify_v7_final_consistency.py              최종 수치 ↔ 파일 정합성 검증 (101/101)
 run_lda_v6.py                               LDA 파이프라인 참고 구현 (--data/--out)
 data/
