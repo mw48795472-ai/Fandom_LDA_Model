@@ -4,7 +4,7 @@ fandoms_v3_100.json(팬덤별 loyalty/spillover 중첩 배열) -> 단일 평면 
 컬럼: fandom, category, bullet_type, text, url
 
 기본값은 최종 라이브 코퍼스(data/v7_final, 10,020건)이며, --src/--out으로
-v6 r22 스냅샷(data/v6_r22_snapshot, 5,612건)에도 그대로 쓸 수 있다.
+v6 r22 스냅샷(archive/v6_r22_era/data/v6_r22_snapshot, 5,612건)에도 그대로 쓸 수 있다.
 행 수는 --expected(지정 시)와 대조 검증한다.
 """
 import argparse
