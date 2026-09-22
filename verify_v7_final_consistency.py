@@ -627,6 +627,29 @@ check("schema_audit_r74: 10,020건 스캔, 팬덤 100, LDA 3토큰 미만 제외
 info("성장 이력 전체 CSV", "data_export/build_corpus_growth_history_csv.py -> data/v7_final/corpus_growth_history_v6_v7_full.csv (v6 1차 ~ v7 r72)")
 
 # ---------------------------------------------------------------------------
+# [AC] v7_final_analysis/ — 국내 지역 지수 최종 재산출본 (2026-09-22, r22 규칙을 10,020건에 재적용)
+print("\n[AC] v7_final_analysis/domestic_regional_index — 최종 10,020건 재산출본")
+_dr_path = BASE / "v7_final_analysis" / "domestic_regional_index" / "domestic_regional_index_v7.json"
+if _dr_path.exists():
+    dr = json.load(open(_dr_path, encoding="utf-8"))
+    _regions = ["서울", "부산", "대구", "인천", "광주", "대전", "울산", "세종", "경기", "강원", "충북", "충남", "전북", "전남", "경북", "경남", "제주"]
+    _bad = sum(1 for v in dr.values() if sum(v["region_mention_counts"].get(r, 0) for r in _regions) != v["total_region_mentions"]
+               or sum(1 for r in _regions if v["region_mention_counts"].get(r, 0) > 0) != v["n_regions_hit"]
+               or abs(v["n_regions_hit"] / 17 - v["region_diversity"]) > 0.001)
+    check("국내 지역 지수 재산출본: 100개 팬덤, 17개 시도 합 = total_region_mentions, n_regions_hit/17 = region_diversity (불일치 0)", len(dr) == 100 and _bad == 0, f"불일치 {_bad}")
+    check("근거문장 수 = 최종 코퍼스 실측 (100/100)", all(dr[f]["total_group_bullets"] == corpus_cnt.get(f) for f in dr))
+    check("보고서 표 15·KEY_FINDINGS 강조 3팬덤 — 임영웅 28건·12지역·서울 21%·0.706(전체 1위), BTS 17건·5지역·서울 47%·0.294 (동결 시점과 최종이 같은 값)",
+          dr["임영웅"]["total_region_mentions"] == 28 and dr["임영웅"]["n_regions_hit"] == 12 and dr["임영웅"]["primary_region"] == "서울" and abs(dr["임영웅"]["region_diversity"] - 0.706) < 0.001
+          and dr["BTS"]["total_region_mentions"] == 17 and dr["BTS"]["n_regions_hit"] == 5 and dr["BTS"]["primary_region"] == "서울" and abs(dr["BTS"]["primary_region_share"] - 0.471) < 0.001
+          and max(v["region_diversity"] for v in dr.values()) == dr["임영웅"]["region_diversity"])
+    check("리센느(RESCENE): 최종 22건·5지역·경남 64% (표 15의 19건·58%는 동결 스냅샷 시점 — 노트북 3절에서 동결 근사로 재현)",
+          dr["리센느(RESCENE)"]["total_region_mentions"] == 22 and dr["리센느(RESCENE)"]["primary_region"] == "경남" and abs(dr["리센느(RESCENE)"]["primary_region_share"] - 0.636) < 0.001)
+    check("커버리지 99/100 (0건: 투어스(TWS)), 검출 지역 합 469, 지역 언급 총계 1,226",
+          sum(1 for v in dr.values() if v["n_regions_hit"] == 0) == 1 and dr["투어스(TWS)"]["n_regions_hit"] == 0 and sum(v["n_regions_hit"] for v in dr.values()) == 469 and sum(v["total_region_mentions"] for v in dr.values()) == 1226)
+else:
+    info("v7_final_analysis/domestic_regional_index/domestic_regional_index_v7.json 없음", "python v7_final_analysis/build_notebooks_v7.py domestic 으로 생성")
+
+# ---------------------------------------------------------------------------
 n_ok = sum(1 for _, ok in results if ok); n_all = len(results)
 print(f"\n=== 결과: {n_ok}/{n_all} 항목 일치 ({n_all - n_ok}건 불일치) ===")
 sys.exit(0 if n_ok == n_all else 1)

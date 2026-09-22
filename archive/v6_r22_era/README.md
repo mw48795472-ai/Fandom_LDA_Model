@@ -6,6 +6,8 @@
 대응이 적혀 있기 때문이다. 필요 없으면 이 폴더 전체를 지우면 된다(루트의 스크립트·검증은 `data/v6_r22_snapshot/csv/
 corpus_growth_history_v6_v7.csv`와 `domestic_regional_pilot_v6.json` 두 파일만 참조).
 
+**10,020건 기준 새 판**: 이 폴더의 문서·노트북·스크립트를 최종 코퍼스·동결 스냅샷 기준으로 새로 구성한 판은 `v7_final_analysis/`에 있다(2026-09-22). 이 폴더는 그 이후에도 수정하지 않는다.
+
 | 항목 | 내용 |
 |---|---|
 | `data/v6_r22_snapshot/` | r22 코퍼스 5,612건, 점수(K=8·M=6·실루엣 0.154), 진단, 3D payload, v7_progress(r22), 파일럿 JSON, 파생 CSV. 폴더 README 참고 |
