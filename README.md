@@ -9,7 +9,7 @@
 > 없어 재현 불가"라고 적혀 있었다. 이번 정리에서 최종 코퍼스와 산출물을 `data/v7_final/`로 추가하고,
 > 5,612건 스냅샷은 `archive/v6_r22_era/data/v6_r22_snapshot/`으로 옮겨 두 데이터가 같은 파일명으로 섞이지 않게 했다.
 > 최종 수치가 저장소 파일에서 실제로 재현되는지는 `verify_v7_final_consistency.py`가 항목별로 검증한다
-> (현재 96/96 일치. 지난 정리에서 유일하게 재현되지 않던 χ² 값도 2026-09-22 추가 파일로 해소, 아래 "재현성 범위" 참고).
+> (현재 101/101 일치. 지난 정리에서 유일하게 재현되지 않던 χ² 값도 2026-09-22 추가 파일로 해소, 아래 "재현성 범위" 참고).
 
 ---
 
@@ -80,7 +80,9 @@
   실제 실행됨을 확인했다(광고·상업성 CSV는 `data/v7_final/ad_commercial_index_v7.csv`로 커밋). 실루엣 타임라인 CSV도
   `data/silhouette_gate_timeline/`에 추가돼 차트 스크립트가 실행된다. **아직 없는 것**:
   `domestic_regional_index_live_reference_v7.json`, `worldwide_language_index_live_reference_v7.json`(국내지역·세계언어
-  지수 원본), `factor_clustering_structure_v7.json`(K→M 코사인거리 행렬), v7-55 시점 MCI 파일. 2026-09-22 3~4차 추가분: 라이브 점수
+  지수 원본), `factor_clustering_structure_v7.json`(K→M 코사인거리 행렬), v7-55 시점 MCI 파일. 이 중 국내 지역 지수는 2026-09-22에
+  r22 원본을 1,698/1,700셀 재현하는 규칙을 확정해 최종 코퍼스에 재산출했다(`v7_final_analysis/domestic_regional_index/`; 보고서 표 15는
+  동결 스냅샷 시점 값으로 17/20행 재현). 세계 언어 지수 원본은 아카이브명(`worldwide_language_pilot_live_reference_v7.json`)으로 들어와 있다. 2026-09-22 3~4차 추가분: 라이브 점수
   원본 CSV, 제외 불릿 목록, 동결 진단 원본, 매체 크로스오버·미디어 노출 지수, K=9 검증 실험(`k9_validation_v7.json`, 9,614문서 중간
   라운드), 멤버 파일럿 v7, v7_progress(r48), 원본 데이터 아카이브 README. 해당 스크립트는 `data/v7_final/` 아래 그 파일명을 읽도록
   정리돼 있어 파일을 넣으면 바로 실행된다.
@@ -115,8 +117,11 @@ Silhoett Gate Policy/  실루엣 게이트 정책 문서 + 타임라인 차트 �
 TOKENIZER_WORDCLOUD_REPORT/   토크나이저·워드클라우드 보고서(10,020건 실행 결과) + 이미지
 지표 산정 방법론/      지표 산식 문서 + 최종 라이브 점수 JSON으로 식(2)(3)(6)(7) 재검증 스크립트
 보고서 스크립트 작성/  요약보고서 docx 빌드 스크립트(Node.js) + JS 정리 문서
+v7_final_analysis/     archive/v6_r22_era/ 자료를 최종 코퍼스(10,020건)·동결 스냅샷(7,350건) 기준으로 새로 구성한 판 (2026-09-22) —
+                       보조지표별 노트북 7종+문서, 토크나이저 스크립트 3종+문서 2종+라우팅 노트북+토큰 빈도 CSV, 최종 기술 상세명세서,
+                       국내 지역 지수 최종 재산출 JSON/CSV (생성기 build_notebooks_v7.py; 폴더 README 참고)
 archive/v6_r22_era/    r22(5,612건) 시점 자료 일체 — data/v6_r22_snapshot/, 파일럿 6종 문서+노트북, TOKENIZER 스크립트·문서,
-                       상세명세서, 온톨로지 전략, 토크나이저 라우팅 노트북 (폴더 README 참고; 노트북 상대경로 그대로 동작)
+                       상세명세서, 온톨로지 전략, 토크나이저 라우팅 노트북 (폴더 README 참고; 노트북 상대경로 그대로 동작, 수정하지 않음)
 ```
 
 **정리 내역 (2026-09-22)**: 삭제 — `reports/`(보고서 스크립트 작성/과 동일 파일), `kpop-fandom-project.tar.gz`(초기 저장소
@@ -140,6 +145,11 @@ python data_export/build_cohesion_media_index_csv.py   # 팬덤결속·매체 �
 python indices_csv/build_ad_commercial_index_csv.py    # 광고·상업성 지수 JSON -> output/indices_csv/ad_commercial_index_v7.csv
 python data_export/build_corpus_growth_history_csv.py  # data/v7_rounds 로그 -> corpus_growth_history_v6_v7_full.csv
 
+# 2-1) 최종 코퍼스 기준 분석 노트북·토크나이저 스크립트 (v7_final_analysis/, README 참고)
+pip install nbformat nbconvert ipykernel && python v7_final_analysis/build_notebooks_v7.py   # 노트북 8개 생성+실행
+python v7_final_analysis/tokenizer/build_multilingual_bullet_language_classifier_v7.py
+python v7_final_analysis/tokenizer/build_bullet_token_frequency_csv_v7.py                   # fugashi·jieba·pythainlp 필요
+
 # 3) LDA 파이프라인(v6~r22 로직) — 기본 입력은 최종 코퍼스, 결과는 output/ 아래(원본 산출물을 덮지 않음)
 python run_lda_v6.py                                     # data/v7_final/fandoms_v3_100.json -> output/lda_rerun/
 python run_lda_v6.py --data archive/v6_r22_era/data/v6_r22_snapshot/fandoms_v3_100.json --out output/lda_rerun_r22
@@ -155,5 +165,6 @@ python run_lda_v6.py --data archive/v6_r22_era/data/v6_r22_snapshot/fandoms_v3_1
 - `FINAL_REPORT_SUMMARY.md` — 분석보고서 20페이지 챕터 요약
 - `PYTHON_CODE_SUMMARY.md` — 파이썬 스크립트 총정리(입력·출력·경로)
 - `data/v7_final/README.md`, `data/v7_rounds/README.md` — 데이터 파일별 계층·내용
+- `v7_final_analysis/README.md` — 최종 코퍼스 기준 분석 노트북·문서·코드(아카이브 자료의 10,020건 판), `technical_specification/LDA_V7_FINAL_TECHNICAL_SPECIFICATION.md`가 최종 제출본 기준 상세명세서
 - `archive/v6_r22_era/README.md` — r22 시점 자료·문서 목록. 그 안의 문서 상단 "2026-09-21 갱신 주"가 10,020건 코퍼스
   추가 이후 달라진 점을 밝히며, 본문의 "이번 세션에 없다/재현 불가" 서술은 r22 스냅샷만 있던 시점의 기록이다.

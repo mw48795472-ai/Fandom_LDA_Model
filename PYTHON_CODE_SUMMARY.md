@@ -132,7 +132,7 @@ before_total, after_total, net_new_bullets, n_touched_fandoms, note`)로 정규�
 
 | 스크립트 | 입력 | 출력 |
 |---|---|---|
-| `verify_v7_final_consistency.py` (루트) | `data/v7_final/*` 전부 | 보고서·KEY_FINDINGS 수치 96개 항목을 파일에서 재계산해 일치/불일치 출력 (현재 96/96 일치. χ²는 `positioning_map_correlation_live_v7.json`의 0.5 임계값 분할표로 재현) |
+| `verify_v7_final_consistency.py` (루트) | `data/v7_final/*` 전부 | 보고서·KEY_FINDINGS 수치 96개 항목을 파일에서 재계산해 일치/불일치 출력 (현재 101/101 일치. χ²는 `positioning_map_correlation_live_v7.json`의 0.5 임계값 분할표로 재현) |
 | `data_export/extract_html_payloads.py` | `3D_포지셔닝맵_국내100팬덤.html`, `Persona_결정공간.html` | HTML에 리터럴로 내장된 데이터 객체를 그대로 복사 → `data/v7_final/chart3d_payload_live_reference_v7.json`(라이브 100개 팬덤 점수·4구획·라이브 재적합 진단), `persona_decision_space_v7.json`(동결 K=10 토픽명·F코드·PCA·F1~F5 비중) |
 | `data_export/build_bullets_flat_csv.py` | `fandoms_v3_100.json` (`--src`, 기본 v7_final) | `bullets_flat_v7_final.csv` 10,020행 (r22에 쓰면 기존 `bullets_flat_v6_r22.csv`와 바이트 단위 동일 결과) |
 | `data_export/build_lda_k_grid_csv.py` | LDA 진단 JSON (`--src`, 기본 라이브 참고 재적합) | `lda_k_grid_live_reference_v7.csv` (r22에 쓰면 기존 `lda_k_grid_v6.csv`와 동일) |
@@ -144,6 +144,25 @@ before_total, after_total, net_new_bullets, n_touched_fandoms, note`)로 정규�
 `fandoms_v3_100.json`(10,020건)에 그대로 적용하면 3D 맵 payload의 100개 팬덤 점수가 소수점 셋째 자리까지 전부
 같고, 그 점수로 Pearson 0.493·Spearman 0.380·Cook's D(BTS 0.5749)·다중회귀 R² 0.847·VIF 1.93·민감도·LOO·3D축
 독립성까지 KEY_FINDINGS 값이 그대로 나온다. 4분면 χ²(8.34/10.2273)도 점수 0.5 초과 여부 2×2표로 재현된다(README 3절).
+
+## F. 2026-09-22 추가 — `v7_final_analysis/` (아카이브 r22 자료의 최종 코퍼스 10,020건 판)
+
+| 파일 | 입력 | 출력·확인 |
+|---|---|---|
+| `v7_final_analysis/build_notebooks_v7.py` | (생성기) | 노트북 8개를 nbformat으로 생성하고 nbconvert로 실행해 출력 포함 저장. `python … [이름] [--no-exec]` |
+| `ad_commercial_index/ad_commercial_index_v7.ipynb` | `ad_commercial_index_v7.json`, 코퍼스, 라이브 점수 | 무결성 100/100, 광고신호 키워드 재매칭 96/100 정확 일치, LDA 브랜드·상업형 비중과 r=0.834 |
+| `fandom_cohesion_index/fandom_cohesion_index_v7.ipynb` | `fandom_cohesion_index_v7.json`, 동결·라이브 점수 | 무결성 100/100, 동결 LDA 결속형과 r=0.687 |
+| `media_content_exposure_index/media_content_exposure_v7.ipynb` | 노출·크로스오버 지수, `k9_validation_v7.json`, r10·r11 로그 | 무결성 100/100, r10+r11 274건 일치, 서브태그 재매칭 100/100 |
+| `domestic_regional_index/domestic_regional_index_v7.ipynb` | 코퍼스, r22 원본 JSON(읽기만), 동결 점수 JSON | 규칙 검증 1,698/1,700셀 → **`domestic_regional_index_v7.json/.csv` 산출**, 보고서 표 15 17/20행 재현 |
+| `worldwide_language_index/worldwide_language_index_v7.ipynb` | 라이브 점수 JSON, 세계 언어 지수 JSON/CSV, 언어 요약 | ln(14)/ln(13)/ln(10) 각 100/100, 8개 필드 불일치 0 |
+| `group_member_index/group_member_index_v7.ipynb` | `member_mention_index_v7.json`, 파일럿 v6, 상관 JSON | MCI 재계산 0/45 불일치, r(MCI, 멤버 수) −0.728 |
+| `fan_impact_pathway/fan_impact_pathway_v7.ipynb` | 동결 진단·페르소나·토픽 카드·경로 맵·결정공간 | 매핑 10/10, Factor-specific Impact 500/500, 페르소나 43/31/17/9 |
+| `tokenizer/tokenizer_script_routing_v7.ipynb` | 코퍼스, `wordcloud_by_language_v7.json` | 문자권 다중 라벨 재현(태국·러시아·베트남 정확 일치, 소수 언어 순위 5/5) |
+| `tokenizer/build_multilingual_bullet_language_classifier_v7.py` | 라이브 점수 JSON, 언어 요약, 코퍼스 | 14개 언어 실측 합 = 요약(10,020), 도메인 분류기 재구성 1단계 83.3% → 2단계 95.9% |
+| `tokenizer/build_bullet_token_frequency_csv_v7.py` | 코퍼스 (fugashi·jieba·pythainlp) | `tokenizer/csv/bullet_token_frequency_v7_final.csv` (43,162 토큰, 176,944 발생) |
+| `tokenizer/jieba_and_thai_engine_details_v7.py` | 위 CSV | 엔진 스펙 조회, HMM/newmm 데모, 중국어·태국어 버킷 재검증 불일치 0 |
+
+아카이브의 원본(`archive/v6_r22_era/…`)은 수정하지 않았다. 아카이브 `jieba_and_thai_engine_details.py`는 `script_of`가 main() 안에 정의돼 import가 실패하는 상태였는데, v7 판에서는 모듈 수준으로 올려 실제로 실행된다.
 
 ## 공통적으로 쓰인 패턴
 
