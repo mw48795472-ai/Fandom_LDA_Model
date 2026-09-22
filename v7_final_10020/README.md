@@ -6,7 +6,7 @@
 | 하위 폴더 | 내용 |
 |---|---|
 | `docs/` | `KEY_FINDINGS.md`(인용 수치·근거 파일), `METHODOLOGY.md`(방법론), `FINAL_REPORT_SUMMARY.md`(보고서 요약), `PYTHON_CODE_SUMMARY.md`(코드 총정리) |
-| `analysis/` | 보조지표 7종·Fan Impact Pathway·토크나이저 라우팅 **노트북 8개(실행 결과 포함) + 문서**, `build_notebooks_v7.py` 생성기, 토크나이저 스크립트 3종·토큰 빈도 CSV, 최종 기술 상세명세서, 국내 지역 지수 JSON/CSV |
+| `analysis/` | 보조지표 7종·Fan Impact Pathway·토크나이저 라우팅 **노트북 8개(실행 결과 포함) + 문서**, `Persona_결정공간.html` 로직 재현 노트북(`persona_decision_space/`), `build_notebooks_v7.py` 생성기, 토크나이저 스크립트 3종·토큰 빈도 CSV, 최종 기술 상세명세서, 국내 지역 지수 JSON/CSV |
 | `charts/` | 최종 보고서 그림 스크립트(팬덤결속 지수 2종, 페르소나 덴드로그램·PCA) |
 | `indices_csv/` | 지수 CSV 산출(광고·상업성, 국내 지역, 세계 언어) |
 | `data_export/` | HTML 내장 데이터 추출, 코퍼스 평탄화, K-grid·결속/크로스오버 CSV, 성장 이력 CSV |

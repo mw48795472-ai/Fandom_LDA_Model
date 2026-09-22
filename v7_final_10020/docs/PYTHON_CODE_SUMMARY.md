@@ -35,6 +35,7 @@
 | 토크나이저 | `v7_final_10020/analysis/tokenizer/build_multilingual_bullet_language_classifier_v7.py` | 라이브 점수 JSON, `language_domain_summary_v7.json`, 코퍼스 | 14개 언어 실측 합 = 요약(10,020), 도메인 분류기 재구성 1단계 83.3% → 2단계 95.9% |
 | 토크나이저 | `v7_final_10020/analysis/tokenizer/build_bullet_token_frequency_csv_v7.py` | 코퍼스 (fugashi·jieba·pythainlp) | `analysis/tokenizer/csv/bullet_token_frequency_v7_final.csv` (43,162 토큰, 176,944 발생) |
 | 토크나이저 | `v7_final_10020/analysis/tokenizer/jieba_and_thai_engine_details_v7.py` | 위 CSV | 엔진 스펙 조회, HMM/newmm 데모, 중국어·태국어 버킷 재검증 불일치 0 |
+| 페르소나 결정공간 | `v7_final_10020/analysis/persona_decision_space/build_persona_decision_space_notebook.py` → `persona_decision_space_v7.ipynb` + Spyder용 `.py` | `persona_decision_space_v7.json`(HTML 내장 데이터), `fan_persona_v7.json`, 동결 점수·진단, `factor_pathway_map_v7.json`, `Persona_결정공간.html` | HTML 로직 재현 — K→F 10/10, 덴드로그램 절단선·M=5 군집·잎 순서 일치, 페르소나 100/100, PCA 좌표 차이 5e-6, Factor-specific 0/1000 불일치. 결과 CSV + PNG 3장 |
 | 토크나이저 | `v7_final_10020/analysis/tokenizer/stopwords/export_tokenizer_stopwords_v7.py` | `run_lda_v6.py`(ast), 토큰 빈도 스크립트(import), pythainlp | 코드에 정의된 불용어를 언어별로 추출 → `tokenizer_stopwords_by_language_v7.csv`(1,503행) + `TOKENIZER_STOPWORDS_BY_LANGUAGE.md` |
 
 ## A. 정합성 검증 — `verify_v7_final_consistency.py`

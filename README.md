@@ -90,6 +90,7 @@ data/
 v7_final_10020/        ★ 10,020건 기준 문서·코드·노트북 전부 (폴더 README 참고)
   docs/                  KEY_FINDINGS.md · METHODOLOGY.md · FINAL_REPORT_SUMMARY.md · PYTHON_CODE_SUMMARY.md · REPORT_DOCX_VERIFICATION.md
   analysis/              보조지표 7종·Fan Impact Pathway·토크나이저 라우팅 노트북 8개(실행 결과 포함)+문서, build_notebooks_v7.py,
+                         Persona_결정공간.html 로직 재현 노트북(persona_decision_space/, Spyder용 .py 포함),
                          토크나이저 스크립트 3종+문서 2종+토큰 빈도 CSV+언어별 불용어 정리(stopwords/), 기술 상세명세서, 국내 지역 지수 JSON/CSV
   charts/  indices_csv/  최종 보고서 그림·지수 CSV 스크립트 (입력 JSON은 data/v7_final/, 출력은 output/)
   data_export/           HTML 내장 데이터 추출, 코퍼스 평탄화, K-grid·지수·성장 이력 CSV 산출 스크립트
