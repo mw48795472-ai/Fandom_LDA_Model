@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""v7_final_analysis 노트북 생성기 — 최종 코퍼스 10,020건 기준 분석 노트북 8개를 nbformat으로 만들고
+"""v7_final_10020/analysis 노트북 생성기 — 최종 코퍼스 10,020건 기준 분석 노트북 8개를 nbformat으로 만들고
 jupyter nbconvert --execute 로 실행해 출력까지 저장한다.
 
 archive/v6_r22_era/ 의 r22(5,612건) 노트북과 같은 절 구성을 유지하되, 입력은 전부 data/v7_final/ 의
