@@ -86,7 +86,7 @@ flowchart LR
 
 ![Q-Q Plot](assets/readme/fig04_qq_plot.png)
 
-*그림 4. 충성도·활동량·파급효과의 Q-Q plot — 세 변수 모두 우측 꼬리에서 정규선을 벗어난다(Shapiro-Wilk p<.05). 통계량 전부는 `Statistics/R_통계검증/`(R)과 `Statistics/verify_r_sections_python.py`로 238/238 재현.*
+*그림 4. R(`Statistics/R_통계검증/R/plots.R`, ggplot2)로 그린 Q-Q plot — 팬충성도(W=0.954, p=0.0015)와 파급효과(W=0.861, p<.001)는 우측 꼬리에서 이론선을 벗어나 정규분포가 기각되고, 팬 요인 다양성(W=0.975, p=0.058)은 정규성이 유지된다. min-max 정규화가 원 분포의 우측 쏠림을 그대로 보존하기 때문이다. 통계량 전부는 같은 R 패키지와 `Statistics/verify_r_sections_python.py`로 238/238 재현.*
 
 ---
 
