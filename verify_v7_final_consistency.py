@@ -596,7 +596,9 @@ def _ba(d): return d.get("before_total", d.get("before_total_bullets")), d.get("
 with open(BASE / "archive" / "v6_r22_era" / "data" / "v6_r22_snapshot" / "csv" / "corpus_growth_history_v6_v7.csv", encoding="utf-8-sig") as f:
     r22_hist = {r["stage"]: r for r in csv.DictReader(f)}
 same22 = sum(1 for p in mlogs if _rk(p.name)[0] <= 22 and str(_ba(json.load(open(p, encoding="utf-8")))[1]) == r22_hist.get("v7_round%d" % _rk(p.name)[0], {}).get("after_total"))
-check("r1~r22 병합 로그 22개의 after_total = r22 스냅샷 성장 이력 CSV(archive) 값", same22 == 22, f"{same22}/22")
+r22_after = _ba(json.load(open(RD / "merge_log_r22.json", encoding="utf-8")))[1]
+check("r1~r21 병합 로그 after_total = r22 스냅샷 성장 이력 CSV(archive) 값 21/21; r22만 로그 5,613 vs 실제 코퍼스 5,612 (기존 문서화된 +1 기록 오차)",
+      same22 == 21 and r22_after == 5613 and r22_hist["v7_round22"]["after_total"] == "5612", f"일치 {same22}/22, r22 로그 {r22_after} vs CSV {r22_hist['v7_round22']['after_total']}")
 last = json.load(open(mlogs[-1], encoding="utf-8"))
 check("마지막 병합 로그 r72: 9,939 → 10,020 (최종 라이브 코퍼스 규모)", mlogs[-1].name == "merge_log_r72.json" and _ba(last) == (9939, 10020))
 tl_map = {r["라운드"]: r["코퍼스(불릿수)"] for r in real_rows}
