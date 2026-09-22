@@ -95,7 +95,7 @@ v7_final_10020/        ★ 10,020건 기준 문서·코드·노트북 전부 (�
   data_export/           HTML 내장 데이터 추출, 코퍼스 평탄화, K-grid·지수·성장 이력 CSV 산출 스크립트
   silhouette_gate_policy/     실루엣 게이트 정책 문서 + 타임라인 차트 스크립트
   tokenizer_wordcloud_report/ 토크나이저·워드클라우드 보고서(10,020건 실행 결과) + 이미지
-  index_methodology/     지표 산식 문서 + 식(1)~(7) 지표 산정 노트북(index_calculation_v7.ipynb/.html, 결과 CSV) + 재검증 스크립트
+  index_methodology/     지표 산식 문서 + 식(1)~(7) 지표 산정 노트북(index_calculation_v7.ipynb, 결과 CSV) + 재검증 스크립트
   report_scripts/        요약보고서 docx 빌드 스크립트(Node.js) + JS 정리 문서
 Statistics/R_통계검증/   보고서 2.1·2.2·3.8·7.4절 통계량을 R 표준 함수로 재계산해 대조(238/238 일치, RUN_ALL.R 하나로 실행). 입력 JSON은 data/v7_final/ 사본
 Statistics/verify_r_sections_python.py   같은 238개 항목을 scipy·statsmodels로 재현하는 파이썬 판(R 미설치 환경용)
