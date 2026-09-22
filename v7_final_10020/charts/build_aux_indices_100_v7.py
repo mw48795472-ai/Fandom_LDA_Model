@@ -84,11 +84,30 @@ def header(fig, title, subtitle, handles=None, ncol=8):
                    fontsize=11, handlelength=1.2, handleheight=1.0, columnspacing=1.6, labelcolor=INK)
 
 
+def grouped_legend(fig, groups, top=0.944, row_h=0.0195, gap_in=0.45):
+    """그룹 머리글이 열 위에 붙는 범례. groups = [(그룹명, [(색, 항목명), ...]), ...] — 그룹마다 한 열."""
+    fig.canvas.draw()
+    r = fig.canvas.get_renderer()
+    W = fig.get_figwidth() * fig.dpi
+    x = 0.014
+    sw_w, sw_h = 0.0085, row_h * 0.62                # 색 칸 크기(figure 비율)
+    for gname, items in groups:
+        head = fig.text(x, top, gname, fontsize=11.5, color=INK, fontproperties=BOLD, va="top", ha="left")
+        widths = [head.get_window_extent(r).width]
+        for j, (c, lab) in enumerate(items):
+            y = top - row_h * (j + 1.0) - 0.004
+            fig.patches.append(matplotlib.patches.Rectangle((x, y - sw_h * 0.5), sw_w, sw_h, transform=fig.transFigure,
+                                                            facecolor=c, edgecolor="none", figure=fig))
+            t = fig.text(x + sw_w + 0.005, y, lab, fontsize=11, color=INK, va="center", ha="left")
+            widths.append(t.get_window_extent(r).width + (sw_w + 0.005) * W)
+        x += max(widths) / W + gap_in / fig.get_figwidth()
+
+
 def footer(fig, text):
     fig.text(0.012, 0.006, text, fontsize=9.5, color=MUTED, va="bottom")
 
 
-def stacked_100(rows, keys, colors, labels, end_label, title, subtitle, xlabel, foot, fname, per_panel=50, hatches=None, ncol=None, top=0.905, legend_columns=None):
+def stacked_100(rows, keys, colors, labels, end_label, title, subtitle, xlabel, foot, fname, per_panel=50, hatches=None, ncol=None, top=0.905, legend_columns=None, legend_groups=None):
     """rows: [(name, {key: value}, total_for_sort)] 정렬 완료. 두 패널(1~50 / 51~100) 누적 가로 막대."""
     n = len(rows)
     panels = [rows[i:i + per_panel] for i in range(0, n, per_panel)]
@@ -121,7 +140,11 @@ def stacked_100(rows, keys, colors, labels, end_label, title, subtitle, xlabel, 
         blank = Patch(facecolor="none", edgecolor="none", label=" ")
         handles = [h for col in legend_columns for h in ([handles[i] for i in col] + [blank] * (depth - len(col)))]
         ncol = len(legend_columns)
-    header(fig, title, subtitle, handles, ncol=ncol or len(handles))
+    if legend_groups:    # [(그룹명, [키 인덱스...]), ...] — 그룹명을 열 머리글로
+        header(fig, title, subtitle)
+        grouped_legend(fig, [(g, [(colors[i], labels[i]) for i in idx]) for g, idx in legend_groups])
+    else:
+        header(fig, title, subtitle, handles, ncol=ncol or len(handles))
     footer(fig, foot)
     fig.subplots_adjust(left=0.105, right=0.985, top=top, bottom=0.05, wspace=0.42)
     fig.savefig(OUT / fname, facecolor=SURFACE)
@@ -159,13 +182,13 @@ for i, (g, _, _) in enumerate(AD_STYLE):
         groups.append((g, []))
     groups[-1][1].append(i)
 stacked_100(rows, ad_keys, [c for _, _, c in AD_STYLE],
-            [k if g == k else f"{g} · {k}" for g, k, _ in AD_STYLE],
+            ad_keys,
             lambda r: f"{r[2][0]}건 · {r[2][1] * 100:.0f}%",
             "광고·상업성 지수 — 100개 팬덤 전체",
             f"광고신호 문장 {ad['total_ad_bullets']:,}건(전체 {ad['total_bullets']:,}건의 {ad['corpus_ad_share'] * 100:.1f}%) · 광고 문장 수 순 정렬 · 막대 = 업종별 문장 수(업종군 순으로 쌓음, 한 문장이 여러 업종에 걸리면 중복 집계) · 끝 라벨 = 광고 문장 수 · 팬덤 내 비중",
             "업종별 근거문장 수",
             "자료: data/v7_final/ad_commercial_index_v7.json · 20개 업종 전부 표시, 색 계열 = 업종군(공공·미디어 파랑 · 패션·뷰티 주황/빨강 · 식품·생활·건강 초록 · IT·게임·엔터 보라 · 금융·산업 노랑 · 여가·모빌리티 분홍 · 유통 갈색 · 기타 회색). 뉴스·도서/참고자료는 0건",
-            "aux1_ad_commercial_100.png", top=0.865, legend_columns=[idx for _, idx in groups[:-2]] + [groups[-2][1] + groups[-1][1]])
+            "aux1_ad_commercial_100.png", top=0.83, legend_groups=groups)
 
 # ---- 2. 미디어·콘텐츠 노출 ------------------------------------------------------
 me = load(D / "media_exposure_v7.json")
@@ -227,15 +250,15 @@ for name, v in dr.items():
     rows.append((name, d, (v["total_region_mentions"], v["n_regions_hit"], v.get("region_diversity", 0))))
 rows.sort(key=lambda r: (-r[2][0], -r[2][1], r[0]))
 stacked_100(rows, reg15, [c for _, c in REGION_STYLE],
-            ["수도권 · 서울", "수도권 · 인천", "수도권 · 경기", "부울경 · 부산", "부울경 · 경남", "부울경 · 울산", "대구경북 · 대구", "대구경북 · 경북",
-             "호남 · 광주", "호남 · 전남", "호남 · 전북", "충청 · 대전", "충청 · 충남", "충청 · 충북", "충청 · 세종", "강원", "제주"],
+            reg15,
             lambda r: f"{r[2][0]}건 · {r[2][1]}개 지역",
             "국내 지역 지수 — 100개 팬덤 전체",
             f"지역 언급 {sum(rtot.values()):,}건 · 지역 언급 수 순 정렬 · 막대 = 시/도별 언급 문장 수(권역 순으로 쌓음) · 끝 라벨 = 언급 수 · 언급된 시/도 수",
             "시/도별 언급 근거문장 수",
             "자료: v7_final_10020/analysis/domestic_regional_index/domestic_regional_index_v7.json (최종 코퍼스 10,020건 산출본) · 색 계열 = 권역(수도권 파랑 · 부울경 주황/빨강 · 대구경북 청록/초록 · 호남 보라 · 충청 노랑/호박 · 강원 분홍 · 제주 갈색)",
-            "aux5_domestic_regional_100.png", top=0.865,
-            legend_columns=[[0, 1, 2], [3, 4, 5], [6, 7], [8, 9, 10], [11, 12, 13, 14], [15, 16]])
+            "aux5_domestic_regional_100.png", top=0.83,
+            legend_groups=[("수도권", [0, 1, 2]), ("부울경", [3, 4, 5]), ("대구경북", [6, 7]), ("호남", [8, 9, 10]),
+                           ("충청", [11, 12, 13, 14]), ("강원", [15]), ("제주", [16])])
 
 # ---- 6. 멤버 집중도 MCI (45개 그룹) ------------------------------------------------
 mi = load(D / "member_mention_index_v7.json")
