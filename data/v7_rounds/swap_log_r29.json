@@ -1,0 +1,22 @@
+{
+  "round": "v7_r29_roster_swap_got7",
+  "description": "사용자가 \"사이먼 도미닉(카테고리: 힙합)을 빼고, GOT7(카테고리: K-pop 보이그룹)을 넣어줘\"라고 요청. 단일 아티스트 교체(drop 1 + add 1) — 팬덤 총원 100개는 그대로 유지.",
+  "removed_fandom": "사이먼도미닉",
+  "removed_fandom_category": "힙합",
+  "removed_fandom_bullet_count": 20,
+  "added_fandom": "GOT7",
+  "added_fandom_category": "K-pop 보이그룹",
+  "added_fandom_bullet_count": 76,
+  "added_fandom_loyalty": 29,
+  "added_fandom_spillover": 47,
+  "before_total_fandoms": 100,
+  "after_total_fandoms": 100,
+  "before_total_bullets": 6631,
+  "after_total_bullets": 6687,
+  "net_bullet_change": 56,
+  "methodology_note": "GOT7 근거는 별도 리서치 에이전트 1개를 단일 아티스트 딥다이브로 투입해 수집했다(다른 라운드처럼 100개 팬덤 전체를 배치로 나누는 방식이 아니라, 사용자가 명시한 대로 '해당 아티스트 단일 단위'로 진행). 목표 규모는 코퍼스 전체 평균(교체 전 기준 66.3건/팬덤)과 GOT7이 속하는 K-pop 보이그룹 카테고리 평균(87.5건/팬덤)을 함께 고려해 75~95건으로 설정했고, 실제로는 76건(loyalty 29 + spillover 47)을 확보했다 — media 61건 + wiki 15건, 나무위키·미검증 블로그·팬 추측성 정보는 배제했고 모든 URL은 에이전트가 실제로 열람한 것만 채택했다(지어낸 URL 없음). 사이먼도미닉의 기존 20건(loyalty 6 + spillover 14)은 완전히 삭제되어 코퍼스에서 더 이상 등장하지 않는다.",
+  "before_total": 6631,
+  "after_total": 6687,
+  "net_new_bullets": 56,
+  "n_touched_fandoms": 2
+}

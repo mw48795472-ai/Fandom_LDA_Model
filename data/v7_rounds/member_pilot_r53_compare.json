@@ -1,0 +1,178 @@
+{
+  "god": {
+    "bullets_before": 83,
+    "bullets_after": 88,
+    "mentions_before": 11,
+    "mentions_after": 17,
+    "mci_before": 0.224,
+    "mci_after": 0.239
+  },
+  "HOT": {
+    "bullets_before": 90,
+    "bullets_after": 92,
+    "mentions_before": 28,
+    "mentions_after": 30,
+    "mci_before": 0.21,
+    "mci_after": 0.209
+  },
+  "잭스키스": {
+    "bullets_before": 79,
+    "bullets_after": 81,
+    "mentions_before": 17,
+    "mentions_after": 19,
+    "mci_before": 0.294,
+    "mci_after": 0.307
+  },
+  "동방신기": {
+    "bullets_before": 75,
+    "bullets_after": 78,
+    "mentions_before": 27,
+    "mentions_after": 30,
+    "mci_before": 0.506,
+    "mci_after": 0.509
+  },
+  "ATEEZ": {
+    "bullets_before": 93,
+    "bullets_after": 99,
+    "mentions_before": 23,
+    "mentions_after": 29,
+    "mci_before": 0.172,
+    "mci_after": 0.148
+  },
+  "DAY6": {
+    "bullets_before": 91,
+    "bullets_after": 97,
+    "mentions_before": 11,
+    "mentions_after": 17,
+    "mci_before": 0.273,
+    "mci_after": 0.28
+  },
+  "IKON": {
+    "bullets_before": 89,
+    "bullets_after": 93,
+    "mentions_before": 13,
+    "mentions_after": 18,
+    "mci_before": 0.279,
+    "mci_after": 0.247
+  },
+  "BTOB": {
+    "bullets_before": 72,
+    "bullets_after": 77,
+    "mentions_before": 24,
+    "mentions_after": 29,
+    "mci_before": 0.261,
+    "mci_after": 0.251
+  },
+  "FTISLAND": {
+    "bullets_before": 66,
+    "bullets_after": 67,
+    "mentions_before": 19,
+    "mentions_after": 20,
+    "mci_before": 0.667,
+    "mci_after": 0.625
+  },
+  "CNBLUE": {
+    "bullets_before": 77,
+    "bullets_after": 78,
+    "mentions_before": 20,
+    "mentions_after": 21,
+    "mci_before": 0.54,
+    "mci_after": 0.501
+  },
+  "GOT7": {
+    "bullets_before": 87,
+    "bullets_after": 92,
+    "mentions_before": 41,
+    "mentions_after": 46,
+    "mci_before": 0.281,
+    "mci_after": 0.277
+  },
+  "리센느(RESCENE)": {
+    "bullets_before": 75,
+    "bullets_after": 79,
+    "mentions_before": 33,
+    "mentions_after": 41,
+    "mci_before": 0.264,
+    "mci_after": 0.235
+  },
+  "ITZY": {
+    "bullets_before": 90,
+    "bullets_after": 93,
+    "mentions_before": 11,
+    "mentions_after": 14,
+    "mci_before": 0.29,
+    "mci_after": 0.276
+  },
+  "프로미스나인": {
+    "bullets_before": 77,
+    "bullets_after": 80,
+    "mentions_before": 14,
+    "mentions_after": 17,
+    "mci_before": 0.285,
+    "mci_after": 0.253
+  },
+  "A-pink": {
+    "bullets_before": 84,
+    "bullets_after": 88,
+    "mentions_before": 16,
+    "mentions_after": 20,
+    "mci_before": 0.375,
+    "mci_after": 0.325
+  },
+  "QWER": {
+    "bullets_before": 95,
+    "bullets_after": 96,
+    "mentions_before": 10,
+    "mentions_after": 11,
+    "mci_before": 0.34,
+    "mci_after": 0.306
+  },
+  "오마이걸": {
+    "bullets_before": 85,
+    "bullets_after": 91,
+    "mentions_before": 26,
+    "mentions_after": 32,
+    "mci_before": 0.201,
+    "mci_after": 0.19
+  },
+  "여자친구": {
+    "bullets_before": 82,
+    "bullets_after": 86,
+    "mentions_before": 11,
+    "mentions_after": 21,
+    "mci_before": 0.306,
+    "mci_after": 0.206
+  },
+  "STAYC": {
+    "bullets_before": 83,
+    "bullets_after": 86,
+    "mentions_before": 12,
+    "mentions_after": 15,
+    "mci_before": 0.347,
+    "mci_after": 0.262
+  },
+  "레드벨벳": {
+    "bullets_before": 108,
+    "bullets_after": 111,
+    "mentions_before": 35,
+    "mentions_after": 39,
+    "mci_before": 0.231,
+    "mci_after": 0.224
+  },
+  "아이오아이": {
+    "bullets_before": 78,
+    "bullets_after": 88,
+    "mentions_before": 33,
+    "mentions_after": 43,
+    "mci_before": 0.176,
+    "mci_after": 0.147
+  },
+  "워너원": {
+    "bullets_before": 101,
+    "bullets_after": 112,
+    "mentions_before": 25,
+    "mentions_after": 38,
+    "mci_before": 0.174,
+    "mci_after": 0.123
+  }
+}

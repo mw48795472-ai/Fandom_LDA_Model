@@ -1,0 +1,40 @@
+{
+  "round": "v7_r35_reinforcement_kimjaejoong_parkseojin",
+  "description": "사용자 요청(\"김재중(솔로) 박서진(트로트)건에 대해서는 기본 리서치 코퍼스 총량과 프로세스를 고려해서 추가적으로 보강 리서치가 분명히 필요해 보여\")에 따라, v7 34라운드에서 로스터 교체로 신규 추가돼 코퍼스 평균·카테고리 평균 대비 근거가 부족했던 두 아티스트에 단일 아티스트 딥다이브 보강 리서치 에이전트를 각각 투입했다. 기존 URL과 겹치지 않는 새 각도만 조사했다.",
+  "results": [
+    {
+      "fandom": "김재중",
+      "before_loyalty": 12,
+      "before_spillover": 11,
+      "before_bullet_count": 23,
+      "added_loyalty": 12,
+      "added_spillover": 16,
+      "added_bullet_count": 28,
+      "after_bullet_count": 51,
+      "skipped_dupe": 0,
+      "n_zero_result_angles": 9,
+      "methodology_note": "TVXQ/SM 소송사, 뮤지컬·화보·광고·유튜브 나무위키 하위문서, JX 유닛 활동, 최신 콘서트/팬미팅 투어, 영화 복귀, 방송 수상, 과거 논란, 봉사·기부 활동 등을 WebSearch로 탐색한 뒤 각 URL을 WebFetch로 직접 열어 본문에 해당 사실이 실제로 있는지 확인한 것만 채택했습니다. 그림 전시회/개인전, 정확한 인스타그램 팔로워 수, 응원봉 '재봉이'의 상세 정보, 다음카페 정확한 회원 수, 가온차트 구체적 판매 인증 수치, 라디오 게스트 출연 상세, 극성팬 사건 세부 내용, SBS '월드스타 기부' 기사 원문, 무료급식 봉사 기사 원문 등 총 9개 앵글은 접속 차단(robots.txt)·리다이렉트 오류·검색 결과 부재 등으로 본문을 검증하지 못해 제외했습니다."
+    },
+    {
+      "fandom": "박서진",
+      "before_loyalty": 17,
+      "before_spillover": 24,
+      "before_bullet_count": 41,
+      "added_loyalty": 5,
+      "added_spillover": 11,
+      "added_bullet_count": 16,
+      "after_bullet_count": 57,
+      "skipped_dupe": 0,
+      "n_zero_result_angles": 6,
+      "methodology_note": "Searched via WebSearch/WebFetch for: Gaon/음원차트 rankings (no verifiable chart-rank article found), fan cafe exact membership count as a standalone milestone article (only one unfetchable source existed, so it was not used as a standalone bullet — the 40,000-member figure was instead corroborated inline within a separately verified news4000 article), radio DJ work (none found), additional regional ambassador roles beyond Mungyeong/Sacheon (none found), birthday subway/billboard ads (none found), and a distinct Gyeongnam-branch donation (found but its source URL was already in the existing corpus, so it was excluded to avoid duplication). All 16 included bullets were verified by fetching the cited URL directly and confirming the stated fact/date/number appears in the source."
+    }
+  ],
+  "before_total_fandoms": 100,
+  "after_total_fandoms": 100,
+  "before_total_bullets": 6911,
+  "after_total_bullets": 6955,
+  "net_new_bullets": 44,
+  "n_touched_fandoms": 2,
+  "before_total": 6911,
+  "after_total": 6955
+}

@@ -1,0 +1,112 @@
+{
+  "round": "v7_r65_ad_commercial_index_etc_census_reclassification",
+  "description": "사용자가 '광고 상업성 pilot 기타 부분 전수조사 및 재분류 리서치'라고 요청, 3.9절 광고·상업성 지수의 '기타'(Other) 버킷을 전수조사했다. (1) AD_SIGNAL_KEYWORDS 게이트를 통과했지만 residual_diagnosis_r56.py 분류(74건) 이후 새로 생긴 미분류 잔여 9건을 직접 읽고 원인을 분류/처리, (2) 임영웅·이효리(두 아티스트의 S1 항목이 '기타' 최다 기여자 겸 임영웅의 top_industry 자체가 '기타'라는 점에서 최우선 리서치 대상으로 선정)의 S1 집계형 문장 뒤에 숨은 실제 브랜드명을 찾기 위한 리서치 에이전트 2개 추가 파견, (3) 코퍼스 전수 대조로 리서치 결과 중 기존 불릿과 중복되는 항목 제거.",
+  "before_total": 9609,
+  "after_total": 9619,
+  "net_new_bullets": 10,
+  "added_loyalty": 0,
+  "added_spillover": 10,
+  "skipped_dupe": 0,
+  "n_touched_fandoms": 2,
+  "names_not_found": [],
+  "per_group_added": {
+    "임영웅": 2,
+    "이효리": 8
+  },
+  "per_category_count": {
+    "임영웅_후보": 6,
+    "임영웅_제외_중복": 4,
+    "임영웅_병합": 2,
+    "이효리_후보": 14,
+    "이효리_제외_중복": 6,
+    "이효리_병합": 8
+  },
+  "unclassified_new_9_resolution": {
+    "reclassified_via_new_industry_keywords": {
+      "count": 5,
+      "detail": "IVE 레이(일본 코스메 브랜드 LUNA 글로벌 앰버서더, 2건) → 미용. Hearts2Hearts(인도네시아 스낵 브랜드 Hachu 앰버서더) → 식음료. 몬스타엑스 기현(신생 스트리트 브랜드 RNDM SEASON 첫 모델·앰버서더) → 패션/의류. 몬스타엑스(UN SDGs 캠페인 '투게더밴드' 공식 앰버서더) → 복지/행정."
+    },
+    "excluded_as_false_positive": {
+      "count": 3,
+      "detail": "몬스타엑스 MONBEBE JAPAN 팬클럽 운영사 재편(아뮤즈/AMUSE INC. 관련 3건) — AD_SIGNAL_KEYWORDS의 '뮤즈'가 소속사명 '아뮤즈'의 일부로 우연히 매칭된 오탐. 더뮤즈엔터테인먼트와 동일한 버그 클래스. FALSE_POSITIVE_EXCLUSION_SUBSTRINGS에 '아뮤즈' 추가로 광고·상업성 게이트 자체를 통과하지 못하게 함(팬클럽 재편이지 광고 계약이 아니므로 total_ad_bullets에서 완전히 제외하는 것이 옳음)."
+    },
+    "classified_as_s4": {
+      "count": 1,
+      "detail": "EXO 장이싱, 중국 관영매체 펑파이신문 보도 고향 창사(長沙) 홍보 캠페인 참여 — 상업적 계약이 아닌 지자체/도시 이미지 홍보 성격이라 20개 업종 스키마 밖으로 판단, residual_diagnosis_r65.py에 S4로 신규 등록."
+    }
+  },
+  "youngwoong_hyori_brand_recovery_research": {
+    "note": "임영웅·이효리의 S1 항목(집계·순위·매출 등, 브랜드/업종 미언급)을 재검토한 결과, 두 아티스트의 S1 문장들은 콘서트·MD·음원 등을 합산한 총매출이나 광고모델 브랜드평판 순위처럼 애초에 개별 광고 계약과 무관한 집계 지표여서 '가리키는 특정 브랜드'가 구조적으로 존재하지 않음을 확인했다(진짜 사각지대 — v7 56/57 라운드의 RIIZE·TWICE·김호중·정동원·이찬원·싸이·아이유 사례와 달리 이번엔 회수할 특정 브랜드가 없었다). 다만 리서치 과정에서 두 아티스트의 광고 계약 자체에 대한 신규 리서치 후보 20건(임영웅 6건, 이효리 14건)이 나왔고, 코퍼스 전수 대조 결과 그중 10건이 기존 코퍼스에 없는 진짜 새 정보(별도 시점 계약 또는 세부 제품명)로 확인돼 별도 스필오버 불릿으로 추가했다(이 문서의 net_new_bullets에 포함) — S1 문장의 '회수'는 아니므로 residual_diagnosis에는 RECOVERED_CONTEXT를 추가하지 않았다.",
+    "youngwoong_candidates": 6,
+    "youngwoong_excluded_duplicate": [
+      "정관장(KGC인삼공사) — 기존 전용 불릿과 사실관계 중복",
+      "본죽 — 기존 전용 불릿과 사실관계 중복",
+      "하나은행 — 기존 전용 불릿 3건 이상 보유",
+      "제주삼다수 — 기존 전용 불릿 3건 이상 보유"
+    ],
+    "youngwoong_merged": [
+      "뉴트리원",
+      "리즈케이(Lizé Kay)"
+    ],
+    "hyori_candidates": 14,
+    "hyori_excluded_duplicate": [
+      "일품진로(하이트진로) — 기존 전용 불릿과 사실관계 중복",
+      "리복(Reebok) — 기존 전용 불릿과 동일한 2023년 앰버서더 발탁 사실의 재보도",
+      "스픽(Speak) — 기존 전용 불릿 3건과 동일한 발탁 사실의 재보도",
+      "정샘물 — 기존 전용 불릿과 동일한 발탁 사실의 재보도",
+      "풀무원지구식단(풀무원) — 기존 전용 불릿과 동일한 발탁 사실의 재보도",
+      "롯데렌터카 마이카 — 기존 전용 불릿 2건과 사실상 동일한 2023~2024년 계약"
+    ],
+    "hyori_merged": [
+      "달바(d'Alba)",
+      "롯데온(Lotte ON)",
+      "휴롬(Hurom)",
+      "게스(GUESS)",
+      "비비랩 더 콜라겐(뉴트리원)",
+      "마켓컬리(Market Kurly)",
+      "LG 디오스 오브제컬렉션(LG전자)",
+      "슬로우베드(일룸)"
+    ]
+  },
+  "industry_keywords_added": {
+    "미용": [
+      "LUNA",
+      "리즈케이",
+      "Lizé Kay",
+      "달바",
+      "비비랩(건강/의료 중복 등록도 병행)"
+    ],
+    "식음료": [
+      "Hachu"
+    ],
+    "패션/의류": [
+      "RNDM SEASON"
+    ],
+    "복지/행정": [
+      "투게더밴드",
+      "TOGETHERBAND"
+    ],
+    "가정/생활": [
+      "휴롬",
+      "일룸",
+      "슬로우베드"
+    ],
+    "건강/의료": [
+      "비비랩"
+    ]
+  },
+  "false_positive_exclusions_added": [
+    "아뮤즈"
+  ],
+  "gate_retest": {
+    "selected_k": 12,
+    "selected_m_meta_factors": 7,
+    "meta_factor_silhouette": 0.141,
+    "baseline_silhouette": 0.267,
+    "meets_gate": false,
+    "consecutive_rejections": 18
+  },
+  "en_language_count_before": 2065,
+  "en_language_count_after": 2065,
+  "gate_note": "v7 64라운드와 실루엣 수치(0.141)는 우연히 동일하지만 선택된 K/M 구성 자체는 다르다 (v7 64: K=8·M=5, v7 65: K=12·M=7) — K-그리드/메타팩터 선택은 코퍼스가 바뀔 때마다 전체를 다시 탐색하므로 매 라운드 독립적으로 재계산된다. 10건이라는 작은 순증분이었지만 기존 정책(코퍼스가 조금이라도 바뀌면 격리 재적합)에 따라 예외 없이 재검증했다."
+}

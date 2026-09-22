@@ -1,0 +1,64 @@
+{
+  "round": "v7_r57_s1_residual_recovery_deep_dive",
+  "before_total_fandoms": 100,
+  "after_total_fandoms": 100,
+  "before_total_bullets": 9029,
+  "after_total_bullets": 9048,
+  "net_new_bullets": 19,
+  "added_loyalty": 0,
+  "added_spillover": 19,
+  "skipped_dupe": 0,
+  "n_touched_fandoms": 5,
+  "names_not_found": [],
+  "per_fandom_added": {
+    "김호중": 3,
+    "정동원": 2,
+    "이찬원": 4,
+    "싸이": 4,
+    "아이유": 6
+  },
+  "s1_recovery_attempted": [
+    "김호중",
+    "정동원",
+    "이찬원",
+    "싸이",
+    "아이유",
+    "권은비",
+    "윤도현",
+    "TWICE",
+    "aespa",
+    "워너원"
+  ],
+  "s1_recovery_result": {
+    "recovered_with_new_brands": [
+      "김호중",
+      "정동원",
+      "이찬원",
+      "싸이",
+      "아이유"
+    ],
+    "zero_result_confirmed_structural_limit": [
+      "권은비",
+      "윤도현",
+      "TWICE",
+      "aespa",
+      "워너원"
+    ]
+  },
+  "methodology_note": "v7 56의 S1 잔여 40건 중 '특정 단일 계약이지만 브랜드명만 빠진' 유형(회수 가능 가설) 10개 아티스트를 선별해 10개 병렬 에이전트로 재조사했다. 5개는 신규 브랜드 19건을 확보해 회수됐고(각 2개 이상 독립 출처로 교차 검증), 5개는 에이전트가 원 출처 기사 자체를 재열람해도 특정 브랜드에 귀속시키는 문장을 찾지 못해 정직하게 0건으로 보고했다 — 이 5건은 이제 '아직 못 찾음'이 아니라 '원 출처 자체가 브랜드를 특정하지 않는 구조적 한계'로 재분류한다(특히 워너원 강다니엘·윤도현 CM송 2건은 원 기사를 직접 재확인해 확정).",
+  "silhouette_gate": {
+    "baseline_silhouette": 0.267,
+    "test_fit_k_grid_selected_k": 10,
+    "test_fit_m_grid": {
+      "5": 0.093,
+      "6": 0.095,
+      "7": 0.094,
+      "8": 0.06
+    },
+    "test_fit_selected_m": 6,
+    "test_fit_silhouette": 0.095,
+    "test_fit_result": "REJECTED",
+    "consecutive_rejections": 11,
+    "note": "v7 57 라운드 신규 병합분(9,048건, S1 잔여 회수 리서치로 19건 추가) 기준 격리 시험 재적합. 3~7장·Persona 스냅샷은 v7 40 시점(7,350건)에 그대로 고정."
+  }
+}

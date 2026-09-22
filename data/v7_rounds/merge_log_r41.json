@@ -1,0 +1,30 @@
+{
+  "round": "v7_r41_industry_concentration_diagnosis",
+  "description": "사용자가 v7 40 이후 업종별 분포의 심한 편중(복지/행정·패션/의류·식음료·미용 우세, 자동차· 게임·금융·부동산·교육 등 희소)을 보고 '실제 광고영향도인지 데이터 부족인지' 진단을 요청. AskUserQuestion으로 리서치 범위는 '20개 업종 전체 재검증, 전체 100개 팬덤', 문서화 범위는 '정식 v7 41라운드로 전체 문서화'를 사용자가 직접 선택. 10개 병렬 에이전트(batch1~10)로 100개 팬덤 전원을 저대표 업종 중심으로 재조사했으나 세션 WebSearch 예산이 배치5~6부터 소진되어 83개 팬덤이 '리서치 공백일 가능성/확인 안 됨'으로 진단됨. 사용자에게 상황을 보고하고 '디바이스 브라우저로 보강'을 선택받아, 나무위키 그룹별 광고 하위문서를 직접 열람하는 gapfillA 보강 조사를 배치7·8 중심 대형 그룹에 추가 실행했다.",
+  "before_total_fandoms": 100,
+  "after_total_fandoms": 100,
+  "before_total_bullets": 7513,
+  "after_total_bullets": 7513,
+  "net_new_bullets": 0,
+  "added_loyalty": 0,
+  "added_spillover": 0,
+  "skipped_dupe": 163,
+  "n_touched_fandoms": 0,
+  "names_not_found": [],
+  "per_fandom_added": {},
+  "diagnostic_notes_summary": {
+    "n_fandoms_with_notes": 100,
+    "assessment_counts": {
+      "실제 부재로 보임": 19,
+      "리서치 공백일 가능성": 44,
+      "확인 안 됨": 28,
+      "리서치 공백이었음 (해소)": 7,
+      "리서치 공백은 일부 해소, 나머지는 실제 부재로 보임": 1,
+      "부분적으로 리서치 공백 해소, 그 외는 실제 편중으로 보임": 1
+    },
+    "n_fandoms_with_confirmed_underrepresented_deal": 13,
+    "methodology_note": "batchN_notes.json(1~10) + gapfillA_notes.json을 팬덤명 기준으로 병합했다. 동일 팬덤이 배치 조사와 gapfillA 조사에서 모두 평가된 경우, 디바이스 브라우저로 나무위키 공식 광고 표를 직접 확인한 gapfillA_notes의 평가를 최종값으로 채택했다(더 신뢰도 높은 근거)."
+  },
+  "target_fandoms_total": 100,
+  "methodology_note": "10개 병렬 리서치 에이전트(batch1~10, 각 10개 팬덤 담당)가 저대표 업종(자동차·게임·금융· 부동산·교육·엔터테인먼트·가정/생활·비즈니스/산업·쇼핑) 중심으로 100개 팬덤 전원을 재조사했다. 세션 전체가 공유하는 WebSearch 호출 예산(200회)이 배치5~6 무렵 소진되어 배치7~10은 대부분 WebFetch(나무위키)에만 의존했고 그마저도 상당수 접근 실패(PROVENANCE_REQUIRED)를 겪어, 100개 팬덤 중 83개가 '리서치 공백일 가능성/확인 안 됨'으로 평가되었다. 이에 사용자 컴퓨터에 연결된 원격 브라우저(mcp__remote-devices__Claude_Browser)로 세션 WebSearch 예산과 무관하게 나무위키의 그룹별 '광고 및 화보' 공식 정리 문서를 직접 열람하는 gapfillA 보강 조사를 배치7·8 중심 대형 그룹(빅뱅·슈퍼주니어·BLACKPINK·TWICE·NewJeans·IVE·DAY6·BTOB·ITZY 등 13개 그룹)에 추가 실행해, 38건의 신규 근거를 확보했다. gapfillA에서 확인된 그룹의 대다수(9/13)가 실제로는 자동차·게임· 금융 등 저대표 업종 딜을 다수 보유하고 있었음에도 배치 조사에서 WebSearch 예산 소진으로 이를 발견하지 못했던 것으로 확인되어, 저대표 업종 편중의 상당 부분이 '실제 광고 영향도 차이'가 아니라 '리서치 커버리지의 한계'에서 기인함을 시사한다. 다만 CORTIS(2025년 데뷔 신인)·RIIZE· 동방신기 등 일부는 나무위키의 상세한 연도별 공식 기록에도 불구하고 저대표 업종 딜이 전혀 없어, 실제 포트폴리오 편중(데뷔 연차·활동 국가·소속사 전략 등에 따른)도 공존하는 것으로 판단된다. 그럼에도 여전히 다수 팬덤(NCT DREAM/WISH, 샤이니, ATEEZ, iKON, (여자)아이들, FTISLAND, 리센느 등)은 리소스 제약으로 결론을 내리지 못해 '확인 안 됨'으로 남았다 — 이는 부재의 증거가 아니라 조사 미완료를 뜻한다."
+}

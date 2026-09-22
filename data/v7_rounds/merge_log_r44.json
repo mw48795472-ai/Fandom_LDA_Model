@@ -1,0 +1,77 @@
+{
+  "round": "v7_r44_industry_concentration_3rd_refill_and_h2_sweep",
+  "description": "사용자가 v7 43에서 여전히 미해결로 남은 23개 팬덤('확인 안 됨' 15 + '리서치 공백일 가능성' 8)을 보고 '요부분 최대한 해보자 뭐. 그리고 최신 광고 우선 리서치 조금 더 보강해보자'라고 요청. (1) 23개 전원을 8개 병렬 리서치 에이전트(batch1~8)에 투입해 2026 H2 최신성 검색을1순위로, 나무위키 이력 검색을 2순위로, 그룹은 멤버 개별 문서까지 확인하는 심층 재조사를 수행했다. (2) 별도로 2개 에이전트(batch9~10)를 투입해 이미 해소된 대형 그룹 8개(BTS·NCT·aespa·IVE·LE SSERAFIM·NewJeans·TWICE·BLACKPINK)를 대상으로 2026 H2(6~9월) 신규 광고만 전담 스윕했다. 23개 중 9개가 해소·부분 해소됐고 14개는 여전히 미해결로 남았다. 신규 근거 28건이 14개 팬덤에 반영됐다. 자세한 내용은 3.9.5/15.9절 참고.",
+  "before_total_fandoms": 100,
+  "after_total_fandoms": 100,
+  "before_total_bullets": 7664,
+  "after_total_bullets": 7692,
+  "net_new_bullets": 28,
+  "added_loyalty": 0,
+  "added_spillover": 28,
+  "skipped_dupe": 0,
+  "n_touched_fandoms": 14,
+  "names_not_found": [],
+  "per_fandom_added": {
+    "다비치": 2,
+    "레드벨벳": 6,
+    "GOT7": 1,
+    "박서진": 2,
+    "브라운아이즈": 2,
+    "엄정화": 1,
+    "볼빨간사춘기": 1,
+    "케이윌": 1,
+    "A-pink": 5,
+    "Crush": 1,
+    "EXO": 2,
+    "BTS": 1,
+    "IVE": 2,
+    "TWICE": 1
+  },
+  "resolved_this_round": [
+    "다비치",
+    "레드벨벳",
+    "GOT7",
+    "박서진",
+    "브라운아이즈",
+    "케이윌",
+    "A-pink",
+    "Crush",
+    "EXO"
+  ],
+  "still_unresolved_this_round": [
+    "박재범",
+    "god",
+    "에픽하이",
+    "백지영",
+    "박정현",
+    "HOT",
+    "거미",
+    "린",
+    "sg워너비",
+    "FTISLAND",
+    "엄정화",
+    "볼빨간사춘기",
+    "이찬원",
+    "샤이니"
+  ],
+  "h2_2026_new_fandoms_batch9_10": [
+    "BTS",
+    "IVE",
+    "TWICE"
+  ],
+  "diagnostic_notes_summary": {
+    "n_fandoms_with_notes": 100,
+    "assessment_counts": {
+      "실제 부재로 보임": 20,
+      "리서치 공백이었음 (해소)": 47,
+      "확인 안 됨": 9,
+      "부분적으로 리서치 공백 해소, 그 외는 실제 편중으로 보임": 16,
+      "리서치 공백일 가능성": 5,
+      "리서치 공백은 일부 해소, 나머지는 실제 부재로 보임": 3
+    },
+    "n_fandoms_with_confirmed_underrepresented_deal": 65,
+    "methodology_note": "batchN_notes.json(1~10, v7 41) + gapfillA_notes.json(v7 41) + gapfillB_notes.json(v7 42) + batchN_notes.json(1~8, v7 43) + batchN_notes.json(1~8, v7 44)을 팬덤명 기준으로 병합했다. 동일 팬덤이 여러 라운드에서 평가된 경우 가장 나중에 로드되는 v7 44 평가를 최종값으로 채택한다(가장 최근·신뢰도 높은 근거). batch9~10(2026 H2 스윕 대상 8개 대형 그룹)은 이미 해소된 팬덤이라 별도 notes가 없고, v7 43 시점 평가가 그대로 유지된다."
+  },
+  "target_fandoms_total": 100,
+  "honest_disclosure": "v7 43 종료 시점 미해결 23개 전원을 이번 라운드에서 다뤘다. 상세 결과는 merge_log의 resolved_this_round/still_unresolved_this_round 필드와 3.9.5/15.9절 참고. 2026년 H2(6~9월) 최신 광고 보강 스윕(batch9~10)에서는 v7 43(이승철·성시경 2건)에 이어 BTS(뷔x진로, 2026-07)·IVE(레이xAGE20'S 2026-08, 가을x로저앤갈레 2026-07)·TWICE(모모x마뗑킴, 2026-08) 4건을 추가로 확인했으나, 이 중 저대표 업종(게임/정보통신/금융/여행/교육/자동차/스포츠레저/쇼핑/가정생활)에 해당하는 것은 없다(주류·뷰티·패션 계열) — 최신 광고 활동 자체는 계속 포착되고 있으나, 업종 편중 진단의 핵심 질문(저대표 업종 실제 계약 여부)과는 별개의 축이라는 점을 정직하게 밝힌다."
+}

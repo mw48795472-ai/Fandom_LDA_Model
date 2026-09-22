@@ -1,0 +1,18 @@
+{
+  "round": "v7 70",
+  "user_request": "언어별 도메인 표도 최신 수치로 갱신해줘",
+  "before_total": 9829,
+  "after_total": 9829,
+  "net_new_bullets": 0,
+  "reclassified_bullets": 1,
+  "reclassified_detail": "빈지노 스필오버 1건 — 프랑스어 위키백과 모바일판(fr.m.wikipedia.org/wiki/Beenzino)이 FR_DOMAINS의 접미사 매칭(d.endswith('.'+dd))에서 'fr.wikipedia.org'로 끝나지 않아 걸리지 않는 바람에 기본값 ko로 잘못 분류돼 있던 것을 자체 QA로 발견·수정했다. 코퍼스 전체에서 이 형식(xx.m.wikipedia.org)의 URL은 이 1건뿐이라 이 도메인만 명시적으로 추가했다.",
+  "fr_before": 100,
+  "fr_after": 101,
+  "ko_before": 5593,
+  "ko_after": 5592,
+  "old_table_sum_bullets": 9849,
+  "old_table_true_total": 9829,
+  "old_table_discrepancy": 20,
+  "old_table_staleness_note": "language_domain_summary_v7.json은 그동안 라운드마다 fr 행만 갱신되고 나머지 13개 언어 행은 갱신되지 않아, 합계가 실제 라이브 코퍼스(9,829건)와 20건 어긋나 있었다(예: ko는 실제 5,592건인데 표에는 6,093건으로 501건 과다 표기, en은 실제 2,110건인데 1,833건으로 277건 과소 표기).",
+  "methodology_change": "총 도메인 수 집계 방식을 raw domain_of() netloc 카운트에서 eTLD+1(등록 가능 도메인, tldextract 라이브러리) 그룹핑으로 변경 — 같은 브랜드의 서로 다른 서브도메인(예: 중국어권 sina.com.cn의 여러 섹션 서브도메인, baidu.com의 백과·티에바·즈다오, 한국어권 khan.co.kr의 스포츠·라이프 섹션)을 이중 계수하지 않고 하나로 합산한다."
+}

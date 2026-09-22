@@ -1,0 +1,16 @@
+{
+  "round": "v7_r38_tokenizer_stopword_fix",
+  "description": "사용자 요청(\"'la' 'de' 같은 관사나 쓸모없는 조사 단위가 너무 많이 보이는데. 불용어 토크나이저는 관리가 잘 되고 있는거니? 이거 언어권별로 싹다 전수조사해서 알려주고 수정보완해줄래?\")에 AskUserQuestion으로 확인한 범위(수정 범위=\"전면 확장\": 라틴문자권 8개 언어 불용어 신설+도메인 인용 파편 제거+악센트 절단 수정+한글 조사 leak 수정과 더불어 일본어/중국어/태국어 실제 형태소 분리(jieba/fugashi/pythainlp) 도입까지, 문서화 범위=\"정식 라운드로 전체 문서화\")에 따라 tokenize()를 전면 재작성한 후 재적합한 방법론 라운드다. 리서치 라운드가 아니라 코드/방법론 수정 라운드이므로 원본 코퍼스(fandoms_v3_100.json)는 전혀 손대지 않았다 — 100개 팬덤, 7,103건 원문 불릿 그대로다. 대신 그 불릿을 LDA 어휘로 변환하는 tokenize() 함수 자체를 고쳐, 같은 코퍼스에서 완전히 다른(더 깨끗한) 어휘 집합을 얻었다.",
+  "before_total_fandoms": 100,
+  "after_total_fandoms": 100,
+  "before_total_bullets": 7103,
+  "after_total_bullets": 7103,
+  "net_new_bullets": 0,
+  "added_loyalty": 0,
+  "added_spillover": 0,
+  "skipped_dupe": 0,
+  "n_touched_fandoms": 0,
+  "names_not_found": [],
+  "per_fandom_added": {},
+  "note": "리서치(근거 문장 추가) 라운드가 아니라 tokenize() 함수 자체를 고친 방법론 라운드 — before/after 불릿 총수가 동일(7103건 그대로)한 것이 정상이다. 대신 vocab 크기가 대폭 줄었고(잡음 토큰 제거), K가 10에서 12로 재선정됐다."
+}

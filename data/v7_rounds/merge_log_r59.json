@@ -1,0 +1,31 @@
+{
+  "round": "v7_r59",
+  "round_type": "reinforcement",
+  "before_total_fandoms": 100,
+  "after_total_fandoms": 100,
+  "before_total_bullets": 9015,
+  "after_total_bullets": 9042,
+  "net_new_bullets": 27,
+  "reinforced_fandom": "빈지노",
+  "reinforced_fandom_category": "힙합",
+  "reinforced_fandom_before_bullet_count": 43,
+  "reinforced_fandom_added_loyalty": 7,
+  "reinforced_fandom_added_spillover": 20,
+  "reinforced_fandom_added_bullet_count": 27,
+  "reinforced_fandom_after_bullet_count": 70,
+  "methodology_note": "3차에 걸친 딥다이브 리서치 에이전트 패스로 기존 43건과 중복되지 않는 새 각도만 수집했다 — 1차 패스(해외투어·소속사이력·개인사·브랜드앰버서더·스트리밍지표·예명유래 등) 17건, 2차 패스(인터뷰아카이브·MV크레딧·초기언더그라운드·샘플링논란·제작비화 등) 10건, 3차 패스(짧은 포화확인, 프로듀서·작사 크레딧 등 5개 좁은 각도 확인) 1건을 확보했다. 2차 패스에서 나온 2024 한국대중음악상 노미네이트 상세 1건은 검수 과정에서 기존 43건 중 동일 출처(mhnse.com)·동일 사실(종합 3개 부문+장르 2개 부문 노미네이트)을 재진술한 것으로 확인되어 정직하게 제외했다(28건 수집 -> 27건 최종 반영). 총 15개 각도(빌보드 단독투어 보도, 심사위원/멘토 방송, 대학축제 단독출연, 스포츠 브랜드 협업, KBS 더시즌즈 출연, 저스트뮤직 소속 이력, 추가 TV/라디오 예능, 시상식 추가 노미네이트, 국내 페스티벌 라인업, 매거진 커버, 추가 브랜드 앰버서더, 기부·자선활동, 아시아투어·아시아매체, 2025~2026 신곡·단독공연 소식, 공식 방송사 라디오 게스트)은 검증 가능한 근거를 찾지 못해 포기했다 — 억지로 채우지 않고 실제 검증된 27건에서 정직하게 마감했다.",
+  "silhouette_gate": {
+    "baseline_silhouette": 0.267,
+    "test_fit_k_grid_selected_k": 8,
+    "test_fit_m_grid": {
+      "5": 0.035,
+      "6": 0.092,
+      "7": 0.056
+    },
+    "test_fit_selected_m": 6,
+    "test_fit_silhouette": 0.092,
+    "test_fit_result": "REJECTED",
+    "consecutive_rejections": 13,
+    "note": "v7 59라운드(빈지노 보강 리서치, +27건) 병합분(9,042건) 기준 격리 시험 재적합. K가 8로 재선정되며(v7 57 이후 처음으로 K=8, v7 58의 K=10과 다른 값) M=6이 실루엣 0.092로 최선이었으나 기준값 0.267에는 여전히 크게 못 미쳐 열세 번째 연속 거절 판정. 3~7장·Persona 스냅샷은 v7 40 시점(7,350건)에 그대로 고정 유지되며, 이번 보강분은 3.9절 광고·상업성 지수·3.9.7절 팬덤결속 지수·7장 Member Mention Pilot 등 라이브 코퍼스 기반 보조지표에만 즉시 반영된다(7.5절 Domestic Regional Pilot은 run_lda_v6.py가 DATA[v7 40 스냅샷]로부터 함께 산출하는 구조라 이번에도 반영되지 않는다)."
+  }
+}

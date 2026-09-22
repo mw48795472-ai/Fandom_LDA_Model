@@ -1,0 +1,18 @@
+{
+  "round": "v7_r62_roster_swap_monstax",
+  "description": "사용자가 \"한로로(카테고리: 솔로)를 빼고(drop을 하고), 몬스타엑스(카테고리: K-pop 보이그룹)을 추가해서 리서치 할 것\"이라고 요청. 단일 아티스트 교체(drop 1 + add 1) — 팬덤 총원 100개는 그대로 유지. 3~7장은 v7 40 스냅샷에 고정돼 있어 이번 라운드로 바뀌지 않으며, 라이브 코퍼스 기반 보조지표에만 즉시 반영됨.",
+  "removed_fandom": "한로로",
+  "removed_fandom_category": "솔로",
+  "removed_fandom_bullet_count": 66,
+  "added_fandom": "몬스타엑스",
+  "added_fandom_category": "K-pop 보이그룹",
+  "added_fandom_bullet_count": 90,
+  "added_fandom_loyalty": 40,
+  "added_fandom_spillover": 50,
+  "before_total_fandoms": 100,
+  "after_total_fandoms": 100,
+  "before_total_bullets": 9440,
+  "after_total_bullets": 9464,
+  "net_bullet_change": 24,
+  "methodology_note": "몬스타엑스 근거는 4개 병렬 딥다이브 리서치 에이전트로 수집했다 — ① 국내 팬클럽 몬베베(MONBEBE) 로열티(창단기념일·팬이벤트·앨범판매·월드투어·재계약 등, 24건), ② 국내외 스필오버(브랜드 앰버서더·TV출연·OST·콘서트 실황영화·해외 주류매체 인터뷰 등, 24건), ③ 일본 시장 로컬 리서치(MONBEBE JAPAN 팬클럽·유니버설뮤직재팬 데뷔·오리콘/빌보드재팬 차트·일본 아레나투어 등, 22건), ④ 중남미·동남아 로컬 리서치(멕시코·칠레·브라질·태국·대만·말레이시아·인도네시아·베트남 투어 현지보도, 20건) — 목표는 코퍼스 전체 평균(교체 전 기준 94.4건/팬덤)과 K-pop 보이그룹 카테고리 평균(109.2건/팬덤)을 고려해 95~110건으로 설정했으나, 실제로 검증 가능한 근거 90건(loyalty 40 + spillover 50)에서 정직하게 마감했다 — 목표 미달분은 근거를 지어내서 채우지 않았다. 한로로의 기존 66건(loyalty 26 + spillover 40)은 완전히 삭제되어 코퍼스에서 더 이상 등장하지 않는다. 언어 분류 도메인 셋에도 이번 리서치로 새로 확인된 매체 도메인(일본 5개·스페인어권 6개·포르투갈어 1개·태국 1개·인도네시아/말레이시아 2개·대만 1개·베트남 1개·영어 5개)을 추가했다."
+}

@@ -1,0 +1,33 @@
+{
+  "round": "v7_r58",
+  "round_type": "roster_swap",
+  "before_total_fandoms": 100,
+  "after_total_fandoms": 100,
+  "before_total_bullets": 9048,
+  "after_total_bullets": 9015,
+  "net_new_bullets": -33,
+  "removed_fandom": "BE'O",
+  "removed_fandom_category": "힙합",
+  "removed_fandom_bullet_count": 76,
+  "added_fandom": "빈지노",
+  "added_fandom_category": "힙합",
+  "added_fandom_bullet_count": 43,
+  "added_fandom_loyalty": 20,
+  "added_fandom_spillover": 23,
+  "methodology_note": "빈지노 근거는 단일 아티스트 딥다이브 리서치 에이전트를 3차에 걸쳐 투입해 수집했다(1차 21건 → 2차 보강 +12건(브랜드 협업·추가 피처링·예능 출연·시상식 후보 등 새 각도) → 3차 보강 +10건(재지팩트 활동·페스티벌·추가 브랜드 콜라보 등) → 최종 43건, loyalty 20 + spillover 23, media 29건 + wiki 14건). 목표 규모는 코퍼스 전체 평균(교체 전 기준 90.5건/팬덤)과 빈지노가 속하는 힙합 카테고리 평균(87.0건/팬덤)을 함께 고려해 75~90건으로 설정했으나, 3차 보강에서도 리서치 에이전트가 빌보드·Complex 등 해외 대형매체 단독 보도, 음악방송 출연 이력, 구체적 스트리밍 수치를 더 이상 찾지 못했다고 보고해 수확체감(포화)을 확인했다 — 목표를 채우기 위해 근거를 지어내지 않고 실제로 검증 가능한 43건에서 정직하게 마감했다. 공식 팬클럽·팬카페 명칭도 3차에 걸쳐 검색했으나 확인되지 않아 fanclub 필드는 None으로 둔다(같은 힙합 카테고리의 이영지·pH-1·다이나믹듀오·에픽하이와 동일). BE'O의 기존 76건(loyalty 21 + spillover 55)은 완전히 삭제되어 코퍼스에서 더 이상 등장하지 않는다.",
+  "silhouette_gate": {
+    "baseline_silhouette": 0.267,
+    "test_fit_k_grid_selected_k": 10,
+    "test_fit_m_grid": {
+      "5": 0.135,
+      "6": 0.102,
+      "7": 0.073,
+      "8": 0.036
+    },
+    "test_fit_selected_m": 5,
+    "test_fit_silhouette": 0.135,
+    "test_fit_result": "REJECTED",
+    "consecutive_rejections": 12,
+    "note": "v7 58라운드(BE'O→빈지노 로스터 교체) 병합분(9,015건) 기준 격리 시험 재적합. 감소한 총 문장 수(9,048→9,015, BE'O 76건 삭제 + 빈지노 43건 추가 = 순감 33건)에도 K=10/M=5는 직전 라운드(v7 57)와 동일하게 재선정되었지만 실루엣 0.135로 기준값 0.267에 크게 못 미쳐 열두 번째 연속 거절 판정. 3~7장·Persona 스냅샷은 v7 40 시점(7,350건)에 그대로 고정 유지되어 BE'O가 남고 빈지노는 아직 반영되지 않으며, 이번 교체분은 3.9절 광고·상업성 지수·3.9.7절 팬덤결속 지수·7장 Member Mention Pilot·7.5절 Domestic Regional Pilot 등 라이브 코퍼스 기반 보조지표에만 즉시 반영된다."
+  }
+}
