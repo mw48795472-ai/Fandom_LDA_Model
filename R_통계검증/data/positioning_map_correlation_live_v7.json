@@ -1,0 +1,173 @@
+{
+  "n": 100,
+  "pearson": {
+    "r": 0.4932,
+    "p_value": 1.852177279018384e-07,
+    "ci95": [
+      0.3286,
+      0.6287
+    ],
+    "r_squared": 0.2433
+  },
+  "spearman": {
+    "rho": 0.3796,
+    "p_value": 9.818822994615232e-05
+  },
+  "normality": {
+    "loyalty_score": {
+      "W": 0.9538,
+      "p_value": 0.00148840521531275,
+      "normal_at_0.05": false
+    },
+    "spillover_score": {
+      "W": 0.8609,
+      "p_value": 3.055400294059372e-08,
+      "normal_at_0.05": false
+    }
+  },
+  "multiple_regression_spillover_on_loyalty_activity": {
+    "formula": "spillover_score ~ loyalty_score + activity",
+    "n": 100,
+    "r_squared": 0.8474,
+    "adj_r_squared": 0.8443,
+    "f_statistic": 269.379,
+    "f_pvalue": 2.5047118221951447e-40,
+    "coefficients": {
+      "intercept": {
+        "coef": -0.2987,
+        "se": 0.0253,
+        "t": -11.796,
+        "p": 1.9001817425915216e-20
+      },
+      "loyalty_score": {
+        "coef": -0.1996,
+        "se": 0.0429,
+        "t": -4.649,
+        "p": 1.0540833908429937e-05
+      },
+      "activity": {
+        "coef": 0.006375,
+        "se": 0.000325,
+        "t": 19.598,
+        "p": 1.6801243555742198e-35
+      }
+    },
+    "vif": {
+      "loyalty_score": 1.929,
+      "activity": 1.929
+    },
+    "vif_interpretation_threshold": {
+      "moderate": 5,
+      "serious": 10
+    }
+  },
+  "each_score_vs_activity": {
+    "loyalty_score_vs_activity": {
+      "r": 0.694,
+      "p_value": 1.186679801514351e-15
+    },
+    "spillover_score_vs_activity": {
+      "r": 0.9019,
+      "p_value": 1.6582847862085935e-37
+    }
+  },
+  "regression_spillover_on_loyalty": {
+    "slope": 0.3844,
+    "intercept": 0.1234
+  },
+  "influence_top5": [
+    {
+      "fandom": "BTS",
+      "loyalty_score": 0.972,
+      "spillover_score": 1.0,
+      "std_residual": 3.509,
+      "cooks_d": 0.5749,
+      "leverage": 0.0854
+    },
+    {
+      "fandom": "god",
+      "loyalty_score": 1.0,
+      "spillover_score": 0.171,
+      "std_residual": -2.359,
+      "cooks_d": 0.284,
+      "leverage": 0.0926
+    },
+    {
+      "fandom": "이효리",
+      "loyalty_score": 0.006,
+      "spillover_score": 0.654,
+      "std_residual": 3.593,
+      "cooks_d": 0.2538,
+      "leverage": 0.0378
+    },
+    {
+      "fandom": "TWICE",
+      "loyalty_score": 0.947,
+      "spillover_score": 0.821,
+      "std_residual": 2.319,
+      "cooks_d": 0.2315,
+      "leverage": 0.0793
+    },
+    {
+      "fandom": "BLACKPINK",
+      "loyalty_score": 0.674,
+      "spillover_score": 0.752,
+      "std_residual": 2.502,
+      "cooks_d": 0.094,
+      "leverage": 0.0292
+    }
+  ],
+  "cooks_d_threshold_4_over_n": 0.04,
+  "n_high_influence_points": 5,
+  "sensitivity_remove_highlighted": {
+    "BTS": {
+      "r_without": 0.4314,
+      "p_without": 8.272866245325645e-06
+    },
+    "임영웅": {
+      "r_without": 0.4761,
+      "p_without": 6.335847819759219e-07
+    },
+    "리센느(RESCENE)": {
+      "r_without": 0.4932,
+      "p_without": 2.1400726763928597e-07
+    }
+  },
+  "leave_one_out": {
+    "max_abs_delta_r": 0.0618,
+    "max_delta_fandom": "BTS",
+    "mean_abs_delta_r": 0.00516
+  },
+  "design_criterion": {
+    "source": "build_docx.js v1 설계안 — 판별타당도 확인: |r| < 0.5 목표",
+    "target_abs_r_below": 0.5,
+    "observed_abs_r": 0.4932,
+    "meets_criterion": true
+  },
+  "quadrant_chi_square": {
+    "table_labels": "[[핵심전략(둘다高), 내부결속(충성高·파급低)],[외부견인(충성低·파급高), 주변부(둘다低)]]",
+    "table": [
+      [
+        7,
+        17
+      ],
+      [
+        4,
+        72
+      ]
+    ],
+    "chi2": 8.3439,
+    "dof": 1,
+    "p_value": 0.003869926001162201,
+    "expected": [
+      [
+        2.64,
+        21.36
+      ],
+      [
+        8.36,
+        67.64
+      ]
+    ]
+  }
+}

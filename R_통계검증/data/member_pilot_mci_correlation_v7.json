@@ -1,0 +1,405 @@
+{
+  "n_groups": 45,
+  "groups": [
+    "(여자)아이들",
+    "A-pink",
+    "ATEEZ",
+    "BABYMONSTER",
+    "BLACKPINK",
+    "BTOB",
+    "BTS",
+    "CNBLUE",
+    "CORTIS",
+    "DAY6",
+    "EXO",
+    "FTISLAND",
+    "GOT7",
+    "HOT",
+    "Hearts2Hearts",
+    "IKON",
+    "ITZY",
+    "IVE",
+    "LE SSERAFIM",
+    "NCT",
+    "NewJeans",
+    "QWER",
+    "RIIZE",
+    "SEVENTEEN",
+    "STAYC",
+    "Stray Kids",
+    "TWICE",
+    "aespa",
+    "god",
+    "동방신기",
+    "레드벨벳",
+    "리센느(RESCENE)",
+    "마마무",
+    "빅뱅",
+    "샤이니",
+    "소녀시대",
+    "슈퍼주니어",
+    "아이오아이",
+    "아일릿",
+    "엔믹스",
+    "여자친구",
+    "오마이걸",
+    "워너원",
+    "잭스키스",
+    "프로미스나인"
+  ],
+  "caveat_temporal_mismatch": "MCI는 v7 55 시점 라이브 코퍼스(8,981건)로 계산됐으나, loyalty_score 등 outcome 지표 4종은 실루엣 게이트를 아직 통과하지 못해 v7 40 시점 고정 스냅샷(7,350건)에 머물러 있다. v7 41~55 라운드에서 추가된 근거(v7 53·54의 멤버별 전수조사 193건 + v7 55의 로스터 감사·신규 멤버 리서치 15건 포함)는 MCI에만 반영되고 outcome 지표에는 반영되지 않은 상태에서의 비교다.",
+  "caveat_mci_structural_floor": "MCI = sum(share_i^2)의 이론적 하한은 1/member_count다. 멤버 수가 적은 그룹은 완전 균등 배분이어도 MCI가 구조적으로 높게 나오므로, MCI와 member_count의 상관 및 MCI_excess(=MCI-1/member_count) 기반 재분석을 함께 제시한다.",
+  "mci_descriptives": {
+    "mean": 0.2662,
+    "sd": 0.1096,
+    "min": 0.111,
+    "max": 0.649,
+    "min_group": "NCT",
+    "max_group": "FTISLAND"
+  },
+  "mci_vs_member_count": {
+    "pearson_r": -0.7489,
+    "p_value": 3.281574225119451e-09,
+    "interpretation": "|r|이 크면(예상: 강한 음의 상관) MCI가 실제 '집중도'보다 '멤버 수'를 상당 부분 대리(proxy)하고 있다는 뜻 — MCI_excess로 통제한 결과를 함께 봐야 한다."
+  },
+  "correlations_mci_raw": {
+    "loyalty_score": {
+      "pearson_r": -0.3932,
+      "pearson_p": 0.007536936106906217,
+      "pearson_ci95": [
+        -0.6157,
+        -0.1127
+      ],
+      "r_squared": 0.1546,
+      "spearman_rho": -0.3241,
+      "spearman_p": 0.029860382747264852
+    },
+    "spillover_score": {
+      "pearson_r": -0.0776,
+      "pearson_p": 0.6125100919380759,
+      "pearson_ci95": [
+        -0.3628,
+        0.221
+      ],
+      "r_squared": 0.006,
+      "spearman_rho": -0.0627,
+      "spearman_p": 0.6826226368117426
+    },
+    "coverage_index": {
+      "pearson_r": -0.039,
+      "pearson_p": 0.799103370867739,
+      "pearson_ci95": [
+        -0.3288,
+        0.2575
+      ],
+      "r_squared": 0.0015,
+      "spearman_rho": -0.0624,
+      "spearman_p": 0.6838482432314492
+    },
+    "factor_diversity": {
+      "pearson_r": -0.0547,
+      "pearson_p": 0.7210359920742079,
+      "pearson_ci95": [
+        -0.3428,
+        0.2427
+      ],
+      "r_squared": 0.003,
+      "spearman_rho": -0.0982,
+      "spearman_p": 0.5208812561392707
+    }
+  },
+  "correlations_mci_excess": {
+    "loyalty_score": {
+      "pearson_r": -0.0686,
+      "pearson_p": 0.6542698836616502,
+      "pearson_ci95": [
+        -0.355,
+        0.2296
+      ],
+      "r_squared": 0.0047,
+      "spearman_rho": -0.0795,
+      "spearman_p": 0.6035735111857402
+    },
+    "spillover_score": {
+      "pearson_r": 0.1888,
+      "pearson_p": 0.21409022196456723,
+      "pearson_ci95": [
+        -0.1108,
+        0.4571
+      ],
+      "r_squared": 0.0357,
+      "spearman_rho": 0.0354,
+      "spearman_p": 0.8175298950090474
+    },
+    "coverage_index": {
+      "pearson_r": 0.1571,
+      "pearson_p": 0.302693591055249,
+      "pearson_ci95": [
+        -0.143,
+        0.4308
+      ],
+      "r_squared": 0.0247,
+      "spearman_rho": 0.0332,
+      "spearman_p": 0.8285473019321984
+    },
+    "factor_diversity": {
+      "pearson_r": -0.1425,
+      "pearson_p": 0.3505599888163837,
+      "pearson_ci95": [
+        -0.4185,
+        0.1577
+      ],
+      "r_squared": 0.0203,
+      "spearman_rho": -0.0642,
+      "spearman_p": 0.6753752430502341
+    }
+  },
+  "normality": {
+    "mci": {
+      "W": 0.8935,
+      "p_value": 0.0005980774195902589,
+      "normal_at_0.05": false
+    },
+    "mci_excess": {
+      "W": 0.8625,
+      "p_value": 7.809016675344354e-05,
+      "normal_at_0.05": false
+    },
+    "loyalty_score": {
+      "W": 0.9209,
+      "p_value": 0.004537644730862197,
+      "normal_at_0.05": false
+    },
+    "spillover_score": {
+      "W": 0.899,
+      "p_value": 0.0008848893755546367,
+      "normal_at_0.05": false
+    },
+    "coverage_index": {
+      "W": 0.8851,
+      "p_value": 0.0003363963790913082,
+      "normal_at_0.05": false
+    },
+    "factor_diversity": {
+      "W": 0.9234,
+      "p_value": 0.0055401111530884155,
+      "normal_at_0.05": false
+    }
+  },
+  "multiple_regression_mci_plus_membercount": {
+    "loyalty_score": {
+      "formula": "loyalty_score ~ MCI + member_count",
+      "r_squared": 0.255,
+      "adj_r_squared": 0.2195,
+      "f_statistic": 7.189,
+      "f_pvalue": 0.00206556755069234,
+      "coefficients": {
+        "intercept": {
+          "coef": 0.2903,
+          "se": 0.1747,
+          "t": 1.662,
+          "p": 0.10388907483964302
+        },
+        "mci": {
+          "coef": -0.0595,
+          "se": 0.3409,
+          "t": -0.175,
+          "p": 0.8622149937998645
+        },
+        "member_count": {
+          "coef": 0.0369,
+          "se": 0.0155,
+          "t": 2.379,
+          "p": 0.021973819759243358
+        }
+      },
+      "vif": {
+        "mci": 2.277,
+        "member_count": 2.277
+      }
+    },
+    "spillover_score": {
+      "formula": "spillover_score ~ MCI + member_count",
+      "r_squared": 0.0601,
+      "adj_r_squared": 0.0153,
+      "f_statistic": 1.343,
+      "f_pvalue": 0.27207426901238924,
+      "coefficients": {
+        "intercept": {
+          "coef": 0.0994,
+          "se": 0.205,
+          "t": 0.485,
+          "p": 0.6302718794475095
+        },
+        "mci": {
+          "coef": 0.3283,
+          "se": 0.4001,
+          "t": 0.821,
+          "p": 0.41645759769528795
+        },
+        "member_count": {
+          "coef": 0.0283,
+          "se": 0.0182,
+          "t": 1.555,
+          "p": 0.12754068523304798
+        }
+      },
+      "vif": {
+        "mci": 2.277,
+        "member_count": 2.277
+      }
+    },
+    "coverage_index": {
+      "formula": "coverage_index ~ MCI + member_count",
+      "r_squared": 0.0576,
+      "adj_r_squared": 0.0127,
+      "f_statistic": 1.283,
+      "f_pvalue": 0.287846855567952,
+      "coefficients": {
+        "intercept": {
+          "coef": 0.5602,
+          "se": 0.1245,
+          "t": 4.502,
+          "p": 5.2747067839832935e-05
+        },
+        "mci": {
+          "coef": 0.2456,
+          "se": 0.2429,
+          "t": 1.011,
+          "p": 0.31776128662065406
+        },
+        "member_count": {
+          "coef": 0.0175,
+          "se": 0.0111,
+          "t": 1.581,
+          "p": 0.12148503496529507
+        }
+      },
+      "vif": {
+        "mci": 2.277,
+        "member_count": 2.277
+      }
+    },
+    "factor_diversity": {
+      "formula": "factor_diversity ~ MCI + member_count",
+      "r_squared": 0.067,
+      "adj_r_squared": 0.0226,
+      "f_statistic": 1.508,
+      "f_pvalue": 0.23305702929192454,
+      "coefficients": {
+        "intercept": {
+          "coef": 0.8034,
+          "se": 0.0535,
+          "t": 15.006,
+          "p": 1.772110060692323e-18
+        },
+        "mci": {
+          "coef": 0.1074,
+          "se": 0.1045,
+          "t": 1.028,
+          "p": 0.30984131284024896
+        },
+        "member_count": {
+          "coef": 0.0081,
+          "se": 0.0048,
+          "t": 1.697,
+          "p": 0.0970019772441013
+        }
+      },
+      "vif": {
+        "mci": 2.277,
+        "member_count": 2.277
+      }
+    }
+  },
+  "vif_interpretation_threshold": {
+    "moderate": 5,
+    "serious": 10
+  },
+  "simple_regression_mci_excess_only": {
+    "loyalty_score": {
+      "formula": "loyalty_score ~ MCI_excess",
+      "r_squared": 0.0047,
+      "slope": -0.2197,
+      "slope_p": 0.6542698836616504
+    },
+    "spillover_score": {
+      "formula": "spillover_score ~ MCI_excess",
+      "r_squared": 0.0357,
+      "slope": 0.6319,
+      "slope_p": 0.21409022196456737
+    },
+    "coverage_index": {
+      "formula": "coverage_index ~ MCI_excess",
+      "r_squared": 0.0247,
+      "slope": 0.3188,
+      "slope_p": 0.30269359105524973
+    },
+    "factor_diversity": {
+      "formula": "factor_diversity ~ MCI_excess",
+      "r_squared": 0.0203,
+      "slope": -0.125,
+      "slope_p": 0.3505599888163826
+    }
+  },
+  "influence_diagnostics_strongest_pair": {
+    "outcome_variable": "loyalty_score",
+    "top5": [
+      {
+        "fandom": "SEVENTEEN",
+        "mci": 0.112,
+        "loyalty_score": 1.0,
+        "member_count": 13,
+        "std_residual": 2.388,
+        "cooks_d": 0.2057
+      },
+      {
+        "fandom": "TWICE",
+        "mci": 0.147,
+        "loyalty_score": 0.944,
+        "member_count": 9,
+        "std_residual": 2.172,
+        "cooks_d": 0.1219
+      },
+      {
+        "fandom": "BTS",
+        "mci": 0.238,
+        "loyalty_score": 0.931,
+        "member_count": 7,
+        "std_residual": 2.422,
+        "cooks_d": 0.0713
+      },
+      {
+        "fandom": "소녀시대",
+        "mci": 0.137,
+        "loyalty_score": 0.323,
+        "member_count": 9,
+        "std_residual": -1.557,
+        "cooks_d": 0.069
+      },
+      {
+        "fandom": "BLACKPINK",
+        "mci": 0.334,
+        "loyalty_score": 0.747,
+        "member_count": 4,
+        "std_residual": 1.726,
+        "cooks_d": 0.0475
+      }
+    ],
+    "cooks_d_threshold_4_over_n": 0.0889,
+    "n_high_influence_points": 2
+  },
+  "leave_one_out_strongest_pair": {
+    "outcome_variable": "loyalty_score",
+    "max_abs_delta_r": 0.0776,
+    "max_delta_fandom": "FTISLAND",
+    "mean_abs_delta_r": 0.01185
+  },
+  "verdict": {
+    "best_raw_mci_r_squared": 0.1546,
+    "best_raw_mci_outcome": "loyalty_score",
+    "best_mci_excess_r_squared": 0.0357,
+    "best_mci_excess_outcome": "spillover_score",
+    "summary_ko": "원시 MCI가 4개 outcome 지표 중 가장 잘 설명하는 것은 loyalty_score로 R²=0.1546이지만, 멤버 수를 통제한 MCI_excess 기준으로는 spillover_score에 대해 R²=0.0357로 낮아진다. MCI와 member_count의 원 상관은 r=-0.7489로, 원시 MCI의 설명력 상당 부분이 멤버 수 차이에서 비롯된 구조적 인공물일 가능성을 시사한다. 또한 위의 시점 불일치 한계로 인해 이 결과는 인과적 설명력이 아니라 참고용 연관성으로만 해석해야 한다."
+  }
+}
