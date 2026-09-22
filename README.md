@@ -105,6 +105,7 @@ README.md                                            이 문서
 (분석보고서)…최종.pdf, (요약보고서)…최종.pdf         제출본
 3D_포지셔닝맵_국내100팬덤.html + plotly-bundle.js    라이브 10,020건 3D 맵 (같은 폴더에서 열면 동작)
 Persona_결정공간.html                                동결 스냅샷 K=10→M=5 덴드로그램·PCA·레이더
+qr_codes/                                            위 HTML 2종의 QR 코드 이미지 + 아티팩트 링크·해시 대조 (폴더 README)
 verify_v7_final_consistency.py                       최종 수치 ↔ 파일 정합성 검증 (101/101)
 run_lda_v6.py                                        LDA 파이프라인(v6~r22 시점 코드, --data/--out 인자; 기본 입력 = 최종 코퍼스)
 data/
