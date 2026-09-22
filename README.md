@@ -121,7 +121,7 @@ flowchart LR
 | Persona | 어떤 방식으로 작동하는가 | 상위 2개 F 조합 10가지 중 실현 4유형: **글로벌투어형 43**(F3+F5) · **현장상업형 31**(F3+F4) · **원정소비형 17**(F2+F3) · **집단동원형 9**(F1+F3) — 전부 F3 공유 | `fan_persona_v7.json` |
 | Loyalty·Spillover | 얼마나 강한가 | 점수를 F별로 분해한 Factor-specific Impact = 비중 × 점수 | `fan_persona_v7.json` |
 
-| Fan Persona Map | 경로별(F1∼F5) 점수 분해 |
+| Fan Persona Map (강조 표시 없음, `charts/build_persona_map_v7.py`) | 경로별(F1∼F5) 점수 분해 |
 |---|---|
 | ![Persona map](assets/readme/fig05_persona_map.png) | ![Factor-specific](assets/readme/fig06_factor_specific_impact.png) |
 
