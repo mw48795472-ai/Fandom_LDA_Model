@@ -4,7 +4,7 @@
 verify_index_calculation_formulas.py 가 "저장된 값이 맞는지" 대조하는 스크립트라면, 이 노트북은 산식대로 값을 만들어 내고
 CSV(index_calculation_v7_result.csv)로 저장한 뒤 마지막에만 저장소의 최종 산출 파일과 대조한다.
 
-실행: python v7_final_10020/index_methodology/build_index_calculation_notebook.py            # 생성 + 실행 + HTML 내보내기
+실행: python v7_final_10020/index_methodology/build_index_calculation_notebook.py            # 생성 + 실행
       python v7_final_10020/index_methodology/build_index_calculation_notebook.py --no-exec  # 생성만
 """
 import subprocess
@@ -357,8 +357,7 @@ def main(execute=True):
     if execute:
         subprocess.run([sys.executable, "-m", "jupyter", "nbconvert", "--to", "notebook", "--execute", "--inplace",
                         "--ExecutePreprocessor.timeout=600", str(OUT)], check=True, cwd=HERE)
-        subprocess.run([sys.executable, "-m", "jupyter", "nbconvert", "--to", "html", str(OUT)], check=True, cwd=HERE)
-        print("executed + html exported")
+        print("executed")
 
 
 if __name__ == "__main__":
