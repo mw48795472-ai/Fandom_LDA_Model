@@ -6,7 +6,7 @@ README 6절의 그림은 상위 20·25개만 보여 주므로, 같은 지표를 
   aux2_media_exposure_100.png       미디어·콘텐츠 노출 지수 — 예능·유튜브·영화·드라마 누적 막대
   aux3_fandom_cohesion_100.png      팬덤결속 지수 — 결속 유형 A~E 누적 막대
   aux4_media_crossover_100.png      매체 크로스오버 지수 — 서로 다른 뉴스 매체 수
-  aux5_domestic_regional_100.png    국내 지역 지수 — 지역 구성(상위 7개 시/도 + 그 외) 누적 막대
+  aux5_domestic_regional_100.png    국내 지역 지수 — 지역 구성(상위 10개 시/도 + 그 외) 누적 막대
   aux6_member_mci_45.png            멤버 집중도(MCI) — 45개 그룹, 구조적 하한 1/멤버수 표시
   aux7_worldwide_language_100.png   세계 언어 지수 — 해외언어 구성(상위 7개 언어 + 그 외) 누적 막대
 
@@ -51,9 +51,12 @@ plt.rcParams["axes.unicode_minus"] = False
 
 # ---- 색·잉크 (reference palette, light) -------------------------------------
 SERIES = ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#008300", "#4a3aa7"]
+SERIES8 = "#e34948"        # 범주형 8번째 슬롯(red)
 OTHER = "#b4b2aa"          # '그 외' 묶음 — 의도적 중립 회색
 SURFACE, INK, INK2, MUTED, GRID, AXIS = "#fcfcfb", "#0b0b0b", "#52514e", "#898781", "#e1e0d9", "#c3c2b7"
 DPI = 200
+plt.rcParams["hatch.color"] = SURFACE
+plt.rcParams["hatch.linewidth"] = 1.4
 
 
 def load(p):
@@ -85,7 +88,7 @@ def footer(fig, text):
     fig.text(0.012, 0.006, text, fontsize=9.5, color=MUTED, va="bottom")
 
 
-def stacked_100(rows, keys, colors, labels, end_label, title, subtitle, xlabel, foot, fname, per_panel=50):
+def stacked_100(rows, keys, colors, labels, end_label, title, subtitle, xlabel, foot, fname, per_panel=50, hatches=None):
     """rows: [(name, {key: value}, total_for_sort)] 정렬 완료. 두 패널(1~50 / 51~100) 누적 가로 막대."""
     n = len(rows)
     panels = [rows[i:i + per_panel] for i in range(0, n, per_panel)]
@@ -98,9 +101,10 @@ def stacked_100(rows, keys, colors, labels, end_label, title, subtitle, xlabel, 
         names = [f"{pi * per_panel + i + 1:>3}. {r[0]}" for i, r in enumerate(part)]
         y = list(range(len(part)))[::-1]
         left = [0.0] * len(part)
-        for k, c in zip(keys, colors):
+        hs = hatches or [None] * len(keys)
+        for k, c, h in zip(keys, colors, hs):
             vals = [r[1].get(k, 0) for r in part]
-            ax.barh(y, vals, left=left, height=0.72, color=c, edgecolor=SURFACE, linewidth=0.7, zorder=2)
+            ax.barh(y, vals, left=left, height=0.72, color=c, edgecolor=SURFACE, linewidth=0.7, zorder=2, hatch=h)
             left = [a + b for a, b in zip(left, vals)]
         for yi, r, l in zip(y, part, left):
             ax.text(l + xmax * 0.008, yi, end_label(r), va="center", ha="left", fontsize=9.5, color=INK2, zorder=3)
@@ -110,7 +114,8 @@ def stacked_100(rows, keys, colors, labels, end_label, title, subtitle, xlabel, 
         style_axis(ax, xmax)
         ax.set_xlabel(xlabel, fontsize=10.5, color=INK2, labelpad=6)
         ax.set_title(f"{pi * per_panel + 1}~{pi * per_panel + len(part)}위", fontsize=12, color=INK2, loc="left", pad=6)
-    handles = [Patch(facecolor=c, edgecolor="none", label=l) for c, l in zip(colors, labels)]
+    handles = [Patch(facecolor=c, edgecolor=(SURFACE if h else "none"), hatch=h, label=l)
+               for c, l, h in zip(colors, labels, hatches or [None] * len(colors))]
     header(fig, title, subtitle, handles, ncol=len(handles))
     footer(fig, foot)
     fig.subplots_adjust(left=0.105, right=0.985, top=0.905, bottom=0.05, wspace=0.42)
@@ -180,7 +185,7 @@ rtot = {}
 for v in dr.values():
     for k, c in v["region_mention_counts"].items():
         rtot[k] = rtot.get(k, 0) + c
-reg7 = top_keys(rtot)
+reg7 = top_keys(rtot, 10)   # 상위 10개 시/도 — 범주형 8색 + 9·10번째는 1·2번 색에 빗금(복합 인코딩)
 rows = []
 for name, v in dr.items():
     rc = v["region_mention_counts"]
@@ -188,12 +193,12 @@ for name, v in dr.items():
     d["_other"] = sum(c for k, c in rc.items() if k not in reg7)
     rows.append((name, d, (v["total_region_mentions"], v["n_regions_hit"], v.get("region_diversity", 0))))
 rows.sort(key=lambda r: (-r[2][0], -r[2][1], r[0]))
-stacked_100(rows, reg7 + ["_other"], SERIES + [OTHER], reg7 + ["그 외 10개 시/도"],
+stacked_100(rows, reg7 + ["_other"], SERIES + [SERIES8, SERIES[0], SERIES[1], OTHER], reg7 + [f"그 외 {17 - len(reg7)}개 시/도"],
             lambda r: f"{r[2][0]}건 · {r[2][1]}개 지역",
             "국내 지역 지수 — 100개 팬덤 전체",
             f"지역 언급 {sum(rtot.values()):,}건 · 지역 언급 수 순 정렬 · 막대 = 17개 시/도별 언급 문장 수 · 끝 라벨 = 언급 수 · 언급된 시/도 수",
-            "시/도별 언급 근거문장 수", "자료: v7_final_10020/analysis/domestic_regional_index/domestic_regional_index_v7.json (최종 코퍼스 10,020건 산출본) · 전체 합계 상위 7개 시/도를 색으로 표시",
-            "aux5_domestic_regional_100.png")
+            "시/도별 언급 근거문장 수", "자료: v7_final_10020/analysis/domestic_regional_index/domestic_regional_index_v7.json (최종 코퍼스 10,020건 산출본) · 전체 합계 상위 10개 시/도를 색으로 표시(9·10번째는 빗금으로 구분)",
+            "aux5_domestic_regional_100.png", hatches=[None] * 8 + ["////", "////", None])
 
 # ---- 6. 멤버 집중도 MCI (45개 그룹) ------------------------------------------------
 mi = load(D / "member_mention_index_v7.json")
