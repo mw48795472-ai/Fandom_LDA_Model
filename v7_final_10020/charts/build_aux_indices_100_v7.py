@@ -2,7 +2,7 @@
 """보조지표 7종 — 100개 팬덤 전체(멤버 집중도는 45개 그룹 전체) 그래프.
 README 6절의 그림은 상위 20·25개만 보여 주므로, 같은 지표를 전체 대상으로 다시 그려 assets/readme/100개_보조지표/ 에 저장한다.
 
-  aux1_ad_commercial_100.png        광고·상업성 지수 — 업종 구성(상위 7개 업종 + 그 외) 누적 막대, 끝 라벨 = 광고 문장 수·비중
+  aux1_ad_commercial_100.png        광고·상업성 지수 — 20개 업종 전부(업종군별 색 계열) 누적 막대, 끝 라벨 = 광고 문장 수·비중
   aux2_media_exposure_100.png       미디어·콘텐츠 노출 지수 — 예능·유튜브·영화·드라마 누적 막대
   aux3_fandom_cohesion_100.png      팬덤결속 지수 — 결속 유형 A~E 누적 막대
   aux4_media_crossover_100.png      매체 크로스오버 지수 — 서로 다른 뉴스 매체 수
@@ -134,22 +134,38 @@ def top_keys(totals, k=7):
 
 
 # ---- 1. 광고·상업성 ------------------------------------------------------------
+# 20개 업종 전부를 업종군별 색 계열로 칠한다(같은 업종군 = 같은 색상의 명도 단계, 막대도 업종군 순서로 쌓음).
 ad = load(D / "ad_commercial_index_v7.json")
-tot = {k: v for k, v in ad["industry_totals"].items() if k != "기타"}
-keys7 = top_keys(tot)
+AD_STYLE = [  # (업종군, 업종, 색)
+    ("공공·미디어", "복지/행정", "#2a78d6"), ("공공·미디어", "교육", "#7fb2ee"), ("공공·미디어", "뉴스", "#17498a"), ("공공·미디어", "도서/참고자료", "#bcd6f5"),
+    ("패션·뷰티", "패션/의류", "#eb6834"), ("패션·뷰티", "미용", "#e34948"),
+    ("식품·생활·건강", "식음료", "#1baf7a"), ("식품·생활·건강", "건강/의료", "#008300"), ("식품·생활·건강", "가정/생활", "#8fd9b8"),
+    ("IT·게임·엔터", "정보/통신", "#4a3aa7"), ("IT·게임·엔터", "게임", "#9387e0"), ("IT·게임·엔터", "엔터테인먼트", "#2a1f6e"),
+    ("금융·산업", "금융", "#eda100"), ("금융·산업", "부동산", "#f6cf6a"), ("금융·산업", "비즈니스/산업", "#b37700"),
+    ("여가·모빌리티", "여행", "#e87ba4"), ("여가·모빌리티", "스포츠/레저", "#f5b8cf"), ("여가·모빌리티", "자동차", "#b3406c"),
+    ("유통", "쇼핑", "#8f6a3c"),
+    ("기타", "기타", OTHER),
+]
+ad_keys = [k for _, k, _ in AD_STYLE]
+assert set(ad_keys) == set(ad["industries"]), "업종 목록이 바뀌면 AD_STYLE을 갱신하세요"
 rows = []
 for f in ad["fandoms"]:
     ic = f["industry_counts"]
-    v = {k: ic.get(k, 0) for k in keys7}
-    v["_other"] = sum(c for k, c in ic.items() if k not in keys7)
-    rows.append((f["fandom"], v, (f["n_ad_bullets"], f["ad_share"]), f))
+    rows.append((f["fandom"], {k: ic.get(k, 0) for k in ad_keys}, (f["n_ad_bullets"], f["ad_share"])))
 rows.sort(key=lambda r: (-r[2][0], -r[2][1], r[0]))
-stacked_100([r[:3] for r in rows], keys7 + ["_other"], SERIES + [OTHER], keys7 + ["그 외 업종·기타"],
+groups = []
+for i, (g, _, _) in enumerate(AD_STYLE):
+    if not groups or groups[-1][0] != g:
+        groups.append((g, []))
+    groups[-1][1].append(i)
+stacked_100(rows, ad_keys, [c for _, _, c in AD_STYLE],
+            [k if g == k else f"{g} · {k}" for g, k, _ in AD_STYLE],
             lambda r: f"{r[2][0]}건 · {r[2][1] * 100:.0f}%",
             "광고·상업성 지수 — 100개 팬덤 전체",
-            f"광고신호 문장 {ad['total_ad_bullets']:,}건(전체 {ad['total_bullets']:,}건의 {ad['corpus_ad_share'] * 100:.1f}%) · 광고 문장 수 순 정렬 · 막대 = 업종별 문장 수(한 문장이 여러 업종에 걸리면 중복 집계) · 끝 라벨 = 광고 문장 수 · 팬덤 내 비중",
-            "업종별 근거문장 수", "자료: data/v7_final/ad_commercial_index_v7.json · 20개 업종 중 전체 합계 상위 7개를 색으로, 나머지 13개와 '기타'를 회색으로 묶음",
-            "aux1_ad_commercial_100.png")
+            f"광고신호 문장 {ad['total_ad_bullets']:,}건(전체 {ad['total_bullets']:,}건의 {ad['corpus_ad_share'] * 100:.1f}%) · 광고 문장 수 순 정렬 · 막대 = 업종별 문장 수(업종군 순으로 쌓음, 한 문장이 여러 업종에 걸리면 중복 집계) · 끝 라벨 = 광고 문장 수 · 팬덤 내 비중",
+            "업종별 근거문장 수",
+            "자료: data/v7_final/ad_commercial_index_v7.json · 20개 업종 전부 표시, 색 계열 = 업종군(공공·미디어 파랑 · 패션·뷰티 주황/빨강 · 식품·생활·건강 초록 · IT·게임·엔터 보라 · 금융·산업 노랑 · 여가·모빌리티 분홍 · 유통 갈색 · 기타 회색). 뉴스·도서/참고자료는 0건",
+            "aux1_ad_commercial_100.png", top=0.865, legend_columns=[idx for _, idx in groups[:-2]] + [groups[-2][1] + groups[-1][1]])
 
 # ---- 2. 미디어·콘텐츠 노출 ------------------------------------------------------
 me = load(D / "media_exposure_v7.json")
