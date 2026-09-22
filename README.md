@@ -21,12 +21,12 @@
 
 | 계층 | 코퍼스 | 이 계층에서 나온 수치 | 저장소 파일 |
 |---|---|---|---|
-| **동결 스냅샷 v7-40** (해석 계층) | 7,350건 | LDA K=10 → M=5 메타요인(실루엣 0.267), 팬덤별 F1~F5 비중, 페르소나 4유형(글로벌투어형 43·현장상업형 31·원정소비형 17·집단동원형 9), KEY_FINDINGS 하이라이트 표의 loyalty/spillover(BTS 0.931/1.000, 임영웅 0.899/0.702, 리센느 0.444/0.304) | `data/v7_final/fandom_scores_v6.csv` / `.json` (activity 합 = 7,350; JSON에 raw 점수·coverage_detail), `fan_persona_v7.json`, `topic_cards_v7.json`, `lda_v6_diagnostics_frozen_v7_40.json`, `persona_decision_space_v7.json`, `Persona_결정공간.html` |
+| **동결 스냅샷 v7-40** (해석 계층) | 7,350건 | LDA K=10 → M=5 메타요인(실루엣 0.267), 팬덤별 F1∼F5 비중, 페르소나 4유형(글로벌투어형 43·현장상업형 31·원정소비형 17·집단동원형 9), KEY_FINDINGS 하이라이트 표의 loyalty/spillover(BTS 0.931/1.000, 임영웅 0.899/0.702, 리센느 0.444/0.304) | `data/v7_final/fandom_scores_v6.csv` / `.json` (activity 합 = 7,350; JSON에 raw 점수·coverage_detail), `fan_persona_v7.json`, `topic_cards_v7.json`, `lda_v6_diagnostics_frozen_v7_40.json`, `persona_decision_space_v7.json`, `Persona_결정공간.html` |
 | **라이브 코퍼스 (최종)** | 10,020건 (14개 언어권) | 충성도·파급효과 점수(표본 평균 0.3710 / 0.2661), 4구획(핵심전략형 24·내부결속형 17·외부견인형 10·주변부 49), 상관·회귀·Cook's D 등 강건성 통계, 보조지표 7종, 언어·도메인 표, 3D 포지셔닝 맵, 게이트에 기각된 라이브 재적합(K=8, M=5, 실루엣 0.046) | `data/v7_final/fandoms_v3_100.json` (**근거문장 원본 10,020건**), `fandom_scores_live_reference_v7.csv`(원본 산출물, 라이브 재적합 F 비중 포함), `chart3d_payload_live_reference_v7.json`, `chart3d_positioning_rows_live_v7.csv`, `media_crossover_index_v7.json`, `lda_excluded_bullets_v7.json`, `language_domain_summary_v7.json`, `lda_v6_diagnostics_live_reference_v7.json`, `member_mention_index_v7.json`, `bullets_flat_v7_final.csv`, `3D_포지셔닝맵_국내100팬덤.html` |
 | **v6 r22 스냅샷** (과거 시점) | 5,612건 | K=8, M=6, 실루엣 0.154 — 최종 수치가 아니다. 파이프라인이 실제로 어떻게 동작했는지 보여주는 실물 증거이며, 각 파일럿 노트북(`*/…_pilot.ipynb`)의 입력 | `archive/v6_r22_era/data/v6_r22_snapshot/` 전체 |
 
 **로스터 차이**: 동결 스냅샷의 100개 팬덤과 라이브 코퍼스의 100개 팬덤은 3개가 다르다(동결에만 한로로·pH-1·BE'O, 라이브에만
-몬스타엑스·투어스(TWS)·빈지노 — v7 r62~ 로스터 교체). 페르소나·F1~F5 비중은 동결 로스터, 점수·4구획·보조지표는 라이브 로스터 기준이다.
+몬스타엑스·투어스(TWS)·빈지노 — v7 r62∼ 로스터 교체). 페르소나·F1∼F5 비중은 동결 로스터, 점수·4구획·보조지표는 라이브 로스터 기준이다.
 
 `fandom_scores_v6.csv`, `run_lda_v6.py` 등 이름의 **"v6"은 파이프라인 버전명**이지 데이터 시점이 아니다.
 `data/v7_final/fandom_scores_v6.csv`(7,350건 동결 스냅샷 산출)와 `archive/v6_r22_era/data/v6_r22_snapshot/fandom_scores_v6.csv`
@@ -46,7 +46,7 @@
 | 세계 언어 지수: BTS 해외 근거 135건(60%), 해외언어다양성 0.66; 14개 언어 합 = 언어 표 | `worldwide_language_pilot_live_reference_v7.json` → `worldwide_language_index_v7.csv` (스크립트 재실행, 불일치 0) | 일치 |
 | 라이브 점수 원본 JSON의 raw 점수·coverage_index 5요소 가중합·언어 엔트로피 ln(14) | `fandom_scores_live_reference_v7.json` | 일치 |
 | 토크나이저 출력 토큰 170,725개, 문자권별 불릿 수(한국어 8,942 …) | `wordcloud_by_language_v7.json` (TOKENIZER_WORDCLOUD_REPORT 표 2 원본; 영어/비영어는 wordfreq 재분류 후속판) | 일치 |
-| r45(1차) K=12, M=2, 실루엣 0.136 | `_explore_r45_meta_factor.json` (코사인거리 행렬로 M 2~11 실루엣 전부 재현) | 일치 |
+| r45(1차) K=12, M=2, 실루엣 0.136 | `_explore_r45_meta_factor.json` (코사인거리 행렬로 M 2∼11 실루엣 전부 재현) | 일치 |
 | 미디어·콘텐츠 노출 1,025건(10.2%), 서브태그 예능·유튜브·영화·드라마 | `media_exposure_v7.json` (팬덤별·서브태그별 합 전부 일치) | 일치 |
 | 매체 크로스오버 6,712건(67.0%), 고유 매체 1,298개 | `media_crossover_index_v7.json` (팬덤별 news_media 불릿·매체 수·다양성 비율) | 일치 |
 | 코퍼스 성장 이력: v6 2,403건 → v7 r72 10,020건, 로스터 교체 6건 | `data/v7_rounds/` 병합·교체 로그 전량 → `corpus_growth_history_v6_v7_full.csv` (타임라인 CSV와 56건 일치) | 일치 |
@@ -55,7 +55,7 @@
 | K=10 토픽 명칭·대표 불릿·대표 팬덤 | `topic_cards_v7.json` (v7_final_10020/docs/METHODOLOGY.md 2-1 표와 명칭 10/10 일치) | 일치 |
 | 광고·상업성 1,302건(13.0%) / 팬덤결속 923건(9.2%), 하이라이트 결속 15·18·30건 | `ad_commercial_index_v7.json`, `fandom_cohesion_index_v7.json` (둘 다 10,020건 기준, 팬덤별 합·업종/유형별 합 전부 원본 집계와 일치) | 일치 |
 | 3D축 독립성 회귀 계수·영향점(god·이효리·BTS) | `chart3d_correlation_live_v7.json` | 일치 |
-| 동결 기준선 0.267 이후 실측 재적합 전부 기각, 최신 v7-65 0.141 | `data/silhouette_gate_timeline/corpus_silhouette_timeline_v7_66_2ch.csv` (v4 종료~r66 2차, 실측 22개 지점 전부 < 0.267) | 일치 |
+| 동결 기준선 0.267 이후 실측 재적합 전부 기각, 최신 v7-65 0.141 | `data/silhouette_gate_timeline/corpus_silhouette_timeline_v7_66_2ch.csv` (v4 종료∼r66 2차, 실측 22개 지점 전부 < 0.267) | 일치 |
 | MCI ↔ 충성도 r=-0.393 (45개 그룹) | `member_pilot_mci_correlation_v7.json` (MCI는 v7-55 시점 8,981건 기준). 저장소의 10,020건 MCI로 재계산하면 r=-0.385 | 근사 일치 |
 
 ## 3. 재현성 범위 — 정직하게
@@ -72,7 +72,7 @@
   K=10 적합이고 **토픽→F코드 배정은 10/10 동일**하다(HTML은 "재적합, 재현성 검증 10/10 통과"본). 명칭은
   φ분포 상위 키워드 자동 조합이라 재적합 시 순서가 바뀔 수 있다.
 - **LDA 재적합 자체**: 최종 라이브 재적합을 만든 `run_lda_v6_live_reference_v7.py`(14개 언어 문자권별
-  토크나이저 라우팅 반영본)는 소스가 남아있지 않다. 저장소의 `run_lda_v6.py`는 v6~r22 시점 파이프라인이라
+  토크나이저 라우팅 반영본)는 소스가 남아있지 않다. 저장소의 `run_lda_v6.py`는 v6∼r22 시점 파이프라인이라
   10,020건에 돌리면 문서 수가 9,954건(구 토크나이저 3토큰 미만 제외)으로 보고서의 10,018건과 다르고
   K-grid 수치도 다르다. 이 스크립트는 로직 참고용이며 최종 진단값의 재현 수단이 아니다.
 - **보조지표 원본 JSON**: 광고·상업성(`ad_commercial_index_v7.json`)과 팬덤결속(`fandom_cohesion_index_v7.json`)은
@@ -82,7 +82,7 @@
   `domestic_regional_index_live_reference_v7.json`, `worldwide_language_index_live_reference_v7.json`(국내지역·세계언어
   지수 원본), `factor_clustering_structure_v7.json`(K→M 코사인거리 행렬), v7-55 시점 MCI 파일. 이 중 국내 지역 지수는 2026-09-22에
   r22 원본을 1,698/1,700셀 재현하는 규칙을 확정해 최종 코퍼스에 재산출했다(`v7_final_10020/analysis/domestic_regional_index/`; 보고서 표 15는
-  동결 스냅샷 시점 값으로 17/20행 재현). 세계 언어 지수 원본은 아카이브명(`worldwide_language_pilot_live_reference_v7.json`)으로 들어와 있다. 2026-09-22 3~4차 추가분: 라이브 점수
+  동결 스냅샷 시점 값으로 17/20행 재현). 세계 언어 지수 원본은 아카이브명(`worldwide_language_pilot_live_reference_v7.json`)으로 들어와 있다. 2026-09-22 3∼4차 추가분: 라이브 점수
   원본 CSV, 제외 불릿 목록, 동결 진단 원본, 매체 크로스오버·미디어 노출 지수, K=9 검증 실험(`k9_validation_v7.json`, 9,614문서 중간
   라운드), 멤버 파일럿 v7, v7_progress(r48), 원본 데이터 아카이브 README. 해당 스크립트는 `data/v7_final/` 아래 그 파일명을 읽도록
   정리돼 있어 파일을 넣으면 바로 실행된다.
@@ -127,7 +127,7 @@ archive/v6_r22_era/    r22(5,612건) 시점 자료 일체 — data/v6_r22_snapsh
 ```
 
 **정리 내역 (2026-09-22)**: 삭제 — `reports/`(v7_final_10020/report_scripts/과 동일 파일), `kpop-fandom-project.tar.gz`(초기 저장소
-아카이브, 내용 전부 저장소에 있음), `data/v6_r22_snapshot/v7_rounds/`(data/v7_rounds/와 동일한 r1~r22 로그),
+아카이브, 내용 전부 저장소에 있음), `data/v6_r22_snapshot/v7_rounds/`(data/v7_rounds/와 동일한 r1∼r22 로그),
 `member_mention_pilot_v7.json`(member_mention_index_v7.json과 값 동일), payload 파생 `chart3d_positioning_rows_live_v7.csv`와
 그 스크립트(원본 `fandom_scores_live_reference_v7.csv`가 있음). 이동 — 위 archive/ 항목. v6 단계 병합 로그 3개는 `data/v7_rounds/`로.
 

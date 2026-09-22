@@ -39,10 +39,10 @@ JSON의 집계값과 대조하는 자체 검증 루틴을 포함한다(전부 �
 
 세 스크립트 모두 같은 골격을 공유한다: `matplotlib.use("Agg")`로 헤드리스 렌더링 →
 `NotoSansCJKkr-Regular.otf`를 `FontProperties`로 로드해 한글 깨짐 방지 → JSON 로드 → 색상표
-상수 정의 → `matplotlib` 축 조작(barh/scatter/dendrogram) → PNG(400~450dpi)+SVG 저장.
+상수 정의 → `matplotlib` 축 조작(barh/scatter/dendrogram) → PNG(400∼450dpi)+SVG 저장.
 
 **`build_cohesion_index_v7.py`** — 팬덤결속 지수(보조지표, LDA와 무관한 키워드매칭 지표) 2패널
-Figure. 좌측은 5개 결속 활동 유형(A~E)별 근거문장 순위(`barh`, 내림차순), 우측은 상위 25개
+Figure. 좌측은 5개 결속 활동 유형(A∼E)별 근거문장 순위(`barh`, 내림차순), 우측은 상위 25개
 팬덤의 유형 구성을 누적 막대(stacked barh)로 표시하며 막대 끝에 비중(%) 라벨을 붙인다. BTS·
 임영웅·리센느는 y축 라벨을 굵게 강조.
 
@@ -57,9 +57,9 @@ Figure. 좌측은 5개 결속 활동 유형(A~E)별 근거문장 순위(`barh`, 
    `fcluster`로 계산해 덴드로그램을 그린다. 가지 색상은 그 가지에 속한 토픽들이 전부 같은
    F코드를 공유하면 해당 F코드 색, 섞여 있으면 회색으로 칠하는 커스텀
    `link_color_func`를 직접 구현.
-2. *오른쪽(PCA biplot)*: `fan_persona_v7.json`의 팬덤별 F1~F5 factor_share 5차원 벡터를
+2. *오른쪽(PCA biplot)*: `fan_persona_v7.json`의 팬덤별 F1∼F5 factor_share 5차원 벡터를
    `sklearn.decomposition.PCA(n_components=2)`로 2차원에 투영하고, 페르소나별로 색을 다르게
-   산점도로 표시. loading 벡터(F1~F5 화살표)를 겹치지 않게 스케일링해서 함께 그리고, 하이라이트
+   산점도로 표시. loading 벡터(F1∼F5 화살표)를 겹치지 않게 스케일링해서 함께 그리고, 하이라이트
    3개 팬덤(BTS·임영웅·리센느)은 밀집 영역 바깥 여백으로 라벨을 이동시켜 테두리 박스+화살표로
    표시(`ax.annotate` + `bbox`).
 
@@ -85,7 +85,7 @@ coherence·diversity·stability·composite_rank_sum 비교표)를 CSV로 풀고,
 행에 `selected=True` 플래그를 붙인다.
 
 **`build_corpus_growth_history_csv.py`** — 4개의 서로 다른 스키마를 가진 병합 로그(v6 1·2차
-라운드, v6.3 시장 다양화, v6.4 언어 다양화, v7 라운드1~22)를 공통 스키마(`stage, fired_at,
+라운드, v6.3 시장 다양화, v6.4 언어 다양화, v7 라운드1∼22)를 공통 스키마(`stage, fired_at,
 before_total, after_total, net_new_bullets, n_touched_fandoms, note`)로 정규화해 하나의
 시계열 CSV로 이어붙인다. 각 행의 `after_total`이 다음 행의 `before_total`과 정확히 이어지는지
 체인 연속성을 자체 검증하며, 라운드21→22 사이 실제 1건 간극을 숨기지 않고 그대로 출력한다.
@@ -122,7 +122,7 @@ before_total, after_total, net_new_bullets, n_touched_fandoms, note`)로 정규�
 1번 데이터 로딩 셀을 교체하면, 합성 데이터가 아닌 실측 파이프라인 결과를 보여주는 노트북으로
 업그레이드할 수 있다(아직 미적용 — 이 노트북 자체는 현재 GitHub 저장소에 없다).
 
-실제 원본 파이프라인 `run_lda_v6.py`(v6~v7 r22 시점, 재구성본이 아닌 실물)는 저장소 루트에 있다.
+실제 원본 파이프라인 `run_lda_v6.py`(v6∼v7 r22 시점, 재구성본이 아닌 실물)는 저장소 루트에 있다.
 2026-09-21 정리에서 `--data`/`--out` 인자를 붙여 두 코퍼스 어디에나 돌릴 수 있게 했고(기본값: r22 스냅샷 →
 `output/lda_rerun/`), 파이프라인 로직은 건드리지 않았다. 단 최종 라이브 재적합(10,020건, K=8/M=5/실루엣 0.046)을
 만든 `run_lda_v6_live_reference_v7.py`(14개 언어 토크나이저 라우팅 반영본)는 소스가 없어, 이 스크립트로
@@ -133,10 +133,10 @@ before_total, after_total, net_new_bullets, n_touched_fandoms, note`)로 정규�
 | 스크립트 | 입력 | 출력 |
 |---|---|---|
 | `verify_v7_final_consistency.py` (루트) | `data/v7_final/*` 전부 | 보고서·KEY_FINDINGS 수치 96개 항목을 파일에서 재계산해 일치/불일치 출력 (현재 101/101 일치. χ²는 `positioning_map_correlation_live_v7.json`의 0.5 임계값 분할표로 재현) |
-| `v7_final_10020/data_export/extract_html_payloads.py` | `3D_포지셔닝맵_국내100팬덤.html`, `Persona_결정공간.html` | HTML에 리터럴로 내장된 데이터 객체를 그대로 복사 → `data/v7_final/chart3d_payload_live_reference_v7.json`(라이브 100개 팬덤 점수·4구획·라이브 재적합 진단), `persona_decision_space_v7.json`(동결 K=10 토픽명·F코드·PCA·F1~F5 비중) |
+| `v7_final_10020/data_export/extract_html_payloads.py` | `3D_포지셔닝맵_국내100팬덤.html`, `Persona_결정공간.html` | HTML에 리터럴로 내장된 데이터 객체를 그대로 복사 → `data/v7_final/chart3d_payload_live_reference_v7.json`(라이브 100개 팬덤 점수·4구획·라이브 재적합 진단), `persona_decision_space_v7.json`(동결 K=10 토픽명·F코드·PCA·F1∼F5 비중) |
 | `v7_final_10020/data_export/build_bullets_flat_csv.py` | `fandoms_v3_100.json` (`--src`, 기본 v7_final) | `bullets_flat_v7_final.csv` 10,020행 (r22에 쓰면 기존 `bullets_flat_v6_r22.csv`와 바이트 단위 동일 결과) |
 | `v7_final_10020/data_export/build_lda_k_grid_csv.py` | LDA 진단 JSON (`--src`, 기본 라이브 참고 재적합) | `lda_k_grid_live_reference_v7.csv` (r22에 쓰면 기존 `lda_k_grid_v6.csv`와 동일) |
-| `v7_final_10020/data_export/build_corpus_growth_history_csv.py` | `archive/v6_r22_era/data/v6_r22_snapshot/v6*_merge_log.json` + `data/v7_rounds/merge_log_r*.json`·`swap_log_r*.json`·`round_log_r70.json` | `corpus_growth_history_v6_v7_full.csv` — v6 1차~v7 r72(10,020건) 69단계 성장 이력, 체인 불연속 4곳을 `chain_gap`에 기록, 타임라인 CSV와 56건 대조 (표의 `scripts/data_export/build_corpus_growth_history_csv.py`(r22까지) 재작성판) |
+| `v7_final_10020/data_export/build_corpus_growth_history_csv.py` | `archive/v6_r22_era/data/v6_r22_snapshot/v6*_merge_log.json` + `data/v7_rounds/merge_log_r*.json`·`swap_log_r*.json`·`round_log_r70.json` | `corpus_growth_history_v6_v7_full.csv` — v6 1차∼v7 r72(10,020건) 69단계 성장 이력, 체인 불연속 4곳을 `chain_gap`에 기록, 타임라인 CSV와 56건 대조 (표의 `scripts/data_export/build_corpus_growth_history_csv.py`(r22까지) 재작성판) |
 | `v7_final_10020/data_export/build_cohesion_media_index_csv.py` | `fandom_cohesion_index_v7.json`, `media_crossover_index_v7.json` | `fandom_cohesion_index_v7.csv`, `media_crossover_index_v7.csv` — 팬덤별 유형/매체 집계 CSV, 합계를 원본 집계 필드와 재대조 |
 
 `verify_v7_final_consistency.py`가 확인하는 핵심은 **충성도·파급효과 점수의 완전 재현**이다: `METHODOLOGY.md`

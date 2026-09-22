@@ -19,7 +19,7 @@ r22 시점에는 원본 지수 JSON이 없어 "브랜드·상업형(광고·앰�
 방법론(원문 `methodology`): 원문 문자열 매칭 2단계 — (1) 광고신호 키워드 존재 여부로 광고성 불릿 판정(단 `협찬`이 유일한 신호이고 "협찬 없이"류
 부정형이면 제외, v7-40 부정 가드) → (2) 판정된 불릿에서만 20개 업종 키워드 태깅. LDA 토픽·F Impact Pathway와 무관한 독립 보조지표.
 
-## 노트북이 확인한 것 (1~7절)
+## 노트북이 확인한 것 (1∼7절)
 
 1. **무결성** — 팬덤별 근거문장 수 = 코퍼스 실측 100/100, `ad_share = n_ad/n_total` 100/100, `top_industry`가 최다 업종(동점 포함) 100/100,
    광고성문장수 합 1,302 = `total_ad_bullets`, 업종별 합 = `industry_totals`, 1건 이상 팬덤 98 = JSON.
@@ -38,7 +38,7 @@ r22 시점에는 원본 지수 JSON이 없어 "브랜드·상업형(광고·앰�
 ## 이 문서와 함께 보는 파일
 
 - `data/v7_final/ad_commercial_index_v7.json` / `.csv` — 원본과 CSV(`v7_final_10020/indices_csv/build_ad_commercial_index_csv.py` 산출).
-- `ad_commercial_index_v7.ipynb` — 위 1~7절 실행 기록.
+- `ad_commercial_index_v7.ipynb` — 위 1∼7절 실행 기록.
 - `archive/v6_r22_era/Ad_Commercial Pilot/` — r22 시점 문서·노트북(LDA 대체 지표 판).
 
 ## 한계

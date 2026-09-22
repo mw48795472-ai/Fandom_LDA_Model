@@ -40,7 +40,7 @@
 ## 6. K→F→Persona 해석 계층
 - `topic_cards_v7.json` — K(LDA 토픽) 카드.
 - `factor_pathway_map_v7.json` — F(Meta Factor→파급경로) 매핑.
-- `fan_persona_v7.json` — Persona 유형(F1~F5 조합) 및 Factor-specific Impact.
+- `fan_persona_v7.json` — Persona 유형(F1∼F5 조합) 및 Factor-specific Impact.
 
 ## 7. v7_rounds/ — 라운드별 병합·교체 로그
 `merge_log_r*.json`(리서치 병합)·`swap_log_r*.json`(팬덤 로스터 교체)·`round_log_r70.json`·

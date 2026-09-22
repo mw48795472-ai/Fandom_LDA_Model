@@ -1,7 +1,7 @@
 # Fandom Cohesion Pilot — 정리 및 실제 데이터 병행 산출
 
-> **2026-09-21 갱신 주** — 이 문서가 "이번 세션에 없다 / 재현 불가"라고 적은 최종 라이브 코퍼스(10,020건)와 최종 산출물이 이제 `data/v7_final/`에 있다(`fandoms_v3_100.json` 10,020건, `fandom_scores_v6.csv`·`fan_persona_v7.json`(동결 스냅샷 7,350건 기준), `language_domain_summary_v7.json`, `lda_v6_diagnostics_live_reference_v7.json`(라이브 재적합 K=8/M=5/실루엣 0.046), `chart3d_payload_live_reference_v7.json`, `member_mention_index_v7.json`). r22 스냅샷(5,612건)은 `data/v6_r22_snapshot/`으로 옮겨졌고, 이 문서의 노트북·스크립트가 참조하는 `../data/v6_r22_snapshot` 경로는 그대로 동작한다. 본문의 5,612건 기준 병행 분석은 그 시점의 기록으로 유지하며, 최종 수치와의 대응은 `README.md` 1~3절 참고.
-> 이 문서 관련 (2026-09-22): 팬덤결속 지수 원본 `data/v7_final/fandom_cohesion_index_v7.json`이 추가됐다(10,020건 기준, 결속 불릿 923건 9.2%, A~E 유형별 카운트, D 게이트 검증치 포함). 이 문서가 "전혀 복구되지 않는다"고 적은 유형별 매칭 결과가 그 파일에 있다. `charts/build_cohesion_index_v7.py`·`_right_only.py`를 그 파일로 실행해 차트가 생성됨을 확인했다(한글 폰트는 KFONT_PATH 지정 필요).
+> **2026-09-21 갱신 주** — 이 문서가 "이번 세션에 없다 / 재현 불가"라고 적은 최종 라이브 코퍼스(10,020건)와 최종 산출물이 이제 `data/v7_final/`에 있다(`fandoms_v3_100.json` 10,020건, `fandom_scores_v6.csv`·`fan_persona_v7.json`(동결 스냅샷 7,350건 기준), `language_domain_summary_v7.json`, `lda_v6_diagnostics_live_reference_v7.json`(라이브 재적합 K=8/M=5/실루엣 0.046), `chart3d_payload_live_reference_v7.json`, `member_mention_index_v7.json`). r22 스냅샷(5,612건)은 `data/v6_r22_snapshot/`으로 옮겨졌고, 이 문서의 노트북·스크립트가 참조하는 `../data/v6_r22_snapshot` 경로는 그대로 동작한다. 본문의 5,612건 기준 병행 분석은 그 시점의 기록으로 유지하며, 최종 수치와의 대응은 `README.md` 1∼3절 참고.
+> 이 문서 관련 (2026-09-22): 팬덤결속 지수 원본 `data/v7_final/fandom_cohesion_index_v7.json`이 추가됐다(10,020건 기준, 결속 불릿 923건 9.2%, A∼E 유형별 카운트, D 게이트 검증치 포함). 이 문서가 "전혀 복구되지 않는다"고 적은 유형별 매칭 결과가 그 파일에 있다. `charts/build_cohesion_index_v7.py`·`_right_only.py`를 그 파일로 실행해 차트가 생성됨을 확인했다(한글 폰트는 KFONT_PATH 지정 필요).
 
 
 ## 이 문서가 다루는 것
@@ -20,7 +20,7 @@
 작업 디렉터리를 가리키며 **이번 세션에는 존재하지 않는다** — Ad/Commercial Pilot과 정확히
 같은 상황이다.
 
-## 원본 스크립트가 정의하는 5개 결속 활동 유형(A~E)
+## 원본 스크립트가 정의하는 5개 결속 활동 유형(A∼E)
 
 `build_ad_commercial_index_csv.py`(업종 20개를 원본 JSON에서만 읽어와 코드에 전혀 남지
 않았던 경우)와 달리, 이 차트 스크립트는 **5개 카테고리 정의 자체가 코드에 하드코딩되어
@@ -78,7 +78,7 @@ Pilot과 동일하게 **재현이 아니라 병행 산출물**로 다룬다.
 
 ## 한계 — 이번 파일럿이 재현하지 않는 것
 
-1. **5개 유형(A~E)별 원문 키워드 매칭 결과는 전혀 복구되지 않는다.** 유형 이름과 색상은
+1. **5개 유형(A∼E)별 원문 키워드 매칭 결과는 전혀 복구되지 않는다.** 유형 이름과 색상은
    코드에 남아있지만, "어떤 키워드로 어떻게 매칭했는지"(정확한 키워드 사전, 멀티라벨 규칙)
    자체는 원본 JSON 생성 스크립트가 아니라 이 시각화 스크립트에는 들어있지 않다.
 2. **"팬덤결속 근거문장 수"(정수 카운트, 멀티라벨 포함 가능)와 "결속형 비중"(LDA 연속

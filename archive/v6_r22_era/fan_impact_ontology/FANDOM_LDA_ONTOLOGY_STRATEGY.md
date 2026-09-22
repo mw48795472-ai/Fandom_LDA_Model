@@ -1,7 +1,7 @@
 # Fandom-omics LDA 고도화 전략
 
-> **2026-09-21 갱신 주** — 이 문서가 "이번 세션에 없다 / 재현 불가"라고 적은 최종 라이브 코퍼스(10,020건)와 최종 산출물이 이제 `data/v7_final/`에 있다(`fandoms_v3_100.json` 10,020건, `fandom_scores_v6.csv`·`fan_persona_v7.json`(동결 스냅샷 7,350건 기준), `language_domain_summary_v7.json`, `lda_v6_diagnostics_live_reference_v7.json`(라이브 재적합 K=8/M=5/실루엣 0.046), `chart3d_payload_live_reference_v7.json`, `member_mention_index_v7.json`). r22 스냅샷(5,612건)은 `data/v6_r22_snapshot/`으로 옮겨졌고, 이 문서의 노트북·스크립트가 참조하는 `../data/v6_r22_snapshot` 경로는 그대로 동작한다. 본문의 5,612건 기준 병행 분석은 그 시점의 기록으로 유지하며, 최종 수치와의 대응은 `README.md` 1~3절 참고.
-> 이 문서 관련: 최종 제출본의 해석 계층은 동결 스냅샷 v7-40(7,350건) 기준 K=10·M=5·실루엣 0.267이며, K=10 토픽→F코드 배정과 F1~F5 비중은 `data/v7_final/persona_decision_space_v7.json`·`fandom_scores_v6.csv`에 있다.
+> **2026-09-21 갱신 주** — 이 문서가 "이번 세션에 없다 / 재현 불가"라고 적은 최종 라이브 코퍼스(10,020건)와 최종 산출물이 이제 `data/v7_final/`에 있다(`fandoms_v3_100.json` 10,020건, `fandom_scores_v6.csv`·`fan_persona_v7.json`(동결 스냅샷 7,350건 기준), `language_domain_summary_v7.json`, `lda_v6_diagnostics_live_reference_v7.json`(라이브 재적합 K=8/M=5/실루엣 0.046), `chart3d_payload_live_reference_v7.json`, `member_mention_index_v7.json`). r22 스냅샷(5,612건)은 `data/v6_r22_snapshot/`으로 옮겨졌고, 이 문서의 노트북·스크립트가 참조하는 `../data/v6_r22_snapshot` 경로는 그대로 동작한다. 본문의 5,612건 기준 병행 분석은 그 시점의 기록으로 유지하며, 최종 수치와의 대응은 `README.md` 1∼3절 참고.
+> 이 문서 관련: 최종 제출본의 해석 계층은 동결 스냅샷 v7-40(7,350건) 기준 K=10·M=5·실루엣 0.267이며, K=10 토픽→F코드 배정과 F1∼F5 비중은 `data/v7_final/persona_decision_space_v7.json`·`fandom_scores_v6.csv`에 있다.
 
 
 **K-Topic → F-Meta Factor → Fan Persona 직관성 개선 및 영향경로 기반 재설계**
@@ -85,11 +85,11 @@ LDA의 K는 토픽 수를 의미하므로, 지역 공간분석에서 사용하�
 
 | 항목 | 표준 출력 |
 |---|---|
-| Topic ID | K1~K8 |
-| 대표 키워드 | 상위 10~15개 |
-| 대표 근거문장 | 검증된 대표 사례 2~3개 |
+| Topic ID | K1∼K8 |
+| 대표 키워드 | 상위 10∼15개 |
+| 대표 근거문장 | 검증된 대표 사례 2∼3개 |
 | 대표 팬덤 | 해당 Topic 비중이 높은 팬덤 Top 5 |
-| 연결 Meta Factor | F1~F5 |
+| 연결 Meta Factor | F1∼F5 |
 | 주요 Impact | Loyalty / Spillover / 지역경제 등 |
 
 ## 3. F-Meta Factor 고도화 전략
@@ -131,7 +131,7 @@ Pathway'로 정의해, 팬덤 행동이 어떤 가치로 전환되는지를 설�
 | 4. 군집화 | Hierarchical clustering | 동일 |
 | 5. 해석 | 휴리스틱 라벨 | 영향경로 ontology 적용 |
 | 6. QA | 라벨 육안 확인 | Topic-Factor 매핑률 + 미매핑 경보 |
-| 7. 출력 | F0~F4 중심 | F1~F5 영향경로 + 근거 + 대표 팬덤 |
+| 7. 출력 | F0∼F4 중심 | F1∼F5 영향경로 + 근거 + 대표 팬덤 |
 
 > **권장 원칙** — 통계적 군집화는 그대로 두고, 의미 해석 계층만 고도화한다. 이렇게 하면 기존
 > v7과의 비교 가능성을 유지하면서도 보고서의 직관성을 크게 높일 수 있다.
@@ -317,7 +317,7 @@ silhouette=0.154)과 정확히 일치하지 않는다 — 아마 라운드22 이
 스냅샷을 기준으로 작성된 것으로 보인다. 또한 최종 제출 보고서(`docs/METHODOLOGY.md` 기준
 코퍼스 10,020건, K=10, M=5, silhouette=0.267, 실현 Persona 4종: 집단동원형·원정소비형·
 현장상업형·글로벌투어형)와도 K값이 다르다. 즉 이 전략문서·v6 스냅샷·최종 제출본은 서로 다른
-세 시점의 스냅샷이며, 이 문서에 담긴 F1~F5 명칭·Persona 조합 표는 (문서 스스로도 여러 번
+세 시점의 스냅샷이며, 이 문서에 담긴 F1∼F5 명칭·Persona 조합 표는 (문서 스스로도 여러 번
 명시하듯) **설계 예시이지 확정된 최종 라벨이 아니다**. 함께 제공하는
 `analysis/fan_impact_pathway_ontology.ipynb`는 이 전략을 실제 복구 데이터에 적용해보는
 노트북이며, 그 결과가 이 문서의 예시 표와 다르게 나오는 부분(특히 6절 Persona 조합, 9절

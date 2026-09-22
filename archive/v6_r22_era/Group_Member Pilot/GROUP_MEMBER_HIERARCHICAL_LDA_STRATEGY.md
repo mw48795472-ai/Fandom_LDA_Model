@@ -1,6 +1,6 @@
 # 팬덤 LDA 분석 고도화 전략 보고서 — Group–Unit–Member Hierarchical LDA (v4 → v5 FPU)
 
-> **2026-09-21 갱신 주** — 이 문서가 "이번 세션에 없다 / 재현 불가"라고 적은 최종 라이브 코퍼스(10,020건)와 최종 산출물이 이제 `data/v7_final/`에 있다(`fandoms_v3_100.json` 10,020건, `fandom_scores_v6.csv`·`fan_persona_v7.json`(동결 스냅샷 7,350건 기준), `language_domain_summary_v7.json`, `lda_v6_diagnostics_live_reference_v7.json`(라이브 재적합 K=8/M=5/실루엣 0.046), `chart3d_payload_live_reference_v7.json`, `member_mention_index_v7.json`). r22 스냅샷(5,612건)은 `data/v6_r22_snapshot/`으로 옮겨졌고, 이 문서의 노트북·스크립트가 참조하는 `../data/v6_r22_snapshot` 경로는 그대로 동작한다. 본문의 5,612건 기준 병행 분석은 그 시점의 기록으로 유지하며, 최종 수치와의 대응은 `README.md` 1~3절 참고.
+> **2026-09-21 갱신 주** — 이 문서가 "이번 세션에 없다 / 재현 불가"라고 적은 최종 라이브 코퍼스(10,020건)와 최종 산출물이 이제 `data/v7_final/`에 있다(`fandoms_v3_100.json` 10,020건, `fandom_scores_v6.csv`·`fan_persona_v7.json`(동결 스냅샷 7,350건 기준), `language_domain_summary_v7.json`, `lda_v6_diagnostics_live_reference_v7.json`(라이브 재적합 K=8/M=5/실루엣 0.046), `chart3d_payload_live_reference_v7.json`, `member_mention_index_v7.json`). r22 스냅샷(5,612건)은 `data/v6_r22_snapshot/`으로 옮겨졌고, 이 문서의 노트북·스크립트가 참조하는 `../data/v6_r22_snapshot` 경로는 그대로 동작한다. 본문의 5,612건 기준 병행 분석은 그 시점의 기록으로 유지하며, 최종 수치와의 대응은 `README.md` 1∼3절 참고.
 > 이 문서 관련: 멤버 집중도 지수(MCI)의 최종본은 `data/v7_final/member_mention_index_v7.json`(45개 그룹, 10,020건 기준, 예: BTS 227건 중 멤버명 언급 101건·MCI 0.241)이고, 파일럿(23개 그룹, r22)은 `data/v6_r22_snapshot/member_mention_pilot_v6.json`.
 
 
@@ -50,13 +50,13 @@ Concentration Index(MCI)·Group–Member Synergy를 핵심 지표로 추가한�
 |---|---|---|
 | 분석 대상 | 100개 팬덤 | 유지 |
 | 근거문장 | 1,035건 | Entity/언어/시장/이벤트 메타데이터 추가 |
-| LDA | K=8 최종 | K=5~30 + coherence/stability 검증 |
+| LDA | K=8 최종 | K=5∼30 + coherence/stability 검증 |
 | 충성도·파급효과 | 근거문장+정량지표+핵심어 | Impact와 Coverage 분리 |
 | 3D Z축 | 근거문장 총량 | Member Concentration/Factor Diversity 또는 외부 engagement |
 | Entity | 팬덤/아티스트 중심 | Group→Unit→Member 계층 |
 
 기존 스코어링은 근거문장 1건당 1.0점, 정량지표 단위당 +0.5점, 핵심어 일치당 +0.3점을 부여한
-뒤 100개 팬덤 전체에서 0~1로 정규화하는 구조다. 이는 버전 간 비교에 유리하지만 자료량이 많은
+뒤 100개 팬덤 전체에서 0∼1로 정규화하는 구조다. 이는 버전 간 비교에 유리하지만 자료량이 많은
 팬덤에 구조적 이점을 줄 수 있다. [기존 보고서 근거]
 
 > **NOTE** 고도화의 핵심은 기존 Raw Score를 폐기하는 것이 아니라 Raw Evidence →
@@ -169,7 +169,7 @@ S/A/B는 영향력 순위가 아니라 '멤버 단위 조사 필요성'의 등�
 | B+ | ITZY | 예지, 류진, 유나, 채령 등 | 핵심 |
 | B+ | STAYC | 시은, 윤, 세은 등 | 핵심 |
 | B+ | OH MY GIRL | 아린, 유아, 미미, 승희 등 | 핵심 |
-| B | Apink | 정은지, 윤보미, 김남주 등 | 2~3명 |
+| B | Apink | 정은지, 윤보미, 김남주 등 | 2∼3명 |
 | B | 여자친구 | 예린, 유주, 신비, 엄지, 은하 등 | 주요 |
 | B | iKON | BOBBY, 송윤형, DK 등 | 핵심 |
 | B | DAY6 | Young K, 원필, 성진 등 | 주요 |
@@ -226,7 +226,7 @@ entity_id, language, market, source_type, date, url, event_id를 기록한다. K
 | Integrated Corpus | Group+Member | 전체 생태계 | Cross-level Topics/Factors |
 
 기존 LDA는 K=8,10,12,14,16,18,20을 비교해 perplexity가 가장 낮은 K=8을 최종 채택했다.
-고도화에서는 K=5~30에서 perplexity뿐 아니라 coherence, topic diversity, seed stability,
+고도화에서는 K=5∼30에서 perplexity뿐 아니라 coherence, topic diversity, seed stability,
 bootstrap stability, human interpretability를 함께 검증한다.
 
 | 지표 | 목적 | 기준 |
@@ -330,7 +330,7 @@ Entity 구조가 갖춰지면 `Group → Member → Topic → Meta Factor → In
 | 2 | KR/EN/활동시장 보강 | evidence_v4.json | Coverage audit |
 | 3 | Event dedup + Quality | event/evidence table | 중복 사건 |
 | 4 | Corpus 분리 | 3 corpus | 분포 확인 |
-| 5 | LDA K=5~30 | topic matrix | coherence/stability |
+| 5 | LDA K=5∼30 | topic matrix | coherence/stability |
 | 6 | Topic→Factor | factor matrix | 해석성 |
 | 7 | Score 재산출 | Loyalty/Spillover | Coverage 비교 |
 | 8 | Member metrics | Share/MCI/Synergy | 민감도 |
@@ -398,12 +398,12 @@ NCT는 Group→Unit→Member 구조의 검증 사례로 별도 처리해야 한�
 | member_research_level | S/A/B/C | 조사 강도 |
 | member_count | int | 조사 대상 멤버 수 |
 | unit_structure | 0/1 | 유닛 존재 여부 |
-| coverage_gap | 0~1 | 관측 부족 |
-| member_independence | 0~1 | 개인 활동 독립성 |
+| coverage_gap | 0∼1 | 관측 부족 |
+| member_independence | 0∼1 | 개인 활동 독립성 |
 | member_industry_count | int | 활동 산업 수 |
-| member_impact_share | 0~1 | 개인 영향 비중 |
-| mci | 0~1 | 멤버 영향 집중도 |
-| synergy | 0~1 | 그룹-개인 결합효과 |
+| member_impact_share | 0∼1 | 개인 영향 비중 |
+| mci | 0∼1 | 멤버 영향 집중도 |
+| synergy | 0∼1 | 그룹-개인 결합효과 |
 
 ## 부록 B. 기반 자료 및 근거 메모
 
@@ -710,7 +710,7 @@ Member → Topic → Meta Factor → Industry/Region'이라는 계층적 Fandom-
 
 - **이미 실행된 것**: Coverage Index 5-가중치 공식(2.3절)은 `fandom_scores_v6.json`의
   `coverage_detail.weights`에 정확히 같은 값(Language 0.30/Market 0.25/Source-Type 0.20/
-  Time 0.15/Entity 0.10)으로 실제 반영되어 있다. Member Impact Share와 MCI(8.1~8.2절,
+  Time 0.15/Entity 0.10)으로 실제 반영되어 있다. Member Impact Share와 MCI(8.1∼8.2절,
   v5의 8절)도 `member_mention_pilot_v6.json`에 23개 그룹에 대해 실제 파일럿 형태로 이미
   존재한다 — 다만 이 파일 자체가 "그룹 단위로 이미 수집된 근거문장 내 멤버명 언급 횟수
   기반"이라고 명시하듯, 멤버별 **독립 리서치**(Group Corpus와 분리된 Member Corpus)는 아직
