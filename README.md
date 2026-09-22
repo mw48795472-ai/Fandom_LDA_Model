@@ -121,15 +121,19 @@ flowchart LR
 | Persona | 어떤 방식으로 작동하는가 | 상위 2개 F 조합 10가지 중 실현 4유형: **글로벌투어형 43**(F3+F5) · **현장상업형 31**(F3+F4) · **원정소비형 17**(F2+F3) · **집단동원형 9**(F1+F3) — 전부 F3 공유 | `fan_persona_v7.json` |
 | Loyalty·Spillover | 얼마나 강한가 | 점수를 F별로 분해한 Factor-specific Impact = 비중 × 점수 | `fan_persona_v7.json` |
 
-| Fan Persona Map (강조 표시 없음, `charts/build_persona_map_v7.py`) | 경로별(F1∼F5) 점수 분해 |
-|---|---|
-| ![Persona map](assets/readme/fig05_persona_map.png) | ![Factor-specific](assets/readme/fig06_factor_specific_impact.png) |
+<p align="center"><img src="assets/readme/fig05_persona_map.png" alt="Fan Persona Map" width="640"></p>
+
+*그림 5. Fan Persona Map — 팬충성도 × 파급효과 평면의 페르소나 4유형 분포(글로벌투어형 43 · 현장상업형 31 · 원정소비형 17 · 집단동원형 9).*
+
+![경로별(F1∼F5) 점수 분해](assets/readme/fig06_factor_specific_impact.png)
+
+*그림 6. 경로별(F1∼F5) 팬충성도·파급효과 분해 — BTS·임영웅·리센느와 합산 상위 17개 팬덤. 세 팬덤 모두 1위 경로는 F3(현장경제)로 같지만 F5(글로벌 확산) 기여는 BTS 0.201 > 임영웅 0.117 > 리센느 0.076으로 갈린다.*
 
 | K→M 군집화 덴드로그램 | PCA 투영 (페르소나 결정공간) |
 |---|---|
 | ![dendrogram](assets/readme/fig07a_persona_dendrogram.png) | ![pca](assets/readme/fig07b_persona_pca.png) |
 
-*그림 5∼7. 왼쪽 덴드로그램은 토픽 φ분포의 코사인 거리로 K=10을 M=5로 묶는 과정(실루엣 최대 M 자동 선택), 오른쪽 PCA는 페르소나를 결정하는 F1∼F5 비중 공간(PC1 40.8%, PC2 30.8%). 재현 노트북: `v7_final_10020/analysis/persona_decision_space/` (K→F 10/10, 페르소나 100/100, PCA 좌표 차이 5e-6).*
+*그림 7. 왼쪽 덴드로그램은 토픽 φ분포의 코사인 거리로 K=10을 M=5로 묶는 과정(실루엣 최대 M 자동 선택), 오른쪽 PCA는 페르소나를 결정하는 F1∼F5 비중 공간(PC1 40.8%, PC2 30.8%). 재현 노트북: `v7_final_10020/analysis/persona_decision_space/` (K→F 10/10, 페르소나 100/100, PCA 좌표 차이 5e-6).*
 
 ---
 
