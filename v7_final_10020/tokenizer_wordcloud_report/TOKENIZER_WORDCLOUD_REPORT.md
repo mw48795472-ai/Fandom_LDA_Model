@@ -225,6 +225,8 @@ jieba는 건너뛰도록 해 이중 토큰화를 막았다(원인7, v7 76라운�
   그대로 있어, 워드클라우드(그림 3)의 글자 크기 근거를 파일에서 확인할 수 있다.
 - fugashi(unidic-lite)·jieba·pythainlp 형태소 분석기 자체는 `analysis/tokenizer/
   build_bullet_token_frequency_csv_v7.py`와 `jieba_and_thai_engine_details_v7.py`가 실제로 실행한다.
+- 저장소 코드에 실제로 정의된 불용어 목록(원 파이프라인 `run_lda_v6.py`의 한국어·영어, 토큰 빈도 스크립트의 한국어·영어·라틴 5개 언어·러시아어·일본어·중국어, pythainlp 내장 태국어 1,030개)은
+  `analysis/tokenizer/stopwords/TOKENIZER_STOPWORDS_BY_LANGUAGE.md`와 같은 폴더 CSV에 언어별로 정리되어 있다.
 
 **저장소만으로 재현되지 않는 것:**
 

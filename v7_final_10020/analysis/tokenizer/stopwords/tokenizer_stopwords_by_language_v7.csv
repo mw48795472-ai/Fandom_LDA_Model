@@ -1,0 +1,1504 @@
+﻿출처,스크립트,목록명,언어,세부언어,불용어,비고
+A. 원 파이프라인,run_lda_v6.py,PARTICLES,한국어,ko,으로부터,접미사 제거 규칙
+A. 원 파이프라인,run_lda_v6.py,PARTICLES,한국어,ko,까지,접미사 제거 규칙
+A. 원 파이프라인,run_lda_v6.py,PARTICLES,한국어,ko,에서부터,접미사 제거 규칙
+A. 원 파이프라인,run_lda_v6.py,PARTICLES,한국어,ko,이라는,접미사 제거 규칙
+A. 원 파이프라인,run_lda_v6.py,PARTICLES,한국어,ko,라는,접미사 제거 규칙
+A. 원 파이프라인,run_lda_v6.py,PARTICLES,한국어,ko,에서,접미사 제거 규칙
+A. 원 파이프라인,run_lda_v6.py,PARTICLES,한국어,ko,으로,접미사 제거 규칙
+A. 원 파이프라인,run_lda_v6.py,PARTICLES,한국어,ko,부터,접미사 제거 규칙
+A. 원 파이프라인,run_lda_v6.py,PARTICLES,한국어,ko,에게,접미사 제거 규칙
+A. 원 파이프라인,run_lda_v6.py,PARTICLES,한국어,ko,한테,접미사 제거 규칙
+A. 원 파이프라인,run_lda_v6.py,PARTICLES,한국어,ko,에는,접미사 제거 규칙
+A. 원 파이프라인,run_lda_v6.py,PARTICLES,한국어,ko,에도,접미사 제거 규칙
+A. 원 파이프라인,run_lda_v6.py,PARTICLES,한국어,ko,이나,접미사 제거 규칙
+A. 원 파이프라인,run_lda_v6.py,PARTICLES,한국어,ko,라도,접미사 제거 규칙
+A. 원 파이프라인,run_lda_v6.py,PARTICLES,한국어,ko,이며,접미사 제거 규칙
+A. 원 파이프라인,run_lda_v6.py,PARTICLES,한국어,ko,하며,접미사 제거 규칙
+A. 원 파이프라인,run_lda_v6.py,PARTICLES,한국어,ko,되어,접미사 제거 규칙
+A. 원 파이프라인,run_lda_v6.py,PARTICLES,한국어,ko,됐다,접미사 제거 규칙
+A. 원 파이프라인,run_lda_v6.py,PARTICLES,한국어,ko,했다,접미사 제거 규칙
+A. 원 파이프라인,run_lda_v6.py,PARTICLES,한국어,ko,한다,접미사 제거 규칙
+A. 원 파이프라인,run_lda_v6.py,PARTICLES,한국어,ko,됨,접미사 제거 규칙
+A. 원 파이프라인,run_lda_v6.py,PARTICLES,한국어,ko,임,접미사 제거 규칙
+A. 원 파이프라인,run_lda_v6.py,PARTICLES,한국어,ko,은,접미사 제거 규칙
+A. 원 파이프라인,run_lda_v6.py,PARTICLES,한국어,ko,는,접미사 제거 규칙
+A. 원 파이프라인,run_lda_v6.py,PARTICLES,한국어,ko,이,접미사 제거 규칙
+A. 원 파이프라인,run_lda_v6.py,PARTICLES,한국어,ko,가,접미사 제거 규칙
+A. 원 파이프라인,run_lda_v6.py,PARTICLES,한국어,ko,을,접미사 제거 규칙
+A. 원 파이프라인,run_lda_v6.py,PARTICLES,한국어,ko,를,접미사 제거 규칙
+A. 원 파이프라인,run_lda_v6.py,PARTICLES,한국어,ko,의,접미사 제거 규칙
+A. 원 파이프라인,run_lda_v6.py,PARTICLES,한국어,ko,와,접미사 제거 규칙
+A. 원 파이프라인,run_lda_v6.py,PARTICLES,한국어,ko,과,접미사 제거 규칙
+A. 원 파이프라인,run_lda_v6.py,PARTICLES,한국어,ko,도,접미사 제거 규칙
+A. 원 파이프라인,run_lda_v6.py,PARTICLES,한국어,ko,만,접미사 제거 규칙
+A. 원 파이프라인,run_lda_v6.py,PARTICLES,한국어,ko,로,접미사 제거 규칙
+A. 원 파이프라인,run_lda_v6.py,PARTICLES,한국어,ko,에,접미사 제거 규칙
+A. 원 파이프라인,run_lda_v6.py,PARTICLES,한국어,ko,고,접미사 제거 규칙
+A. 원 파이프라인,run_lda_v6.py,PARTICLES,한국어,ko,서,접미사 제거 규칙
+A. 원 파이프라인,run_lda_v6.py,PARTICLES,한국어,ko,다,접미사 제거 규칙
+A. 원 파이프라인,run_lda_v6.py,PARTICLES,한국어,ko,며,접미사 제거 규칙
+A. 원 파이프라인,run_lda_v6.py,STOPWORDS,한국어,ko,것으로,접미사 제거 후 제외
+A. 원 파이프라인,run_lda_v6.py,STOPWORDS,한국어,ko,것은,접미사 제거 후 제외
+A. 원 파이프라인,run_lda_v6.py,STOPWORDS,한국어,ko,것을,접미사 제거 후 제외
+A. 원 파이프라인,run_lda_v6.py,STOPWORDS,한국어,ko,것이,접미사 제거 후 제외
+A. 원 파이프라인,run_lda_v6.py,STOPWORDS,한국어,ko,것이다,접미사 제거 후 제외
+A. 원 파이프라인,run_lda_v6.py,STOPWORDS,한국어,ko,관련,접미사 제거 후 제외
+A. 원 파이프라인,run_lda_v6.py,STOPWORDS,한국어,ko,나타났다,접미사 제거 후 제외
+A. 원 파이프라인,run_lda_v6.py,STOPWORDS,한국어,ko,당시,접미사 제거 후 제외
+A. 원 파이프라인,run_lda_v6.py,STOPWORDS,한국어,ko,대한,접미사 제거 후 제외
+A. 원 파이프라인,run_lda_v6.py,STOPWORDS,한국어,ko,대해,접미사 제거 후 제외
+A. 원 파이프라인,run_lda_v6.py,STOPWORDS,한국어,ko,됐다,접미사 제거 후 제외
+A. 원 파이프라인,run_lda_v6.py,STOPWORDS,한국어,ko,되는,접미사 제거 후 제외
+A. 원 파이프라인,run_lda_v6.py,STOPWORDS,한국어,ko,되다,접미사 제거 후 제외
+A. 원 파이프라인,run_lda_v6.py,STOPWORDS,한국어,ko,라고,접미사 제거 후 제외
+A. 원 파이프라인,run_lda_v6.py,STOPWORDS,한국어,ko,밝혔다,접미사 제거 후 제외
+A. 원 파이프라인,run_lda_v6.py,STOPWORDS,한국어,ko,아니다,접미사 제거 후 제외
+A. 원 파이프라인,run_lda_v6.py,STOPWORDS,한국어,ko,없는,접미사 제거 후 제외
+A. 원 파이프라인,run_lda_v6.py,STOPWORDS,한국어,ko,없다,접미사 제거 후 제외
+A. 원 파이프라인,run_lda_v6.py,STOPWORDS,한국어,ko,위해,접미사 제거 후 제외
+A. 원 파이프라인,run_lda_v6.py,STOPWORDS,한국어,ko,이다,접미사 제거 후 제외
+A. 원 파이프라인,run_lda_v6.py,STOPWORDS,한국어,ko,이라고,접미사 제거 후 제외
+A. 원 파이프라인,run_lda_v6.py,STOPWORDS,한국어,ko,이후,접미사 제거 후 제외
+A. 원 파이프라인,run_lda_v6.py,STOPWORDS,한국어,ko,있는,접미사 제거 후 제외
+A. 원 파이프라인,run_lda_v6.py,STOPWORDS,한국어,ko,있다,접미사 제거 후 제외
+A. 원 파이프라인,run_lda_v6.py,STOPWORDS,한국어,ko,전했다,접미사 제거 후 제외
+A. 원 파이프라인,run_lda_v6.py,STOPWORDS,한국어,ko,통한,접미사 제거 후 제외
+A. 원 파이프라인,run_lda_v6.py,STOPWORDS,한국어,ko,통해,접미사 제거 후 제외
+A. 원 파이프라인,run_lda_v6.py,STOPWORDS,한국어,ko,하는,접미사 제거 후 제외
+A. 원 파이프라인,run_lda_v6.py,STOPWORDS,한국어,ko,한다,접미사 제거 후 제외
+A. 원 파이프라인,run_lda_v6.py,STOPWORDS,한국어,ko,했다,접미사 제거 후 제외
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,a,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,about,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,according,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,across,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,after,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,all,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,also,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,amid,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,among,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,an,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,and,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,announced,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,another,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,any,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,are,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,as,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,at,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,be,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,been,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,before,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,being,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,between,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,both,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,but,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,by,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,can,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,could,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,currently,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,did,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,do,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,does,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,down,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,during,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,each,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,few,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,first,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,for,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,from,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,had,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,has,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,have,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,he,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,her,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,his,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,if,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,in,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,included,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,including,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,into,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,is,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,it,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,its,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,many,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,may,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,might,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,more,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,most,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,much,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,my,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,new,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,no,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,not,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,of,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,off,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,officially,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,on,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,one,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,onto,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,or,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,other,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,our,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,out,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,over,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,per,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,previously,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,recently,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,reported,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,said,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,says,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,second,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,she,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,should,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,since,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,so,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,some,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,such,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,than,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,that,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,the,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,their,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,then,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,these,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,they,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,third,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,this,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,those,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,three,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,to,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,two,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,under,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,up,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,very,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,via,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,was,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,we,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,were,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,what,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,when,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,where,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,which,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,while,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,who,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,whom,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,will,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,with,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,would,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,you,소문자 비교
+A. 원 파이프라인,run_lda_v6.py,ENGLISH_STOPWORDS,영어,en,your,소문자 비교
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,가장,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,것,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,것으로,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,것은,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,것을,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,것이다,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,관련,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,그,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,그래서,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,그러나,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,그리고,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,까지,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,나,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,다시,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,당시,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,대해,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,더,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,도,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,됐다,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,된,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,된다,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,등,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,등에,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,등은,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,등을,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,등의,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,등이,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,등장,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,따라서,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,또,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,또한,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,라고,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,라며,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,로써,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,만,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,많이,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,및,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,부터,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,수,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,에게,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,에는,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,에도,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,에서,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,에서는,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,위해,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,으로,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,으로써,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,이,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,이나,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,이는,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,이다,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,이라고,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,이라며,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,이를,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,이번,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,이에,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,이전,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,이후,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,있다,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,있으며,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,저,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,통해,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,특히,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,하고,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,하는,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,하는데,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,하며,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,하지만,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,한,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,한편,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,할,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,함께,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,했다,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,KOREAN_STOPWORDS,한국어,ko,현재,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,a,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,about,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,after,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,all,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,also,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,an,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,and,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,are,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,as,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,at,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,be,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,been,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,before,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,being,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,between,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,both,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,but,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,by,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,can,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,could,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,down,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,during,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,each,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,few,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,for,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,from,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,had,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,has,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,have,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,he,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,her,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,his,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,in,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,into,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,is,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,it,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,its,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,just,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,more,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,most,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,not,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,of,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,off,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,on,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,only,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,or,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,other,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,our,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,out,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,over,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,own,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,same,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,she,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,so,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,some,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,such,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,than,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,that,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,the,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,their,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,then,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,these,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,they,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,this,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,those,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,to,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,up,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,was,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,we,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,were,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,will,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,with,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,would,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,you,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,ENGLISH_STOPWORDS,영어,en,your,독자 정의
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,스페인어,es,el,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,스페인어,es,la,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,스페인어,es,los,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,스페인어,es,las,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,스페인어,es,de,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,스페인어,es,del,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,스페인어,es,en,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,스페인어,es,un,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,스페인어,es,una,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,스페인어,es,que,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,스페인어,es,por,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,스페인어,es,para,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,스페인어,es,con,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,스페인어,es,su,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,스페인어,es,sus,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,스페인어,es,es,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,스페인어,es,se,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,스페인어,es,lo,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,스페인어,es,al,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,프랑스어,fr,le,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,프랑스어,fr,les,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,프랑스어,fr,des,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,프랑스어,fr,et,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,프랑스어,fr,un,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,프랑스어,fr,une,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,프랑스어,fr,dans,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,프랑스어,fr,sur,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,프랑스어,fr,avec,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,프랑스어,fr,pour,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,인도네시아어,id,yang,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,인도네시아어,id,dan,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,인도네시아어,id,di,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,인도네시아어,id,ke,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,인도네시아어,id,dari,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,인도네시아어,id,untuk,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,인도네시아어,id,pada,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,인도네시아어,id,dengan,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,인도네시아어,id,ini,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,인도네시아어,id,itu,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,베트남어,vi,và,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,베트남어,vi,của,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,베트남어,vi,là,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,베트남어,vi,có,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,베트남어,vi,cho,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,베트남어,vi,trong,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,베트남어,vi,được,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,베트남어,vi,này,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,베트남어,vi,với,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,튀르키예어,tr,ve,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,튀르키예어,tr,bir,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,튀르키예어,tr,bu,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,튀르키예어,tr,de,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,튀르키예어,tr,da,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,튀르키예어,tr,için,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,LATIN_OTHER_STOPWORDS,튀르키예어,tr,ile,"라틴 통합 목록, 세부언어는 소스 줄 순서"
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,RUSSIAN_STOPWORDS,러시아어,ru,а,키릴 문자
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,RUSSIAN_STOPWORDS,러시아어,ru,в,키릴 문자
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,RUSSIAN_STOPWORDS,러시아어,ru,для,키릴 문자
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,RUSSIAN_STOPWORDS,러시아어,ru,его,키릴 문자
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,RUSSIAN_STOPWORDS,러시아어,ru,её,키릴 문자
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,RUSSIAN_STOPWORDS,러시아어,ru,же,키릴 문자
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,RUSSIAN_STOPWORDS,러시아어,ru,за,키릴 문자
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,RUSSIAN_STOPWORDS,러시아어,ru,и,키릴 문자
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,RUSSIAN_STOPWORDS,러시아어,ru,из,키릴 문자
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,RUSSIAN_STOPWORDS,러시아어,ru,их,키릴 문자
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,RUSSIAN_STOPWORDS,러시아어,ru,к,키릴 문자
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,RUSSIAN_STOPWORDS,러시아어,ru,как,키릴 문자
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,RUSSIAN_STOPWORDS,러시아어,ru,на,키릴 문자
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,RUSSIAN_STOPWORDS,러시아어,ru,не,키릴 문자
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,RUSSIAN_STOPWORDS,러시아어,ru,но,키릴 문자
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,RUSSIAN_STOPWORDS,러시아어,ru,от,키릴 문자
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,RUSSIAN_STOPWORDS,러시아어,ru,по,키릴 문자
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,RUSSIAN_STOPWORDS,러시아어,ru,с,키릴 문자
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,RUSSIAN_STOPWORDS,러시아어,ru,то,키릴 문자
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,RUSSIAN_STOPWORDS,러시아어,ru,что,키릴 문자
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,RUSSIAN_STOPWORDS,러시아어,ru,это,키릴 문자
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,JAPANESE_STOPWORDS,일본어,ja,あの,fugashi 명사·동사·형용사 채택 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,JAPANESE_STOPWORDS,일본어,ja,ある,fugashi 명사·동사·형용사 채택 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,JAPANESE_STOPWORDS,일본어,ja,いる,fugashi 명사·동사·형용사 채택 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,JAPANESE_STOPWORDS,일본어,ja,から,fugashi 명사·동사·형용사 채택 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,JAPANESE_STOPWORDS,일본어,ja,が,fugashi 명사·동사·형용사 채택 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,JAPANESE_STOPWORDS,일본어,ja,こと,fugashi 명사·동사·형용사 채택 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,JAPANESE_STOPWORDS,일본어,ja,この,fugashi 명사·동사·형용사 채택 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,JAPANESE_STOPWORDS,일본어,ja,これ,fugashi 명사·동사·형용사 채택 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,JAPANESE_STOPWORDS,일본어,ja,する,fugashi 명사·동사·형용사 채택 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,JAPANESE_STOPWORDS,일본어,ja,その,fugashi 명사·동사·형용사 채택 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,JAPANESE_STOPWORDS,일본어,ja,それ,fugashi 명사·동사·형용사 채택 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,JAPANESE_STOPWORDS,일본어,ja,た,fugashi 명사·동사·형용사 채택 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,JAPANESE_STOPWORDS,일본어,ja,ため,fugashi 명사·동사·형용사 채택 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,JAPANESE_STOPWORDS,일본어,ja,だ,fugashi 명사·동사·형용사 채택 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,JAPANESE_STOPWORDS,일본어,ja,った,fugashi 명사·동사·형용사 채택 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,JAPANESE_STOPWORDS,일본어,ja,て,fugashi 명사·동사·형용사 채택 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,JAPANESE_STOPWORDS,일본어,ja,で,fugashi 명사·동사·형용사 채택 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,JAPANESE_STOPWORDS,일본어,ja,です,fugashi 명사·동사·형용사 채택 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,JAPANESE_STOPWORDS,일본어,ja,と,fugashi 명사·동사·형용사 채택 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,JAPANESE_STOPWORDS,일본어,ja,な,fugashi 명사·동사·형용사 채택 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,JAPANESE_STOPWORDS,일본어,ja,に,fugashi 명사·동사·형용사 채택 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,JAPANESE_STOPWORDS,일본어,ja,の,fugashi 명사·동사·형용사 채택 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,JAPANESE_STOPWORDS,일본어,ja,は,fugashi 명사·동사·형용사 채택 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,JAPANESE_STOPWORDS,일본어,ja,ます,fugashi 명사·동사·형용사 채택 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,JAPANESE_STOPWORDS,일본어,ja,まで,fugashi 명사·동사·형용사 채택 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,JAPANESE_STOPWORDS,일본어,ja,も,fugashi 명사·동사·형용사 채택 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,JAPANESE_STOPWORDS,일본어,ja,もの,fugashi 명사·동사·형용사 채택 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,JAPANESE_STOPWORDS,일본어,ja,よう,fugashi 명사·동사·형용사 채택 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,JAPANESE_STOPWORDS,일본어,ja,を,fugashi 명사·동사·형용사 채택 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,CHINESE_STOPWORDS,중국어,zh,一个,jieba 분리 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,CHINESE_STOPWORDS,중국어,zh,与,jieba 분리 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,CHINESE_STOPWORDS,중국어,zh,为,jieba 분리 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,CHINESE_STOPWORDS,중국어,zh,之,jieba 분리 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,CHINESE_STOPWORDS,중국어,zh,也,jieba 분리 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,CHINESE_STOPWORDS,중국어,zh,了,jieba 분리 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,CHINESE_STOPWORDS,중국어,zh,以,jieba 분리 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,CHINESE_STOPWORDS,중국어,zh,但,jieba 분리 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,CHINESE_STOPWORDS,중국어,zh,其,jieba 분리 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,CHINESE_STOPWORDS,중국어,zh,又,jieba 분리 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,CHINESE_STOPWORDS,중국어,zh,及,jieba 분리 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,CHINESE_STOPWORDS,중국어,zh,和,jieba 분리 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,CHINESE_STOPWORDS,중국어,zh,因为,jieba 분리 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,CHINESE_STOPWORDS,중국어,zh,在,jieba 분리 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,CHINESE_STOPWORDS,중국어,zh,地,jieba 분리 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,CHINESE_STOPWORDS,중국어,zh,对,jieba 분리 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,CHINESE_STOPWORDS,중국어,zh,就,jieba 분리 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,CHINESE_STOPWORDS,중국어,zh,并,jieba 분리 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,CHINESE_STOPWORDS,중국어,zh,很,jieba 분리 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,CHINESE_STOPWORDS,중국어,zh,得,jieba 분리 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,CHINESE_STOPWORDS,중국어,zh,或,jieba 분리 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,CHINESE_STOPWORDS,중국어,zh,所以,jieba 분리 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,CHINESE_STOPWORDS,중국어,zh,是,jieba 분리 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,CHINESE_STOPWORDS,중국어,zh,此,jieba 분리 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,CHINESE_STOPWORDS,중국어,zh,的,jieba 분리 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,CHINESE_STOPWORDS,중국어,zh,着,jieba 분리 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,CHINESE_STOPWORDS,중국어,zh,而,jieba 분리 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,CHINESE_STOPWORDS,중국어,zh,而且,jieba 분리 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,CHINESE_STOPWORDS,중국어,zh,被,jieba 분리 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,CHINESE_STOPWORDS,중국어,zh,这个,jieba 분리 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,CHINESE_STOPWORDS,중국어,zh,那个,jieba 분리 후 제외
+B. 최종 코퍼스 토큰 빈도,build_bullet_token_frequency_csv_v7.py,CHINESE_STOPWORDS,중국어,zh,都,jieba 분리 후 제외
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,กระทั่ง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,กระทำ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,กระนั้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,กระผม,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,กลับ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,กลุ่ม,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,กลุ่มก้อน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,กลุ่มๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,กล่าว,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,กล่าวคือ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,กว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,กว้าง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,กว้างขวาง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,กว้างๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,กัน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,กันดีกว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,กันดีไหม,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,กันนะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,กันเถอะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,กันเอง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,กันและกัน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,กันไหม,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,กับ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,การ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,กำลัง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,กำลังจะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,กำหนด,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,กู,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ก็,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ก็คือ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ก็จะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ก็ดี,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ก็ตาม,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ก็ตามที,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ก็ตามแต่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ก็ต่อเมื่อ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ก็แค่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ก็แล้วแต่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ก็ได้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ก่อน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ก่อนหน้า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ก่อนหน้านี้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ก่อนๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ขณะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ขณะที่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ขณะนั้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ขณะนี้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ขณะหนึ่ง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ขณะเดียวกัน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ขณะใด,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ขณะใดๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ขวาง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ขวางๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ขอ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ของ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ขั้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ขาด,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ขึ้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ข้า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ข้าง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ข้างต้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ข้างบน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ข้างล่าง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ข้างเคียง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ข้างๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ข้าพเจ้า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ข้าฯ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,คง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,คงจะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,คงอยู่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ครบ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ครบครัน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ครบถ้วน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ครัน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ครับ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ครั้ง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ครั้งกระนั้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ครั้งก่อน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ครั้งครา,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ครั้งคราว,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ครั้งที่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ครั้งนั้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ครั้งนี้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ครั้งละ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ครั้งหนึ่ง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ครั้งหลัง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ครั้งหลังสุด,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ครั้งใด,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ครั้งไหน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ครั้งๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ครา,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,คราที่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ครานั้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ครานี้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,คราว,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,คราวก่อน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,คราวที่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,คราวนั้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,คราวนี้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,คราวละ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,คราวหนึ่ง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,คราวหน้า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,คราวหลัง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,คราวโน้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,คราวใด,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,คราวไหน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,คราวๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,คราหนึ่ง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,คราใด,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,คราไหน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,คล้าย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,คล้ายกัน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,คล้ายกันกับ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,คล้ายกับ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,คล้ายกับว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,คล้ายว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ควร,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ความ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,คะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,คำ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,คิด,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,คิดว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,คือ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,คุณ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,คุณๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ค่อน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ค่อนข้าง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ค่อนข้างจะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ค่อนมาทาง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ค่อย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ค่อยไปทาง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ค่อยๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ค่ะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ง่าย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ง่ายๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จด,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จนกระทั่ง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จนกว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จนขณะนี้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จนตลอด,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จนถึง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จนทั่ว,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จนบัดนี้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จนเมื่อ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จนแม้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จนแม้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จรด,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จรดกับ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จริง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จริงจัง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จริงๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จริงๆจังๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จวน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จวนจะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จวนเจียน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จวบ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จวบกับ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จวบจน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จะได้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จัง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จังๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จัด,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จัดการ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จัดงาน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จัดตั้ง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จัดทำ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จัดหา,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จัดแจง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จัดให้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จับ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จาก,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จากนั้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จากนี้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จากนี้ไป,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จำ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จำพวก,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จำเป็น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จึง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จึงจะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จึงเป็น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จู่ๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จ้ะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จ้า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จ๊ะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,จ๋า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ฉะนั้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ฉะนี้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ฉัน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ชาว,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ช่วง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ช่วงก่อน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ช่วงต่อไป,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ช่วงถัดไป,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ช่วงที่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ช่วงท้าย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ช่วงนั้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ช่วงนี้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ช่วงระหว่าง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ช่วงหน้า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ช่วงหลัง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ช่วงแรก,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ช่วงๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ช่วย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ช้า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ช้านาน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ช้าๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ซะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ซะก่อน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ซะจน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ซะจนกระทั่ง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ซะจนถึง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ซึ่ง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ซึ่งกัน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ซึ่งกันและกัน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ซึ่งก็,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ซึ่งก็คือ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ซึ่งได้แก่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ซึ่งๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ณ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ดัง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ดังกล่าว,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ดังกับ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ดังกับว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ดังเก่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ดังเคย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ดั่ง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ดั่งกับ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ดั่งกับว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ดั่งเก่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ดั่งเคย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ด้วย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ด้วยกัน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ด้วยที่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ด้วยประการฉะนี้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ด้วยว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ด้วยเช่นกัน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ด้วยเพราะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ด้วยเหตุที่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ด้วยเหตุนั้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ด้วยเหตุนี้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ด้วยเหตุว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ด้วยเหตุเพราะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ด้วยเหมือนกัน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ด้าน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ตน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ตนฯ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ตนเอง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ตรง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ตรงๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ตลอด,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ตลอดกาล,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ตลอดกาลนาน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ตลอดจน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ตลอดถึง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ตลอดทั่ว,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ตลอดทั่วถึง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ตลอดทั่วทั้ง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ตลอดทั้ง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ตลอดปี,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ตลอดมา,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ตลอดระยะเวลา,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ตลอดวัน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ตลอดศก,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ตลอดเวลา,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ตลอดไป,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ตั้ง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ตั้งแต่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ตาม,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ตามด้วย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ตามที่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ตามแต่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ตามๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ต่อ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ต่อกัน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ต่าง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ต่างก็,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ต่างหาก,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ต่างๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ต้อง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ถึง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ถึงจะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ถึงบัดนั้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ถึงบัดนี้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ถึงอย่างไร,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ถึงเมื่อ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ถึงเมื่อใด,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ถึงเมื่อไร,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ถึงแก่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ถึงแม้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ถึงแม้จะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ถึงแม้ว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ถือ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ถือว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ถูก,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ถูกต้อง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ถูกๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ถ้า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ถ้าจะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ถ้าหาก,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทรง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทัน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทันที,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทันทีทันใด,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทันใดนั้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทั่ว,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทั้ง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทั้งคน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทั้งตัว,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทั้งที,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทั้งที่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทั้งนั้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทั้งนั้นด้วย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทั้งนั้นเพราะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทั้งนี้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทั้งปวง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทั้งมวล,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทั้งสิ้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทั้งหมด,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทั้งหลาย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทั้งเป็น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทั้งๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทาง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทำให้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทำไม,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทำไร,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทำๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ที,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทีละ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทีเดียว,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทีเถอะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทีใด,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทีไร,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทีๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ที่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ที่จริง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ที่ซึ่ง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ที่นั้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ที่นี้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ที่ละ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ที่ว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ที่สุด,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ที่แท้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ที่แท้จริง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ที่แล้ว,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ที่แห่งนั้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ที่ใด,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ที่ได้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ที่ไหน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ที่ๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทุก,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทุกคน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทุกครั้ง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทุกครา,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทุกคราว,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทุกชิ้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทุกตัว,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทุกทาง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทุกที,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทุกที่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทุกวัน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทุกวันนี้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทุกสิ่ง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทุกหน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทุกอย่าง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทุกอัน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทุกเมื่อ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทุกแห่ง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทุกๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทํา,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ทําให้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นอก,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นอกจาก,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นอกจากที่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นอกจากนั้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นอกจากนี้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นอกจากว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นอกนั้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นอกเหนือ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นอกเหนือจาก,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นัก,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นักๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นับ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นับจากนั้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นับจากนี้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นับตั้งแต่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นับแต่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นับแต่ที่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นับแต่นั้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นับแต่นี้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นั่น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นั่นเป็น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นั่นเอง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นั่นแหละ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นั่นไง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นั้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นั้นไว,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นั้นๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นาง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นางสาว,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นาน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นานๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นาย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นำ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นำพา,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นำมา,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นิด,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นิดหน่อย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นิดๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นี่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นี่นา,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นี่เอง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นี่แน่ะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นี่แหละ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นี่ไง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นี้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นี้เอง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นี้แหล่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นู่น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นู้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,น่ะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,น่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,น่าจะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,น้อย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,น้อยกว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,น้อยๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,นํา,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,บน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,บอก,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,บอกว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,บอกแล้ว,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,บัดดล,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,บัดนั้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,บัดนี้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,บัดเดี๋ยวนี้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,บาง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,บางกว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,บางขณะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,บางครั้ง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,บางครา,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,บางคราว,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,บางที,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,บางที่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,บางแห่ง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,บางๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,บ่อย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,บ่อยกว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,บ่อยครั้ง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,บ่อยๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,บ้าง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ปฏิบัติ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ประกอบ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ประการ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ประการฉะนี้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ประการหนึ่ง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ประการใด,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ประมาณ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ประสบ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ปรับ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ปรากฏ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ปรากฏว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ปัจจุบัน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ปิด,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ผล,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ผิด,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ผิดๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ผู้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ผู้ใด,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ผ่าน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ผ่านๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ฝ่าย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ฝ่ายใด,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,พบ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,พบว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,พยายาม,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,พร้อม,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,พร้อมกัน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,พร้อมกับ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,พร้อมด้วย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,พร้อมทั้ง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,พร้อมที่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,พร้อมเพียง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,พวก,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,พวกกัน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,พวกกู,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,พวกคุณ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,พวกฉัน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,พวกที่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,พวกท่าน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,พวกนั้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,พวกนี้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,พวกนู้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,พวกมัน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,พวกมึง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,พวกเขา,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,พวกเธอ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,พวกแก,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,พวกโน้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,พอ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,พอกัน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,พอควร,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,พอจะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,พอดี,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,พอตัว,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,พอที,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,พอที่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,พอสม,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,พอสมควร,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,พอเพียง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,พอเหมาะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,พอแล้ว,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,พอๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,พา,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,พึง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,พึ่ง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,พื้นๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,พูด,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ภาค,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ภาคฯ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ภาย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ภายนอก,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ภายภาค,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ภายภาคหน้า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ภายหน้า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ภายหลัง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ภายใต้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ภายใน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,มอง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,มองว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,มัก,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,มักจะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,มัน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,มันๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,มั้ย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,มั้ยนะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,มั้ยนั่น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,มั้ยล่ะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,มั้ยเนี่ย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,มั๊ย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,มา,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,มาก,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,มากกว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,มากมาย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,มิ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,มิฉะนั้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,มิใช่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,มิได้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,มี,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,มีแต่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,มึง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,มุ่ง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,มุ่งหมาย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,มุ่งเน้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ยก,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ยกให้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ยอม,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ยอมรับ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ยัง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ยังคง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ยังงั้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ยังงี้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ยังจะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ยังแต่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ยังโง้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ยังไง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ยาก,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ยาว,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ยาวนาน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ยิ่ง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ยิ่งกว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ยิ่งขึ้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ยิ่งขึ้นไป,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ยิ่งจน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ยิ่งจะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ยิ่งนัก,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ยิ่งเมื่อ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ยิ่งแล้ว,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ยิ่งใหญ่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ยืนนาน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ยืนยง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ยืนยัน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ยืนยาว,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ย่อม,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ย่อย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,รวด,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,รวดเร็ว,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,รวม,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,รวมกัน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,รวมด้วย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,รวมถึง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,รวมทั้ง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,รวมๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ระยะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ระยะๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ระหว่าง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,รับ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,รับรอง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ราย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,รึ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,รึว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,รือ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,รือว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ร่วม,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ร่วมกัน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ร่วมด้วย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ร่วมมือ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ลง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ละ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ล่าสุด,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ล้วน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ล้วนจน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ล้วนแต่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,วัน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,วันนั้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,วันนี้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,วันใด,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,วันไหน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,สบาย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,สมัย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,สมัยก่อน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,สมัยนั้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,สมัยนี้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,สมัยโน้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,สั้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,สั้นๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,สามารถ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,สำคัญ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,สิ่ง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,สิ่งนั้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,สิ่งนี้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,สิ่งใด,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,สิ่งไหน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,สิ้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,สิ้นกาลนาน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,สืบเนื่อง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,สุด,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,สุดๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,สูง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,สูงกว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,สูงสุด,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,สูงส่ง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,สูงๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,สู่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ส่ง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ส่วน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ส่วนดี,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ส่วนด้อย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ส่วนที่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ส่วนนั้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ส่วนน้อย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ส่วนมาก,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ส่วนเกิน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ส่วนใด,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ส่วนใหญ่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,สําหรับ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,หน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,หนอ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,หนอย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,หนึ่ง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,หน่อย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,หมด,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,หมดกัน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,หมดสิ้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,หรือ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,หรือยัง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,หรือเปล่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,หรือไง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,หรือไม่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,หรือไร,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,หลัง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,หลังจาก,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,หลาย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,หาก,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,หากว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,หากแม้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,หากแม้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,หากแม้นว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,หาความ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,หารือ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,หาใช่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,อดีต,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,อนึ่ง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,อยาก,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,อยู่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,อย่าง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,อย่างดี,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,อย่างที่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,อย่างนั้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,อย่างนี้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,อย่างน้อย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,อย่างมาก,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,อย่างยิ่ง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,อย่างละ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,อย่างหนึ่ง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,อย่างเช่น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,อย่างเดียว,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,อย่างโน้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,อย่างใด,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,อย่างไร,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,อย่างไรก็,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,อย่างไรก็ได้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,อย่างไรเสีย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,อย่างไหน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,อย่างๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ออก,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,อะไร,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,อัน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,อันจะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,อันที่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,อันที่จริง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,อันที่จะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,อันละ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,อันเนื่องมาจาก,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,อันใด,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,อันได้แก่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,อันไหน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,อันๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,อาจ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,อาจจะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,อาจเป็น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,อาจเป็นด้วย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,อีก,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,อื่น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,อื่นๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ฯ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ฯล,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ฯลฯ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เกิด,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เกิน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เกินๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เกี่ยวกัน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เกี่ยวกับ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เกี่ยวข้อง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เกี่ยวเนื่อง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เกี่ยวๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เกือบ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เกือบจะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เกือบๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เก็บ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เขา,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เขียน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เข้า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เข้าใจ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เคย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เคยๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เฉกเช่น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เฉพาะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เฉย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เฉยๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เชื่อ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เชื่อถือ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เชื่อมั่น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เชื่อว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เช่น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เช่นกัน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เช่นก่อน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เช่นดัง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เช่นดังก่อน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เช่นดังที่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เช่นดังว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เช่นดังเก่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เช่นที่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เช่นที่ว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เช่นที่เคย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เช่นนั้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เช่นนั้นเอง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เช่นนี้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เช่นเคย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เช่นเดียวกัน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เช่นเดียวกับ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เช่นเมื่อ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เช่นใด,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เช่นไร,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เดียว,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เดียวกัน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เต็มไปด้วย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เต็มไปหมด,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เต็มๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เถอะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เถิด,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เท่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เท่ากัน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เท่ากับ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เท่าที่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เท่านั้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เท่านี้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เท่าใด,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เท่าไร,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เท่าไหร่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เธอ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เนี่ย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เนี่ยเอง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เนื่องจาก,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เน้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เปลี่ยน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เปลี่ยนแปลง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เปิด,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เปิดเผย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เป็น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เป็นการ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เป็นดัง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เป็นด้วย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เป็นต้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เป็นต้นมา,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เป็นต้นไป,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เป็นที,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เป็นที่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เป็นที่สุด,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เป็นอัน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เป็นอันมาก,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เป็นอันว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เป็นอันๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เป็นอาทิ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เป็นเพราะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เป็นเพราะว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เป็นเพียง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เป็นเพียงว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เป็นเพื่อ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เป็นแต่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เป็นแต่เพียง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เป็นๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เผื่อ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เผื่อจะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เผื่อที่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เผื่อว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เพราะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เพราะฉะนั้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เพราะว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เพิ่ง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เพิ่งจะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เพิ่ม,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เพิ่มเติม,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เพียง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เพียงพอ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เพียงเพราะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เพียงเพื่อ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เพียงแค่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เพียงแต่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เพียงใด,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เพียงไร,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เพียงไหน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เพื่อ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เพื่อที่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เพื่อที่จะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เพื่อว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เพื่อให้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เมื่อ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เมื่อก่อน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เมื่อครั้ง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เมื่อครั้งก่อน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เมื่อคราว,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เมื่อคราวก่อน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เมื่อคราวที่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เมื่อคืน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เมื่อนั้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เมื่อนี้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เมื่อวันวาน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เมื่อวาน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เมื่อเช้า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เมื่อเย็น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เมื่อใด,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เมื่อไร,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เมื่อไหร่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เยอะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เยอะแยะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เยอะๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เรา,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เราๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เริ่ม,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เรียก,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เรียบ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เรื่อย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เรื่อยๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เร็ว,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เร็วๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เลย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เล็ก,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เล็กน้อย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เล็กๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เล่าว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เสมือนกับ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เสมือนว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เสร็จ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เสร็จกัน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เสร็จสมบูรณ์,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เสร็จสิ้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เสร็จแล้ว,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เสีย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เสียก่อน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เสียจน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เสียจนกระทั่ง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เสียจนถึง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เสียด้วย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เสียนั่น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เสียนั่นเอง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เสียนี่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เสียนี่กระไร,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เสียยิ่ง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เสียยิ่งนัก,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เสียแล้ว,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เหตุ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เหตุนั้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เหตุนี้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เหตุผล,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เหตุไร,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เหลือ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เหลือเกิน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เหล่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เหล่านั้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เหล่านี้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เห็น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เห็นควร,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เห็นจะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เห็นว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เห็นแก่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เอง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เอา,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,เอ็ง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แก,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แก่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แก้ไข,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แค่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แค่จะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แค่นั้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แค่นี้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แค่ว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แค่เพียง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แค่ไหน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แต่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แต่ก็,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แต่ก่อน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แต่จะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แต่ต้อง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แต่ถ้า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แต่ทว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แต่ที่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แต่นั้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แต่ละ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แต่ว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แต่อย่างใด,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แต่เดิม,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แต่เพียง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แต่เมื่อ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แต่ไร,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แต่ไหน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แท้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แท้จริง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แบบ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แม้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แม้กระทั่ง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แม้นว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แม้ว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แม้แต่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แยะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แยะๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แรก,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,และ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แล้ว,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แล้วกัน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แล้วเสร็จ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แล้วแต่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แสดง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แสดงว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แหละ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แห่ง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แห่งนั้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แห่งนี้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แห่งโน้น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แห่งใด,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,แห่งไหน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,โดย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,โต,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,โตๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ใกล้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ใกล้ๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ใคร,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ใครๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ใคร่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ใคร่จะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ใช่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ใช่ไหม,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ใช้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ใดๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ใต้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ใน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ในช่วง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ในที่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ในระหว่าง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ในเมื่อ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ใหญ่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ใหญ่โต,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ใหญ่ๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ใหม่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ใหม่ๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ให้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ให้ดี,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ให้มา,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ให้แก่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ให้แด่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ให้ไป,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ไกล,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ไกลๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ไง,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ไฉน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ได้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ได้ที่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ได้มา,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ได้รับ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ได้แก่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ได้แต่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ไป,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ไป่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ไม่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ไม่ค่อย,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ไม่ค่อยจะ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ไม่ค่อยเป็น,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ไม่ว่า,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ไม่เป็นไร,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ไม่ใช่,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ไร,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ไว้,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ไหน,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ไหนๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,ๆ,"pythainlp 내장, newmm 경로에서 제외"
+C. pythainlp 내장,pythainlp 5.3.7 corpus.thai_stopwords(),THAI_STOPWORDS,태국어,th,﻿ๆ,"pythainlp 내장, newmm 경로에서 제외"
