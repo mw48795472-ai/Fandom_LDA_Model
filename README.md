@@ -113,7 +113,9 @@ python verify_v7_final_consistency.py
 python data_export/extract_html_payloads.py      # HTML 2종 내장 데이터 -> data/v7_final/*.json
 python data_export/build_bullets_flat_csv.py     # fandoms_v3_100.json -> bullets_flat_v7_final.csv (10,020행)
 python data_export/build_lda_k_grid_csv.py       # 라이브 재적합 k_grid -> lda_k_grid_live_reference_v7.csv
-python data_export/build_live_scores_csv.py      # 3D 맵 payload -> fandom_scores_live_reference_v7.csv
+python data_export/build_live_scores_csv.py      # 3D 맵 payload -> chart3d_positioning_rows_live_v7.csv
+python data_export/build_cohesion_media_index_csv.py   # 팬덤결속·매체 크로스오버 지수 JSON -> CSV 2종
+python indices_csv/build_ad_commercial_index_csv.py    # 광고·상업성 지수 JSON -> output/indices_csv/ad_commercial_index_v7.csv
 #   r22 스냅샷에도 동일 스크립트 사용 가능:
 python data_export/build_bullets_flat_csv.py --src data/v6_r22_snapshot/fandoms_v3_100.json \
        --out data/v6_r22_snapshot/csv/bullets_flat_v6_r22.csv --expected 5612

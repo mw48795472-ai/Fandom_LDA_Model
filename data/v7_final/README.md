@@ -9,7 +9,7 @@
 | `fandom_scores_live_reference_v7.csv` | 라이브 10,020건 | **원본 산출물**: 팬덤별 loyalty/spillover/coverage/factor_diversity/dominant_factor/activity + 라이브 재적합(K=8→M=5) F 비중 5개(현장경제형·소비력형·결속형·브랜드·상업형·차트·확산형). 점수는 payload와 100/100 동일 |
 | `chart3d_positioning_rows_live_v7.csv` | 라이브 10,020건 | payload rows를 CSV로 푼 파생 파일(4구획 컬럼 포함; `data_export/build_live_scores_csv.py`) |
 | `lda_excluded_bullets_v7.json` | 라이브 10,020건 | LDA 재적합에서 제외된 3토큰 미만 불릿 2건 → 문서 10,018건 |
-| `media_crossover_index_v7.json` | 라이브 10,020건 | 매체 크로스오버 지수: news_media 불릿 6,712건(67.0%), 코퍼스 고유 매체 1,298개, 팬덤별 매체 수·다양성 비율·상위 매체 |
+| `media_crossover_index_v7.json` / `.csv` | 라이브 10,020건 | 매체 크로스오버 지수: news_media 불릿 6,712건(67.0%), 코퍼스 고유 매체 1,298개, 팬덤별 매체 수·다양성 비율·상위 매체 |
 | `k9_validation_v7.json` | 중간 라운드 9,614문서 | K=9 추가 검증 실험(승자 K=8 유지, 미디어 토픽 분리 여부 M-grid) |
 | `lda_v6_diagnostics_live_reference_v7.json` | 라이브 10,020건 | 라이브 재적합 진단: K-grid(8~30), selected_k=8, M=5, 실루엣 0.046, 토픽 상위어, 토픽→F 배정 — 실루엣 게이트에 기각되어 해석 계층에 미반영 |
 | `lda_k_grid_live_reference_v7.csv` | 라이브 10,020건 | 위 k_grid를 CSV로 (`data_export/build_lda_k_grid_csv.py`) |
@@ -18,7 +18,7 @@
 | `member_pilot_mci_correlation_v7.json` | MCI: v7-55 시점 8,981건 / outcome: 동결 7,350건 | MCI ↔ loyalty/spillover/coverage/diversity 상관·회귀·MCI_excess 재분석 (45개 그룹). 파일 자체 caveat대로 시점이 섞인 참고용 분석 |
 | `member_mention_pilot_v6.json` | 동결 스냅샷 7,350건 | 멤버 언급 파일럿 23개 그룹 (BTS 170건 중 73건, MCI 0.24). r22판(BTS 125건)은 `data/v6_r22_snapshot/`에 별도 |
 | `ad_commercial_index_v7.json` / `.csv` | 라이브 10,020건 | 광고·상업성 지수: 31개 광고신호 키워드 → 20개 업종 태깅. 광고성 불릿 1,302건(13.0%), 팬덤별 업종 카운트·샘플 불릿, v7-39~43 이력. CSV는 `indices_csv/build_ad_commercial_index_csv.py` 산출(검증 통과) |
-| `fandom_cohesion_index_v7.json` | 라이브 10,020건 | 팬덤결속 지수: 5개 유형(A~E) 키워드 매칭, 결속 불릿 923건(9.2%), D(기부·후원) 팬덤 공존어 게이트 검증치 포함. `charts/build_cohesion_index_v7*.py` 입력 |
+| `fandom_cohesion_index_v7.json` / `.csv` | 라이브 10,020건 | 팬덤결속 지수: 5개 유형(A~E) 키워드 매칭, 결속 불릿 923건(9.2%), D(기부·후원) 팬덤 공존어 게이트 검증치 포함. `charts/build_cohesion_index_v7*.py` 입력 |
 | `chart3d_correlation_live_v7.json` | 라이브 10,020건 | 3D 매트릭스 축 독립성: 3축 쌍별 상관·정규성·다중회귀(factor_diversity ~ loyalty + spillover)·VIF·영향점·LOO·민감도 |
 | `topic_cards_v7.json` | 동결 스냅샷 7,350건 | K=10 토픽 카드: 명칭(METHODOLOGY.md 2-1 표와 동일)·상위 10개 키워드·대표 불릿 3건·대표 팬덤 5개·연결 F 경로 |
 | `fandom_scores_v6.csv` | 동결 스냅샷 7,350건 | 팬덤별 loyalty/spillover/coverage/factor_diversity/dominant_factor/activity + F1~F5 비중(컬럼: 현장경제형=F3, 소비력형=F2, 미디어노출형=F4, 차트·확산형=F5, 결속형=F1). activity 합 = 7,350. 파일명의 v6은 파이프라인 버전 |
