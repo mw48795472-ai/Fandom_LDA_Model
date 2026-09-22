@@ -1,0 +1,5232 @@
+{
+  "methodology": "LDA 토픽/메타팩터와 무관한 순수 도메인 매칭 보조지표. domain_of()/source_type_of()는 run_lda_v6_live_reference_v7.py 정의를 마커 기반 exec()로 그대로 재사용(로직 이원화 방지). 각 팬덤의 근거문장(loyalty+spillover) 중 source_type_of()=='news_media'인 것만 대상으로 domain_of(u) 기준 서로 다른 매체 도메인 수(n_distinct_outlets)와 그 비중(outlet_diversity_ratio = n_distinct_outlets / n_news_media_bullets)을 집계했다. community_social(SNS·커뮤니티)과 reference_wiki(위키)는 '매체'가 아니므로 집계 대상에서 제외했다.",
+  "scope_and_limits": "이 코퍼스에는 실제 클릭/유입경로/레퍼럴 분석 데이터가 없다. 이 지수는 '팬 유입 경로'를 직접 측정하지 않으며, '서로 다른 매체가 그 팬덤을 얼마나 폭넓게 다뤘는가(매체 확산 폭)'의 대리 지표일 뿐이다 — 보고 시 '유입 경로/전환'으로 과장하지 말 것.",
+  "total_bullets": 10020,
+  "total_news_media_bullets": 6712,
+  "corpus_news_media_share": 0.6699,
+  "n_distinct_outlets_corpuswide": 1298,
+  "top_outlets_corpuswide": [
+    {
+      "domain": "v.daum.net",
+      "n": 377
+    },
+    {
+      "domain": "starnewskorea.com",
+      "n": 251
+    },
+    {
+      "domain": "sports.khan.co.kr",
+      "n": 216
+    },
+    {
+      "domain": "allkpop.com",
+      "n": 135
+    },
+    {
+      "domain": "oricon.co.jp",
+      "n": 130
+    },
+    {
+      "domain": "infobae.com",
+      "n": 99
+    },
+    {
+      "domain": "newsis.com",
+      "n": 95
+    },
+    {
+      "domain": "hankyung.com",
+      "n": 93
+    },
+    {
+      "domain": "topstarnews.net",
+      "n": 85
+    },
+    {
+      "domain": "biz.heraldcorp.com",
+      "n": 83
+    },
+    {
+      "domain": "natalie.mu",
+      "n": 75
+    },
+    {
+      "domain": "soompi.com",
+      "n": 64
+    },
+    {
+      "domain": "idntimes.com",
+      "n": 63
+    },
+    {
+      "domain": "thairath.co.th",
+      "n": 58
+    },
+    {
+      "domain": "hankookilbo.com",
+      "n": 57
+    },
+    {
+      "domain": "news.nate.com",
+      "n": 57
+    },
+    {
+      "domain": "yesasia.ru",
+      "n": 54
+    },
+    {
+      "domain": "star.ettoday.net",
+      "n": 50
+    },
+    {
+      "domain": "hk01.com",
+      "n": 49
+    },
+    {
+      "domain": "fnnews.com",
+      "n": 48
+    },
+    {
+      "domain": "mb.com.ph",
+      "n": 47
+    },
+    {
+      "domain": "detik.com",
+      "n": 46
+    },
+    {
+      "domain": "news1.kr",
+      "n": 46
+    },
+    {
+      "domain": "youtube.com",
+      "n": 43
+    },
+    {
+      "domain": "korezin.com",
+      "n": 43
+    },
+    {
+      "domain": "tenasia.co.kr",
+      "n": 42
+    },
+    {
+      "domain": "sanook.com",
+      "n": 40
+    },
+    {
+      "domain": "koreaherald.com",
+      "n": 40
+    },
+    {
+      "domain": "munhwa.com",
+      "n": 39
+    },
+    {
+      "domain": "enews.imbc.com",
+      "n": 37
+    }
+  ],
+  "fandoms": [
+    {
+      "fandom": "BTS",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 227,
+      "n_news_media_bullets": 177,
+      "news_media_share": 0.7797,
+      "n_distinct_outlets": 96,
+      "outlet_diversity_ratio": 0.5424,
+      "top_outlets": [
+        {
+          "domain": "starnewskorea.com",
+          "n": 10
+        },
+        {
+          "domain": "v.daum.net",
+          "n": 9
+        },
+        {
+          "domain": "forbes.com",
+          "n": 7
+        },
+        {
+          "domain": "hankookilbo.com",
+          "n": 7
+        },
+        {
+          "domain": "barks.jp",
+          "n": 6
+        },
+        {
+          "domain": "univision.com",
+          "n": 6
+        },
+        {
+          "domain": "infobae.com",
+          "n": 5
+        },
+        {
+          "domain": "hankyung.com",
+          "n": 5
+        },
+        {
+          "domain": "oricon.co.jp",
+          "n": 5
+        },
+        {
+          "domain": "sisain.co.kr",
+          "n": 4
+        }
+      ]
+    },
+    {
+      "fandom": "TWICE",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 191,
+      "n_news_media_bullets": 134,
+      "news_media_share": 0.7016,
+      "n_distinct_outlets": 90,
+      "outlet_diversity_ratio": 0.6716,
+      "top_outlets": [
+        {
+          "domain": "infobae.com",
+          "n": 8
+        },
+        {
+          "domain": "allkpop.com",
+          "n": 5
+        },
+        {
+          "domain": "natalie.mu",
+          "n": 5
+        },
+        {
+          "domain": "barks.jp",
+          "n": 5
+        },
+        {
+          "domain": "stars.udn.com",
+          "n": 4
+        },
+        {
+          "domain": "koreaboo.com",
+          "n": 3
+        },
+        {
+          "domain": "kedglobal.com",
+          "n": 3
+        },
+        {
+          "domain": "starnewskorea.com",
+          "n": 3
+        },
+        {
+          "domain": "oricon.co.jp",
+          "n": 3
+        },
+        {
+          "domain": "thairath.co.th",
+          "n": 3
+        }
+      ]
+    },
+    {
+      "fandom": "BLACKPINK",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 195,
+      "n_news_media_bullets": 139,
+      "news_media_share": 0.7128,
+      "n_distinct_outlets": 83,
+      "outlet_diversity_ratio": 0.5971,
+      "top_outlets": [
+        {
+          "domain": "thairath.co.th",
+          "n": 9
+        },
+        {
+          "domain": "infobae.com",
+          "n": 6
+        },
+        {
+          "domain": "finance.sina.com.cn",
+          "n": 5
+        },
+        {
+          "domain": "natalie.mu",
+          "n": 4
+        },
+        {
+          "domain": "oricon.co.jp",
+          "n": 4
+        },
+        {
+          "domain": "univision.com",
+          "n": 4
+        },
+        {
+          "domain": "khan.co.kr",
+          "n": 4
+        },
+        {
+          "domain": "officialcharts.com",
+          "n": 4
+        },
+        {
+          "domain": "kenh14.vn",
+          "n": 3
+        },
+        {
+          "domain": "blog.namanecard.com",
+          "n": 3
+        }
+      ]
+    },
+    {
+      "fandom": "지드래곤 (G-Dragon)",
+      "category": "힙합",
+      "n_total_bullets": 133,
+      "n_news_media_bullets": 128,
+      "news_media_share": 0.9624,
+      "n_distinct_outlets": 80,
+      "outlet_diversity_ratio": 0.625,
+      "top_outlets": [
+        {
+          "domain": "v.daum.net",
+          "n": 7
+        },
+        {
+          "domain": "newsis.com",
+          "n": 6
+        },
+        {
+          "domain": "sports.khan.co.kr",
+          "n": 6
+        },
+        {
+          "domain": "starnewskorea.com",
+          "n": 4
+        },
+        {
+          "domain": "infobae.com",
+          "n": 4
+        },
+        {
+          "domain": "marieclairekorea.com",
+          "n": 3
+        },
+        {
+          "domain": "billboard.com",
+          "n": 3
+        },
+        {
+          "domain": "vietnam.vn",
+          "n": 3
+        },
+        {
+          "domain": "vnexpress.net",
+          "n": 3
+        },
+        {
+          "domain": "163.com",
+          "n": 3
+        }
+      ]
+    },
+    {
+      "fandom": "싸이",
+      "category": "솔로",
+      "n_total_bullets": 122,
+      "n_news_media_bullets": 97,
+      "news_media_share": 0.7951,
+      "n_distinct_outlets": 76,
+      "outlet_diversity_ratio": 0.7835,
+      "top_outlets": [
+        {
+          "domain": "v.daum.net",
+          "n": 4
+        },
+        {
+          "domain": "cbc.ca",
+          "n": 4
+        },
+        {
+          "domain": "imaeil.com",
+          "n": 3
+        },
+        {
+          "domain": "billboard.com",
+          "n": 3
+        },
+        {
+          "domain": "ria.ru",
+          "n": 3
+        },
+        {
+          "domain": "dipe.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "topstarnews.net",
+          "n": 2
+        },
+        {
+          "domain": "sports.khan.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "biz.heraldcorp.com",
+          "n": 2
+        },
+        {
+          "domain": "khan.co.kr",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "(여자)아이들",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 118,
+      "n_news_media_bullets": 84,
+      "news_media_share": 0.7119,
+      "n_distinct_outlets": 75,
+      "outlet_diversity_ratio": 0.8929,
+      "top_outlets": [
+        {
+          "domain": "star.ettoday.net",
+          "n": 3
+        },
+        {
+          "domain": "nownews.com",
+          "n": 3
+        },
+        {
+          "domain": "m.joseilbo.com",
+          "n": 2
+        },
+        {
+          "domain": "newsis.com",
+          "n": 2
+        },
+        {
+          "domain": "cnnbrasil.com.br",
+          "n": 2
+        },
+        {
+          "domain": "k.sina.com.cn",
+          "n": 2
+        },
+        {
+          "domain": "slide.ent.sina.com.cn",
+          "n": 2
+        },
+        {
+          "domain": "allkpop.com",
+          "n": 1
+        },
+        {
+          "domain": "tw.weibo.com",
+          "n": 1
+        },
+        {
+          "domain": "sg.weibo.com",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "fandom": "BABYMONSTER",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 132,
+      "n_news_media_bullets": 93,
+      "news_media_share": 0.7045,
+      "n_distinct_outlets": 72,
+      "outlet_diversity_ratio": 0.7742,
+      "top_outlets": [
+        {
+          "domain": "barks.jp",
+          "n": 5
+        },
+        {
+          "domain": "oricon.co.jp",
+          "n": 5
+        },
+        {
+          "domain": "thairath.co.th",
+          "n": 3
+        },
+        {
+          "domain": "hk01.com",
+          "n": 2
+        },
+        {
+          "domain": "yesasia.ru",
+          "n": 2
+        },
+        {
+          "domain": "tnnthailand.com",
+          "n": 2
+        },
+        {
+          "domain": "nocutnews.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "koreadaily.com",
+          "n": 2
+        },
+        {
+          "domain": "sports.khan.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "malaymail.com",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "LE SSERAFIM",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 143,
+      "n_news_media_bullets": 108,
+      "news_media_share": 0.7552,
+      "n_distinct_outlets": 71,
+      "outlet_diversity_ratio": 0.6574,
+      "top_outlets": [
+        {
+          "domain": "oricon.co.jp",
+          "n": 8
+        },
+        {
+          "domain": "infobae.com",
+          "n": 6
+        },
+        {
+          "domain": "idntimes.com",
+          "n": 4
+        },
+        {
+          "domain": "natalie.mu",
+          "n": 4
+        },
+        {
+          "domain": "yesasia.ru",
+          "n": 3
+        },
+        {
+          "domain": "starnewskorea.com",
+          "n": 2
+        },
+        {
+          "domain": "hk01.com",
+          "n": 2
+        },
+        {
+          "domain": "sportsseoul.com",
+          "n": 2
+        },
+        {
+          "domain": "newsis.com",
+          "n": 2
+        },
+        {
+          "domain": "mdpr.jp",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "aespa",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 158,
+      "n_news_media_bullets": 94,
+      "news_media_share": 0.5949,
+      "n_distinct_outlets": 69,
+      "outlet_diversity_ratio": 0.734,
+      "top_outlets": [
+        {
+          "domain": "infobae.com",
+          "n": 7
+        },
+        {
+          "domain": "marieclairekorea.com",
+          "n": 5
+        },
+        {
+          "domain": "smentertainment.com",
+          "n": 3
+        },
+        {
+          "domain": "v.daum.net",
+          "n": 3
+        },
+        {
+          "domain": "thairath.co.th",
+          "n": 3
+        },
+        {
+          "domain": "sina.cn",
+          "n": 3
+        },
+        {
+          "domain": "edaily.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "natalie.mu",
+          "n": 2
+        },
+        {
+          "domain": "idntimes.com",
+          "n": 2
+        },
+        {
+          "domain": "kenh14.vn",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "NewJeans",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 154,
+      "n_news_media_bullets": 114,
+      "news_media_share": 0.7403,
+      "n_distinct_outlets": 67,
+      "outlet_diversity_ratio": 0.5877,
+      "top_outlets": [
+        {
+          "domain": "harpersbazaar.co.kr",
+          "n": 9
+        },
+        {
+          "domain": "allkpop.com",
+          "n": 8
+        },
+        {
+          "domain": "news.qq.com",
+          "n": 7
+        },
+        {
+          "domain": "infobae.com",
+          "n": 6
+        },
+        {
+          "domain": "koreaherald.com",
+          "n": 4
+        },
+        {
+          "domain": "malaymail.com",
+          "n": 3
+        },
+        {
+          "domain": "lechotouristique.com",
+          "n": 3
+        },
+        {
+          "domain": "nme.com",
+          "n": 3
+        },
+        {
+          "domain": "hankyung.com",
+          "n": 2
+        },
+        {
+          "domain": "soompi.com",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "NCT",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 164,
+      "n_news_media_bullets": 113,
+      "news_media_share": 0.689,
+      "n_distinct_outlets": 67,
+      "outlet_diversity_ratio": 0.5929,
+      "top_outlets": [
+        {
+          "domain": "sina.cn",
+          "n": 8
+        },
+        {
+          "domain": "v.daum.net",
+          "n": 8
+        },
+        {
+          "domain": "oricon.co.jp",
+          "n": 7
+        },
+        {
+          "domain": "allkpop.com",
+          "n": 4
+        },
+        {
+          "domain": "terra.com.br",
+          "n": 3
+        },
+        {
+          "domain": "officialcharts.com",
+          "n": 3
+        },
+        {
+          "domain": "billboard.com",
+          "n": 3
+        },
+        {
+          "domain": "starnewskorea.com",
+          "n": 3
+        },
+        {
+          "domain": "mdpr.jp",
+          "n": 3
+        },
+        {
+          "domain": "koreatimes.co.kr",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "ATEEZ",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 113,
+      "n_news_media_bullets": 89,
+      "news_media_share": 0.7876,
+      "n_distinct_outlets": 66,
+      "outlet_diversity_ratio": 0.7416,
+      "top_outlets": [
+        {
+          "domain": "infobae.com",
+          "n": 6
+        },
+        {
+          "domain": "thairath.co.th",
+          "n": 4
+        },
+        {
+          "domain": "v.daum.net",
+          "n": 4
+        },
+        {
+          "domain": "forbes.com",
+          "n": 3
+        },
+        {
+          "domain": "allkpop.com",
+          "n": 2
+        },
+        {
+          "domain": "oricon.co.jp",
+          "n": 2
+        },
+        {
+          "domain": "en.thairath.co.th",
+          "n": 2
+        },
+        {
+          "domain": "ajunews.com",
+          "n": 2
+        },
+        {
+          "domain": "philstar.com",
+          "n": 2
+        },
+        {
+          "domain": "billboard.com.br",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "Stray Kids",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 163,
+      "n_news_media_bullets": 108,
+      "news_media_share": 0.6626,
+      "n_distinct_outlets": 65,
+      "outlet_diversity_ratio": 0.6019,
+      "top_outlets": [
+        {
+          "domain": "infobae.com",
+          "n": 7
+        },
+        {
+          "domain": "oricon.co.jp",
+          "n": 7
+        },
+        {
+          "domain": "yesasia.ru",
+          "n": 5
+        },
+        {
+          "domain": "allkpop.com",
+          "n": 4
+        },
+        {
+          "domain": "starnewskorea.com",
+          "n": 4
+        },
+        {
+          "domain": "mk.ru",
+          "n": 4
+        },
+        {
+          "domain": "v.daum.net",
+          "n": 3
+        },
+        {
+          "domain": "idntimes.com",
+          "n": 3
+        },
+        {
+          "domain": "thairath.co.th",
+          "n": 2
+        },
+        {
+          "domain": "20.detik.com",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "박재범",
+      "category": "힙합",
+      "n_total_bullets": 110,
+      "n_news_media_bullets": 96,
+      "news_media_share": 0.8727,
+      "n_distinct_outlets": 65,
+      "outlet_diversity_ratio": 0.6771,
+      "top_outlets": [
+        {
+          "domain": "bizhankook.com",
+          "n": 5
+        },
+        {
+          "domain": "elle.com.sg",
+          "n": 4
+        },
+        {
+          "domain": "jaypark.com",
+          "n": 4
+        },
+        {
+          "domain": "sports.khan.co.kr",
+          "n": 3
+        },
+        {
+          "domain": "idntimes.com",
+          "n": 3
+        },
+        {
+          "domain": "kenh14.vn",
+          "n": 3
+        },
+        {
+          "domain": "v.daum.net",
+          "n": 2
+        },
+        {
+          "domain": "natalie.mu",
+          "n": 2
+        },
+        {
+          "domain": "dantri.com.vn",
+          "n": 2
+        },
+        {
+          "domain": "news.sbs.co.kr",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "CORTIS",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 135,
+      "n_news_media_bullets": 103,
+      "news_media_share": 0.763,
+      "n_distinct_outlets": 63,
+      "outlet_diversity_ratio": 0.6117,
+      "top_outlets": [
+        {
+          "domain": "starnewskorea.com",
+          "n": 15
+        },
+        {
+          "domain": "dailynews.co.th",
+          "n": 4
+        },
+        {
+          "domain": "wkorea.com",
+          "n": 4
+        },
+        {
+          "domain": "biz.heraldcorp.com",
+          "n": 3
+        },
+        {
+          "domain": "mb.com.ph",
+          "n": 3
+        },
+        {
+          "domain": "news.qq.com",
+          "n": 3
+        },
+        {
+          "domain": "e.usen.com",
+          "n": 2
+        },
+        {
+          "domain": "kumparan.com",
+          "n": 2
+        },
+        {
+          "domain": "weverse.io",
+          "n": 2
+        },
+        {
+          "domain": "madamefigaro.jp",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "이영지",
+      "category": "힙합",
+      "n_total_bullets": 107,
+      "n_news_media_bullets": 92,
+      "news_media_share": 0.8598,
+      "n_distinct_outlets": 62,
+      "outlet_diversity_ratio": 0.6739,
+      "top_outlets": [
+        {
+          "domain": "newsis.com",
+          "n": 5
+        },
+        {
+          "domain": "fnnews.com",
+          "n": 5
+        },
+        {
+          "domain": "biz.heraldcorp.com",
+          "n": 4
+        },
+        {
+          "domain": "nocutnews.co.kr",
+          "n": 3
+        },
+        {
+          "domain": "koreatimes.co.kr",
+          "n": 3
+        },
+        {
+          "domain": "natalie.mu",
+          "n": 3
+        },
+        {
+          "domain": "news.tf.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "nextshark.com",
+          "n": 2
+        },
+        {
+          "domain": "harpersbazaar.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "starnewskorea.com",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "몬스타엑스",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 96,
+      "n_news_media_bullets": 91,
+      "news_media_share": 0.9479,
+      "n_distinct_outlets": 61,
+      "outlet_diversity_ratio": 0.6703,
+      "top_outlets": [
+        {
+          "domain": "starnewskorea.com",
+          "n": 8
+        },
+        {
+          "domain": "billboard-japan.com",
+          "n": 5
+        },
+        {
+          "domain": "soompi.com",
+          "n": 3
+        },
+        {
+          "domain": "mhnse.com",
+          "n": 3
+        },
+        {
+          "domain": "hankyung.com",
+          "n": 3
+        },
+        {
+          "domain": "universal-music.co.jp",
+          "n": 3
+        },
+        {
+          "domain": "gukjenews.com",
+          "n": 2
+        },
+        {
+          "domain": "sports.khan.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "newsis.com",
+          "n": 2
+        },
+        {
+          "domain": "munhwa.com",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "RIIZE",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 121,
+      "n_news_media_bullets": 83,
+      "news_media_share": 0.686,
+      "n_distinct_outlets": 61,
+      "outlet_diversity_ratio": 0.7349,
+      "top_outlets": [
+        {
+          "domain": "oricon.co.jp",
+          "n": 9
+        },
+        {
+          "domain": "starnewskorea.com",
+          "n": 3
+        },
+        {
+          "domain": "yesasia.ru",
+          "n": 3
+        },
+        {
+          "domain": "v.daum.net",
+          "n": 2
+        },
+        {
+          "domain": "mdpr.jp",
+          "n": 2
+        },
+        {
+          "domain": "cnnbrasil.com.br",
+          "n": 2
+        },
+        {
+          "domain": "ngojournal.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "isplus.com",
+          "n": 2
+        },
+        {
+          "domain": "asiaartistawards.com",
+          "n": 2
+        },
+        {
+          "domain": "allkpop.com",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "임영웅",
+      "category": "트로트",
+      "n_total_bullets": 131,
+      "n_news_media_bullets": 121,
+      "news_media_share": 0.9237,
+      "n_distinct_outlets": 60,
+      "outlet_diversity_ratio": 0.4959,
+      "top_outlets": [
+        {
+          "domain": "starnewskorea.com",
+          "n": 14
+        },
+        {
+          "domain": "hankyung.com",
+          "n": 10
+        },
+        {
+          "domain": "biz.heraldcorp.com",
+          "n": 8
+        },
+        {
+          "domain": "sports.khan.co.kr",
+          "n": 8
+        },
+        {
+          "domain": "v.daum.net",
+          "n": 7
+        },
+        {
+          "domain": "fnnews.com",
+          "n": 6
+        },
+        {
+          "domain": "koreatimes.com",
+          "n": 4
+        },
+        {
+          "domain": "topstarnews.net",
+          "n": 4
+        },
+        {
+          "domain": "pressreader.com",
+          "n": 3
+        },
+        {
+          "domain": "scmp.com",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "EXO",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 121,
+      "n_news_media_bullets": 88,
+      "news_media_share": 0.7273,
+      "n_distinct_outlets": 59,
+      "outlet_diversity_ratio": 0.6705,
+      "top_outlets": [
+        {
+          "domain": "v.daum.net",
+          "n": 9
+        },
+        {
+          "domain": "segye.com",
+          "n": 5
+        },
+        {
+          "domain": "detik.com",
+          "n": 4
+        },
+        {
+          "domain": "sports.khan.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "wolyo.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "hk01.com",
+          "n": 2
+        },
+        {
+          "domain": "yesasia.ru",
+          "n": 2
+        },
+        {
+          "domain": "thairath.co.th",
+          "n": 2
+        },
+        {
+          "domain": "mb.com.ph",
+          "n": 2
+        },
+        {
+          "domain": "billboard.com.br",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "SEVENTEEN",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 157,
+      "n_news_media_bullets": 87,
+      "news_media_share": 0.5541,
+      "n_distinct_outlets": 56,
+      "outlet_diversity_ratio": 0.6437,
+      "top_outlets": [
+        {
+          "domain": "v.daum.net",
+          "n": 6
+        },
+        {
+          "domain": "oricon.co.jp",
+          "n": 5
+        },
+        {
+          "domain": "infobae.com",
+          "n": 4
+        },
+        {
+          "domain": "sina.cn",
+          "n": 4
+        },
+        {
+          "domain": "starnewskorea.com",
+          "n": 3
+        },
+        {
+          "domain": "benmingxing.com",
+          "n": 3
+        },
+        {
+          "domain": "hankyung.com",
+          "n": 3
+        },
+        {
+          "domain": "topstarnews.net",
+          "n": 3
+        },
+        {
+          "domain": "breaknews.com",
+          "n": 2
+        },
+        {
+          "domain": "sportskeeda.com",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "엔믹스",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 110,
+      "n_news_media_bullets": 80,
+      "news_media_share": 0.7273,
+      "n_distinct_outlets": 55,
+      "outlet_diversity_ratio": 0.6875,
+      "top_outlets": [
+        {
+          "domain": "infobae.com",
+          "n": 6
+        },
+        {
+          "domain": "detik.com",
+          "n": 4
+        },
+        {
+          "domain": "v.daum.net",
+          "n": 4
+        },
+        {
+          "domain": "sbs.com.au",
+          "n": 3
+        },
+        {
+          "domain": "mgronline.com",
+          "n": 3
+        },
+        {
+          "domain": "m.ticket.yes24.com",
+          "n": 2
+        },
+        {
+          "domain": "sports.khan.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "yesasia.ru",
+          "n": 2
+        },
+        {
+          "domain": "fnnews.com",
+          "n": 2
+        },
+        {
+          "domain": "idntimes.com",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "소녀시대",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 122,
+      "n_news_media_bullets": 66,
+      "news_media_share": 0.541,
+      "n_distinct_outlets": 54,
+      "outlet_diversity_ratio": 0.8182,
+      "top_outlets": [
+        {
+          "domain": "natalie.mu",
+          "n": 5
+        },
+        {
+          "domain": "barks.jp",
+          "n": 3
+        },
+        {
+          "domain": "oricon.co.jp",
+          "n": 3
+        },
+        {
+          "domain": "news.nate.com",
+          "n": 3
+        },
+        {
+          "domain": "kenh14.vn",
+          "n": 2
+        },
+        {
+          "domain": "v.daum.net",
+          "n": 2
+        },
+        {
+          "domain": "allkpop.com",
+          "n": 1
+        },
+        {
+          "domain": "wolipop.detik.com",
+          "n": 1
+        },
+        {
+          "domain": "udn.com",
+          "n": 1
+        },
+        {
+          "domain": "nocutnews.co.kr",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "fandom": "워너원",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 123,
+      "n_news_media_bullets": 87,
+      "news_media_share": 0.7073,
+      "n_distinct_outlets": 53,
+      "outlet_diversity_ratio": 0.6092,
+      "top_outlets": [
+        {
+          "domain": "v.daum.net",
+          "n": 7
+        },
+        {
+          "domain": "oricon.co.jp",
+          "n": 5
+        },
+        {
+          "domain": "hankookilbo.com",
+          "n": 4
+        },
+        {
+          "domain": "star.ettoday.net",
+          "n": 4
+        },
+        {
+          "domain": "sanook.com",
+          "n": 4
+        },
+        {
+          "domain": "starnewskorea.com",
+          "n": 3
+        },
+        {
+          "domain": "sports.khan.co.kr",
+          "n": 3
+        },
+        {
+          "domain": "munhwa.com",
+          "n": 2
+        },
+        {
+          "domain": "allkpop.com",
+          "n": 2
+        },
+        {
+          "domain": "biz.heraldcorp.com",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "아일릿",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 107,
+      "n_news_media_bullets": 81,
+      "news_media_share": 0.757,
+      "n_distinct_outlets": 52,
+      "outlet_diversity_ratio": 0.642,
+      "top_outlets": [
+        {
+          "domain": "v.daum.net",
+          "n": 8
+        },
+        {
+          "domain": "sports.khan.co.kr",
+          "n": 4
+        },
+        {
+          "domain": "oricon.co.jp",
+          "n": 4
+        },
+        {
+          "domain": "news.yahoo.co.jp",
+          "n": 3
+        },
+        {
+          "domain": "prtimes.jp",
+          "n": 3
+        },
+        {
+          "domain": "topstarnews.net",
+          "n": 3
+        },
+        {
+          "domain": "soompi.com",
+          "n": 3
+        },
+        {
+          "domain": "detik.com",
+          "n": 2
+        },
+        {
+          "domain": "idntimes.com",
+          "n": 2
+        },
+        {
+          "domain": "news.tf.co.kr",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "아이유",
+      "category": "솔로",
+      "n_total_bullets": 110,
+      "n_news_media_bullets": 75,
+      "news_media_share": 0.6818,
+      "n_distinct_outlets": 52,
+      "outlet_diversity_ratio": 0.6933,
+      "top_outlets": [
+        {
+          "domain": "v.daum.net",
+          "n": 8
+        },
+        {
+          "domain": "oricon.co.jp",
+          "n": 4
+        },
+        {
+          "domain": "news.mt.co.kr",
+          "n": 4
+        },
+        {
+          "domain": "marieclairekorea.com",
+          "n": 3
+        },
+        {
+          "domain": "cineplay.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "weibo.com",
+          "n": 2
+        },
+        {
+          "domain": "yesasia.ru",
+          "n": 2
+        },
+        {
+          "domain": "y.qq.com",
+          "n": 2
+        },
+        {
+          "domain": "newsis.com",
+          "n": 2
+        },
+        {
+          "domain": "biz.heraldcorp.com",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "이효리",
+      "category": "솔로",
+      "n_total_bullets": 120,
+      "n_news_media_bullets": 72,
+      "news_media_share": 0.6,
+      "n_distinct_outlets": 52,
+      "outlet_diversity_ratio": 0.7222,
+      "top_outlets": [
+        {
+          "domain": "v.daum.net",
+          "n": 5
+        },
+        {
+          "domain": "sisajournal.com",
+          "n": 4
+        },
+        {
+          "domain": "starnewskorea.com",
+          "n": 3
+        },
+        {
+          "domain": "isplus.com",
+          "n": 3
+        },
+        {
+          "domain": "wikitree.co.kr",
+          "n": 3
+        },
+        {
+          "domain": "news.nate.com",
+          "n": 2
+        },
+        {
+          "domain": "mt.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "khan.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "sanook.com",
+          "n": 2
+        },
+        {
+          "domain": "autotribune.co.kr",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "레드벨벳",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 118,
+      "n_news_media_bullets": 79,
+      "news_media_share": 0.6695,
+      "n_distinct_outlets": 51,
+      "outlet_diversity_ratio": 0.6456,
+      "top_outlets": [
+        {
+          "domain": "infobae.com",
+          "n": 5
+        },
+        {
+          "domain": "thairath.co.th",
+          "n": 5
+        },
+        {
+          "domain": "topstarnews.net",
+          "n": 4
+        },
+        {
+          "domain": "v.daum.net",
+          "n": 3
+        },
+        {
+          "domain": "soompi.com",
+          "n": 3
+        },
+        {
+          "domain": "kenh14.vn",
+          "n": 3
+        },
+        {
+          "domain": "oricon.co.jp",
+          "n": 3
+        },
+        {
+          "domain": "segye.com",
+          "n": 2
+        },
+        {
+          "domain": "natalie.mu",
+          "n": 2
+        },
+        {
+          "domain": "hot.detik.com",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "에픽하이",
+      "category": "힙합",
+      "n_total_bullets": 87,
+      "n_news_media_bullets": 69,
+      "news_media_share": 0.7931,
+      "n_distinct_outlets": 51,
+      "outlet_diversity_ratio": 0.7391,
+      "top_outlets": [
+        {
+          "domain": "sports.khan.co.kr",
+          "n": 5
+        },
+        {
+          "domain": "nbcnews.com",
+          "n": 3
+        },
+        {
+          "domain": "hiphopkr.com",
+          "n": 3
+        },
+        {
+          "domain": "hot.detik.com",
+          "n": 3
+        },
+        {
+          "domain": "idntimes.com",
+          "n": 3
+        },
+        {
+          "domain": "tickets.interpark.com",
+          "n": 2
+        },
+        {
+          "domain": "sanook.com",
+          "n": 2
+        },
+        {
+          "domain": "nautiljon.com",
+          "n": 2
+        },
+        {
+          "domain": "newstomato.com",
+          "n": 2
+        },
+        {
+          "domain": "natalie.mu",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "IVE",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 100,
+      "n_news_media_bullets": 63,
+      "news_media_share": 0.63,
+      "n_distinct_outlets": 51,
+      "outlet_diversity_ratio": 0.8095,
+      "top_outlets": [
+        {
+          "domain": "thairath.co.th",
+          "n": 3
+        },
+        {
+          "domain": "v.daum.net",
+          "n": 3
+        },
+        {
+          "domain": "yesasia.ru",
+          "n": 2
+        },
+        {
+          "domain": "hankyung.com",
+          "n": 2
+        },
+        {
+          "domain": "mdpr.jp",
+          "n": 2
+        },
+        {
+          "domain": "sportsseoulweb.jp",
+          "n": 2
+        },
+        {
+          "domain": "blog.delivered.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "biz.heraldcorp.com",
+          "n": 2
+        },
+        {
+          "domain": "natalie.mu",
+          "n": 2
+        },
+        {
+          "domain": "gukjenews.com",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "지코",
+      "category": "힙합",
+      "n_total_bullets": 101,
+      "n_news_media_bullets": 74,
+      "news_media_share": 0.7327,
+      "n_distinct_outlets": 50,
+      "outlet_diversity_ratio": 0.6757,
+      "top_outlets": [
+        {
+          "domain": "v.daum.net",
+          "n": 4
+        },
+        {
+          "domain": "sanook.com",
+          "n": 3
+        },
+        {
+          "domain": "news1.kr",
+          "n": 3
+        },
+        {
+          "domain": "sedaily.com",
+          "n": 3
+        },
+        {
+          "domain": "munhwa.com",
+          "n": 2
+        },
+        {
+          "domain": "koreadaily.com",
+          "n": 2
+        },
+        {
+          "domain": "natalie.mu",
+          "n": 2
+        },
+        {
+          "domain": "fnnews.com",
+          "n": 2
+        },
+        {
+          "domain": "etoday.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "news.nate.com",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "ITZY",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 107,
+      "n_news_media_bullets": 68,
+      "news_media_share": 0.6355,
+      "n_distinct_outlets": 50,
+      "outlet_diversity_ratio": 0.7353,
+      "top_outlets": [
+        {
+          "domain": "infobae.com",
+          "n": 4
+        },
+        {
+          "domain": "v.daum.net",
+          "n": 4
+        },
+        {
+          "domain": "kompas.com",
+          "n": 3
+        },
+        {
+          "domain": "yesasia.ru",
+          "n": 3
+        },
+        {
+          "domain": "oricon.co.jp",
+          "n": 3
+        },
+        {
+          "domain": "idntimes.com",
+          "n": 2
+        },
+        {
+          "domain": "mb.com.ph",
+          "n": 2
+        },
+        {
+          "domain": "twconcertview.com",
+          "n": 2
+        },
+        {
+          "domain": "natalie.mu",
+          "n": 2
+        },
+        {
+          "domain": "hankyung.com",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "GOT7",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 107,
+      "n_news_media_bullets": 85,
+      "news_media_share": 0.7944,
+      "n_distinct_outlets": 48,
+      "outlet_diversity_ratio": 0.5647,
+      "top_outlets": [
+        {
+          "domain": "hellokpop.com",
+          "n": 13
+        },
+        {
+          "domain": "allkpop.com",
+          "n": 5
+        },
+        {
+          "domain": "soompi.com",
+          "n": 3
+        },
+        {
+          "domain": "today.com",
+          "n": 3
+        },
+        {
+          "domain": "kpopstarz.com",
+          "n": 3
+        },
+        {
+          "domain": "koreaboo.com",
+          "n": 3
+        },
+        {
+          "domain": "forbes.com",
+          "n": 3
+        },
+        {
+          "domain": "billboardphilippines.com",
+          "n": 3
+        },
+        {
+          "domain": "topstarnews.net",
+          "n": 2
+        },
+        {
+          "domain": "koreaherald.com",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "DAY6",
+      "category": "K-pop 보이그룹 /록",
+      "n_total_bullets": 101,
+      "n_news_media_bullets": 71,
+      "news_media_share": 0.703,
+      "n_distinct_outlets": 48,
+      "outlet_diversity_ratio": 0.6761,
+      "top_outlets": [
+        {
+          "domain": "m.heraldmuse.com",
+          "n": 7
+        },
+        {
+          "domain": "sports.khan.co.kr",
+          "n": 4
+        },
+        {
+          "domain": "starnewskorea.com",
+          "n": 3
+        },
+        {
+          "domain": "dailynews.co.th",
+          "n": 3
+        },
+        {
+          "domain": "v.daum.net",
+          "n": 3
+        },
+        {
+          "domain": "allkpop.com",
+          "n": 3
+        },
+        {
+          "domain": "idntimes.com",
+          "n": 2
+        },
+        {
+          "domain": "thairath.co.th",
+          "n": 2
+        },
+        {
+          "domain": "sanook.com",
+          "n": 2
+        },
+        {
+          "domain": "workpointtoday.com",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "정동원",
+      "category": "트로트",
+      "n_total_bullets": 107,
+      "n_news_media_bullets": 77,
+      "news_media_share": 0.7196,
+      "n_distinct_outlets": 47,
+      "outlet_diversity_ratio": 0.6104,
+      "top_outlets": [
+        {
+          "domain": "v.daum.net",
+          "n": 5
+        },
+        {
+          "domain": "allkpop.com",
+          "n": 5
+        },
+        {
+          "domain": "munhwa.com",
+          "n": 4
+        },
+        {
+          "domain": "sports.khan.co.kr",
+          "n": 4
+        },
+        {
+          "domain": "cbci.co.kr",
+          "n": 4
+        },
+        {
+          "domain": "dipe.co.kr",
+          "n": 3
+        },
+        {
+          "domain": "biz.heraldcorp.com",
+          "n": 3
+        },
+        {
+          "domain": "hankyung.com",
+          "n": 3
+        },
+        {
+          "domain": "ngonews.kr",
+          "n": 2
+        },
+        {
+          "domain": "topstarnews.net",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "아이오아이",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 95,
+      "n_news_media_bullets": 68,
+      "news_media_share": 0.7158,
+      "n_distinct_outlets": 47,
+      "outlet_diversity_ratio": 0.6912,
+      "top_outlets": [
+        {
+          "domain": "v.daum.net",
+          "n": 5
+        },
+        {
+          "domain": "starnewskorea.com",
+          "n": 4
+        },
+        {
+          "domain": "harpersbazaar.co.kr",
+          "n": 4
+        },
+        {
+          "domain": "en.sedaily.com",
+          "n": 3
+        },
+        {
+          "domain": "sports.khan.co.kr",
+          "n": 3
+        },
+        {
+          "domain": "thairath.co.th",
+          "n": 3
+        },
+        {
+          "domain": "topstarnews.net",
+          "n": 3
+        },
+        {
+          "domain": "malaymail.com",
+          "n": 2
+        },
+        {
+          "domain": "sina.cn",
+          "n": 2
+        },
+        {
+          "domain": "sedaily.com",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "QWER",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 103,
+      "n_news_media_bullets": 64,
+      "news_media_share": 0.6214,
+      "n_distinct_outlets": 47,
+      "outlet_diversity_ratio": 0.7344,
+      "top_outlets": [
+        {
+          "domain": "v.daum.net",
+          "n": 6
+        },
+        {
+          "domain": "sports.khan.co.kr",
+          "n": 3
+        },
+        {
+          "domain": "detik.com",
+          "n": 3
+        },
+        {
+          "domain": "wvzine.com",
+          "n": 2
+        },
+        {
+          "domain": "newsis.com",
+          "n": 2
+        },
+        {
+          "domain": "udn.com",
+          "n": 2
+        },
+        {
+          "domain": "hk01.com",
+          "n": 2
+        },
+        {
+          "domain": "yesasia.ru",
+          "n": 2
+        },
+        {
+          "domain": "circlechart.kr",
+          "n": 2
+        },
+        {
+          "domain": "news.yahoo.co.jp",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "A-pink",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 95,
+      "n_news_media_bullets": 57,
+      "news_media_share": 0.6,
+      "n_distinct_outlets": 46,
+      "outlet_diversity_ratio": 0.807,
+      "top_outlets": [
+        {
+          "domain": "v.daum.net",
+          "n": 6
+        },
+        {
+          "domain": "manilaconcertjunkies.com",
+          "n": 2
+        },
+        {
+          "domain": "oricon.co.jp",
+          "n": 2
+        },
+        {
+          "domain": "hk01.com",
+          "n": 2
+        },
+        {
+          "domain": "sanook.com",
+          "n": 2
+        },
+        {
+          "domain": "musicstation.kapook.com",
+          "n": 2
+        },
+        {
+          "domain": "topstarnews.net",
+          "n": 2
+        },
+        {
+          "domain": "kpopherald.com",
+          "n": 1
+        },
+        {
+          "domain": "allkpop.com",
+          "n": 1
+        },
+        {
+          "domain": "korepo.com",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "fandom": "박서진",
+      "category": "트로트",
+      "n_total_bullets": 99,
+      "n_news_media_bullets": 93,
+      "news_media_share": 0.9394,
+      "n_distinct_outlets": 45,
+      "outlet_diversity_ratio": 0.4839,
+      "top_outlets": [
+        {
+          "domain": "v.daum.net",
+          "n": 16
+        },
+        {
+          "domain": "sports.khan.co.kr",
+          "n": 10
+        },
+        {
+          "domain": "starnewskorea.com",
+          "n": 7
+        },
+        {
+          "domain": "newsis.com",
+          "n": 4
+        },
+        {
+          "domain": "topstarnews.net",
+          "n": 4
+        },
+        {
+          "domain": "munhwa.com",
+          "n": 3
+        },
+        {
+          "domain": "allkpop.com",
+          "n": 3
+        },
+        {
+          "domain": "edaily.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "ajunews.com",
+          "n": 2
+        },
+        {
+          "domain": "dabanews.co.kr",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "오마이걸",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 98,
+      "n_news_media_bullets": 64,
+      "news_media_share": 0.6531,
+      "n_distinct_outlets": 45,
+      "outlet_diversity_ratio": 0.7031,
+      "top_outlets": [
+        {
+          "domain": "v.daum.net",
+          "n": 6
+        },
+        {
+          "domain": "soompi.com",
+          "n": 3
+        },
+        {
+          "domain": "kclf.org",
+          "n": 3
+        },
+        {
+          "domain": "hankyung.com",
+          "n": 2
+        },
+        {
+          "domain": "maily.so",
+          "n": 2
+        },
+        {
+          "domain": "joynews24.com",
+          "n": 2
+        },
+        {
+          "domain": "20.detik.com",
+          "n": 2
+        },
+        {
+          "domain": "newspim.com",
+          "n": 2
+        },
+        {
+          "domain": "natalie.mu",
+          "n": 2
+        },
+        {
+          "domain": "yesasia.ru",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "빈지노",
+      "category": "힙합",
+      "n_total_bullets": 79,
+      "n_news_media_bullets": 59,
+      "news_media_share": 0.7468,
+      "n_distinct_outlets": 45,
+      "outlet_diversity_ratio": 0.7627,
+      "top_outlets": [
+        {
+          "domain": "newsis.com",
+          "n": 6
+        },
+        {
+          "domain": "hypebeast.kr",
+          "n": 5
+        },
+        {
+          "domain": "rollingstone.co.kr",
+          "n": 3
+        },
+        {
+          "domain": "starnewskorea.com",
+          "n": 2
+        },
+        {
+          "domain": "marieclairekorea.com",
+          "n": 2
+        },
+        {
+          "domain": "sports.khan.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "xportsnews.com",
+          "n": 1
+        },
+        {
+          "domain": "mhnse.com",
+          "n": 1
+        },
+        {
+          "domain": "star.ohmynews.com",
+          "n": 1
+        },
+        {
+          "domain": "kworb.net",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "fandom": "슈퍼주니어",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 89,
+      "n_news_media_bullets": 58,
+      "news_media_share": 0.6517,
+      "n_distinct_outlets": 45,
+      "outlet_diversity_ratio": 0.7759,
+      "top_outlets": [
+        {
+          "domain": "munhwa.com",
+          "n": 3
+        },
+        {
+          "domain": "v.daum.net",
+          "n": 3
+        },
+        {
+          "domain": "mt.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "edaily.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "smentertainment.com",
+          "n": 2
+        },
+        {
+          "domain": "kenh14.vn",
+          "n": 2
+        },
+        {
+          "domain": "hk01.com",
+          "n": 2
+        },
+        {
+          "domain": "mb.com.ph",
+          "n": 2
+        },
+        {
+          "domain": "dailyjn.com",
+          "n": 2
+        },
+        {
+          "domain": "starnewskorea.com",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "IKON",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 96,
+      "n_news_media_bullets": 70,
+      "news_media_share": 0.7292,
+      "n_distinct_outlets": 44,
+      "outlet_diversity_ratio": 0.6286,
+      "top_outlets": [
+        {
+          "domain": "yg-life.com",
+          "n": 7
+        },
+        {
+          "domain": "v.daum.net",
+          "n": 4
+        },
+        {
+          "domain": "infobae.com",
+          "n": 4
+        },
+        {
+          "domain": "starnewskorea.com",
+          "n": 3
+        },
+        {
+          "domain": "sports.khan.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "star.ytn.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "allkpop.com",
+          "n": 2
+        },
+        {
+          "domain": "liputan6.com",
+          "n": 2
+        },
+        {
+          "domain": "khaosod.co.th",
+          "n": 2
+        },
+        {
+          "domain": "sanook.com",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "빅뱅",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 97,
+      "n_news_media_bullets": 65,
+      "news_media_share": 0.6701,
+      "n_distinct_outlets": 44,
+      "outlet_diversity_ratio": 0.6769,
+      "top_outlets": [
+        {
+          "domain": "oricon.co.jp",
+          "n": 5
+        },
+        {
+          "domain": "v.daum.net",
+          "n": 4
+        },
+        {
+          "domain": "starnewskorea.com",
+          "n": 4
+        },
+        {
+          "domain": "goodmorningvietnam.co.kr",
+          "n": 3
+        },
+        {
+          "domain": "marieclairekorea.com",
+          "n": 3
+        },
+        {
+          "domain": "koreatimes.com",
+          "n": 2
+        },
+        {
+          "domain": "dtinews.dantri.com.vn",
+          "n": 2
+        },
+        {
+          "domain": "kenh14.vn",
+          "n": 2
+        },
+        {
+          "domain": "pop.inquirer.net",
+          "n": 2
+        },
+        {
+          "domain": "hankookilbo.com",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "샤이니",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 77,
+      "n_news_media_bullets": 55,
+      "news_media_share": 0.7143,
+      "n_distinct_outlets": 44,
+      "outlet_diversity_ratio": 0.8,
+      "top_outlets": [
+        {
+          "domain": "detik.com",
+          "n": 4
+        },
+        {
+          "domain": "topstarnews.net",
+          "n": 3
+        },
+        {
+          "domain": "starnewskorea.com",
+          "n": 3
+        },
+        {
+          "domain": "yesasia.ru",
+          "n": 2
+        },
+        {
+          "domain": "billboard.com.br",
+          "n": 2
+        },
+        {
+          "domain": "antaranews.com",
+          "n": 2
+        },
+        {
+          "domain": "musicking.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "news1.kr",
+          "n": 1
+        },
+        {
+          "domain": "marieclairekorea.com",
+          "n": 1
+        },
+        {
+          "domain": "dantri.com.vn",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "fandom": "Crush",
+      "category": "솔로",
+      "n_total_bullets": 99,
+      "n_news_media_bullets": 75,
+      "news_media_share": 0.7576,
+      "n_distinct_outlets": 43,
+      "outlet_diversity_ratio": 0.5733,
+      "top_outlets": [
+        {
+          "domain": "etnews.com",
+          "n": 9
+        },
+        {
+          "domain": "sports.khan.co.kr",
+          "n": 5
+        },
+        {
+          "domain": "sanook.com",
+          "n": 5
+        },
+        {
+          "domain": "hot.detik.com",
+          "n": 4
+        },
+        {
+          "domain": "m.etnews.com",
+          "n": 3
+        },
+        {
+          "domain": "newsis.com",
+          "n": 2
+        },
+        {
+          "domain": "tickets.interpark.com",
+          "n": 2
+        },
+        {
+          "domain": "viva100.com",
+          "n": 2
+        },
+        {
+          "domain": "luck-d.com",
+          "n": 2
+        },
+        {
+          "domain": "ototoy.jp",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "여자친구",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 93,
+      "n_news_media_bullets": 56,
+      "news_media_share": 0.6022,
+      "n_distinct_outlets": 43,
+      "outlet_diversity_ratio": 0.7679,
+      "top_outlets": [
+        {
+          "domain": "sanook.com",
+          "n": 4
+        },
+        {
+          "domain": "oricon.co.jp",
+          "n": 4
+        },
+        {
+          "domain": "natalie.mu",
+          "n": 3
+        },
+        {
+          "domain": "soompi.com",
+          "n": 2
+        },
+        {
+          "domain": "hot.detik.com",
+          "n": 2
+        },
+        {
+          "domain": "news.tvbs.com.tw",
+          "n": 2
+        },
+        {
+          "domain": "idntimes.com",
+          "n": 2
+        },
+        {
+          "domain": "v.daum.net",
+          "n": 2
+        },
+        {
+          "domain": "m.kukinews.com",
+          "n": 1
+        },
+        {
+          "domain": "billboardphilippines.com",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "fandom": "최예나",
+      "category": "솔로",
+      "n_total_bullets": 96,
+      "n_news_media_bullets": 70,
+      "news_media_share": 0.7292,
+      "n_distinct_outlets": 42,
+      "outlet_diversity_ratio": 0.6,
+      "top_outlets": [
+        {
+          "domain": "xportsnews.com",
+          "n": 6
+        },
+        {
+          "domain": "starnewskorea.com",
+          "n": 6
+        },
+        {
+          "domain": "mediafine.co.kr",
+          "n": 5
+        },
+        {
+          "domain": "sports.khan.co.kr",
+          "n": 5
+        },
+        {
+          "domain": "m.news.nate.com",
+          "n": 3
+        },
+        {
+          "domain": "yhent.co.kr",
+          "n": 3
+        },
+        {
+          "domain": "fnnews.com",
+          "n": 2
+        },
+        {
+          "domain": "oricon.co.jp",
+          "n": 2
+        },
+        {
+          "domain": "youtube.com",
+          "n": 2
+        },
+        {
+          "domain": "sanook.com",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "Hearts2Hearts",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 102,
+      "n_news_media_bullets": 62,
+      "news_media_share": 0.6078,
+      "n_distinct_outlets": 42,
+      "outlet_diversity_ratio": 0.6774,
+      "top_outlets": [
+        {
+          "domain": "v.daum.net",
+          "n": 5
+        },
+        {
+          "domain": "oricon.co.jp",
+          "n": 4
+        },
+        {
+          "domain": "soompi.com",
+          "n": 3
+        },
+        {
+          "domain": "allkpop.com",
+          "n": 3
+        },
+        {
+          "domain": "rctiplus.com",
+          "n": 3
+        },
+        {
+          "domain": "news.nate.com",
+          "n": 2
+        },
+        {
+          "domain": "seoulvibes.net",
+          "n": 2
+        },
+        {
+          "domain": "wolipop.detik.com",
+          "n": 2
+        },
+        {
+          "domain": "idntimes.com",
+          "n": 2
+        },
+        {
+          "domain": "h2hcalendar.com",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "이찬원",
+      "category": "트로트",
+      "n_total_bullets": 106,
+      "n_news_media_bullets": 82,
+      "news_media_share": 0.7736,
+      "n_distinct_outlets": 41,
+      "outlet_diversity_ratio": 0.5,
+      "top_outlets": [
+        {
+          "domain": "starnewskorea.com",
+          "n": 18
+        },
+        {
+          "domain": "v.daum.net",
+          "n": 9
+        },
+        {
+          "domain": "topstarnews.net",
+          "n": 5
+        },
+        {
+          "domain": "insight.co.kr",
+          "n": 4
+        },
+        {
+          "domain": "sports.khan.co.kr",
+          "n": 3
+        },
+        {
+          "domain": "imaeil.com",
+          "n": 2
+        },
+        {
+          "domain": "news.nate.com",
+          "n": 2
+        },
+        {
+          "domain": "beautifulfund.org",
+          "n": 2
+        },
+        {
+          "domain": "biz.heraldcorp.com",
+          "n": 2
+        },
+        {
+          "domain": "newsweekjapan.jp",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "김재중",
+      "category": "솔로",
+      "n_total_bullets": 77,
+      "n_news_media_bullets": 58,
+      "news_media_share": 0.7532,
+      "n_distinct_outlets": 41,
+      "outlet_diversity_ratio": 0.7069,
+      "top_outlets": [
+        {
+          "domain": "sports.khan.co.kr",
+          "n": 8
+        },
+        {
+          "domain": "enews.imbc.com",
+          "n": 5
+        },
+        {
+          "domain": "v.daum.net",
+          "n": 4
+        },
+        {
+          "domain": "ajunews.com",
+          "n": 2
+        },
+        {
+          "domain": "star.ettoday.net",
+          "n": 2
+        },
+        {
+          "domain": "tenasia.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "job-post.co.kr",
+          "n": 1
+        },
+        {
+          "domain": "jaefans.com",
+          "n": 1
+        },
+        {
+          "domain": "korepo.com",
+          "n": 1
+        },
+        {
+          "domain": "ticketbox.vn",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "fandom": "마마무",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 94,
+      "n_news_media_bullets": 55,
+      "news_media_share": 0.5851,
+      "n_distinct_outlets": 41,
+      "outlet_diversity_ratio": 0.7455,
+      "top_outlets": [
+        {
+          "domain": "v.daum.net",
+          "n": 4
+        },
+        {
+          "domain": "mb.com.ph",
+          "n": 3
+        },
+        {
+          "domain": "hot.detik.com",
+          "n": 2
+        },
+        {
+          "domain": "hk01.com",
+          "n": 2
+        },
+        {
+          "domain": "natalie.mu",
+          "n": 2
+        },
+        {
+          "domain": "infobae.com",
+          "n": 2
+        },
+        {
+          "domain": "yesasia.ru",
+          "n": 2
+        },
+        {
+          "domain": "mgronline.com",
+          "n": 2
+        },
+        {
+          "domain": "sports.khan.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "allkpop.com",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "송가인",
+      "category": "트로트",
+      "n_total_bullets": 92,
+      "n_news_media_bullets": 61,
+      "news_media_share": 0.663,
+      "n_distinct_outlets": 39,
+      "outlet_diversity_ratio": 0.6393,
+      "top_outlets": [
+        {
+          "domain": "sportsseoul.com",
+          "n": 6
+        },
+        {
+          "domain": "pressian.com",
+          "n": 4
+        },
+        {
+          "domain": "starnewskorea.com",
+          "n": 4
+        },
+        {
+          "domain": "news1.kr",
+          "n": 3
+        },
+        {
+          "domain": "huffingtonpost.kr",
+          "n": 2
+        },
+        {
+          "domain": "bstage.in",
+          "n": 2
+        },
+        {
+          "domain": "imbc.com",
+          "n": 2
+        },
+        {
+          "domain": "etoday.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "foodtoday.or.kr",
+          "n": 2
+        },
+        {
+          "domain": "m-i.kr",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "영탁",
+      "category": "트로트",
+      "n_total_bullets": 104,
+      "n_news_media_bullets": 73,
+      "news_media_share": 0.7019,
+      "n_distinct_outlets": 38,
+      "outlet_diversity_ratio": 0.5205,
+      "top_outlets": [
+        {
+          "domain": "sports.khan.co.kr",
+          "n": 12
+        },
+        {
+          "domain": "starnewskorea.com",
+          "n": 6
+        },
+        {
+          "domain": "v.daum.net",
+          "n": 5
+        },
+        {
+          "domain": "korezin.com",
+          "n": 5
+        },
+        {
+          "domain": "pep.ph",
+          "n": 4
+        },
+        {
+          "domain": "gpkorea.com",
+          "n": 3
+        },
+        {
+          "domain": "mksports.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "cbci.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "trotmagazine.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "topstarnews.net",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "프로미스나인",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 89,
+      "n_news_media_bullets": 58,
+      "news_media_share": 0.6517,
+      "n_distinct_outlets": 38,
+      "outlet_diversity_ratio": 0.6552,
+      "top_outlets": [
+        {
+          "domain": "sports.khan.co.kr",
+          "n": 7
+        },
+        {
+          "domain": "v.daum.net",
+          "n": 5
+        },
+        {
+          "domain": "idntimes.com",
+          "n": 4
+        },
+        {
+          "domain": "asiaartistawards.com",
+          "n": 3
+        },
+        {
+          "domain": "yesasia.ru",
+          "n": 3
+        },
+        {
+          "domain": "allkpop.com",
+          "n": 2
+        },
+        {
+          "domain": "newsis.com",
+          "n": 2
+        },
+        {
+          "domain": "infobae.com",
+          "n": 2
+        },
+        {
+          "domain": "daymakercreatives.kktix.cc",
+          "n": 1
+        },
+        {
+          "domain": "billboard-japan.com",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "fandom": "Zion.T",
+      "category": "솔로",
+      "n_total_bullets": 79,
+      "n_news_media_bullets": 47,
+      "news_media_share": 0.5949,
+      "n_distinct_outlets": 38,
+      "outlet_diversity_ratio": 0.8085,
+      "top_outlets": [
+        {
+          "domain": "sports.khan.co.kr",
+          "n": 4
+        },
+        {
+          "domain": "news.sbs.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "kpopn.com",
+          "n": 2
+        },
+        {
+          "domain": "star.ettoday.net",
+          "n": 2
+        },
+        {
+          "domain": "yg-life.com",
+          "n": 2
+        },
+        {
+          "domain": "brandinginasia.com",
+          "n": 2
+        },
+        {
+          "domain": "mt.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "newspim.com",
+          "n": 1
+        },
+        {
+          "domain": "m.ticket.yes24.com",
+          "n": 1
+        },
+        {
+          "domain": "mobileticket.interpark.com",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "fandom": "백지영",
+      "category": "발라드",
+      "n_total_bullets": 72,
+      "n_news_media_bullets": 46,
+      "news_media_share": 0.6389,
+      "n_distinct_outlets": 38,
+      "outlet_diversity_ratio": 0.8261,
+      "top_outlets": [
+        {
+          "domain": "kbizoom.com",
+          "n": 3
+        },
+        {
+          "domain": "tuoitre.vn",
+          "n": 3
+        },
+        {
+          "domain": "starnewskorea.com",
+          "n": 2
+        },
+        {
+          "domain": "cbci.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "yna.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "c-k-jpopnews.fr",
+          "n": 2
+        },
+        {
+          "domain": "allkpop.com",
+          "n": 1
+        },
+        {
+          "domain": "radiok1230.com",
+          "n": 1
+        },
+        {
+          "domain": "m.radiokorea.com",
+          "n": 1
+        },
+        {
+          "domain": "thethaovanhoa.vn",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "fandom": "투어스(TWS)",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 90,
+      "n_news_media_bullets": 80,
+      "news_media_share": 0.8889,
+      "n_distinct_outlets": 37,
+      "outlet_diversity_ratio": 0.4625,
+      "top_outlets": [
+        {
+          "domain": "allkpop.com",
+          "n": 9
+        },
+        {
+          "domain": "starnewskorea.com",
+          "n": 7
+        },
+        {
+          "domain": "soompi.com",
+          "n": 6
+        },
+        {
+          "domain": "sports.khan.co.kr",
+          "n": 6
+        },
+        {
+          "domain": "koreaherald.com",
+          "n": 5
+        },
+        {
+          "domain": "dipe.co.kr",
+          "n": 4
+        },
+        {
+          "domain": "bandwagon.asia",
+          "n": 3
+        },
+        {
+          "domain": "news.tf.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "tws-official.jp",
+          "n": 2
+        },
+        {
+          "domain": "kpopjournal.tokyo",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "박효신",
+      "category": "발라드",
+      "n_total_bullets": 91,
+      "n_news_media_bullets": 60,
+      "news_media_share": 0.6593,
+      "n_distinct_outlets": 37,
+      "outlet_diversity_ratio": 0.6167,
+      "top_outlets": [
+        {
+          "domain": "allkpop.com",
+          "n": 5
+        },
+        {
+          "domain": "v.daum.net",
+          "n": 4
+        },
+        {
+          "domain": "hankookilbo.com",
+          "n": 4
+        },
+        {
+          "domain": "mbiz.heraldcorp.com",
+          "n": 4
+        },
+        {
+          "domain": "jnmnews.com",
+          "n": 3
+        },
+        {
+          "domain": "starnewskorea.com",
+          "n": 3
+        },
+        {
+          "domain": "newsis.com",
+          "n": 3
+        },
+        {
+          "domain": "sports.khan.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "musicrambling.wordpress.com",
+          "n": 2
+        },
+        {
+          "domain": "soompi.com",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "STAYC",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 92,
+      "n_news_media_bullets": 55,
+      "news_media_share": 0.5978,
+      "n_distinct_outlets": 37,
+      "outlet_diversity_ratio": 0.6727,
+      "top_outlets": [
+        {
+          "domain": "highup-ent.com",
+          "n": 5
+        },
+        {
+          "domain": "sports.khan.co.kr",
+          "n": 4
+        },
+        {
+          "domain": "v.daum.net",
+          "n": 4
+        },
+        {
+          "domain": "20.detik.com",
+          "n": 3
+        },
+        {
+          "domain": "idntimes.com",
+          "n": 3
+        },
+        {
+          "domain": "natalie.mu",
+          "n": 2
+        },
+        {
+          "domain": "detik.com",
+          "n": 2
+        },
+        {
+          "domain": "workpointtoday.com",
+          "n": 2
+        },
+        {
+          "domain": "star.ettoday.net",
+          "n": 2
+        },
+        {
+          "domain": "world.nol.com",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "fandom": "김호중",
+      "category": "트로트",
+      "n_total_bullets": 91,
+      "n_news_media_bullets": 70,
+      "news_media_share": 0.7692,
+      "n_distinct_outlets": 36,
+      "outlet_diversity_ratio": 0.5143,
+      "top_outlets": [
+        {
+          "domain": "v.daum.net",
+          "n": 7
+        },
+        {
+          "domain": "hjfocus.com",
+          "n": 7
+        },
+        {
+          "domain": "asiae.co.kr",
+          "n": 5
+        },
+        {
+          "domain": "paxetv.com",
+          "n": 4
+        },
+        {
+          "domain": "koreaboo.com",
+          "n": 4
+        },
+        {
+          "domain": "biz.heraldcorp.com",
+          "n": 4
+        },
+        {
+          "domain": "goodmorningcc.com",
+          "n": 3
+        },
+        {
+          "domain": "segye.com",
+          "n": 3
+        },
+        {
+          "domain": "koreatowndaily.com",
+          "n": 2
+        },
+        {
+          "domain": "allkpop.com",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "리센느(RESCENE)",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 85,
+      "n_news_media_bullets": 68,
+      "news_media_share": 0.8,
+      "n_distinct_outlets": 36,
+      "outlet_diversity_ratio": 0.5294,
+      "top_outlets": [
+        {
+          "domain": "starnewskorea.com",
+          "n": 7
+        },
+        {
+          "domain": "biz.heraldcorp.com",
+          "n": 7
+        },
+        {
+          "domain": "allkpop.com",
+          "n": 5
+        },
+        {
+          "domain": "sports.khan.co.kr",
+          "n": 4
+        },
+        {
+          "domain": "v.daum.net",
+          "n": 3
+        },
+        {
+          "domain": "geojenews.co.kr",
+          "n": 3
+        },
+        {
+          "domain": "ytn.co.kr",
+          "n": 3
+        },
+        {
+          "domain": "rescene.org",
+          "n": 3
+        },
+        {
+          "domain": "beyondpost.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "news1.kr",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "보아",
+      "category": "솔로",
+      "n_total_bullets": 76,
+      "n_news_media_bullets": 50,
+      "news_media_share": 0.6579,
+      "n_distinct_outlets": 36,
+      "outlet_diversity_ratio": 0.72,
+      "top_outlets": [
+        {
+          "domain": "btspurpleyou.com",
+          "n": 4
+        },
+        {
+          "domain": "starnewskorea.com",
+          "n": 3
+        },
+        {
+          "domain": "tenasia.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "sports.khan.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "natalie.mu",
+          "n": 2
+        },
+        {
+          "domain": "idntimes.com",
+          "n": 2
+        },
+        {
+          "domain": "avex.jp",
+          "n": 2
+        },
+        {
+          "domain": "segye.com",
+          "n": 2
+        },
+        {
+          "domain": "oricon.co.jp",
+          "n": 2
+        },
+        {
+          "domain": "kmagazine.mx",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "비비",
+      "category": "솔로",
+      "n_total_bullets": 74,
+      "n_news_media_bullets": 46,
+      "news_media_share": 0.6216,
+      "n_distinct_outlets": 36,
+      "outlet_diversity_ratio": 0.7826,
+      "top_outlets": [
+        {
+          "domain": "v.daum.net",
+          "n": 7
+        },
+        {
+          "domain": "idntimes.com",
+          "n": 2
+        },
+        {
+          "domain": "wikitree.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "kstyle.com",
+          "n": 2
+        },
+        {
+          "domain": "news.yahoo.co.jp",
+          "n": 2
+        },
+        {
+          "domain": "music.douban.com",
+          "n": 1
+        },
+        {
+          "domain": "douban.com",
+          "n": 1
+        },
+        {
+          "domain": "tribunnews.com",
+          "n": 1
+        },
+        {
+          "domain": "thairath.co.th",
+          "n": 1
+        },
+        {
+          "domain": "workpointtoday.com",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "fandom": "청하",
+      "category": "솔로",
+      "n_total_bullets": 79,
+      "n_news_media_bullets": 40,
+      "news_media_share": 0.5063,
+      "n_distinct_outlets": 36,
+      "outlet_diversity_ratio": 0.9,
+      "top_outlets": [
+        {
+          "domain": "tenasia.co.kr",
+          "n": 4
+        },
+        {
+          "domain": "starnewskorea.com",
+          "n": 2
+        },
+        {
+          "domain": "soompi.com",
+          "n": 1
+        },
+        {
+          "domain": "storykpop.com",
+          "n": 1
+        },
+        {
+          "domain": "tenbizt.com",
+          "n": 1
+        },
+        {
+          "domain": "makassar.tribunnews.com",
+          "n": 1
+        },
+        {
+          "domain": "christiantoday.co.kr",
+          "n": 1
+        },
+        {
+          "domain": "sports.khan.co.kr",
+          "n": 1
+        },
+        {
+          "domain": "gulfnews.com",
+          "n": 1
+        },
+        {
+          "domain": "topdaily.kr",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "fandom": "성시경",
+      "category": "발라드",
+      "n_total_bullets": 80,
+      "n_news_media_bullets": 65,
+      "news_media_share": 0.8125,
+      "n_distinct_outlets": 35,
+      "outlet_diversity_ratio": 0.5385,
+      "top_outlets": [
+        {
+          "domain": "v.daum.net",
+          "n": 8
+        },
+        {
+          "domain": "topstarnews.net",
+          "n": 5
+        },
+        {
+          "domain": "allkpop.com",
+          "n": 5
+        },
+        {
+          "domain": "news.nate.com",
+          "n": 4
+        },
+        {
+          "domain": "hankyung.com",
+          "n": 3
+        },
+        {
+          "domain": "newsis.com",
+          "n": 3
+        },
+        {
+          "domain": "mhnse.com",
+          "n": 3
+        },
+        {
+          "domain": "dipe.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "koreadaily.com",
+          "n": 2
+        },
+        {
+          "domain": "kstationtv.com",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "악동뮤지션",
+      "category": "혼성",
+      "n_total_bullets": 74,
+      "n_news_media_bullets": 50,
+      "news_media_share": 0.6757,
+      "n_distinct_outlets": 35,
+      "outlet_diversity_ratio": 0.7,
+      "top_outlets": [
+        {
+          "domain": "allkpop.com",
+          "n": 6
+        },
+        {
+          "domain": "lawissue.co.kr",
+          "n": 4
+        },
+        {
+          "domain": "v.daum.net",
+          "n": 3
+        },
+        {
+          "domain": "yg-life.com",
+          "n": 3
+        },
+        {
+          "domain": "starnewskorea.com",
+          "n": 3
+        },
+        {
+          "domain": "m.segye.com",
+          "n": 2
+        },
+        {
+          "domain": "spotvnews.co.kr",
+          "n": 1
+        },
+        {
+          "domain": "music.163.com",
+          "n": 1
+        },
+        {
+          "domain": "detik.com",
+          "n": 1
+        },
+        {
+          "domain": "hk.news.yahoo.com",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "fandom": "BTOB",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 82,
+      "n_news_media_bullets": 50,
+      "news_media_share": 0.6098,
+      "n_distinct_outlets": 35,
+      "outlet_diversity_ratio": 0.7,
+      "top_outlets": [
+        {
+          "domain": "starnewskorea.com",
+          "n": 5
+        },
+        {
+          "domain": "detik.com",
+          "n": 4
+        },
+        {
+          "domain": "hk01.com",
+          "n": 4
+        },
+        {
+          "domain": "topstarnews.net",
+          "n": 3
+        },
+        {
+          "domain": "v.daum.net",
+          "n": 2
+        },
+        {
+          "domain": "sanook.com",
+          "n": 2
+        },
+        {
+          "domain": "edaily.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "wikitree.co.kr",
+          "n": 1
+        },
+        {
+          "domain": "allkpop.com",
+          "n": 1
+        },
+        {
+          "domain": "melody-japan.com",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "fandom": "10CM",
+      "category": "솔로",
+      "n_total_bullets": 85,
+      "n_news_media_bullets": 44,
+      "news_media_share": 0.5176,
+      "n_distinct_outlets": 35,
+      "outlet_diversity_ratio": 0.7955,
+      "top_outlets": [
+        {
+          "domain": "v.daum.net",
+          "n": 3
+        },
+        {
+          "domain": "tickets.interpark.com",
+          "n": 2
+        },
+        {
+          "domain": "idntimes.com",
+          "n": 2
+        },
+        {
+          "domain": "gmanetwork.com",
+          "n": 2
+        },
+        {
+          "domain": "prtimes.jp",
+          "n": 2
+        },
+        {
+          "domain": "timable.com",
+          "n": 2
+        },
+        {
+          "domain": "sports.khan.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "musicking.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "detik.com",
+          "n": 1
+        },
+        {
+          "domain": "mcst.go.kr",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "fandom": "god",
+      "category": "원로그룹",
+      "n_total_bullets": 99,
+      "n_news_media_bullets": 72,
+      "news_media_share": 0.7273,
+      "n_distinct_outlets": 34,
+      "outlet_diversity_ratio": 0.4722,
+      "top_outlets": [
+        {
+          "domain": "v.daum.net",
+          "n": 8
+        },
+        {
+          "domain": "starnewskorea.com",
+          "n": 6
+        },
+        {
+          "domain": "fnnews.com",
+          "n": 5
+        },
+        {
+          "domain": "sports.khan.co.kr",
+          "n": 5
+        },
+        {
+          "domain": "allkpop.com",
+          "n": 4
+        },
+        {
+          "domain": "ent.sbs.co.kr",
+          "n": 3
+        },
+        {
+          "domain": "news.sbs.co.kr",
+          "n": 3
+        },
+        {
+          "domain": "nocutnews.co.kr",
+          "n": 3
+        },
+        {
+          "domain": "brunch.co.kr",
+          "n": 3
+        },
+        {
+          "domain": "plus.hankyung.com",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "권은비",
+      "category": "솔로",
+      "n_total_bullets": 90,
+      "n_news_media_bullets": 61,
+      "news_media_share": 0.6778,
+      "n_distinct_outlets": 34,
+      "outlet_diversity_ratio": 0.5574,
+      "top_outlets": [
+        {
+          "domain": "oricon.co.jp",
+          "n": 6
+        },
+        {
+          "domain": "v.daum.net",
+          "n": 5
+        },
+        {
+          "domain": "sports.khan.co.kr",
+          "n": 4
+        },
+        {
+          "domain": "youtube.com",
+          "n": 3
+        },
+        {
+          "domain": "fashionbiz.co.kr",
+          "n": 3
+        },
+        {
+          "domain": "cbci.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "hanteonews.com",
+          "n": 2
+        },
+        {
+          "domain": "etnews.com",
+          "n": 2
+        },
+        {
+          "domain": "asiaartistawards.com",
+          "n": 2
+        },
+        {
+          "domain": "starnewskorea.com",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "CNBLUE",
+      "category": "K-pop 보이그룹 /록",
+      "n_total_bullets": 84,
+      "n_news_media_bullets": 55,
+      "news_media_share": 0.6548,
+      "n_distinct_outlets": 34,
+      "outlet_diversity_ratio": 0.6182,
+      "top_outlets": [
+        {
+          "domain": "natalie.mu",
+          "n": 5
+        },
+        {
+          "domain": "barks.jp",
+          "n": 5
+        },
+        {
+          "domain": "koreaherald.com",
+          "n": 5
+        },
+        {
+          "domain": "allkpop.com",
+          "n": 3
+        },
+        {
+          "domain": "m.weibo.cn",
+          "n": 2
+        },
+        {
+          "domain": "antaranews.com",
+          "n": 2
+        },
+        {
+          "domain": "v.daum.net",
+          "n": 2
+        },
+        {
+          "domain": "rappler.com",
+          "n": 2
+        },
+        {
+          "domain": "hurriyet.com.tr",
+          "n": 2
+        },
+        {
+          "domain": "hankyung.com",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "동방신기",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 82,
+      "n_news_media_bullets": 55,
+      "news_media_share": 0.6707,
+      "n_distinct_outlets": 33,
+      "outlet_diversity_ratio": 0.6,
+      "top_outlets": [
+        {
+          "domain": "oricon.co.jp",
+          "n": 8
+        },
+        {
+          "domain": "starnewskorea.com",
+          "n": 7
+        },
+        {
+          "domain": "topstarnews.net",
+          "n": 3
+        },
+        {
+          "domain": "news.nate.com",
+          "n": 2
+        },
+        {
+          "domain": "bbs.ruliweb.com",
+          "n": 2
+        },
+        {
+          "domain": "biz.heraldcorp.com",
+          "n": 2
+        },
+        {
+          "domain": "pop.inquirer.net",
+          "n": 2
+        },
+        {
+          "domain": "soompi.com",
+          "n": 2
+        },
+        {
+          "domain": "natalie.mu",
+          "n": 2
+        },
+        {
+          "domain": "smentertainment.com",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "거미",
+      "category": "발라드",
+      "n_total_bullets": 87,
+      "n_news_media_bullets": 57,
+      "news_media_share": 0.6552,
+      "n_distinct_outlets": 32,
+      "outlet_diversity_ratio": 0.5614,
+      "top_outlets": [
+        {
+          "domain": "kmib.co.kr",
+          "n": 6
+        },
+        {
+          "domain": "v.daum.net",
+          "n": 4
+        },
+        {
+          "domain": "wandonews.com",
+          "n": 4
+        },
+        {
+          "domain": "asiaartistawards.com",
+          "n": 4
+        },
+        {
+          "domain": "m.sedaily.com",
+          "n": 3
+        },
+        {
+          "domain": "inside.ytn.co.kr",
+          "n": 3
+        },
+        {
+          "domain": "stagepick.co.kr",
+          "n": 3
+        },
+        {
+          "domain": "newspim.com",
+          "n": 2
+        },
+        {
+          "domain": "youtube.com",
+          "n": 2
+        },
+        {
+          "domain": "starnewskorea.com",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "HOT",
+      "category": "원로그룹",
+      "n_total_bullets": 97,
+      "n_news_media_bullets": 55,
+      "news_media_share": 0.567,
+      "n_distinct_outlets": 32,
+      "outlet_diversity_ratio": 0.5818,
+      "top_outlets": [
+        {
+          "domain": "v.daum.net",
+          "n": 7
+        },
+        {
+          "domain": "newsis.com",
+          "n": 6
+        },
+        {
+          "domain": "biz.heraldcorp.com",
+          "n": 4
+        },
+        {
+          "domain": "hankookilbo.com",
+          "n": 3
+        },
+        {
+          "domain": "khan.co.kr",
+          "n": 3
+        },
+        {
+          "domain": "kyeonggi.com",
+          "n": 3
+        },
+        {
+          "domain": "fnnews.com",
+          "n": 2
+        },
+        {
+          "domain": "tvreport.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "busan.com",
+          "n": 2
+        },
+        {
+          "domain": "allkpop.com",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "fandom": "케이윌",
+      "category": "발라드",
+      "n_total_bullets": 71,
+      "n_news_media_bullets": 55,
+      "news_media_share": 0.7746,
+      "n_distinct_outlets": 32,
+      "outlet_diversity_ratio": 0.5818,
+      "top_outlets": [
+        {
+          "domain": "v.daum.net",
+          "n": 6
+        },
+        {
+          "domain": "enews.imbc.com",
+          "n": 4
+        },
+        {
+          "domain": "asiaartistawards.com",
+          "n": 4
+        },
+        {
+          "domain": "starnewskorea.com",
+          "n": 4
+        },
+        {
+          "domain": "tvreport.co.kr",
+          "n": 3
+        },
+        {
+          "domain": "sports.khan.co.kr",
+          "n": 3
+        },
+        {
+          "domain": "news1.kr",
+          "n": 3
+        },
+        {
+          "domain": "tickets.interpark.com",
+          "n": 2
+        },
+        {
+          "domain": "ototoy.jp",
+          "n": 2
+        },
+        {
+          "domain": "y.qq.com",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "츄",
+      "category": "솔로",
+      "n_total_bullets": 93,
+      "n_news_media_bullets": 53,
+      "news_media_share": 0.5699,
+      "n_distinct_outlets": 32,
+      "outlet_diversity_ratio": 0.6038,
+      "top_outlets": [
+        {
+          "domain": "biz.heraldcorp.com",
+          "n": 8
+        },
+        {
+          "domain": "allkpop.com",
+          "n": 5
+        },
+        {
+          "domain": "hankyung.com",
+          "n": 4
+        },
+        {
+          "domain": "kstationtv.com",
+          "n": 3
+        },
+        {
+          "domain": "v.daum.net",
+          "n": 3
+        },
+        {
+          "domain": "plus.hankyung.com",
+          "n": 2
+        },
+        {
+          "domain": "sports.khan.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "topstarnews.net",
+          "n": 2
+        },
+        {
+          "domain": "asiae.co.kr",
+          "n": 1
+        },
+        {
+          "domain": "youtube.com",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "fandom": "다이나믹듀오",
+      "category": "힙합",
+      "n_total_bullets": 68,
+      "n_news_media_bullets": 51,
+      "news_media_share": 0.75,
+      "n_distinct_outlets": 32,
+      "outlet_diversity_ratio": 0.6275,
+      "top_outlets": [
+        {
+          "domain": "sports.khan.co.kr",
+          "n": 6
+        },
+        {
+          "domain": "forbes.com",
+          "n": 5
+        },
+        {
+          "domain": "v.daum.net",
+          "n": 5
+        },
+        {
+          "domain": "starnewskorea.com",
+          "n": 3
+        },
+        {
+          "domain": "andongdaily.com",
+          "n": 3
+        },
+        {
+          "domain": "prtimes.jp",
+          "n": 2
+        },
+        {
+          "domain": "news.tf.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "nocutnews.co.kr",
+          "n": 1
+        },
+        {
+          "domain": "asiaartistawards.com",
+          "n": 1
+        },
+        {
+          "domain": "myrealtrip.com",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "fandom": "이승철",
+      "category": "발라드",
+      "n_total_bullets": 78,
+      "n_news_media_bullets": 50,
+      "news_media_share": 0.641,
+      "n_distinct_outlets": 32,
+      "outlet_diversity_ratio": 0.64,
+      "top_outlets": [
+        {
+          "domain": "edaily.co.kr",
+          "n": 7
+        },
+        {
+          "domain": "biz.heraldcorp.com",
+          "n": 5
+        },
+        {
+          "domain": "m.cafe.daum.net",
+          "n": 3
+        },
+        {
+          "domain": "sports.khan.co.kr",
+          "n": 3
+        },
+        {
+          "domain": "v.daum.net",
+          "n": 3
+        },
+        {
+          "domain": "view.asiae.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "viva100.com",
+          "n": 2
+        },
+        {
+          "domain": "tickets.interpark.com",
+          "n": 1
+        },
+        {
+          "domain": "kopis.or.kr",
+          "n": 1
+        },
+        {
+          "domain": "news1.kr",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "fandom": "장윤정",
+      "category": "트로트",
+      "n_total_bullets": 92,
+      "n_news_media_bullets": 57,
+      "news_media_share": 0.6196,
+      "n_distinct_outlets": 31,
+      "outlet_diversity_ratio": 0.5439,
+      "top_outlets": [
+        {
+          "domain": "v.daum.net",
+          "n": 13
+        },
+        {
+          "domain": "m.cafe.daum.net",
+          "n": 3
+        },
+        {
+          "domain": "news.nate.com",
+          "n": 3
+        },
+        {
+          "domain": "sports.khan.co.kr",
+          "n": 3
+        },
+        {
+          "domain": "stardailynews.co.kr",
+          "n": 3
+        },
+        {
+          "domain": "tickets.interpark.com",
+          "n": 2
+        },
+        {
+          "domain": "fanmaum.com",
+          "n": 2
+        },
+        {
+          "domain": "timespread.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "starnewskorea.com",
+          "n": 2
+        },
+        {
+          "domain": "koreadaily.com",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "볼빨간사춘기",
+      "category": "솔로",
+      "n_total_bullets": 88,
+      "n_news_media_bullets": 49,
+      "news_media_share": 0.5568,
+      "n_distinct_outlets": 31,
+      "outlet_diversity_ratio": 0.6327,
+      "top_outlets": [
+        {
+          "domain": "v.daum.net",
+          "n": 5
+        },
+        {
+          "domain": "tickets.interpark.com",
+          "n": 4
+        },
+        {
+          "domain": "news1.kr",
+          "n": 3
+        },
+        {
+          "domain": "m.news.nate.com",
+          "n": 3
+        },
+        {
+          "domain": "starnewskorea.com",
+          "n": 2
+        },
+        {
+          "domain": "bol4.bstage.in",
+          "n": 2
+        },
+        {
+          "domain": "cctoday.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "edaily.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "sports.khan.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "ajunews.com",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "다비치",
+      "category": "발라드",
+      "n_total_bullets": 80,
+      "n_news_media_bullets": 38,
+      "news_media_share": 0.475,
+      "n_distinct_outlets": 30,
+      "outlet_diversity_ratio": 0.7895,
+      "top_outlets": [
+        {
+          "domain": "sports.khan.co.kr",
+          "n": 4
+        },
+        {
+          "domain": "koreadaily.com",
+          "n": 3
+        },
+        {
+          "domain": "mydaily.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "koreastardaily.com",
+          "n": 2
+        },
+        {
+          "domain": "bloglabanana.com",
+          "n": 2
+        },
+        {
+          "domain": "m.cafe.daum.net",
+          "n": 1
+        },
+        {
+          "domain": "edaily.co.kr",
+          "n": 1
+        },
+        {
+          "domain": "cctoday.co.kr",
+          "n": 1
+        },
+        {
+          "domain": "topstarnews.net",
+          "n": 1
+        },
+        {
+          "domain": "news.nate.com",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "fandom": "잭스키스",
+      "category": "원로그룹",
+      "n_total_bullets": 85,
+      "n_news_media_bullets": 45,
+      "news_media_share": 0.5294,
+      "n_distinct_outlets": 29,
+      "outlet_diversity_ratio": 0.6444,
+      "top_outlets": [
+        {
+          "domain": "biz.heraldcorp.com",
+          "n": 4
+        },
+        {
+          "domain": "v.daum.net",
+          "n": 3
+        },
+        {
+          "domain": "starnewskorea.com",
+          "n": 3
+        },
+        {
+          "domain": "m.edaily.co.kr",
+          "n": 3
+        },
+        {
+          "domain": "hellokpop.com",
+          "n": 2
+        },
+        {
+          "domain": "newsis.com",
+          "n": 2
+        },
+        {
+          "domain": "greened.kr",
+          "n": 2
+        },
+        {
+          "domain": "yg-life.com",
+          "n": 2
+        },
+        {
+          "domain": "oricon.co.jp",
+          "n": 2
+        },
+        {
+          "domain": "sedaily.com",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "윤하",
+      "category": "솔로",
+      "n_total_bullets": 83,
+      "n_news_media_bullets": 42,
+      "news_media_share": 0.506,
+      "n_distinct_outlets": 29,
+      "outlet_diversity_ratio": 0.6905,
+      "top_outlets": [
+        {
+          "domain": "sisamagazine.co.kr",
+          "n": 4
+        },
+        {
+          "domain": "imnews.imbc.com",
+          "n": 3
+        },
+        {
+          "domain": "newspim.com",
+          "n": 3
+        },
+        {
+          "domain": "newsis.com",
+          "n": 2
+        },
+        {
+          "domain": "m.news.nate.com",
+          "n": 2
+        },
+        {
+          "domain": "allkpop.com",
+          "n": 2
+        },
+        {
+          "domain": "sports.khan.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "ytn.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "isplus.com",
+          "n": 2
+        },
+        {
+          "domain": "world.nol.com",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "fandom": "로이킴",
+      "category": "발라드",
+      "n_total_bullets": 89,
+      "n_news_media_bullets": 41,
+      "news_media_share": 0.4607,
+      "n_distinct_outlets": 29,
+      "outlet_diversity_ratio": 0.7073,
+      "top_outlets": [
+        {
+          "domain": "sports.khan.co.kr",
+          "n": 9
+        },
+        {
+          "domain": "newspim.com",
+          "n": 3
+        },
+        {
+          "domain": "tenasia.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "starnewskorea.com",
+          "n": 2
+        },
+        {
+          "domain": "topstarnews.net",
+          "n": 1
+        },
+        {
+          "domain": "trotnews.co.kr",
+          "n": 1
+        },
+        {
+          "domain": "hbnpress.com",
+          "n": 1
+        },
+        {
+          "domain": "kspnews.com",
+          "n": 1
+        },
+        {
+          "domain": "asiaartistawards.com",
+          "n": 1
+        },
+        {
+          "domain": "yna.co.kr",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "fandom": "FTISLAND",
+      "category": "K-pop 보이그룹 /록",
+      "n_total_bullets": 73,
+      "n_news_media_bullets": 41,
+      "news_media_share": 0.5616,
+      "n_distinct_outlets": 28,
+      "outlet_diversity_ratio": 0.6829,
+      "top_outlets": [
+        {
+          "domain": "star.ettoday.net",
+          "n": 4
+        },
+        {
+          "domain": "topstarnews.net",
+          "n": 3
+        },
+        {
+          "domain": "v.daum.net",
+          "n": 3
+        },
+        {
+          "domain": "mhnse.com",
+          "n": 2
+        },
+        {
+          "domain": "allkpop.com",
+          "n": 2
+        },
+        {
+          "domain": "nspna.com",
+          "n": 2
+        },
+        {
+          "domain": "natalie.mu",
+          "n": 2
+        },
+        {
+          "domain": "korezin.com",
+          "n": 2
+        },
+        {
+          "domain": "youtube.com",
+          "n": 2
+        },
+        {
+          "domain": "musicstation.kapook.com",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "fandom": "윤도현",
+      "category": "록",
+      "n_total_bullets": 71,
+      "n_news_media_bullets": 40,
+      "news_media_share": 0.5634,
+      "n_distinct_outlets": 28,
+      "outlet_diversity_ratio": 0.7,
+      "top_outlets": [
+        {
+          "domain": "koreaherald.com",
+          "n": 4
+        },
+        {
+          "domain": "v.daum.net",
+          "n": 3
+        },
+        {
+          "domain": "jstoryyou.com",
+          "n": 2
+        },
+        {
+          "domain": "atlantak.com",
+          "n": 2
+        },
+        {
+          "domain": "hope.greenkorea.org",
+          "n": 2
+        },
+        {
+          "domain": "topstarnews.net",
+          "n": 2
+        },
+        {
+          "domain": "newsis.com",
+          "n": 2
+        },
+        {
+          "domain": "mt.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "fnnews.com",
+          "n": 2
+        },
+        {
+          "domain": "evrimagaci.org",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "fandom": "조용필",
+      "category": "발라드",
+      "n_total_bullets": 81,
+      "n_news_media_bullets": 37,
+      "news_media_share": 0.4568,
+      "n_distinct_outlets": 27,
+      "outlet_diversity_ratio": 0.7297,
+      "top_outlets": [
+        {
+          "domain": "tickets.interpark.com",
+          "n": 4
+        },
+        {
+          "domain": "hsj.co.kr",
+          "n": 4
+        },
+        {
+          "domain": "ohmynews.com",
+          "n": 3
+        },
+        {
+          "domain": "choyongpil.net",
+          "n": 2
+        },
+        {
+          "domain": "khan.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "segye.com",
+          "n": 1
+        },
+        {
+          "domain": "koreaherald.com",
+          "n": 1
+        },
+        {
+          "domain": "m.koreaherald.com",
+          "n": 1
+        },
+        {
+          "domain": "choyongpil.com",
+          "n": 1
+        },
+        {
+          "domain": "fanasia.ru",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "fandom": "린",
+      "category": "발라드",
+      "n_total_bullets": 78,
+      "n_news_media_bullets": 39,
+      "news_media_share": 0.5,
+      "n_distinct_outlets": 25,
+      "outlet_diversity_ratio": 0.641,
+      "top_outlets": [
+        {
+          "domain": "psnews.co.kr",
+          "n": 3
+        },
+        {
+          "domain": "tickets.interpark.com",
+          "n": 3
+        },
+        {
+          "domain": "newsis.com",
+          "n": 3
+        },
+        {
+          "domain": "starnewskorea.com",
+          "n": 3
+        },
+        {
+          "domain": "newsbuzz.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "etnews.com",
+          "n": 2
+        },
+        {
+          "domain": "m.cafe.daum.net",
+          "n": 2
+        },
+        {
+          "domain": "mhnse.com",
+          "n": 2
+        },
+        {
+          "domain": "v.daum.net",
+          "n": 2
+        },
+        {
+          "domain": "ticket.yes24.com",
+          "n": 2
+        }
+      ]
+    },
+    {
+      "fandom": "김동률",
+      "category": "발라드",
+      "n_total_bullets": 83,
+      "n_news_media_bullets": 39,
+      "news_media_share": 0.4699,
+      "n_distinct_outlets": 25,
+      "outlet_diversity_ratio": 0.641,
+      "top_outlets": [
+        {
+          "domain": "starnewskorea.com",
+          "n": 6
+        },
+        {
+          "domain": "khan.co.kr",
+          "n": 4
+        },
+        {
+          "domain": "dipe.co.kr",
+          "n": 3
+        },
+        {
+          "domain": "news.sbs.co.kr",
+          "n": 3
+        },
+        {
+          "domain": "munhwa.com",
+          "n": 2
+        },
+        {
+          "domain": "star.ytn.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "rnx.kr",
+          "n": 1
+        },
+        {
+          "domain": "digitalchosun.dizzo.com",
+          "n": 1
+        },
+        {
+          "domain": "seoul.co.kr",
+          "n": 1
+        },
+        {
+          "domain": "news1.kr",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "fandom": "나훈아",
+      "category": "트로트",
+      "n_total_bullets": 70,
+      "n_news_media_bullets": 47,
+      "news_media_share": 0.6714,
+      "n_distinct_outlets": 23,
+      "outlet_diversity_ratio": 0.4894,
+      "top_outlets": [
+        {
+          "domain": "ilyo.co.kr",
+          "n": 10
+        },
+        {
+          "domain": "hankyung.com",
+          "n": 7
+        },
+        {
+          "domain": "v.daum.net",
+          "n": 3
+        },
+        {
+          "domain": "newsis.com",
+          "n": 3
+        },
+        {
+          "domain": "ytn.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "womansense.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "koreatimes.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "munhwa.com",
+          "n": 2
+        },
+        {
+          "domain": "baike.baidu.com",
+          "n": 2
+        },
+        {
+          "domain": "news1.kr",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "fandom": "잔나비",
+      "category": "록",
+      "n_total_bullets": 69,
+      "n_news_media_bullets": 33,
+      "news_media_share": 0.4783,
+      "n_distinct_outlets": 23,
+      "outlet_diversity_ratio": 0.697,
+      "top_outlets": [
+        {
+          "domain": "v.daum.net",
+          "n": 4
+        },
+        {
+          "domain": "hankyung.com",
+          "n": 3
+        },
+        {
+          "domain": "idntimes.com",
+          "n": 3
+        },
+        {
+          "domain": "starnewskorea.com",
+          "n": 2
+        },
+        {
+          "domain": "marieclaire.com.tw",
+          "n": 2
+        },
+        {
+          "domain": "gmanetwork.com",
+          "n": 2
+        },
+        {
+          "domain": "borathis.com",
+          "n": 1
+        },
+        {
+          "domain": "tw.news.yahoo.com",
+          "n": 1
+        },
+        {
+          "domain": "edaily.co.kr",
+          "n": 1
+        },
+        {
+          "domain": "detik.com",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "fandom": "sg워너비",
+      "category": "발라드",
+      "n_total_bullets": 75,
+      "n_news_media_bullets": 28,
+      "news_media_share": 0.3733,
+      "n_distinct_outlets": 22,
+      "outlet_diversity_ratio": 0.7857,
+      "top_outlets": [
+        {
+          "domain": "sports.khan.co.kr",
+          "n": 4
+        },
+        {
+          "domain": "rnx.kr",
+          "n": 3
+        },
+        {
+          "domain": "gukjenews.com",
+          "n": 2
+        },
+        {
+          "domain": "inews24.com",
+          "n": 1
+        },
+        {
+          "domain": "tickets.interpark.com",
+          "n": 1
+        },
+        {
+          "domain": "magazine.musicow.com",
+          "n": 1
+        },
+        {
+          "domain": "nikkei.com",
+          "n": 1
+        },
+        {
+          "domain": "hankyung.com",
+          "n": 1
+        },
+        {
+          "domain": "tenasia.co.kr",
+          "n": 1
+        },
+        {
+          "domain": "starnewskorea.com",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "fandom": "김연자",
+      "category": "트로트",
+      "n_total_bullets": 73,
+      "n_news_media_bullets": 41,
+      "news_media_share": 0.5616,
+      "n_distinct_outlets": 21,
+      "outlet_diversity_ratio": 0.5122,
+      "top_outlets": [
+        {
+          "domain": "v.daum.net",
+          "n": 9
+        },
+        {
+          "domain": "grokipedia.com",
+          "n": 4
+        },
+        {
+          "domain": "min-on.or.jp",
+          "n": 4
+        },
+        {
+          "domain": "nc.press",
+          "n": 3
+        },
+        {
+          "domain": "newstap.co.kr",
+          "n": 3
+        },
+        {
+          "domain": "nol.yanolja.com",
+          "n": 2
+        },
+        {
+          "domain": "news.sbs.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "m.news.nate.com",
+          "n": 1
+        },
+        {
+          "domain": "sports.khan.co.kr",
+          "n": 1
+        },
+        {
+          "domain": "koreatowndaily.com",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "fandom": "카더가든",
+      "category": "솔로",
+      "n_total_bullets": 74,
+      "n_news_media_bullets": 34,
+      "news_media_share": 0.4595,
+      "n_distinct_outlets": 21,
+      "outlet_diversity_ratio": 0.6176,
+      "top_outlets": [
+        {
+          "domain": "v.daum.net",
+          "n": 5
+        },
+        {
+          "domain": "isplus.com",
+          "n": 3
+        },
+        {
+          "domain": "news.nate.com",
+          "n": 3
+        },
+        {
+          "domain": "elle.co.kr",
+          "n": 3
+        },
+        {
+          "domain": "khan.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "topstarnews.net",
+          "n": 2
+        },
+        {
+          "domain": "wikitree.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "kpop-radar.com",
+          "n": 1
+        },
+        {
+          "domain": "kopis.or.kr",
+          "n": 1
+        },
+        {
+          "domain": "m.programs.sbs.co.kr",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "fandom": "이문세",
+      "category": "발라드",
+      "n_total_bullets": 70,
+      "n_news_media_bullets": 31,
+      "news_media_share": 0.4429,
+      "n_distinct_outlets": 21,
+      "outlet_diversity_ratio": 0.6774,
+      "top_outlets": [
+        {
+          "domain": "hankookilbo.com",
+          "n": 4
+        },
+        {
+          "domain": "kbswa.com",
+          "n": 3
+        },
+        {
+          "domain": "soompi.com",
+          "n": 3
+        },
+        {
+          "domain": "nocutnews.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "news1.kr",
+          "n": 2
+        },
+        {
+          "domain": "v.daum.net",
+          "n": 2
+        },
+        {
+          "domain": "etnews.com",
+          "n": 1
+        },
+        {
+          "domain": "koreadaily.com",
+          "n": 1
+        },
+        {
+          "domain": "biz.heraldcorp.com",
+          "n": 1
+        },
+        {
+          "domain": "baike.baidu.com",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "fandom": "엄정화",
+      "category": "솔로",
+      "n_total_bullets": 71,
+      "n_news_media_bullets": 34,
+      "news_media_share": 0.4789,
+      "n_distinct_outlets": 20,
+      "outlet_diversity_ratio": 0.5882,
+      "top_outlets": [
+        {
+          "domain": "v.daum.net",
+          "n": 5
+        },
+        {
+          "domain": "pinkvilla.com",
+          "n": 3
+        },
+        {
+          "domain": "marieclairekorea.com",
+          "n": 3
+        },
+        {
+          "domain": "ceorankingnews.com",
+          "n": 3
+        },
+        {
+          "domain": "news.sbs.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "m.edaily.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "sports.khan.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "youtube.com",
+          "n": 2
+        },
+        {
+          "domain": "uhmjunghwa.com",
+          "n": 1
+        },
+        {
+          "domain": "tickets.interpark.com",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "fandom": "브라운아이즈",
+      "category": "발라드",
+      "n_total_bullets": 82,
+      "n_news_media_bullets": 33,
+      "news_media_share": 0.4024,
+      "n_distinct_outlets": 20,
+      "outlet_diversity_ratio": 0.6061,
+      "top_outlets": [
+        {
+          "domain": "v.daum.net",
+          "n": 5
+        },
+        {
+          "domain": "soompi.com",
+          "n": 4
+        },
+        {
+          "domain": "sedaily.com",
+          "n": 3
+        },
+        {
+          "domain": "starnewskorea.com",
+          "n": 2
+        },
+        {
+          "domain": "hankyung.com",
+          "n": 2
+        },
+        {
+          "domain": "gqkorea.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "koreanmusicawards.com",
+          "n": 2
+        },
+        {
+          "domain": "mennoblesse.com",
+          "n": 1
+        },
+        {
+          "domain": "ent.sbs.co.kr",
+          "n": 1
+        },
+        {
+          "domain": "edaily.co.kr",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "fandom": "박정현",
+      "category": "발라드",
+      "n_total_bullets": 70,
+      "n_news_media_bullets": 25,
+      "news_media_share": 0.3571,
+      "n_distinct_outlets": 20,
+      "outlet_diversity_ratio": 0.8,
+      "top_outlets": [
+        {
+          "domain": "web.archive.org",
+          "n": 4
+        },
+        {
+          "domain": "v.daum.net",
+          "n": 2
+        },
+        {
+          "domain": "starnewskorea.com",
+          "n": 2
+        },
+        {
+          "domain": "newsjesus.net",
+          "n": 1
+        },
+        {
+          "domain": "m.cafe.daum.net",
+          "n": 1
+        },
+        {
+          "domain": "munhwa.com",
+          "n": 1
+        },
+        {
+          "domain": "news1.kr",
+          "n": 1
+        },
+        {
+          "domain": "etnews.com",
+          "n": 1
+        },
+        {
+          "domain": "spotvnews.co.kr",
+          "n": 1
+        },
+        {
+          "domain": "newsis.com",
+          "n": 1
+        }
+      ]
+    },
+    {
+      "fandom": "빅마마",
+      "category": "발라드",
+      "n_total_bullets": 73,
+      "n_news_media_bullets": 14,
+      "news_media_share": 0.1918,
+      "n_distinct_outlets": 11,
+      "outlet_diversity_ratio": 0.7857,
+      "top_outlets": [
+        {
+          "domain": "xportsnews.com",
+          "n": 2
+        },
+        {
+          "domain": "hankyung.com",
+          "n": 2
+        },
+        {
+          "domain": "news.sbs.co.kr",
+          "n": 2
+        },
+        {
+          "domain": "gbprimenews.com",
+          "n": 1
+        },
+        {
+          "domain": "news.mt.co.kr",
+          "n": 1
+        },
+        {
+          "domain": "kookje.co.kr",
+          "n": 1
+        },
+        {
+          "domain": "tvreport.co.kr",
+          "n": 1
+        },
+        {
+          "domain": "sedaily.com",
+          "n": 1
+        },
+        {
+          "domain": "v.daum.net",
+          "n": 1
+        },
+        {
+          "domain": "gukjenews.com",
+          "n": 1
+        }
+      ]
+    }
+  ]
+}

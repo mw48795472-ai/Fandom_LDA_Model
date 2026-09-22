@@ -183,12 +183,24 @@ if stats is not None:
     check("3D축 다중회귀 R²=0.234 (F=14.83, p<.001), VIF(3축)=1.321",
           round(m3.rsquared, 3) == 0.234 and round(m3.fvalue, 2) == 14.83 and m3.f_pvalue < 0.001 and round(vif3, 3) == 1.321,
           f"R²={m3.rsquared:.3f}, F={m3.fvalue:.2f}, p={m3.f_pvalue:.2e}, VIF={vif3:.3f}")
-    tab = np.array([[q["핵심전략형"], q["내부결속형"]], [q["외부견인형"], q["주변부"]]])
-    chi_y = stats.chi2_contingency(tab, correction=True)
-    chi_n = stats.chi2_contingency(tab, correction=False)
-    info("4분면 독립성 χ² — 보고서 값 χ²=8.34, p=0.0039 는 저장소 파일로 재현되지 않음",
-         f"라이브 4구획표 {tab.tolist()} 기준 재계산: Yates χ²={chi_y[0]:.2f} (p={chi_y[1]:.1e}), 보정없음 χ²={chi_n[0]:.2f} (p={chi_n[1]:.1e}). "
-         f"보고서 값이 어느 시점·어느 분할표에서 나왔는지는 복구되지 않음 (KEY_FINDINGS.md 참고)")
+    # 4분면 독립성 χ²: 보고서 값은 표본 평균 기준 4구획(24/17/10/49)이 아니라 **점수 0.5 고정 임계값** 분할표에서
+    # 계산된 것 (positioning_map_correlation_live_v7.json의 table=[[7,17],[4,72]] 로 확인)
+    with open(D / "positioning_map_correlation_live_v7.json", encoding="utf-8") as f:
+        pmc = json.load(f)
+    hl, hs = L > 0.5, S > 0.5
+    tab05 = np.array([[int((hl & hs).sum()), int((hl & ~hs).sum())], [int((~hl & hs).sum()), int((~hl & ~hs).sum())]])
+    chi05 = stats.chi2_contingency(tab05, correction=True)
+    check("4분면 독립성 χ²=8.34, p=0.0039 — loyalty/spillover 각각 0.5 초과 여부 2×2표 [[7,17],[4,72]] (Yates 보정)",
+          tab05.tolist() == pmc["quadrant_chi_square"]["table"] and round(chi05[0], 4) == 8.3439 and round(chi05[1], 4) == 0.0039,
+          f"표 {tab05.tolist()}, χ²={chi05[0]:.4f}, p={chi05[1]:.6f} (파일 값 χ²={pmc['quadrant_chi_square']['chi2']})")
+    tabq = np.array([[q["핵심전략형"], q["내부결속형"]], [q["외부견인형"], q["주변부"]]])
+    chiq = stats.chi2_contingency(tabq, correction=True)
+    info("참고: 표본 평균 기준 4구획표(24/17/10/49)로 계산하면 다른 값", f"Yates χ²={chiq[0]:.2f} (p={chiq[1]:.1e}) — 보고서 χ²는 이 표가 아님")
+    check("positioning_map_correlation_live_v7.json 의 회귀선·activity 상관 재현 (slope 0.3844, r_L·act 0.694, r_S·act 0.9019)",
+          round(float(np.polyfit(L, S, 1)[0]), 4) == pmc["regression_spillover_on_loyalty"]["slope"]
+          and round(stats.pearsonr(L, A)[0], 3) == round(pmc["each_score_vs_activity"]["loyalty_score_vs_activity"]["r"], 3)
+          and round(stats.pearsonr(S, A)[0], 4) == pmc["each_score_vs_activity"]["spillover_score_vs_activity"]["r"],
+          f"slope={np.polyfit(L, S, 1)[0]:.4f}, r_L·act={stats.pearsonr(L, A)[0]:.4f}, r_S·act={stats.pearsonr(S, A)[0]:.4f}")
 
 # ---------------------------------------------------------------------------
 # [E] 동결 스냅샷 산출물
@@ -223,8 +235,23 @@ for r in frozen:
 check("페르소나 = 상위 2개 F코드 조합표 매핑 (불일치 0)", bad_rule == 0, f"{bad_rule}")
 check("persona JSON loyalty/spillover_score = CSV 값 (불일치 0)", bad_score == 0, f"{bad_score}")
 check("factor_specific_loyalty/spillover = factor_share × score (불일치 0)", bad_spec == 0, f"{bad_spec}")
-fl = [float(r["loyalty_score"]) for r in frozen]; fs = [float(r["spillover_score"]) for r in frozen]
+fl = np.array([float(r["loyalty_score"]) for r in frozen]); fs = np.array([float(r["spillover_score"]) for r in frozen])
 info("동결 스냅샷 점수 표본 평균(참고, 보고서 4구획 기준선은 라이브 점수 평균임)", f"loyalty {np.mean(fl):.4f}, spillover {np.mean(fs):.4f}")
+if stats is not None:
+    hl, hs = fl > 0.5, fs > 0.5
+    tabf = np.array([[int((hl & hs).sum()), int((hl & ~hs).sum())], [int((~hl & hs).sum()), int((~hl & ~hs).sum())]])
+    chif = stats.chi2_contingency(tabf, correction=True)
+    check("프로즌 스냅샷 4분면 χ²=10.2273, p=0.0014 — 동결 CSV 점수 0.5 초과 2×2표 [[8,17],[4,71]]",
+          round(chif[0], 4) == 10.2273 and round(chif[1], 4) == 0.0014, f"표 {tabf.tolist()}, χ²={chif[0]:.4f}, p={chif[1]:.6f}")
+with open(D / "member_mention_pilot_v6.json", encoding="utf-8") as f:
+    mpil = json.load(f)
+fz_act = {r["fandom"]: int(r["activity"]) for r in frozen}
+check("member_mention_pilot_v6.json(동결 스냅샷판) 23개 그룹 total_group_bullets = 동결 CSV activity",
+      len(mpil) == 23 and all(fz_act.get(g) == v["total_group_bullets"] for g, v in mpil.items()),
+      f"{len(mpil)}개 그룹, BTS {mpil['BTS']['total_group_bullets']}건 (r22판은 125건)")
+mp_bad = [g for g, v in mpil.items() if sum(v["member_mention_counts"].values()) != v["total_member_mentions"]
+          or abs(sum(x ** 2 for x in v["member_impact_share_pilot"].values()) - v["mci_pilot"]) > 0.002]
+check("멤버 파일럿 내부 정합 (언급 합 = total, MCI = Σshare²)", not mp_bad, f"불일치 {mp_bad}")
 check("동결 CSV 하이라이트: BTS 0.931/1.000, 임영웅 0.899/0.702, 리센느 0.444/0.304 (KEY_FINDINGS 표)",
       (pmap["BTS"]["loyalty_score"], pmap["BTS"]["spillover_score"]) == (0.931, 1.0) and
       (pmap["임영웅"]["loyalty_score"], pmap["임영웅"]["spillover_score"]) == (0.899, 0.702) and
@@ -266,6 +293,170 @@ for r in frozen:
 check("HTML 내장 F1~F5 비중 = fandom_scores_v6.csv 비중 (불일치 0)", share_mism == 0, f"{share_mism}")
 info("K=10 토픽 명칭은 METHODOLOGY.md 표와 상위 4개 키워드가 일부 다름(같은 동결 스냅샷의 재적합 산출물, F코드 배정은 동일)",
      " / ".join(f"{i} {n}" for i, n in zip(pds["dendro"]["topic_ids"], pds["dendro"]["topic_names"])))
+
+# ---------------------------------------------------------------------------
+# [H] topic_cards_v7.json (동결 스냅샷 K=10 토픽 카드 — METHODOLOGY.md 2-1 표의 출처)
+# ---------------------------------------------------------------------------
+print("\n[H] topic_cards_v7.json (동결 스냅샷 K=10 토픽 카드)")
+with open(D / "topic_cards_v7.json", encoding="utf-8") as f:
+    cards = json.load(f)
+METHOD_NAMES = {"K0": "음원차트기록형(기록·1위·차트·최초)", "K1": "동남아현지보도형(보도·매체·인도네시아·기사)",
+                "K2": "예능방송출연형(예능·출연·mbc·sbs)", "K3": "일본오리콘앨범형(일본·빌보드·오리콘·판매)",
+                "K4": "글로벌음반판매형(million·album·copies·chart)", "K5": "팬클럽공식기부형(공식·팬클럽·기부·콘텐츠)",
+                "K6": "단독콘서트월드투어형(콘서트·투어·단독·월드투어)", "K7": "브랜드앰버서더형(브랜드·광고·앰버서더·매진)",
+                "K8": "월드투어매진형(tour·concert·sold·world)", "K9": "영화드라마출연형(드라마·ost·영화·출연)"}
+check("토픽 10개, 명칭 = METHODOLOGY.md 2-1 표와 완전 일치", len(cards) == 10 and all(c["topic_name"] == METHOD_NAMES[c["topic_id"]] for c in cards))
+check("토픽→F 경로 = METHODOLOGY.md 표", all(c["connected_f_pathway"].split()[0] == METHOD_TABLE[c["topic_id"]] for c in cards))
+k5 = next(c for c in cards if c["topic_id"] == "K5")
+fz_row = {r["fandom"]: r for r in frozen}
+check("K5(=F1 단독 토픽) 대표 팬덤 avg_topic_weight = 동결 CSV 결속형 비중 (박서진 0.2653 · 임영웅 0.2017 …)",
+      all(abs(x["avg_topic_weight"] - float(fz_row[x["fandom"]][F_COLS["F1"]])) < 1e-9 for x in k5["representative_fandoms_top5"]))
+info("품질 메모: K2 대표 불릿 3번째는 태국어 aespa 콘서트 문장(topic_prob 0.9625)이 예능출연 토픽에 배정됨 — 비한국어 문장의 토픽 배정 한계 사례",
+     "K1 '동남아현지보도형' 대표 불릿도 대학축제·VR 콘서트 등 국내 현장 문장이 섞여 있음")
+
+# ---------------------------------------------------------------------------
+# [I] member_pilot_mci_correlation_v7.json (MCI ↔ outcome 상관, 45개 그룹)
+# ---------------------------------------------------------------------------
+print("\n[I] member_pilot_mci_correlation_v7.json (MCI ↔ 동결 스냅샷 outcome 상관)")
+with open(D / "member_pilot_mci_correlation_v7.json", encoding="utf-8") as f:
+    mcc = json.load(f)
+with open(D / "member_mention_index_v7.json", encoding="utf-8") as f:
+    midx = json.load(f)
+check("45개 그룹 = member_mention_index_v7.json 그룹 집합", mcc["n_groups"] == 45 and set(mcc["groups"]) == set(midx))
+info("시점 주의(파일 caveat 원문)", mcc["caveat_temporal_mismatch"][:90] + "…")
+if stats is not None:
+    mv = np.array([midx[g]["mci_index"] for g in mcc["groups"]])
+    ly = np.array([float(fz_row[g]["loyalty_score"]) for g in mcc["groups"]])
+    r_idx = stats.pearsonr(mv, ly)[0]
+    info("파일의 MCI는 v7-55 시점(8,981건)이라 저장소에 없음. 저장소의 10,020건 MCI(member_mention_index_v7.json)로 재계산하면 근사",
+         f"raw MCI~loyalty r={r_idx:.4f} (파일 -0.3932), MCI 평균 {mv.mean():.4f} (파일 0.2662), max {mv.max()} (파일 0.649, FTISLAND)")
+    check("MCI~loyalty 음의 상관 방향·크기 근사 재현 (|Δr| < 0.02)", abs(r_idx - mcc["correlations_mci_raw"]["loyalty_score"]["pearson_r"]) < 0.02, f"Δr={abs(r_idx + 0.3932):.4f}")
+
+# ---------------------------------------------------------------------------
+# [J] 보조지표 원본 JSON (라이브 10,020건) — 광고·상업성 / 팬덤결속
+# ---------------------------------------------------------------------------
+print("\n[J] ad_commercial_index_v7.json / fandom_cohesion_index_v7.json (라이브 10,020건 보조지표)")
+corpus_cnt = {fd["fandom"]: len(fd.get("loyalty", [])) + len(fd.get("spillover", [])) for fd in fandoms}
+with open(D / "ad_commercial_index_v7.json", encoding="utf-8") as f:
+    ad = json.load(f)
+check("광고·상업성: total_bullets 10,020, 광고성 불릿 1,302건(13.0%), 20개 업종", ad["total_bullets"] == 10020 and ad["total_ad_bullets"] == 1302
+      and round(ad["corpus_ad_share"], 3) == 0.130 and len(ad["industries"]) == 20, f"{ad['total_ad_bullets']} ({ad['corpus_ad_share']:.1%})")
+check("광고·상업성: 팬덤별 n_total_bullets = 코퍼스 불릿 수, Σn_ad_bullets = 1,302, Σ업종별 = industry_totals",
+      all(corpus_cnt[x["fandom"]] == x["n_total_bullets"] for x in ad["fandoms"]) and sum(x["n_ad_bullets"] for x in ad["fandoms"]) == 1302
+      and all(sum(x["industry_counts"].get(i, 0) for x in ad["fandoms"]) == ad["industry_totals"].get(i, 0) for i in ad["industries"]))
+with open(D / "fandom_cohesion_index_v7.json", encoding="utf-8") as f:
+    co = json.load(f)
+check("팬덤결속: total_bullets 10,020, 결속 불릿 923건(9.2%), 유형 5개(A~E)", co["total_bullets"] == 10020 and co["total_cohesion_bullets"] == 923
+      and round(co["corpus_cohesion_share"], 3) == 0.092 and len(co["categories"]) == 5, f"{co['total_cohesion_bullets']} ({co['corpus_cohesion_share']:.1%})")
+check("팬덤결속: 팬덤별 n_total_bullets = 코퍼스 불릿 수, Σn_cohesion_bullets = 923, Σ유형별 = category_totals",
+      all(corpus_cnt[x["fandom"]] == x["n_total_bullets"] for x in co["fandoms"]) and sum(x["n_cohesion_bullets"] for x in co["fandoms"]) == 923
+      and all(sum(x["category_counts"].get(c, 0) for x in co["fandoms"]) == co["category_totals"][c] for c in co["categories"]))
+coh = {x["fandom"]: x for x in co["fandoms"]}
+check("팬덤결속 하이라이트 (KEY_FINDINGS 표): BTS 15건(6.6%) · 리센느 18건(21.2%) · 임영웅 30건(23%, 전체 1위)",
+      coh["BTS"]["n_cohesion_bullets"] == 15 and coh["리센느(RESCENE)"]["n_cohesion_bullets"] == 18 and coh["임영웅"]["n_cohesion_bullets"] == 30
+      and max(co["fandoms"], key=lambda x: x["n_cohesion_bullets"])["fandom"] == "임영웅",
+      f"BTS {coh['BTS']['cohesion_share']:.1%}, 리센느 {coh['리센느(RESCENE)']['cohesion_share']:.1%}, 임영웅 {coh['임영웅']['cohesion_share']:.1%}")
+
+# ---------------------------------------------------------------------------
+# [K] chart3d_correlation_live_v7.json (3D 축 독립성 원본 파일)
+# ---------------------------------------------------------------------------
+print("\n[K] chart3d_correlation_live_v7.json (3D 매트릭스 축 독립성 검증 원본)")
+with open(D / "chart3d_correlation_live_v7.json", encoding="utf-8") as f:
+    c3 = json.load(f)
+if stats is not None:
+    m3c = sm.OLS(Dv, sm.add_constant(np.column_stack([L, S]))).fit()
+    cd3 = m3c.get_influence().cooks_distance[0]
+    top3 = [n for _, n in sorted(zip(cd3, names), reverse=True)[:5]]
+    check("다양성 회귀 계수 (절편 0.7168, loyalty -0.073, spillover 0.3008) 및 Cook's D top5 (god·이효리·BTS·투어스·지드래곤) 재현",
+          [round(v, 4) for v in m3c.params] == [0.7168, -0.073, 0.3008] and top3 == [x["fandom"] for x in c3["influence_top5"]],
+          f"coef={m3c.params.round(4).tolist()}, top5={top3}")
+    check("factor_diversity 정규성 Shapiro p=0.058 (정규성 유지), Spearman ρ(S,D)=0.4869",
+          round(stats.shapiro(Dv).pvalue, 3) == 0.058 and round(stats.spearmanr(S, Dv)[0], 4) == 0.4869)
+
+# ---------------------------------------------------------------------------
+# [L] 실루엣 게이트 타임라인 CSV (v4 종료 ~ v7 r66(2차))
+# ---------------------------------------------------------------------------
+print("\n[L] data/silhouette_gate_timeline/corpus_silhouette_timeline_v7_66_2ch.csv")
+tl_path = BASE / "data" / "silhouette_gate_timeline" / "corpus_silhouette_timeline_v7_66_2ch.csv"
+with open(tl_path, encoding="utf-8-sig") as f:
+    tl = list(csv.DictReader(f))
+real_rows = [r for r in tl if "[추정" not in r["라운드"]]
+meas_rows = [r for r in real_rows if r["실루엣"]]
+after40 = [r for r in meas_rows if float(r["순서"]) > 40]
+check("v7-40 동결 기준선 행: 7,350건, 실루엣 0.267, K=10, M=5", any(r["순서"] == "40" and r["코퍼스(불릿수)"] == "7350" and r["실루엣"] == "0.267" and r["K"] == "10" and r["M"] == "5" for r in real_rows))
+check("v7-40 이후 실측 지점 전부 0.267 미만 (게이트 기각)", len(after40) > 0 and all(float(r["실루엣"]) < 0.267 for r in after40),
+      f"실측 {len(after40)}개 지점, 최대 {max(float(r['실루엣']) for r in after40)}, 마지막 {after40[-1]['라운드']} {after40[-1]['코퍼스(불릿수)']}건 {after40[-1]['실루엣']}")
+check("KEY_FINDINGS '최신 v7-65 라운드 silhouette=0.141'", any(r["라운드"].startswith("r65") and r["실루엣"] == "0.141" for r in meas_rows))
+info("'누적 26회 연속 기각'(보고서)은 라운드 횟수 기준으로 보이며, 이 CSV의 실측 지점 수로는 22개(r45 2개 변형 포함) — 재적합 없이 지나간 라운드까지 세면 26에 가깝지만 CSV만으로는 확정 불가")
+info("타임라인 마지막 실측 코퍼스", f"{after40[-1]['코퍼스(불릿수)']}건 (r66 2차) — 최종 라이브 코퍼스 10,020건은 이 이후 라운드의 결과이며, 그 시점 재적합(K=8/M=5/0.046)은 lda_v6_diagnostics_live_reference_v7.json")
+check("r22 행 5,613건 = merge_log_r22의 after_total (실제 평탄화 5,612건과 1건 차이는 기존 문서에 기록됨)", any(r["라운드"] == "r22" and r["코퍼스(불릿수)"] == "5613" for r in real_rows))
+
+# ---------------------------------------------------------------------------
+# [M] 2026-09-22 3차 추가 파일: 라이브 점수 원본 CSV · 제외 불릿 · 동결 진단 · 매체 크로스오버 · K=9 검증
+# ---------------------------------------------------------------------------
+print("\n[M] fandom_scores_live_reference_v7.csv (라이브 10,020건 점수 + 라이브 재적합 F 비중 원본)")
+with open(D / "fandom_scores_live_reference_v7.csv", encoding="utf-8-sig") as f:
+    live_csv = list(csv.DictReader(f))
+LIVE_COLS = ["현장경제형(콘서트·투어·매진)", "소비력형(초동·판매·앨범)", "결속형(팬클럽·기부·커뮤니티)", "브랜드·상업형(광고·앰버서더)", "차트·확산형(1위·빌보드·기록)"]
+prow = {r["fandom"]: r for r in rows}
+lc_bad = [r["fandom"] for r in live_csv if abs(float(r["loyalty_score"]) - prow[r["fandom"]]["loyalty"]) > 1e-9
+          or abs(float(r["spillover_score"]) - prow[r["fandom"]]["spillover"]) > 1e-9 or abs(float(r["factor_diversity"]) - prow[r["fandom"]]["diversity"]) > 1e-9
+          or abs(float(r["coverage_index"]) - prow[r["fandom"]]["coverage"]) > 1e-9 or int(r["activity"]) != prow[r["fandom"]]["activity"] or r["dominant_factor"] != prow[r["fandom"]]["dominant"]]
+check("100개 팬덤 loyalty/spillover/diversity/coverage/activity/dominant = 3D 맵 payload (불일치 0)", not lc_bad, f"{lc_bad}")
+check("F 비중 5개 컬럼 = 라이브 재적합 factor_labels, factor_diversity = 정규화 엔트로피(ln 5), dominant = argmax",
+      sorted(LIVE_COLS) == sorted(diag["factor_labels"].values()) and all(
+          abs(-sum(float(r[c]) * math.log(float(r[c])) for c in LIVE_COLS if float(r[c]) > 0) / math.log(5) - float(r["factor_diversity"])) < 0.0011
+          and max(LIVE_COLS, key=lambda c: float(r[c])) == r["dominant_factor"] for r in live_csv))
+live_set = {r["fandom"] for r in live_csv}; frozen_set = {r["fandom"] for r in frozen}
+check("라이브 100개 팬덤 = 코퍼스 팬덤 집합", live_set == {fd["fandom"] for fd in fandoms})
+info("로스터 차이: 동결 스냅샷(7,350건)에만 있는 팬덤 / 라이브(10,020건)에만 있는 팬덤",
+     f"동결만 {sorted(frozen_set - live_set)} / 라이브만 {sorted(live_set - frozen_set)} — 타임라인 r62(한로로→몬스타엑스)·r63(pH-1→투어스) 교체 + BE'O→빈지노. "
+     f"따라서 페르소나·F1~F5 비중(동결)은 라이브 3개 팬덤을 포함하지 않는다")
+
+print("\n[N] lda_excluded_bullets_v7.json (10,020 → 10,018 재적합 문서 수의 근거)")
+with open(D / "lda_excluded_bullets_v7.json", encoding="utf-8") as f:
+    exb = json.load(f)
+byf = {fd["fandom"]: fd for fd in fandoms}
+check("10,020건 중 2건 제외(3토큰 미만) → LDA 문서 10,018건 (보고서 표 2-1 값)", exb["total_bullets"] == 10020 and exb["excluded_count"] == 2 and exb["lda_document_count"] == 10018)
+check("제외된 2건이 코퍼스의 해당 위치에 실재 (ATEEZ spillover[30] 태국어 2토큰, 레드벨벳 spillover[56] '맥도날드 조이 (2026)')",
+      all(byf[e["fandom"]][e["tag"]][e["idx"]]["t"] == e["t"] and byf[e["fandom"]][e["tag"]][e["idx"]]["u"] == e["u"] for e in exb["excluded"]))
+
+print("\n[O] lda_v6_diagnostics_frozen_v7_40.json (동결 스냅샷 진단 — 업로드 원본 파일명 lda_v6_diagnostics.json)")
+with open(D / "lda_v6_diagnostics_frozen_v7_40.json", encoding="utf-8") as f:
+    fdg = json.load(f)
+check("selected_k=10, M=5, silhouette=0.267, composite_rank_sum 최솟값 = K=10 (rank_sum 8 < K=8의 9)",
+      fdg["selected_k"] == 10 and fdg["selected_m_meta_factors"] == 5 and fdg["meta_factor_silhouette"] == 0.267 and min(fdg["k_grid"], key=lambda g: g["composite_rank_sum"])["k"] == 10)
+check("topics_top_words 10개 = topic_cards_v7.json top_keywords (10/10 동일)", all(fdg["topics_top_words"][str(i)] == cards[i]["top_keywords"] for i in range(10)))
+LAB2F = {"결속형(팬클럽·기부·커뮤니티)": "F1", "소비력형(초동·판매·앨범)": "F2", "현장경제형(콘서트·투어·매진)": "F3", "미디어노출형(방송·조회수)": "F4", "차트·확산형(1위·빌보드·기록)": "F5"}
+fmap = {f"K{k}": LAB2F[fdg["factor_labels"][str(v)]] for k, v in fdg["topic_to_factor"].items()}
+check("topic_to_factor + factor_labels → METHODOLOGY.md 2-1 표의 F코드 배정과 일치", fmap == METHOD_TABLE, f"{fmap}")
+
+print("\n[P] media_crossover_index_v7.json (매체 크로스오버 지수, 라이브 10,020건)")
+with open(D / "media_crossover_index_v7.json", encoding="utf-8") as f:
+    mcx = json.load(f)
+check("news_media 불릿 6,712건(67.0%) — 보고서 표 2-1 '매체 크로스오버 6,712건(67.0%)'", mcx["total_news_media_bullets"] == 6712 and round(mcx["corpus_news_media_share"], 3) == 0.670 and mcx["total_bullets"] == 10020)
+check("팬덤별 n_total_bullets = 코퍼스, Σn_news_media_bullets = 6,712, outlet_diversity_ratio = n_distinct/n_news",
+      all(corpus_cnt[x["fandom"]] == x["n_total_bullets"] for x in mcx["fandoms"]) and sum(x["n_news_media_bullets"] for x in mcx["fandoms"]) == 6712
+      and all(abs(x["n_distinct_outlets"] / x["n_news_media_bullets"] - x["outlet_diversity_ratio"]) < 1e-3 for x in mcx["fandoms"] if x["n_news_media_bullets"]))
+COMM = {"reddit.com", "x.com", "twitter.com", "facebook.com", "instagram.com", "threads.com"}; WIKI = {"en.wikipedia.org", "ko.wikipedia.org", "namu.wiki", "wikipedia.org"}
+def _dom(u):
+    m = re.match(r"https?://([^/\s]+)", u.strip()); d = (m.group(1) if m else "").lower(); return d[4:] if d.startswith("www.") else d
+def _in(d, S): return any(d == x or d.endswith("." + x) for x in S)
+n_news = Counter()
+for fd in fandoms:
+    for k in ("loyalty", "spillover"):
+        for b in fd[k]:
+            d = _dom(b.get("u", ""))
+            if not (_in(d, COMM) or _in(d, WIKI)):
+                n_news[d] += 1
+info("run_lda_v6.py의 source_type_of() 도메인 목록(v6판)으로 재계산", f"news_media {sum(n_news.values()):,}건 / 고유 매체 {len(n_news):,}개 (원본 6,712 / 1,298 — 라이브판 목록이 약간 더 넓음), 상위 3개 {n_news.most_common(3)} = 원본 top_outlets와 동일")
+
+print("\n[Q] k9_validation_v7.json (K=9 미검증 지적에 대한 추가 검증 실험)")
+with open(D / "k9_validation_v7.json", encoding="utf-8") as f:
+    k9 = json.load(f)
+check("K=9를 추가한 K-grid에서도 합성순위 승자는 K=8 (rank_sum 9 vs K=9 13)", k9["k_grid_winner"]["k"] == 8 and min(k9["k_grid"], key=lambda g: g["composite_rank_sum"])["k"] == 8)
+info("실험 코퍼스는 9,614 문서(중간 라운드, 10,018과 다름). K=9 phi에서 미디어 토픽은 M≥6에서만 단독 메타팩터로 분리(M=5 실루엣 0.099, M=6 0.081)",
+     f"corpus_docs={k9['corpus_docs']}, vocab={k9['vocab_size']}")
 
 # ---------------------------------------------------------------------------
 n_ok = sum(1 for _, ok in results if ok); n_all = len(results)

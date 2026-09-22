@@ -1,0 +1,572 @@
+[
+  {
+    "topic_id": "K0",
+    "topic_name": "음원차트기록형(기록·1위·차트·최초)",
+    "top_keywords": [
+      "기록",
+      "1위",
+      "발매",
+      "차트",
+      "데뷔",
+      "최초",
+      "k팝",
+      "그룹",
+      "누적",
+      "앨범"
+    ],
+    "representative_bullets": [
+      {
+        "fandom": "아일릿",
+        "text": "뜬금없이 '잇츠 미' 등장..아일릿, 패러디 화제 속 美 '빌보드 200' 26위. 걸 그룹 아일릿(ILLIT)이 커리어 하이를 달성했다. 12일(현지시간) 발표된 미국 빌보드 최신 차트(5월 16일 자)에 따르면 아일릿(윤아, 민주, 모카, 원희, 이로하)의 미니 4집 '마밀라피나타파이'(MAMIHLAPINATAPAI)가 '빌보드 200'에 26위로 진입했다.",
+        "topic_prob": 0.9719
+      },
+      {
+        "fandom": "ITZY",
+        "text": "ITZY의 데뷔곡 'Dalla Dalla' 뮤직비디오는 공개 24시간 만에 1710만 회 조회수를 기록해 K팝 데뷔 뮤직비디오 최고 기록을 세웠으며, K팝 그룹의 데뷔곡 뮤직비디오 중 최단 기간 유튜브 1억 뷰 돌파 기록도 세웠다.",
+        "topic_prob": 0.9667
+      },
+      {
+        "fandom": "GOT7",
+        "text": "'Fly' 활동 당시 갓세븐은 빌보드 아티스트 100 차트에 45위로 데뷔해, 싸이가 2015년 세운 88위 기록을 넘어서며 역대 두 번째로 이 차트에 오른 K팝 그룹이 됐고, 소셜50 차트에서는 저스틴 비버에 이어 2위를 차지했다.",
+        "topic_prob": 0.9667
+      }
+    ],
+    "representative_fandoms_top5": [
+      {
+        "fandom": "CORTIS",
+        "avg_topic_weight": 0.3312
+      },
+      {
+        "fandom": "아일릿",
+        "avg_topic_weight": 0.3051
+      },
+      {
+        "fandom": "지코",
+        "avg_topic_weight": 0.2617
+      },
+      {
+        "fandom": "GOT7",
+        "avg_topic_weight": 0.2591
+      },
+      {
+        "fandom": "빅마마",
+        "avg_topic_weight": 0.222
+      }
+    ],
+    "connected_factor_label": "차트·확산형(1위·빌보드·기록)",
+    "connected_f_pathway": "F5 대중·글로벌 확산 경로"
+  },
+  {
+    "topic_id": "K1",
+    "topic_name": "동남아현지보도형(보도·매체·인도네시아·기사)",
+    "top_keywords": [
+      "무대",
+      "2026년",
+      "보도",
+      "8월",
+      "기사",
+      "인도네시아",
+      "매체",
+      "팬덤",
+      "함께",
+      "공연"
+    ],
+    "representative_bullets": [
+      {
+        "fandom": "로이킴",
+        "text": "2025년 대학축제·페스티벌 현장에서 로이킴이 무대에 오르자 관객들이 떼창과 불빛(플래시) 이벤트로 화답하며 무대를 완성했고, 대표곡 '내게 사랑이 뭐냐고 물어본다면' 등에 큰 호응이 이어졌다. 팬들이 촬영한 함성 영상이 SNS에서 화제가 되며 매년 뮤직 페스티벌 '섭외 1순위'로 꼽힌다는 평가도 나왔다.",
+        "topic_prob": 0.9743
+      },
+      {
+        "fandom": "LE SSERAFIM",
+        "text": "롯데시네마는 2026년 4월 LE SSERAFIM의 첫 VR 콘서트 실황 영화 '르세라핌 VR 콘서트: 인비테이션(INVITATION)'을 12K 초고화질로 단독 개봉했으며, 5월에는 팬덤(FEARNOT) 중심의 'N차 관람' 열풍이 확산되며 롯데시네마 월드타워점에서 부산본점까지 상영이 확대됐다. 허윤진·사쿠라·카즈하 등 멤버들이 12K 초근접 VR 촬영 비하인드 인터뷰에도 참여했다.",
+        "topic_prob": 0.9727
+      },
+      {
+        "fandom": "CORTIS",
+        "text": "Kumparan에 따르면 CORTIS는 데뷔 후 1년이 채 되지 않은 시점에 2022년부터 NCT DREAM, 레드벨벳 등을 초청해온 인도네시아 대표 음악 페스티벌 'Allo Bank Festival'의 헤드라이너로 확정돼, 데뷔 초기 그룹으로는 이례적인 동남아 대형 페스티벌 진출 사례가 됐다.",
+        "topic_prob": 0.97
+      }
+    ],
+    "representative_fandoms_top5": [
+      {
+        "fandom": "박서진",
+        "avg_topic_weight": 0.3442
+      },
+      {
+        "fandom": "송가인",
+        "avg_topic_weight": 0.2816
+      },
+      {
+        "fandom": "CORTIS",
+        "avg_topic_weight": 0.2602
+      },
+      {
+        "fandom": "리센느(RESCENE)",
+        "avg_topic_weight": 0.2589
+      },
+      {
+        "fandom": "김연자",
+        "avg_topic_weight": 0.2525
+      }
+    ],
+    "connected_factor_label": "현장경제형(콘서트·투어·매진)",
+    "connected_f_pathway": "F3 현장경제 경로"
+  },
+  {
+    "topic_id": "K2",
+    "topic_name": "예능방송출연형(예능·출연·mbc·sbs)",
+    "top_keywords": [
+      "출연",
+      "예능",
+      "mbc",
+      "sbs",
+      "mc",
+      "kbs",
+      "kbs2",
+      "고정",
+      "공개",
+      "출연해"
+    ],
+    "representative_bullets": [
+      {
+        "fandom": "다이나믹듀오",
+        "text": "다이나믹듀오 멤버 개코가 MBC '나 혼자 산다'(2022년 5월 6일 방송분)에 코드 쿤스트의 게스트로 출연했다. 두 사람은 팀 '코코'로 활동할 만큼 각별한 사이로, 코드 쿤스트의 데뷔 초 곡비 지원 비화와 철원(군 복무지) 동행 에피소드 등 진솔한 대화가 공개됐다.",
+        "topic_prob": 0.969
+      },
+      {
+        "fandom": "장윤정",
+        "text": "장윤정은 남편 도경완, '뉴페이스' 황윤성과 함께 장흥에 첫 번째 분점을 열며, 낙지 삼합 요리 대결을 리드했다. '제철 상담소'에서 장윤정은 후배들의 고민을 시원하게 풀어주며 보는 재미를 더하기도 했다. 매주 금요일 오후 7시 30분에 방송되는 K-STAR, LG헬로비전 '제철누나' 시즌3에 출연한다.",
+        "topic_prob": 0.964
+      },
+      {
+        "fandom": "aespa",
+        "text": "เกิร์ลกรุ๊ปเค-ป๊อปเจน 4 วงแรกที่สามารถจัดคอนเสิร์ต ณ อิมแพ็ค อารีน่า 2 รอบการแสดง และบัตรหมดเกลี้ยงทันทีที่เปิดจำหน่าย",
+        "topic_prob": 0.9625
+      }
+    ],
+    "representative_fandoms_top5": [
+      {
+        "fandom": "잔나비",
+        "avg_topic_weight": 0.1874
+      },
+      {
+        "fandom": "이승철",
+        "avg_topic_weight": 0.1857
+      },
+      {
+        "fandom": "거미",
+        "avg_topic_weight": 0.1744
+      },
+      {
+        "fandom": "김호중",
+        "avg_topic_weight": 0.1646
+      },
+      {
+        "fandom": "잭스키스",
+        "avg_topic_weight": 0.1445
+      }
+    ],
+    "connected_factor_label": "미디어노출형(방송·조회수)",
+    "connected_f_pathway": "F4 산업전이 경로"
+  },
+  {
+    "topic_id": "K3",
+    "topic_name": "일본오리콘앨범형(일본·빌보드·오리콘·판매)",
+    "top_keywords": [
+      "앨범",
+      "1위",
+      "판매",
+      "이상",
+      "데뷔",
+      "일본",
+      "빌보드",
+      "차트",
+      "오리콘",
+      "ep"
+    ],
+    "representative_bullets": [
+      {
+        "fandom": "프로미스나인",
+        "text": "영어 위키백과에 따르면 fromis_9의 데뷔 EP 'To. Heart'는 가온 앨범차트 4위, 'Fun Factory'는 2위, 'My Little Society'는 3위를 기록했으며, 'Supersonic' 타이틀곡은 써클차트 2위, 'White Memories'는 써클차트 톱10에 진입했고, 'Talk & Talk'(2021년 9월, 데뷔 후 첫 음악방송 1위)에 이어 'Like You Better'(2025년 7월), 'White Memories'(2025년 12월)로 음악방송 1위를 기록했다",
+        "topic_prob": 0.98
+      },
+      {
+        "fandom": "지드래곤 (G-Dragon)",
+        "text": "영어 위키백과에 따르면 지드래곤의 EP 'Kwon Ji Yong'(2017)은 46개국 아이튠즈 차트 1위, 중국 QQ뮤직에서 하루 만에 76만 디지털 유닛 이상 판매, 발매 6일 만에 100만장 판매를 기록했으며 빌보드 200에 세 번째로 진입했다. 정규 3집 선행 EP 'One of a Kind'(2012)는 20만장 이상 판매되며 빌보드 월드 앨범 차트 1위, 빌보드 200 161위에 올랐다",
+        "topic_prob": 0.978
+      },
+      {
+        "fandom": "ATEEZ",
+        "text": "영어 위키백과에 따르면 ATEEZ의 'Zero: Fever Part.1'은 그룹 최초 플래티넘(50만장) 인증 앨범이 됐고, 'The World EP.1: Movement'는 선주문 110만장을 넘기며 그룹 최초 밀리언셀러가 됐으며, 'Golden Hour: Part.4'는 써클 앨범차트 1위로 데뷔해 발매 첫 주에만 150만장 이상 판매됐다",
+        "topic_prob": 0.9743
+      }
+    ],
+    "representative_fandoms_top5": [
+      {
+        "fandom": "프로미스나인",
+        "avg_topic_weight": 0.1841
+      },
+      {
+        "fandom": "CNBLUE",
+        "avg_topic_weight": 0.176
+      },
+      {
+        "fandom": "QWER",
+        "avg_topic_weight": 0.1536
+      },
+      {
+        "fandom": "윤하",
+        "avg_topic_weight": 0.1403
+      },
+      {
+        "fandom": "조용필",
+        "avg_topic_weight": 0.1399
+      }
+    ],
+    "connected_factor_label": "차트·확산형(1위·빌보드·기록)",
+    "connected_f_pathway": "F5 대중·글로벌 확산 경로"
+  },
+  {
+    "topic_id": "K4",
+    "topic_name": "글로벌음반판매형(million·album·copies·chart)",
+    "top_keywords": [
+      "million",
+      "album",
+      "japan",
+      "chart",
+      "music",
+      "copies",
+      "pop",
+      "group",
+      "korea",
+      "korean"
+    ],
+    "representative_bullets": [
+      {
+        "fandom": "김연자",
+        "text": "Kim Yeon-ja performs and releases music in Japan under the stage name キム・ヨンジャ (金蓮子) as an active part of the Japanese enka/演歌 music market; her Japanese label is Nihon Crown (日本クラウン), whose official artist news page (crownrecord.co.jp) posts ongoing \"最新ニュース\" updates about her — a NEW_DOMAIN_CANDIDATE outlet, but a legitimate major Japanese record label's own artist-news channel, indicating sustained industry/fan engagement rather than one-off coverage.",
+        "topic_prob": 0.982
+      },
+      {
+        "fandom": "나훈아",
+        "text": "Na Hoon-a's catalogue (under 羅勲児/ナ・フナ) is actively sold/catalogued on Japanese music retail and streaming platforms (Amazon.co.jp, Apple Music Japan, recochoku.jp, Yahoo!ショッピング — all labeled 演歌/トロット genre), and he has a Japanese Wikipedia biography page (羅勲児), confirming ongoing recognition in Japan's enka market consistent with his previously-confirmed Teichiku Records connection. These retail/streaming domains are NEW_DOMAIN_CANDIDATEs, not on the official JP list.",
+        "topic_prob": 0.9769
+      },
+      {
+        "fandom": "IVE",
+        "text": "Debut album \"Eleven\" posted the highest first-week sales ever recorded for a girl-group debut album; \"After Like\" (3rd single album) sold over 1,700,000 copies; \"Ive Empathy\" (3rd EP, Feb 2025) reached 1 million copies sold; \"Ive Secret\" (4th EP, Aug 2025) became their seventh #1 album and sixth million-seller.",
+        "topic_prob": 0.9763
+      }
+    ],
+    "representative_fandoms_top5": [
+      {
+        "fandom": "소녀시대",
+        "avg_topic_weight": 0.1855
+      },
+      {
+        "fandom": "BLACKPINK",
+        "avg_topic_weight": 0.1833
+      },
+      {
+        "fandom": "슈퍼주니어",
+        "avg_topic_weight": 0.178
+      },
+      {
+        "fandom": "NewJeans",
+        "avg_topic_weight": 0.1609
+      },
+      {
+        "fandom": "ATEEZ",
+        "avg_topic_weight": 0.1506
+      }
+    ],
+    "connected_factor_label": "소비력형(초동·판매·앨범)",
+    "connected_f_pathway": "F2 직접소비 경로"
+  },
+  {
+    "topic_id": "K5",
+    "topic_name": "팬클럽공식기부형(공식·팬클럽·기부·콘텐츠)",
+    "top_keywords": [
+      "공식",
+      "팬클럽",
+      "유튜브",
+      "채널",
+      "팬덤",
+      "활동",
+      "기부",
+      "데뷔",
+      "콘텐츠",
+      "2025년"
+    ],
+    "representative_bullets": [
+      {
+        "fandom": "오마이걸",
+        "text": "공식 팬클럽 미라클(MIRACLE)은 오마이걸 데뷔 2주년(2017년 4월)을 기념해 한국백혈병어린이재단에 특별 기부를 진행했으며, 기부 인증서에는 \"오마이걸 데뷔 2주년을 축하합니다\"라는 문구가 담겼고 팬클럽 대표는 \"오마이걸의 밝고 건강한 에너지가 투병 중인 어린이들에게 힘이 되길 바란다\"고 전했다",
+        "topic_prob": 0.9743
+      },
+      {
+        "fandom": "오마이걸",
+        "text": "오마이걸 공식 팬클럽 미라클은 데뷔 2주년을 맞은 2017년 4월 21일 한국백혈병어린이재단에 소아암 환아를 위한 특별기부를 진행했으며, 재단은 \"오마이걸의 밝고 건강한 에너지가 소아암 투병 중인 아이들에게 힘이 되길 바란다\"는 취지의 기부 증서를 오마이걸 명의로 발급했다",
+        "topic_prob": 0.9727
+      },
+      {
+        "fandom": "NewJeans",
+        "text": "뉴진스 멤버들이 팀명이 아닌 팬클럽 '버니즈(Bunnies)' 이름으로 2024년 12월 19일 아동복지전문기관 초록우산에 1억 원을 기부했다. 기부금은 전국 가족돌봄아동·청소년 가정 30가구의 생계·주거·학습·의료 등 생활안정과 자립 지원에 사용될 예정이라고 밝혔다",
+        "topic_prob": 0.971
+      }
+    ],
+    "representative_fandoms_top5": [
+      {
+        "fandom": "박서진",
+        "avg_topic_weight": 0.2653
+      },
+      {
+        "fandom": "김호중",
+        "avg_topic_weight": 0.2413
+      },
+      {
+        "fandom": "이찬원",
+        "avg_topic_weight": 0.2291
+      },
+      {
+        "fandom": "잭스키스",
+        "avg_topic_weight": 0.2167
+      },
+      {
+        "fandom": "임영웅",
+        "avg_topic_weight": 0.2017
+      }
+    ],
+    "connected_factor_label": "결속형(팬클럽·기부·커뮤니티)",
+    "connected_f_pathway": "F1 팬덤결속 경로"
+  },
+  {
+    "topic_id": "K6",
+    "topic_name": "단독콘서트월드투어형(콘서트·투어·단독·월드투어)",
+    "top_keywords": [
+      "콘서트",
+      "공연",
+      "보도",
+      "투어",
+      "단독",
+      "데뷔",
+      "일본",
+      "개최",
+      "태국",
+      "월드투어"
+    ],
+    "representative_bullets": [
+      {
+        "fandom": "슈퍼주니어",
+        "text": "말레이시아 매체 malaymail.com은 슈퍼주니어가 데뷔 20주년 기념 'Super Show 10' 투어의 일환으로 2026년 1월 17일 쿠알라룸푸르 Axiata Arena 공연을 연다고 보도했다. 이 투어는 서울, 홍콩, 자카르타, 마닐라, 멕시코시티, 리마, 타이베이, 방콕, 싱가포르 등 전 세계 주요 도시를 순회하는 대규모 일정으로, 데뷔 20년이 지난 그룹의 지속적인 지역 경제 파급력을 보여준다",
+        "topic_prob": 0.98
+      },
+      {
+        "fandom": "CNBLUE",
+        "text": "CNBLUE는 일본 고베·지바 등에서 진행한 재팬 투어를 마친 뒤, 2026년 1월 17일 서울을 시작으로 일본 3개 도시, 동남아시아 7개 도시, 호주 시드니·멜버른을 도는 월드투어 \"3Logy\"를 발표했으며, 앞서 진행한 \"Voyage into X\" 투어는 아시아·북미 지역 17개 공연으로 구성되었다",
+        "topic_prob": 0.9757
+      },
+      {
+        "fandom": "RIIZE",
+        "text": "RIIZE가 K-pop 남성 그룹으로서 데뷔 최속으로 도쿄돔 단독공연을 3일간 개최해 총 12만 명을 동원했다고 오리콘이 보도(제목: \"RIIZE、K-POP男性グループ最速東京ドーム公演「本当に夢みたい」 3日間計12万人熱狂\")",
+        "topic_prob": 0.9735
+      }
+    ],
+    "representative_fandoms_top5": [
+      {
+        "fandom": "샤이니",
+        "avg_topic_weight": 0.3685
+      },
+      {
+        "fandom": "DAY6",
+        "avg_topic_weight": 0.3231
+      },
+      {
+        "fandom": "레드벨벳",
+        "avg_topic_weight": 0.297
+      },
+      {
+        "fandom": "pH-1",
+        "avg_topic_weight": 0.2904
+      },
+      {
+        "fandom": "IKON",
+        "avg_topic_weight": 0.2701
+      }
+    ],
+    "connected_factor_label": "현장경제형(콘서트·투어·매진)",
+    "connected_f_pathway": "F3 현장경제 경로"
+  },
+  {
+    "topic_id": "K7",
+    "topic_name": "브랜드앰버서더형(브랜드·광고·앰버서더·매진)",
+    "top_keywords": [
+      "브랜드",
+      "모델",
+      "광고",
+      "앰버서더",
+      "콘서트",
+      "발탁",
+      "매진",
+      "티켓",
+      "2025년",
+      "글로벌"
+    ],
+    "representative_bullets": [
+      {
+        "fandom": "다비치",
+        "text": "2026년 1월 24~25일 서울 올림픽공원 KSPO DOME 콘서트 'TIME CAPSULE : 시간을 잇다'가 일반 예매 오픈과 동시에 이틀 전 회차가 초고속 매진되며, 여성 듀오 최초로 2년 연속 KSPO DOME 콘서트 매진을 달성함",
+        "topic_prob": 0.971
+      },
+      {
+        "fandom": "나훈아",
+        "text": "2024년 '고마웠습니다-라스트 콘서트'(서울 KSPO DOME, 총 5회) 티켓이 예매 오픈 5분 만에 전석 매진됐고, 직후 정가 16만 5000원짜리 R석이 30만 원 이상에 암표로 거래될 만큼 수요가 폭발했다",
+        "topic_prob": 0.9625
+      },
+      {
+        "fandom": "BTS",
+        "text": "한국경제 보도에 따르면 넷플릭스는 BTS 공연 생중계에 대한 협찬을 확보하기 위해 항공사, 글로벌 신용카드사, 검색 인터넷 회사 등에 수백억 원에 육박하는 후원금을 제안했을 만큼 BTS와 연계된 광고·협찬 시장 규모가 크다.",
+        "topic_prob": 0.9625
+      }
+    ],
+    "representative_fandoms_top5": [
+      {
+        "fandom": "이영지",
+        "avg_topic_weight": 0.288
+      },
+      {
+        "fandom": "나훈아",
+        "avg_topic_weight": 0.282
+      },
+      {
+        "fandom": "지드래곤 (G-Dragon)",
+        "avg_topic_weight": 0.2574
+      },
+      {
+        "fandom": "이효리",
+        "avg_topic_weight": 0.2567
+      },
+      {
+        "fandom": "성시경",
+        "avg_topic_weight": 0.253
+      }
+    ],
+    "connected_factor_label": "현장경제형(콘서트·투어·매진)",
+    "connected_f_pathway": "F3 현장경제 경로"
+  },
+  {
+    "topic_id": "K8",
+    "topic_name": "월드투어매진형(tour·concert·sold·world)",
+    "top_keywords": [
+      "tour",
+      "concert",
+      "fan",
+      "sold",
+      "world",
+      "seoul",
+      "brand",
+      "ambassador",
+      "club",
+      "awards"
+    ],
+    "representative_bullets": [
+      {
+        "fandom": "IKON",
+        "text": "Ahead of iKON's May 2026 \"FOUREVER TOUR\" concert at Jangchung Arena - their first full-group concert since 2024 and first since members' military discharge - Yes24 ran a dedicated fan-club-only presale (April 1) before general sale (April 3), reflecting organized IKONIC presale privileges tied to roughly two years of fans waiting through enlistment",
+        "topic_prob": 0.9743
+      },
+      {
+        "fandom": "김호중",
+        "text": "Despite Kim Ho-joong's May 2024 arrest on DUI hit-and-run charges, fans attended his \"World Union Orchestra... Prima Donna\" concert at KSPO Dome on May 24, 2024 wearing the fandom's purple color as instructed, paying for tickets themselves even as he could not appear/was uncompensated, with fans posting things like \"머지않아 함께할 우리 가수님 고대하며 오늘도 간다\"",
+        "topic_prob": 0.9727
+      },
+      {
+        "fandom": "싸이",
+        "text": "\"Gangnam Style\" was the first YouTube video to reach 1 billion views (Dec 21, 2012) and held the most-viewed record until 2017, reaching 2.3+ billion views by Dec 2014; Psy was named Gangnam District honorary ambassador (Sept 2012) and South Korean tourism ambassador (April 2013)",
+        "topic_prob": 0.9679
+      }
+    ],
+    "representative_fandoms_top5": [
+      {
+        "fandom": "NewJeans",
+        "avg_topic_weight": 0.147
+      },
+      {
+        "fandom": "빅뱅",
+        "avg_topic_weight": 0.1368
+      },
+      {
+        "fandom": "IKON",
+        "avg_topic_weight": 0.1273
+      },
+      {
+        "fandom": "BLACKPINK",
+        "avg_topic_weight": 0.1263
+      },
+      {
+        "fandom": "동방신기",
+        "avg_topic_weight": 0.121
+      }
+    ],
+    "connected_factor_label": "소비력형(초동·판매·앨범)",
+    "connected_f_pathway": "F2 직접소비 경로"
+  },
+  {
+    "topic_id": "K9",
+    "topic_name": "영화드라마출연형(드라마·ost·영화·출연)",
+    "top_keywords": [
+      "드라마",
+      "ost",
+      "출연",
+      "예능",
+      "영화",
+      "참여",
+      "수상",
+      "프로그램",
+      "나무위키",
+      "mbc"
+    ],
+    "representative_bullets": [
+      {
+        "fandom": "정동원",
+        "text": "정동원은 MBC 드라마 '꼰대인턴' OST '친구야'(2020.6.25), KBS 드라마 '신사와 아가씨' OST '가리워진 길'(2021.12.18), 드라마 '낮과 밤이 다른 그녀' OST 'I Like That'(2023.7.6), 드라마 '사랑을 처방해 드립니다' OST '그대는 나의 모든것'(2026.3.14)에 각각 참여하며 여러 드라마 OST에 지속적으로 참여해왔다.",
+        "topic_prob": 0.9679
+      },
+      {
+        "fandom": "백지영",
+        "text": "백지영이 MBC '놀면 뭐하니?'에 출연, 유재석이 연출한 첫 숏폼 드라마 '동생이 훔친 내 여자를 다시 뺏기로 했다'의 OST 녹음에 바이올리니스트 대니 구와 함께 참여했다. 하하가 작업한 곡에 대해 \"완전 요즘 감성\"이라며 극찬했다.",
+        "topic_prob": 0.9667
+      },
+      {
+        "fandom": "백지영",
+        "text": "'내가 부르면 뜬다'라고 자부해도 되는 'OST의 여왕' 백지영은 드라마 '아이리스'의 '잊지 말아요'를 비롯해 '시크릿 가든'의 '그 여자', 최근 방영 중인 '구르미 그린 달빛'의 '러브 이즈 오버(Love is Over)' 등 많은 작품의 OST에 참여했다.",
+        "topic_prob": 0.9667
+      }
+    ],
+    "representative_fandoms_top5": [
+      {
+        "fandom": "박정현",
+        "avg_topic_weight": 0.2678
+      },
+      {
+        "fandom": "브라운아이즈",
+        "avg_topic_weight": 0.2512
+      },
+      {
+        "fandom": "박효신",
+        "avg_topic_weight": 0.2211
+      },
+      {
+        "fandom": "다비치",
+        "avg_topic_weight": 0.2182
+      },
+      {
+        "fandom": "이문세",
+        "avg_topic_weight": 0.2045
+      }
+    ],
+    "connected_factor_label": "미디어노출형(방송·조회수)",
+    "connected_f_pathway": "F4 산업전이 경로"
+  }
+]

@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 """
 chart3d_payload_live_reference_v7.json(3D 포지셔닝맵 HTML에 내장된 라이브 코퍼스 10,020건
-기준 payload)의 rows를 CSV로 푼다.
+기준 payload)의 rows를 CSV로 푼다. (2026-09-22: 출력 파일명을 chart3d_positioning_rows_live_v7.csv로 변경 —
+원본 산출물 fandom_scores_live_reference_v7.csv(라이브 재적합 F 비중 5개 컬럼 포함)가 저장소에 추가되어 이름 충돌 방지.
+두 파일의 loyalty/spillover/diversity/coverage/activity/dominant는 100/100 동일하고, 이 파일에는 4구획(quadrant)이 추가로 있다.)
 
 컬럼: fandom, category, loyalty_score, spillover_score, factor_diversity, coverage_index,
       dominant_factor, activity, n_loyalty_bullets, n_spillover_bullets, quadrant, is_target
@@ -16,7 +18,7 @@ from pathlib import Path
 
 BASE = Path(__file__).resolve().parents[1]
 SRC = BASE / "data" / "v7_final" / "chart3d_payload_live_reference_v7.json"
-OUT = BASE / "data" / "v7_final" / "fandom_scores_live_reference_v7.csv"
+OUT = BASE / "data" / "v7_final" / "chart3d_positioning_rows_live_v7.csv"
 
 
 def main():

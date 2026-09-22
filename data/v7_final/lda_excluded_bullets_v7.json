@@ -1,0 +1,31 @@
+{
+  "total_bullets": 10020,
+  "lda_document_count": 10018,
+  "excluded_count": 2,
+  "excluded": [
+    {
+      "fandom": "ATEEZ",
+      "tag": "spillover",
+      "idx": 30,
+      "t": "วาสนาผู้ได๋น้อ?",
+      "u": "https://www.thairath.co.th/entertain/celeb/2714549",
+      "n_tokens": 2,
+      "tokens": [
+        "วาสนา",
+        "ได๋น้อ"
+      ]
+    },
+    {
+      "fandom": "레드벨벳",
+      "tag": "spillover",
+      "idx": 56,
+      "t": "맥도날드 조이 (2026)",
+      "u": "https://namu.wiki/w/Red%20Velvet/%EA%B4%91%EA%B3%A0%20%EB%B0%8F%20%ED%99%94%EB%B3%B4",
+      "n_tokens": 2,
+      "tokens": [
+        "맥도날드",
+        "조이"
+      ]
+    }
+  ]
+}
