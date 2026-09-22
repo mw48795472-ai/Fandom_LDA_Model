@@ -150,7 +150,7 @@ Activity(f) = n_loyalty(f) + n_spillover(f)                                    (
 
 ## 이 문서와 함께 보는 파일
 
-- `index_calculation_v7.ipynb` (같은 폴더, 실행 결과 포함) — 식(1)∼(7)을
+- `index_calculation_v7.ipynb` (같은 폴더, 실행 결과 포함; Jupyter 없이 Spyder·VS Code에서 열려면 같은 내용의 `# %%` 셀 스크립트 `index_calculation_v7.py`) — 식(1)∼(7)을
   코퍼스 10,020건에 직접 적용해 100개 팬덤의 지표를 **산정**하는 노트북. 문장별 EvidenceScore 분해 예시, min-max, 활동량,
   커버리지 하위지표 5개와 가중합, 팩터 다양성·주 팩터, 4구획·χ²까지 만들어 `index_calculation_v7_result.csv`(100행×17열)로 저장하고
   마지막 절에서 최종 산출 파일과 전량 대조한다(8개 항목 전부 0/100 불일치). 생성기는 `build_index_calculation_notebook.py`.

@@ -997,9 +997,9 @@ print("원본 버킷:", [(b["bucket"], b["n_bullets_with_any_token"]) for b in w
         md("## 1. 문자 범위 기반 스크립트 분기 — 단일 버킷 배정"),
         code('''
 RE_HANGUL = re.compile(r"[가-힣]")
-RE_KANA = re.compile(r"[぀-ゟ゠-ヿ]")
+RE_KANA = re.compile(r"[\\u3040-ゟ゠-ヿ]")
 RE_HANZI = re.compile(r"[一-鿿]")
-RE_THAI = re.compile(r"[฀-๿]")
+RE_THAI = re.compile(r"[\\u0e00-\\u0e7f]")
 RE_CYRILLIC = re.compile(r"[Ѐ-ӿ]")
 RE_VIET = re.compile(r"[đơưĐƠƯ]|[Ḁ-ỿ]")
 RE_LATIN_EXT = re.compile(r"[À-ɏ]")
