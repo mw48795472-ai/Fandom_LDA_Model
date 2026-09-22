@@ -459,6 +459,33 @@ info("실험 코퍼스는 9,614 문서(중간 라운드, 10,018과 다름). K=9 
      f"corpus_docs={k9['corpus_docs']}, vocab={k9['vocab_size']}")
 
 # ---------------------------------------------------------------------------
+# [R] 2026-09-22 4차 추가: 미디어·콘텐츠 노출 지수 · 멤버 파일럿 v7 · v7_progress(r48)
+# ---------------------------------------------------------------------------
+print("\n[R] media_exposure_v7.json (미디어·콘텐츠 노출 지수, 라이브 10,020건)")
+with open(D / "media_exposure_v7.json", encoding="utf-8") as f:
+    mex = json.load(f)
+check("미디어 불릿 1,025건(10.2%) — 보고서 표 2-1 '미디어·콘텐츠 노출 1,025건(10.2%)', 서브태그 4종(예능/유튜브/영화/드라마)",
+      mex["total_media_bullets"] == 1025 and round(mex["corpus_media_share"], 3) == 0.102 and mex["total_bullets"] == 10020 and len(mex["subtags"]) == 4)
+check("팬덤별 n_total_bullets = 코퍼스, Σn_media_bullets = 1,025, Σ서브태그별 = subtag_totals (예능 309·유튜브 286·영화 179·드라마 313)",
+      all(corpus_cnt[x["fandom"]] == x["n_total_bullets"] for x in mex["fandoms"]) and sum(x["n_media_bullets"] for x in mex["fandoms"]) == 1025
+      and all(sum(x["subtag_counts"].get(t, 0) for x in mex["fandoms"]) == mex["subtag_totals"][t] for t in mex["subtags"]))
+mex_hi = {x["fandom"]: x for x in mex["fandoms"]}
+info("하이라이트 미디어 불릿", f"임영웅 {mex_hi['임영웅']['n_media_bullets']}건({mex_hi['임영웅']['media_share']:.1%}, 전체 1위) · 리센느 {mex_hi['리센느(RESCENE)']['n_media_bullets']}건 · BTS {mex_hi['BTS']['n_media_bullets']}건")
+
+print("\n[S] member_mention_pilot_v7.json (아카이브 원본명) ↔ member_mention_index_v7.json")
+with open(D / "member_mention_pilot_v7.json", encoding="utf-8") as f:
+    mp7 = json.load(f)
+check("45개 그룹, 언급 카운트·비중·MCI 값이 member_mention_index_v7.json과 전부 동일 (키 이름만 pilot/index)",
+      set(mp7) == set(midx) and all(mp7[g]["member_mention_counts"] == midx[g]["member_mention_counts"] and mp7[g]["mci_pilot"] == midx[g]["mci_index"]
+                                    and mp7[g]["total_group_bullets"] == corpus_cnt[g] for g in mp7))
+
+print("\n[T] v7_progress.json (data/v7_final 판 = v7 48라운드 시점)")
+with open(D / "v7_progress.json", encoding="utf-8") as f:
+    vp = json.load(f)
+check("current_total 8,311 = 타임라인 CSV r48 행 (r22판 5,612과 다른 후속 진행본)", vp["current_total"] == 8311 and any(r["라운드"] == "r48" and r["코퍼스(불릿수)"] == "8311" for r in real_rows))
+info("current_total_note 원문이 이원 구조를 명시", vp.get("current_total_note", "")[:120] + "…")
+
+# ---------------------------------------------------------------------------
 n_ok = sum(1 for _, ok in results if ok); n_all = len(results)
 print(f"\n=== 결과: {n_ok}/{n_all} 항목 일치 ({n_all - n_ok}건 불일치) ===")
 sys.exit(0 if n_ok == n_all else 1)
