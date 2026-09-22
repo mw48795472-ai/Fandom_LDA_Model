@@ -37,9 +37,9 @@ CORPUS_PATH = BASE / "data" / "v7_final" / "fandoms_v3_100.json"
 OUT_PATH = Path(__file__).resolve().parent / "csv" / "bullet_token_frequency_v7_final.csv"
 
 # --- 문자 범위(analysis/tokenizer_script_routing_pilot.ipynb와 동일 정의) -------
-RE_KANA = re.compile(r"[぀-ゟ゠-ヿ]")
+RE_KANA = re.compile(r"[\u3040-ゟ゠-ヿ]")
 RE_HANZI = re.compile(r"[一-鿿]")
-RE_THAI = re.compile(r"[฀-๿]")
+RE_THAI = re.compile(r"[\u0e00-\u0e7f]")
 RE_HANGUL = re.compile(r"[가-힣]")
 RE_CYRILLIC = re.compile(r"[Ѐ-ӿ]")
 

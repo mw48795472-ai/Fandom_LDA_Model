@@ -98,6 +98,7 @@ import pythainlp  # noqa: E402
 
 thai = sorted(thai_stopwords())
 assert set(thai) == bbtf.THAI_STOPWORDS
+thai = [w.replace("\ufeff", "") for w in thai]  # pythainlp 목록 한 항목에 BOM 문자가 섞여 있어 CSV 셀에서 제거(단어 자체는 동일)
 
 
 # --- CSV ---------------------------------------------------------------------

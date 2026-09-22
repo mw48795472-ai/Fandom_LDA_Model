@@ -131,7 +131,7 @@ def classify_domain(domain: str):
     return "en", "default"
 
 
-RE_HANGUL, RE_KANA, RE_HANZI, RE_THAI = (re.compile(r"[가-힣]"), re.compile(r"[぀-ゟ゠-ヿ]"), re.compile(r"[一-鿿]"), re.compile(r"[฀-๿]"))
+RE_HANGUL, RE_KANA, RE_HANZI, RE_THAI = (re.compile(r"[가-힣]"), re.compile(r"[\u3040-ゟ゠-ヿ]"), re.compile(r"[一-鿿]"), re.compile(r"[\u0e00-\u0e7f]"))
 
 
 def text_script_fallback(text: str) -> str:

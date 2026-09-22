@@ -460,7 +460,7 @@ def source_type_of(url):
 # was tested for zh/es/fr and REJECTED: hanzi false-positive on decorative Korean hanja (e.g.
 # "佳人의 선물"), and accented-Latin false-positived on brand names ("L'Oréal", "México",
 # "pookïe") rather than real Spanish/French prose — see [5c] for the actual test results.
-_JP_KANA_RE = re.compile(r"[぀-ヿ]")
+_JP_KANA_RE = re.compile(r"[\u3040-ヿ]")
 
 def language_of(url, text=""):
     d = domain_of(url)
