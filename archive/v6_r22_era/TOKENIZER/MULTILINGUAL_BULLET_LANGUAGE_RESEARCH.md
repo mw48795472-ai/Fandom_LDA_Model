@@ -1,6 +1,6 @@
 # 다국어 세션별 불릿 단위 리서치 — 정리·재구성 및 검증
 
-> **2026-09-21 갱신 주** — 이 문서가 "이번 세션에 없다 / 재현 불가"라고 적은 최종 라이브 코퍼스(10,020건)와 최종 산출물이 이제 `data/v7_final/`에 있다(`fandoms_v3_100.json` 10,020건, `fandom_scores_v6.csv`·`fan_persona_v7.json`(동결 스냅샷 7,350건 기준), `language_domain_summary_v7.json`, `lda_v6_diagnostics_live_reference_v7.json`(라이브 재적합 K=8/M=5/실루엣 0.046), `chart3d_payload_live_reference_v7.json`, `member_mention_index_v7.json`). r22 스냅샷(5,612건)은 `data/v6_r22_snapshot/`으로 옮겨졌고, 이 문서의 노트북·스크립트가 참조하는 `../data/v6_r22_snapshot` 경로는 그대로 동작한다. 본문의 5,612건 기준 병행 분석은 그 시점의 기록으로 유지하며, 최종 수치와의 대응은 `README.md` 1~3절 참고.
+> **2026-09-21 갱신 주** — 이 문서가 "이번 세션에 없다 / 재현 불가"라고 적은 최종 라이브 코퍼스(10,020건)와 최종 산출물이 이제 `data/v7_final/`에 있다(`fandoms_v3_100.json` 10,020건, `fandom_scores_v6.csv`·`fan_persona_v7.json`(동결 스냅샷 7,350건 기준), `language_domain_summary_v7.json`, `lda_v6_diagnostics_live_reference_v7.json`(라이브 재적합 K=8/M=5/실루엣 0.046), `chart3d_payload_live_reference_v7.json`, `member_mention_index_v7.json`). r22 스냅샷(5,612건)은 `data/v6_r22_snapshot/`으로 옮겨졌고, 이 문서의 노트북·스크립트가 참조하는 `../data/v6_r22_snapshot` 경로는 그대로 동작한다. 본문의 5,612건 기준 병행 분석은 그 시점의 기록으로 유지하며, 최종 수치와의 대응은 `README.md` 1∼3절 참고.
 > 이 문서 관련: 최종 14개 언어 분류 총계는 `data/v7_final/language_domain_summary_v7.json`. 스크립트 `build_multilingual_bullet_language_classifier.py`의 `BASE` 경로는 이 저장소의 폴더 깊이(1단)에 맞춰 수정했다.
 
 
@@ -20,7 +20,7 @@
 `docs/LDA_V6_V7_TECHNICAL_SPECIFICATION.md`의 "v6.4 수정 고지"가 이 리서치를 상세히
 서술한다. 사용자가 "국문·영문·중국어·일어·스페인어·프랑스어의 현지 웹사이트 크롤링을
 통해 근거데이터를 추가로 확보"를 요청했고, 이에 **10개 리서치 에이전트를 언어별·팬덤
-배치(A1~A5, B1~B5, 각 10개 팬덤)로 나눠 병렬 실행**해 중국어(sina.com.cn·weibo.com·
+배치(A1∼A5, B1∼B5, 각 10개 팬덤)로 나눠 병렬 실행**해 중국어(sina.com.cn·weibo.com·
 163.com 등)·일본어(oricon.co.jp·natalie.mu·barks.jp 등)·스페인어(infobae.com·
 elpais.com 등)·프랑스어(lemonde.fr·lefigaro.fr 등) 현지 매체를 재조사했다. 신규 근거
 318건(loyalty 77건+spillover 241건, 70개 팬덤 반영)을 확보했고, 조사 중 발견한 6개

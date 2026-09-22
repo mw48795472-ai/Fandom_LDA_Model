@@ -14,7 +14,7 @@
 
 | 구분 | 파일 | 실행 환경 | 무엇을 만드는가 |
 |---|---|---|---|
-| Node.js 스크립트(저장소 내) | `scripts/reports/build_summary_report_2026_contest.js` | Node.js + `docx`(npm) | 「2026년 문화체육관광 통계 활용대회」 요약보고서 1~2페이지를 `.docx`로 빌드 |
+| Node.js 스크립트(저장소 내) | `scripts/reports/build_summary_report_2026_contest.js` | Node.js + `docx`(npm) | 「2026년 문화체육관광 통계 활용대회」 요약보고서 1∼2페이지를 `.docx`로 빌드 |
 | 브라우저 인라인 JS | `팬덤루트랩_상세명세서.html` (서비스 상세명세서) | — | **JS 없음** — 순수 정적 HTML/CSS (검증 결과, `<script>` 태그 0개) |
 | 브라우저 인라인 JS | `Persona_결정공간.html` (페르소나 결정공간) | 브라우저(외부 라이브러리 없음) | 덴드로그램 + PCA 산점도 + 레이더 상세패널, 전부 순수 SVG DOM 조작으로 직접 구현 |
 | 브라우저 인라인 JS + 번들 라이브러리 | `3D_포지셔닝맵_국내100팬덤.html` + `plotly-bundle.js` | 브라우저 + Plotly.js v3.7.0(로컬 번들, 1.69MB) | 100개 팬덤 3D 산점도(충성도×파급효과×다양성), 구획색/하이라이트/버블크기 토글 + 카메라 프리셋 |
@@ -83,13 +83,13 @@ JS 안에 리터럴로 내장), 서버나 빌드 과정 없이 그냥 열면 동
    재구현한 것.
 2. **PCA 산점도** (`buildLegend()` IIFE + 관련 함수들) — 페르소나 4종을 범례 칩으로 만들어
    클릭 시 `activePersonas` Set을 토글해 `applyFilter()`로 해당 페르소나 점들을 숨김/흐림
-   처리. 축 격자·눈금·F1~F5 loading 화살표(`drawScatterChrome()`)와 100개 팬덤 점(모양은
+   처리. 축 격자·눈금·F1∼F5 loading 화살표(`drawScatterChrome()`)와 100개 팬덤 점(모양은
    페르소나별 원/삼각형/사각형/마름모, `shapePath()`)을 전부 SVG로 그리고, 각 점에
    `mouseenter`/`mousemove`/`mouseleave`/`focus`/`click` 5개 이벤트를 걸어 툴팁 표시
    (`showTooltip`/`positionTooltip`/`hideTooltip`)와 상세패널 갱신, 클릭 시 고정(pin) 토글을
    구현. 검색창(`#search`) 입력에도 `applyFilter()`가 연결되어 이름 검색 시 매칭 안 되는
    점을 흐리게 처리.
-3. **상세 레이더 패널** (`showDetail(f)`) — 선택된 팬덤의 F1~F5 `shares`를 5각 레이더 차트로
+3. **상세 레이더 패널** (`showDetail(f)`) — 선택된 팬덤의 F1∼F5 `shares`를 5각 레이더 차트로
    그리고(격자 4겹 + 100개 팬덤 평균 다각형 + 선택 팬덤 값 다각형을 겹쳐 표시), 옆에 수치
    표(`#d-table`)도 함께 갱신.
 
@@ -107,7 +107,7 @@ JS 안에 리터럴로 내장), 서버나 빌드 과정 없이 그냥 열면 동
 - `const payload = {"rows": [...]}` — 100개 팬덤의 `loyalty`(팬충성도)·`spillover`(파급효과)·
   `diversity`(다양성 Z점수)·`coverage`(Coverage Index)·`quadrant`(4구획)·`activity`(근거문장
   수) 등을 리터럴로 내장.
-- `interp()`/`hexToRgb()` — 팬덤특성분산성(diversity_t, 0~1 정규화값)에 따라 구획별 5단계
+- `interp()`/`hexToRgb()` — 팬덤특성분산성(diversity_t, 0∼1 정규화값)에 따라 구획별 5단계
   팔레트를 선형보간해 마커 색을 정하는 자체 색상 보간 함수(외부 색상 라이브러리 없이 hex를
   RGB로 쪼개 채널별로 보간).
 - `bubbleSize()` — 근거자료 수(activity)를 반지름에 매핑할 때 **면적이 값에 비례**하도록

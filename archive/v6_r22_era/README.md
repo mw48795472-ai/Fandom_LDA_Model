@@ -15,6 +15,6 @@ corpus_growth_history_v6_v7.csv`와 `domestic_regional_pilot_v6.json` 두 파일
 | `fan_impact_ontology/` | K→F→Persona 고도화 전략 문서(5,794건 시점 기준) + r22 재적합 노트북 |
 | `TOKENIZER/` | 다국어 불릿 언어 분류·토큰 빈도·jieba/pythainlp 스펙 문서와 스크립트(r22 코퍼스 기준, `BASE`는 이 폴더) |
 | `TOKENIZER_WORDCLOUD_REPORT/tokenizer_script_routing_pilot.ipynb` | 문자권 라우팅 로직을 r22 코퍼스에 적용한 노트북 (보고서 본문·이미지는 `v7_final_10020/tokenizer_wordcloud_report/`에 유지) |
-| `상세명세서/` | v6~r22 기술 상세명세서(실제 방법론 문서, 5,612건·K=8·M=6 시점) |
+| `상세명세서/` | v6∼r22 기술 상세명세서(실제 방법론 문서, 5,612건·K=8·M=6 시점) |
 
-동일 내용이 두 곳에 있던 파일은 정리 시 삭제했다: r1~r22 병합 로그 사본(→ `data/v7_rounds/`), v6 단계 병합 로그 3개(→ `data/v7_rounds/`).
+동일 내용이 두 곳에 있던 파일은 정리 시 삭제했다: r1∼r22 병합 로그 사본(→ `data/v7_rounds/`), v6 단계 병합 로그 3개(→ `data/v7_rounds/`).

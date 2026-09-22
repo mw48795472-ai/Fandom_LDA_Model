@@ -1,6 +1,6 @@
 # 기술 상세명세서 — 최종 제출본 (동결 스냅샷 7,350건 + 라이브 코퍼스 10,020건)
 
-> `archive/v6_r22_era/상세명세서/LDA_V6_V7_TECHNICAL_SPECIFICATION.md`(v6~r22, 5,612건, K=8/M=6/실루엣 0.154)의 **최종 제출본 기준 새 판**이다.
+> `archive/v6_r22_era/상세명세서/LDA_V6_V7_TECHNICAL_SPECIFICATION.md`(v6∼r22, 5,612건, K=8/M=6/실루엣 0.154)의 **최종 제출본 기준 새 판**이다.
 > r22 명세서는 그 시점의 실제 방법론 기록으로 아카이브에 그대로 두고, 이 문서는 같은 절 구성으로 **최종 수치와 그 근거 파일**만 적는다.
 > 모든 수치는 `verify_v7_final_consistency.py`(96/96)와 `v7_final_10020/analysis/*/*.ipynb`에서 재계산된 값이다. 산식 원문은 `v7_final_10020/docs/METHODOLOGY.md`, `v7_final_10020/index_methodology/`.
 
@@ -11,7 +11,7 @@ Meta Factor / Fan Factor Matrix / Coverage Index / 보조지표 7종 / 실루엣
 
 | 계층 | 코퍼스 | 결정된 것 | 근거 파일(`data/v7_final/`) |
 |---|---|---|---|
-| 해석 계층 | **동결 스냅샷 v7-40, 7,350건** (r39 병합 후) | K=10 → M=5, 실루엣 0.267, F1~F5, 페르소나 4유형, Topic Card | `lda_v6_diagnostics_frozen_v7_40.json`, `fandom_scores_v6.json/.csv`, `fan_persona_v7.json`, `topic_cards_v7.json`, `factor_pathway_map_v7.json`, `persona_decision_space_v7.json` |
+| 해석 계층 | **동결 스냅샷 v7-40, 7,350건** (r39 병합 후) | K=10 → M=5, 실루엣 0.267, F1∼F5, 페르소나 4유형, Topic Card | `lda_v6_diagnostics_frozen_v7_40.json`, `fandom_scores_v6.json/.csv`, `fan_persona_v7.json`, `topic_cards_v7.json`, `factor_pathway_map_v7.json`, `persona_decision_space_v7.json` |
 | 점수 계층 | **라이브 10,020건** (r72) | loyalty/spillover 점수, 4구획, 상관·회귀·강건성, 보조지표 7종 | `fandoms_v3_100.json`, `fandom_scores_live_reference_v7.*`, `chart3d_payload_live_reference_v7.json`, `positioning_map_correlation_live_v7.json`, `chart3d_correlation_live_v7.json`, 지수 JSON 7종 |
 | 라이브 재적합(기각) | 10,020건 (LDA 문서 10,018) | K=8/M=5/실루엣 0.046 — 게이트 미통과 | `lda_v6_diagnostics_live_reference_v7.json`, `lda_excluded_bullets_v7.json`, `lda_k_grid_live_reference_v7.csv` |
 | 과거 시점 | r22 5,612건 | K=8/M=6/0.154 (최종 수치 아님) | `archive/v6_r22_era/data/v6_r22_snapshot/` |
@@ -98,7 +98,7 @@ CoverageIndex = 0.30·언어 + 0.25·시장 + 0.20·출처유형 + 0.15·시간 
 | 언어 | −Σ p ln p / ln(N_lang), 출처 도메인 `language_of()` | 라이브 N=14(ln 14), 동결 N=13(아랍어 전, ln 13), r22 N=10 — 각 파일이 해당 분모로만 100/100 |
 | 시장 | 언급 시장 카테고리 수 / 6 (일본·중화권·미국북미·유럽·동남아·글로벌 키워드) | |
 | 출처유형 | 관측 유형 수 / 3 | |
-| 시간 | 관측 연도 수 / 12 (2015~2026) | |
+| 시간 | 관측 연도 수 / 12 (2015∼2026) | |
 | 개체 | 언급 개체 카테고리 수 / 6 | |
 
 ## 7. 충성도 × 파급효과 점수 (라이브 10,020건) — `v7_final_10020/docs/METHODOLOGY.md` 2-4절
@@ -118,7 +118,7 @@ EvidenceScore = 1.0 + 0.5·n_num + 0.3·bonus_keyword, 팬덤별 합 → min-max
 | 매체 크로스오버 | news_media 고유 도메인 수 / 뉴스 불릿 수 | 6,712건(67.0%), 고유 매체 1,298 | 비율 재계산 100/100 |
 | 국내 지역 | 17개 시/도 키워드 불릿 수, 다양성 = 검출 지역 수/17 | 최종 재산출: 1,226건, 검출 지역 합 469, 커버리지 99/100 (보고서 표 15는 동결 시점: 17/20행 재현) | r22 원본 1,698/1,700셀 재현 |
 | 세계 언어 | `language_counts` 재사용, 해외비중·해외언어다양성 | 14개 언어 합 10,020 | 8개 필드 불일치 0/100 |
-| 멤버 집중도(MCI) | Σ share², 45개 그룹 | 멤버 언급 1,730, MCI 평균 0.261(NCT 0.111~FTISLAND 0.660) | 재계산 불일치 0/45; r(MCI, 멤버 수) −0.728 |
+| 멤버 집중도(MCI) | Σ share², 45개 그룹 | 멤버 언급 1,730, MCI 평균 0.261(NCT 0.111∼FTISLAND 0.660) | 재계산 불일치 0/45; r(MCI, 멤버 수) −0.728 |
 
 ## 9. 전략 문서 대비 구현 매트릭스
 
@@ -152,7 +152,7 @@ EvidenceScore = 1.0 + 0.5·n_num + 0.3·bonus_keyword, 팬덤별 합 → min-max
 | `ad_commercial_index_v7`, `fandom_cohesion_index_v7`, `media_exposure_v7`, `media_crossover_index_v7`, `worldwide_language_pilot_live_reference_v7`, `member_mention_index_v7`, `member_pilot_mci_correlation_v7` | 보조지표 원본 |
 | `v7_final_10020/analysis/domestic_regional_index/domestic_regional_index_v7.json` | 국내 지역 지수 최종 재산출본(원본 라이브 JSON 미보유) |
 | `language_domain_summary_v7.json`, `wordcloud_by_language_v7.json`, `lda_excluded_bullets_v7.json`, `k9_validation_v7.json` | 언어·토크나이저·검증 |
-| `data/v7_rounds/` | 병합 로그 r1~r72, 스왑 로그, 라운드 로그 |
+| `data/v7_rounds/` | 병합 로그 r1∼r72, 스왑 로그, 라운드 로그 |
 
 ## 12. 재현 절차
 

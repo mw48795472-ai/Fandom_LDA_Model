@@ -29,7 +29,7 @@
   단독 메타팩터로 분리됨
 - 페르소나 4유형: 글로벌투어형(F3+F5, n=43) · 현장상업형(F3+F4, n=31) · 원정소비형(F2+F3, n=17) ·
   집단동원형(F1+F3, n=9) — F3(현장경제 경로)가 4유형 전부의 공통 기반 — `fan_persona_v7.json`
-- 팬덤별 F1~F5 비중과 동결 스냅샷 점수: `fandom_scores_v6.csv` / `.json` (activity 합 = 7,350). JSON의 raw 점수·coverage_detail로
+- 팬덤별 F1∼F5 비중과 동결 스냅샷 점수: `fandom_scores_v6.csv` / `.json` (activity 합 = 7,350). JSON의 raw 점수·coverage_detail로
   min-max 정규화·F 다양성·coverage 가중합이 재현되며, 동결 시점 언어 커버리지 분모는 ln(13)(아랍어 추가 전; 라이브는 ln(14)).
   동결 7,350건 언어 분포: ko 4,183 · en 1,751 · ja 333 · id 193 · th 181 · zh 153 · tl 133 · es 121 · pt 87 · ru 72 · vi 71 · tr 68 · fr 4
 - 라이브 코퍼스(10,020건) 재적합은 K=8, M=5, silhouette=0.046으로 게이트 기각 → 해석 계층에 미반영
@@ -53,7 +53,7 @@
   기준([[7,17],[4,72]], 동결은 [[8,17],[4,71]])이며, 포지셔닝 맵의 표본 평균 기준 4구획(24/17/10/49)과는 기준선이
   다르다(평균 기준 표로는 χ²=16.84).
 - 부가 통계(같은 파일): Pearson 95% CI [0.329, 0.629], 회귀선 spillover = 0.1234 + 0.3844·loyalty,
-  loyalty~activity r=0.694, spillover~activity r=0.9019, 이효리 표준화 잔차 +3.59
+  loyalty∼activity r=0.694, spillover∼activity r=0.9019, 이효리 표준화 잔차 +3.59
 
 ## 3D 매트릭스 축 독립성 — 라이브 점수 기준 (재현 확인)
 - 원본 파일 `chart3d_correlation_live_v7.json` (회귀 계수 절편 0.7168 / loyalty -0.073(p=0.10) / spillover 0.3008(p<.001),
@@ -120,8 +120,8 @@
 - 멤버 집중도 지수(MCI): `data/v7_final/member_mention_index_v7.json` — 45개 그룹, 10,020건 코퍼스 기준
   (예: BTS 근거문장 227건 중 멤버명 언급 101건, MCI=0.241). 아카이브 원본명 `member_mention_pilot_v7.json`은 같은 값(키 이름만 다름).
   동결 스냅샷(7,350건) 시점 파일럿(23개 그룹, BTS 170건 중 73건, MCI 0.24)은 `member_mention_pilot_v6.json`
-- MCI ↔ outcome 상관(`member_pilot_mci_correlation_v7.json`, 45개 그룹, MCI는 v7-55 시점 8,981건): 원시 MCI~loyalty
-  r=-0.393(p=0.008, R²=0.155)이 가장 크지만 MCI~멤버 수 r=-0.749로, 멤버 수를 뺀 MCI_excess 기준으로는 어떤 outcome과도
+- MCI ↔ outcome 상관(`member_pilot_mci_correlation_v7.json`, 45개 그룹, MCI는 v7-55 시점 8,981건): 원시 MCI∼loyalty
+  r=-0.393(p=0.008, R²=0.155)이 가장 크지만 MCI∼멤버 수 r=-0.749로, 멤버 수를 뺀 MCI_excess 기준으로는 어떤 outcome과도
   유의하지 않음(최대 R²=0.036). 저장소의 10,020건 MCI로 재계산하면 r=-0.385로 근사 재현
 - K=10 토픽 카드(`topic_cards_v7.json`): 토픽별 상위 키워드·대표 불릿 3건·대표 팬덤 5개·연결 F 경로. 명칭은 METHODOLOGY.md
   2-1 표와 동일

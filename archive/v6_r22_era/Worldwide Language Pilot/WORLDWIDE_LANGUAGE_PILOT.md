@@ -1,6 +1,6 @@
 # Worldwide Language Pilot — 정리 및 실제 데이터 재현
 
-> **2026-09-21 갱신 주** — 이 문서가 "이번 세션에 없다 / 재현 불가"라고 적은 최종 라이브 코퍼스(10,020건)와 최종 산출물이 이제 `data/v7_final/`에 있다(`fandoms_v3_100.json` 10,020건, `fandom_scores_v6.csv`·`fan_persona_v7.json`(동결 스냅샷 7,350건 기준), `language_domain_summary_v7.json`, `lda_v6_diagnostics_live_reference_v7.json`(라이브 재적합 K=8/M=5/실루엣 0.046), `chart3d_payload_live_reference_v7.json`, `member_mention_index_v7.json`). r22 스냅샷(5,612건)은 `data/v6_r22_snapshot/`으로 옮겨졌고, 이 문서의 노트북·스크립트가 참조하는 `../data/v6_r22_snapshot` 경로는 그대로 동작한다. 본문의 5,612건 기준 병행 분석은 그 시점의 기록으로 유지하며, 최종 수치와의 대응은 `README.md` 1~3절 참고.
+> **2026-09-21 갱신 주** — 이 문서가 "이번 세션에 없다 / 재현 불가"라고 적은 최종 라이브 코퍼스(10,020건)와 최종 산출물이 이제 `data/v7_final/`에 있다(`fandoms_v3_100.json` 10,020건, `fandom_scores_v6.csv`·`fan_persona_v7.json`(동결 스냅샷 7,350건 기준), `language_domain_summary_v7.json`, `lda_v6_diagnostics_live_reference_v7.json`(라이브 재적합 K=8/M=5/실루엣 0.046), `chart3d_payload_live_reference_v7.json`, `member_mention_index_v7.json`). r22 스냅샷(5,612건)은 `data/v6_r22_snapshot/`으로 옮겨졌고, 이 문서의 노트북·스크립트가 참조하는 `../data/v6_r22_snapshot` 경로는 그대로 동작한다. 본문의 5,612건 기준 병행 분석은 그 시점의 기록으로 유지하며, 최종 수치와의 대응은 `README.md` 1∼3절 참고.
 > 이 문서 관련: 14개 언어(ko/en/ja/zh/es/fr/th/id/vi/ru/tl/pt/tr/ar)별 근거 건수·도메인 수의 최종값은 `data/v7_final/language_domain_summary_v7.json`에 있다(14개 언어 합 10,020건, 한국어 5,551·영어 2,195·일본어 520·중국어 458 …). 팬덤별 세계 언어 지수 원본은 2026-09-22에 아카이브명 `data/v7_final/worldwide_language_pilot_live_reference_v7.json`으로 추가됐고, `indices_csv/build_worldwide_language_index_csv.py`를 실행해 `worldwide_language_index_v7.csv`(100건, 불일치 0)를 산출했다. 이 문서가 "이번 세션에 존재하지 않는다"고 적은 14개 언어 원본 스크립트 결과가 바로 그 파일이며, BTS 해외 근거 135건(59.5%)·해외언어다양성 0.66이 재현된다.
 
 
@@ -86,7 +86,7 @@ round22 스냅샷은 14개가 아니라 **10개 언어**만 다룹니다(최종 
 
 1. **14개 언어 중 4개(tl/pt/tr/ar)는 round22 데이터에 아예 존재하지
    않습니다.** 최종 v7 리포트가 이 4개 언어를 언제, 어떤 라운드에서
-   추가했는지는 이번 세션에 복구된 라운드 로그(v7 1~22라운드)에 나타나지
+   추가했는지는 이번 세션에 복구된 라운드 로그(v7 1∼22라운드)에 나타나지
    않습니다.
 2. **근거문장수·언어별 언급수의 절대값 자체가 다릅니다** — round22는
    100개 팬덤 5,612건 기준이고, 최종 v7 리포트는 10,020건 기준입니다. 이

@@ -13,6 +13,6 @@
 | `chart3d_payload_v6.json` | 이 시점 3D 매트릭스 payload |
 | `v7_progress.json` | 10배 확대 프로젝트 진행 추적 (라운드별 이력) |
 | `v6_merge_log.json`, `v6_3_market_merge_log.json`, `v6_4_language_merge_log.json` | v6 단계 병합 로그 |
-| `v7_rounds/merge_log_r1.json` ~ `r22.json` | v7 라운드별 병합 로그 (r21→r22 사이 1건, r22 after_total 5,613 vs 실제 5,612의 기록 오차는 상세명세서·실루엣 게이트 문서에 기록됨) |
+| `v7_rounds/merge_log_r1.json` ∼ `r22.json` | v7 라운드별 병합 로그 (r21→r22 사이 1건, r22 after_total 5,613 vs 실제 5,612의 기록 오차는 상세명세서·실루엣 게이트 문서에 기록됨) |
 | `domestic_regional_pilot_v6.json`, `member_mention_pilot_v6.json` | 국내 지역 지수·멤버 집중도 지수 파일럿 |
 | `csv/` | 위 파일들에서 파생한 CSV: `bullets_flat_v6_r22.csv`(5,612행), `lda_k_grid_v6.csv`, `corpus_growth_history_v6_v7.csv`, `domestic_regional_pilot_v6.csv`, `member_concentration_pilot_v6.csv`, `member_mentions_pilot_v6_long.csv` |

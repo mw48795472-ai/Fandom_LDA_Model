@@ -3,7 +3,7 @@
 > **2026-09-21 갱신 주** — 최종 라이브 코퍼스(10,020건)와 최종 산출물이 `data/v7_final/`에 추가되었다. 이 문서의
 > 수치는 두 계층에서 나온다: **해석 계층(2절 K→M→Persona)은 동결 스냅샷 v7-40(7,350건)**, **점수·4구획·강건성
 > 검증·보조지표(2-4절, 3절, 5절, 6절)는 라이브 코퍼스(10,020건)** 기준이다(4절 이원 구조). 어느 수치가 어느
-> 파일에서 재현되는지는 `README.md` 2~3절과 `verify_v7_final_consistency.py`를 참고.
+> 파일에서 재현되는지는 `README.md` 2∼3절과 `verify_v7_final_consistency.py`를 참고.
 
 ## 1. 데이터 수집
 
@@ -24,7 +24,7 @@
 | 계층 | 담는 질문 | 정의 |
 |---|---|---|
 | K (Topic) | 무엇을 하는가 | LDA 토픽 기반 배제 |
-| F (Impact Pathway) | 어디로 전이되는가 | 팬덤 행동이 어떤 파급경로(F1~F5)로 이어지는지, K→M=5 Meta Factor로 재매핑 |
+| F (Impact Pathway) | 어디로 전이되는가 | 팬덤 행동이 어떤 파급경로(F1∼F5)로 이어지는지, K→M=5 Meta Factor로 재매핑 |
 | Persona | 이 팬덤은 어떤 방식으로 작동하는가 | 상위 2개 F 조합으로 정의되는 팬덤 작동 유형(통계적 재군집화가 아닌 사전정의 해석 계층) |
 | Loyalty·Spillover | 얼마나 강한가 | 각 F 경로로 기여하는 강도를 loyalty_score·spillover_score의 F별 분해량으로 산출 |
 
@@ -76,7 +76,7 @@ overlap 매칭으로 자동 결정되며, 두 메타클러스터가 같은 버�
 ### 2-3. Persona (4유형) — F 조합 사전정의 매핑
 
 각 팬덤의 상위 2개 F 경로 조합을 10개 사전정의 조합표(`persona_table_definition`)에 매칭
-(`data/v7_final/fan_persona_v7.json`; 팬덤별 F1~F5 비중은 `data/v7_final/fandom_scores_v6.csv` — 동결 스냅샷
+(`data/v7_final/fan_persona_v7.json`; 팬덤별 F1∼F5 비중은 `data/v7_final/fandom_scores_v6.csv` — 동결 스냅샷
 7,350건 기준, activity 합 = 7,350):
 
 | F 조합 | 페르소나 명 | 실현 여부(100개 팬덤 기준) |
@@ -99,7 +99,7 @@ F1 결속)가 실제 유형을 가른다. 이는 "충성도가 파급효과로 �
 
 ### 2-4. Loyalty × Spillover 2축 4구획
 
-팬덤별 충성도 점수(loyalty_score)와 파급효과 점수(spillover_score)를 각각 표본 내 min-max 정규화(0~1)한 뒤,
+팬덤별 충성도 점수(loyalty_score)와 파급효과 점수(spillover_score)를 각각 표본 내 min-max 정규화(0∼1)한 뒤,
 표본 평균을 기준선으로 4구획을 산출. **이 점수와 4구획은 라이브 코퍼스 10,020건 기준**이다(표본 평균 loyalty
 0.3710 / spillover 0.2661; `data/v7_final/chart3d_payload_live_reference_v7.json`,
 `fandom_scores_live_reference_v7.csv`). 아래 EvidenceScore 산식을 `fandoms_v3_100.json`에 그대로 적용하면 100개
@@ -122,7 +122,7 @@ EvidenceScore(f) = Σ[1.0 + 0.5·n_num(t) + 0.3·n_kx(t)] — 충성도(Loyalty)
 
 - **정규성**: Shapiro-Wilk 검정 → 충성도·파급효과 모두 p<.05로 정규분포 기각 → 순위 기반 검정 병행
 - **상관**: Pearson r=0.493(p<.001, R²=0.243, 설계 기준 |r|<0.5 충족) / Spearman ρ=0.380(p<.001, 방향·유의성 일치)
-- **다중회귀+VIF** (편상관 대체): factor_diversity ~ loyalty_score + spillover_score 등 구조. 활동량(근거
+- **다중회귀+VIF** (편상관 대체): factor_diversity ∼ loyalty_score + spillover_score 등 구조. 활동량(근거
   코퍼스 수) 추가 통제 시 R²=0.243→0.847로 설명력 급증, 충성도 회귀계수가 -0.200(p<.001)으로 부호 반전
   → 트레이드오프 관계 시사. VIF=1.93 (경험적 기준 5 미만, 다중공선성 문제 없음)
 - **4분면 독립성**: 2×2 카이제곱(Yates 보정) χ²=8.3439, dof=1, p=0.003869 → 두 축 독립 가정 기각, 4구획 구조
@@ -149,7 +149,7 @@ EvidenceScore(f) = Σ[1.0 + 0.5·n_num(t) + 0.3·n_kx(t)] — 충성도(Loyalty)
    배정·페르소나 분류)의 고정 기준선으로 삼는다.
 3. **이원 구조**: 라이브 코퍼스는 별도 트랙으로 계속 증량하되, 보조지표(7개 지수) 계산에만 반영하고
    해석 계층에는 반영하지 않는다.
-4. **정직한 한계 기록**: v7-41~v7-65 재적합 라운드가 전부 기각됨(누적 26회 연속, 가장 최근 v7-65 라운드
+4. **정직한 한계 기록**: v7-41∼v7-65 재적합 라운드가 전부 기각됨(누적 26회 연속, 가장 최근 v7-65 라운드
    silhouette=0.141 < 기준 0.267)을 숨기지 않고 그대로 보고서 본문에 명시했다. 최종 라이브 코퍼스 10,020건
    시점의 참고 재적합도 K=8·M=5·silhouette=0.046으로 기각분이며, 그 진단값(K-grid 포함)은
    `data/v7_final/lda_v6_diagnostics_live_reference_v7.json`에, 같은 값이 3D 포지셔닝맵 payload에도 들어 있다.
@@ -163,7 +163,7 @@ LDA 기반 3축(파급효과·팬충성도·팬요인 다양성) 구조를 보�
 |---|---|---|
 | 광고·상업성 지수 (Ad/Commercial Index) | 팬덤 근거문장에서 광고 계약·모델·협찬 등 상업적 문장 비중과 20개 업종별 구성 | 1단계: 24개 광고신호 키워드로 판정 → 2단계: 업종사전+대화로 상세분류(KT 업종 구분 기준) |
 | 미디어·콘텐츠 노출 지수 (Media/Content Exposure Index) | 예능·유튜브·영화·드라마 등 미디어 콘텐츠에 노출된 정도 | 원문에서 예능/유튜브/영화/드라마 4종 서브태그 키워드 직접 매칭 |
-| 팬덤결속 지수 (Fandom Cohesion Index) | 팬덤의 조직적 결속력을 5개 활동 유형(A~E)으로 나누는 지표 | A 공식팬클럽·회원제 / B 팬카페·온라인커뮤니티 / C 팬덤정체성·문화 / D 기부·후원캠페인 / E 오프라인결집·이벤트 |
+| 팬덤결속 지수 (Fandom Cohesion Index) | 팬덤의 조직적 결속력을 5개 활동 유형(A∼E)으로 나누는 지표 | A 공식팬클럽·회원제 / B 팬카페·온라인커뮤니티 / C 팬덤정체성·문화 / D 기부·후원캠페인 / E 오프라인결집·이벤트 |
 | 매체 크로스오버 지수 (Media Crossover Index) | 팬덤을 다룬 서로 다른 언론매체(도메인) 수로 측정하는 대리(proxy) 지표 | 근거문장 출처 URL을 도메인화해 news_media로 분류한 매체 대상으로 상이 도메인 수 집계 |
 | 국내 지역 지수 (Domestic Regional Index) | 팬덤의 국내(17개 시/도) 지역 밀착도를 측정하는 지표 | 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 횟수 기반, 고향/연고와 투어/행사를 구분하지 않고 합산 |
 | 세계 언어 지수 (Worldwide Language Index) | 팬덤 글로벌 확산 정도를 출처 매체 언어 축으로 측정하는 지표 | 근거문장 출처 매체 언어(language_of()) 기준 집계. ko를 분리해 해외 확산 비중(foreign_ratio)·다양성(foreign_diversity) 별도 산출 |
@@ -175,7 +175,7 @@ Coverage Index(가중 합성지표) = 0.30·Lang + 0.25·Mkt + 0.20·Src + 0.15�
 ## 6. 3D 매트릭스(Loyalty × Spillover × Factor Diversity) 축 독립성 검증
 
 3D 포지셔닝 맵 아티팩트 풋노트의 "세 축은 독립적"이라는 주장을 검증하기 위해 다중회귀 분석
-(factor_diversity ~ loyalty_score + spillover_score)을 별도 수행:
+(factor_diversity ∼ loyalty_score + spillover_score)을 별도 수행:
 
 - Loyalty-Diversity 상관: r=0.099 (p=0.327, 독립적/유의하지 않음)
 - Spillover-Diversity 상관: r=0.461 (p<.001, 유의한 상관 — 완전 독립은 아님)
