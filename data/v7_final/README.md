@@ -32,6 +32,9 @@
 | `topic_cards_v7.json` | 동결 스냅샷 7,350건 | K=10 토픽 카드: 명칭(METHODOLOGY.md 2-1 표와 동일)·상위 10개 키워드·대표 불릿 3건·대표 팬덤 5개·연결 F 경로 |
 | `fandom_scores_v6.csv` | 동결 스냅샷 7,350건 | 팬덤별 loyalty/spillover/coverage/factor_diversity/dominant_factor/activity + F1~F5 비중(컬럼: 현장경제형=F3, 소비력형=F2, 미디어노출형=F4, 차트·확산형=F5, 결속형=F1). activity 합 = 7,350. 파일명의 v6은 파이프라인 버전 |
 | `lda_v6_diagnostics_frozen_v7_40.json` | 동결 스냅샷 7,350건 | 동결 진단 원본(업로드 파일명 `lda_v6_diagnostics.json`): K-grid, selected_k=10, M=5, 실루엣 0.267, 토픽 상위어(=topic_cards), 토픽→F 배정 |
+| `fandom_scores_v6.json` | 동결 스냅샷 7,350건 | 위 CSV의 JSON 원본: loyalty_raw/spillover_raw, 불릿 수, factor_share(M=5), coverage_detail(13개 언어 카운트 — 아랍어 추가 전, 언어 엔트로피 분모 ln(13)). r22판(5,612건, M=6)은 `data/v6_r22_snapshot/`에 별도 |
+| `supplementary_csv/fandom_bullet_share_v6.csv` | v7 r17 (5,454건) | 팬덤별 근거문장 수·비중 (창모·사이먼도미닉·헤이즈 포함 구 로스터) |
+| `supplementary_csv/domestic_regional_pilot_v6_top3.csv` | v7 r24 (5,998건) | 팬덤별 지역 언급·검출 지역 수·다양성·대표지역 top3 요약 (지역 값은 r22 파일럿과 99/100 동일) |
 | `fan_persona_v7.json` | 동결 스냅샷 7,350건 | 페르소나 조합표(10개)·카운트(43/31/17/9)·팬덤별 top2 F·factor_specific_loyalty/spillover(= 비중 × 점수) |
 | `persona_decision_space_v7.json` | 동결 스냅샷 7,350건 | Persona_결정공간.html 내장 데이터: K=10 토픽명·F코드·덴드로그램 병합 순서·PCA loading/좌표·팬덤별 F1~F5 비중 (`data_export/extract_html_payloads.py`) |
 

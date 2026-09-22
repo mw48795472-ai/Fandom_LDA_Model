@@ -1,7 +1,7 @@
 # 지표 산정 방법 (Ⅲ장) — 정리 및 실제 데이터 검증
 
 > **2026-09-21 갱신 주** — 이 문서가 "이번 세션에 없다 / 재현 불가"라고 적은 최종 라이브 코퍼스(10,020건)와 최종 산출물이 이제 `data/v7_final/`에 있다(`fandoms_v3_100.json` 10,020건, `fandom_scores_v6.csv`·`fan_persona_v7.json`(동결 스냅샷 7,350건 기준), `language_domain_summary_v7.json`, `lda_v6_diagnostics_live_reference_v7.json`(라이브 재적합 K=8/M=5/실루엣 0.046), `chart3d_payload_live_reference_v7.json`, `member_mention_index_v7.json`). r22 스냅샷(5,612건)은 `data/v6_r22_snapshot/`으로 옮겨졌고, 이 문서의 노트북·스크립트가 참조하는 `../data/v6_r22_snapshot` 경로는 그대로 동작한다. 본문의 5,612건 기준 병행 분석은 그 시점의 기록으로 유지하며, 최종 수치와의 대응은 `README.md` 1~3절 참고.
-> 이 문서 관련: 식(1)~(2) EvidenceScore·min-max 정규화를 최종 라이브 코퍼스 10,020건에 적용하면 3D 포지셔닝맵의 100개 팬덤 loyalty/spillover 점수가 전부 재현된다(`verify_v7_final_consistency.py` [C]). 언어 엔트로피의 `ln(14)` 분모가 가리키는 14개 언어 최종 분포는 `language_domain_summary_v7.json`. `verify_index_calculation_formulas.py`의 데이터 경로는 `data/v6_r22_snapshot/fandom_scores_v6.json`(r22, M=6)으로 정리했다.
+> 이 문서 관련: 식(1)~(2) EvidenceScore·min-max 정규화를 최종 라이브 코퍼스 10,020건에 적용하면 3D 포지셔닝맵의 100개 팬덤 loyalty/spillover 점수가 전부 재현된다(`verify_v7_final_consistency.py` [C]). 언어 엔트로피의 `ln(14)` 분모가 가리키는 14개 언어 최종 분포는 `language_domain_summary_v7.json`. `verify_index_calculation_formulas.py`의 데이터 경로는 `data/v6_r22_snapshot/fandom_scores_v6.json`(r22, M=6)으로 정리했다. 추가로 이 문서가 다룬 "ln(14) 정규화 분모" 문제는 세 시점 파일로 실측됐다: r22(10개 언어)·동결 v7-40 `data/v7_final/fandom_scores_v6.json`(13개 언어, 분모 ln(13), 아랍어 추가 전)·최종 라이브 `fandom_scores_live_reference_v7.json`(14개 언어, 분모 ln(14)). 각 파일의 language_coverage가 해당 분모로만 100/100 재현된다(`verify_v7_final_consistency.py` [V]·[Z]).
 
 
 ## 이 문서가 다루는 것

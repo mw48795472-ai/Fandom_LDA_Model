@@ -550,6 +550,48 @@ check("5개 라벨 → F 코드 = 검증 스크립트의 LAB2F 표(결속 F1·�
       {k: v["f_code"] for k, v in fpm["mapping"].items()} == LAB2F and fpm["qa"]["n_mapped_topics"] == 10 and fpm["qa"]["unmapped_topic_ratio"] == 0.0)
 
 # ---------------------------------------------------------------------------
+# [Z] 2026-09-22 6차 추가: 동결 스냅샷 점수 JSON · 보조 CSV 2종
+# ---------------------------------------------------------------------------
+print("\n[Z] fandom_scores_v6.json (동결 스냅샷 v7-40 점수 원본 JSON — 같은 이름 CSV의 원본)")
+with open(D / "fandom_scores_v6.json", encoding="utf-8") as f:
+    fzj = json.load(f)
+fz_row = {r["fandom"]: r for r in frozen}
+check("100개 팬덤, activity 합 7,350, 점수·F 비중 5개·coverage·dominant = fandom_scores_v6.csv (100/100)",
+      len(fzj) == 100 and sum(r["activity"] for r in fzj) == 7350 and all(
+          abs(r["loyalty_score"] - float(fz_row[r["fandom"]]["loyalty_score"])) < 1e-9 and abs(r["coverage_index"] - float(fz_row[r["fandom"]]["coverage_index"])) < 1e-9
+          and all(abs(r["factor_share"][c] - float(fz_row[r["fandom"]][c])) < 1e-9 for c in F_COLS.values()) and r["dominant_factor"] == fz_row[r["fandom"]]["dominant_factor"] for r in fzj))
+Lr = [r["loyalty_raw"] for r in fzj]; Sr = [r["spillover_raw"] for r in fzj]
+check("loyalty/spillover_score = raw 점수의 min-max 정규화 (식 2), factor_diversity = 정규화 엔트로피 ln(5), coverage = 5요소 가중합",
+      all(abs(round((r["loyalty_raw"] - min(Lr)) / (max(Lr) - min(Lr)), 3) - r["loyalty_score"]) < 0.002 and abs(round((r["spillover_raw"] - min(Sr)) / (max(Sr) - min(Sr)), 3) - r["spillover_score"]) < 0.002
+          and abs(-sum(p * math.log(p) for p in r["factor_share"].values() if p > 0) / math.log(5) - r["factor_diversity"]) < 0.0011
+          and abs(round(sum(Wc[k] * r["coverage_detail"][k + "_coverage"] for k in Wc), 3) - r["coverage_index"]) < 0.0015 for r in fzj))
+def _lang_ent_n(lc, n):
+    tot = sum(lc.values()); return -sum(c / tot * math.log(c / tot) for c in lc.values() if c > 0) / math.log(n)
+n13 = sum(1 for r in fzj if abs(_lang_ent_n(r["coverage_detail"]["language_counts"], 13) - r["coverage_detail"]["language_coverage"]) < 0.0015)
+n14 = sum(1 for r in fzj if abs(_lang_ent_n(r["coverage_detail"]["language_counts"], 14) - r["coverage_detail"]["language_coverage"]) < 0.0015)
+check("동결 스냅샷의 언어 커버리지 분모는 ln(13) (아랍어 추가 전 13개 언어; 라이브 10,020건은 ln(14))", n13 == 100, f"ln(13) 일치 {n13}/100, ln(14) 일치 {n14}/100")
+fz_lang = Counter()
+for r in fzj:
+    fz_lang.update(r["coverage_detail"]["language_counts"])
+info("동결 스냅샷 7,350건 언어 분포", f"{dict(fz_lang)} (합 {sum(fz_lang.values())}, 아랍어 없음)")
+
+print("\n[AA] supplementary_csv/ (아카이브 보조 CSV)")
+with open(D / "supplementary_csv" / "fandom_bullet_share_v6.csv", encoding="utf-8-sig") as f:
+    bsh = list(csv.DictReader(f))
+bs_tot = sum(int(r["근거 문장 수"]) for r in bsh)
+check("fandom_bullet_share_v6.csv: 100개 팬덤, 합 5,454건 = 타임라인 r17, 비중(%) = 건수/합", len(bsh) == 100 and bs_tot == 5454
+      and any(r["라운드"] == "r17" and r["코퍼스(불릿수)"] == "5454" for r in real_rows) and all(abs(int(r["근거 문장 수"]) / bs_tot * 100 - float(r["비중(%)"])) < 0.006 for r in bsh),
+      f"합 {bs_tot}, 로스터에 창모·사이먼도미닉·헤이즈 포함(r22 이전 로스터)")
+with open(D / "supplementary_csv" / "domestic_regional_pilot_v6_top3.csv", encoding="utf-8-sig") as f:
+    top3 = list(csv.DictReader(f))
+with open(BASE / "data" / "v6_r22_snapshot" / "domestic_regional_pilot_v6.json", encoding="utf-8") as f:
+    pj = json.load(f)
+t3_sum = sum(int(r["근거 문장 수"]) for r in top3)
+t3_match = sum(1 for r in top3 if int(r["총 지역언급"]) == pj[r["팬덤"]]["total_region_mentions"] and int(r["검출 지역 수"]) == pj[r["팬덤"]]["n_regions_hit"] and abs(float(r["요인 다양성"]) - pj[r["팬덤"]]["region_diversity"]) < 1e-6)
+check("domestic_regional_pilot_v6_top3.csv: 100개 팬덤, 근거문장수 합 5,998 = 타임라인 r24; 지역언급·검출지역수·다양성이 r22 파일럿 JSON과 99/100 일치(송가인만 갱신)",
+      len(top3) == 100 and t3_sum == 5998 and t3_match == 99, f"합 {t3_sum}, r22 파일럿 일치 {t3_match}/100")
+
+# ---------------------------------------------------------------------------
 n_ok = sum(1 for _, ok in results if ok); n_all = len(results)
 print(f"\n=== 결과: {n_ok}/{n_all} 항목 일치 ({n_all - n_ok}건 불일치) ===")
 sys.exit(0 if n_ok == n_all else 1)
