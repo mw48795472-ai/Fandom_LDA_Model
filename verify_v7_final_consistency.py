@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-최종 제출본 수치(docs: KEY_FINDINGS.md / METHODOLOGY.md, 분석보고서 PDF) ↔ 저장소 데이터 파일 정합성 검증.
+최종 제출본 수치(docs: v7_final_10020/docs/KEY_FINDINGS.md / v7_final_10020/docs/METHODOLOGY.md, 분석보고서 PDF) ↔ 저장소 데이터 파일 정합성 검증.
 
 이 프로젝트의 다른 검증 스크립트와 같은 원칙("결과를 눈으로 믿지 않고 프로그램이 재대조")으로,
 data/v7_final/ 에 있는 최종 파일들에서 보고서 수치를 실제로 재계산해 비교하고, 재현되는 것과
@@ -9,14 +9,14 @@ data/v7_final/ 에 있는 최종 파일들에서 보고서 수치를 실제로 �
 검증 대상 (전부 저장소 안의 파일만 사용):
   [A] 라이브 코퍼스 fandoms_v3_100.json(10,020건) 자체 규모 — 팬덤 100개, 불릿 10,020건
   [B] 언어·도메인 요약 language_domain_summary_v7.json — 14개 언어, 불릿 합 10,020, 도메인 수
-  [C] 충성도·파급효과 점수 — METHODOLOGY.md 2-4절 EvidenceScore 산식을 10,020건 코퍼스에 그대로 적용해
+  [C] 충성도·파급효과 점수 — v7_final_10020/docs/METHODOLOGY.md 2-4절 EvidenceScore 산식을 10,020건 코퍼스에 그대로 적용해
       3D 포지셔닝맵 HTML 내장 payload(chart3d_payload_live_reference_v7.json)의 100개 팬덤 점수·표본
       평균(0.3710/0.2661)·4구획(24/17/10/49)이 재현되는지
-  [D] 강건성 통계(KEY_FINDINGS.md "상관/회귀", "3D 매트릭스 축 독립성", "영향점/강건성") — 라이브 점수 기준
+  [D] 강건성 통계(v7_final_10020/docs/KEY_FINDINGS.md "상관/회귀", "3D 매트릭스 축 독립성", "영향점/강건성") — 라이브 점수 기준
   [E] 동결 스냅샷(v7-40, 7,350건) 산출물 fandom_scores_v6.csv / fan_persona_v7.json — activity 합 7,350,
       페르소나 4유형 카운트(43/31/17/9)와 상위 2개 F코드 규칙, factor_specific_* = share × score
   [F] 라이브 참고 재적합 진단 lda_v6_diagnostics_live_reference_v7.json — K=8, M=5, 실루엣 0.046 (게이트 기각)
-  [G] Persona_결정공간.html 내장 데이터 — K=10/M=5/0.267, 토픽→F코드 배정이 METHODOLOGY.md 표와 일치하는지
+  [G] Persona_결정공간.html 내장 데이터 — K=10/M=5/0.267, 토픽→F코드 배정이 v7_final_10020/docs/METHODOLOGY.md 표와 일치하는지
 
 실행: python verify_v7_final_consistency.py   (scipy, statsmodels 필요)
 """
@@ -87,7 +87,7 @@ info("14개 언어권 도메인 수 단순 합", f"{dom_sum:,}개 (언어권 간
 info("코퍼스 URL 호스트(www. 제거) 고유 개수", f"{len(hosts):,}개")
 
 # ---------------------------------------------------------------------------
-# [C] 충성도·파급효과 점수 재현 (METHODOLOGY.md 2-4절 산식 그대로)
+# [C] 충성도·파급효과 점수 재현 (v7_final_10020/docs/METHODOLOGY.md 2-4절 산식 그대로)
 # ---------------------------------------------------------------------------
 print("\n[C] EvidenceScore 산식으로 라이브 점수 재현 (chart3d payload 대조)")
 NUM_PATTERN = re.compile(r"\d+[\.,]?\d*\s*(만|억|조|%|명|장|위|회|건|주|배|년)")
@@ -138,7 +138,7 @@ check("하이라이트 3사례 라이브 점수: BTS 0.972/1.000, 임영웅 0.95
 # ---------------------------------------------------------------------------
 # [D] 강건성 통계
 # ---------------------------------------------------------------------------
-print("\n[D] 강건성 통계 (KEY_FINDINGS.md) — 라이브 점수 기준")
+print("\n[D] 강건성 통계 (v7_final_10020/docs/KEY_FINDINGS.md) — 라이브 점수 기준")
 try:
     from scipy import stats
     import statsmodels.api as sm
@@ -280,7 +280,7 @@ with open(D / "persona_decision_space_v7.json", encoding="utf-8") as f:
 check("K=10, M=5, silhouette=0.267", pds["dendro"]["K"] == 10 and pds["dendro"]["M"] == 5 and pds["dendro"]["silhouette"] == 0.267)
 METHOD_TABLE = {"K0": "F5", "K1": "F3", "K2": "F4", "K3": "F5", "K4": "F2", "K5": "F1", "K6": "F3", "K7": "F3", "K8": "F2", "K9": "F4"}
 html_map = dict(zip(pds["dendro"]["topic_ids"], pds["dendro"]["topic_f_codes"]))
-check("토픽→F코드 배정 = METHODOLOGY.md 2-1 표 (K0 F5, K1 F3, K2 F4, K3 F5, K4 F2, K5 F1, K6 F3, K7 F3, K8 F2, K9 F4)",
+check("토픽→F코드 배정 = v7_final_10020/docs/METHODOLOGY.md 2-1 표 (K0 F5, K1 F3, K2 F4, K3 F5, K4 F2, K5 F1, K6 F3, K7 F3, K8 F2, K9 F4)",
       html_map == METHOD_TABLE, f"{html_map}")
 check("PCA 팬덤 100개 · 페르소나 카운트 43/31/17/9", len(pds["pca"]["fandoms"]) == 100 and pds["pca"]["persona_counts"] == dict(pc))
 share_mism = 0
@@ -291,11 +291,11 @@ for r in frozen:
         if abs(x["shares"][fc] - float(r[col])) > 1e-9:
             share_mism += 1
 check("HTML 내장 F1~F5 비중 = fandom_scores_v6.csv 비중 (불일치 0)", share_mism == 0, f"{share_mism}")
-info("K=10 토픽 명칭은 METHODOLOGY.md 표와 상위 4개 키워드가 일부 다름(같은 동결 스냅샷의 재적합 산출물, F코드 배정은 동일)",
+info("K=10 토픽 명칭은 v7_final_10020/docs/METHODOLOGY.md 표와 상위 4개 키워드가 일부 다름(같은 동결 스냅샷의 재적합 산출물, F코드 배정은 동일)",
      " / ".join(f"{i} {n}" for i, n in zip(pds["dendro"]["topic_ids"], pds["dendro"]["topic_names"])))
 
 # ---------------------------------------------------------------------------
-# [H] topic_cards_v7.json (동결 스냅샷 K=10 토픽 카드 — METHODOLOGY.md 2-1 표의 출처)
+# [H] topic_cards_v7.json (동결 스냅샷 K=10 토픽 카드 — v7_final_10020/docs/METHODOLOGY.md 2-1 표의 출처)
 # ---------------------------------------------------------------------------
 print("\n[H] topic_cards_v7.json (동결 스냅샷 K=10 토픽 카드)")
 with open(D / "topic_cards_v7.json", encoding="utf-8") as f:
@@ -305,8 +305,8 @@ METHOD_NAMES = {"K0": "음원차트기록형(기록·1위·차트·최초)", "K1
                 "K4": "글로벌음반판매형(million·album·copies·chart)", "K5": "팬클럽공식기부형(공식·팬클럽·기부·콘텐츠)",
                 "K6": "단독콘서트월드투어형(콘서트·투어·단독·월드투어)", "K7": "브랜드앰버서더형(브랜드·광고·앰버서더·매진)",
                 "K8": "월드투어매진형(tour·concert·sold·world)", "K9": "영화드라마출연형(드라마·ost·영화·출연)"}
-check("토픽 10개, 명칭 = METHODOLOGY.md 2-1 표와 완전 일치", len(cards) == 10 and all(c["topic_name"] == METHOD_NAMES[c["topic_id"]] for c in cards))
-check("토픽→F 경로 = METHODOLOGY.md 표", all(c["connected_f_pathway"].split()[0] == METHOD_TABLE[c["topic_id"]] for c in cards))
+check("토픽 10개, 명칭 = v7_final_10020/docs/METHODOLOGY.md 2-1 표와 완전 일치", len(cards) == 10 and all(c["topic_name"] == METHOD_NAMES[c["topic_id"]] for c in cards))
+check("토픽→F 경로 = v7_final_10020/docs/METHODOLOGY.md 표", all(c["connected_f_pathway"].split()[0] == METHOD_TABLE[c["topic_id"]] for c in cards))
 k5 = next(c for c in cards if c["topic_id"] == "K5")
 fz_row = {r["fandom"]: r for r in frozen}
 check("K5(=F1 단독 토픽) 대표 팬덤 avg_topic_weight = 동결 CSV 결속형 비중 (박서진 0.2653 · 임영웅 0.2017 …)",
@@ -429,7 +429,7 @@ check("selected_k=10, M=5, silhouette=0.267, composite_rank_sum 최솟값 = K=10
 check("topics_top_words 10개 = topic_cards_v7.json top_keywords (10/10 동일)", all(fdg["topics_top_words"][str(i)] == cards[i]["top_keywords"] for i in range(10)))
 LAB2F = {"결속형(팬클럽·기부·커뮤니티)": "F1", "소비력형(초동·판매·앨범)": "F2", "현장경제형(콘서트·투어·매진)": "F3", "미디어노출형(방송·조회수)": "F4", "차트·확산형(1위·빌보드·기록)": "F5"}
 fmap = {f"K{k}": LAB2F[fdg["factor_labels"][str(v)]] for k, v in fdg["topic_to_factor"].items()}
-check("topic_to_factor + factor_labels → METHODOLOGY.md 2-1 표의 F코드 배정과 일치", fmap == METHOD_TABLE, f"{fmap}")
+check("topic_to_factor + factor_labels → v7_final_10020/docs/METHODOLOGY.md 2-1 표의 F코드 배정과 일치", fmap == METHOD_TABLE, f"{fmap}")
 
 print("\n[P] media_crossover_index_v7.json (매체 크로스오버 지수, 라이브 10,020건)")
 with open(D / "media_crossover_index_v7.json", encoding="utf-8") as f:
@@ -624,12 +624,12 @@ check("로스터 교체 로그 6건 = 동결→라이브 로스터 차이 (한�
 check("교체된 팬덤 6개는 최종 코퍼스에 없고, 추가된 6개는 있음", not (set(swaps) & set(corpus_cnt)) and set(swaps.values()) <= set(corpus_cnt))
 sa = json.load(open(RD / "schema_audit_r74.json", encoding="utf-8"))
 check("schema_audit_r74: 10,020건 스캔, 팬덤 100, LDA 3토큰 미만 제외 2건(= lda_excluded_bullets_v7.json)", sa["total_bullets_scanned"] == 10020 and sa["n_fandoms"] == 100 and sa["lda_sub_3_token_excluded_bullets"] == 2)
-info("성장 이력 전체 CSV", "data_export/build_corpus_growth_history_csv.py -> data/v7_final/corpus_growth_history_v6_v7_full.csv (v6 1차 ~ v7 r72)")
+info("성장 이력 전체 CSV", "v7_final_10020/data_export/build_corpus_growth_history_csv.py -> data/v7_final/corpus_growth_history_v6_v7_full.csv (v6 1차 ~ v7 r72)")
 
 # ---------------------------------------------------------------------------
-# [AC] v7_final_analysis/ — 국내 지역 지수 최종 재산출본 (2026-09-22, r22 규칙을 10,020건에 재적용)
-print("\n[AC] v7_final_analysis/domestic_regional_index — 최종 10,020건 재산출본")
-_dr_path = BASE / "v7_final_analysis" / "domestic_regional_index" / "domestic_regional_index_v7.json"
+# [AC] v7_final_10020/analysis/ — 국내 지역 지수 최종 재산출본 (2026-09-22, r22 규칙을 10,020건에 재적용)
+print("\n[AC] v7_final_10020/analysis/domestic_regional_index — 최종 10,020건 재산출본")
+_dr_path = BASE / "v7_final_10020" / "analysis" / "domestic_regional_index" / "domestic_regional_index_v7.json"
 if _dr_path.exists():
     dr = json.load(open(_dr_path, encoding="utf-8"))
     _regions = ["서울", "부산", "대구", "인천", "광주", "대전", "울산", "세종", "경기", "강원", "충북", "충남", "전북", "전남", "경북", "경남", "제주"]
@@ -647,7 +647,7 @@ if _dr_path.exists():
     check("커버리지 99/100 (0건: 투어스(TWS)), 검출 지역 합 469, 지역 언급 총계 1,226",
           sum(1 for v in dr.values() if v["n_regions_hit"] == 0) == 1 and dr["투어스(TWS)"]["n_regions_hit"] == 0 and sum(v["n_regions_hit"] for v in dr.values()) == 469 and sum(v["total_region_mentions"] for v in dr.values()) == 1226)
 else:
-    info("v7_final_analysis/domestic_regional_index/domestic_regional_index_v7.json 없음", "python v7_final_analysis/build_notebooks_v7.py domestic 으로 생성")
+    info("v7_final_10020/analysis/domestic_regional_index/domestic_regional_index_v7.json 없음", "python v7_final_10020/analysis/build_notebooks_v7.py domestic 으로 생성")
 
 # ---------------------------------------------------------------------------
 n_ok = sum(1 for _, ok in results if ok); n_all = len(results)

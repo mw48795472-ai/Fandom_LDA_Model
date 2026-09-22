@@ -14,4 +14,4 @@
 
 검증(`verify_v7_final_consistency.py` [AB]): 병합 로그의 after_total이 실루엣 타임라인 CSV의 같은 라운드 코퍼스와 56건 전부
 일치. 체인 불연속은 로그 자체 기록대로 4곳(r21→r22 +1, r22→r23 -1, r39→r41 사이 7,350→7,513, r59→r62 사이 9,042→9,440)이며
-`data_export/build_corpus_growth_history_csv.py`가 만드는 `data/v7_final/corpus_growth_history_v6_v7_full.csv`의 `chain_gap` 컬럼에 그대로 적혀 있다.
+`v7_final_10020/data_export/build_corpus_growth_history_csv.py`가 만드는 `data/v7_final/corpus_growth_history_v6_v7_full.csv`의 `chain_gap` 컬럼에 그대로 적혀 있다.
