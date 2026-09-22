@@ -78,11 +78,15 @@ flowchart LR
 
 영향점(Cook's D) 상위: BTS 0.575 · god 0.284 · 이효리 0.254 · TWICE 0.232 · BLACKPINK 0.094. 이효리는 충성도 0.006에 파급효과 0.654로 표준화 잔차 +3.59의 극단 사례다.
 
-| 2D 포지셔닝 맵 (0.5 기준 4구획) | Q-Q Plot |
-|---|---|
-| ![2D](assets/readme/fig03_2d_positioning_map.png) | ![QQ](assets/readme/fig04_qq_plot.png) |
+![2D 포지셔닝 맵](assets/readme/fig03_2d_positioning_map.png)
 
-*그림 3·4. 왼쪽은 규칙 기반 4구획(핵심전략·내부결속·외부견인·주변부), 오른쪽은 충성도·활동량·파급효과가 우측 꼬리에서 정규선을 벗어나는 모습. 통계량 전부는 `Statistics/R_통계검증/`(R)과 `Statistics/verify_r_sections_python.py`로 238/238 재현.*
+![4구획 카드](assets/readme/fig03b_quadrant_cards.png)
+
+*그림 3. 팬충성도 × 파급효과 2D 포지셔닝 맵(제출 보고서 2-6절). 표본 평균(충성도 0.371 · 파급효과 0.266)을 기준선으로 핵심전략형 24 · 내부결속형 17 · 외부견인형 10 · 주변부 49로 나뉘며, 버블 크기는 근거문장 수다. 3절 표의 χ²는 이와 별도로 0.5 기준 2×2표([[7,17],[4,72]])로 계산한 값이다.*
+
+![Q-Q Plot](assets/readme/fig04_qq_plot.png)
+
+*그림 4. 충성도·활동량·파급효과의 Q-Q plot — 세 변수 모두 우측 꼬리에서 정규선을 벗어난다(Shapiro-Wilk p<.05). 통계량 전부는 `Statistics/R_통계검증/`(R)과 `Statistics/verify_r_sections_python.py`로 238/238 재현.*
 
 ---
 
@@ -121,7 +125,9 @@ flowchart LR
 |---|---|
 | ![Persona map](assets/readme/fig05_persona_map.png) | ![Factor-specific](assets/readme/fig06_factor_specific_impact.png) |
 
-![Persona 군집화 세부 구조](assets/readme/fig07_persona_cluster_structure.png)
+| K→M 군집화 덴드로그램 | PCA 투영 (페르소나 결정공간) |
+|---|---|
+| ![dendrogram](assets/readme/fig07a_persona_dendrogram.png) | ![pca](assets/readme/fig07b_persona_pca.png) |
 
 *그림 5∼7. 왼쪽 덴드로그램은 토픽 φ분포의 코사인 거리로 K=10을 M=5로 묶는 과정(실루엣 최대 M 자동 선택), 오른쪽 PCA는 페르소나를 결정하는 F1∼F5 비중 공간(PC1 40.8%, PC2 30.8%). 재현 노트북: `v7_final_10020/analysis/persona_decision_space/` (K→F 10/10, 페르소나 100/100, PCA 좌표 차이 5e-6).*
 
@@ -218,7 +224,7 @@ README.md                                   이 문서 (핵심 요약판)
 (분석보고서)…최종.pdf, (요약보고서)…최종.pdf  제출본
 3D_포지셔닝맵_국내100팬덤.html + plotly-bundle.js / Persona_결정공간.html   인터랙티브 산출물 (같은 폴더에서 열면 동작)
 qr_codes/                                   두 HTML의 QR 코드 + 아티팩트 링크·해시 대조
-assets/readme/                              이 문서의 그림 15장 (요약보고서 원본 그림)
+assets/readme/                              이 문서의 그림 18장 (제출 보고서 PDF·핵심 요약판 docx 원본 그림, 가로 최대 2,400px)
 verify_v7_final_consistency.py              최종 수치 ↔ 파일 정합성 검증 (101/101)
 run_lda_v6.py                               LDA 파이프라인 참고 구현 (--data/--out)
 data/
