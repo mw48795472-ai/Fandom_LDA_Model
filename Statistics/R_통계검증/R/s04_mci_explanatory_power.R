@@ -7,8 +7,8 @@
 #   data/fandom_scores_v6.json         — outcome 4종 (v7-40 동결 스냅샷)
 #
 # 정답지가 두 개이고 서로 다르다
-#   (A) 보고서 7.4절 본문 표 — v7 55 시점 계산값
-#   (B) data/member_pilot_mci_correlation_v7.json — 아카이브 산출물
+#   (A) 보고서 7.4절 본문 표 — 최종 코퍼스(10,020건) MCI 계산값
+#   (B) data/member_pilot_mci_correlation_v7.json — v7 55 시점(8,981건) MCI 산출물
 # 아카이브 입력에서 다시 계산하면 (A)와는 전부 일치하고 (B)와는 어긋난다.
 # 따라서 (A)를 1차 정답지로 두고 검증하며, (B)와의 차이는 드리프트 표로 기록한다.
 #
@@ -164,8 +164,8 @@ run_s04 <- function() {
         .padl(format(r[[4]]), 16), "\n", sep = "")
   }
   cat("  → 재현값은 보고서 본문과 일치하고 아카이브 JSON과는 어긋난다.\n")
-  cat("     아카이브 JSON은 보고서 작성 이후 갱신된 코퍼스로 재계산된 별개 시점 산출물이며,\n")
-  cat("     그 값은 보고서 본문에 반영되지 않았다. 결론은 세 시점 모두 동일하다 —\n")
+  cat("     아카이브 JSON은 자체 caveat대로 v7 55 시점(8,981건) MCI로 계산된 이전 시점 산출물이며,\n")
+  cat("     본문 표는 최종 코퍼스(10,020건) MCI 기준이다. 결론은 두 시점 모두 동일하다 —\n")
   cat("     원시 MCI 최고 R²는 15% 안팎, 멤버 수 통제 후에는 5% 미만.\n\n")
 
   dir.create(OUT_DIR, showWarnings = FALSE)

@@ -51,6 +51,9 @@
   (`positioning_map_correlation_live_v7.json`). **주의**: 이 검정의 2×2표는 loyalty·spillover 각각 **0.5 초과 여부**
   기준([[7,17],[4,72]], 동결은 [[8,17],[4,71]])이며, 포지셔닝 맵의 표본 평균 기준 4구획(24/17/10/49)과는 기준선이
   다르다(평균 기준 표로는 χ²=16.84).
+- R 교차검증: `Statistics/R_통계검증/`이 위 상관·회귀·정규성·VIF·영향점·민감도·LOO·χ²를 R 표준 함수로 재계산해
+  2.1절 78·2.2절 80·3.8절 45·7.4절 35 = 238개 항목 전부 일치(`outputs/verify_summary.txt`). 같은 항목을
+  `Statistics/verify_r_sections_python.py`(scipy·statsmodels)로 돌려도 238/238 일치
 - 부가 통계(같은 파일): Pearson 95% CI [0.329, 0.629], 회귀선 spillover = 0.1234 + 0.3844·loyalty,
   loyalty∼activity r=0.694, spillover∼activity r=0.9019, 이효리 표준화 잔차 +3.59
 
@@ -119,6 +122,8 @@
   동결 스냅샷(7,350건) 시점 파일럿(23개 그룹, BTS 170건 중 73건, MCI 0.24)은 `member_mention_pilot_v6.json`
 - MCI ↔ outcome 상관(`member_pilot_mci_correlation_v7.json`, 45개 그룹, MCI는 v7-55 시점 8,981건): 원시 MCI∼loyalty
   r=-0.393(p=0.008, R²=0.155)이 가장 크지만 MCI∼멤버 수 r=-0.749로, 멤버 수를 뺀 MCI_excess 기준으로는 어떤 outcome과도
-  유의하지 않음(최대 R²=0.036). 최종 10,020건 MCI로 재계산하면 r=-0.385 (상세 보고서 7.4절 값)
+  유의하지 않음(최대 R²=0.036). 최종 10,020건 MCI로 재계산하면 r=-0.385, MCI∼멤버 수 r=-0.728, MCI_excess 최대 R²=0.046
+  (상세 보고서 7.4절 표와 전부 일치 — `Statistics/R_통계검증/` 7.4절 35/35. 그 패키지의 `data/member_mention_pilot_v7.json`은
+  `member_mention_index_v7.json`과 값이 같고 키 이름만 `mci_pilot`/`mci_index`로 다르다)
 - K=10 토픽 카드(`topic_cards_v7.json`): 토픽별 상위 키워드·대표 불릿 3건·대표 팬덤 5개·연결 F 경로. 명칭은 METHODOLOGY.md
   2-1 표와 동일

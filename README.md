@@ -97,6 +97,8 @@ v7_final_10020/        ★ 10,020건 기준 문서·코드·노트북 전부 (�
   tokenizer_wordcloud_report/ 토크나이저·워드클라우드 보고서(10,020건 실행 결과) + 이미지
   index_methodology/     지표 산식 문서 + 라이브 점수 JSON으로 식(2)(3)(6)(7) 재검증 스크립트
   report_scripts/        요약보고서 docx 빌드 스크립트(Node.js) + JS 정리 문서
+Statistics/R_통계검증/   보고서 2.1·2.2·3.8·7.4절 통계량을 R 표준 함수로 재계산해 대조(238/238 일치, RUN_ALL.R 하나로 실행). 입력 JSON은 data/v7_final/ 사본
+Statistics/verify_r_sections_python.py   같은 238개 항목을 scipy·statsmodels로 재현하는 파이썬 판(R 미설치 환경용)
 archive/v6_r22_era_backup.zip   최종 코퍼스 확정 이전(v7 r22, 5,612건) 시점 자료의 압축 백업 — 저장소 본문은 참조하지 않음 (안의 NOTES_특이사항.md 참고)
 ```
 

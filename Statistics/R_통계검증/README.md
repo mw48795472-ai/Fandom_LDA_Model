@@ -277,11 +277,16 @@ T1 한 곳(0개)뿐이었고, 나머지 7개 토픽은 0건"이라고 서술한�
 | 원시 MCI × 충성도 R² | 0.1481 | 0.148 | 0.1546 |
 | MCI_excess 최고 R² | 0.0457 | 0.0457 | 0.0357 |
 
-아카이브 입력에서 재계산하면 **보고서 본문 표와 전부 일치**하고
-`member_pilot_mci_correlation_v7.json`과는 어긋난다. 즉 그 JSON은 보고서 작성 이후
-갱신된 코퍼스로 다시 계산된 **별개 시점의 산출물**이며 본문에 반영되지 않았다.
+`data/member_mention_pilot_v7.json`에서 재계산하면 **보고서 본문 표와 전부 일치**하고
+`member_pilot_mci_correlation_v7.json`과는 어긋난다. 두 파일의 시점이 다르기 때문이다.
+`member_pilot_mci_correlation_v7.json`은 자체 `caveat_temporal_mismatch` 필드대로 **v7 55
+시점 라이브 코퍼스(8,981건)** MCI로 계산된 이전 시점 산출물이고,
+`member_mention_pilot_v7.json`은 최종 코퍼스 10,020건 기준이다(저장소
+`data/v7_final/member_mention_index_v7.json`과 45개 그룹 전부 값이 같고 키 이름만
+`mci_pilot`/`mci_index`로 다르다. 그룹별 `total_group_bullets`도 최종 라이브 점수의
+`activity`와 45/45 일치). 즉 보고서 본문 표가 최종 코퍼스 값이고, JSON이 더 이른 시점이다.
 결론(MCI는 그룹 outcome을 유의하게 설명하지 못한다 — 원시 최고 R² 15% 안팎, 멤버 수
-통제 후 5% 미만)은 세 시점 모두 동일하다.
+통제 후 5% 미만)은 두 시점 모두 동일하다.
 
 ## 한계
 
