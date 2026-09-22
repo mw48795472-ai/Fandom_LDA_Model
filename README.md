@@ -199,6 +199,14 @@ flowchart LR
 
 *그림 15. 10,020건 전체에 토크나이저를 실제 실행한 결과(토큰 170,725개, `wordcloud_by_language_v7.json`). 언어별 불용어 목록은 `v7_final_10020/analysis/tokenizer/stopwords/`, 보고서 전문은 `v7_final_10020/tokenizer_wordcloud_report/`.*
 
+**K 토픽 · F 메타팩터 워드클라우드 (동결 스냅샷 v7-40)**
+
+![K군집(토픽) 단위 워드클라우드](assets/readme/fig16_wordcloud_k_topics.png)
+
+![F군집(메타팩터) 단위 워드클라우드](assets/readme/fig17_wordcloud_f_metafactors.png)
+
+*그림 16·17. 위는 LDA 토픽 10개(K0∼K9)의 상위 10단어, 아래는 메타팩터 5개(F0 현장경제형 · F1 소비력형 · F2 미디어노출형 · F3 차트·확산형 · F4 결속형)의 상위 8단어. 글자 크기는 `lda_v6_diagnostics_frozen_v7_40.json`에 저장된 순위의 역순 점수이며 실제 φ 확률 가중치가 아니다. 진단 파일의 메타팩터 번호(F0∼F4)는 5절의 파급경로 코드(F1∼F5)와 다른 번호 체계로, 대응은 `factor_pathway_map_v7.json`에 있다(예: 결속형 F4 → 파급경로 F1).*
+
 ---
 
 ## 8. 한계 및 결론
@@ -230,7 +238,7 @@ README.md                                   이 문서 (핵심 요약판)
 (분석보고서)…최종.pdf, (요약보고서)…최종.pdf  제출본
 3D_포지셔닝맵_국내100팬덤.html + plotly-bundle.js / Persona_결정공간.html   인터랙티브 산출물 (같은 폴더에서 열면 동작)
 qr_codes/                                   두 HTML의 QR 코드 + 아티팩트 링크·해시 대조
-assets/readme/                              이 문서의 그림 17장 (제출 보고서 PDF·핵심 요약판 docx 원본 그림, 가로 최대 2,400px)
+assets/readme/                              이 문서의 그림 19장 (제출 보고서 PDF·보고서 docx 원본 그림 + 데이터에서 다시 그린 그림, 가로 최대 2,400px)
 verify_v7_final_consistency.py              최종 수치 ↔ 파일 정합성 검증 (101/101)
 run_lda_v6.py                               LDA 파이프라인 참고 구현 (--data/--out)
 data/
