@@ -155,7 +155,7 @@ flowchart LR
 
 | 국내 지역 언급 순위 | 업종별 광고·상업성 순위 |
 |---|---|
-| ![domestic](assets/readme/fig12_domestic_regional.png) | ![ad rank](assets/readme/fig08_ad_industry_rank.png) |
+| ![domestic](assets/readme/fig12_domestic_regional.png) | <img src="assets/readme/fig08_ad_industry_rank.png" alt="ad rank" width="300"> |
 
 ![팬덤별 광고·상업성 업종 구성 상위 25](assets/readme/fig09_ad_by_fandom.png)
 
