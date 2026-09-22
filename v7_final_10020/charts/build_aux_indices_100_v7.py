@@ -1,0 +1,249 @@
+# -*- coding: utf-8 -*-
+"""보조지표 7종 — 100개 팬덤 전체(멤버 집중도는 45개 그룹 전체) 그래프.
+README 6절의 그림은 상위 20·25개만 보여 주므로, 같은 지표를 전체 대상으로 다시 그려 assets/readme/100개_보조지표/ 에 저장한다.
+
+  aux1_ad_commercial_100.png        광고·상업성 지수 — 업종 구성(상위 7개 업종 + 그 외) 누적 막대, 끝 라벨 = 광고 문장 수·비중
+  aux2_media_exposure_100.png       미디어·콘텐츠 노출 지수 — 예능·유튜브·영화·드라마 누적 막대
+  aux3_fandom_cohesion_100.png      팬덤결속 지수 — 결속 유형 A~E 누적 막대
+  aux4_media_crossover_100.png      매체 크로스오버 지수 — 서로 다른 뉴스 매체 수
+  aux5_domestic_regional_100.png    국내 지역 지수 — 지역 구성(상위 7개 시/도 + 그 외) 누적 막대
+  aux6_member_mci_45.png            멤버 집중도(MCI) — 45개 그룹, 구조적 하한 1/멤버수 표시
+  aux7_worldwide_language_100.png   세계 언어 지수 — 해외언어 구성(상위 7개 언어 + 그 외) 누적 막대
+
+색: 범주형 7색(고정 순서, 명도·색각이상 검증 통과) + '그 외'는 중립 회색. 팬덤 100개는 1~50위 / 51~100위 두 패널로 나누고 x축 범위를 공유한다.
+한글 폰트: KFONT_PATH(본문)·KFONT_BOLD_PATH(제목) 환경변수 → 없으면 시스템 후보(Noto Sans KR/CJK, 맑은 고딕, 나눔고딕 등).
+실행: python v7_final_10020/charts/build_aux_indices_100_v7.py
+"""
+import json
+import os
+from pathlib import Path
+
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+import matplotlib.font_manager as fm
+from matplotlib.patches import Patch
+from matplotlib.lines import Line2D
+
+BASE = Path(__file__).resolve().parents[2]
+D = BASE / "data" / "v7_final"
+OUT = BASE / "assets" / "readme" / "100개_보조지표"
+OUT.mkdir(parents=True, exist_ok=True)
+
+# ---- 폰트 --------------------------------------------------------------------
+def _pick(env, cands):
+    for c in [os.environ.get(env, "")] + cands:
+        if c and os.path.exists(c):
+            fm.fontManager.addfont(c)
+            return fm.FontProperties(fname=c)
+    return None
+
+REG = _pick("KFONT_PATH", [str(BASE / "fonts" / "NotoSansKR-Regular.ttf"), "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc",
+                            "C:/Windows/Fonts/malgun.ttf", "/System/Library/Fonts/AppleSDGothicNeo.ttc",
+                            "/usr/share/fonts/truetype/nanum/NanumGothic.ttf", "/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc"])
+BOLD = _pick("KFONT_BOLD_PATH", [str(BASE / "fonts" / "NotoSansKR-Bold.ttf"), "C:/Windows/Fonts/malgunbd.ttf",
+                                  "/usr/share/fonts/truetype/nanum/NanumGothicBold.ttf"]) or REG
+if REG is None:
+    print("[warn] 한글 폰트를 찾지 못했습니다 — KFONT_PATH 로 지정하세요.")
+else:
+    plt.rcParams["font.family"] = REG.get_name()
+plt.rcParams["axes.unicode_minus"] = False
+
+# ---- 색·잉크 (reference palette, light) -------------------------------------
+SERIES = ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#008300", "#4a3aa7"]
+OTHER = "#b4b2aa"          # '그 외' 묶음 — 의도적 중립 회색
+SURFACE, INK, INK2, MUTED, GRID, AXIS = "#fcfcfb", "#0b0b0b", "#52514e", "#898781", "#e1e0d9", "#c3c2b7"
+DPI = 200
+
+
+def load(p):
+    with open(p, encoding="utf-8") as f:
+        return json.load(f)
+
+
+def style_axis(ax, xmax):
+    ax.set_facecolor(SURFACE)
+    ax.set_xlim(0, xmax)
+    ax.grid(axis="x", color=GRID, linewidth=0.8, zorder=0)
+    ax.set_axisbelow(True)
+    for s in ("top", "right", "left"):
+        ax.spines[s].set_visible(False)
+    ax.spines["bottom"].set_color(AXIS)
+    ax.tick_params(axis="y", length=0, labelsize=10.5, colors=INK2, pad=6)
+    ax.tick_params(axis="x", labelsize=9.5, colors=MUTED, length=0, pad=4)
+
+
+def header(fig, title, subtitle, handles=None, ncol=8):
+    fig.text(0.012, 0.992, title, fontsize=19, color=INK, fontproperties=BOLD, va="top")
+    fig.text(0.012, 0.968, subtitle, fontsize=11.5, color=INK2, va="top")
+    if handles:
+        fig.legend(handles=handles, loc="upper left", bbox_to_anchor=(0.008, 0.952), ncol=ncol, frameon=False,
+                   fontsize=11, handlelength=1.2, handleheight=1.0, columnspacing=1.6, labelcolor=INK)
+
+
+def footer(fig, text):
+    fig.text(0.012, 0.006, text, fontsize=9.5, color=MUTED, va="bottom")
+
+
+def stacked_100(rows, keys, colors, labels, end_label, title, subtitle, xlabel, foot, fname, per_panel=50):
+    """rows: [(name, {key: value}, total_for_sort)] 정렬 완료. 두 패널(1~50 / 51~100) 누적 가로 막대."""
+    n = len(rows)
+    panels = [rows[i:i + per_panel] for i in range(0, n, per_panel)]
+    stack_max = max(sum(v.get(k, 0) for k in keys) for _, v, _ in rows)
+    xmax = stack_max * 1.22 if stack_max else 1
+    fig_h = 0.285 * per_panel + 2.6
+    fig, axes = plt.subplots(1, len(panels), figsize=(9.2 * len(panels), fig_h), dpi=DPI, facecolor=SURFACE)
+    axes = axes if len(panels) > 1 else [axes]
+    for pi, (ax, part) in enumerate(zip(axes, panels)):
+        names = [f"{pi * per_panel + i + 1:>3}. {r[0]}" for i, r in enumerate(part)]
+        y = list(range(len(part)))[::-1]
+        left = [0.0] * len(part)
+        for k, c in zip(keys, colors):
+            vals = [r[1].get(k, 0) for r in part]
+            ax.barh(y, vals, left=left, height=0.72, color=c, edgecolor=SURFACE, linewidth=0.7, zorder=2)
+            left = [a + b for a, b in zip(left, vals)]
+        for yi, r, l in zip(y, part, left):
+            ax.text(l + xmax * 0.008, yi, end_label(r), va="center", ha="left", fontsize=9.5, color=INK2, zorder=3)
+        ax.set_yticks(y)
+        ax.set_yticklabels(names)
+        ax.set_ylim(-0.7, per_panel - 0.3)
+        style_axis(ax, xmax)
+        ax.set_xlabel(xlabel, fontsize=10.5, color=INK2, labelpad=6)
+        ax.set_title(f"{pi * per_panel + 1}~{pi * per_panel + len(part)}위", fontsize=12, color=INK2, loc="left", pad=6)
+    handles = [Patch(facecolor=c, edgecolor="none", label=l) for c, l in zip(colors, labels)]
+    header(fig, title, subtitle, handles, ncol=len(handles))
+    footer(fig, foot)
+    fig.subplots_adjust(left=0.105, right=0.985, top=0.905, bottom=0.05, wspace=0.42)
+    fig.savefig(OUT / fname, facecolor=SURFACE)
+    plt.close(fig)
+    print("saved", (OUT / fname).relative_to(BASE))
+
+
+def top_keys(totals, k=7):
+    return [x for x, _ in sorted(totals.items(), key=lambda kv: -kv[1])[:k]]
+
+
+# ---- 1. 광고·상업성 ------------------------------------------------------------
+ad = load(D / "ad_commercial_index_v7.json")
+tot = {k: v for k, v in ad["industry_totals"].items() if k != "기타"}
+keys7 = top_keys(tot)
+rows = []
+for f in ad["fandoms"]:
+    ic = f["industry_counts"]
+    v = {k: ic.get(k, 0) for k in keys7}
+    v["_other"] = sum(c for k, c in ic.items() if k not in keys7)
+    rows.append((f["fandom"], v, (f["n_ad_bullets"], f["ad_share"]), f))
+rows.sort(key=lambda r: (-r[2][0], -r[2][1], r[0]))
+stacked_100([r[:3] for r in rows], keys7 + ["_other"], SERIES + [OTHER], keys7 + ["그 외 업종·기타"],
+            lambda r: f"{r[2][0]}건 · {r[2][1] * 100:.0f}%",
+            "광고·상업성 지수 — 100개 팬덤 전체",
+            f"광고신호 문장 {ad['total_ad_bullets']:,}건(전체 {ad['total_bullets']:,}건의 {ad['corpus_ad_share'] * 100:.1f}%) · 광고 문장 수 순 정렬 · 막대 = 업종별 문장 수(한 문장이 여러 업종에 걸리면 중복 집계) · 끝 라벨 = 광고 문장 수 · 팬덤 내 비중",
+            "업종별 근거문장 수", "자료: data/v7_final/ad_commercial_index_v7.json · 20개 업종 중 전체 합계 상위 7개를 색으로, 나머지 13개와 '기타'를 회색으로 묶음",
+            "aux1_ad_commercial_100.png")
+
+# ---- 2. 미디어·콘텐츠 노출 ------------------------------------------------------
+me = load(D / "media_exposure_v7.json")
+subs = ["예능", "유튜브", "영화", "드라마"]
+rows = sorted([(f["fandom"], dict(f["subtag_counts"]), (f["n_media_bullets"], f["media_share"])) for f in me["fandoms"]],
+              key=lambda r: (-r[2][0], -r[2][1], r[0]))
+stacked_100(rows, subs, SERIES[:4], subs, lambda r: f"{r[2][0]}건 · {r[2][1] * 100:.0f}%",
+            "미디어·콘텐츠 노출 지수 — 100개 팬덤 전체",
+            f"미디어 노출 문장 {me['total_media_bullets']:,}건(전체의 {me['corpus_media_share'] * 100:.1f}%) · 노출 문장 수 순 정렬 · 막대 = 서브태그별 문장 수(중복 집계) · 끝 라벨 = 노출 문장 수 · 팬덤 내 비중",
+            "서브태그별 근거문장 수", "자료: data/v7_final/media_exposure_v7.json · 서브태그 키워드: 예능·유튜브·영화·드라마",
+            "aux2_media_exposure_100.png")
+
+# ---- 3. 팬덤결속 -----------------------------------------------------------------
+co = load(D / "fandom_cohesion_index_v7.json")
+cats = sorted(co["categories"]) if isinstance(co["categories"], list) else sorted(co["categories"].keys())
+cat_labels = [c.replace("_", " ", 1) for c in cats]
+rows = sorted([(f["fandom"], dict(f["category_counts"]), (f["n_cohesion_bullets"], f["cohesion_share"])) for f in co["fandoms"]],
+              key=lambda r: (-r[2][0], -r[2][1], r[0]))
+stacked_100(rows, cats, SERIES[:len(cats)], cat_labels, lambda r: f"{r[2][0]}건 · {r[2][1] * 100:.0f}%",
+            "팬덤결속 지수 — 100개 팬덤 전체",
+            f"결속 신호 문장 {co['total_cohesion_bullets']:,}건(전체의 {co['corpus_cohesion_share'] * 100:.1f}%) · 결속 문장 수 순 정렬 · 막대 = 유형별 문장 수(중복 집계) · 끝 라벨 = 결속 문장 수 · 팬덤 내 비중",
+            "결속 유형별 근거문장 수", "자료: data/v7_final/fandom_cohesion_index_v7.json · D(기부·후원)는 팬덤 주도 캠페인만 집계(개인 선행 오탐 방지 게이트)",
+            "aux3_fandom_cohesion_100.png")
+
+# ---- 4. 매체 크로스오버 ----------------------------------------------------------
+mc = load(D / "media_crossover_index_v7.json")
+rows = sorted([(f["fandom"], {"outlets": f["n_distinct_outlets"]}, (f["n_distinct_outlets"], f["news_media_share"], f["n_news_media_bullets"])) for f in mc["fandoms"]],
+              key=lambda r: (-r[2][0], -r[2][2], r[0]))
+stacked_100(rows, ["outlets"], [SERIES[0]], ["서로 다른 뉴스 매체 수"], lambda r: f"{r[2][0]}개 · 뉴스 {r[2][2]}건({r[2][1] * 100:.0f}%)",
+            "매체 크로스오버 지수 — 100개 팬덤 전체",
+            f"뉴스 매체 출처 문장 {mc['total_news_media_bullets']:,}건 · 코퍼스 전체 서로 다른 매체 {mc['n_distinct_outlets_corpuswide']:,}개 · 매체 수 순 정렬 · 끝 라벨 = 매체 수 · 뉴스 출처 문장 수(팬덤 내 비중)",
+            "서로 다른 뉴스 매체(도메인) 수", "자료: data/v7_final/media_crossover_index_v7.json · 실제 클릭·유입이 아니라 '보도한 매체의 폭'을 재는 대리 지표",
+            "aux4_media_crossover_100.png")
+
+# ---- 5. 국내 지역 ----------------------------------------------------------------
+dr = load(BASE / "v7_final_10020" / "analysis" / "domestic_regional_index" / "domestic_regional_index_v7.json")
+rtot = {}
+for v in dr.values():
+    for k, c in v["region_mention_counts"].items():
+        rtot[k] = rtot.get(k, 0) + c
+reg7 = top_keys(rtot)
+rows = []
+for name, v in dr.items():
+    rc = v["region_mention_counts"]
+    d = {k: rc.get(k, 0) for k in reg7}
+    d["_other"] = sum(c for k, c in rc.items() if k not in reg7)
+    rows.append((name, d, (v["total_region_mentions"], v["n_regions_hit"], v.get("region_diversity", 0))))
+rows.sort(key=lambda r: (-r[2][0], -r[2][1], r[0]))
+stacked_100(rows, reg7 + ["_other"], SERIES + [OTHER], reg7 + ["그 외 10개 시/도"],
+            lambda r: f"{r[2][0]}건 · {r[2][1]}개 지역",
+            "국내 지역 지수 — 100개 팬덤 전체",
+            f"지역 언급 {sum(rtot.values()):,}건 · 지역 언급 수 순 정렬 · 막대 = 17개 시/도별 언급 문장 수 · 끝 라벨 = 언급 수 · 언급된 시/도 수",
+            "시/도별 언급 근거문장 수", "자료: v7_final_10020/analysis/domestic_regional_index/domestic_regional_index_v7.json (최종 코퍼스 10,020건 산출본) · 전체 합계 상위 7개 시/도를 색으로 표시",
+            "aux5_domestic_regional_100.png")
+
+# ---- 6. 멤버 집중도 MCI (45개 그룹) ------------------------------------------------
+mi = load(D / "member_mention_index_v7.json")
+rows = []
+for g, v in mi.items():
+    n_mem = len(v["member_mention_counts"])
+    top = max(v["member_impact_share_index"].items(), key=lambda kv: kv[1])
+    rows.append((g, v["mci_index"], n_mem, v["total_member_mentions"], top))
+rows.sort(key=lambda r: (-r[1], r[0]))
+n = len(rows)
+fig, ax = plt.subplots(figsize=(13.5, 0.3 * n + 2.6), dpi=DPI, facecolor=SURFACE)
+y = list(range(n))[::-1]
+ax.barh(y, [r[1] for r in rows], height=0.7, color=SERIES[0], edgecolor=SURFACE, linewidth=0.7, zorder=2)
+ax.scatter([1 / r[2] for r in rows], y, marker="|", s=260, linewidths=2.2, color=INK, zorder=4)
+for yi, r in zip(y, rows):
+    ax.text(r[1] + 0.008, yi, f"{r[1]:.3f} · {r[2]}명 · 언급 {r[3]}건 · 최다 {r[4][0]} {r[4][1]:.2f}", va="center", ha="left", fontsize=9.5, color=INK2)
+ax.set_yticks(y)
+ax.set_yticklabels([f"{i + 1:>2}. {r[0]}" for i, r in enumerate(rows)])
+ax.set_ylim(-0.7, n - 0.3)
+style_axis(ax, 0.9)
+ax.set_xlabel("MCI = Σ(멤버별 언급 점유율)²", fontsize=10.5, color=INK2, labelpad=6)
+header(fig, "멤버 집중도 지수(MCI) — 45개 그룹 전체",
+       "MCI 높은 순 정렬 · 막대 = MCI · 검은 세로선 = 구조적 하한 1/멤버수(완전 균등 배분일 때의 MCI) · 끝 라벨 = MCI · 멤버 수 · 멤버 언급 수 · 최다 언급 멤버 점유율",
+       [Patch(facecolor=SERIES[0], label="MCI"), Line2D([0], [0], marker="|", color=INK, linestyle="none", markersize=14, markeredgewidth=2.2, label="하한 1/멤버수")], ncol=2)
+footer(fig, "자료: data/v7_final/member_mention_index_v7.json (최종 코퍼스 10,020건) · MCI와 멤버 수의 상관 r=−0.728 — 막대와 세로선의 간격(MCI_excess)이 실제 쏠림의 크기")
+fig.subplots_adjust(left=0.16, right=0.985, top=0.915, bottom=0.05)
+fig.savefig(OUT / "aux6_member_mci_45.png", facecolor=SURFACE)
+plt.close(fig)
+print("saved", (OUT / "aux6_member_mci_45.png").relative_to(BASE))
+
+# ---- 7. 세계 언어 ----------------------------------------------------------------
+ww = load(D / "worldwide_language_pilot_live_reference_v7.json")
+LANG = {"en": "영어", "ja": "일본어", "zh": "중국어", "es": "스페인어", "fr": "프랑스어", "th": "태국어", "id": "인도네시아어",
+        "vi": "베트남어", "ru": "러시아어", "tl": "필리핀어", "pt": "포르투갈어", "tr": "튀르키예어", "ar": "아랍어"}
+ltot = {}
+for v in ww.values():
+    for k, c in v["language_mention_counts"].items():
+        if k != "ko":
+            ltot[k] = ltot.get(k, 0) + c
+lang7 = top_keys(ltot)
+rows = []
+for name, v in ww.items():
+    lc = v["language_mention_counts"]
+    d = {k: lc.get(k, 0) for k in lang7}
+    d["_other"] = sum(c for k, c in lc.items() if k not in lang7 and k != "ko")
+    rows.append((name, d, (v["foreign_bullets"], v["foreign_ratio"], v["n_foreign_languages_hit"])))
+rows.sort(key=lambda r: (-r[2][0], -r[2][1], r[0]))
+stacked_100(rows, lang7 + ["_other"], SERIES + [OTHER], [LANG[k] for k in lang7] + ["그 외 6개 언어"],
+            lambda r: f"{r[2][0]}건 · {r[2][1] * 100:.0f}% · {r[2][2]}개 언어",
+            "세계 언어 지수 — 100개 팬덤 전체",
+            f"해외언어 출처 문장 {sum(ltot.values()):,}건 · 해외언어 문장 수 순 정렬 · 막대 = 출처 매체 언어별 문장 수(한국어 제외) · 끝 라벨 = 해외언어 문장 수 · 팬덤 내 비중 · 해외 언어 수",
+            "해외언어별 근거문장 수", "자료: data/v7_final/worldwide_language_pilot_live_reference_v7.json · 언어는 문장 본문이 아니라 출처 매체 기준(Coverage Index의 language_counts 재사용)",
+            "aux7_worldwide_language_100.png")

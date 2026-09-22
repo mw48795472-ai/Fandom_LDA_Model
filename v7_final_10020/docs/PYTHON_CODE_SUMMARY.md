@@ -18,6 +18,7 @@
 | 파이프라인(루트) | `run_lda_v6.py` | 코퍼스 JSON (`--data`, 기본 `fandoms_v3_100.json`) | `output/lda_rerun/` — 토큰화→LDA K 탐색→K→M 재군집화→실루엣 게이트→점수·페르소나 |
 | 차트 | `v7_final_10020/charts/build_cohesion_index_v7.py` | `fandom_cohesion_index_v7.json` | 팬덤결속 지수 좌우 2패널 PNG/SVG (`output/charts/`) |
 | 차트 | `v7_final_10020/charts/build_cohesion_index_v7_right_only.py` | 〃 | 우측 패널(상위 25개 팬덤) 단독 PNG/SVG |
+| 차트 | `v7_final_10020/charts/build_aux_indices_100_v7.py` | 보조지표 JSON 7종(광고·미디어 노출·결속·크로스오버·국내 지역·MCI·세계 언어) | 100개 팬덤 전체(MCI는 45개 그룹) 그래프 7장 → `assets/readme/100개_보조지표/` (README 6절의 상위 20·25 그림의 전체판, 1~50위/51~100위 두 패널·x축 공유) |
 | 차트 | `v7_final_10020/charts/build_persona_map_v7.py` | `fandom_scores_v6.json`, `fan_persona_v7.json` (동결 스냅샷) | Fan Persona Map(팬충성도×파급효과, 페르소나 4유형 색) PNG 2종 — 강조 표시 있음/없음 |
 | 차트 | `v7_final_10020/charts/build_persona_cluster_split_boxed.py` | `persona_decision_space_v7.json`(HTML 내장 병합 기록·shares; 원본 `factor_clustering_structure_v7.json`이 있으면 그것을 우선)·`fan_persona_v7.json` (동결 스냅샷) | 덴드로그램 PNG + PCA biplot PNG (2개 분리) |
 | 차트 | `v7_final_10020/silhouette_gate_policy/build_silhouette_gate_timeline_v7.py` | `data/silhouette_gate_timeline/corpus_silhouette_timeline_v7_66_2ch.csv` | 코퍼스 규모 vs 실루엣 이중축 타임라인 PNG/SVG, 게이트 구간 20회 기각·r=+0.15 자체 재계산 |
