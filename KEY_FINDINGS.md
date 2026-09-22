@@ -2,7 +2,7 @@
 
 보고서·대화에서 반복 인용된 수치를 한곳에 모은 참고 문서. 2026-09-21 정리에서 최종 라이브 코퍼스(10,020건)와
 최종 산출물이 `data/v7_final/`에 들어오면서 **각 수치의 근거 파일과 계층(동결 스냅샷 7,350건 vs 라이브 10,020건)을
-확정**했고, `verify_v7_final_consistency.py`로 재계산해 대조했다(75/75 일치).
+확정**했고, `verify_v7_final_consistency.py`로 재계산해 대조했다(86/86 일치).
 
 ## 코퍼스 규모 — 라이브 코퍼스 `data/v7_final/fandoms_v3_100.json`
 - 분석 대상 팬덤: 100개
@@ -10,7 +10,10 @@
   2건 제외: ATEEZ 태국어 감탄문 1건, 레드벨벳 "맥도날드 조이 (2026)" 1건 (`lda_excluded_bullets_v7.json`, 코퍼스 위치 확인)
 - 로스터: 동결 스냅샷(7,350건)과 라이브(10,020건)의 100개 팬덤은 3개가 다름 — 동결에만 한로로·pH-1·BE'O, 라이브에만
   몬스타엑스·투어스(TWS)·빈지노
-- 언어권: 14개 (`language_domain_summary_v7.json`, 14개 언어 불릿 합 = 10,020)
+- 언어권: 14개 (`language_domain_summary_v7.json`, 14개 언어 불릿 합 = 10,020). 같은 분류가 `fandom_scores_live_reference_v7.json`의
+  팬덤별 coverage_detail.language_counts와 세계 언어 지수 원본에도 들어 있어 세 파일의 언어별 합이 일치
+- 토크나이저 실행 결과(`wordcloud_by_language_v7.json`): 총 토큰 170,725개, 문자권별 불릿 수 한국어 8,942(89.2%)·영어 6,425·중국어 398·
+  비영어(스페인어 등) 219·일본어 155·태국어 56·러시아어 45·베트남어 30 (토크나이저 보고서 표 2와 영어/비영어만 wordfreq 재분류로 차이)
 - 한국어 55.4%(5,551건), 영어 21.9%(2,195건), 일본어 5.2%(520건), 중국어 4.6%(458건) 순
   (이전 판의 "일본어 5.3%(529건)"은 오기 — 보고서 표 2-2와 요약 JSON 모두 520건)
 - 도메인: **한국어권 704개**(보고서 표 2-2 한국어 행). 요약보고서의 "14개 언어권 704개 도메인"은 이 한국어권
@@ -83,8 +86,8 @@
 | 국내지역지수 | 대표지역 서울(29%), 다양성 0.29 | 대표지역 경남(58%), 다양성 0.29 | 대표지역 서울(21%), 다양성 0.71(전체 1위) |
 | 팬덤결속지수 | 15건(6.6%) | 18건(21.2%) | 30건(23%, 전체 1위) |
 
-팬덤결속 지수 행은 `fandom_cohesion_index_v7.json`에서 재현 확인. 세계언어·국내지역 지수 행은 보고서 본문 값이며, 두 지수의
-원본 JSON은 아직 저장소에 없다(README 3절).
+팬덤결속·세계언어 지수 행은 `fandom_cohesion_index_v7.json`·`worldwide_language_pilot_live_reference_v7.json`에서 재현 확인.
+국내지역 지수 행은 보고서 본문 값이며 원본 JSON은 아직 저장소에 없다(README 3절).
 
 ## 보조지표 (라이브 10,020건 기준)
 - 광고·상업성 지수 (`ad_commercial_index_v7.json` → `ad_commercial_index_v7.csv`): 광고성 불릿 1,302건(13.0%), 98개 팬덤에
@@ -100,8 +103,10 @@
 - 매체 크로스오버 지수 (`media_crossover_index_v7.json`): news_media 출처 불릿 6,712건(67.0%), 코퍼스 전체 고유 매체 1,298개
   (상위 v.daum.net 377, starnewskorea.com 251, sports.khan.co.kr 216). BTS 매체 96개(뉴스 불릿 177건, 다양성 0.54), 임영웅 60개(0.50),
   리센느 36개(0.53). SNS·커뮤니티·위키는 매체로 세지 않음; 유입경로가 아닌 매체 확산 폭의 대리 지표
+- 세계 언어 지수 (`worldwide_language_pilot_live_reference_v7.json` → `worldwide_language_index_v7.csv`): 팬덤별 14개 언어 언급수,
+  언어다양성, 해외비중(ko 제외), 해외언어다양성, 대표해외언어. 14개 언어 합이 언어 표(10,020건)와 정확히 같고 스크립트 재실행 결과
+  불일치 0. 해외 근거문장수 상위: BLACKPINK·BTS(135건, 59.5%→60%, 해외언어다양성 0.66)·Stray Kids·TWICE·SEVENTEEN
 - 국내 지역 지수: 100건, 17개 시도별 언급수 합 ↔ total_region_mentions 재검증 (mismatch=0) — 원본 JSON 미보유
-- 세계 언어 지수: 100건, 14개 언어별 언급수 합 ↔ total_group_bullets / foreign_bullets 재검증 (mismatch=0) — 원본 JSON 미보유
 - 멤버 집중도 지수(MCI): `data/v7_final/member_mention_index_v7.json` — 45개 그룹, 10,020건 코퍼스 기준
   (예: BTS 근거문장 227건 중 멤버명 언급 101건, MCI=0.241). 아카이브 원본명 `member_mention_pilot_v7.json`은 같은 값(키 이름만 다름).
   동결 스냅샷(7,350건) 시점 파일럿(23개 그룹, BTS 170건 중 73건, MCI 0.24)은 `member_mention_pilot_v6.json`

@@ -9,7 +9,7 @@
 > 없어 재현 불가"라고 적혀 있었다. 이번 정리에서 최종 코퍼스와 산출물을 `data/v7_final/`로 추가하고,
 > 5,612건 스냅샷은 `data/v6_r22_snapshot/`으로 옮겨 두 데이터가 같은 파일명으로 섞이지 않게 했다.
 > 최종 수치가 저장소 파일에서 실제로 재현되는지는 `verify_v7_final_consistency.py`가 항목별로 검증한다
-> (현재 75/75 일치. 지난 정리에서 유일하게 재현되지 않던 χ² 값도 2026-09-22 추가 파일로 해소, 아래 "재현성 범위" 참고).
+> (현재 86/86 일치. 지난 정리에서 유일하게 재현되지 않던 χ² 값도 2026-09-22 추가 파일로 해소, 아래 "재현성 범위" 참고).
 
 ---
 
@@ -42,6 +42,10 @@
 | loyalty/spillover 100개 팬덤 점수, 평균 0.3710/0.2661, 4구획 24/17/10/49 | `fandoms_v3_100.json`에 `METHODOLOGY.md` 2-4절 EvidenceScore 산식을 그대로 적용 → `chart3d_payload_live_reference_v7.json`과 100/100 일치 | 일치 |
 | Pearson 0.493·Spearman 0.380·Cook's D(BTS 0.5749, god 0.284, 이효리 0.2538)·R² 0.243→0.847·VIF 1.93·민감도·LOO·3D축 독립성(r 0.099/0.461, R² 0.234, VIF 1.321) | 라이브 점수(`chart3d_payload_live_reference_v7.json`) | 전부 일치 |
 | K=10, M=5, 실루엣 0.267, 페르소나 43/31/17/9, 토픽→F 배정 | `lda_v6_diagnostics_frozen_v7_40.json`(동결 진단 원본, K-grid에서 K=10 rank_sum 8 < K=8 9), `fan_persona_v7.json`, `persona_decision_space_v7.json`, `fandom_scores_v6.csv` | 일치 |
+| 세계 언어 지수: BTS 해외 근거 135건(60%), 해외언어다양성 0.66; 14개 언어 합 = 언어 표 | `worldwide_language_pilot_live_reference_v7.json` → `worldwide_language_index_v7.csv` (스크립트 재실행, 불일치 0) | 일치 |
+| 라이브 점수 원본 JSON의 raw 점수·coverage_index 5요소 가중합·언어 엔트로피 ln(14) | `fandom_scores_live_reference_v7.json` | 일치 |
+| 토크나이저 출력 토큰 170,725개, 문자권별 불릿 수(한국어 8,942 …) | `wordcloud_by_language_v7.json` (TOKENIZER_WORDCLOUD_REPORT 표 2 원본; 영어/비영어는 wordfreq 재분류 후속판) | 일치 |
+| r45(1차) K=12, M=2, 실루엣 0.136 | `_explore_r45_meta_factor.json` (코사인거리 행렬로 M 2~11 실루엣 전부 재현) | 일치 |
 | 미디어·콘텐츠 노출 1,025건(10.2%), 서브태그 예능·유튜브·영화·드라마 | `media_exposure_v7.json` (팬덤별·서브태그별 합 전부 일치) | 일치 |
 | 매체 크로스오버 6,712건(67.0%), 고유 매체 1,298개 | `media_crossover_index_v7.json` (팬덤별 news_media 불릿·매체 수·다양성 비율) | 일치 |
 | 라이브 재적합 K=8/M=5/실루엣 0.046 (게이트 기각) | `lda_v6_diagnostics_live_reference_v7.json` = 3D 맵 payload 값 | 일치 |
@@ -79,12 +83,13 @@
   라운드), 멤버 파일럿 v7, v7_progress(r48), 원본 데이터 아카이브 README. 해당 스크립트는 `data/v7_final/` 아래 그 파일명을 읽도록
   정리돼 있어 파일을 넣으면 바로 실행된다.
 - **원본 아카이브 목록과의 대조** (`data/v7_final/ARCHIVE_README_original.md` — 최종 보고서 docx가 실제로 읽은 파일 전량):
-  아카이브에 있으나 저장소에 아직 없는 파일은 `fandom_scores_live_reference_v7.json`(CSV판은 있음), `chart3d_correlation_v7.json`
-  (3D 축 검증의 동결 스냅샷판), `_explore_r45_meta_factor.json`, `wordcloud_by_language_v7.json`, `worldwide_language_pilot_live_reference_v7.json`
-  (세계 언어 지수 — 스크립트가 기대하던 `..._index_...` 이름과 다르며, 두 이름 모두 읽도록 수정), 아카이브판 `domestic_regional_pilot_v6.json`
-  (국내 지역 지수 라이브판, 마찬가지로 두 이름 모두 읽도록 수정), `factor_pathway_map_v7.json`, `v7_rounds/`의 r23 이후 병합·교체 로그
-  (`swap_log_r*.json`, `round_log_r70.json`, `member_pilot_r53~55_compare.json`), `supplementary_csv/` 3종. 아카이브 README에
-  `factor_clustering_structure_v7.json`은 없으므로 페르소나 덴드로그램 차트 입력은 아카이브 밖에서 만들어진 파일로 보인다.
+  2026-09-22 5차 추가로 `fandom_scores_live_reference_v7.json`, `_explore_r45_meta_factor.json`, `wordcloud_by_language_v7.json`,
+  `worldwide_language_pilot_live_reference_v7.json`(세계 언어 지수 — 스크립트가 기대하던 `..._index_...` 이름과 달라 두 이름 모두
+  읽도록 수정, CSV 산출 완료), `factor_pathway_map_v7.json`이 들어왔다. **아카이브에 있으나 아직 없는 파일**: `chart3d_correlation_v7.json`
+  (3D 축 검증의 동결 스냅샷판), 아카이브판 `domestic_regional_pilot_v6.json`(국내 지역 지수 라이브판 — 스크립트가 두 이름 모두 읽음),
+  `v7_rounds/`의 r23 이후 병합·교체 로그(`swap_log_r*.json`, `round_log_r70.json`, `member_pilot_r53~55_compare.json`),
+  `supplementary_csv/` 3종. 아카이브 README에 `factor_clustering_structure_v7.json`은 없으므로 페르소나 덴드로그램 차트 입력은
+  아카이브 밖에서 만들어진 파일로 보인다(같은 K→M 코사인거리 행렬 형식의 예는 `_explore_r45_meta_factor.json`에 있음).
 
 ## 4. 폴더 구성
 
@@ -93,7 +98,7 @@ README.md / KEY_FINDINGS.md / METHODOLOGY.md / FINAL_REPORT_SUMMARY.md / PYTHON_
 (분석보고서)…최종.pdf, (요약보고서)…최종.pdf         제출본
 3D_포지셔닝맵_국내100팬덤.html + plotly-bundle.js    라이브 10,020건 3D 맵 (같은 폴더에서 열면 동작)
 Persona_결정공간.html                                동결 스냅샷 K=10→M=5 덴드로그램·PCA·레이더
-verify_v7_final_consistency.py                       최종 수치 ↔ 파일 정합성 검증 (75개 항목)
+verify_v7_final_consistency.py                       최종 수치 ↔ 파일 정합성 검증 (86개 항목)
 run_lda_v6.py                                        LDA 파이프라인(v6~r22 시점) — --data/--out 인자
 data/
   v7_final/            최종 라이브 코퍼스 10,020건 + 최종 산출물 (1절 표 참고)
