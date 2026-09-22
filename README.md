@@ -155,7 +155,7 @@ flowchart LR
 
 | 팬덤결속 지수 (유형별 순위 · 상위 25) | 업종별 광고·상업성 순위 |
 |---|---|
-| <img src="assets/readme/fig11_cohesion_index.png" alt="cohesion" width="470"> | <img src="assets/readme/fig08_ad_industry_rank.png" alt="ad rank" width="200"> |
+| <img src="assets/readme/fig11_cohesion_index.png" alt="cohesion" width="660"> | <img src="assets/readme/fig08_ad_industry_rank.png" alt="ad rank" width="280"> |
 
 ![팬덤별 광고·상업성 업종 구성 상위 25](assets/readme/fig09_ad_by_fandom.png)
 
