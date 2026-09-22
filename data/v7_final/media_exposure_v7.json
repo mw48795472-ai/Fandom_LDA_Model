@@ -1,0 +1,3892 @@
+{
+  "methodology": "raw bullet-text substring matching for 4 subtags (예능/유튜브/영화/드라마); NOT an LDA topic or Meta-Factor — see report ch.10.8 for the K9/F6 validation test that preceded this and found no statistically independent media topic/factor.",
+  "subtags": [
+    "예능",
+    "유튜브",
+    "영화",
+    "드라마"
+  ],
+  "total_bullets": 10020,
+  "total_media_bullets": 1025,
+  "corpus_media_share": 0.1023,
+  "subtag_totals": {
+    "유튜브": 286,
+    "예능": 309,
+    "드라마": 313,
+    "영화": 179
+  },
+  "n_fandoms_with_any_media_bullet": 99,
+  "fandoms": [
+    {
+      "fandom": "임영웅",
+      "category": "트로트",
+      "n_total_bullets": 131,
+      "n_media_bullets": 27,
+      "media_share": 0.2061,
+      "subtag_counts": {
+        "예능": 4,
+        "유튜브": 11,
+        "영화": 8,
+        "드라마": 5
+      },
+      "sample_bullets": [
+        {
+          "t": "71세 팬 김임경 씨는 신보 실물 앨범을 5장이나 보유하고 있음에도 스트리밍 서비스로 하루 종일 반복 재생하고, 관련 유튜브 영상을 거의 빠짐없이 시청하는 등 고령 팬층의 몰입도가 매우 높다",
+          "u": "https://www.koreaherald.com/article/2865481",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "63세 팬 류호진 씨는 구독자 18만8000명 규모의 유튜브 채널을 운영하며 신보 발매 후 임영웅만을 다룬 영상 약 60개를 업로드하는 등 팬이 직접 콘텐츠 생산자로 활동한다",
+          "u": "https://www.koreaherald.com/article/2865481",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "7월 22일 기준 임영웅 공식 유튜브 채널 '임영웅'은 구독자 수 179만 명을 넘겼다. 180만 구독자까지는 1만 명을 남긴 수치다. 채널에는 현재 1000개에 육박하는 영상이 올라와 있으며 누적 조회수는 수십억 뷰 규모다. 신곡 뮤직비디오와 무대 비하인드, 일상 브이로그, 콘서트 하이라이트 등 여러 콘텐츠가 게시돼 있다.",
+          "u": "https://www.starnewskorea.com/star/2026/07/23/2026072306383894056",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "카더가든",
+      "category": "솔로",
+      "n_total_bullets": 74,
+      "n_media_bullets": 26,
+      "media_share": 0.3514,
+      "subtag_counts": {
+        "예능": 14,
+        "유튜브": 10,
+        "영화": 3,
+        "드라마": 2
+      },
+      "sample_bullets": [
+        {
+          "t": "개인 유튜브 채널 '카더정원'이 130만 명 이상의 구독자를 확보해 강력한 온라인 팬 기반을 보여준다.",
+          "u": "https://namu.wiki/w/%EC%B9%B4%EB%8D%94%EC%A0%95%EC%9B%90",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "2024년부터 운영 중인 개인 유튜브 채널 '카더정원'은 구독자 130만 명을 보유하고 있으며, 보드게임·아바타 소개팅 등 예능 콘텐츠로 팬 참여를 이끈다 (음악 팬덤과는 별개의 예능 팬층)",
+          "u": "https://namu.wiki/w/%EC%B9%B4%EB%8D%94%EC%A0%95%EC%9B%90",
+          "tag": "loyalty",
+          "subtags": [
+            "예능",
+            "유튜브"
+          ]
+        },
+        {
+          "t": "케이팝레이더(K-POP RADAR)가 인스타그램·유튜브·팬카페 등 플랫폼별 팔로워·화제성 지표를 실시간으로 추적하는 별도 페이지를 운영할 만큼 팬덤 데이터가 상시 관리 대상이다",
+          "u": "https://www.kpop-radar.com/Carthegarden",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "오마이걸",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 98,
+      "n_media_bullets": 21,
+      "media_share": 0.2143,
+      "subtag_counts": {
+        "예능": 9,
+        "유튜브": 3,
+        "영화": 3,
+        "드라마": 9
+      },
+      "sample_bullets": [
+        {
+          "t": "빙그레와 해태아이스크림은 2021년 3월 18일 슈퍼콘·마루시리즈(호두마루·체리마루)의 공동 광고모델로 오마이걸을 발탁했다고 발표했으며, 이는 멤버 미미가 유튜브 먹방에서 슈퍼콘을 자주 언급한 것이 계기가 되어 빙그레 마케팅팀이 댓글 소통 및 제품 협찬으로 접근했고, 해태 체리마루 캐릭터가 멤버 유아와 닮아 팬들 사이 '인간 체리마루'로 불린 것이 계기가 된 사례로, 2020년 10월 빙그레의 해태 인수 이후 첫 공동 마케팅이었다",
+          "u": "https://www.shinailbo.co.kr/news/articleView.html?idxno=1389406",
+          "tag": "spillover",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "제28회 부천국제애니메이션페스티벌(BIAF2026, 2026년 10월 23~27일 개최)이 오마이걸 리더 효정을 공식 홍보대사로 선정했으며, 9월 기자회견 위촉식부터 10월 영화제 기간까지 관객과 소통하는 홍보 활동을 맡는다고 보도됨",
+          "u": "https://www.post24.kr/363107",
+          "tag": "spillover",
+          "subtags": [
+            "영화"
+          ]
+        },
+        {
+          "t": "\"기쁨이 실사화\"…오마이걸 효정, 예능서 종횡무진[TF초점] 그룹 오마이걸 효정이 올해 예능서 눈에 띄는 활약을 펼치고 있다. 그간 무대에서 밝고 환한 모습을 보여줬다면 최근 그 자리를 예능으로 옮겼다.",
+          "u": "https://v.daum.net/v/4TvX1Jo9UH?f=p",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "SEVENTEEN",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 157,
+      "n_media_bullets": 20,
+      "media_share": 0.1274,
+      "subtag_counts": {
+        "예능": 7,
+        "유튜브": 4,
+        "영화": 4,
+        "드라마": 7
+      },
+      "sample_bullets": [
+        {
+          "t": "Infobae가 멕시코 Cinemex 영화관에서 세븐틴 콘서트 실황 상영 일정과 시청 방법을 안내했다",
+          "u": "https://www.infobae.com/mexico/2023/12/05/donde-y-cuando-ver-en-vivo-el-concierto-de-la-banda-seventeen-en-cinemex-desde-mexico/",
+          "tag": "loyalty",
+          "subtags": [
+            "영화"
+          ]
+        },
+        {
+          "t": "준(Jun), 중국 음악예능 《潮音战纪》 솔로무대 경연 우승, 음악랭킹쇼 《Yo! Bang》 공동 진행(2018)",
+          "u": "https://en.wikipedia.org/wiki/Jun_(Chinese_entertainer)#Yo_Bang",
+          "tag": "loyalty",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "준(Jun), 중국 영화 《捕风追影》 출연으로 대중전영백화장 남우조연상 후보 지명(2026.8.10)",
+          "u": "https://www.sina.cn/news/detail/5330509777345999.html",
+          "tag": "loyalty",
+          "subtags": [
+            "영화"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "EXO",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 121,
+      "n_media_bullets": 19,
+      "media_share": 0.157,
+      "subtag_counts": {
+        "예능": 6,
+        "유튜브": 0,
+        "영화": 8,
+        "드라마": 10
+      },
+      "sample_bullets": [
+        {
+          "t": "EXO가 자체 예능 콘텐츠 '엑소의 쇼타임', 'EXO 902014', '엑소 오락관' 등을 제작했다.",
+          "u": "https://namu.wiki/w/EXO",
+          "tag": "loyalty",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "도경수 주연, 영화 '말할 수 없는 비밀' 28일 개봉 확정",
+          "u": "https://www.sportsseoul.com/news/read/1487277",
+          "tag": "spillover",
+          "subtags": [
+            "영화"
+          ]
+        },
+        {
+          "t": "엑소(EXO) 카이, KBS 새 월화드라마 '우리가 만난 기적' 출연",
+          "u": "https://www.getnews.co.kr/news/articleView.html?idxno=51690",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "엄정화",
+      "category": "솔로",
+      "n_total_bullets": 71,
+      "n_media_bullets": 17,
+      "media_share": 0.2394,
+      "subtag_counts": {
+        "예능": 2,
+        "유튜브": 2,
+        "영화": 12,
+        "드라마": 2
+      },
+      "sample_bullets": [
+        {
+          "t": "아랍어 백과사전 Areq.net이 엄정화(1971년 충북 출생)를 배우·가수·란제리 디자이너로, 1992년 영화 '結婚 이야기' 출연 이후 가수·모델로 활동을 확장했다고 아랍어로 소개함(WebFetch로 확인).",
+          "u": "https://areq.net/m/%D8%A3%D9%88%D9%85_%D8%AC%D9%88%D9%86%D8%BA_%D9%87%D9%88%D8%A7.html",
+          "tag": "loyalty",
+          "subtags": [
+            "영화"
+          ]
+        },
+        {
+          "t": "2020년 결성한 혼성 유닛 '환불원정대'의 데뷔곡 '돈터치미'가 가온 차트 1위를 기록, 음악 외 예능(놀면 뭐하니?) 파생 프로젝트로도 대중적 파급력을 입증했다",
+          "u": "https://en.wikipedia.org/wiki/Uhm_Jung-hwa",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "2002년 백상예술대상 영화부문 여자최우수연기상을 '결혼은 미친 짓이다'로 수상했다",
+          "u": "https://en.wikipedia.org/wiki/Uhm_Jung-hwa",
+          "tag": "spillover",
+          "subtags": [
+            "영화"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "성시경",
+      "category": "발라드",
+      "n_total_bullets": 80,
+      "n_media_bullets": 17,
+      "media_share": 0.2125,
+      "subtag_counts": {
+        "예능": 5,
+        "유튜브": 9,
+        "영화": 0,
+        "드라마": 3
+      },
+      "sample_bullets": [
+        {
+          "t": "시사저널은 성시경이 유튜브 채널(구독자 225만 명, '먹으면 좋으니까', '노래하면 좋으니까' 등 시리즈)과 KBS <더 시즌즈> MC('성시경의 다정한 남자') 활동을 겸하며 '멀티테이너'로 자리매김했다고 분석했다",
+          "u": "https://www.sisajournal.com/news/articleView.html?idxno=371941",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "유튜브 구독자 200만이 되었네요, 신기하기도 하고 (도대체 200만명은 어디에 있는걸까) 감사하기도 하고",
+          "u": "https://www.mydaily.co.kr/page/view/2024092913391138184",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "성시경의 유튜브 채널 구독자가 200만 명을 돌파했다. 본인 SNS를 통해 \"신기하기도 하고 감사하기도 하다\"며 앞으로도 재미난 콘텐츠를 만들어가겠다고 소감을 전했다.",
+          "u": "https://www.mydaily.co.kr/page/view/2024092913391138184",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "다비치",
+      "category": "발라드",
+      "n_total_bullets": 80,
+      "n_media_bullets": 17,
+      "media_share": 0.2125,
+      "subtag_counts": {
+        "예능": 0,
+        "유튜브": 1,
+        "영화": 0,
+        "드라마": 16
+      },
+      "sample_bullets": [
+        {
+          "t": "다비치 강민경이 개인 유튜브 채널을 운영하며 구독자 124만 명을 보유하고 있다.",
+          "u": "https://news.nate.com/view/20230829n37340",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "중국 시나닷컴(新浪) 기사는 《태양의 후예》 OST 다비치의 「이 사랑」(这份爱)에 대해 드라마가 끝난 뒤에도 무작위 재생으로 들으면 뭉클해진다며 '삽입곡은 그야말로 곡마다 명곡'(可谓是首首经典)이라 평하고 다비치의 가창을 '淋漓尽致'(여실히 표현했다)라고 극찬했다.",
+          "u": "https://k.sina.cn/article_5673230332_m152269ffc0330043e9.html",
+          "tag": "loyalty",
+          "subtags": [
+            "드라마"
+          ]
+        },
+        {
+          "t": "데뷔 이후 약 6~12개월 주기로 드라마 OST에 꾸준히 참여하며 '메인 커플 테마곡'의 단골 아티스트로 자리잡음.",
+          "u": "https://namu.wiki/w/%EB%8B%A4%EB%B9%84%EC%B9%98",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "츄",
+      "category": "솔로",
+      "n_total_bullets": 93,
+      "n_media_bullets": 17,
+      "media_share": 0.1828,
+      "subtag_counts": {
+        "예능": 4,
+        "유튜브": 7,
+        "영화": 0,
+        "드라마": 7
+      },
+      "sample_bullets": [
+        {
+          "t": "타이틀곡 뮤직비디오가 공개 일주일 만에 유튜브 조회수 1,600만 뷰를 돌파했다.",
+          "u": "https://plus.hankyung.com/apps/newsinside.view?aid=2023102556794",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "유튜브 채널 구독자 100만 명을 달성해 '골드 플레이 버튼'을 수상했다",
+          "u": "https://namu.wiki/w/%EC%B8%84%28%EA%B0%80%EC%88%98%29",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "츄의 유튜브 채널 '지구를 지켜츄'는 2022년 12월 지우상점 굿즈 판매 수익금 전액을 사단법인 한국음악발전소에 기부해 원로·신인 음악인의 자립을 도왔다.",
+          "u": "https://v.daum.net/v/20221229103951031?f=p",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "이찬원",
+      "category": "트로트",
+      "n_total_bullets": 106,
+      "n_media_bullets": 17,
+      "media_share": 0.1604,
+      "subtag_counts": {
+        "예능": 6,
+        "유튜브": 9,
+        "영화": 0,
+        "드라마": 2
+      },
+      "sample_bullets": [
+        {
+          "t": "이찬원 유튜브 채널 누적 조회수가 6억 뷰를 돌파했다는 보도.",
+          "u": "https://www.starnewskorea.com/star/2026/07/01/2026070107405279124",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "이찬원 유튜브 채널 구독자가 40만 명을 돌파했고 누적 조회수 5억 뷰 달성을 앞두고 있다는 기사.",
+          "u": "https://v.daum.net/v/20250110055002653",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "유튜브 채널 'Lee Chan Won'서 요리 콘텐츠 '또식당' 시리즈 운영",
+          "u": "https://namu.wiki/w/이찬원",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "거미",
+      "category": "발라드",
+      "n_total_bullets": 87,
+      "n_media_bullets": 16,
+      "media_share": 0.1839,
+      "subtag_counts": {
+        "예능": 3,
+        "유튜브": 1,
+        "영화": 1,
+        "드라마": 11
+      },
+      "sample_bullets": [
+        {
+          "t": "거미는 예능 프로그램에서 고향인 완도군 금당도에 자신의 이름을 딴 '거미 길'이 조성될 예정이라고 밝혔다.",
+          "u": "https://www.huffingtonpost.kr/article/114031",
+          "tag": "loyalty",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "'영화음악의 여왕' 거미(Gummy)의 근황을 다룬 베트남 매체 기사.",
+          "u": "https://kenh14.vn/nu-ca-si-hau-due-mat-troi-lan-dau-lo-dien-sau-tin-mang-thai-ba-xa-nha-tai-tu-jo-jung-suk-gay-den-dang-lo-20200409021913299.chn",
+          "tag": "loyalty",
+          "subtags": [
+            "영화"
+          ]
+        },
+        {
+          "t": "남편 조정석의 넷플릭스 음악 예능 'A-List to Playlist'에 뮤즈이자 조력자로 참여, 배우의 음악 활동 전환에 신뢰도를 더하는 파급 효과를 냄",
+          "u": "https://www.soompi.com/article/1682987wpp/gummy-gives-boost-to-jo-jung-suks-singing-debut-as-his-muse-in-new-variety-show",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "영탁",
+      "category": "트로트",
+      "n_total_bullets": 104,
+      "n_media_bullets": 16,
+      "media_share": 0.1538,
+      "subtag_counts": {
+        "예능": 5,
+        "유튜브": 1,
+        "영화": 2,
+        "드라마": 9
+      },
+      "sample_bullets": [
+        {
+          "t": "2020년 미스터트롯 오디션에서 1만7000명이 넘는 참가자 중 2위로 입상하며 트로트 장르 내 실력을 인정받았고, 대표곡 '찐이야'는 유튜브 조회수 450만 회를 기록했다",
+          "u": "https://www.pep.ph/guide/music/171227/youngtak-is-coming-to-manila-a721-20230130",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "드라마 '이상한 변호사 우영우' 등 다수 K-드라마 출연과 '힘쎈여자 강남순' 캐스팅 소식은 그의 팬덤이 기존 트로트 중장년층을 넘어 밀레니얼·Z세대까지 확장되고 있음을 시사한다",
+          "u": "https://www.pep.ph/guide/music/171227/youngtak-is-coming-to-manila-a721-20230130",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        },
+        {
+          "t": "영탁이 SBS 새 예능에 출연하며 인기를 이어가고 있으며, 스타랭킹 남자 트롯 부문 1위를 기록했다.",
+          "u": "https://www.starnewskorea.com/music/2026/05/21/2026052117064425465",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "이영지",
+      "category": "힙합",
+      "n_total_bullets": 107,
+      "n_media_bullets": 16,
+      "media_share": 0.1495,
+      "subtag_counts": {
+        "예능": 9,
+        "유튜브": 7,
+        "영화": 0,
+        "드라마": 1
+      },
+      "sample_bullets": [
+        {
+          "t": "케이팝레이더(K-POP RADAR)가 이영지의 유튜브·스포티파이·틱톡 팔로워, 팬카페 구독자 수를 실시간 지표로 추적·관리하고 있다.",
+          "u": "https://www.kpop-radar.com/LeeYoungji",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "《고등래퍼3》 우승, 《쇼미더머니11》 우승, 2023 AAA Best Choice Award, 2024 KBS 연예대상 예능·버라이어티 우수상 등 다수 수상 경력 확인",
+          "u": "https://en.wikipedia.org/wiki/Lee_Young-ji",
+          "tag": "loyalty",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "자체 유튜브 채널 '차린건 쥐뿔도 없지만'이 2022년 10월 26일 BTS 진 출연분으로 구독자 200만을 돌파했고, 개설 4개월 만에 누적 조회수 1억2000만 회를 기록했다",
+          "u": "https://news.tf.co.kr/read/entertain/1974654.htm",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "TWICE",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 191,
+      "n_media_bullets": 16,
+      "media_share": 0.0838,
+      "subtag_counts": {
+        "예능": 3,
+        "유튜브": 5,
+        "영화": 6,
+        "드라마": 2
+      },
+      "sample_bullets": [
+        {
+          "t": "트와이스가 뮤직비디오 3편에서 각각 유튜브 조회수 7억 뷰를 돌파했다고 코리아헤럴드가 보도",
+          "u": "https://www.koreaherald.com/article/10835710",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "요르단 매체 almrsal.com이 트와이스가 JYP 소속 2015년 10월 20일 데뷔, 팬덤명 '원스(Once)', 'Like OOH-AHH' 유튜브 1억 회·뮤직비디오 9편 각 2억 회 이상을 아랍어로 소개함(WebFetch로 확인).",
+          "u": "https://www.almrsal.com/post/1120751",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "대만 매체(ETtoday)가 쯔위를 \"台灣之光\"(대만의 자랑)으로 지칭하며 한국 예능 출연 중 태극기를 들고 있는 모습이 대만 여론에서 화제가 됨",
+          "u": "https://star.ettoday.net/news/601626",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "박정현",
+      "category": "발라드",
+      "n_total_bullets": 70,
+      "n_media_bullets": 15,
+      "media_share": 0.2143,
+      "subtag_counts": {
+        "예능": 3,
+        "유튜브": 2,
+        "영화": 1,
+        "드라마": 9
+      },
+      "sample_bullets": [
+        {
+          "t": "2011년 예능 출연을 계기로 팬들을 \"박정현과 빨대들\"로 부르는 등 자체 팬덤 명칭이 형성되어 온라인 커뮤니티에서 통용됨.",
+          "u": "https://namu.wiki/w/%EB%B0%95%EC%A0%95%ED%98%84",
+          "tag": "loyalty",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "공식 팬덤명 \"Piece Of Lena\"는 본인도 현재 잘 사용하지 않으며, 유튜브 구독자는 \"엘랑\"으로 불린다",
+          "u": "https://en.namu.wiki/w/%EB%B0%95%EC%A0%95%ED%98%84",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "박정현이 2011년 예능 '나는 가수다'에 출연하며 제2의 전성기를 맞았다.",
+          "u": "https://namu.wiki/w/박정현",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "린",
+      "category": "발라드",
+      "n_total_bullets": 78,
+      "n_media_bullets": 15,
+      "media_share": 0.1923,
+      "subtag_counts": {
+        "예능": 2,
+        "유튜브": 1,
+        "영화": 1,
+        "드라마": 11
+      },
+      "sample_bullets": [
+        {
+          "t": "2025년 마닐라 'KOSTCON 2025' K드라마 OST 콘서트에 헤이즈, 김범수, 케이윌, 소유, 이무진과 함께 출연",
+          "u": "https://www.bandwagon.asia/articles/lyn-kim-bum-soo-k-will-soyou-heize-and-lee-mujin-to-bring-iconic-k-drama-osts-to-manila-at-kostcon-2025",
+          "tag": "loyalty",
+          "subtags": [
+            "드라마"
+          ]
+        },
+        {
+          "t": "SBS '미운 우리 새끼', KBS '불후의 명곡' 왕중왕전 등 다수 음악 예능에 출연·심사위원으로 참여하며 방송 화제성과 노출을 지속 확대하고 있다.",
+          "u": "https://www.newsbuzz.co.kr/news/articleView.html?idxno=23478",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "'해를 품은 달' OST '시간을 거슬러', '별에서 온 그대' OST 'My Destiny' 등으로 2014년 백상예술대상 OST상, MAMA Best OST 부문을 수상하며 대형 흥행 드라마 OST 시장에서 입지를 굳혔다",
+          "u": "https://namu.wiki/w/%EB%A6%B0(%EA%B0%80%EC%88%98)",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "싸이",
+      "category": "솔로",
+      "n_total_bullets": 122,
+      "n_media_bullets": 15,
+      "media_share": 0.123,
+      "subtag_counts": {
+        "예능": 0,
+        "유튜브": 14,
+        "영화": 1,
+        "드라마": 0
+      },
+      "sample_bullets": [
+        {
+          "t": "'강남스타일'은 2010년대 빌보드 스트리밍 송 부문 1위에 오르고 유튜브 조회수 58억 3,800만 회를 넘기는 등 역대급 스트리밍 기록을 세웠다",
+          "u": "https://namu.wiki/w/%EC%8B%B8%EC%9D%B4",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "2017년 5월 25일 유튜브 다이아몬드 버튼을 받으며 아시아 솔로 아티스트 최초로 구독자 1000만 명을 돌파했다",
+          "u": "https://en.wikipedia.org/wiki/Psy",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "싸이 '강남스타일' 뮤직비디오가 유튜브 조회수 60억 뷰를 돌파, 싸이가 감사 영상으로 화답했다는 기사.",
+          "u": "https://www.topstarnews.net/news/articleView.html?idxno=16139632",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "워너원",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 123,
+      "n_media_bullets": 15,
+      "media_share": 0.122,
+      "subtag_counts": {
+        "예능": 0,
+        "유튜브": 1,
+        "영화": 5,
+        "드라마": 10
+      },
+      "sample_bullets": [
+        {
+          "t": "워너원 출신 라이관린, 연기자 됐다···중국 드라마 출연. 그룹 '워너원' 출신 라이관린(18)이 연기 활동을 병행한다. 소속사 큐브 엔터테인먼트에 따르면 라이관린은 중국 드라마 '초연나건소사(初戀那件小事)' 출연을 확정했다.",
+          "u": "https://www.newsis.com/view/NISX20190128_0000543475",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        },
+        {
+          "t": "워너원 멤버 이대휘·이종혁·유선·전소미가 MBC '라디오스타'에 출연해 재결합 배경을 밝히며, 같은 멤버 박지훈의 영화 '왕과 사는 남자' 흥행이 재결합 추진에 힘을 실었다고 언급했다.",
+          "u": "https://v.daum.net/v/20260429233702348",
+          "tag": "spillover",
+          "subtags": [
+            "영화"
+          ]
+        },
+        {
+          "t": "워너원 출신 옹성우가 JTBC 월화드라마 '열여덟의 순간'에서 배우로서 첫 주연을 맡아 고독한 소년 '최준우' 역을 연기하며, '새로운 시작을 앞두고 불안하기도 하고, 기대된다'고 소감을 밝혔다.",
+          "u": "https://www.hankookilbo.com/News/Read/201901170977016763",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "NCT",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 164,
+      "n_media_bullets": 15,
+      "media_share": 0.0915,
+      "subtag_counts": {
+        "예능": 2,
+        "유튜브": 2,
+        "영화": 3,
+        "드라마": 9
+      },
+      "sample_bullets": [
+        {
+          "t": "윈윈, 신작 드라마 《恰逢春》 남자주인공 캐스팅(2026.5.27 촬영 돌입)",
+          "u": "https://www.sina.cn/news/detail/5296830302651927.html",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        },
+        {
+          "t": "NCT 재현, 연기 볼 수 있나…드라마 '번지점프를 하다' 주연",
+          "u": "https://news.sbs.co.kr/news/endPage.do?news_id=N1006520216",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        },
+        {
+          "t": "NCT 재민, 드라마 '너를 싫어하는 방법' 출연! 연기 첫 도전 '기대'",
+          "u": "https://www.smentertainment.com/en/newsroom/nct-%EC%9E%AC%EB%AF%BC-%EB%93%9C%EB%9D%BC%EB%A7%88-%EB%84%88%EB%A5%BC-%EC%8B%AB%EC%96%B4%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95-%EC%B6%9C%EC%97%B0-%EC%97%B0%EA%B8%B0-%EC%B2%AB/",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "악동뮤지션",
+      "category": "혼성",
+      "n_total_bullets": 74,
+      "n_media_bullets": 14,
+      "media_share": 0.1892,
+      "subtag_counts": {
+        "예능": 6,
+        "유튜브": 3,
+        "영화": 2,
+        "드라마": 4
+      },
+      "sample_bullets": [
+        {
+          "t": "공식 팬클럽명은 '악카데미(AKKADEMY)'이며 유튜브 채널이 골드 플레이 버튼(구독자 100만 명 이상)을 획득했다.",
+          "u": "https://namu.wiki/w/AKMU",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "이찬혁, '나 혼자 산다'에 출연해 애정 가득한 개구리 피규어 컬렉션을 공개하며 예능감을 발휘",
+          "u": "http://sf.koreatimes.com/article/20230824/1478511",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "K팝스타 시즌2 우승 이후 주간아이돌·마이리틀텔레비전·유희열의스케치북·놀라운토요일·아는형님 등 예능 다수 출연",
+          "u": "https://namu.wiki/w/AKMU",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "aespa",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 158,
+      "n_media_bullets": 14,
+      "media_share": 0.0886,
+      "subtag_counts": {
+        "예능": 8,
+        "유튜브": 2,
+        "영화": 3,
+        "드라마": 1
+      },
+      "sample_bullets": [
+        {
+          "t": "닝닝, 중국 텐센트(Tencent) 오디션 프로그램 'The Next Stage 2023'에 멘토로 출연 확정(aespa 멤버 중 최초 중국 예능 데뷔)",
+          "u": "https://www.allkpop.com/article/2023/06/aespas-ningning-expected-to-make-her-chinese-variety-show-debut-as-a-mentor-on-tencent-audition-program-the-next-stage-2023",
+          "tag": "loyalty",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "'냉부해' 계속된다..카리나X윈터 출격 \"오늘 무리할 예정\" 미소 활짝. 카리나는 \"오늘 무리할 예정입니다. 이번 편이 제일 재미있었으면 좋겠다\"라고 말했다. 두 멤버는 셰프들과의 댄스 타임, 5분 현장 점검 등에 나서며 물오른 예능감도 과시했다.",
+          "u": "https://www.starnewskorea.com/broadcast-show/2026/06/30/2026063007452787941",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "에스파 카리나·윈터가 예능 '냉장고를 부탁해'에 출연해 숙소 분리 후 첫 냉장고를 공개했다고 인디뉴스가 보도",
+          "u": "https://www.indinews.co.kr/news/articleView.html?idxno=12624",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "아이오아이",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 95,
+      "n_media_bullets": 13,
+      "media_share": 0.1368,
+      "subtag_counts": {
+        "예능": 3,
+        "유튜브": 1,
+        "영화": 4,
+        "드라마": 5
+      },
+      "sample_bullets": [
+        {
+          "t": "아이오아이 출신 김세정의 고향 집이 전북 김제에 있음을 예능 프로그램에서 공개",
+          "u": "https://m.news.nate.com/view/20210331n11014",
+          "tag": "loyalty",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "2026년 재결합은 단순 음악 활동을 넘어 콘서트·리얼리티쇼·글로벌 투어를 결합한 \"IP 확장 전략\"의 사례로 분석되었으며, 멤버 박지훈의 영화 \"더 킹스맨\"(1673만 관객, 역대 국내 흥행 2위) 등 개별 멤버의 성공이 재결합 시너지로 이어졌다는 산업 평가를 받았다",
+          "u": "https://en.sedaily.com/culture/2026/05/01/wanna-one-and-ioi-national-producers-picks-set-to-return",
+          "tag": "spillover",
+          "subtags": [
+            "영화"
+          ]
+        },
+        {
+          "t": "[AJU★이슈] '아이오아이 출신' 김세정-정채연, '연기돌'로 나란히 변신…인기 바통 잇는다. 지난해 국민 프로듀서들의 선택을 받고 짧고 굵게 활동하며 큰 사랑을 받았던 걸그룹 아이오아이(I.O.I) 출신 멤버들이 다방면에서 활약을 펼치고 있는 가운데, 현재 걸그룹 구구단과 다이아에서 각각 활동하고 있는 김세정, 정채연이 비슷한 시기에 드라마 주연으로 발탁 돼 이들의 쉼없는 활약이 연일 화제가 되고 있다.",
+          "u": "https://www.ajunews.com/view/20170608082659984",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "Crush",
+      "category": "솔로",
+      "n_total_bullets": 99,
+      "n_media_bullets": 13,
+      "media_share": 0.1313,
+      "subtag_counts": {
+        "예능": 4,
+        "유튜브": 1,
+        "영화": 0,
+        "드라마": 8
+      },
+      "sample_bullets": [
+        {
+          "t": "드라마 '도깨비' OST '뷰티풀'은 다운로드 250만 건을 기록했고, '사랑의 불시착' OST 'Let Us Go' 참여 등 드라마 흥행과 맞물린 스필오버 효과가 반복적으로 확인된다",
+          "u": "https://en.wikipedia.org/wiki/Crush_(singer)",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        },
+        {
+          "t": "Zico와 함께 '쇼미더머니12'(2026.1.15~) 프로듀서로 참여, 팀원 김하온이 우승하며 예능·힙합 신에서 영향력을 확장했다",
+          "u": "https://namu.wiki/w/Crush(가수)",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "나 혼자 산다, 무한도전, 런닝맨, 해피투게더, 라디오스타 등 다수 예능 출연(2016~2024)",
+          "u": "https://namu.wiki/w/Crush(%EA%B0%80%EC%88%98)",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "정동원",
+      "category": "트로트",
+      "n_total_bullets": 107,
+      "n_media_bullets": 13,
+      "media_share": 0.1215,
+      "subtag_counts": {
+        "예능": 4,
+        "유튜브": 3,
+        "영화": 3,
+        "드라마": 5
+      },
+      "sample_bullets": [
+        {
+          "t": "정동원의 유튜브 채널이 순항 중이며 디시트렌드 유튜버 부문에서 1위를 기록했다는 기사.",
+          "u": "http://www.srtimes.kr/news/articleView.html?idxno=178458",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "해병대 복무 중인 정동원이 유튜브 채널에서 '이등병의 편지'를 부르며 팬클럽 '우주총동원'을 향해 인사를 전하자 팬들 사이에서 뜨거운 반응과 응원이 이어졌다.",
+          "u": "https://www.cbci.co.kr/news/articleView.html?idxno=602011",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "2021년 영화 '소름'과 드라마 '구필수는 없다'에 출연하며 배우로 활동 영역을 확장했다.",
+          "u": "https://namu.wiki/w/%EC%A0%95%EB%8F%99%EC%9B%90",
+          "tag": "spillover",
+          "subtags": [
+            "영화",
+            "드라마"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "아일릿",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 107,
+      "n_media_bullets": 13,
+      "media_share": 0.1215,
+      "subtag_counts": {
+        "예능": 4,
+        "유튜브": 8,
+        "영화": 1,
+        "드라마": 1
+      },
+      "sample_bullets": [
+        {
+          "t": "2026년 5월 신곡 'It's Me'가 멜론·애플뮤직·유튜브 등 주요 음원 차트 '톱10'에 안착, 발매 직후 국내 팬덤의 즉각적인 스트리밍 총공 화력을 보여줌",
+          "u": "https://v.daum.net/v/20260511073916421",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "아일릿, 유튜브 청취자 5억 8000만 명…폭발적 글로벌 성장세. 그룹 아일릿(ILLIT)이 글로벌 음악 시장에서 폭발적인 성장세를 보여주고 있다. 16일 소속사 빌리프랩에 따르면 아일릿(윤아 민주 모카 원희 이로하)은 15일 기준 유튜브 뮤직 월간 시청자 수 총 5억 8300만 명을 돌파했다.",
+          "u": "https://news.tf.co.kr/read/entertain/2282855.htm",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "아일릿 '잇츠미' 뮤직비디오가 공개(4월 30일) 79일 만인 7월 18일 유튜브 조회수 1억 회를 돌파해 팀 통산 두 번째 1억뷰 MV를 기록했으며, 이는 데뷔곡 '마그네틱'보다 빠른 속도였다.",
+          "u": "https://v.daum.net/v/20260719165845870",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "소녀시대",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 122,
+      "n_media_bullets": 13,
+      "media_share": 0.1066,
+      "subtag_counts": {
+        "예능": 5,
+        "유튜브": 3,
+        "영화": 3,
+        "드라마": 7
+      },
+      "sample_bullets": [
+        {
+          "t": "윤아는 뛰어난 연기로 호평을 받은데 이어, 올 3월 말 장근석과 함께 '사랑비'(KBS)를 통해 다시 안방극장에 찾아온다. 제시카는 '난폭한 로맨스'(KBS)에서 강종희 역으로 연기자로 첫 데뷔해 실력을 인정받고 있다. 유리는 올 3월 방송 예정인 '패션왕'(SBS)에서 출연하며, 태연, 서현, 티파니는 '음악중심'(MBC) 공동 MC로 활약하고 있으며 효연과 써니는 예능 '청춘불패2'(KBS)에 출연 중이다.",
+          "u": "https://biz.heraldcorp.com/article/10192397",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "유리는 JTBC 드라마 <협상의 기술>에서는 재벌가 딸 송지오 역을 맡아 삶의 유한함과 진심의 무게를 섬세하게 그려냈다. 영화 <침범>에서는 과거의 기억을 잃고 고독사 현장을 정리하는 특수청소업체 직원 김민으로 분해. 수영은 tvN 월화드라마 <금주를 부탁해>에서 타이틀롤 '한금주'를 맡아 또 다른 매력을 펼치고 있다. 윤아는 <폭군의 셰프>에서 프랑스에서 셰프로 활약하던 연지영으로, 영화 <악마가 이사왔다>에서는 아랫집에 사는 사랑스러운 여자 정선지로 분해. 서현은 영화 <거룩한 밤: 데몬 헌터스>에서는 악을 추적하는 구마자 샤론으로 분해, KBS 2TV 드라마 <남주의 첫날밤을 가져버렸다>에서는 전혀 다른 톤의 판타지 로맨스를 펼친다.",
+          "u": "https://www.harpersbazaar.co.kr/article/1881637",
+          "tag": "spillover",
+          "subtags": [
+            "영화",
+            "드라마"
+          ]
+        },
+        {
+          "t": "소녀시대 윤아가 2023년 JTBC 드라마 '킹더랜드'에서 호텔리어 천사랑 역을 맡았다.",
+          "u": "https://v.daum.net/v/2rDeNaXeJ5",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "BLACKPINK",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 195,
+      "n_media_bullets": 13,
+      "media_share": 0.0667,
+      "subtag_counts": {
+        "예능": 0,
+        "유튜브": 8,
+        "영화": 5,
+        "드라마": 2
+      },
+      "sample_bullets": [
+        {
+          "t": "베트남 매체 단찌는 2026년 2월 발매된 미니앨범 'Deadline'이 발매 첫날 약 150만 장이 팔려 그룹 커리어 최고 초동 기록을 세웠고, 타이틀곡 'Go' 뮤직비디오는 공개 8분 만에 유튜브 조회수 100만 회, 하루 만에 2100만 회를 돌파했다고 보도했다 - 팬덤의 강력한 소비력을 보여주는 지표다",
+          "u": "https://dantri.com.vn/giai-tri/blackpink-lap-ky-luc-moi-mv-go-dat-21-trieu-luot-xem-trong-1-ngay-20260228134248959.htm",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "블랙핑크(BLACKPINK)가 유튜브 구독자 1억 명을 돌파하며 공식 아티스트 채널로서는 유튜브 역사상 최초로 이 기념비적인 고지에 올랐습니다.",
+          "u": "https://blog.youtube/intl/ko-kr/creator-and-artist-stories/blackpink-100-million-youtube-subscribers/",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "블랙핑크의 'Ice Cream'(아이스크림) 뮤직비디오는 전날 오후 4시 12분께 유튜브 조회수 10억 회를 넘어섰다. 팀 통산 10번째 10억 뷰 영상으로, 이는 K팝 아티스트 가운데 최다 보유 기록이다.",
+          "u": "https://plus.hankyung.com/apps/newsinside.view?aid=2026041641784&category=&sns=y",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "BTS",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 227,
+      "n_media_bullets": 13,
+      "media_share": 0.0573,
+      "subtag_counts": {
+        "예능": 2,
+        "유튜브": 6,
+        "영화": 4,
+        "드라마": 1
+      },
+      "sample_bullets": [
+        {
+          "t": "방탄소년단 정국의 유튜브 토픽 채널 구독자가 400만 명을 돌파, K팝 솔로 아티스트 최초·최다 기록을 세웠다는 스타뉴스 보도.",
+          "u": "https://www.starnewskorea.com/music/2025/12/23/2025122307301116651",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "방탄소년단 정국이 2025년 유튜브에서 가장 많이 검색된 남자 아이돌 1위에 올랐다는 스타뉴스 K-EYES 보도.",
+          "u": "https://www.starnewskorea.com/music/2025/12/29/2025122914175643564",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "현대자동차는 이노션과 함께 BTS의 곡 'Yet To Come'을 활용한 'Goal of the Century' 캠페인을 진행했으며, 관련 뮤직비디오는 공개 일주일 만에 유튜브 조회수 3,700만회, 틱톡 챌린지는 5일 만에 해시태그 조회수 43억건을 기록했다.",
+          "u": "https://innosight.innocean.com/project/%ED%98%84%EB%8C%80%EC%9E%90%EB%8F%99%EC%B0%A8-goal-of-the-century-x-bts",
+          "tag": "spillover",
+          "subtags": [
+            "유튜브"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "케이윌",
+      "category": "발라드",
+      "n_total_bullets": 71,
+      "n_media_bullets": 12,
+      "media_share": 0.169,
+      "subtag_counts": {
+        "예능": 3,
+        "유튜브": 4,
+        "영화": 0,
+        "드라마": 6
+      },
+      "sample_bullets": [
+        {
+          "t": "케이윌이 2026년 데뷔 19주년을 맞아 유튜브 라이브로 팬들과 특별한 시간을 가졌다고 텐아시아가 보도했다.",
+          "u": "https://www.tenasia.co.kr/article/2026030639094",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "케이윌은 경기도 여주시 출신으로, 예능 콘텐츠 '형수는 케이윌'에서 유년 시절을 보낸 여주시 낙원주택을 직접 찾아가는 모습을 보였다.",
+          "u": "https://tvreport.co.kr/breaking/article/882155/",
+          "tag": "loyalty",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "2025년 마닐라 'KOSTCON 2025' K드라마 OST 콘서트에 린, 헤이즈, 김범수, 소유, 이무진과 함께 출연",
+          "u": "https://www.bandwagon.asia/articles/lyn-kim-bum-soo-k-will-soyou-heize-and-lee-mujin-to-bring-iconic-k-drama-osts-to-manila-at-kostcon-2025",
+          "tag": "loyalty",
+          "subtags": [
+            "드라마"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "백지영",
+      "category": "발라드",
+      "n_total_bullets": 72,
+      "n_media_bullets": 12,
+      "media_share": 0.1667,
+      "subtag_counts": {
+        "예능": 1,
+        "유튜브": 4,
+        "영화": 2,
+        "드라마": 5
+      },
+      "sample_bullets": [
+        {
+          "t": "나무위키에 따르면 백지영의 공식 유튜브 채널 '백지영 Baek Z Young'은 구독자 30만2000명을 보유하고 있으며, 2024년 12월 미니 4집 'Ordinary Grace'를 발매하는 등 데뷔 25년이 넘은 시점까지도 팬덤과의 장기 소통 채널을 유지하고 있다",
+          "u": "https://namu.wiki/w/백지영",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "'영화음악의 여왕' 백지영이 베트남에서 단독 콘서트를 개최했다.",
+          "u": "https://tuoitre.vn/nu-hoang-nhac-phim-baek-ji-young-to-chuc-concert-tai-viet-nam-20260209120914088.htm",
+          "tag": "loyalty",
+          "subtags": [
+            "영화"
+          ]
+        },
+        {
+          "t": "'시크릿 가든', '아이리스', '옥탑방 왕세자' 등 대형 흥행 드라마 OST를 잇달아 히트시키며 'OST 퀸'이라는 별칭을 얻음",
+          "u": "https://kbizoom.com/the-full-of-tears-life-of-ost-queen-baek-ji-young/",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "볼빨간사춘기",
+      "category": "솔로",
+      "n_total_bullets": 88,
+      "n_media_bullets": 12,
+      "media_share": 0.1364,
+      "subtag_counts": {
+        "예능": 3,
+        "유튜브": 5,
+        "영화": 0,
+        "드라마": 4
+      },
+      "sample_bullets": [
+        {
+          "t": "볼빨간사춘기 '썸 탈꺼야' MV, 데뷔 후 첫 유튜브 1억뷰 돌파 (스타뉴스, 2022.01.21)",
+          "u": "https://www.starnewskorea.com/music/2022/01/21/2022012118430564051",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "숙박 플랫폼 '여기어때' 광고에 폴킴과 함께 출연, 공개 한 달 만에 유튜브 조회수 1200만 회를 넘기며 광고 화제성을 입증했다.",
+          "u": "https://www.kpinews.kr/newsView/179546456179342",
+          "tag": "spillover",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "볼빨간사춘기 \"썸 탈꺼야\"는 2017년 9월 발매곡으로, 2022년 1월 20일 자정 무렵 유튜브 뮤직비디오 조회수 1억 회를 돌파해 데뷔 후 첫 1억뷰 기록을 세웠으며 발매 당시 국내 주요 음원차트 1위를 차지했다",
+          "u": "https://www.starnewskorea.com/music/2022/01/21/2022012118430564051",
+          "tag": "spillover",
+          "subtags": [
+            "유튜브"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "송가인",
+      "category": "트로트",
+      "n_total_bullets": 92,
+      "n_media_bullets": 12,
+      "media_share": 0.1304,
+      "subtag_counts": {
+        "예능": 2,
+        "유튜브": 4,
+        "영화": 5,
+        "드라마": 4
+      },
+      "sample_bullets": [
+        {
+          "t": "유튜브 구독자 10만 명 돌파로 실버버튼 획득(2025.8)",
+          "u": "https://www.sportsseoul.com/news/read/1540755",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "송가인, 컴백을 앞두고 유튜브 구독자 10만 돌파해 실버 버튼 받아",
+          "u": "https://www.sportsworldi.com/newsView/20250825513225",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "송가인, 유튜브 채널 구독자 10만명 돌파…실버 버튼에 감격",
+          "u": "https://www.news1.kr/entertain/music/5889884",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "FTISLAND",
+      "category": "K-pop 보이그룹 /록",
+      "n_total_bullets": 73,
+      "n_media_bullets": 11,
+      "media_share": 0.1507,
+      "subtag_counts": {
+        "예능": 4,
+        "유튜브": 1,
+        "영화": 1,
+        "드라마": 7
+      },
+      "sample_bullets": [
+        {
+          "t": "그룹 FT아일랜드의 이홍기가 드라마로 돌아온다. 방송 관계자들에 따르면 이홍기는 내년 2월 종편채널 TV조선에서 방영되는 미니시리즈 '백년의 신부'의 남자 주인공으로 확정됐다.",
+          "u": "https://news.sbs.co.kr/news/endPage.do?news_id=N1002114597",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        },
+        {
+          "t": "이홍기는 일본 TBS, MBS에서 오는 4월부터 방영하는 드라마 '머슬 걸(Muscle girl!)'에 남자 주인공으로 발탁돼 현재 드라마 준비에 한창이다.",
+          "u": "https://v.daum.net/v/M0MqR9aGFD",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        },
+        {
+          "t": "밴드 'FT아일랜드' 멤버 이홍기가 '라디오 스타'에서 예능 복귀 신고식을 치른다. 그는 2019년 입대 이후 2년 만에 돌아왔다.",
+          "u": "https://www.newsis.com/view/NISX20210504_0001429468",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "브라운아이즈",
+      "category": "발라드",
+      "n_total_bullets": 82,
+      "n_media_bullets": 11,
+      "media_share": 0.1341,
+      "subtag_counts": {
+        "예능": 3,
+        "유튜브": 4,
+        "영화": 1,
+        "드라마": 4
+      },
+      "sample_bullets": [
+        {
+          "t": "브라운아이드소울(나얼 포함)이 데뷔 후 처음으로 유튜브 채널 '테오'의 예능 '살롱드립2'에 단체 출연, 나얼이 성대 폴립으로 2년간 소리를 못 냈던 사정을 직접 밝혔다(2025.10.15).",
+          "u": "https://sports.khan.co.kr/article/202510151112003",
+          "tag": "spillover",
+          "subtags": [
+            "예능",
+            "유튜브"
+          ]
+        },
+        {
+          "t": "멤버 나얼이 영화 '긴급조치 19호'(2002)에 출연",
+          "u": "https://namu.wiki/w/%EB%B8%8C%EB%9D%BC%EC%9A%B4%20%EC%95%84%EC%9D%B4%EC%A6%88",
+          "tag": "spillover",
+          "subtags": [
+            "영화"
+          ]
+        },
+        {
+          "t": "드라마 '연애시대'(2006) 사운드트랙에 '옛 사랑' 삽입",
+          "u": "https://namu.wiki/w/%EB%B8%8C%EB%9D%BC%EC%9A%B4%20%EC%95%84%EC%9D%B4%EC%A6%88",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "권은비",
+      "category": "솔로",
+      "n_total_bullets": 90,
+      "n_media_bullets": 11,
+      "media_share": 0.1222,
+      "subtag_counts": {
+        "예능": 1,
+        "유튜브": 1,
+        "영화": 6,
+        "드라마": 3
+      },
+      "sample_bullets": [
+        {
+          "t": "2023년 11월 7일 MBC 데이팅 예능 '동창회의 목적' MC로 발탁이 발표됐다",
+          "u": "https://en.wikipedia.org/wiki/Kwon_Eun-bi",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "권은비가 출연하는 영화 '스마트폰을 떨어뜨렸을 뿐인데: 라스트 해커'(감독 나카타 히데오, 이하 '라스트 해커')가 오는 6월 개봉한다. 권은비는 반정부 단체의 일원이자 베일에 싸인 감시자 수민 역을 맡아 스크린 데뷔에 나선다",
+          "u": "https://v.daum.net/v/20250529101852610",
+          "tag": "spillover",
+          "subtags": [
+            "영화"
+          ]
+        },
+        {
+          "t": "권은비, 일본 영화로 스크린 데뷔하며 감독으로부터 '연기 훌륭하다'는 호평을 받음 (SBS뉴스).",
+          "u": "https://news.sbs.co.kr/news/endPage.do?news_id=N1007456720",
+          "tag": "spillover",
+          "subtags": [
+            "영화"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "박효신",
+      "category": "발라드",
+      "n_total_bullets": 91,
+      "n_media_bullets": 11,
+      "media_share": 0.1209,
+      "subtag_counts": {
+        "예능": 1,
+        "유튜브": 2,
+        "영화": 3,
+        "드라마": 5
+      },
+      "sample_bullets": [
+        {
+          "t": "첫 번째는 (방송에) 실물보다 좀 안 나와서 걱정됐고, 두 번째는 예능에서 민폐가 되지 않을까 걱정됐다",
+          "u": "https://www.newsis.com/view/NISX20241226_0003010317",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "박효신이 영화 '뷰티풀 투모로우'에 주연으로 출연했다.",
+          "u": "https://namu.wiki/w/박효신",
+          "tag": "spillover",
+          "subtags": [
+            "영화"
+          ]
+        },
+        {
+          "t": "박효신은 영화 '뷰티풀 투모로우'에서 쿠바 소년 음악가 라파엘 역으로 주연을 맡았다.",
+          "u": "https://namu.wiki/w/박효신",
+          "tag": "spillover",
+          "subtags": [
+            "영화"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "god",
+      "category": "원로그룹",
+      "n_total_bullets": 99,
+      "n_media_bullets": 11,
+      "media_share": 0.1111,
+      "subtag_counts": {
+        "예능": 5,
+        "유튜브": 2,
+        "영화": 2,
+        "드라마": 2
+      },
+      "sample_bullets": [
+        {
+          "t": "MBC 'god의 육아일기'(2000.1~2001.5), 관찰 예능 시초로 멤버 전원(손호영·박준형·윤계상·김태우·데니안)이 아기를 돌보는 콘셉트로 국민 그룹 성장의 발판",
+          "u": "https://ko.wikipedia.org/wiki/God%EC%9D%98_%EC%9C%A1%EC%95%84%EC%9D%BC%EA%B8%B0",
+          "tag": "loyalty",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "데뷔 28년 차 god가 데뷔 1만일 기념 'Sky Blue Balloon Week' 테마파크 행사를 성황리에 열었고, 팬 투표 플랫폼 Bstage 팀워크 부문 1위·손호영 개인 부문 1위, 공식 팬클럽 '팬지오디'의 예능 '팬덤 스테이지' 출연 등으로 견고한 팬덤 결속력을 보여줬다.",
+          "u": "https://sports.khan.co.kr/en/article/202608282055007/",
+          "tag": "loyalty",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "K팝 팬덤 서바이벌 예능 '팬덤스테이지'(웨이브)에 fangod 소속 팬 4인이 출연했는데, 이들의 팬 활동 경력을 합치면 110년에 달해 '1세대 팬덤 대표주자'로 소개됐다.",
+          "u": "https://v.daum.net/v/4GbXZatWH6?f=p",
+          "tag": "loyalty",
+          "subtags": [
+            "예능"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "DAY6",
+      "category": "K-pop 보이그룹 /록",
+      "n_total_bullets": 101,
+      "n_media_bullets": 11,
+      "media_share": 0.1089,
+      "subtag_counts": {
+        "예능": 4,
+        "유튜브": 4,
+        "영화": 2,
+        "드라마": 2
+      },
+      "sample_bullets": [
+        {
+          "t": "DAY6가 2025년 8월 그룹 첫 영화 '6DAYS'(음악 로드무비)를 개봉했다.",
+          "u": "https://m.heraldmuse.com/article/10573760",
+          "tag": "loyalty",
+          "subtags": [
+            "영화"
+          ]
+        },
+        {
+          "t": "2025년 유튜브 뮤직 스트리밍 5억 6,400만 회를 기록해 성별 불문 K팝 아티스트 중 최고치를 달성했다.",
+          "u": "https://namu.wiki/w/DAY6",
+          "tag": "spillover",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "음악 다큐 영화 '6DAYS' 국내 개봉 첫 4일간 3만 장, 둘째 주말까지 4만 장 이상 티켓 판매(2025년 8월)",
+          "u": "https://en.wikipedia.org/wiki/Day6",
+          "tag": "spillover",
+          "subtags": [
+            "영화"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "Hearts2Hearts",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 102,
+      "n_media_bullets": 11,
+      "media_share": 0.1078,
+      "subtag_counts": {
+        "예능": 4,
+        "유튜브": 7,
+        "영화": 0,
+        "드라마": 0
+      },
+      "sample_bullets": [
+        {
+          "t": "유튜브 구독자 361만 명, 인스타그램 팔로워 550만 명, 틱톡 팔로워 770만 명(2026년 8월 기준)으로 데뷔 1년 반 만에 대규모 글로벌 팬덤을 형성했다.",
+          "u": "https://en.wikipedia.org/wiki/Hearts2Hearts",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "하츠투하츠 공식 유튜브 채널의 누적 조회수가 2026년 8월 2일 기준 약 17억 1,787만 회(1,717,874,325회)를 기록하며 채널 콘텐츠 화제성이 이어지고 있다.",
+          "u": "https://namu.wiki/w/Hearts2Hearts",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "하츠투하츠는 2026년 8월 16일 기준 유튜브 구독자 361만 명, 인스타그램 팔로워 550만 명, 틱톡 팔로워 770만 명 이상, 위버스 멤버 214만 명을 기록하며 공식 채널·SNS 콘텐츠 영향력을 확대했다.",
+          "u": "https://namu.wiki/w/Hearts2Hearts",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "아이유",
+      "category": "솔로",
+      "n_total_bullets": 110,
+      "n_media_bullets": 11,
+      "media_share": 0.1,
+      "subtag_counts": {
+        "예능": 0,
+        "유튜브": 2,
+        "영화": 5,
+        "드라마": 4
+      },
+      "sample_bullets": [
+        {
+          "t": "2024년 NME와 빌보드가 그를 '퀸 오브 케이팝'으로, 2025년 포브스코리아는 '퀸 오브 케이팝 앤 케이드라마'로 칭했다",
+          "u": "https://en.wikipedia.org/wiki/IU_(singer)",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        },
+        {
+          "t": "제75회 칸 국제영화제 경쟁 부문 공식 초청작 '브로커'의 가수 겸 배우 이지은(아이유) 씨가 베이비 박스에 아기를 두고 간 이유도, 다시 돌아온 이유도 알 수 없는 '소영' 역으로 지금껏 보지 못한 새로운 연기 변신에 나선다.",
+          "u": "https://www.ytn.co.kr/_ln/0117_202204270925175334",
+          "tag": "spillover",
+          "subtags": [
+            "영화"
+          ]
+        },
+        {
+          "t": "아이유와 변우석이 출연하는 왕실 로맨스 드라마 '21세기 대군부인' 예고편이 선공개됐다는 마리끌레르코리아 기사.",
+          "u": "https://www.marieclairekorea.com/culture/film/2026/04/iu-byeonwooseok/",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "지드래곤 (G-Dragon)",
+      "category": "힙합",
+      "n_total_bullets": 133,
+      "n_media_bullets": 11,
+      "media_share": 0.0827,
+      "subtag_counts": {
+        "예능": 8,
+        "유튜브": 0,
+        "영화": 3,
+        "드라마": 0
+      },
+      "sample_bullets": [
+        {
+          "t": "가수 지드래곤의 프로젝트로 주목받은 MBC 예능 '굿데이(Good Day)'(제작 TEO)가 2월 16일 처음으로 방송된다.",
+          "u": "https://www.munhwa.com/article/11479700",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "경향신문: '연예인의 연예인' 지드래곤의 첫 고정출연 예능, '굿데이' - MBC 음악 예능 '굿데이' 고정 출연 소식",
+          "u": "https://www.khan.co.kr/article/202502141801177",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "다음뉴스: 지드래곤 다시 예능으로… '굿데이' 시즌 2 제작 확정",
+          "u": "https://v.daum.net/v/20251210152314739",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "윤도현",
+      "category": "록",
+      "n_total_bullets": 71,
+      "n_media_bullets": 10,
+      "media_share": 0.1408,
+      "subtag_counts": {
+        "예능": 4,
+        "유튜브": 4,
+        "영화": 2,
+        "드라마": 0
+      },
+      "sample_bullets": [
+        {
+          "t": "2025년 7월 신규 유튜브 채널 '윤도현의기타등등'을 개설해 팬과의 소통 채널을 확장함",
+          "u": "https://namu.wiki/w/%EC%9C%A4%EB%8F%84%ED%98%84",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "윤도현(YB)은 2020년 1월 개설한 개인 유튜브 채널 '윤도현 Yoon Do Hyun'에서 구독자를 '지푸라기'라는 애칭으로 부르며 소통하고 있으며, 이 채널은 구독자 약 10.2만 명(실버버튼)을 보유하고 마이크 없이 라이브를 들려주는 '집라이브' 등 팬 친화적 콘텐츠를 운영한다.",
+          "u": "https://namu.wiki/w/%EC%9C%A4%EB%8F%84%ED%98%84/%EC%9C%A0%ED%8A%9C%EB%B8%8C",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "윤도현(YB)이 넷플릭스 스포츠 서바이벌 예능 '최강럭비: 죽거나 승리하거나'의 음악감독으로 참여, 7개월간 17곡을 제작했다(2024.12.2, 공개 12.10).",
+          "u": "https://www.newspim.com/news/view/20241202000530",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "BTOB",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 82,
+      "n_media_bullets": 10,
+      "media_share": 0.122,
+      "subtag_counts": {
+        "예능": 3,
+        "유튜브": 0,
+        "영화": 2,
+        "드라마": 5
+      },
+      "sample_bullets": [
+        {
+          "t": "BTOB 태국 방문, 현지 예능 프로그램 '뜬마콰이(ตื่นมาคุย)' 출연",
+          "u": "https://musicstation.kapook.com/view66168.html",
+          "tag": "loyalty",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "태국 매체 Thairath는 2024년 1월 메이저 시네플렉스가 BTOB 데뷔 10주년 콘서트 실황영화 'BTOB TIME: Be Together THE MOVIE'를 태국 극장에서 독점 상영한다고 보도해, 팬덤 콘텐츠가 현지 멀티플렉스 체인과의 상업적 협업으로 이어진 사례를 보여준다",
+          "u": "https://www.thairath.co.th/newspaper/column/category/lifestyle/2756494",
+          "tag": "spillover",
+          "subtags": [
+            "영화"
+          ]
+        },
+        {
+          "t": "육성재는 2026년 하반기 방영 예정인 SBS 새 드라마 '나인 투 식스'(연출 이형민, 오송희 /극본 최지오 /제작 스튜디오S, 삼화네트웍스)에 한선우 역으로 출연한다.",
+          "u": "https://www.ytn.co.kr/_ln/0117_202603240913357344",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "리센느(RESCENE)",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 85,
+      "n_media_bullets": 10,
+      "media_share": 0.1176,
+      "subtag_counts": {
+        "예능": 2,
+        "유튜브": 7,
+        "영화": 0,
+        "드라마": 1
+      },
+      "sample_bullets": [
+        {
+          "t": "멤버 워니 개인 유튜브 채널이 구독자 10만 명(5월 4일)에서 한 달도 안 돼 6배 성장해 39만 2천 명(5월 26일 기준)을 넘었고, 이후 약 4개월 만에 60만 명에 근접했다.",
+          "u": "https://www.koreaherald.com/article/10761273",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "워니가 멤버 미나미와 함께 올린 '거제 야호' 영상이 조회수 1천만 회를 넘기며 화제가 되었고, 이는 공식 유튜브 채널 구독자 150만 명 돌파로 이어졌다.",
+          "u": "https://www.allkpop.com/article/2026/07/rescene-scores-historic-first-broadcast-win-with-pretty-girl",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "멤버 '원이'의 유튜브 채널 구독자가 110만 명을 돌파하는 등 개인 콘텐츠를 기반으로 한 팬덤이 데뷔 2년 차 신인 걸그룹치고 빠르게 확장됨",
+          "u": "https://biz.heraldcorp.com/article/10796264",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "로이킴",
+      "category": "발라드",
+      "n_total_bullets": 89,
+      "n_media_bullets": 10,
+      "media_share": 0.1124,
+      "subtag_counts": {
+        "예능": 5,
+        "유튜브": 5,
+        "영화": 0,
+        "드라마": 0
+      },
+      "sample_bullets": [
+        {
+          "t": "2022년 10월 컴백 콘텐츠에 실시간 약 5,000명이 동시 시청하는 등 유튜브에서도 높은 화력을 보였다",
+          "u": "https://en.namu.wiki/w/%EB%A1%9C%EC%9D%B4%ED%82%B4",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "로이킴이 2022년 '리무진서비스', '로이 노래연습장' 등 개인 유튜브 콘텐츠를 진행했다.",
+          "u": "https://namu.wiki/w/로이킴",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "로이킴이 데뷔 12년 만에 '로이킴상우'라는 신규 유튜브 채널을 열고 독창적인 브이로그를 선보였다(2025.7.22).",
+          "u": "https://www.starnewskorea.com/music/2025/07/22/2025072217184616882",
+          "tag": "spillover",
+          "subtags": [
+            "유튜브"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "슈퍼주니어",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 89,
+      "n_media_bullets": 10,
+      "media_share": 0.1124,
+      "subtag_counts": {
+        "예능": 7,
+        "유튜브": 0,
+        "영화": 2,
+        "드라마": 3
+      },
+      "sample_bullets": [
+        {
+          "t": "슈퍼주니어 예능 `슈주 리턴즈-SJ 3.0`, 첫방부터 `웃음 폭탄`",
+          "u": "https://mydaily.co.kr/page/view/2024062015425020025",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "슈퍼주니어 예능 '슈주 리턴즈' 새롭게 돌아온다! 6월 20일 첫 방송!",
+          "u": "https://www.smentertainment.com/en/newsroom/%EC%8A%88%ED%8D%BC%EC%A3%BC%EB%8B%88%EC%96%B4-%EC%98%88%EB%8A%A5-%EC%8A%88%EC%A3%BC-%EB%A6%AC%ED%84%B4%EC%A6%88-%EC%83%88%EB%A1%AD%EA%B2%8C-%EB%8F%8C%EC%95%84%EC%98%A8%EB%8B%A4-6/",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "슈퍼주니어가 데뷔 20주년 기념 프로젝트를 예능 콘텐츠로 전개한다는 다음뉴스 보도.",
+          "u": "https://v.daum.net/v/20250307102408327?f=p",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "A-pink",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 95,
+      "n_media_bullets": 10,
+      "media_share": 0.1053,
+      "subtag_counts": {
+        "예능": 5,
+        "유튜브": 1,
+        "영화": 0,
+        "드라마": 5
+      },
+      "sample_bullets": [
+        {
+          "t": "베트남 Kenh14는 한국 예능(여행 리얼리티)에 출연한 베트남 배우 준부이가 에이핑크 멤버 남주·보미와 만나 'No No No'를 베트남어로 함께 부르는 장면이 화제가 됐다고 보도했으며, 베트남 K팝 팬들 사이에서 에이핑크 노래에 대한 향수를 재확인시켰다고 전했다",
+          "u": "https://kenh14.vn/2-than-tuong-kpop-doi-jun-vu-chi-cach-hat-hit-cua-minh-bang-tieng-viet-va-cai-ket-khien-dan-mang-cuoi-bo-20221128095038944.chn",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "2026년 첫 방송된 SBS 금토드라마 '김부장'에서 김부장(소지섭 분)과 함께 일하는 직원이자 비밀을 간직한 인물 상아 역으로 출연하고 있다. '김부장'은 회사와 조직을 둘러싼 이야기를 중심으로 전개되며, 손나은은 극 중에서 액션과 감정선을 오가는 장면을 소화하며 작품의 긴장감을 더하고 있다.",
+          "u": "https://www.topstarnews.net/news/articleView.html?idxno=16138689",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        },
+        {
+          "t": "2023년. 손나은은 JTBC 드라마 '대행사'에서 VC그룹의 막내딸 강한나 역을 맡았다. 손나은은 상생저축은행에 위장 잠입한 특수임무국 요원 정상아 역할로, 선배 배우들 사이에서도 밀리지 않는 안정적인 연기를 선보였다.",
+          "u": "https://www.fnnews.com/news/202607300701112187",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "(여자)아이들",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 118,
+      "n_media_bullets": 10,
+      "media_share": 0.0847,
+      "subtag_counts": {
+        "예능": 5,
+        "유튜브": 3,
+        "영화": 0,
+        "드라마": 3
+      },
+      "sample_bullets": [
+        {
+          "t": "우기, 중국 인기 예능 《奔跑吧12》(런닝맨 시즌12) 8인 상주 게스트로 캐스팅(2024.4.26~)",
+          "u": "https://news.qq.com/rain/a/20240415A02YER00",
+          "tag": "loyalty",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "(여자)아이들의 공식 유튜브 채널은 지난달 25일부터 31일까지 주간 구독자 수 13만명을 기록해 10위를 기록했다. 주간 조회수는 1억637만회로 전체 11위에 올랐다. 이에 따라 (여자)아이들 유튜브 채널은 튜브가이드 'K-POP' 분야 순위에서 주간 구독자수 2위, 주간 조회수 3위로 뛰어올랐다.",
+          "u": "https://www.newsis.com/view/NISX20230601_0002323479",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "(여자)아이들 미연이 드라마 '운명을 보는 회사원'에 특별출연하며 배우로 복귀한다고 뉴센이 보도",
+          "u": "https://m.newsen.com/news_view.php?uid=202605200902145710",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "BABYMONSTER",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 132,
+      "n_media_bullets": 10,
+      "media_share": 0.0758,
+      "subtag_counts": {
+        "예능": 1,
+        "유튜브": 10,
+        "영화": 0,
+        "드라마": 0
+      },
+      "sample_bullets": [
+        {
+          "t": "베이비몬스터 유튜브 채널 누적 조회수가 100억 뷰를 돌파하며 K팝 걸그룹 최단 기록을 세웠다고 일간스포츠가 보도",
+          "u": "https://isplus.com/article/view/isp202609030043",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "베이비몬스터 유튜브 구독자가 1300만 명을 돌파하며 블랙핑크·트와이스 뒤를 잇는다고 텐아시아가 보도",
+          "u": "https://www.tenasia.co.kr/article/2026082144644",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "베이비몬스터 유튜브 채널 누적 조회수 100억 회 돌파 소식을 이데일리가 보도",
+          "u": "https://www.edaily.co.kr/News/Read?newsId=03188166645576512",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "Stray Kids",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 163,
+      "n_media_bullets": 10,
+      "media_share": 0.0613,
+      "subtag_counts": {
+        "예능": 1,
+        "유튜브": 3,
+        "영화": 4,
+        "드라마": 2
+      },
+      "sample_bullets": [
+        {
+          "t": "오리콘이 스트레이 키즈 라이브 다큐멘터리 영화 개봉 기념 응원상영회 및 2탄 입장 특전 소식을 보도했다",
+          "u": "https://www.oricon.co.jp/news/2455525/full/",
+          "tag": "loyalty",
+          "subtags": [
+            "영화"
+          ]
+        },
+        {
+          "t": "스트레이 키즈 유튜브 채널 구독자가 2000만 명을 돌파, K팝 아티스트 기준 역대 세 번째 기록이라는 다음뉴스 보도.",
+          "u": "https://v.daum.net/v/20250501115307040",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "Stray Kids 'Back Door' 뮤직비디오가 유튜브 조회수 4억 회를 돌파했다는 보도로 글로벌 확산력을 재확인",
+          "u": "https://respawn.outlookindia.com/pop-culture/pop-culture-news/stray-kids-back-door-music-video-tops-400-million-youtube-views",
+          "tag": "spillover",
+          "subtags": [
+            "유튜브"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "비비",
+      "category": "솔로",
+      "n_total_bullets": 74,
+      "n_media_bullets": 9,
+      "media_share": 0.1216,
+      "subtag_counts": {
+        "예능": 2,
+        "유튜브": 1,
+        "영화": 5,
+        "드라마": 3
+      },
+      "sample_bullets": [
+        {
+          "t": "'아이돌룸' '주간아이돌' 등 예능 출연, 이달의소녀 유튜브 '달로그' 시리즈서 나 홀로 첫 여행 등 콘텐츠 출연",
+          "u": "https://namu.wiki/w/비비(1993)",
+          "tag": "loyalty",
+          "subtags": [
+            "예능",
+            "유튜브"
+          ]
+        },
+        {
+          "t": "2024년 제60회 백상예술대상에서 영화 '화란'으로 영화부문 신인여우상을 수상했다",
+          "u": "https://en.wikipedia.org/wiki/Bibi_(singer)",
+          "tag": "spillover",
+          "subtags": [
+            "영화"
+          ]
+        },
+        {
+          "t": "영화 '화란'이 칸 영화제와 부산국제영화제에 상영되며 해외 영화계에 소개됐다",
+          "u": "https://namu.wiki/w/비비(가수)",
+          "tag": "spillover",
+          "subtags": [
+            "영화"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "sg워너비",
+      "category": "발라드",
+      "n_total_bullets": 75,
+      "n_media_bullets": 9,
+      "media_share": 0.12,
+      "subtag_counts": {
+        "예능": 1,
+        "유튜브": 0,
+        "영화": 0,
+        "드라마": 8
+      },
+      "sample_bullets": [
+        {
+          "t": "SG워너비는 2004년 SBS 드라마 '매직' OST에 'The Story'로 참여했다.",
+          "u": "https://namu.wiki/w/SG%EC%9B%8C%EB%84%88%EB%B9%84/%EC%9D%8C%EB%B0%98%20%EB%AA%A9%EB%A1%9D/OST",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        },
+        {
+          "t": "SG워너비는 2005년 MBC 드라마 '슬픈 연가' OST에 '다른 사랑 만나도'로 참여했다.",
+          "u": "https://namu.wiki/w/SG%EC%9B%8C%EB%84%88%EB%B9%84/%EC%9D%8C%EB%B0%98%20%EB%AA%A9%EB%A1%9D/OST",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        },
+        {
+          "t": "SG워너비 멤버 채동하는 2006년 MBC 드라마 '오버 더 레인보우' OST에 솔로곡 '또 다른 나'로 참여했다.",
+          "u": "https://namu.wiki/w/SG%EC%9B%8C%EB%84%88%EB%B9%84/%EC%9D%8C%EB%B0%98%20%EB%AA%A9%EB%A1%9D/OST",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "김재중",
+      "category": "솔로",
+      "n_total_bullets": 77,
+      "n_media_bullets": 9,
+      "media_share": 0.1169,
+      "subtag_counts": {
+        "예능": 2,
+        "유튜브": 3,
+        "영화": 3,
+        "드라마": 1
+      },
+      "sample_bullets": [
+        {
+          "t": "김재중의 공식 유튜브 채널 'KIMJAEJOONG'은 2018년 11월 27일 개설돼 브이로그 시리즈 'TRIPLE_J'와 라이브 무대 콘텐츠 'J_STAGE' 등을 선보였으며, 2025년 3월 기준 구독자 약 20만3000명을 기록하며 팬들과 직접 소통하는 주요 창구 역할을 하고 있다.",
+          "u": "https://namu.wiki/w/%EA%B9%80%EC%9E%AC%EC%A4%91/%EC%9C%A0%ED%8A%9C%EB%B8%8C",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "유튜브 콘텐츠 '재친구'에서 김재중은 15년간 받아온 뮤지컬 섭외를 매번 고사한 이유로 '집중력 부족이 동료 배우들에게 민폐가 될까 봐'라고 밝혔다.",
+          "u": "https://enews.imbc.com/News/RetrieveNewsInfo/424258",
+          "tag": "spillover",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "김재중은 오컬트 공포영화 '신사: 악귀의 속삭임'으로 14년 만에 스크린에 복귀해 무당 명진 역을 맡았으며, 2026년 6월 8일 CGV용산아이파크몰에서 열린 제작발표회에서 촬영 스태프의 약 90%가 일본인이었던 낯선 경험 덕분에 마치 영화를 처음 찍는 듯한 기분이었다고 밝혔다.",
+          "u": "https://tvreport.co.kr/movie/article/1051878/",
+          "tag": "spillover",
+          "subtags": [
+            "영화"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "윤하",
+      "category": "솔로",
+      "n_total_bullets": 83,
+      "n_media_bullets": 9,
+      "media_share": 0.1084,
+      "subtag_counts": {
+        "예능": 2,
+        "유튜브": 1,
+        "영화": 2,
+        "드라마": 4
+      },
+      "sample_bullets": [
+        {
+          "t": "'나는 가수다2' '유희열의 스케치북' '복면가왕' 등 예능 출연",
+          "u": "https://namu.wiki/w/윤하",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "윤하는 2004년 9월 1일 일본에서 데뷔했으며, 데뷔곡 '유비키리(指切り)'는 일본 드라마 '도쿄만경(東京湾景)'의 주제가로 사용됐다.",
+          "u": "https://namu.wiki/w/%EC%9C%A4%ED%95%98/%ED%99%9C%EB%8F%99",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        },
+        {
+          "t": "윤하는 일본 활동 기간 중 영화 '터치'와 애니메이션 '수왕성', '장금이의 꿈' 등 여러 작품의 테마곡을 부르며 멀티미디어 크로스오버 활동을 펼쳤다.",
+          "u": "https://namu.wiki/w/%EC%9C%A4%ED%95%98/%ED%99%9C%EB%8F%99",
+          "tag": "spillover",
+          "subtags": [
+            "영화"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "잭스키스",
+      "category": "원로그룹",
+      "n_total_bullets": 85,
+      "n_media_bullets": 9,
+      "media_share": 0.1059,
+      "subtag_counts": {
+        "예능": 6,
+        "유튜브": 1,
+        "영화": 3,
+        "드라마": 0
+      },
+      "sample_bullets": [
+        {
+          "t": "은지원, KBS2 '1박2일' 정규 멤버(별명 '은초딩'), tvN '신서유기' 출연(별명 '은요물'), '집사부일체' '더 지니어스' 등 예능 다수 출연",
+          "u": "https://namu.wiki/w/은지원",
+          "tag": "loyalty",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "젝스키스 팬덤은 자체적으로 답가 'You're Welcome'을 녹음해 공개했으며, 해당 영상은 단편영화제에서 수상하기도 했다.",
+          "u": "https://namu.wiki/w/%EC%98%90%EB%A1%9C%EC%9A%B0%ED%82%A4%EC%8A%A4",
+          "tag": "loyalty",
+          "subtags": [
+            "영화"
+          ]
+        },
+        {
+          "t": "젝스키스가 데뷔 23주년을 맞아 새로운 리얼리티 예능 콘텐츠 '젝키 오락관'을 통해 팬들과 만난다.",
+          "u": "https://www.sedaily.com/article/12647286",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "STAYC",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 92,
+      "n_media_bullets": 9,
+      "media_share": 0.0978,
+      "subtag_counts": {
+        "예능": 3,
+        "유튜브": 3,
+        "영화": 1,
+        "드라마": 3
+      },
+      "sample_bullets": [
+        {
+          "t": "'ASAP' 뮤직비디오가 공개 9일 만에 유튜브 조회수 2,000만 뷰를 돌파했다.",
+          "u": "https://en.wikipedia.org/wiki/Stayc",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "부산관광공사가 스테이씨와 협업해 리얼리티 예능 '스테이씨크릿 in 부산'을 제작했다. 멤버 아이사·시은·윤이 송도해수욕장, 을숙도 생태공원, 감천문화마을, 자갈치시장, 흰여울문화마을, 봉산마을 등 부산의 관광지를 직접 체험하며 소개하는 콘텐츠로, 부산관광공사 유튜브 채널 '비짓부산'에서 공개됐다.",
+          "u": "https://www.newsis.com/view/NISX20230706_0002366634",
+          "tag": "spillover",
+          "subtags": [
+            "예능",
+            "유튜브"
+          ]
+        },
+        {
+          "t": "STAYC 윤이 레진스낵 오리지널 숏드라마 '사랑하는 죽음'의 주연으로 캐스팅되어 '연기돌' 행보를 본격화했다. 이언 작가의 동명 웹툰이 원작이며, 윤은 죽음에 중독된 소녀 '연' 역을 맡았다. 작품은 2026년 6월 30일 공개됐다.",
+          "u": "https://www.highup-ent.com/%EC%8A%A4%ED%85%8C%EC%9D%B4%EC%94%A8-%EC%9C%A4-%EC%88%8F%EB%93%9C%EB%9D%BC%EB%A7%88-%EC%82%AC%EB%9E%91%ED%95%98%EB%8A%94-%EC%A3%BD%EC%9D%8C-30%EC%9D%BC-%EA%B3%B5%EA%B0%9C%EB%B3%B8/",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "여자친구",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 93,
+      "n_media_bullets": 9,
+      "media_share": 0.0968,
+      "subtag_counts": {
+        "예능": 3,
+        "유튜브": 1,
+        "영화": 1,
+        "드라마": 4
+      },
+      "sample_bullets": [
+        {
+          "t": "여자친구 소원(김소원)이 하키엔터테인먼트와 전속계약을 맺고 배우로 새 출발했다. 최근 종영한 KBS 드라마 '수상한 그녀'에서 보컬 디렉터 찬미 역을 연기해 호평받았으며, 소속사는 '아이돌 활동을 통해 다져진 무대 경험과 그동안 차근차근 쌓아온 필모그래피에서 보여준 연기적 잠재력이 돋보이는 배우'라고 밝혔다.",
+          "u": "https://www.starnewskorea.com/star/2025/09/29/2025092910214271450",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        },
+        {
+          "t": "여자친구 예린이 웹드라마 '마녀상점 리오픈'에서 흑마녀 '이해나' 역을 맡아 첫 배우 활동을 시작했다. 2015년 데뷔 이후 그룹 해체(2021년 5월) 후 첫 공식 활동으로, 정성빈 연출·안세화 극본 작품이다.",
+          "u": "https://www.sisaweek.com/news/articleView.html?idxno=146582",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        },
+        {
+          "t": "여자친구는 데뷔 이후 '여자친구! 강아지를 부탁해'(2015), '여자친구의 어느 멋진 날'(2015), '여자친구, 어디 감수광?!'(2016), '여자친구가 사랑한 유럽'(2016), 'THE 프렌즈 in 아드리아해'(2017~2018), 'GFRIEND Summer Vacation in 오키나와'(2019, 일본 U-NEXT 방영), 'GFRIEND's MEMORIA'(2020) 등 총 7편의 단독 리얼리티 예능을 선보였다.",
+          "u": "https://namu.wiki/w/여자친구(아이돌)/활동 내역/단독 리얼리티",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "최예나",
+      "category": "솔로",
+      "n_total_bullets": 96,
+      "n_media_bullets": 9,
+      "media_share": 0.0938,
+      "subtag_counts": {
+        "예능": 2,
+        "유튜브": 2,
+        "영화": 3,
+        "드라마": 3
+      },
+      "sample_bullets": [
+        {
+          "t": "최예나와 은찬이 오는 3월 방영 예정인 KBS 2TV 새 수목시트콤 '빌런의 나라'에 캐스팅됐다. '빌런의 나라'를 통해 첫 지상파 드라마 주연을 맡게 된 최예나의 활약에 기대가 모아진다",
+          "u": "https://www.joynews24.com/view/1812837",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        },
+        {
+          "t": "아이즈원 출신 최예나, KBS 시트콤 '빌런의 나라' 주연으로 캐스팅되며 첫 지상파 드라마 도전 (2025.03.13 스포츠경향 보도).",
+          "u": "https://sports.khan.co.kr/article/202503131020003",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        },
+        {
+          "t": "최예나, 웹드라마 '소녀의 세계2' 출연으로 데뷔 후 첫 연기 도전 (2021.10.07 YTN 보도).",
+          "u": "https://www.ytn.co.kr/_ln/0117_202110071521343793",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "HOT",
+      "category": "원로그룹",
+      "n_total_bullets": 97,
+      "n_media_bullets": 9,
+      "media_share": 0.0928,
+      "subtag_counts": {
+        "예능": 5,
+        "유튜브": 4,
+        "영화": 0,
+        "드라마": 0
+      },
+      "sample_bullets": [
+        {
+          "t": "문희준, KBS '불후의 명곡-전설을 노래하다' 서브MC(2011~2020), MBC '슈퍼맨이 돌아왔다' 딸과 출연(2019~2020), '강심장' '놀라운대회 스타킹' '댄싱위드더스타' 등 예능 다수 출연",
+          "u": "https://ko.wikipedia.org/wiki/%EB%AC%B8%ED%9D%AC%EC%A4%80",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "H.O.T.는 1997년 7월 MBC 다큐멘터리 예능 '김국진의 스타다큐'에 출연해 그룹 활동이 다큐멘터리 형식으로 방영됐으며, 1998년 3집 활동기에도 재출연했다.",
+          "u": "https://namu.wiki/w/H.O.T./%ED%99%9C%EB%8F%99%20%EC%97%AD%EC%82%AC",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "H.O.T.는 1996년 9월 7일 MBC 음악예능 '토요일 토요일은 즐거워'에서 데뷔 무대를 가졌다.",
+          "u": "https://namu.wiki/w/H.O.T./%ED%99%9C%EB%8F%99%20%EC%97%AD%EC%82%AC",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "ITZY",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 107,
+      "n_media_bullets": 9,
+      "media_share": 0.0841,
+      "subtag_counts": {
+        "예능": 1,
+        "유튜브": 2,
+        "영화": 1,
+        "드라마": 5
+      },
+      "sample_bullets": [
+        {
+          "t": "ITZY(있지)의 공식 유튜브 채널 구독자 수가 700만을 돌파했다. ITZY는 4일 오후 공식 유튜브 채널 구독자 수 700만을 달성했다.",
+          "u": "https://sports.khan.co.kr/article/202204051652013",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "있지 류진이 드라마에서 시청률 13.6%로 엔딩을 장식하며 '배우 마스크' 호평을 받았다고 마이데일리가 보도",
+          "u": "https://www.mydaily.co.kr/page/view/2026071011304814288",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        },
+        {
+          "t": "ITZY 유나가 2026년 tvN 드라마 '최애의 사원'에 캐스팅되어 톱배우 윤초이 역을 맡았다.",
+          "u": "https://v.daum.net/v/20251124153247302",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "GOT7",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 107,
+      "n_media_bullets": 9,
+      "media_share": 0.0841,
+      "subtag_counts": {
+        "예능": 2,
+        "유튜브": 2,
+        "영화": 0,
+        "드라마": 5
+      },
+      "sample_bullets": [
+        {
+          "t": "마크는 유튜브 채널을 개설하며 영상을 한 편도 올리지 않은 상태에서 구독자 100만 명을 돌파했다고 트위터를 통해 밝혔다.",
+          "u": "https://www.topstarnews.net/news/articleView.html?idxno=856897",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "2016년 9월 넷플릭스는 갓세븐의 리얼리티 쇼 '리얼 갓세븐' 전 시즌과 웹드라마 '드림나이트'를 공개했는데, 이는 K팝 그룹 리얼리티 콘텐츠로는 최초의 넷플릭스 입점 사례로 평가됐다.",
+          "u": "https://www.allkpop.com/article/2016/09/got7s-dream-knight-and-real-got7-are-on-netflix",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        },
+        {
+          "t": "'Not By The Moon' 뮤직비디오는 공개 이후 2020년 4월 23일까지 유튜브 조회수 2000만 회를 넘어섰다.",
+          "u": "https://gulfnews.com/entertainment/music/k-pop-corner-got7-soar-uae-charts-with-comeback-album-1.71180853",
+          "tag": "spillover",
+          "subtags": [
+            "유튜브"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "이효리",
+      "category": "솔로",
+      "n_total_bullets": 120,
+      "n_media_bullets": 9,
+      "media_share": 0.075,
+      "subtag_counts": {
+        "예능": 8,
+        "유튜브": 0,
+        "영화": 0,
+        "드라마": 1
+      },
+      "sample_bullets": [
+        {
+          "t": "이효리가 출연한 예능 '효리네 민박' 방영 이후 제주도 특정 관광지(오름 등)의 인지도가 크게 상승하는 등 제주 관광산업에 실질적 영향을 미쳤다는 조사 결과가 보도되었다.",
+          "u": "https://www.khan.co.kr/article/201901081307001",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "이효리, 서장훈과 함께하는 새 JTBC 예능 출연 확정 (2026.03.06)",
+          "u": "https://v.daum.net/v/20260306142454853",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "이효리, 데뷔 28년 만에 처음으로 서바이벌 예능 출연 (2026.07.08)",
+          "u": "https://v.daum.net/v/20260708182527133",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "이승철",
+      "category": "발라드",
+      "n_total_bullets": 78,
+      "n_media_bullets": 8,
+      "media_share": 0.1026,
+      "subtag_counts": {
+        "예능": 2,
+        "유튜브": 3,
+        "영화": 1,
+        "드라마": 3
+      },
+      "sample_bullets": [
+        {
+          "t": "이승철은 2016년 데뷔 30주년 기념 콘서트를 열었고, 실황이 지상파 방영 및 유튜브로 공개됐다.",
+          "u": "https://namu.wiki/w/이승철",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "이승철은 영화 '비천무' OST에 '말리꽃'을 불렀으며, 2004년 드라마 OST '인연' 등을 통해 드라마·영화 OST 시장에서 꾸준히 활동했다.",
+          "u": "https://namu.wiki/w/이승철",
+          "tag": "spillover",
+          "subtags": [
+            "영화",
+            "드라마"
+          ]
+        },
+        {
+          "t": "이승철은 자신의 유튜브 채널을 통해 데뷔 30주년 기념 콘서트 풀버전 영상을 공개했다.",
+          "u": "https://namu.wiki/w/이승철",
+          "tag": "spillover",
+          "subtags": [
+            "유튜브"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "청하",
+      "category": "솔로",
+      "n_total_bullets": 79,
+      "n_media_bullets": 8,
+      "media_share": 0.1013,
+      "subtag_counts": {
+        "예능": 2,
+        "유튜브": 2,
+        "영화": 0,
+        "드라마": 4
+      },
+      "sample_bullets": [
+        {
+          "t": "청하가 SBS 예능 '짠한형'에 출연해 프로듀스101 시절 힘들었던 댄서 생활과 당시 심경을 밝힘 (2026.05.18 보도).",
+          "u": "https://www.koreadaily.com/article/20260518185445128",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "tvN 드라마 '안투라지'(2016) 카메오 출연",
+          "u": "https://ko.wikipedia.org/wiki/%EC%B2%AD%ED%95%98_(%EA%B0%80%EC%88%98)",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        },
+        {
+          "t": "청하는 2025년 10월 9일 개인 유튜브 채널 '청하에게 - To. CHUNG HA'를 개설했으며, 첫 영상 '제가 재미있다고요? 그럴 리가…'에서 매니저로부터 '테토남 같다'는 평가를 받는 등 무대 위 카리스마와 다른 털털하고 솔직한 일상 모습을 공개했다.",
+          "u": "https://www.starnewskorea.com/music/2025/10/09/2025100918300599116",
+          "tag": "spillover",
+          "subtags": [
+            "유튜브"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "동방신기",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 82,
+      "n_media_bullets": 8,
+      "media_share": 0.0976,
+      "subtag_counts": {
+        "예능": 0,
+        "유튜브": 0,
+        "영화": 4,
+        "드라마": 4
+      },
+      "sample_bullets": [
+        {
+          "t": "오리콘이 東方神起 데뷔 20주년 기념 다큐멘터리 영화 'IDENTITY'의 전국 5개 극장 응원상영 결정, 닛산 스타디움 WOWOW 생중계 등을 보도",
+          "u": "https://www.oricon.co.jp/news/2436836/full/ , https://www.oricon.co.jp/news/2448585/full/",
+          "tag": "spillover",
+          "subtags": [
+            "영화"
+          ]
+        },
+        {
+          "t": "동방신기, 도전은 계속된다! 유노윤호는 드라마, 최강창민은 뮤지컬 출연",
+          "u": "https://www.smentertainment.com/en/newsroom/%EB%8F%99%EB%B0%A9%EC%8B%A0%EA%B8%B0-%EB%8F%84%EC%A0%84%EC%9D%80-%EA%B3%84%EC%86%8D%EB%90%9C%EB%8B%A4-%EC%9C%A0%EB%85%B8%EC%9C%A4%ED%98%B8%EB%8A%94-%EB%93%9C%EB%9D%BC%EB%A7%88-%EC%B5%9C%EA%B0%95/",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        },
+        {
+          "t": "유노윤호 드라마, 최강창민 뮤지컬..동방신기 새로운 도전[공식]",
+          "u": "https://www.starnewskorea.com/music/2024/04/30/2024043009033311311",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "에픽하이",
+      "category": "힙합",
+      "n_total_bullets": 87,
+      "n_media_bullets": 8,
+      "media_share": 0.092,
+      "subtag_counts": {
+        "예능": 2,
+        "유튜브": 6,
+        "영화": 0,
+        "드라마": 1
+      },
+      "sample_bullets": [
+        {
+          "t": "중국 웨이보 해외판(overseas.weibo.com, weibo.com 계열)의 K팝 뉴스 계정이 에픽하이의 \"Super Rookie\" 관련 유튜브 영상을 공유한 게시물이 확인된다",
+          "u": "https://overseas.weibo.com/2482557597/Lfiz2mzgg",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "YG 소속 시절 자체 유튜브 콘텐츠 'OK RADIO' 제작, 2019년 독립 후 유튜브 활동 본격화",
+          "u": "https://namu.wiki/w/에픽하이",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "스포츠경향은 2026년 9월 4일 에픽하이가 공식 유튜브 채널 '에픽카세'에서 리더 자리를 건 멤버 솔로곡 대결 콘텐츠 '에픽카세 가요제' 본선 영상을 공개했으며 다비치·하동균·스키즈 등이 심사에 참여해 멤버 투컷의 자작곡이 1위를 차지했다고 전했다.",
+          "u": "https://sports.khan.co.kr/article/202609041021003/",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "마마무",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 94,
+      "n_media_bullets": 8,
+      "media_share": 0.0851,
+      "subtag_counts": {
+        "예능": 2,
+        "유튜브": 2,
+        "영화": 2,
+        "드라마": 3
+      },
+      "sample_bullets": [
+        {
+          "t": "마마무 솔라는 개인 유튜브 채널 '솔라시도' 구독자가 111만 명이며, 광고 수익이 있을 경우 월 최대 1억원의 수익이 발생한다고 직접 밝혔다(단 소속사와 배분).",
+          "u": "https://edaily.co.kr/news/read?mediaCodeNo=257&newsId=01302166622686048",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "마마무 화사와 휘인이 학창시절을 보낸 전주(전북)의 모교(전주 중학교)를 예능에서 함께 방문",
+          "u": "http://www.kookje.co.kr/news2011/asp/newsbody.asp?code=0500&key=20191025.99099011729",
+          "tag": "loyalty",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "마마무 문별, '아이돌 드라마 공작단' 출연...털털한 '귀요미' 문작가 변신. 걸 그룹 마마무 문별이 신개념 웹 예능 '아이돌 드라마 공작단'에 출연해 색다른 매력을 선보인다. 문별은 11일 오전 마마무 공식 SNS를 통해 '아이돌 드라마 공작단'의 티저 이미지를 공개했다.",
+          "u": "https://www.ajunews.com/view/20170411163225481",
+          "tag": "spillover",
+          "subtags": [
+            "예능",
+            "드라마"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "IKON",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 96,
+      "n_media_bullets": 8,
+      "media_share": 0.0833,
+      "subtag_counts": {
+        "예능": 6,
+        "유튜브": 1,
+        "영화": 1,
+        "드라마": 1
+      },
+      "sample_bullets": [
+        {
+          "t": "이 작품은 iKON 멤버(김진환, 바비, 구준회, 송윤형, 김동혁, 정찬우)들이 함께 떠나는 2박 3일간의 강릉 여행 기록을 담은 리얼리티 예능입니다.",
+          "u": "https://www.inthenews.co.kr/news/article.html?no=39616",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "iKON이 MBC 예능 '주간아이돌' 376회에 출연했다.",
+          "u": "https://playvod.imbc.com/Vod/VodPlay?broadcastId=1003862100376100000",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "iKON이 서바이벌 예능 '킹덤: 레전더리 워'에 출연했다.",
+          "u": "https://namu.wiki/w/iKON",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "엔믹스",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 110,
+      "n_media_bullets": 8,
+      "media_share": 0.0727,
+      "subtag_counts": {
+        "예능": 4,
+        "유튜브": 2,
+        "영화": 2,
+        "드라마": 1
+      },
+      "sample_bullets": [
+        {
+          "t": "엔믹스 설윤, 음반·음원 1위 찍고 土 '1등' 예능 출연…'살림남' 스페셜 MC [단독]. 그룹 엔믹스(NMIXX) 설윤이 컴백 활동과 함께 예능 활동에 나선다. 14일 OSEN 취재 결과, 설윤은 KBS2 예능 프로그램 '살림하는 남자들 시즌2'에 스페셜 MC로 출연한다. 설윤의 출연분은 오는 18일 방송될 예정이다.",
+          "u": "https://v.daum.net/v/20251014135947679",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "엔믹스 해원, '워크돌' 시즌2 MC 발탁…배이 이어 그룹 두 번째 단독예능. NMIXX(엔믹스) 해원이 웹예능 '워크돌' 시즌2 진행과 함께, '육각형 인재'의 예능센스를 입증한다. 20일 JYP엔터테인먼트 측은 NMIXX 해원이 오는 4월 공개될 웹 예능 '워크돌'의 새 시즌 진행자로 나선다고 전했다.",
+          "u": "https://www.etnews.com/20240320000170",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "엔믹스는 데뷔 5개월 차였던 2022년 8월 19일 SLL 산하 유튜브 예능 전문 제작사 SLLDLAB과 손잡고 첫 단독 유튜브 예능 '엔믹스 퀘스트-절레전래 동화가족'을 론칭했다.",
+          "u": "https://www.sll.co.kr/newsroom/news/467",
+          "tag": "spillover",
+          "subtags": [
+            "예능",
+            "유튜브"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "ATEEZ",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 113,
+      "n_media_bullets": 8,
+      "media_share": 0.0708,
+      "subtag_counts": {
+        "예능": 5,
+        "유튜브": 3,
+        "영화": 1,
+        "드라마": 1
+      },
+      "sample_bullets": [
+        {
+          "t": "에이티즈는 2025년 11월 공식 팬클럽 '에이티니' 창단 7주년을 맞아 팬송 '츄즈(Choose)'를 깜짝 발매하고 팬 감사 예능 콘텐츠 '티즈레인저'를 공개했다.",
+          "u": "https://www.starnewskorea.com/music/2025/11/18/2025111808412746875",
+          "tag": "loyalty",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "러시아어 K팝 전문매체 YesAsia.ru: 예능 프로그램 \"The Listen\" 시즌6 새 출연진 소식에서 ATEEZ 멤버 종호를 언급: \"«The Listen» возвращается с 6 сезоном: Сухо из EXO, Чонхо из ATEEZ, Чу и другие станут новыми участниками\"(예능 '더 리슨' 시즌6, EXO 수호·ATEEZ 종호 등이 새 출연진으로 합류) — 2026.09.02 게재, 대중 예능 프로그램 캐스팅을 통한 인지도 확장 근거",
+          "u": "https://www.yesasia.ru/article/1943277",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "MMTG SHOW에 에이티즈 산, 우영이 게스트로 출연해 토크를 나눴다 (예능 유튜브 콘텐츠 출연).",
+          "u": "https://www.youtube.com/watch?v=uhTpBrltNAY",
+          "tag": "spillover",
+          "subtags": [
+            "예능",
+            "유튜브"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "CORTIS",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 135,
+      "n_media_bullets": 8,
+      "media_share": 0.0593,
+      "subtag_counts": {
+        "예능": 3,
+        "유튜브": 5,
+        "영화": 1,
+        "드라마": 0
+      },
+      "sample_bullets": [
+        {
+          "t": "유튜브 채널 개설 52일 만에 구독자 100만 명을 달성했다.",
+          "u": "https://namu.wiki/w/CORTIS",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "코르티스 '레드레드'가 공개 다음날(4월21일) 유튜브 '트렌딩 월드와이드' 1위, 미국 유튜브 인기급상승 음악차트 22위(4월22일 기준), 캐나다 13위 등 24개국 차트에 진입했으며 뮤직비디오는 하루 만에 320만 회 이상 조회됐다.",
+          "u": "https://www.starnewskorea.com/music/2026/04/22/2026042208022416393",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "HYBE(빅히트뮤직) 신인 5인조 남성그룹 CORTIS의 데뷔(2025년 8월)와 데뷔 6일 만에 유튜브 100만 구독, 스포티박이 글로벌 바이럴 1위 기록 등 성과를 소개하는 기사.",
+          "u": "https://los40.com.mx/2025/09/09/cortis-este-es-el-nuevo-grupo-de-k-pop-de-hybe-que-la-esta-rompiendo/",
+          "tag": "spillover",
+          "subtags": [
+            "유튜브"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "LE SSERAFIM",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 143,
+      "n_media_bullets": 8,
+      "media_share": 0.0559,
+      "subtag_counts": {
+        "예능": 4,
+        "유튜브": 3,
+        "영화": 2,
+        "드라마": 0
+      },
+      "sample_bullets": [
+        {
+          "t": "르세라핌 공식 유튜브 채널 구독자가 100만 명을 돌파했으며 풍성한 자체 콘텐츠가 인기 요인으로 꼽힘",
+          "u": "https://www.xportsnews.com/article/1617236",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "르세라핌이 팀 자체 예능 콘텐츠 '르니버스' 시즌7을 2026년 8월 17일부터 매주 월요일 오후 8시 공식 유튜브와 위버스를 통해 공개하기 시작했으며, 게임·스포츠·추리·여행 등 다양한 장르로 구성되고 앞선 시즌 77개 에피소드는 누적 조회수 약 980만 회를 기록했다.",
+          "u": "https://www.sportsseoul.com/news/read/1627911",
+          "tag": "loyalty",
+          "subtags": [
+            "예능",
+            "유튜브"
+          ]
+        },
+        {
+          "t": "르세라핌이 주말 예능 '도장 깨기'로 새 예능 프로그램 출연을 시작했다고 뉴시스가 보도",
+          "u": "https://www.newsis.com/view/NISX20240223_0002637478",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "NewJeans",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 154,
+      "n_media_bullets": 8,
+      "media_share": 0.0519,
+      "subtag_counts": {
+        "예능": 4,
+        "유튜브": 3,
+        "영화": 1,
+        "드라마": 0
+      },
+      "sample_bullets": [
+        {
+          "t": "뉴진스 데뷔 4주년 기념 '2026 Summer of NewJeans' 스페셜 필름이 7월22일 자정 공식 유튜브·SNS로 공개, 8시간 만에 조회수 100만 회를 돌파했다.",
+          "u": "https://www.marieclairekorea.com/celebrity/2026/07/newjeans-15/",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "뉴진스는 최근 강원도 철원에서 KBS 2TV 예능프로그램 '1박 2일' 촬영을 진행했다. 뉴진스의 공중파 예능 프로그램 출연은 '1박 2일'이 처음이다.",
+          "u": "https://www.ajunews.com/view/20240513082210945",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "[단독] 뉴진스 민지, 첫 육아 예능 도전…첫 지상파 단독 출연 '겹경사' (종합)",
+          "u": "https://news.nate.com/view/20241028n02006",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "잔나비",
+      "category": "록",
+      "n_total_bullets": 69,
+      "n_media_bullets": 7,
+      "media_share": 0.1014,
+      "subtag_counts": {
+        "예능": 1,
+        "유튜브": 2,
+        "영화": 1,
+        "드라마": 3
+      },
+      "sample_bullets": [
+        {
+          "t": "대만 Yahoo News(tw.news.yahoo.com): 2025년 8월 서울 앙코르 공연에서 대만 공연을 예고, '우리들의 봄날' 등 다수 곡이 한국 드라마 OST(마이 로맨스 오컬트 등)로 쓰이며 대만 대중에 확산",
+          "u": "https://tw.news.yahoo.com/%E5%87%BA%E9%81%9311%E9%80%B1%E5%B9%B4%E9%A6%96%E5%BA%A6%E6%B5%B7%E5%A4%96%E5%B0%88%E5%A0%B4-%E9%9F%93%E6%90%96%E6%BB%BE%E5%9C%98jannabi%E4%BE%86%E5%8F%B0%E6%97%A5%E6%9C%9F%E6%9B%9D-135000727.html",
+          "tag": "loyalty",
+          "subtags": [
+            "드라마"
+          ]
+        },
+        {
+          "t": "나무위키 '잔나비/출연' 문서에 따르면 잔나비는 2018년 1월 13일 tvN 드라마 단막극 시리즈 '드라마 스테이지'의 '낫플레이드' 편에 카메오로 출연했다.",
+          "u": "https://namu.wiki/w/잔나비/출연",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        },
+        {
+          "t": "나무위키 '잔나비' 문서에 따르면 잔나비의 곡 '투게더!'는 2023년 8월 공개된 디즈니+ 인기 드라마 '무빙'에 삽입되며 각종 음원 사이트에서 역주행했다.",
+          "u": "https://namu.wiki/w/잔나비",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "이문세",
+      "category": "발라드",
+      "n_total_bullets": 70,
+      "n_media_bullets": 7,
+      "media_share": 0.1,
+      "subtag_counts": {
+        "예능": 3,
+        "유튜브": 3,
+        "영화": 0,
+        "드라마": 2
+      },
+      "sample_bullets": [
+        {
+          "t": "팬 커뮤니티 '마굿간'을 중심으로 유튜브·인스타그램 등에서 활발히 소통하고 있으며, 2025년 7월 7일부터 MBC FM4U 새 라디오 프로그램을 진행 중이다",
+          "u": "https://namu.wiki/w/이문세",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "MBC '일요일 일요일 밤에'(1993~1994) MC 등 다수 예능 진행",
+          "u": "https://namu.wiki/w/%EC%9D%B4%EB%AC%B8%EC%84%B8",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "나무위키 '이문세' 문서에 따르면 이문세는 2016~2017년 SBS 예능 '판타스틱 듀오'에 출연해 시즌1 최종 우승(300점 만점에 296점, 역대 최고 점수)을 차지했고, 시즌2 첫 회에서도 우승하며 2연속 우승 기록을 세웠다.",
+          "u": "https://namu.wiki/w/이문세",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "보아",
+      "category": "솔로",
+      "n_total_bullets": 76,
+      "n_media_bullets": 7,
+      "media_share": 0.0921,
+      "subtag_counts": {
+        "예능": 0,
+        "유튜브": 0,
+        "영화": 1,
+        "드라마": 6
+      },
+      "sample_bullets": [
+        {
+          "t": "보아는 2006년 애니메이션 영화 '오버 더 헤지(Over The Hedge)'에서 '헤더' 역을 맡아 한국어판·일본어판 더빙에 참여했으며, 이 작품이 제59회 칸 영화제 비경쟁 부문에 출품되면서 한국 가수로는 최초이자 최연소로 칸 영화제 레드카펫을 밟았다.",
+          "u": "https://www.btspurpleyou.com/boa/",
+          "tag": "spillover",
+          "subtags": [
+            "영화"
+          ]
+        },
+        {
+          "t": "보아는 2013년 발매한 32번째 일본 싱글 'Tail of Hope'를 일본 후지TV 드라마 '백의의 눈물'의 주제곡으로 제공했다.",
+          "u": "https://namu.wiki/w/%EB%B3%B4%EC%95%84",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        },
+        {
+          "t": "보아는 2010~2011년 방영된 KBS2 드라마 '아테나: 전쟁의 여신'에 카메오로 출연했다.",
+          "u": "https://www.btspurpleyou.com/boa/",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "Zion.T",
+      "category": "솔로",
+      "n_total_bullets": 79,
+      "n_media_bullets": 7,
+      "media_share": 0.0886,
+      "subtag_counts": {
+        "예능": 1,
+        "유튜브": 0,
+        "영화": 4,
+        "드라마": 2
+      },
+      "sample_bullets": [
+        {
+          "t": "자이언티, 예능 '유희열의 스케치북' 출연해 신곡 '5월의 밤' 무대 최초 공개 (한국일보, 2019.11.14)",
+          "u": "https://www.hankookilbo.com/news/article/201911141024063202",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "SBS 드라마 '피노키오'(2014) OST 'Kiss Me' 참여",
+          "u": "https://namu.wiki/w/Zion.T",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        },
+        {
+          "t": "마블 영화 '샹치와 텐 링즈의 전설'(2021) OST 'Nomad'를 호시노 겐과 합작",
+          "u": "https://namu.wiki/w/Zion.T",
+          "tag": "spillover",
+          "subtags": [
+            "영화"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "CNBLUE",
+      "category": "K-pop 보이그룹 /록",
+      "n_total_bullets": 84,
+      "n_media_bullets": 7,
+      "media_share": 0.0833,
+      "subtag_counts": {
+        "예능": 1,
+        "유튜브": 2,
+        "영화": 1,
+        "드라마": 3
+      },
+      "sample_bullets": [
+        {
+          "t": "정용화는 피플스토리가 제작하는 새 드라마 '밑도끝도없이'에 캐스팅됐다. 현재 OTT 편성을 논의 중이다.",
+          "u": "https://m.ytn.co.kr/news_view.php?key=202109160800014105&s_mcd=0117",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        },
+        {
+          "t": "CNBLUE 정용화가 진행하는 유튜브 뮤직토크쇼 '엘피룸' 5회에 DAY6 영케이가 출연해 듀엣 무대를 선보였다(2025.5.1).",
+          "u": "https://www.mhnse.com/news/articleView.html?idxno=393565",
+          "tag": "spillover",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "나무위키 'CNBLUE/음반 외 활동' 문서에 따르면 리더 정용화는 2009년 SBS 드라마 '미남이시네요'로 연기에 데뷔했고, 이후 2011년 MBC '넌 내게 반했어', 2014년 tvN '삼총사', 2021년 KBS2 '대박부동산', 2023년 KBS2 '두뇌공조' 등 다수의 드라마에서 주연으로 출연했다.",
+          "u": "https://namu.wiki/w/CNBLUE/음반 외 활동",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "10CM",
+      "category": "솔로",
+      "n_total_bullets": 85,
+      "n_media_bullets": 7,
+      "media_share": 0.0824,
+      "subtag_counts": {
+        "예능": 3,
+        "유튜브": 0,
+        "영화": 0,
+        "드라마": 4
+      },
+      "sample_bullets": [
+        {
+          "t": "도깨비, 호텔 델루나, 사랑의 불시착 등 다수 인기 드라마의 OST에 참여했다",
+          "u": "https://namu.wiki/w/10CM",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        },
+        {
+          "t": "10CM 권정열, tvN 예능 '더 시즌즈' 새 MC로 발탁. 장범준·이문세를 게스트로 초대하고 싶다는 포부 밝힘 (2025.09.05 마이데일리).",
+          "u": "https://www.mydaily.co.kr/page/view/2025090514043533547",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "10CM 권정열, 예능 프로그램 출연 당시 화제가 된 비주얼로 주목받음 (인사이트 보도).",
+          "u": "https://www.insight.co.kr/news/150928",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "장윤정",
+      "category": "트로트",
+      "n_total_bullets": 92,
+      "n_media_bullets": 7,
+      "media_share": 0.0761,
+      "subtag_counts": {
+        "예능": 2,
+        "유튜브": 5,
+        "영화": 0,
+        "드라마": 0
+      },
+      "sample_bullets": [
+        {
+          "t": "유튜브 '장공장장', 남편 도경완과 함께하는 '도장TV' 채널 운영",
+          "u": "https://namu.wiki/w/장윤정",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "스포츠경향에 따르면 장윤정이 2026년 9월 4일 자신의 유튜브 채널 '장공장 장윤정'에서 노래 '어머나'를 듣고 극단적 선택을 단념한 뒤 약 20년째 팬으로 지내고 있다는 한 팬의 사연을 공개하며 팬들에 대한 책임감을 전했다.",
+          "u": "https://sports.khan.co.kr/en/article/202609041847007/",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "장윤정이 이혼 후 두 아이를 키운 싱글맘 경험을 조명한 예능 '같이 삽시다'에 20년 만에 첫 고정 예능으로 출연했다는 기사.",
+          "u": "https://v.daum.net/v/20251222162805310",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "몬스타엑스",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 96,
+      "n_media_bullets": 7,
+      "media_share": 0.0729,
+      "subtag_counts": {
+        "예능": 1,
+        "유튜브": 2,
+        "영화": 2,
+        "드라마": 2
+      },
+      "sample_bullets": [
+        {
+          "t": "2025년 9월 26일, 몬스타엑스는 몬베베 창단 10주년을 맞아 \"WELCOME TO MONBEBE BIRTHDAY CAFE\"라는 유튜브 생중계를 열고 멤버 전원이 바리스타로 분장해 라떼아트 챌린지·시그니처 케이크 만들기 등 팬 소통 콘텐츠를 진행했다.",
+          "u": "https://sports.khan.co.kr/article/202509271024003",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "기현, SBS 드라마 '트라이: 우리는 기적이 된다'(윤계상 주연) OST Part.1 'SURF'를 첫 주자로 발매 (2025.7.25)",
+          "u": "https://v.daum.net/v/20250725141205611",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        },
+        {
+          "t": "몬스타엑스, MBC 수목드라마 '쇼핑왕 루이' OST Part.7에 그룹 명의로 참여 (2016)",
+          "u": "https://www.melon.com/album/detail.htm?albumId=10010075",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "지코",
+      "category": "힙합",
+      "n_total_bullets": 101,
+      "n_media_bullets": 7,
+      "media_share": 0.0693,
+      "subtag_counts": {
+        "예능": 5,
+        "유튜브": 2,
+        "영화": 0,
+        "드라마": 0
+      },
+      "sample_bullets": [
+        {
+          "t": "네이트: 지코표 웹 예능, 조회수 153만 돌파하며 인기 급상승 동영상 진입",
+          "u": "https://news.nate.com/view/20241120n37612",
+          "tag": "loyalty",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "스킨케어 브랜드 메디힐이 신제품 '블랙헤드 멜팅 클리어 코팩' 모델로 지코를 발탁, 숏폼 광고 영상 4종이 공개 4일 만에 누적 조회수 370만 회를 기록하며 유튜브·메타·틱톡·넷플릭스 등 다채널에 송출되고 지코 얼굴이 인쇄된 한정판 패키지도 출시",
+          "u": "https://www.thefirstmedia.net/news/articleView.html?idxno=126960",
+          "tag": "spillover",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "그 맘때 쯤에 유튜브 기획이 나왔고 '5분만'이라는 키워드가 나왔다. 첫 회로 제이홉과 만나면 좋겠다고 생각했다.",
+          "u": "https://www.asiatoday.co.kr/view.php?key=20220801010000847",
+          "tag": "spillover",
+          "subtags": [
+            "유튜브"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "QWER",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 103,
+      "n_media_bullets": 7,
+      "media_share": 0.068,
+      "subtag_counts": {
+        "예능": 1,
+        "유튜브": 6,
+        "영화": 0,
+        "드라마": 0
+      },
+      "sample_bullets": [
+        {
+          "t": "QWER의 데뷔 도전 과정을 선보이고 있는 유튜브 채널 '타마고 프로덕션'의 콘텐츠 '최애의 아이들'은 6회 만에 약 850만 누적뷰(8월9일 기준)를 돌파했다.",
+          "u": "https://www.newsis.com/view/NISX20230810_0002409375",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "유튜브 인기에서 페스티벌 초청까지, K-록 밴드 QWER의 인기 상승을 다룬 기사가 YesAsia.ru에 게재됨",
+          "u": "https://www.yesasia.ru/article/1505790",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "QWER 공식 유튜브 채널이 2026년 8월 31일 '당신의 QWER에 투표하세요' 선공개 예고 영상을 공개하며 9월 6일 공개될 콘텐츠에 대한 팬 투표 참여를 독려했다.",
+          "u": "https://www.youtube.com/shorts/sBpgVXxnRbE",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "RIIZE",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 121,
+      "n_media_bullets": 7,
+      "media_share": 0.0579,
+      "subtag_counts": {
+        "예능": 5,
+        "유튜브": 1,
+        "영화": 1,
+        "드라마": 0
+      },
+      "sample_bullets": [
+        {
+          "t": "라이즈 공식 유튜브 채널 누적 조회수가 10억뷰를 돌파, 최단 기록을 또 경신했다는 데일리안 보도.",
+          "u": "https://m.dailian.co.kr/amp/news/view/1572592",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "RIIZE가 2025년 첫 리얼리티 예능 'BOSS RIIZE'를 선보였다.",
+          "u": "https://www.smentertainment.com/en/newsroom/%EB%9D%BC%EC%9D%B4%EC%A6%88-%EC%B2%AB-%EB%A6%AC%EC%96%BC%EB%A6%AC%ED%8B%B0-%EC%98%88%EB%8A%A5-%EC%9B%83%EC%9D%8C-%ED%84%B0%EC%A1%8C%EB%8B%A4-boss-riize-1%EC%A3%BC%EC%B0%A8/",
+          "tag": "loyalty",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "라이즈, 첫 리얼리티 예능 'BOSS RIIZE' 출연…불꽃 승부욕 발동",
+          "u": "https://enews.imbc.com/News/RetrieveNewsInfo/426153",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "IVE",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 100,
+      "n_media_bullets": 6,
+      "media_share": 0.06,
+      "subtag_counts": {
+        "예능": 1,
+        "유튜브": 3,
+        "영화": 0,
+        "드라마": 2
+      },
+      "sample_bullets": [
+        {
+          "t": "레이가 자신의 솔로 유튜브 콘텐츠 \"마네시테미루 레이(真似してみるレイ)\" 21화에서 고향 나고야의 명소를 직접 소개하며 오스 상점가에서는 \"ここに行けば私に会えると思う(여기 가면 저를 만날 수 있을 것 같아요)\"라고 말했고, 에비스야 본점에서는 \"카레우동과 튀김떡 두 개를 꼭 주문해야 한다\"고 추천했다고 스포츠서울일본판이 전했다.",
+          "u": "https://sportsseoulweb.jp/star_topic/id=92555",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "IVE는 2025년 4월 21일 일본어 신곡 'Dare Me'를 니폰TV(日本テレビ) 드라마 'ダメ恋(Damemane!)'의 오프닝 테마곡으로 발표하며 일본 드라마 시장에 진출했다.",
+          "u": "https://en.wikipedia.org/wiki/Ive_(group)",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        },
+        {
+          "t": "IVE는 유튜브 자체 콘텐츠로 'IVE ON'(2021~), '1,2,3 IVE'(2021~2025 리얼리티), 'IVE LOG'(2022~ 브이로그), 'IVE OFF'(2022~ 비활동기 콘텐츠), 'ARCH·IVE'(2026 리얼리티) 등 다수의 시리즈를 운영하고 있다.",
+          "u": "https://namu.wiki/w/IVE/%EC%BD%98%ED%85%90%EC%B8%A0",
+          "tag": "spillover",
+          "subtags": [
+            "유튜브"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "샤이니",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 77,
+      "n_media_bullets": 5,
+      "media_share": 0.0649,
+      "subtag_counts": {
+        "예능": 0,
+        "유튜브": 1,
+        "영화": 2,
+        "드라마": 2
+      },
+      "sample_bullets": [
+        {
+          "t": "샤이니는 2021년 5월 고(故) 종현을 추모하는 '제3회 빛이나 예술제'를 유튜브를 통해 온라인으로 개최해 태연, 웬디 등 동료 가수들과 추모 공연을 진행했다.",
+          "u": "https://www.starnewskorea.com/star/2021/05/30/2021053018311573095",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "샤이니 민호, 온유 출연 드라마 '태양의 후예' 홍보 \"TV 고정하셔야…\"",
+          "u": "https://news.nate.com/view/20160222n47528",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        },
+        {
+          "t": "샤이니 민호가 영화 '계춘할망'(2016), '두 남자'(2016), '장사리: 잊혀진 영웅들'(2019)에 출연했다.",
+          "u": "https://namu.wiki/w/민호(샤이니)",
+          "tag": "spillover",
+          "subtags": [
+            "영화"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "프로미스나인",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 89,
+      "n_media_bullets": 5,
+      "media_share": 0.0562,
+      "subtag_counts": {
+        "예능": 4,
+        "유튜브": 1,
+        "영화": 0,
+        "드라마": 2
+      },
+      "sample_bullets": [
+        {
+          "t": "장규리는 오는 6월3일 오후 8시50분 첫 방송되는 tvN 신규 드라마 '플레이어2: 꾼들의 전쟁'에 합류한다. 장규리는 극 중 플레이어 팀에 새롭게 합류한 차제이 역으로 분한다. 장규리의 드라마 출연은 지난 2022년 12월 종영된 SBS TV 드라마 '치얼업' 후 약 1년 6개월 만이다.",
+          "u": "https://www.newsis.com/view/NISX20240424_0002711731",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        },
+        {
+          "t": "데뷔 초부터 이미 남달랐던 이채영의 예능 센스를 엿볼 수 있는 예비 플로버들을 위한 콘텐츠 9개. 데뷔 2년차에 출연한 JTBC '아이돌룸'은 이채영의 데뷔 초 예능력을 가장 함축적으로 보여준다. 롤알못임에도 예능력을 살려 한화생명e스포츠 팀의 유튜브를 몇 년째 이어가고 있다.",
+          "u": "https://www.esquirekorea.co.kr/article/1901114",
+          "tag": "spillover",
+          "subtags": [
+            "예능",
+            "유튜브"
+          ]
+        },
+        {
+          "t": "프로미스나인 멤버 백지헌은 2025년 6월 KBS2 예능 '살림하는 남자들 시즌2'와 '신상출시 편스토랑'에 특별 게스트로 출연했다.",
+          "u": "https://v.daum.net/v/20250630082144499",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "김호중",
+      "category": "트로트",
+      "n_total_bullets": 91,
+      "n_media_bullets": 5,
+      "media_share": 0.0549,
+      "subtag_counts": {
+        "예능": 2,
+        "유튜브": 1,
+        "영화": 2,
+        "드라마": 0
+      },
+      "sample_bullets": [
+        {
+          "t": "MBC '미운 우리 새끼' 정기 출연, 유튜브 채널서 '댓글읽기' 콘텐츠 운영",
+          "u": "https://namu.wiki/w/김호중",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "본인 실화를 소재로 한 영화 '파파로티'(김호중 역: 이제훈, 스승 역: 한석규)",
+          "u": "https://namu.wiki/w/김호중",
+          "tag": "spillover",
+          "subtags": [
+            "영화"
+          ]
+        },
+        {
+          "t": "김호중의 실제 이야기를 바탕으로 한 영화 '파파로티'가 2013년 3월 14일 개봉해 총 관객수 171만 6438명(2013.6.1 기준)을 기록, 손익분기점 150만 명을 넘어섰다. 극중 김호중을 모델로 한 캐릭터는 배우 이제훈이, 스승 역은 한석규가 연기했다.",
+          "u": "https://namu.wiki/w/%ED%8C%8C%ED%8C%8C%EB%A1%9C%ED%8B%B0",
+          "tag": "spillover",
+          "subtags": [
+            "영화"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "박서진",
+      "category": "트로트",
+      "n_total_bullets": 99,
+      "n_media_bullets": 5,
+      "media_share": 0.0505,
+      "subtag_counts": {
+        "예능": 5,
+        "유튜브": 0,
+        "영화": 0,
+        "드라마": 0
+      },
+      "sample_bullets": [
+        {
+          "t": "박서진은 리얼리티 예능 '살림하는 남자들 시즌2'에 정착 출연하며 친근한 이미지로 예능 대세로 자리매김했다.",
+          "u": "https://sports.khan.co.kr/article/202401111740003",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "박서진은 2026년 하반기 티빙에서 공개될 신규 음악 예능 '가왕쇼'에 전유진, 홍지윤과 함께 MC로 발탁돼 가왕을 넘어 진행자로 활동 영역을 넓혔다.",
+          "u": "https://www.starnewskorea.com/broadcast-show/2026/06/17/2026061707461539145",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "박서진은 KBS2 '살림하는 남자들 시즌2'에 고정 출연하며 '아침마당', '현역가왕3', '전현무계획3' 등 다수의 예능에 게스트로 출연했다.",
+          "u": "https://enews.imbc.com/News/RetrieveNewsInfo/500314",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "김연자",
+      "category": "트로트",
+      "n_total_bullets": 73,
+      "n_media_bullets": 4,
+      "media_share": 0.0548,
+      "subtag_counts": {
+        "예능": 3,
+        "유튜브": 1,
+        "영화": 0,
+        "드라마": 0
+      },
+      "sample_bullets": [
+        {
+          "t": "2011년 동일본대지진 당시 예능 '도전!1000곡' 우승 상금 전액을 재해 구호에 기부해 한일 양국 팬들의 지지를 받았다.",
+          "u": "https://namu.wiki/w/%EA%B9%80%EC%97%B0%EC%9E%90",
+          "tag": "loyalty",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "2000년 3월 외국인 최초로 일본 마쓰오 예능상을 수상했다.",
+          "u": "https://namu.wiki/w/%EA%B9%80%EC%97%B0%EC%9E%90",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "무한도전, 해피투게더, 놀면 뭐하니?, WSG워너비, 강호동 밥심 등 예능 다수 게스트 출연",
+          "u": "https://namu.wiki/w/김연자",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "김동률",
+      "category": "발라드",
+      "n_total_bullets": 83,
+      "n_media_bullets": 4,
+      "media_share": 0.0482,
+      "subtag_counts": {
+        "예능": 1,
+        "유튜브": 0,
+        "영화": 3,
+        "드라마": 0
+      },
+      "sample_bullets": [
+        {
+          "t": "일본 팬 블로그(ameblo, 필명 sugar96697)가 스트레이 키즈 멤버 현진·승민·아이엔이 2025년 11월 10일 서울 올림픽공원 KSPO돔에서 열린 '2025 김동률 콘서트 〈산책〉'을 관람했다고 전하며, 김동률을 '한국을 대표하는 가수'로 소개하고 영화 '건축학개론' OST 등 명곡을 언급했다.",
+          "u": "https://ameblo.jp/sugar96697/entry-12944619416.html",
+          "tag": "loyalty",
+          "subtags": [
+            "영화"
+          ]
+        },
+        {
+          "t": "'윤도현의 러브레터', '유희열의 스케치북' 등 음악 예능 다수 출연 및 자신의 프로그램 '김동률의 For You' MC(2005~2007)",
+          "u": "https://namu.wiki/w/%EA%B9%80%EB%8F%99%EB%A5%A0",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "김동률(듀오 전람회)이 1994년 작사·작곡·편곡한 '기억의 습작'은 2012년 영화 '건축학개론'에 삽입되면서 발매 18년 만에 음원 차트 역주행을 일으켰고, 이후 젊은 세대에게 재발견되어 대표적인 '영화 삽입곡'으로 자리잡았다.",
+          "u": "https://namu.wiki/w/기억의 습작",
+          "tag": "spillover",
+          "subtags": [
+            "영화"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "빅뱅",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 97,
+      "n_media_bullets": 4,
+      "media_share": 0.0412,
+      "subtag_counts": {
+        "예능": 3,
+        "유튜브": 2,
+        "영화": 0,
+        "드라마": 0
+      },
+      "sample_bullets": [
+        {
+          "t": "빅뱅 리더 지드래곤은 2011년 6월 2일 MBC '무한도전' 서해안고속도로 가요제 특집에서 박봄과 함께한 협업곡을 공개하며 예능 스핀오프 무대를 선보였다.",
+          "u": "https://en.wikipedia.org/wiki/G-Dragon",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "지드래곤의 첫 단독 예능 프로그램 'Good Day'는 '무한도전'을 연출한 김태호 PD와 협업해 제작됐으며, 2025년 2월 16일 MBC와 디즈니+를 통해 첫 방송됐다.",
+          "u": "https://en.wikipedia.org/wiki/G-Dragon",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "지드래곤의 월드투어 비하인드를 담은 다큐멘터리 'Act III: M.O.T.T.E Behind-the-Scenes'가 2018년 9월 유튜브 프리미엄을 통해 공개됐다.",
+          "u": "https://en.wikipedia.org/wiki/G-Dragon",
+          "tag": "spillover",
+          "subtags": [
+            "유튜브"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "박재범",
+      "category": "힙합",
+      "n_total_bullets": 110,
+      "n_media_bullets": 4,
+      "media_share": 0.0364,
+      "subtag_counts": {
+        "예능": 1,
+        "유튜브": 0,
+        "영화": 1,
+        "드라마": 2
+      },
+      "sample_bullets": [
+        {
+          "t": "영문 한국영화 데이터베이스 HanCinema에 따르면 박재범은 영화 '하이프네이션 3D: 힙합사기꾼'(2013)에 Darkness(다크니스) 역으로 출연했다.",
+          "u": "https://www.hancinema.net/korean_Jay_Park-filmography.html",
+          "tag": "spillover",
+          "subtags": [
+            "영화"
+          ]
+        },
+        {
+          "t": "HanCinema 필모그래피에 따르면 박재범은 드라마 '뱀파이어 아이돌'(2011)에 J 역으로 특별출연했다.",
+          "u": "https://www.hancinema.net/korean_Jay_Park-filmography.html",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        },
+        {
+          "t": "코리아타임스가 넷플릭스 드라마 '월간남친(Boyfriend on Demand)'(2026)에서 박재범이 파티 장면에서 여주인공에게 춤을 청하는 '가상 남친' 역할로 특별출연한다고 보도했다.",
+          "u": "https://www.koreatimes.co.kr/entertainment/shows-dramas/20260313/from-chaebol-to-secret-agent-virtual-roster-of-boyfriend-on-demand",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "레드벨벳",
+      "category": "K-pop 걸그룹",
+      "n_total_bullets": 118,
+      "n_media_bullets": 4,
+      "media_share": 0.0339,
+      "subtag_counts": {
+        "예능": 0,
+        "유튜브": 1,
+        "영화": 1,
+        "드라마": 2
+      },
+      "sample_bullets": [
+        {
+          "t": "레드벨벳 예리(김예림)가 OTT 드라마 '청담국제고등학교2'에서 학교 최고 권력자 DIAMOND6의 퀸 '백제나' 역을 맡았다. 예리는 '작품하면서 이렇게 많은 또래랑 찍은 건 처음이었다', '그렇게 촬영 들어가니까 훨씬 편했다'고 인터뷰에서 밝혔다.",
+          "u": "https://www.starnewskorea.com/broadcast-drama/2025/08/06/2025080513494860203",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        },
+        {
+          "t": "레드벨벳 공식 유튜브 채널은 소셜러스 집계 기준 구독자 약 561만 명, 총 조회수 약 24억 970만 회, 업로드 영상 852개를 기록하고 있다.",
+          "u": "https://socialerus.com/Kr/YouTube/Channel/UCk9GmdlDTBfgGRb7vXeRMoQ",
+          "tag": "spillover",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "데뷔 10주년을 맞아 서울 팬콘 투어 실황을 담은 콘서트 실황 영화 '레드벨벳 해피니스 다이어리 : 마이 디어, 레베럽 인 시네마'가 2025년 2월 5일 CGV 등 극장에서 4DX·SCREENX·ULTRA 4DX 특별관 포맷으로 개봉했다.",
+          "u": "https://cine21.com/movie/info/?movie_id=62035",
+          "tag": "spillover",
+          "subtags": [
+            "영화"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "빅마마",
+      "category": "발라드",
+      "n_total_bullets": 73,
+      "n_media_bullets": 3,
+      "media_share": 0.0411,
+      "subtag_counts": {
+        "예능": 0,
+        "유튜브": 1,
+        "영화": 0,
+        "드라마": 2
+      },
+      "sample_bullets": [
+        {
+          "t": "다수의 드라마 OST 작업에 참여하며 방송 콘텐츠와의 파급효과를 만들어냄.",
+          "u": "https://namu.wiki/w/%EB%B9%85%EB%A7%88%EB%A7%88(%EA%B0%80%EC%88%98)",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        },
+        {
+          "t": "빅마마가 2021년 KBS2 월화드라마 '경찰수업' OST에 참여했다.",
+          "u": "https://namu.wiki/w/빅마마(가수)",
+          "tag": "spillover",
+          "subtags": [
+            "드라마"
+          ]
+        },
+        {
+          "t": "빅마마는 2021년 6월 유튜브 '딩고 킬링보이스'에 출연해 인기 급상승 동영상 1위에 올랐다.",
+          "u": "https://namu.wiki/w/빅마마(가수)",
+          "tag": "spillover",
+          "subtags": [
+            "유튜브"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "빈지노",
+      "category": "힙합",
+      "n_total_bullets": 79,
+      "n_media_bullets": 3,
+      "media_share": 0.038,
+      "subtag_counts": {
+        "예능": 2,
+        "유튜브": 1,
+        "영화": 0,
+        "드라마": 0
+      },
+      "sample_bullets": [
+        {
+          "t": "2020년 11월 19일 빈지노가 개인 유튜브 채널 '개인사업자 임성빈'에 전 소속사 일리네어레코즈의 요청으로 포털사이트 프로필을 직접 수정하는 과정을 담은 '빈지노는 Profile을 부를 자격이 있는가 EP.1' 영상을 올리자 하루 만에 구독자가 2만 명 늘었다.",
+          "u": "https://www.segye.com/newsView/20201120510664",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "빈지노는 2015년 9월 21일 JTBC 예능 '비정상회담'에 출연해 서울대 조소과 진학 배경을 공개했고, 이 발언이 네티즌 사이에서 '엄친아' 화제를 낳았다.",
+          "u": "https://www.ebn.co.kr/news/articleView.html?idxno=791817",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        },
+        {
+          "t": "빈지노는 2015년 10월 30일 JTBC 예능 '마녀사냥'에 출연해 외국인 여자친구와의 공개연애 에피소드를 유쾌하게 풀어내며 화제를 모았다.",
+          "u": "https://www.kukinews.com/article/view/kuk201510300008",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "조용필",
+      "category": "발라드",
+      "n_total_bullets": 81,
+      "n_media_bullets": 3,
+      "media_share": 0.037,
+      "subtag_counts": {
+        "예능": 1,
+        "유튜브": 1,
+        "영화": 1,
+        "드라마": 0
+      },
+      "sample_bullets": [
+        {
+          "t": "나도 거의 매일 유튜브에 댓글을 달았고 최신 댓글에 '좋아요'를 누르는 것이 일상이 되었다.",
+          "u": "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003180523",
+          "tag": "loyalty",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "조용필은 2003년 영화 '실미도' OST에 '태양의 눈'을 참여시켰다.",
+          "u": "https://namu.wiki/w/조용필",
+          "tag": "spillover",
+          "subtags": [
+            "영화"
+          ]
+        },
+        {
+          "t": "조용필은 KBS2 '불후의 명곡'에 출연해 18번째 정규앨범 수록곡에 대해 이야기했으며, 2013년에는 예능 '슈퍼소닉'에 출연한 영상 기록이 있다.",
+          "u": "https://namu.wiki/w/조용필",
+          "tag": "spillover",
+          "subtags": [
+            "예능"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "다이나믹듀오",
+      "category": "힙합",
+      "n_total_bullets": 68,
+      "n_media_bullets": 2,
+      "media_share": 0.0294,
+      "subtag_counts": {
+        "예능": 0,
+        "유튜브": 2,
+        "영화": 0,
+        "드라마": 0
+      },
+      "sample_bullets": [
+        {
+          "t": "최자, 유튜브 채널 '최자로드'의 식당 홍보 대가로 3억원을 제안받은 적 있다고 밝혀 콘텐츠 영향력 입증",
+          "u": "https://www.koreadaily.com/article/20250709183346479",
+          "tag": "spillover",
+          "subtags": [
+            "유튜브"
+          ]
+        },
+        {
+          "t": "최자, '최자로드' 유튜브 채널 독립 운영 관련 밝혀, 맛집 소개 콘텐츠로 지역 상권에 영향력 행사",
+          "u": "https://sports.khan.co.kr/article/202507102144003",
+          "tag": "spillover",
+          "subtags": [
+            "유튜브"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "나훈아",
+      "category": "트로트",
+      "n_total_bullets": 70,
+      "n_media_bullets": 2,
+      "media_share": 0.0286,
+      "subtag_counts": {
+        "예능": 0,
+        "유튜브": 0,
+        "영화": 2,
+        "드라마": 0
+      },
+      "sample_bullets": [
+        {
+          "t": "1970년대 영화 '풋사랑'(1971, 주연) 등 총 13편 출연",
+          "u": "https://namu.wiki/w/나훈아/활동",
+          "tag": "spillover",
+          "subtags": [
+            "영화"
+          ]
+        },
+        {
+          "t": "나훈아는 1970~1983년 사이 '웃겨주시네'(1970), '폭풍을 몰고 온 사나이'(1971), '친구'(1972), '어머니의 영광'(1973) 등 총 16편의 영화에 출연했다.",
+          "u": "https://namu.wiki/w/%EB%82%98%ED%9B%84%EC%95%84/%ED%99%9C%EB%8F%99",
+          "tag": "spillover",
+          "subtags": [
+            "영화"
+          ]
+        }
+      ]
+    },
+    {
+      "fandom": "투어스(TWS)",
+      "category": "K-pop 보이그룹",
+      "n_total_bullets": 90,
+      "n_media_bullets": 0,
+      "media_share": 0.0,
+      "subtag_counts": {
+        "예능": 0,
+        "유튜브": 0,
+        "영화": 0,
+        "드라마": 0
+      },
+      "sample_bullets": []
+    }
+  ]
+}

@@ -15,7 +15,11 @@ BASE = Path(__file__).resolve().parents[1]
 OUT_DIR = BASE / "output" / "indices_csv"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
-SRC = BASE / "data" / "v7_final" / "domestic_regional_index_live_reference_v7.json"
+# 데이터 아카이브 README(data/v7_final/ARCHIVE_README_original.md)에는 domestic_regional_pilot_v6.json(라이브판)으로
+# 등재되어 있다. 두 이름 중 v7_final 에 존재하는 쪽을 읽는다(r22 파일럿판은 data/v6_r22_snapshot/ 에 별도).
+_CANDS = [BASE / "data" / "v7_final" / "domestic_regional_index_live_reference_v7.json",
+          BASE / "data" / "v7_final" / "domestic_regional_pilot_v6.json"]
+SRC = next((c for c in _CANDS if c.exists()), _CANDS[0])
 OUT = OUT_DIR / "domestic_regional_index_v7.csv"
 
 with open(SRC, encoding="utf-8") as f:

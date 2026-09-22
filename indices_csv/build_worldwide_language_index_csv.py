@@ -16,7 +16,11 @@ BASE = Path(__file__).resolve().parents[1]
 OUT_DIR = BASE / "output" / "indices_csv"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
-SRC = BASE / "data" / "v7_final" / "worldwide_language_index_live_reference_v7.json"
+# 데이터 아카이브 README(data/v7_final/ARCHIVE_README_original.md)상의 원본 파일명은
+# worldwide_language_pilot_live_reference_v7.json 이다. 두 이름 중 존재하는 쪽을 읽는다.
+_CANDS = [BASE / "data" / "v7_final" / "worldwide_language_index_live_reference_v7.json",
+          BASE / "data" / "v7_final" / "worldwide_language_pilot_live_reference_v7.json"]
+SRC = next((c for c in _CANDS if c.exists()), _CANDS[0])
 OUT = OUT_DIR / "worldwide_language_index_v7.csv"
 
 with open(SRC, encoding="utf-8") as f:
