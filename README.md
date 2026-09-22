@@ -84,7 +84,7 @@ flowchart LR
 
 **4구획 읽는 법.** 기준선은 100개 팬덤의 표본 평균이다(팬충성도 0.371, 파급효과 0.266). 두 축이 모두 평균 이상이면 **핵심전략형(24개)** 으로, 결속력과 파급력을 모두 갖춘 팬덤이며 BTS·TWICE·임영웅·Stray Kids·BLACKPINK가 여기 속한다. 충성도만 평균 이상이면 **내부결속형(17개)** 으로, 결속력은 높으나 외부로 퍼지는 파급력은 낮은 유형이다(SEVENTEEN·NCT·RIIZE·레드벨벳 등). 파급효과만 평균 이상이면 **외부견인형(10개)** 으로, 언론·브랜드가 먼저 끌어 주지만 팬덤 결속 근거는 상대적으로 적은 유형이다(NewJeans 등). 둘 다 평균 이하인 **주변부(49개)** 가 절반 가까이를 차지하는데, 이는 근거문장 수가 적은 팬덤이 두 점수 모두 낮게 나오는 구조와 맞물린다(두 점수 모두 활동량과 상관 0.69·0.90). 4구획은 통계적 군집이 아니라 평균선 기준의 규칙 분류이므로, 경계 근처 팬덤은 근거가 몇 건만 더해져도 구획이 바뀔 수 있다.
 
-![Q-Q Plot](assets/readme/fig04_qq_plot.png)
+![Q-Q Plot](Statistics/R_%ED%86%B5%EA%B3%84%EA%B2%80%EC%A6%9D/outputs/plots/fig3_qq_normality_R.png)
 
 *그림 4. R(`Statistics/R_통계검증/R/plots.R`, ggplot2)로 그린 Q-Q plot — 팬충성도(W=0.954, p=0.0015)와 파급효과(W=0.861, p<.001)는 우측 꼬리에서 이론선을 벗어나 정규분포가 기각되고, 팬 요인 다양성(W=0.975, p=0.058)은 정규성이 유지된다. min-max 정규화가 원 분포의 우측 쏠림을 그대로 보존하기 때문이다. 통계량 전부는 같은 R 패키지와 `Statistics/verify_r_sections_python.py`로 238/238 재현.*
 
@@ -238,7 +238,7 @@ README.md                                   이 문서 (핵심 요약판)
 (분석보고서)…최종.pdf, (요약보고서)…최종.pdf  제출본
 3D_포지셔닝맵_국내100팬덤.html + plotly-bundle.js / Persona_결정공간.html   인터랙티브 산출물 (같은 폴더에서 열면 동작)
 qr_codes/                                   두 HTML의 QR 코드 + 아티팩트 링크·해시 대조
-assets/readme/                              이 문서의 그림 19장 (제출 보고서 PDF·보고서 docx 원본 그림 + 데이터에서 다시 그린 그림, 가로 최대 2,400px)
+assets/readme/                              이 문서의 그림 (제출 보고서 PDF·보고서 docx 원본 그림 + 데이터에서 다시 그린 그림, 가로 최대 2,400px; Q-Q plot은 Statistics/R_통계검증/outputs/plots/ 의 R 산출물을 직접 참조)
 verify_v7_final_consistency.py              최종 수치 ↔ 파일 정합성 검증 (101/101)
 run_lda_v6.py                               LDA 파이프라인 참고 구현 (--data/--out)
 data/
