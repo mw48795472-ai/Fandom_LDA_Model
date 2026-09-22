@@ -183,12 +183,24 @@ if stats is not None:
     check("3D축 다중회귀 R²=0.234 (F=14.83, p<.001), VIF(3축)=1.321",
           round(m3.rsquared, 3) == 0.234 and round(m3.fvalue, 2) == 14.83 and m3.f_pvalue < 0.001 and round(vif3, 3) == 1.321,
           f"R²={m3.rsquared:.3f}, F={m3.fvalue:.2f}, p={m3.f_pvalue:.2e}, VIF={vif3:.3f}")
-    tab = np.array([[q["핵심전략형"], q["내부결속형"]], [q["외부견인형"], q["주변부"]]])
-    chi_y = stats.chi2_contingency(tab, correction=True)
-    chi_n = stats.chi2_contingency(tab, correction=False)
-    info("4분면 독립성 χ² — 보고서 값 χ²=8.34, p=0.0039 는 저장소 파일로 재현되지 않음",
-         f"라이브 4구획표 {tab.tolist()} 기준 재계산: Yates χ²={chi_y[0]:.2f} (p={chi_y[1]:.1e}), 보정없음 χ²={chi_n[0]:.2f} (p={chi_n[1]:.1e}). "
-         f"보고서 값이 어느 시점·어느 분할표에서 나왔는지는 복구되지 않음 (KEY_FINDINGS.md 참고)")
+    # 4분면 독립성 χ²: 보고서 값은 표본 평균 기준 4구획(24/17/10/49)이 아니라 **점수 0.5 고정 임계값** 분할표에서
+    # 계산된 것 (positioning_map_correlation_live_v7.json의 table=[[7,17],[4,72]] 로 확인)
+    with open(D / "positioning_map_correlation_live_v7.json", encoding="utf-8") as f:
+        pmc = json.load(f)
+    hl, hs = L > 0.5, S > 0.5
+    tab05 = np.array([[int((hl & hs).sum()), int((hl & ~hs).sum())], [int((~hl & hs).sum()), int((~hl & ~hs).sum())]])
+    chi05 = stats.chi2_contingency(tab05, correction=True)
+    check("4분면 독립성 χ²=8.34, p=0.0039 — loyalty/spillover 각각 0.5 초과 여부 2×2표 [[7,17],[4,72]] (Yates 보정)",
+          tab05.tolist() == pmc["quadrant_chi_square"]["table"] and round(chi05[0], 4) == 8.3439 and round(chi05[1], 4) == 0.0039,
+          f"표 {tab05.tolist()}, χ²={chi05[0]:.4f}, p={chi05[1]:.6f} (파일 값 χ²={pmc['quadrant_chi_square']['chi2']})")
+    tabq = np.array([[q["핵심전략형"], q["내부결속형"]], [q["외부견인형"], q["주변부"]]])
+    chiq = stats.chi2_contingency(tabq, correction=True)
+    info("참고: 표본 평균 기준 4구획표(24/17/10/49)로 계산하면 다른 값", f"Yates χ²={chiq[0]:.2f} (p={chiq[1]:.1e}) — 보고서 χ²는 이 표가 아님")
+    check("positioning_map_correlation_live_v7.json 의 회귀선·activity 상관 재현 (slope 0.3844, r_L·act 0.694, r_S·act 0.9019)",
+          round(float(np.polyfit(L, S, 1)[0]), 4) == pmc["regression_spillover_on_loyalty"]["slope"]
+          and round(stats.pearsonr(L, A)[0], 3) == round(pmc["each_score_vs_activity"]["loyalty_score_vs_activity"]["r"], 3)
+          and round(stats.pearsonr(S, A)[0], 4) == pmc["each_score_vs_activity"]["spillover_score_vs_activity"]["r"],
+          f"slope={np.polyfit(L, S, 1)[0]:.4f}, r_L·act={stats.pearsonr(L, A)[0]:.4f}, r_S·act={stats.pearsonr(S, A)[0]:.4f}")
 
 # ---------------------------------------------------------------------------
 # [E] 동결 스냅샷 산출물
@@ -223,8 +235,23 @@ for r in frozen:
 check("페르소나 = 상위 2개 F코드 조합표 매핑 (불일치 0)", bad_rule == 0, f"{bad_rule}")
 check("persona JSON loyalty/spillover_score = CSV 값 (불일치 0)", bad_score == 0, f"{bad_score}")
 check("factor_specific_loyalty/spillover = factor_share × score (불일치 0)", bad_spec == 0, f"{bad_spec}")
-fl = [float(r["loyalty_score"]) for r in frozen]; fs = [float(r["spillover_score"]) for r in frozen]
+fl = np.array([float(r["loyalty_score"]) for r in frozen]); fs = np.array([float(r["spillover_score"]) for r in frozen])
 info("동결 스냅샷 점수 표본 평균(참고, 보고서 4구획 기준선은 라이브 점수 평균임)", f"loyalty {np.mean(fl):.4f}, spillover {np.mean(fs):.4f}")
+if stats is not None:
+    hl, hs = fl > 0.5, fs > 0.5
+    tabf = np.array([[int((hl & hs).sum()), int((hl & ~hs).sum())], [int((~hl & hs).sum()), int((~hl & ~hs).sum())]])
+    chif = stats.chi2_contingency(tabf, correction=True)
+    check("프로즌 스냅샷 4분면 χ²=10.2273, p=0.0014 — 동결 CSV 점수 0.5 초과 2×2표 [[8,17],[4,71]]",
+          round(chif[0], 4) == 10.2273 and round(chif[1], 4) == 0.0014, f"표 {tabf.tolist()}, χ²={chif[0]:.4f}, p={chif[1]:.6f}")
+with open(D / "member_mention_pilot_v6.json", encoding="utf-8") as f:
+    mpil = json.load(f)
+fz_act = {r["fandom"]: int(r["activity"]) for r in frozen}
+check("member_mention_pilot_v6.json(동결 스냅샷판) 23개 그룹 total_group_bullets = 동결 CSV activity",
+      len(mpil) == 23 and all(fz_act.get(g) == v["total_group_bullets"] for g, v in mpil.items()),
+      f"{len(mpil)}개 그룹, BTS {mpil['BTS']['total_group_bullets']}건 (r22판은 125건)")
+mp_bad = [g for g, v in mpil.items() if sum(v["member_mention_counts"].values()) != v["total_member_mentions"]
+          or abs(sum(x ** 2 for x in v["member_impact_share_pilot"].values()) - v["mci_pilot"]) > 0.002]
+check("멤버 파일럿 내부 정합 (언급 합 = total, MCI = Σshare²)", not mp_bad, f"불일치 {mp_bad}")
 check("동결 CSV 하이라이트: BTS 0.931/1.000, 임영웅 0.899/0.702, 리센느 0.444/0.304 (KEY_FINDINGS 표)",
       (pmap["BTS"]["loyalty_score"], pmap["BTS"]["spillover_score"]) == (0.931, 1.0) and
       (pmap["임영웅"]["loyalty_score"], pmap["임영웅"]["spillover_score"]) == (0.899, 0.702) and
@@ -266,6 +293,44 @@ for r in frozen:
 check("HTML 내장 F1~F5 비중 = fandom_scores_v6.csv 비중 (불일치 0)", share_mism == 0, f"{share_mism}")
 info("K=10 토픽 명칭은 METHODOLOGY.md 표와 상위 4개 키워드가 일부 다름(같은 동결 스냅샷의 재적합 산출물, F코드 배정은 동일)",
      " / ".join(f"{i} {n}" for i, n in zip(pds["dendro"]["topic_ids"], pds["dendro"]["topic_names"])))
+
+# ---------------------------------------------------------------------------
+# [H] topic_cards_v7.json (동결 스냅샷 K=10 토픽 카드 — METHODOLOGY.md 2-1 표의 출처)
+# ---------------------------------------------------------------------------
+print("\n[H] topic_cards_v7.json (동결 스냅샷 K=10 토픽 카드)")
+with open(D / "topic_cards_v7.json", encoding="utf-8") as f:
+    cards = json.load(f)
+METHOD_NAMES = {"K0": "음원차트기록형(기록·1위·차트·최초)", "K1": "동남아현지보도형(보도·매체·인도네시아·기사)",
+                "K2": "예능방송출연형(예능·출연·mbc·sbs)", "K3": "일본오리콘앨범형(일본·빌보드·오리콘·판매)",
+                "K4": "글로벌음반판매형(million·album·copies·chart)", "K5": "팬클럽공식기부형(공식·팬클럽·기부·콘텐츠)",
+                "K6": "단독콘서트월드투어형(콘서트·투어·단독·월드투어)", "K7": "브랜드앰버서더형(브랜드·광고·앰버서더·매진)",
+                "K8": "월드투어매진형(tour·concert·sold·world)", "K9": "영화드라마출연형(드라마·ost·영화·출연)"}
+check("토픽 10개, 명칭 = METHODOLOGY.md 2-1 표와 완전 일치", len(cards) == 10 and all(c["topic_name"] == METHOD_NAMES[c["topic_id"]] for c in cards))
+check("토픽→F 경로 = METHODOLOGY.md 표", all(c["connected_f_pathway"].split()[0] == METHOD_TABLE[c["topic_id"]] for c in cards))
+k5 = next(c for c in cards if c["topic_id"] == "K5")
+fz_row = {r["fandom"]: r for r in frozen}
+check("K5(=F1 단독 토픽) 대표 팬덤 avg_topic_weight = 동결 CSV 결속형 비중 (박서진 0.2653 · 임영웅 0.2017 …)",
+      all(abs(x["avg_topic_weight"] - float(fz_row[x["fandom"]][F_COLS["F1"]])) < 1e-9 for x in k5["representative_fandoms_top5"]))
+info("품질 메모: K2 대표 불릿 3번째는 태국어 aespa 콘서트 문장(topic_prob 0.9625)이 예능출연 토픽에 배정됨 — 비한국어 문장의 토픽 배정 한계 사례",
+     "K1 '동남아현지보도형' 대표 불릿도 대학축제·VR 콘서트 등 국내 현장 문장이 섞여 있음")
+
+# ---------------------------------------------------------------------------
+# [I] member_pilot_mci_correlation_v7.json (MCI ↔ outcome 상관, 45개 그룹)
+# ---------------------------------------------------------------------------
+print("\n[I] member_pilot_mci_correlation_v7.json (MCI ↔ 동결 스냅샷 outcome 상관)")
+with open(D / "member_pilot_mci_correlation_v7.json", encoding="utf-8") as f:
+    mcc = json.load(f)
+with open(D / "member_mention_index_v7.json", encoding="utf-8") as f:
+    midx = json.load(f)
+check("45개 그룹 = member_mention_index_v7.json 그룹 집합", mcc["n_groups"] == 45 and set(mcc["groups"]) == set(midx))
+info("시점 주의(파일 caveat 원문)", mcc["caveat_temporal_mismatch"][:90] + "…")
+if stats is not None:
+    mv = np.array([midx[g]["mci_index"] for g in mcc["groups"]])
+    ly = np.array([float(fz_row[g]["loyalty_score"]) for g in mcc["groups"]])
+    r_idx = stats.pearsonr(mv, ly)[0]
+    info("파일의 MCI는 v7-55 시점(8,981건)이라 저장소에 없음. 저장소의 10,020건 MCI(member_mention_index_v7.json)로 재계산하면 근사",
+         f"raw MCI~loyalty r={r_idx:.4f} (파일 -0.3932), MCI 평균 {mv.mean():.4f} (파일 0.2662), max {mv.max()} (파일 0.649, FTISLAND)")
+    check("MCI~loyalty 음의 상관 방향·크기 근사 재현 (|Δr| < 0.02)", abs(r_idx - mcc["correlations_mci_raw"]["loyalty_score"]["pearson_r"]) < 0.02, f"Δr={abs(r_idx + 0.3932):.4f}")
 
 # ---------------------------------------------------------------------------
 n_ok = sum(1 for _, ok in results if ok); n_all = len(results)
