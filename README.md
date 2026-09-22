@@ -149,13 +149,13 @@ flowchart LR
 |---|---|
 | ![worldwide rank](assets/readme/fig13_worldwide_language_rank.png) | ![worldwide by fandom](assets/readme/fig14_worldwide_language_by_fandom.png) |
 
-| 미디어·콘텐츠 노출 (상위 20) | 팬덤결속 지수 (유형별 순위 · 상위 25) |
+| 미디어·콘텐츠 노출 (상위 20) | 국내 지역 언급 순위 |
 |---|---|
-| ![media](assets/readme/fig10_media_exposure.png) | ![cohesion](assets/readme/fig11_cohesion_index.png) |
+| ![media](assets/readme/fig10_media_exposure.png) | ![domestic](assets/readme/fig12_domestic_regional.png) |
 
-| 국내 지역 언급 순위 | 업종별 광고·상업성 순위 |
+| 팬덤결속 지수 (유형별 순위 · 상위 25) | 업종별 광고·상업성 순위 |
 |---|---|
-| <img src="assets/readme/fig12_domestic_regional.png" alt="domestic" width="470"> | <img src="assets/readme/fig08_ad_industry_rank.png" alt="ad rank" width="400"> |
+| <img src="assets/readme/fig11_cohesion_index.png" alt="cohesion" width="470"> | <img src="assets/readme/fig08_ad_industry_rank.png" alt="ad rank" width="400"> |
 
 ![팬덤별 광고·상업성 업종 구성 상위 25](assets/readme/fig09_ad_by_fandom.png)
 
