@@ -6,7 +6,7 @@ README 6절의 그림은 상위 20·25개만 보여 주므로, 같은 지표를 
   aux2_media_exposure_100.png       미디어·콘텐츠 노출 지수 — 예능·유튜브·영화·드라마 누적 막대
   aux3_fandom_cohesion_100.png      팬덤결속 지수 — 결속 유형 A~E 누적 막대
   aux4_media_crossover_100.png      매체 크로스오버 지수 — 서로 다른 뉴스 매체 수
-  aux5_domestic_regional_100.png    국내 지역 지수 — 상위 15개 시/도(권역별 색 계열) + 그 외 누적 막대
+  aux5_domestic_regional_100.png    국내 지역 지수 — 17개 시/도 전부(권역별 색 계열) 누적 막대
   aux6_member_mci_45.png            멤버 집중도(MCI) — 45개 그룹, 구조적 하한 1/멤버수 표시
   aux7_worldwide_language_100.png   세계 언어 지수 — 해외언어 구성(상위 7개 언어 + 그 외) 누적 막대
 
@@ -185,9 +185,9 @@ stacked_100(rows, ["outlets"], [SERIES[0]], ["서로 다른 뉴스 매체 수"],
             "aux4_media_crossover_100.png")
 
 # ---- 5. 국내 지역 ----------------------------------------------------------------
-# 상위 15개 시/도를 권역별 색 계열로 칠한다: 같은 권역은 같은 색상(hue)의 명도 단계, 누적 막대도 권역 순서로 쌓는다.
+# 17개 시/도 전부를 권역별 색 계열로 칠한다: 같은 권역은 같은 색상(hue)의 명도 단계, 누적 막대도 권역 순서로 쌓는다.
 #   수도권(서울·인천·경기)=파랑, 부울경(부산·경남·울산)=주황/빨강, 대구경북(대구·경북)=청록/초록,
-#   호남(광주·전남·전북)=보라, 충청(대전·충남)=호박색, 강원=분홍, 제주=갈색, 나머지(충북·세종)=회색
+#   호남(광주·전남·전북)=보라, 충청(대전·충남·충북·세종)=노랑/호박, 강원=분홍, 제주=갈색 — 17개 시/도 전부 표시
 dr = load(BASE / "v7_final_10020" / "analysis" / "domestic_regional_index" / "domestic_regional_index_v7.json")
 rtot = {}
 for v in dr.values():
@@ -198,30 +198,28 @@ REGION_STYLE = [  # (시/도, 색) — 권역 순서
     ("부산", "#eb6834"), ("경남", "#e34948"), ("울산", "#f6a57f"),
     ("대구", "#1baf7a"), ("경북", "#008300"),
     ("광주", "#4a3aa7"), ("전남", "#9387e0"), ("전북", "#2a1f6e"),
-    ("대전", "#eda100"), ("충남", "#f6cf6a"),
+    ("대전", "#eda100"), ("충남", "#f6cf6a"), ("충북", "#b37700"), ("세종", "#fbe3a0"),
     ("강원", "#e87ba4"),
     ("제주", "#8f6a3c"),
 ]
-reg15 = [k for k, _ in REGION_STYLE]
-assert set(reg15) == set(top_keys(rtot, 15)), "상위 15개 시/도가 바뀌면 REGION_STYLE을 갱신하세요"
-rest = [k for k in rtot if k not in reg15]
+reg15 = [k for k, _ in REGION_STYLE]   # 17개 전부
+assert set(reg15) == set(rtot), "17개 시/도 전부가 REGION_STYLE에 있어야 합니다"
 rows = []
 for name, v in dr.items():
     rc = v["region_mention_counts"]
     d = {k: rc.get(k, 0) for k in reg15}
-    d["_other"] = sum(rc.get(k, 0) for k in rest)
     rows.append((name, d, (v["total_region_mentions"], v["n_regions_hit"], v.get("region_diversity", 0))))
 rows.sort(key=lambda r: (-r[2][0], -r[2][1], r[0]))
-stacked_100(rows, reg15 + ["_other"], [c for _, c in REGION_STYLE] + [OTHER],
+stacked_100(rows, reg15, [c for _, c in REGION_STYLE],
             ["수도권 · 서울", "수도권 · 인천", "수도권 · 경기", "부울경 · 부산", "부울경 · 경남", "부울경 · 울산", "대구경북 · 대구", "대구경북 · 경북",
-             "호남 · 광주", "호남 · 전남", "호남 · 전북", "충청 · 대전", "충청 · 충남", "강원", "제주"] + [f"그 외({'·'.join(sorted(rest))})"],
+             "호남 · 광주", "호남 · 전남", "호남 · 전북", "충청 · 대전", "충청 · 충남", "충청 · 충북", "충청 · 세종", "강원", "제주"],
             lambda r: f"{r[2][0]}건 · {r[2][1]}개 지역",
             "국내 지역 지수 — 100개 팬덤 전체",
             f"지역 언급 {sum(rtot.values()):,}건 · 지역 언급 수 순 정렬 · 막대 = 시/도별 언급 문장 수(권역 순으로 쌓음) · 끝 라벨 = 언급 수 · 언급된 시/도 수",
             "시/도별 언급 근거문장 수",
-            "자료: v7_final_10020/analysis/domestic_regional_index/domestic_regional_index_v7.json (최종 코퍼스 10,020건 산출본) · 색 계열 = 권역(수도권 파랑 · 부울경 주황/빨강 · 대구경북 청록/초록 · 호남 보라 · 충청 호박 · 강원 분홍 · 제주 갈색)",
-            "aux5_domestic_regional_100.png", top=0.875,
-            legend_columns=[[0, 1, 2], [3, 4, 5], [6, 7], [8, 9, 10], [11, 12], [13, 14, 15]])
+            "자료: v7_final_10020/analysis/domestic_regional_index/domestic_regional_index_v7.json (최종 코퍼스 10,020건 산출본) · 색 계열 = 권역(수도권 파랑 · 부울경 주황/빨강 · 대구경북 청록/초록 · 호남 보라 · 충청 노랑/호박 · 강원 분홍 · 제주 갈색)",
+            "aux5_domestic_regional_100.png", top=0.865,
+            legend_columns=[[0, 1, 2], [3, 4, 5], [6, 7], [8, 9, 10], [11, 12, 13, 14], [15, 16]])
 
 # ---- 6. 멤버 집중도 MCI (45개 그룹) ------------------------------------------------
 mi = load(D / "member_mention_index_v7.json")
