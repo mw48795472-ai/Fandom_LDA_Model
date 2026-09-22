@@ -21,7 +21,7 @@
 | `k9_validation_v7.json` | 중간 라운드 9,614문서 | K=9 추가 검증 실험(승자 K=8 유지, 미디어 토픽 분리 여부 M-grid) |
 | `lda_v6_diagnostics_live_reference_v7.json` | 라이브 10,020건 | 라이브 재적합 진단: K-grid(8∼30), selected_k=8, M=5, 실루엣 0.046, 토픽 상위어, 토픽→F 배정 — 실루엣 게이트에 기각되어 해석 계층에 미반영 |
 | `lda_k_grid_live_reference_v7.csv` | 라이브 10,020건 | 위 k_grid를 CSV로 (`v7_final_10020/data_export/build_lda_k_grid_csv.py`) |
-| `member_mention_index_v7.json` | 라이브 10,020건 | 멤버 집중도 지수(MCI) 45개 그룹 |
+| `member_mention_index_v7.json` | 라이브 10,020건 | 멤버 집중도 지수(MCI) 45개 그룹. `Statistics/R_통계검증/data/member_mention_pilot_v7.json`과 값 동일(키 이름만 `mci_index`/`mci_pilot`) — 상세 보고서 7.4절 표(r=-0.728/-0.385)의 입력 |
 | `positioning_map_correlation_live_v7.json` | 라이브 10,020건 | 보고서 표 "통계 검증" 원본: Pearson/Spearman·정규성·다중회귀(+activity)·VIF·영향점 top5·민감도·LOO·설계기준(|r|<0.5)·**4분면 χ²의 분할표 [[7,17],[4,72]] (점수 0.5 초과 기준)** |
 | `member_pilot_mci_correlation_v7.json` | MCI: v7-55 시점 8,981건 / outcome: 동결 7,350건 | MCI ↔ loyalty/spillover/coverage/diversity 상관·회귀·MCI_excess 재분석 (45개 그룹). 파일 자체 caveat대로 시점이 섞인 참고용 분석 |
 | `member_mention_pilot_v6.json` | 동결 스냅샷 7,350건 | 멤버 언급 파일럿 23개 그룹 (BTS 170건 중 73건, MCI 0.24) |
