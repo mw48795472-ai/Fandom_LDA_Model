@@ -16,14 +16,27 @@ from pathlib import Path
 import numpy as np
 from scipy import stats
 
-HERE = Path(__file__).resolve().parent; REPO = HERE.parents[2]; D = REPO / "data" / "v7_final"; OUT = HERE / "live_interpretive_layer"; OUT.mkdir(exist_ok=True)
-live = json.load(open(D / "fandom_scores_live_reference_v7.json", encoding="utf-8")); frozen = {r["fandom"]: r for r in json.load(open(D / "fandom_scores_v6.json", encoding="utf-8"))}
-diag = json.load(open(D / "lda_v6_diagnostics_live_reference_v7.json", encoding="utf-8")); fp = json.load(open(D / "fan_persona_v7.json", encoding="utf-8"))
+import sys
+HERE = Path(__file__).resolve().parent; REPO = HERE.parents[2]; D = REPO / "data" / "v7_final"
+# 기본은 r72 라이브 참고 재적합. 다른 적합(예: r73)은 --scores 경로 --diag 경로 --out 폴더 --label 이름 으로 지정
+_a = sys.argv[1:]; _opt = {_a[i]: _a[i + 1] for i in range(0, len(_a) - 1, 2) if _a[i].startswith("--")}
+SCORES = REPO / _opt["--scores"] if "--scores" in _opt else D / "fandom_scores_live_reference_v7.json"
+DIAG = REPO / _opt["--diag"] if "--diag" in _opt else D / "lda_v6_diagnostics_live_reference_v7.json"
+OUT = REPO / _opt["--out"] if "--out" in _opt else HERE / "live_interpretive_layer"; OUT.mkdir(parents=True, exist_ok=True)
+LABEL = _opt.get("--label", "라이브 K=8 참고 재적합(10,018문서, M=5, 실루엣 0.046; 게이트 v2 통과)")
+live = json.load(open(SCORES, encoding="utf-8")); frozen = {r["fandom"]: r for r in json.load(open(D / "fandom_scores_v6.json", encoding="utf-8"))}
+diag = json.load(open(DIAG, encoding="utf-8")); fp = json.load(open(D / "fan_persona_v7.json", encoding="utf-8"))
 pmap = json.load(open(D / "factor_pathway_map_v7.json", encoding="utf-8"))["mapping"]; pay = json.load(open(D / "chart3d_payload_live_reference_v7.json", encoding="utf-8"))
 PERSONA = fp["persona_table_definition"]; frozen_persona = {f["fandom"]: f["persona"] for f in fp["fandoms"]}
 FCODE = {lab: v["f_code"] for lab, v in pmap.items()}; FNAME = {v["f_code"]: v["f_name"] for v in pmap.values()}
 FCODE["브랜드·상업형(광고·앰버서더)"] = "F4"
-labels = diag["factor_labels"]; assert all(l in FCODE for l in labels.values()), labels
+labels = diag["factor_labels"]
+# 파이프라인 라벨러가 이름을 못 붙인 요인('기타형' 등)은 남은 F 코드에 배정하고 주석으로 남긴다(M=5 전제)
+_unknown = [l for l in labels.values() if l not in FCODE]; _used = {FCODE[l] for l in labels.values() if l in FCODE}; _free = [c for c in ("F1", "F2", "F3", "F4", "F5") if c not in _used]
+FCODE_NOTE = ""
+for l, c in zip(_unknown, _free): FCODE[l] = c; FCODE_NOTE += f"{l}→{c}(잔여 코드 배정) "
+assert all(l in FCODE for l in labels.values()), labels
+assert len({FCODE[l] for l in labels.values()}) == len(labels), ("F 코드 충돌", {l: FCODE[l] for l in labels.values()})
 lmean, smean = pay["lmean"], pay["smean"]
 def quadrant(L, S): return "핵심전략형" if L >= lmean and S >= smean else "내부결속형" if L >= lmean else "외부견인형" if S >= smean else "주변부"
 
@@ -41,7 +54,7 @@ qc = Counter(r["quadrant"] for r in full); assert dict(qc) == {k: v for k, v in 
 # ② K→F — 토픽 이름은 동결 명명 규칙(활동 유형 + 형, 괄호 안 상위어)을 따라 상위 10단어를 보고 붙였다
 TOPIC_NAMES = {"0": "브랜드앰버서더형(브랜드·광고·모델·앰버서더)", "1": "음원차트기록형(기록·1위·앨범·발매)", "2": "단독콘서트투어형(콘서트·공연·단독·투어)", "3": "해외투어음반형(fan·japan·tour·album)",
                "4": "페스티벌무대형(무대·축제·페스티벌·대학축제)", "5": "예능영화출연형(출연·예능·영화·일본)", "6": "팬클럽공식활동형(공식·팬클럽·홍보대사·팬덤)", "7": "드라마OST기부형(ost·드라마·기부·수상)"}
-k2f = [{"topic": f"T{t}", "topic_name": TOPIC_NAMES[t], "top10": " ".join(diag["topics_top_words"][t]), "raw_factor": labels[str(f)], "F": FCODE[labels[str(f)]], "F_name": FNAME[FCODE[labels[str(f)]]]} for t, f in sorted(diag["topic_to_factor"].items(), key=lambda kv: int(kv[0]))]
+k2f = [{"topic": f"T{t}", "topic_name": TOPIC_NAMES.get(t, "·".join(diag["topics_top_words"][t][:4]) + "형") if "--scores" not in _opt else "·".join(diag["topics_top_words"][t][:4]) + "형", "top10": " ".join(diag["topics_top_words"][t]), "raw_factor": labels[str(f)], "F": FCODE[labels[str(f)]], "F_name": FNAME[FCODE[labels[str(f)]]]} for t, f in sorted(diag["topic_to_factor"].items(), key=lambda kv: int(kv[0]))]
 with open(OUT / "live_k_to_f_v7.csv", "w", encoding="utf-8-sig", newline="") as f: w = csv.DictWriter(f, fieldnames=list(k2f[0].keys())); w.writeheader(); w.writerows(k2f)
 
 # ③ 페르소나
@@ -51,7 +64,7 @@ for r in live:
     pers.append({"fandom": r["fandom"], "top2_factors": [{"f_code": c, "f_name": FNAME[c], "share": sh[c]} for c in top2], "persona": PERSONA[key], "loyalty_score": r["loyalty_score"], "spillover_score": r["spillover_score"],
                  "factor_specific_loyalty": {c: round(v * r["loyalty_score"], 4) for c, v in sh.items()}, "factor_specific_spillover": {c: round(v * r["spillover_score"], 4) for c, v in sh.items()}, "frozen_persona": frozen_persona.get(r["fandom"], "")})
 pc = Counter(p["persona"] for p in pers)
-json.dump({"model": "라이브 K=8 참고 재적합(10,018문서, M=5, 실루엣 0.046; 게이트 v2 통과)", "f_code_note": "브랜드·상업형(광고·앰버서더) → F4 산업전이. 동결에서는 미디어노출형이 F4였다.", "persona_table_definition": PERSONA,
+json.dump({"model": LABEL, "f_code_note": ("브랜드·상업형(광고·앰버서더) → F4 산업전이. 동결에서는 미디어노출형이 F4였다. " + FCODE_NOTE).strip(), "persona_table_definition": PERSONA,
            "persona_counts": dict(pc), "frozen_persona_counts": fp["persona_counts"], "fandoms": pers}, open(OUT / "live_persona_v7.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 common = [p for p in pers if p["frozen_persona"]]; mig = Counter((p["frozen_persona"], p["persona"]) for p in common)
 with open(OUT / "persona_migration_v7.csv", "w", encoding="utf-8-sig", newline="") as f:
