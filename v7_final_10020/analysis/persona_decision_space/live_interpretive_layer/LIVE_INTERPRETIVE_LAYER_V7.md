@@ -70,6 +70,7 @@
 | `live_top15_v7.csv` / `live_full_ranking_v7.csv` | 라이브 순위표(구획·대표 F·동결 순위 병기) |
 | `live_k_to_f_v7.csv` | 라이브 K=8 토픽 → raw 요인 → F |
 | `live_persona_v7.json` | 팬덤별 상위 2 F·페르소나·F별 분해, 카운트 |
+| `live_persona_v7.csv` | 유형별로 묶은 팬덤 100개: 합산 순위·점수·4구획·상위 2 F 비중·동결 페르소나 |
 | `persona_migration_v7.csv` | 동결→라이브 페르소나 이동표 |
 | `live_vs_frozen_summary_v7.json` | 요약 |
 
