@@ -51,10 +51,11 @@ plt.rcParams["svg.fonttype"] = "none"
 plt.rcParams["axes.unicode_minus"] = False
 
 # 입력 1: K→M 군집 구조(토픽 코사인거리 행렬 + 팬덤별 F1~F5 비중). 동결 스냅샷 v7-40(7,350건) 기준.
-#   원본 factor_clustering_structure_v7.json 이 있으면 그대로 쓰고, 없으면(저장소 기본) 같은 스냅샷의
+#   동결 코사인 거리 행렬 파일 topic_cosine_distance_frozen_v7_40.json 이 있으면 그대로 쓰고(원본 데이터 묶음에는
+#   이런 파일이 없었다 — 동결 코퍼스를 복원해 재적합할 때 이 이름으로 두면 우선 읽는다), 없으면(저장소 기본) 같은 스냅샷의
 #   Persona_결정공간.html 내장 데이터 data/v7_final/persona_decision_space_v7.json 으로 대체한다:
 #   덴드로그램은 그 안의 average-linkage 병합 기록(merges)으로 linkage 행렬을 만들고, PCA 입력은 팬덤별 shares 를 쓴다.
-_cs_path = DATA_DIR / "factor_clustering_structure_v7.json"
+_cs_path = DATA_DIR / "topic_cosine_distance_frozen_v7_40.json"
 if _cs_path.exists():
     with open(_cs_path, encoding="utf-8") as f:
         cs = json.load(f)
@@ -72,7 +73,7 @@ else:
         _size[m["id"]] = _size[m["left"]] + _size[m["right"]]
         _rows.append([m["left"], m["right"], m["height"], _size[m["id"]]])
     _Z_from_merges = np.array(_rows, dtype=float)
-    print("[input] factor_clustering_structure_v7.json 없음 → persona_decision_space_v7.json(HTML 내장 병합 기록·shares)으로 대체")
+    print("[input] topic_cosine_distance_frozen_v7_40.json 없음(원본 묶음에도 없던 파일) → persona_decision_space_v7.json(HTML 내장 병합 기록·shares)으로 대체")
 # 입력 2: 팬덤별 페르소나(동결 스냅샷 기준, 저장소에 있음)
 with open(DATA_DIR / "fan_persona_v7.json", encoding="utf-8") as f:
     persona_data = json.load(f)

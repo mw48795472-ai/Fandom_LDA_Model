@@ -260,7 +260,7 @@ python v7_final_10020/analysis/build_notebooks_v7.py                          # 
 python v7_final_10020/analysis/persona_decision_space/build_persona_decision_space_notebook.py
 ```
 
-**저장소에 없는 것**: 최종 참고 재적합을 만든 14개 언어 라우팅 토크나이저(`run_lda_v6_live_reference_v7.py`), 동결 스냅샷의 φ·코사인 거리 행렬(`factor_clustering_structure_v7.json`), 동결 7,350건 코퍼스. 저장소의 `run_lda_v6.py`는 이전 판 토크나이저의 파이프라인이라 10,020건에서 문서 수 9,954건으로 보고서와 다르며 로직 참고용이다. 같은 방법을 최종 코퍼스에 적용한 φ·코사인 거리 산출물과 학습 모델 pickle·단어 사전·manifest는 `v7_final_10020/analysis/persona_decision_space/topic_phi_cosine/`에 있다.
+**저장소에 없는 것**: 최종 참고 재적합을 만든 14개 언어 라우팅 토크나이저(`run_lda_v6_live_reference_v7.py`), 동결 스냅샷의 φ·코사인 거리 행렬(원본 데이터 묶음에도 파일로 없었고 병합 높이 9개만 `Persona_결정공간.html`에 남아 있음), 동결 7,350건 코퍼스. 세 가지 모두 git 이력 전체와 백업 zip을 내용 기준으로 검색해 부재를 확인했다(다른 이름으로 들어 있지 않음). 저장소의 `run_lda_v6.py`는 이전 판 토크나이저의 파이프라인이라 10,020건에서 문서 수 9,954건으로 보고서와 다르며 로직 참고용이다. 같은 방법을 최종 코퍼스에 적용한 φ·코사인 거리 산출물과 학습 모델 pickle·단어 사전·manifest는 `v7_final_10020/analysis/persona_decision_space/topic_phi_cosine/`에 있다.
 
 ```
 README.md                                   이 문서 (핵심 요약판)
@@ -283,7 +283,8 @@ v7_final_10020/        ★ 10,020건 기준 문서·코드·노트북 전부 (�
   silhouette_gate_policy/  tokenizer_wordcloud_report/  report_scripts/
 Statistics/R_통계검증/  보고서 2.1·2.2·3.8·7.4절 통계량을 R 표준 함수로 재계산 (238/238, RUN_ALL.R 하나로 실행)
 Statistics/verify_r_sections_python.py   같은 238개 항목의 파이썬 판
-archive/v6_r22_era_backup.zip   최종 코퍼스 확정 이전(v7 r22, 5,612건) 시점 자료 백업 — 본문은 참조하지 않음
+archive/v6_r22_era_backup.zip   최종 코퍼스 확정 이전(v7 r22, 5,612건) 시점 자료 백업 — 본문은 참조하지 않음.
+                                zip 안의 fandom_scores_v6.json·lda_v6_diagnostics.json은 data/v7_final의 동결(v7-40) 파일과 이름만 같은 r22 시점 값(archive/README.md 참고)
 ```
 
 **검증 상태**: 파이썬 26개 컴파일 · 노트북 10개 실행 오류 0 · 스크립트 22개 실행 및 재실행 산출물 동일 · 보고서 docx 대조 47/58 수치 일치(문장 오기 12건은 `REPORT_DOCX_VERIFICATION.md`).
