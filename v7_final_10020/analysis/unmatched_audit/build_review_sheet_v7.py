@@ -33,7 +33,7 @@ lines = [("보조지표 사전 매칭 누락 검수 — 저자 판정 시트 (�
          ("무엇을 보는가", True),
          ("광고·미디어·지역 시트의 문장은 그 지수의 사전에 '잡히지 않은' 불릿 중 무작위 200건이다(seed 0). '모델 판독'은 Claude가 읽고 적은 Y(잡혔어야 함)/N. 노란 행이 Y다.", False),
          ("", False), ("행마다 고르는 판정 옵션 (열 H, 드롭다운)", True),
-         ("A 누락·사전추가 — 이 지표에 잡혔어야 하고, 열 I '추가할 표현'에 적은 말을 사전에 넣으면 잡힌다. 예: '런닝맨', 'brand ambassador'.", False),
+         ("A 누락·사전추가 — 이 지표에 잡혔어야 하고, 열 I '추가할 표현'에 문장에 나온 말 그대로(예: Seoul, 런닝맨, brand ambassador)를 적고, 열 J '집계 대상'에 그 말이 셀 곳을 고른다. 지역은 시·도(Seoul → 서울, 봉화 → 경북), 미디어는 서브태그(런닝맨 → 예능). 광고는 신호 목록 하나라 집계 대상이 없다.", False),
          ("B 누락·사전제외 — 잡혔어야 하지만 표현이 일회성·고유명이라 사전에는 넣지 않는다. 누락으로만 집계한다(재현율 추정에 반영).", False),
          ("C 경계·정의결정 — 지표 정의를 넓히면 포함되는 사례. 예: 라디오 출연을 '미디어 노출'로 볼지, 영문 지명을 '국내 지역 언급'으로 볼지. 정의결정 시트의 답에 따라 자동으로 A 또는 D로 취급한다.", False),
          ("D 아님 — 지표 대상이 아니다. 사전이 맞게 안 잡은 것.", False),
@@ -87,17 +87,21 @@ sh.freeze_panes = "B2"
 COL = "검수(Y=해당 지표에 잡혔어야 함, N=아님)"; stats = {}
 for k, nm in NAMES.items():
     rows = list(csv.DictReader(open(HERE / f"unmatched_sample_{k}_v7.csv", encoding="utf-8-sig")))
-    sh = wb.create_sheet(nm); head = ["번호", "팬덤", "유형", "문장", "힌트어(사전 밖 유사 표현)", "모델 판독(Y/N)", "판독 사유", "저자 판정(A∼E)", "추가할 표현(A일 때)", "메모"]
+    sh = wb.create_sheet(nm); head = ["번호", "팬덤", "유형", "문장", "힌트어(사전 밖 유사 표현)", "모델 판독(Y/N)", "판독 사유", "저자 판정(A∼E)", "추가할 표현(A일 때, 문장에 나온 말 그대로)", "집계 대상(A일 때: 지역=시·도, 미디어=서브태그)", "메모"]
     sh.append(head)
     for c in range(1, len(head) + 1): sh.cell(row=1, column=c).font = hdr; sh.cell(row=1, column=c).fill = fill
     for i, r in enumerate(rows, 1):
-        sh.append([i, r["fandom"], r["bullet_type"], r["text"], r["hint_terms_found"], r[COL], r["사유·놓친 표현"], "", "", ""])
+        sh.append([i, r["fandom"], r["bullet_type"], r["text"], r["hint_terms_found"], r[COL], r["사유·놓친 표현"], "", "", "" if k != "ad" else "(해당 없음)", ""])
         if r[COL] == "Y":
             for c in range(1, len(head) + 1): sh.cell(row=i + 1, column=c).fill = yfill
         sh.cell(row=i + 1, column=4).alignment = wrap; sh.cell(row=i + 1, column=8).fill = gfill if r[COL] != "Y" else yfill
     dv = DataValidation(type="list", formula1=OPT_STR, allow_blank=True); sh.add_data_validation(dv); dv.add(f"H2:H{len(rows) + 1}")
-    for col, w in zip("ABCDEFGHIJ", [6, 16, 10, 88, 18, 12, 38, 20, 24, 28]): sh.column_dimensions[col].width = w
-    sh.freeze_panes = "E2"; sh.auto_filter.ref = f"A1:J{len(rows) + 1}"; stats[nm] = len(rows)
+    if k == "region":
+        dvt = DataValidation(type="list", formula1='"서울,부산,대구,인천,광주,대전,울산,세종,경기,강원,충북,충남,전북,전남,경북,경남,제주"', allow_blank=True); sh.add_data_validation(dvt); dvt.add(f"J2:J{len(rows) + 1}")
+    elif k == "media":
+        dvt = DataValidation(type="list", formula1='"예능,유튜브,영화,드라마,라디오(신설·Q5),OTT·웹(신설·Q8),기타(메모에 적기)"', allow_blank=True); sh.add_data_validation(dvt); dvt.add(f"J2:J{len(rows) + 1}")
+    for col, w in zip("ABCDEFGHIJK", [6, 16, 10, 88, 18, 12, 38, 20, 30, 30, 28]): sh.column_dimensions[col].width = w
+    sh.freeze_panes = "E2"; sh.auto_filter.ref = f"A1:K{len(rows) + 1}"; stats[nm] = len(rows)
 
 # 사전후보
 sh = wb.create_sheet("사전후보"); sh.append(["지표", "후보 표현(|로 구분)", "근거", "표본에서 본 건수", "관련 정의결정", "처리", "수정안(수정해서 추가일 때)", "메모"])

@@ -46,7 +46,7 @@ if "--summarize-xlsx" in sys.argv:
         cat = [(r[7] or "").strip()[:1] for r in rows]; cnt = {c: cat.count(c) for c in "ABCDE"}
         miss = (cnt["A"] + cnt["B"]) / n; miss_c = (cnt["A"] + cnt["B"] + cnt["C"]) / n
         matched = sum(1 for b_ in bullets if MATCH[k](b_[3])); un = len(bullets) - matched
-        res[k] = {"judged": sum(cnt.values()), "counts": cnt, "terms_to_add": sorted({(r[8] or "").strip() for r in rows if (r[7] or "").startswith("A") and (r[8] or "").strip()}),
+        res[k] = {"judged": sum(cnt.values()), "counts": cnt, "terms_to_add": sorted({((r[8] or "").strip(), (r[9] or "").strip()) for r in rows if (r[7] or "").startswith("A") and (r[8] or "").strip()}),
                   "miss_share": round(miss, 4), "miss_share_incl_borderline": round(miss_c, 4), "recall_estimate": round(matched / (matched + un * miss), 3), "recall_incl_borderline": round(matched / (matched + un * miss_c), 3)}
     res["definition_decisions"] = [{"q": r[1], "choice": r[5], "memo": r[6]} for r in wb["정의결정"].iter_rows(min_row=2, values_only=True) if r[1]]
     res["dictionary_candidates"] = [{"index": r[0], "terms": r[1], "action": r[5], "revised": r[6]} for r in wb["사전후보"].iter_rows(min_row=2, values_only=True) if r[1]]
