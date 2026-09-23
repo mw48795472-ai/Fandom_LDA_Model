@@ -28,7 +28,7 @@ python verify_v7_final_consistency.py                                        # �
 python v7_final_10020/analysis/build_notebooks_v7.py                          # 노트북 8개 생성+실행
 python v7_final_10020/indices_csv/build_ad_commercial_index_csv.py            # -> output/indices_csv/
 python v7_final_10020/data_export/build_corpus_growth_history_csv.py          # -> data/v7_final/corpus_growth_history_v6_v7_full.csv (동일 결과)
-python v7_final_10020/index_methodology/verify_index_calculation_formulas.py  # 식(2)(3)(6)(7) 0/100 불일치
+python v7_final_10020/index_methodology/verify_index_calculation_formulas.py  # 식(2)(3)(6)(7) 100/100 일치 (불일치 0)
 python v7_final_10020/index_methodology/build_index_calculation_notebook.py    # 지표 산정 노트북 생성+실행
 python v7_final_10020/silhouette_gate_policy/build_silhouette_gate_timeline_v7.py
 python v7_final_10020/analysis/tokenizer/build_bullet_token_frequency_csv_v7.py   # fugashi·jieba·pythainlp 필요
