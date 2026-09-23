@@ -8,7 +8,7 @@
 | `ad_commercial_index/` | `AD_COMMERCIAL_INDEX_V7.md` + `ad_commercial_index_v7.ipynb` — 원본 지수 무결성, 키워드 재매칭(96/100), LDA 대조 |
 | `fandom_cohesion_index/` | `FANDOM_COHESION_INDEX_V7.md` + `fandom_cohesion_index_v7.ipynb` |
 | `media_content_exposure_index/` | `MEDIA_CONTENT_EXPOSURE_V7.md` + `media_content_exposure_v7.ipynb` — 노출·크로스오버 지수, r10·r11 교차검증, K=9 |
-| `domestic_regional_index/` | `DOMESTIC_REGIONAL_INDEX_V7.md` + `domestic_regional_index_v7.ipynb` + **`domestic_regional_index_v7.json/.csv`(최종 10,020건 산출본)** |
+| `domestic_regional_index/` | `DOMESTIC_REGIONAL_INDEX_V7.md` + `domestic_regional_index_v7.ipynb` + **`domestic_regional_index_v7.json/.csv`(최종 10,020건 산출본)**. `REGIONAL_MENTION_TYPES_V7.md` + `build_regional_mention_types_v7.py` — 동음 지명 감사·연고/활동 분리·엄격 지수 |
 | `worldwide_language_index/` | `WORLDWIDE_LANGUAGE_INDEX_V7.md` + `worldwide_language_index_v7.ipynb` — 14개 언어·ln(14). `BODY_LANGUAGE_V7.md` + `build_body_language_classifier_v7.py` — 불릿 10,020건 본문 언어 병행 판정(문자권 + wordfreq), 도메인 기준과 불일치율·지수 상관 |
 | `group_member_index/` | `GROUP_MEMBER_INDEX_V7.md` + `group_member_index_v7.ipynb` — 45개 그룹 MCI, 상관 재현. `MCI_SAME_PERIOD_V7.md` + `build_mci_same_period_v7.py` — 같은 시점(라이브×라이브) 상관 재산출, 지표 통일 CSV(MCI_excess·HHI_norm), 별칭·동음 감사 CSV |
 | `fan_impact_pathway/` | `FAN_IMPACT_PATHWAY_V7.md` + `fan_impact_pathway_v7.ipynb` — 동결 K=10/M=5 해석 계층 재현 |

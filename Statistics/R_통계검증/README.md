@@ -241,6 +241,10 @@ Linux는 `fc-list :lang=ko` 탐색(NanumGothic 우선). 없으면
 날 수 있어** 해당 항목만 허용오차 `1e-6`으로 비교한다(나머지는 원본 JSON이 기록한
 유효자릿수 그대로 비교). 그 밖의 값은 전부 자릿수까지 일치한다.
 
+## 강건 회귀 병기 (Python, 추가 분석)
+
+보고서의 OLS 두 개(spillover ~ loyalty + activity, factor_diversity ~ loyalty + spillover)를 Huber M-추정·중위수 분위회귀·Cook's D 상위 5개 제외 OLS로 다시 적합한 결과는 `../ROBUST_REGRESSION_V7.md`·`../robust_regression_v7.json`(`../robust_regression_v7.py`)에 있다. 라이브·동결 모두 계수 부호와 유의성(p<0.05)이 네 방법에서 같다.
+
 ## 부트스트랩 신뢰구간 (Python, 추가 분석)
 
 이 패키지의 238개 항목은 점추정을 재현한다. 판별타당도 r(0.493 vs 동결 0.638)에 표본 변동 폭을 붙인 팬덤 부트스트랩(B=2,000)과 코퍼스 축소 반복(R=1,000)은 `../bootstrap_ci_v7.py`가 만들고 결과는 `../BOOTSTRAP_CI_V7.md`·`../bootstrap_ci_v7.json`에 있다. R 쪽 `plots.R`에 CI 띠를 넣는 일은 아직 하지 않았다.
