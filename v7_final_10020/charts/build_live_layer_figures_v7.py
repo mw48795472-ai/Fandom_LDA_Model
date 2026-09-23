@@ -25,7 +25,8 @@ plt.rcParams["font.family"] = "Noto Sans CJK KR" if any("Noto Sans CJK KR" == f.
 P = json.load(open(L / "live_persona_v7.json", encoding="utf-8")); pay = json.load(open(BASE / "data" / "v7_final" / "chart3d_payload_live_reference_v7.json", encoding="utf-8"))
 fs = P["fandoms"]; cnt = P["persona_counts"]; FC = ["F1", "F2", "F3", "F4", "F5"]
 FN = {"F1": "F1 팬덤결속", "F2": "F2 직접소비", "F3": "F3 현장경제", "F4": "F4 산업전이", "F5": "F5 글로벌확산"}
-PALETTE = ["#c1440e", "#2a62b8", "#b07a00", "#6f4fb8", "#3d8a3d"]  # 앞 4색 검증 통과; 5번째는 실현 페르소나가 5개일 때만
+PALETTE = ["#c62828", "#1e5cb3", "#d9a300", "#2e7d32", "#6f4fb8"]  # 페르소나: 빨·파·노·초(팬덤 수 내림차순), 검증 통과(노랑은 대비 WARN → 범례·흰 테두리로 보완); 5번째는 실현 페르소나가 5개일 때만
+FPAL = ["#4f93cf", "#ee9c55", "#9d86d3", "#3fb0a0", "#c9ad3f"]  # F1∼F5 경로(그림 6): 밝고 차분한 5색, 인접쌍 CVD·정상시 분리 검증 통과(대비 WARN → 범례·흰 간격으로 보완)
 COL = {per: PALETTE[i] for i, per in enumerate(sorted(cnt, key=lambda k: -cnt[k]))}
 SURF = "#fcfcfb"; TAG = P.get("model", "")[:30]
 
@@ -53,7 +54,7 @@ fig, axes = plt.subplots(1, 2, figsize=(14, 7.4), dpi=240, sharey=True)
 for ax, key, ttl in ((axes[0], "factor_specific_loyalty", "팬충성도 분해 (비중 × 점수)"), (axes[1], "factor_specific_spillover", "파급효과 분해 (비중 × 점수)")):
     ax.set_facecolor(SURF); left = np.zeros(len(names))
     for i, fc in enumerate(FC):
-        vals = np.array([byname[n][key].get(fc, 0) for n in names]); ax.barh(range(len(names)), vals, left=left, color=PALETTE[i], edgecolor="white", linewidth=.8, label=FN[fc]); left += vals
+        vals = np.array([byname[n][key].get(fc, 0) for n in names]); ax.barh(range(len(names)), vals, left=left, color=FPAL[i], edgecolor="white", linewidth=1.0, label=FN[fc]); left += vals
     ax.set_yticks(range(len(names))); ax.set_yticklabels(names, fontsize=9.5); ax.invert_yaxis(); ax.set_title(ttl, fontsize=11); ax.grid(axis="x", alpha=.2)
 axes[0].legend(fontsize=8.5, loc="lower right"); fig.suptitle("경로별(F1~F5) 팬충성도·파급효과 분해 — BTS·임영웅·리센느 + 합산 상위 17", fontsize=12, weight="bold"); fig.tight_layout(); fig.savefig(OUT / f"fig06_factor_specific_impact{SUF}.png"); plt.close(fig)
 
@@ -64,7 +65,7 @@ d = np.linalg.norm(pc - pc.mean(0), axis=1); far = [fs[i]["fandom"] for i in np.
 fig = plt.figure(figsize=(13.2, 7.4), dpi=240); gs = fig.add_gridspec(1, 2, width_ratios=[3.1, 1], wspace=0.08); ax = fig.add_subplot(gs[0]); ins = fig.add_subplot(gs[1]); ax.set_facecolor(SURF)
 for per, col in COL.items():
     idx = [i for i, f in enumerate(fs) if f["persona"] == per]; ax.scatter(pc[idx, 0], pc[idx, 1], s=64, c=col, alpha=.92, edgecolors="white", linewidths=1.2, label=f"{per} ({len(idx)})", zorder=3)
-marks = [(n, 0.014, 0.012, "left") for n in far] + [("BTS", 0.014, -0.03, "left"), ("임영웅", -0.014, -0.03, "right"), ("투어스(TWS)", 0.012, 0.016, "left")]
+marks = [(n, 0.014, 0.012, "left") for n in far if n != "투어스(TWS)"] + [("BTS", 0.014, -0.03, "left"), ("임영웅", -0.014, -0.03, "right")]  # 투어스는 라벨 없이 점만(저자 요청)
 label_points(ax, pc[:, 0], pc[:, 1], marks)
 ax.axhline(0, color="#bbb", lw=.7, zorder=1); ax.axvline(0, color="#bbb", lw=.7, zorder=1); ax.grid(alpha=.18, zorder=0)
 lead = lambda k: FN[FC[int(np.argmax(np.abs(pca.components_[k])))]]
