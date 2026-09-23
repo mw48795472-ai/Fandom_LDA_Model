@@ -26,19 +26,9 @@ from sklearn.metrics import silhouette_score
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[3]
 D = REPO / "data" / "v7_final"
-OUT = HERE / "seed_stability"
+OUT = HERE / "seed_stability"; OUT.mkdir(exist_ok=True)
 SEEDS = list(range(10)); KS = [8, 10]
 CORPORA = {"live_10020": D / "fandoms_v3_100.json", "frozen_approx_7326": D / "frozen_snapshot_v7_40" / "fandoms_v7_40_frozen_reconstructed.json"}
-# 다른 코퍼스·K·출력 폴더로 돌릴 때: --corpus 이름=경로 [--corpus ...] --k 8[,10] --out 폴더 (게이트 v2 판정용, 예: r73)
-_args = sys.argv[1:]
-if "--corpus" in _args:
-    CORPORA = {}; i = 0
-    while i < len(_args):
-        if _args[i] == "--corpus": nm, pth = _args[i + 1].split("=", 1); CORPORA[nm] = Path(pth) if Path(pth).is_absolute() else REPO / pth; i += 2
-        elif _args[i] == "--k": KS = [int(x) for x in _args[i + 1].split(",")]; i += 2
-        elif _args[i] == "--out": OUT = Path(_args[i + 1]) if Path(_args[i + 1]).is_absolute() else REPO / _args[i + 1]; i += 2
-        else: i += 1
-OUT.mkdir(parents=True, exist_ok=True)
 FROZEN_SIL, LIVE_SIL = 0.267, 0.046
 
 src = (REPO / "run_lda_v6_live_reference_v7.py").read_text(encoding="utf-8")
@@ -110,7 +100,7 @@ for cname in CORPORA:
                                     "silhouette_best_M": {"min": min(bests), "median": r4(statistics.median(bests)), "max": max(bests), "best_M_by_seed": bm},
                                     "topic_jaccard_top10": {"min": r4(min(jac)), "median": r4(statistics.median(jac)), "max": r4(max(jac))},
                                     "n_seeds_M5_ge_0267": sum(v >= FROZEN_SIL for v in m5), "n_seeds_best_ge_0267": sum(v >= FROZEN_SIL for v in bests)}
-all_max = max(rows, key=lambda r: r["best_sil"]); live8 = summary.get("live_10020_K8", next(iter(summary.values()))); fr10 = summary.get("frozen_approx_7326_K10", next(iter(summary.values())))
+all_max = max(rows, key=lambda r: r["best_sil"]); live8 = summary["live_10020_K8"]; fr10 = summary["frozen_approx_7326_K10"]
 json.dump({"settings": {"seeds": SEEDS, "K": KS, "lda": "max_iter=50, batch", "vectorizer": "max_df=0.6, min_df=2", "tokenizer": "run_lda_v6_live_reference_v7.py 마커 절"},
            "reference": {"frozen_snapshot_silhouette": FROZEN_SIL, "live_reference_silhouette": LIVE_SIL}, "results": summary},
           open(OUT / "seed_stability_summary_v7.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)

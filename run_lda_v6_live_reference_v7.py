@@ -57,7 +57,6 @@ _ap = argparse.ArgumentParser(description="LDA v6 pipeline (K-grid -> Meta Facto
 _ap.add_argument("--data", default=str(_BASE / "data" / "v7_final" / "fandoms_v3_100.json"),
                  help="근거문장 코퍼스 JSON (fandoms_v3_100.json 스키마)")
 _ap.add_argument("--out", default=str(_BASE / "output" / "lda_live_reference_v7"), help="산출물 저장 디렉터리")
-_ap.add_argument("--force-m", type=int, default=None, help="메타팩터 수 M을 실루엣 최대 대신 고정(게이트 v2 채택 계층은 M=5). M-grid 실루엣은 진단 JSON m_grid_silhouette에 남긴다")
 _args = _ap.parse_args()
 DATA = _args.data
 OUT = _args.out
@@ -400,7 +399,6 @@ cos_dist = np.clip(cos_dist, 0, None)
 
 M_CANDIDATES = [m for m in range(5, 9) if m < K]
 best_m, best_sil, best_labels = None, -2, None
-m_grid_silhouette = {}
 for m in M_CANDIDATES:
     if m < 2 or m >= K:
         continue
@@ -413,11 +411,6 @@ for m in M_CANDIDATES:
     except ValueError:
         continue
     print(f"[3] Meta-Factor M={m}  silhouette={sil:.3f}")
-    m_grid_silhouette[m] = round(float(sil), 4)
-    if _args.force_m is not None:
-        if m == _args.force_m:
-            best_m, best_sil, best_labels = m, sil, labels
-        continue
     if sil > best_sil:
         best_m, best_sil, best_labels = m, sil, labels
 
@@ -899,7 +892,7 @@ print(f"\n[7] Member Mention Pilot: {n_pilot_with_data}/{len(MEMBER_ALIASES)} Ti
 # 8. Save all outputs
 # ============================================================
 with open(f"{OUT}/lda_v6_diagnostics.json", "w", encoding="utf-8") as f:
-    json.dump({"k_grid": grid, "selected_k": K, "selected_m_meta_factors": M, "m_grid_silhouette": m_grid_silhouette, "m_forced": _args.force_m,
+    json.dump({"k_grid": grid, "selected_k": K, "selected_m_meta_factors": M,
                "meta_factor_silhouette": round(float(best_sil), 3),
                "topics_top_words": {str(k): v for k, v in topics_top_words.items()},
                "topic_to_factor": {str(k): v for k, v in topic_to_factor.items()},
