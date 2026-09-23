@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
-"""README 5절 그림 4장을 라이브 해석 계층(게이트 v2 통과 모델, 라이브 K=8 참고 재적합)으로 그린다.
+"""README 5절 그림 3장을 라이브 해석 계층(게이트 v2 통과 모델, 라이브 K=8 참고 재적합)으로 그린다.
   fig05_persona_map.png            팬충성도 × 파급효과 평면, 페르소나 4유형(라이브) 색칠
   fig06_factor_specific_impact.png BTS·임영웅·리센느 + 합산 상위 17개 팬덤의 F1~F5 분해(비중 × 점수)
-  fig07a_persona_k_to_f.png        라이브 K=8 토픽 → F 배정표(φ·병합 높이가 저장돼 있지 않아 덴드로그램 대신)
   fig07b_persona_pca.png           팬덤별 F1~F5 비중의 PCA 2성분(페르소나 색)
 입력: analysis/persona_decision_space/live_interpretive_layer/{live_persona_v7.json, live_k_to_f_v7.csv}, chart3d payload(표본 평균)
 한글 폰트: KFONT_PATH 환경변수 또는 저장소 fonts/ 의 Noto Sans KR. 실행: KFONT_PATH=... python v7_final_10020/charts/build_live_layer_figures_v7.py
@@ -48,15 +47,6 @@ for ax, key, ttl in ((axes[0], "factor_specific_loyalty", "팬충성도 분해 (
         vals = np.array([byname[n][key].get(fc, 0) for n in names]); ax.barh(range(len(names)), vals, left=left, color=colors[i], label=FN[fc]); left += vals
     ax.set_yticks(range(len(names))); ax.set_yticklabels(names, fontsize=9); ax.invert_yaxis(); ax.set_title(ttl, fontsize=11); ax.grid(axis="x", alpha=.25)
 axes[0].legend(fontsize=8, loc="lower right"); fig.suptitle("경로별(F1~F5) 팬충성도·파급효과 분해 — 라이브 해석 계층 (BTS·임영웅·리센느 + 합산 상위 17)", fontsize=12); fig.tight_layout(); fig.savefig(OUT / "fig06_factor_specific_impact.png"); plt.close(fig)
-
-# fig07a: K→F 배정표
-fig, ax = plt.subplots(figsize=(12, 5.4), dpi=250); ax.axis("off")
-rows = [[k["topic"], k["topic_name"], k["top10"].replace(" ", ", "), k["F"] + " " + k["F_name"]] for k in k2f]
-tb = ax.table(cellText=rows, colLabels=["토픽", "이름", "상위 10단어", "F (파급경로)"], loc="center", cellLoc="left", colWidths=[.06, .27, .47, .2]); tb.auto_set_font_size(False); tb.set_fontsize(8.5); tb.scale(1, 1.7)
-for (r, c), cell in tb.get_celld().items():
-    if r == 0: cell.set_facecolor("#e8eef3"); cell.set_text_props(weight="bold")
-    elif c == 3: cell.set_facecolor({"F1": "#e6f0e3", "F2": "#fbf1d6", "F3": "#f5ded3", "F4": "#dbe8ee", "F5": "#e8e1f1"}[rows[r - 1][3][:2]])
-ax.set_title("라이브 K=8 토픽 → F 배정 (M=5, 실루엣 0.046; 시드 10개 중앙값 0.102, 최빈 M=5)", fontsize=11); fig.tight_layout(); fig.savefig(OUT / "fig07a_persona_k_to_f.png"); plt.close(fig)
 
 # fig07b: PCA
 X = np.array([[sum(t["share"] for t in f["top2_factors"] if t["f_code"] == fc) or 0 for fc in FC] for f in fs])  # placeholder; replace by full share below
