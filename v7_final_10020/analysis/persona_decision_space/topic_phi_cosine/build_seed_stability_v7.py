@@ -10,8 +10,9 @@ K→M 실루엣의 분포와 토픽 안정성(시드 간 상위 10단어 Jaccard
 출력 (seed_stability/): seed_silhouette_grid_v7.csv (코퍼스×K×시드×M 실루엣), seed_topic_jaccard_v7.csv (시드 쌍별 평균 Jaccard),
       seed_stability_summary_v7.json, SEED_STABILITY_V7.md
 실행: python build_seed_stability_v7.py   (약 25∼35분: 4 조합 × 10 시드 = 40회 적합)
+      python build_seed_stability_v7.py --report-only   (적합 없이 CSV 2개에서 요약 JSON·MD만 다시 생성)
 """
-import csv, json, re, statistics, time
+import csv, json, re, statistics, sys, time
 from itertools import combinations
 from pathlib import Path
 
@@ -57,7 +58,12 @@ def mgrid(tw):
 
 
 rows, jrows, summary, all_tops = [], [], {}, {}
+REPORT_ONLY = "--report-only" in sys.argv
+if REPORT_ONLY:
+    rows = [{k: (v if k == "corpus" else (int(v) if k in ("K", "seed", "best_M") else (float(v) if v != "" else ""))) for k, v in r.items()} for r in csv.DictReader(open(OUT / "seed_silhouette_grid_v7.csv", encoding="utf-8-sig"))]
+    jrows = [{"corpus": r["corpus"], "K": int(r["K"]), "seed_a": int(r["seed_a"]), "seed_b": int(r["seed_b"]), "mean_jaccard_top10": float(r["mean_jaccard_top10"])} for r in csv.DictReader(open(OUT / "seed_topic_jaccard_v7.csv", encoding="utf-8-sig"))]
 for cname, cpath in CORPORA.items():
+    if REPORT_ONLY: break
     X, vocab = dtm_of(cpath)
     print(f"[{cname}] DTM {X.shape}")
     for K in KS:
@@ -77,17 +83,24 @@ for cname, cpath in CORPORA.items():
             M_ = np.array([[len(tops[a][i] & tops[b][j]) / len(tops[a][i] | tops[b][j]) for j in range(K)] for i in range(K)])
             r, c = linear_sum_assignment(-M_)
             j = float(M_[r, c].mean()); jac.append(j); jrows.append({"corpus": cname, "K": K, "seed_a": a, "seed_b": b, "mean_jaccard_top10": round(j, 4)})
-        m5 = [sils[s].get(5) for s in SEEDS]; bests = [max(sils[s].values()) for s in SEEDS]; bm = [max(sils[s], key=sils[s].get) for s in SEEDS]
-        summary[f"{cname}_K{K}"] = {"corpus": cname, "K": K, "n_seeds": len(SEEDS),
-                                    "silhouette_M5": {"min": min(m5), "median": statistics.median(m5), "max": max(m5), "values": m5},
-                                    "silhouette_best_M": {"min": min(bests), "median": statistics.median(bests), "max": max(bests), "best_M_by_seed": bm},
-                                    "topic_jaccard_top10": {"min": round(min(jac), 4), "median": round(statistics.median(jac), 4), "max": round(max(jac), 4)},
+if not REPORT_ONLY:
+    (OUT / "_checkpoint_rows.json").unlink(missing_ok=True)
+    with open(OUT / "seed_silhouette_grid_v7.csv", "w", encoding="utf-8-sig", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=["corpus", "K", "seed"] + [f"sil_M{m}" for m in range(4, 9)] + ["best_M", "best_sil", "perplexity"]); w.writeheader(); w.writerows(rows)
+    with open(OUT / "seed_topic_jaccard_v7.csv", "w", encoding="utf-8-sig", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=list(jrows[0].keys())); w.writeheader(); w.writerows(jrows)
+r4 = lambda x: round(float(x), 4)
+for cname in CORPORA:
+    for K in KS:
+        rs = sorted((r for r in rows if r["corpus"] == cname and r["K"] == K), key=lambda r: r["seed"])
+        m5 = [r["sil_M5"] for r in rs]; bests = [r["best_sil"] for r in rs]; bm = [r["best_M"] for r in rs]
+        jac = [j["mean_jaccard_top10"] for j in jrows if j["corpus"] == cname and j["K"] == K]
+        summary[f"{cname}_K{K}"] = {"corpus": cname, "K": K, "n_seeds": len(rs),
+                                    "silhouette_M5": {"min": min(m5), "median": r4(statistics.median(m5)), "max": max(m5), "values": m5},
+                                    "silhouette_best_M": {"min": min(bests), "median": r4(statistics.median(bests)), "max": max(bests), "best_M_by_seed": bm},
+                                    "topic_jaccard_top10": {"min": r4(min(jac)), "median": r4(statistics.median(jac)), "max": r4(max(jac))},
                                     "n_seeds_M5_ge_0267": sum(v >= FROZEN_SIL for v in m5), "n_seeds_best_ge_0267": sum(v >= FROZEN_SIL for v in bests)}
-(OUT / "_checkpoint_rows.json").unlink(missing_ok=True)
-with open(OUT / "seed_silhouette_grid_v7.csv", "w", encoding="utf-8-sig", newline="") as f:
-    w = csv.DictWriter(f, fieldnames=["corpus", "K", "seed"] + [f"sil_M{m}" for m in range(4, 9)] + ["best_M", "best_sil", "perplexity"]); w.writeheader(); w.writerows(rows)
-with open(OUT / "seed_topic_jaccard_v7.csv", "w", encoding="utf-8-sig", newline="") as f:
-    w = csv.DictWriter(f, fieldnames=list(jrows[0].keys())); w.writeheader(); w.writerows(jrows)
+all_max = max(rows, key=lambda r: r["best_sil"]); live8 = summary["live_10020_K8"]; fr10 = summary["frozen_approx_7326_K10"]
 json.dump({"settings": {"seeds": SEEDS, "K": KS, "lda": "max_iter=50, batch", "vectorizer": "max_df=0.6, min_df=2", "tokenizer": "run_lda_v6_live_reference_v7.py 마커 절"},
            "reference": {"frozen_snapshot_silhouette": FROZEN_SIL, "live_reference_silhouette": LIVE_SIL}, "results": summary},
           open(OUT / "seed_stability_summary_v7.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
@@ -98,9 +111,13 @@ for k, v in summary.items():
     md.append(f"- **{v['corpus']} K={v['K']}**: M=5 실루엣 시드 10개 중앙값 {v['silhouette_M5']['median']} (최소 {v['silhouette_M5']['min']}, 최대 {v['silhouette_M5']['max']}); "
               f"M 자유 선택 시 최대 실루엣 중앙값 {v['silhouette_best_M']['median']} (최대 {v['silhouette_best_M']['max']}); "
               f"0.267 이상인 시드 {v['n_seeds_best_ge_0267']}/10; 시드 간 토픽 Jaccard 중앙값 {v['topic_jaccard_top10']['median']}")
-md.append("\n동결 기준선 0.267과 라이브 참고값 0.046은 각각 시드 하나(random_state=0)의 한 번 적합이다. 위 분포가 그 값들을 어떻게 자리매김하는지가 이 문서의 요점이다. "
-          "동결 근사 코퍼스에서도 0.267에 닿는 시드가 없다면, 0.267은 '그 시점의 코퍼스·코드·환경 조합에서 한 번 나온 값'으로 읽어야 하고, "
-          "게이트 정책(0.267 미달 시 기각)은 시드 분포를 고려한 기준으로 바꾸는 것이 맞다(L6).\n")
+md.append("\n동결 기준선 0.267과 라이브 참고값 0.046은 각각 시드 하나(random_state=0)의 한 번 적합이다. 위 분포가 그 값들을 어떻게 자리매김하는지가 이 문서의 요점이다.\n")
+md.append(f"1. **0.267은 분포 밖이다.** 4조합 × 10시드 = 40회 적합 중 M을 자유롭게 골라도 최대는 {all_max['best_sil']}({all_max['corpus']} K={all_max['K']} seed {all_max['seed']}, M={all_max['best_M']})으로 0.267에 {round(FROZEN_SIL - all_max['best_sil'], 3)} 못 미친다. "
+          f"동결 근사 코퍼스 K=10·M=5의 분포는 {fr10['silhouette_M5']['min']}∼{fr10['silhouette_M5']['max']}(중앙값 {fr10['silhouette_M5']['median']})이고 seed 0의 값 {fr10['silhouette_M5']['values'][0]}은 `frozen_v7_40/`의 재적합 결과와 같다. "
+          "따라서 동결 실루엣 0.267이 재현되지 않은 것(L3)은 시드 운이 아니라 입력(코퍼스 24건·토크나이저 저빈도 불용어)이나 당시 코드·환경의 차이다. 0.267은 '그 시점의 코퍼스·코드·환경 조합에서 한 번 나온 값'으로 읽어야 한다.")
+md.append(f"2. **0.046은 분포 하단이다.** 라이브 원본 참고 재적합의 M=5 실루엣 0.046은 재구성 토크나이저 K=8·M=5 분포의 최소 {live8['silhouette_M5']['min']}보다도 낮다(seed 0은 {live8['silhouette_M5']['values'][0]}). 원본 토크나이저와 재구성본의 DTM 차이가 실루엣을 이만큼 움직인다는 뜻이며, 게이트 기각(0.267 미달)이라는 결론은 어느 시드에서도 같다(0/40).")
+md.append(f"3. **M 선택과 토픽 내용이 시드에 따라 흔들린다.** 최적 M은 시드마다 4∼8 사이에서 바뀌고, 시드 쌍 간 토픽 상위 10단어 Jaccard 중앙값은 네 조합 모두 0.39∼0.40이다. 즉 시드를 바꾸면 각 토픽의 상위 단어 열 개 중 여섯 개 안팎이 달라진다. "
+          "단일 시드로 K→M→F→페르소나를 확정한 해석 계층은 이 변동을 담지 못하며, 게이트 정책(0.267 미달 시 기각)은 시드 분포를 고려한 기준으로 바꾸는 것이 맞다(L6).\n")
 md.append("## 1. 설정\n")
 md.append("| 항목 | 값 |\n|---|---|")
 md.append("| 코퍼스 | live 10,020건 / 동결 근사 7,326건 (둘 다 재구성 토크나이저, 3토큰 미만 제외) |")
