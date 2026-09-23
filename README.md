@@ -278,17 +278,19 @@ run_lda_v6_live_reference_v7.py             같은 파이프라인 + 14개 언�
 data/
   v7_final/            최종 코퍼스 10,020건 + 최종 산출물 + 동결 스냅샷 산출물 (폴더 README)
     frozen_snapshot_v7_40/   동결 7,350건 코퍼스 근사 복원본(7,326건, 97개 팬덤 문장 동일) + manifest + 후보 검사기
+    roster_history_v7.csv / bullet_provenance_v7.csv   로스터 이력(106행) · 불릿별 추가 라운드 구간(10,020행, 사이드카)
   v7_rounds/           v6 단계 로그 3개 + v7 병합·교체 로그 전량 (마지막 r72가 10,020건)
   silhouette_gate_timeline/  실루엣 게이트 타임라인 CSV (v4 종료~r66 2차)
 v7_final_10020/        ★ 10,020건 기준 문서·코드·노트북 전부 (폴더 README)
   docs/                  KEY_FINDINGS · METHODOLOGY · FINAL_REPORT_SUMMARY · PYTHON_CODE_SUMMARY · REPORT_DOCX_VERIFICATION
   analysis/              보조지표 7종·Fan Impact Pathway·토크나이저 노트북 8개 + 문서, 페르소나 결정공간 노트북(+φ·코사인 거리 산출),
-                         토크나이저 스크립트·불용어 정리(stopwords/), 기술 상세명세서, 국내 지역 지수 JSON/CSV
+                         토크나이저 스크립트·불용어 정리(stopwords/), 지표 사전 고정(dictionaries/), 기술 상세명세서, 국내 지역 지수 JSON/CSV
   index_methodology/     지표 산식 문서 + 식(1)~(7) 산정 노트북(ipynb + Spyder용 .py) + 재검증 스크립트
   charts/ indices_csv/ data_export/   그림·지수 CSV·데이터 추출 스크립트 (출력은 output/)
   silhouette_gate_policy/  tokenizer_wordcloud_report/  report_scripts/
 Statistics/R_통계검증/  보고서 2.1·2.2·3.8·7.4절 통계량을 R 표준 함수로 재계산 (238/238, RUN_ALL.R 하나로 실행)
 Statistics/verify_r_sections_python.py   같은 238개 항목의 파이썬 판
+archive/v7_r13_corpus_5099.json   v7 r13 시점(5,099건) 코퍼스 — bullet_provenance_v7.csv 의 ≤r13 구간 경계용
 archive/v6_r22_era_backup.zip   최종 코퍼스 확정 이전(v7 r22, 5,612건) 시점 자료 백업 — 본문은 참조하지 않음.
                                 zip 안의 fandom_scores_v6.json·lda_v6_diagnostics.json은 data/v7_final의 동결(v7-40) 파일과 이름만 같은 r22 시점 값(archive/README.md 참고)
 ```

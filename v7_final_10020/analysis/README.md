@@ -14,6 +14,7 @@
 | `fan_impact_pathway/` | `FAN_IMPACT_PATHWAY_V7.md` + `fan_impact_pathway_v7.ipynb` — 동결 K=10/M=5 해석 계층 재현 |
 | `persona_decision_space/` | `persona_decision_space_v7.ipynb`(+ Spyder용 `.py`) — `Persona_결정공간.html`의 로직 재현: K→F 배정 10/10, 덴드로그램 절단·군집·잎 순서·가지 색, 상위 2 F → 페르소나 100/100(43/31/17/9), PCA 좌표·loading, 레이더 평균, Factor-specific 500/500. 결과 CSV·그림 3장. 하위 `topic_phi_cosine/`: 최종 코퍼스 10,020건에 K=10·K=8 LDA를 적합해 산출한 φ(토픽×어휘)·토픽 간 코사인 거리 행렬·average-linkage 병합 기록·M-grid 실루엣 CSV + 방법·코드 MD |
 | `tokenizer/` | 스크립트 3종(`*_v7.py`), 문서 2종(`*_V7.md`), `tokenizer_script_routing_v7.ipynb`, `csv/bullet_token_frequency_v7_final.csv`(43,162 토큰), `stopwords/`(언어별 불용어 MD·CSV + 코드에서 추출하는 스크립트) |
+| `dictionaries/` | `export_index_dictionaries_v7.py` + `index_dictionaries_v7.csv`(436행) + `DICTIONARIES_V7.md` — 보조지표·Coverage 계산에 쓰인 키워드·도메인·별칭 사전을 코드/JSON에서 추출해 한 파일로 고정, 저장소에 없는 사전 2종(업종 키워드 전체·결속 유형 키워드)은 '없음' 표기 |
 | `technical_specification/` | `LDA_V7_FINAL_TECHNICAL_SPECIFICATION.md` — 최종 제출본 기준 방법론·수치·근거 파일 |
 
 ## 실행
