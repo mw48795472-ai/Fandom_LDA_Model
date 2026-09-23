@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
-"""README 5절 그림 3장을 채택된 해석 계층(기본: r73, persona_decision_space/live_interpretive_layer/)으로 그린다.
+"""README 5절 그림 3장을 채택된 해석 계층(persona_decision_space/live_interpretive_layer/, 라이브 K=8)으로 그린다.
   fig05_persona_map.png            팬충성도 × 파급효과 평면, 페르소나 4유형 색칠
   fig06_factor_specific_impact.png BTS·임영웅·리센느 + 합산 상위 17개 팬덤의 F1∼F5 분해(비중 × 점수)
   fig07b_persona_pca.png           팬덤별 F1∼F5 비중의 PCA 2성분(페르소나 색) + loading 인셋
-옵션: --layer 폴더(기본 live_interpretive_layer) --suffix 접미사(예: _r72 → fig05_persona_map_r72.png)
-글꼴: 저장소 fonts/NotoSansCJKkr-{Regular,Bold}.otf (없으면 KFONT_PATH). 팔레트 4색은 dataviz 검증 통과(색각·대비).
+글꼴: 저장소 fonts/NotoSansCJKkr-{Regular,Bold}.otf (없으면 KFONT_PATH). 팔레트는 dataviz 검증 통과(색각·대비).
 실행: python v7_final_10020/charts/build_live_layer_figures_v7.py
 """
-import csv, json, os, sys
+import csv, json, os
 from pathlib import Path
 
 import matplotlib; matplotlib.use("Agg")
@@ -16,9 +15,7 @@ import numpy as np
 from sklearn.decomposition import PCA
 
 BASE = Path(__file__).resolve().parents[2]
-_a = sys.argv[1:]; _opt = {_a[i]: _a[i + 1] for i in range(0, len(_a) - 1, 2) if _a[i].startswith("--")}
-L = BASE / _opt["--layer"] if "--layer" in _opt else BASE / "v7_final_10020" / "analysis" / "persona_decision_space" / "live_interpretive_layer"
-SUF = _opt.get("--suffix", ""); OUT = BASE / "assets" / "readme"
+L = BASE / "v7_final_10020" / "analysis" / "persona_decision_space" / "live_interpretive_layer"; SUF = ""; OUT = BASE / "assets" / "readme"
 for c in [str(BASE / "fonts" / "NotoSansCJKkr-Regular.otf"), str(BASE / "fonts" / "NotoSansCJKkr-Bold.otf"), os.environ.get("KFONT_PATH", "")]:
     if c and os.path.exists(c): fm.fontManager.addfont(c)
 plt.rcParams["font.family"] = "Noto Sans CJK KR" if any("Noto Sans CJK KR" == f.name for f in fm.fontManager.ttflist) else plt.rcParams["font.family"]; plt.rcParams["axes.unicode_minus"] = False
