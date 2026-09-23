@@ -24,7 +24,7 @@
 ## 실행 (저장소 루트에서)
 
 ```bash
-python verify_v7_final_consistency.py                                        # 보고서 수치 ↔ data/v7_final 정합성 (101/101)
+python verify_v7_final_consistency.py                                        # 보고서 수치 ↔ data/v7_final 정합성 (105/105)
 python v7_final_10020/analysis/build_notebooks_v7.py                          # 노트북 8개 생성+실행
 python v7_final_10020/indices_csv/build_ad_commercial_index_csv.py            # -> output/indices_csv/
 python v7_final_10020/data_export/build_corpus_growth_history_csv.py          # -> data/v7_final/corpus_growth_history_v6_v7_full.csv (동일 결과)

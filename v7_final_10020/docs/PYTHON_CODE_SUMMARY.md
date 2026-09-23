@@ -14,7 +14,8 @@
 
 | 분류 | 스크립트 | 입력 | 출력·확인 |
 |---|---|---|---|
-| 정합성 검증(루트) | `verify_v7_final_consistency.py` | `data/v7_final/*` 전부 | 보고서·KEY_FINDINGS 수치 101개 항목을 파일에서 재계산해 일치/불일치 출력 (101/101) |
+| 정합성 검증(루트) | `verify_v7_final_consistency.py` | `data/v7_final/*` 전부 | 보고서·KEY_FINDINGS 수치 105개 항목을 파일에서 재계산해 일치/불일치 출력 (105/105; [AD]절 4항목이 동결 코퍼스 근사 복원본 검증) |
+| 동결 코퍼스 검사기 | `data/v7_final/frozen_snapshot_v7_40/verify_frozen_corpus_candidate.py` | 후보 코퍼스 JSON (인자 없으면 같은 폴더의 근사 복원본), `fandom_scores_v6.json`, r22 백업 zip, `verify_v7_final_consistency.py`의 EvidenceScore(ast) | 7항목 판정(구조·총 7,350·로스터·팬덤별 건수·EvidenceScore 지문 100/100·activity) + 라이브·r22 포함 관계 참고치. 근사 복원본은 3/7(97개 팬덤 지문 일치) |
 | 파이프라인(루트) | `run_lda_v6.py` | 코퍼스 JSON (`--data`, 기본 `fandoms_v3_100.json`) | `output/lda_rerun/` — 토큰화→LDA K 탐색→K→M 재군집화→실루엣 게이트→점수·페르소나 |
 | 차트 | `v7_final_10020/charts/build_cohesion_index_v7.py` | `fandom_cohesion_index_v7.json` | 팬덤결속 지수 좌우 2패널 PNG/SVG (`output/charts/`) |
 | 차트 | `v7_final_10020/charts/build_cohesion_index_v7_right_only.py` | 〃 | 우측 패널(상위 25개 팬덤) 단독 PNG/SVG |
@@ -26,7 +27,7 @@
 | 지수 CSV | `v7_final_10020/indices_csv/build_domestic_regional_index_csv.py` | `v7_final_10020/analysis/domestic_regional_index/domestic_regional_index_v7.json` | `output/indices_csv/domestic_regional_index_v7.csv` |
 | 지수 CSV | `v7_final_10020/indices_csv/build_worldwide_language_index_csv.py` | `worldwide_language_pilot_live_reference_v7.json` | `output/indices_csv/worldwide_language_index_v7.csv` |
 | 데이터 export | `v7_final_10020/data_export/extract_html_payloads.py` | `3D_포지셔닝맵_국내100팬덤.html`, `Persona_결정공간.html` | HTML 내장 데이터 객체를 그대로 복사 → `chart3d_payload_live_reference_v7.json`, `persona_decision_space_v7.json` |
-| 데이터 export | `v7_final_10020/data_export/build_bullets_flat_csv.py` | `fandoms_v3_100.json` (`--src`) | `bullets_flat_v7_final.csv` 10,020행 (`--expected`로 행 수 대조) |
+| 데이터 export | `v7_final_10020/data_export/build_bullets_flat_csv.py` | `fandoms_v3_100.json` (`--src`) | `bullets_flat_v7_final.csv` 10,020행 (`--expected`로 행 수 대조). 동결 근사 복원본의 `bullets_flat_v7_40_frozen_reconstructed.csv`(7,326행)도 `--src/--out/--expected 7326`으로 같은 스크립트가 만든다 |
 | 데이터 export | `v7_final_10020/data_export/build_lda_k_grid_csv.py` | `lda_v6_diagnostics_live_reference_v7.json` (`--src`) | `lda_k_grid_live_reference_v7.csv` (K 후보별 perplexity·coherence·diversity·stability, `selected` 플래그) |
 | 데이터 export | `v7_final_10020/data_export/build_corpus_growth_history_csv.py` | `data/v7_rounds/v6*_merge_log.json` + `merge_log_r*.json`·`swap_log_r*.json`·`round_log_r70.json` | `corpus_growth_history_v6_v7_full.csv` — v6 1차∼v7 r72(10,020건) 성장 이력, 체인 불연속을 `chain_gap`에 기록, 타임라인 CSV와 대조 |
 | 데이터 export | `v7_final_10020/data_export/build_cohesion_media_index_csv.py` | `fandom_cohesion_index_v7.json`, `media_crossover_index_v7.json` | `fandom_cohesion_index_v7.csv`, `media_crossover_index_v7.csv` — 합계를 원본 집계 필드와 재대조 |
@@ -52,7 +53,7 @@
 R² 0.847·VIF 1.93·민감도·LOO·3D축 독립성까지 KEY_FINDINGS 값이 그대로 나온다. 4분면
 χ²(8.34/10.2273)도 점수 0.5 초과 여부 2×2표로 재현된다. 그 밖에 동결 스냅샷(activity 합 7,350,
 페르소나 43/31/17/9), 라이브 참고 재적합(K=8/M=5/0.046 게이트 기각), 언어 커버리지 분모
-ln(14)/ln(13), 보조지표 7종의 집계 합, 성장 이력·타임라인 CSV 대조까지 101개 항목을 확인한다.
+ln(14)/ln(13), 보조지표 7종의 집계 합, 성장 이력·타임라인 CSV 대조, 동결 코퍼스 근사 복원본(97개 팬덤 지문·접두어·r22 교체분)까지 105개 항목을 확인한다.
 
 ## B. 원본 파이프라인 — `run_lda_v6.py`
 

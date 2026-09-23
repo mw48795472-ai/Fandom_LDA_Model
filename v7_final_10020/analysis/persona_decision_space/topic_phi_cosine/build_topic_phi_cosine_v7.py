@@ -2,7 +2,8 @@
 """LDA 토픽-단어 분포(φ)와 토픽 간 코사인 거리 행렬, average-linkage 병합 트리를 최종 코퍼스 10,020건에서 실제로 산출해 CSV·MD로 남긴다.
 
 배경: Persona_결정공간.html 의 덴드로그램은 동결 스냅샷(v7-40, 7,350건, K=10)의 φ 로 만든 코사인 거리 행렬에서 나왔지만,
-그 φ·거리 행렬·7,350건 코퍼스는 저장소에 없다(덴드로그램의 병합 높이만 HTML 데이터에 남아 있다). 이 스크립트는 저장소에 실제로
+그 φ·거리 행렬은 저장소에 없다(덴드로그램의 병합 높이만 HTML 데이터에 남아 있다). 7,350건 코퍼스는 data/v7_final/frozen_snapshot_v7_40/ 에
+근사 복원본(7,326건)이 있지만 동결 모델을 만든 라우팅 토크나이저가 없어 아직 같은 모델을 다시 적합할 수 없다. 이 스크립트는 저장소에 실제로
 있는 파이프라인(run_lda_v6.py)의 토크나이저·CountVectorizer·LDA 설정을 그대로 가져와 최종 코퍼스에 K=10(동결 구조와 같은 K)과
 K=8(최종 코퍼스 참고 재적합 승자)을 적합하고, 파이프라인 [3]절과 같은 방법으로 코사인 거리·M-grid 실루엣·병합 트리를 계산한다.
 
@@ -215,7 +216,7 @@ for K in K_LIST:
     bundle_files += [f"lda_model_k{K}_v7_final.pkl", f"lda_phi_k{K}_v7_final.csv", f"lda_phi_top50_k{K}_v7_final.csv",
                      f"topic_cosine_distance_k{K}_v7_final.csv", f"topic_linkage_average_k{K}_v7_final.csv", f"m_grid_silhouette_k{K}_v7_final.csv"]
 manifest = {
-    "purpose": "최종 코퍼스 10,020건 참고 재적합의 모델 묶음. 동결 스냅샷(v7-40, 7,350건)의 모델이 아니다. 동결 모델 묶음은 7,350건 코퍼스와 라우팅 토크나이저가 확보되면 같은 형식으로 추가한다.",
+    "purpose": "최종 코퍼스 10,020건 참고 재적합의 모델 묶음. 동결 스냅샷(v7-40, 7,350건)의 모델이 아니다. 동결 코퍼스는 data/v7_final/frozen_snapshot_v7_40/ 에 근사 복원본(7,326건, 97개 팬덤 문장 동일)이 있으므로, 라우팅 토크나이저가 재구성되면 같은 형식으로 동결 모델 묶음을 추가한다.",
     "corpus": {"file": "data/v7_final/fandoms_v3_100.json", "sha256": sha256(DATA / "fandoms_v3_100.json"), "n_bullets": n_bullets, "n_docs_after_min3_filter": len(docs)},
     "tokenizer": {"source": "run_lda_v6.py 의 PARTICLES/STOPWORDS/ENGLISH_STOPWORDS/tokenize() 를 ast 로 추출해 그대로 실행", "run_lda_v6_sha256": sha256(REPO / "run_lda_v6.py"),
                   "note": "보고서의 14개 언어 라우팅 토크나이저(run_lda_v6_live_reference_v7.py)가 아니므로 문서 수가 10,018건과 다르다"},
@@ -270,8 +271,9 @@ md.append(f"| K=8 | perplexity {R8['perplexity']}, 최적 M={R8['best']['m']}, �
 md.append("| 난수 | `random_state=0`, `max_iter=50`, `learning_method=\"batch\"` |")
 md.append(f"| 패키지 | Python {V['python']}, scikit-learn {V['scikit-learn']}, scipy {V['scipy']}, numpy {V['numpy']}, joblib {V['joblib']} |")
 md.append("| 재현성 | 스크립트를 다시 돌리면 CSV가 바이트 단위로 같게 나온다. pickle은 저장 직후 다시 불러 φ CSV·DTM과 일치를 확인한다 |\n")
-md.append("**이 폴더는 동결 스냅샷(v7-40, 7,350건)의 모델이 아니다.** 보고서 해석 계층이 쓰는 K=10·M=5·실루엣 0.267은 7,350건 코퍼스와 14개 언어 라우팅 토크나이저로 얻은 값이고, "
-          "그 둘이 저장소에 없어 동결 모델은 복원할 수 없다. 이 폴더는 같은 방법을 저장소에 있는 재료에 적용한 실측치이며, 동결 모델 묶음이 확보되면 같은 파일 구성으로 옆에 놓기 위한 형식 표준이기도 하다.\n")
+md.append("**이 폴더는 동결 스냅샷(v7-40, 7,350건)의 모델이 아니다.** 보고서 해석 계층이 쓰는 K=10·M=5·실루엣 0.267은 7,350건 코퍼스와 14개 언어 라우팅 토크나이저로 얻은 값이다. "
+          "코퍼스는 `data/v7_final/frozen_snapshot_v7_40/`에 근사 복원본(7,326건, 97개 팬덤은 문장 집합까지 동일)이 있지만 토크나이저가 아직 없어 동결 모델은 다시 적합할 수 없다. "
+          "이 폴더는 같은 방법을 저장소에 있는 재료에 적용한 실측치이며, 동결 모델 묶음이 만들어지면 같은 파일 구성으로 옆에 놓기 위한 형식 표준이기도 하다.\n")
 
 md.append("## 1. 세 층의 모델과 이 폴더의 위치\n")
 md.append("저장소에는 LDA 결과가 세 시점으로 존재한다. 이 폴더는 세 번째다.\n")
@@ -285,7 +287,7 @@ md.append("| 저장소에 없는 것 | 코퍼스, φ, 거리 행렬, 모델, 토
 md.append("| 출처 | `data/v7_final/lda_v6_diagnostics_frozen_v7_40.json`, `persona_decision_space_v7.json`, `fandom_scores_v6.json` | `data/v7_final/lda_v6_diagnostics_live_reference_v7.json`, `fandom_scores_live_reference_v7.json` | 이 폴더 |\n")
 md.append(f"③의 K=8 실루엣({R8['best']['silhouette']})이 ②의 0.046과 다른 이유는 토크나이저가 달라 문서 수({R10['n_docs']:,} vs 10,018)와 어휘가 다르기 때문이다. "
           "③의 수치는 \"저장소만으로 재현되는 참고 재적합\"이고 보고서 본문의 수치를 대체하지 않는다.\n")
-md.append("동결 모델 묶음(①의 φ·거리 행렬·모델)을 채우는 순서는 **코퍼스 → 토크나이저 → 재적합**이다. 7,350건 코퍼스와 라우팅 토크나이저가 확보되면 이 스크립트의 입력만 바꿔 같은 파일을 `frozen_v7_40/` 아래에 만들고, "
+md.append("동결 모델 묶음(①의 φ·거리 행렬·모델)을 채우는 순서는 **코퍼스 → 토크나이저 → 재적합**이다. 코퍼스는 근사 복원본(`data/v7_final/frozen_snapshot_v7_40/`, 7,326/7,350건)으로 확보됐고 남은 것은 라우팅 토크나이저다. 토크나이저가 재구성되면 이 스크립트의 입력만 바꿔 같은 파일을 `frozen_v7_40/` 아래에 만들고, "
           "①에 남아 있는 값(상위 10단어·토픽→F 배정·절단 높이 "
           f"{frozen_dendro['cut_height']:.4f}·실루엣 {frozen_dendro['silhouette']}·팬덤별 F 비중)이 전부 재현되는지로 검증한다(9절 4항).\n")
 
@@ -399,7 +401,7 @@ md.append(f"- 소요 시간 약 1∼3분(LDA 적합 K=10·K=8 각 30∼40초). �
           "- pickle은 scikit-learn 객체이므로 버전이 다른 환경에서 불러오면 경고가 날 수 있다. 그때는 CSV(φ·단어 사전·문서 순서)만으로도 3절 3단계부터 다시 적합해 같은 결과를 얻을 수 있다.\n")
 
 md.append("## 9. 한계와 다음 단계\n")
-md.append("1. **동결 스냅샷의 φ·모델이 아니다.** 7,350건 코퍼스와 14개 언어 라우팅 토크나이저가 저장소에 없으므로, HTML 덴드로그램의 병합 높이"
+md.append("1. **동결 스냅샷의 φ·모델이 아니다.** 동결 코퍼스는 근사 복원본(97개 팬덤 동일, 3개 팬덤 24건 유실)만 있고 14개 언어 라우팅 토크나이저는 저장소에 없으므로, HTML 덴드로그램의 병합 높이"
           f"({frozen_heights})를 이 폴더의 값으로 재현할 수는 없다. HTML 덴드로그램 자체의 절단·군집·잎 순서 재현은 `../persona_decision_space_v7.ipynb` 2절이 HTML 기록값으로 한다.\n"
           "2. 토픽 번호(T0∼T9)는 적합마다 임의로 매겨지므로 동결 스냅샷의 K0∼K9와 번호가 대응하지 않는다. 6절의 겹침 표는 참고용이다.\n"
           "3. 토크나이저가 구판이라 문서 수(9,954)와 어휘가 공식 라이브 참고 재적합(10,018)과 다르다. 라우팅 토크나이저가 재구성되면 이 스크립트의 1단계만 바꿔 다시 돌린다.\n"
