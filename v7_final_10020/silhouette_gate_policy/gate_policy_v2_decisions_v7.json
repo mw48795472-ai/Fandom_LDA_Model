@@ -130,6 +130,36 @@
    "G2_jaccard_ge_0.35": true,
    "G3_M_consensus": false,
    "v2_pass": false
+  },
+  "r73_tws_ko_10020_K8": {
+   "corpus": "r73_tws_ko_10020",
+   "K": 8,
+   "seed0_M5": 0.0916,
+   "v1_pass(seed0 ≥ 0.267)": false,
+   "v1_any_seed_pass": false,
+   "M5_median": 0.0814,
+   "M5_range": [
+    0.0237,
+    0.1381
+   ],
+   "jaccard_median": 0.4253,
+   "best_M_mode": 4,
+   "best_M_by_seed": [
+    5,
+    5,
+    4,
+    4,
+    5,
+    5,
+    6,
+    4,
+    4,
+    4
+   ],
+   "G1_sil_median_ge_incumbent": false,
+   "G2_jaccard_ge_0.35": true,
+   "G3_M_consensus": true,
+   "v2_pass": false
   }
  }
 }

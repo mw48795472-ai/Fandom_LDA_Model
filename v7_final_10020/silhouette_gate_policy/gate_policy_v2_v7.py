@@ -18,7 +18,10 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent; REPO = HERE.parents[1]
 S = json.load(open(REPO / "v7_final_10020" / "analysis" / "persona_decision_space" / "topic_phi_cosine" / "seed_stability" / "seed_stability_summary_v7.json", encoding="utf-8"))
-res = S["results"]; V1 = 0.267; JAC = 0.35; ADOPT_M = 5
+res = dict(S["results"]); V1 = 0.267; JAC = 0.35; ADOPT_M = 5
+# 추가 코퍼스의 시드 점검 결과(예: r73 투어스 한국어 재작성)가 있으면 같은 판정표에 넣는다
+for extra in sorted((REPO / "v7_final_10020" / "analysis" / "persona_decision_space" / "topic_phi_cosine").glob("seed_stability_*/seed_stability_summary_v7.json")):
+    res.update(json.load(open(extra, encoding="utf-8"))["results"])
 INCUMBENT = "frozen_approx_7326_K10"   # G4: 재현 가능한 기준
 inc_med = res[INCUMBENT]["silhouette_M5"]["median"]
 rows = {}
@@ -46,6 +49,11 @@ md = ["# 실루엣 게이트 개편안 v2 (L6) — 단일 실루엣 임계에서
 for k, r in rows.items():
     md.append(f"| {r['corpus']} K={r['K']} | {r['seed0_M5']} | {'통과' if r['v1_pass(seed0 ≥ 0.267)'] else '기각'} | {'통과' if r['v1_any_seed_pass'] else '기각'} | {r['M5_median']} ({r['M5_range'][0]}∼{r['M5_range'][1]}) | {r['jaccard_median']} | {r['best_M_mode']} ({r['best_M_by_seed']}) | {'○' if r['G1_sil_median_ge_incumbent'] else '×'} | {'○' if r['G2_jaccard_ge_0.35'] else '×'} | {'○' if r['G3_M_consensus'] else '×'} | **{'통과' if r['v2_pass'] else '기각'}** |")
 passed = [k for k, r in rows.items() if r["v2_pass"]]
+r73 = next((k for k in rows if k.startswith("r73")), None)
+if r73:
+    a = rows[r73]; b = rows["live_10020_K8"]
+    md.append(f"\n**r73(투어스 영문 근거 86건을 한국어로 재작성한 코퍼스) K=8**: M=5 시드 중앙값 {a['M5_median']}(r72 라이브 {b['M5_median']}), Jaccard {a['jaccard_median']}, 최빈 M {a['best_M_mode']}. v2 판정 {'통과' if a['v2_pass'] else '기각'} — "
+              + ("G1(현직 중앙값 이상)을 " + ("통과" if a["G1_sil_median_ge_incumbent"] else "넘지 못한다") + ". 코퍼스 차이는 10,018문서 중 86건(0.9%)뿐이므로 이 차이는 시드 분포의 폭(r72 K=8 M=5 0.073∼0.175) 안에 있고, 텍스트 품질 수정 라운드를 모델 품질 게이트로 막을지는 정책 결정 사항이다."))
 inc = rows[INCUMBENT]
 md.append(f"\n현직으로 삼은 {INCUMBENT} 자체가 G3을 {'통과한다' if inc['G3_M_consensus'] else '통과하지 못한다'}: 시드별 최적 M 최빈값이 {inc['best_M_mode']}이고 M=5 중앙값 {inc['M5_median']}은 최적 M 중앙값의 {round(inc['M5_median'] / res[INCUMBENT]['silhouette_best_M']['median'] * 100)}%다. 즉 해석 계층의 M=5(페르소나 5개 F)는 시드 합의가 아니라 seed 0의 선택이었다.")
 md.append(f"\nv1로는 네 적합 모두, 어느 시드로도 기각이다. v2로는 {', '.join(passed) if passed else '없음'} 이 통과한다. 통과의 뜻은 '현직(재현 가능한 기준)보다 나쁘지 않고 시드에 대해 안정적'이지, 좋은 군집이라는 뜻은 아니다(실루엣 0.1 수준은 여전히 약한 구조).\n")
