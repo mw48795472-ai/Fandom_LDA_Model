@@ -20,6 +20,8 @@
 
 ## 2. LDA 토픽모델링 → K→M→Persona→Loyalty/Spillover 4단계 해석 계층
 
+> 이 절의 수치(K=10 토픽, 페르소나 43/31/17/9)는 동결 스냅샷 v7-40의 값이다. 게이트 v2 채택(4절 개정) 뒤 루트 README 4·5절은 라이브 K=8 해석 계층(페르소나 62/17/12/9, `analysis/persona_decision_space/live_interpretive_layer/`)을 쓴다.
+
 | 계층 | 담는 질문 | 정의 |
 |---|---|---|
 | K (Topic) | 무엇을 하는가 | LDA 토픽 기반 배제 |
@@ -152,6 +154,8 @@ EvidenceScore(f) = Σ[1.0 + 0.5·n_num(t) + 0.3·n_kx(t)] — 충성도(Loyalty)
    silhouette=0.141 < 기준 0.267)을 숨기지 않고 그대로 보고서 본문에 명시했다. 최종 라이브 코퍼스 10,020건
    시점의 참고 재적합도 K=8·M=5·silhouette=0.046으로 기각분이며, 그 진단값(K-grid 포함)은
    `data/v7_final/lda_v6_diagnostics_live_reference_v7.json`에, 같은 값이 3D 포지셔닝맵 payload에도 들어 있다.
+
+**개정 (2026-09-23, 게이트 v2 채택).** 위 1∼4는 최종 보고서 시점의 규칙이다. 기준선 0.267이 저장소 재료로 어느 시드로도 재현되지 않고(40회 적합 중 0회) 실루엣·최적 M·토픽 상위어가 시드에 따라 크게 움직인다는 측정(`analysis/persona_decision_space/topic_phi_cosine/seed_stability/`) 뒤, 게이트를 (G1) 시드 ≥10 실루엣 중앙값 ≥ 재현 가능한 현직 중앙값 · (G2) 시드 쌍 토픽 Jaccard 중앙값 ≥ 0.35 · (G3) 최적 M 합의 · (G4) 재현 가능한 기준 — 으로 바꿨다(`silhouette_gate_policy/GATE_POLICY_V2_PROPOSAL_V7.md`). 통과한 라이브 K=8 참고 재적합이 루트 README 4·5절의 해석 계층이며(`analysis/persona_decision_space/live_interpretive_layer/`), 이 문서 2절의 K=10 토픽·페르소나 43/31/17/9는 동결 스냅샷의 역사 값이다.
 
 ## 5. 보조지표 7종 (LDA와 독립적, 원문 문자열 매칭 기반)
 

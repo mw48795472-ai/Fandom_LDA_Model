@@ -38,8 +38,10 @@ for name, rows in (("live_full_ranking_v7.csv", full), ("live_top15_v7.csv", ful
     with open(OUT / name, "w", encoding="utf-8-sig", newline="") as f: w = csv.DictWriter(f, fieldnames=list(full[0].keys())); w.writeheader(); w.writerows(rows)
 qc = Counter(r["quadrant"] for r in full); assert dict(qc) == {k: v for k, v in zip(["핵심전략형", "내부결속형", "외부견인형", "주변부"], [24, 17, 10, 49])} or True
 
-# ② K→F
-k2f = [{"topic": f"T{t}", "top10": " ".join(diag["topics_top_words"][t]), "raw_factor": labels[str(f)], "F": FCODE[labels[str(f)]], "F_name": FNAME[FCODE[labels[str(f)]]]} for t, f in sorted(diag["topic_to_factor"].items(), key=lambda kv: int(kv[0]))]
+# ② K→F — 토픽 이름은 동결 명명 규칙(활동 유형 + 형, 괄호 안 상위어)을 따라 상위 10단어를 보고 붙였다
+TOPIC_NAMES = {"0": "브랜드앰버서더형(브랜드·광고·모델·앰버서더)", "1": "음원차트기록형(기록·1위·앨범·발매)", "2": "단독콘서트투어형(콘서트·공연·단독·투어)", "3": "해외투어음반형(fan·japan·tour·album)",
+               "4": "페스티벌무대형(무대·축제·페스티벌·대학축제)", "5": "예능영화출연형(출연·예능·영화·일본)", "6": "팬클럽공식활동형(공식·팬클럽·홍보대사·팬덤)", "7": "드라마OST기부형(ost·드라마·기부·수상)"}
+k2f = [{"topic": f"T{t}", "topic_name": TOPIC_NAMES[t], "top10": " ".join(diag["topics_top_words"][t]), "raw_factor": labels[str(f)], "F": FCODE[labels[str(f)]], "F_name": FNAME[FCODE[labels[str(f)]]]} for t, f in sorted(diag["topic_to_factor"].items(), key=lambda kv: int(kv[0]))]
 with open(OUT / "live_k_to_f_v7.csv", "w", encoding="utf-8-sig", newline="") as f: w = csv.DictWriter(f, fieldnames=list(k2f[0].keys())); w.writeheader(); w.writerows(k2f)
 
 # ③ 페르소나
@@ -65,18 +67,18 @@ summary = {"gate_v2": "라이브 K=8만 통과 (GATE_POLICY_V2_PROPOSAL_V7.md)",
 json.dump(summary, open(OUT / "live_vs_frozen_summary_v7.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 
 md = ["# 라이브 해석 계층 (게이트 v2 통과 모델) — 동결 스냅샷과 나란히\n",
-      "게이트 v2(L6)로는 라이브 K=8 참고 재적합만 통과한다. 이 폴더는 그 모델의 저장 산출물(팬덤별 F 비중 5개, K→F 배정)로 동결 해석 계층과 **같은 규칙**의 순위표·K→F·페르소나를 만들어 동결과 대조한 병행 트랙이다. 보고서 본문·동결 산출물은 바꾸지 않았다. `build_live_interpretive_layer_v7.py`가 만든다.\n",
+      "게이트 v2(L6)로는 라이브 K=8 참고 재적합만 통과한다. 이 폴더는 그 모델의 저장 산출물(팬덤별 F 비중 5개, K→F 배정)로 동결 해석 계층과 **같은 규칙**의 순위표·K→F·페르소나를 만들어 동결과 대조한 것이다. **게이트 v2 채택(2026-09-23)에 따라 README 4·5절의 해석 계층은 이 폴더의 값으로 바뀌었고**, 동결 스냅샷 산출물(`fan_persona_v7.json` 등)은 '재현되지 않는 역사 값'으로 보관한다. `build_live_interpretive_layer_v7.py`가 만든다.\n",
       "## 0. 동결 대비 요약\n", f"- 상위 15 겹침 {summary['top15_overlap']}/15, 공통 97개 팬덤 순위 Spearman ρ = {summary['rank_spearman_common97']}.",
       f"- 4구획(라이브 표본 평균 {lmean}/{smean} 기준): {dict(qc)} — README 3절의 24/17/10/49와 같다.",
       f"- 페르소나: 라이브 {dict(pc)} vs 동결 {fp['persona_counts']}. 공통 97개 중 같은 페르소나 {same}개. 1위 경로가 F3(현장경제)인 팬덤 라이브 {f1_dom_live}/100, 동결 {f1_dom_frozen}/100.",
       "- F 코드 주의: 라이브의 raw 요인 5개 중 '브랜드·상업형(광고·앰버서더)'을 F4 산업전이(Fan → Brand/Industry)로 뒀다. 동결에서는 '미디어노출형(방송·조회수)'이 F4였다. 같은 F4·같은 페르소나명(현장상업형 등)이 두 계층에서 다른 raw 내용을 담는다.\n",
       "## 1. 상위 15 (라이브, 팬충성도 + 파급효과)\n", "| 순위 | 팬덤 | 팬충성도 | 파급효과 | 대표 요인 | F | 구획 | 동결 순위 |\n|---|---|---|---|---|---|---|---|"]
 for r in full[:15]: md.append(f"| {r['rank']} | {r['fandom']} | {r['loyalty']:.2f} | {r['spillover']:.2f} | {r['dominant_raw_factor'].split('(')[0]} | {r['dominant_F']} | {r['quadrant']} | {r['frozen_rank'] or '—'} |")
-md.append("\n## 2. K → F (라이브 K=8)\n| 토픽 | 상위 10단어 | raw 요인 | F |\n|---|---|---|---|")
-for k in k2f: md.append(f"| {k['topic']} | {k['top10']} | {k['raw_factor']} | {k['F']} {k['F_name']} |")
+md.append("\n## 2. K → F (라이브 K=8)\n| 토픽 | 이름 | 상위 10단어 | raw 요인 | F |\n|---|---|---|---|---|")
+for k in k2f: md.append(f"| {k['topic']} | {k['topic_name']} | {k['top10']} | {k['raw_factor']} | {k['F']} {k['F_name']} |")
 md.append("\n## 3. 페르소나 이동 (동결 → 라이브, 공통 97개)\n| 동결 | 라이브 | 팬덤 수 |\n|---|---|---|")
 for (a, b), n in sorted(mig.items(), key=lambda kv: -kv[1]): md.append(f"| {a} | {b} | {n} |")
-md.append("\n## 4. 읽는 법\n1. 이 계층을 채택하면 README 4·5절의 표·그림(상위 15, 페르소나 43/31/17/9, 그림 5∼7)이 이 폴더의 값으로 바뀌어야 한다. 채택 전까지는 병행 자료다.\n2. 라이브 K=8의 φ·문서-토픽 분포는 저장소에 없다(원본 참고 재적합의 저장 산출물은 F 비중까지). 덴드로그램·PCA 그림은 재구성 토크나이저의 재적합(`topic_phi_cosine/`)으로만 그릴 수 있고 그 값은 원본과 근방값이다(L2).\n3. 점수 자체가 건수 구조에 좌우된다는 L10·L12의 결론은 이 계층에도 그대로 적용된다.\n")
+md.append("\n## 4. 읽는 법\n1. README 4·5절의 표·그림(상위 15, 페르소나 62/17/12/9, 그림 5∼7)은 이 폴더의 값이다(`charts/build_live_layer_figures_v7.py`). 동결 값(43/31/17/9)은 `../persona_decision_space_v7.ipynb`와 `data/v7_final/fan_persona_v7.json`에 그대로 있다.\n2. 라이브 K=8의 φ·문서-토픽 분포는 저장소에 없다(원본 참고 재적합의 저장 산출물은 F 비중까지). 덴드로그램·PCA 그림은 재구성 토크나이저의 재적합(`topic_phi_cosine/`)으로만 그릴 수 있고 그 값은 원본과 근방값이다(L2).\n3. 점수 자체가 건수 구조에 좌우된다는 L10·L12의 결론은 이 계층에도 그대로 적용된다.\n")
 md.append("## 5. 파일\n| 파일 | 내용 |\n|---|---|\n| `live_top15_v7.csv` / `live_full_ranking_v7.csv` | 라이브 순위표(구획·대표 F·동결 순위 병기) |\n| `live_k_to_f_v7.csv` | 라이브 K=8 토픽 → raw 요인 → F |\n| `live_persona_v7.json` | 팬덤별 상위 2 F·페르소나·F별 분해, 카운트 |\n| `persona_migration_v7.csv` | 동결→라이브 페르소나 이동표 |\n| `live_vs_frozen_summary_v7.json` | 요약 |\n")
 (OUT / "LIVE_INTERPRETIVE_LAYER_V7.md").write_text("\n".join(md) + "\n", encoding="utf-8")
 print(json.dumps(summary, ensure_ascii=False)[:1200])

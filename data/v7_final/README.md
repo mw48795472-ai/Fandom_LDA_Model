@@ -37,7 +37,7 @@
 | `fandom_scores_v6.json` | 동결 스냅샷 7,350건 (r22 백업 zip의 동명 파일은 activity 합 5,612) | 위 CSV의 JSON 원본: loyalty_raw/spillover_raw, 불릿 수, factor_share(M=5), coverage_detail(13개 언어 카운트 — 아랍어 추가 전, 언어 엔트로피 분모 ln(13)) |
 | `supplementary_csv/fandom_bullet_share_v6.csv` | v7 r17 (5,454건) | 팬덤별 근거문장 수·비중 (창모·사이먼도미닉·헤이즈 포함 구 로스터) |
 | `supplementary_csv/domestic_regional_pilot_v6_top3.csv` | v7 r24 (5,998건) | 팬덤별 지역 언급·검출 지역 수·다양성·대표지역 top3 요약(중간 라운드 보조 CSV) |
-| `fan_persona_v7.json` | 동결 스냅샷 7,350건 | 페르소나 조합표(10개)·카운트(43/31/17/9)·팬덤별 top2 F·factor_specific_loyalty/spillover(= 비중 × 점수) |
+| `fan_persona_v7.json` | 동결 스냅샷 7,350건 (역사 값; 채택된 라이브 계층은 `v7_final_10020/analysis/persona_decision_space/live_interpretive_layer/live_persona_v7.json`) | 페르소나 조합표(10개)·카운트(43/31/17/9)·팬덤별 top2 F·factor_specific_loyalty/spillover(= 비중 × 점수) |
 | `persona_decision_space_v7.json` | 동결 스냅샷 7,350건 | Persona_결정공간.html 내장 데이터: K=10 토픽명·F코드·덴드로그램 병합 순서·PCA loading/좌표·팬덤별 F1∼F5 비중 (`v7_final_10020/data_export/extract_html_payloads.py`) |
 
 정합성 검증: 저장소 루트의 `verify_v7_final_consistency.py`.

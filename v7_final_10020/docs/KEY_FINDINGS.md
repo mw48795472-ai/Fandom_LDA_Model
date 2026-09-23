@@ -26,6 +26,7 @@
   최솟값 8, K=8은 9; 토픽 상위어는 `topic_cards_v7.json`과 동일), `persona_decision_space_v7.json`(Persona_결정공간.html 내장)
 - K=9 추가 검증(`k9_validation_v7.json`, 9,614문서 중간 라운드): K=9를 그리드에 넣어도 승자는 K=8이며, 미디어 토픽은 M≥6에서만
   단독 메타팩터로 분리됨
+- (동결 스냅샷 값. 게이트 v2 채택 뒤 README 4·5절의 라이브 해석 계층은 글로벌투어형 62 · 원정소비형 17 · 현장상업형 12 · 집단동원형 9 — `analysis/persona_decision_space/live_interpretive_layer/`)
 - 페르소나 4유형: 글로벌투어형(F3+F5, n=43) · 현장상업형(F3+F4, n=31) · 원정소비형(F2+F3, n=17) ·
   집단동원형(F1+F3, n=9) — F3(현장경제 경로)가 4유형 전부의 공통 기반 — `fan_persona_v7.json`
 - 팬덤별 F1∼F5 비중과 동결 스냅샷 점수: `fandom_scores_v6.csv` / `.json` (activity 합 = 7,350). JSON의 raw 점수·coverage_detail로
