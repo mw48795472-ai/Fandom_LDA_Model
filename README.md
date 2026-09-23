@@ -283,7 +283,7 @@ data/
   silhouette_gate_timeline/  실루엣 게이트 타임라인 CSV (v4 종료~r66 2차)
 v7_final_10020/        ★ 10,020건 기준 문서·코드·노트북 전부 (폴더 README)
   docs/                  KEY_FINDINGS · METHODOLOGY · FINAL_REPORT_SUMMARY · PYTHON_CODE_SUMMARY · REPORT_DOCX_VERIFICATION
-  analysis/              보조지표 7종·Fan Impact Pathway·토크나이저 노트북 8개 + 문서, 페르소나 결정공간 노트북(+φ·코사인 거리 산출, 동결 재적합 시도, 시드 안정성),
+  analysis/              보조지표 7종·Fan Impact Pathway·토크나이저 노트북 8개 + 문서, 페르소나 결정공간 노트북(+φ·코사인 거리 산출, 동결 재적합 시도, 시드 안정성, 토픽 대응 자동화),
                          토크나이저 스크립트·불용어 정리(stopwords/), 지표 사전 고정(dictionaries/), 기술 상세명세서, 국내 지역 지수 JSON/CSV
   index_methodology/     지표 산식 문서 + 식(1)~(7) 산정 노트북(ipynb + Spyder용 .py) + 재검증 스크립트
   charts/ indices_csv/ data_export/   그림·지수 CSV·데이터 추출 스크립트 (출력은 output/)

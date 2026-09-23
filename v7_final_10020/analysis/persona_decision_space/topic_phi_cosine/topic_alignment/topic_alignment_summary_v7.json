@@ -1,0 +1,254 @@
+{
+ "rule": {
+  "auto_label": "상위 4단어를 '·'로 이어 붙이고 '형'을 붙인다",
+  "phi_cosine": "공통 어휘 위 φ 행 벡터의 코사인 유사도, 헝가리안 1:1",
+  "jaccard_top10": "상위 10단어 집합 Jaccard, 헝가리안 1:1 + 최대 겹침(nearest)"
+ },
+ "models": {
+  "A_frozen_snapshot_k10": "동결 스냅샷 K=10 (7,350건, 상위 10단어만 저장됨)",
+  "B_live_k10": "이 폴더 K=10 (10,020건, 구 토크나이저 9,954문서, φ 있음)",
+  "C_frozen_refit_k10": "frozen_v7_40/ K=10 (동결 근사 7,326건, 재구성 토크나이저, φ 있음)",
+  "D_live_reference_k8": "라이브 원본 참고 재적합 K=8 (10,018문서, 상위 10단어만 저장됨)",
+  "E_live_k8": "이 폴더 K=8 (10,020건, 구 토크나이저, φ 있음)"
+ },
+ "pairs": {
+  "A_frozen_snapshot_k10→B_live_k10": {
+   "jaccard_top10": {
+    "n_src": 10,
+    "n_tgt": 10,
+    "hungarian_mean": 0.2883,
+    "hungarian_min": 0.0,
+    "hungarian_max": 0.6667,
+    "hungarian_overlap10": [
+     8,
+     5,
+     5,
+     2,
+     5,
+     3,
+     4,
+     6,
+     0,
+     4
+    ],
+    "nearest_equals_hungarian": 6
+   }
+  },
+  "A_frozen_snapshot_k10→C_frozen_refit_k10": {
+   "jaccard_top10": {
+    "n_src": 10,
+    "n_tgt": 10,
+    "hungarian_mean": 0.3267,
+    "hungarian_min": 0.0,
+    "hungarian_max": 0.6667,
+    "hungarian_overlap10": [
+     8,
+     4,
+     5,
+     2,
+     6,
+     6,
+     5,
+     7,
+     0,
+     3
+    ],
+    "nearest_equals_hungarian": 6
+   }
+  },
+  "A_frozen_snapshot_k10→D_live_reference_k8": {
+   "jaccard_top10": {
+    "n_src": 10,
+    "n_tgt": 8,
+    "hungarian_mean": 0.3714,
+    "hungarian_min": 0.1765,
+    "hungarian_max": 0.8182,
+    "hungarian_overlap10": [
+     9,
+     3,
+     3,
+     5,
+     4,
+     6,
+     7,
+     4
+    ],
+    "nearest_equals_hungarian": 7
+   }
+  },
+  "B_live_k10→C_frozen_refit_k10": {
+   "jaccard_top10": {
+    "n_src": 10,
+    "n_tgt": 10,
+    "hungarian_mean": 0.3885,
+    "hungarian_min": 0.0526,
+    "hungarian_max": 0.8182,
+    "hungarian_overlap10": [
+     1,
+     3,
+     3,
+     5,
+     5,
+     5,
+     9,
+     8,
+     9,
+     3
+    ],
+    "nearest_equals_hungarian": 8
+   },
+   "phi_cosine": {
+    "n_src": 10,
+    "n_tgt": 10,
+    "hungarian_mean": 0.6694,
+    "hungarian_min": 0.1899,
+    "hungarian_max": 0.9612,
+    "hungarian_overlap10": [
+     1,
+     3,
+     3,
+     5,
+     5,
+     5,
+     9,
+     8,
+     9,
+     3
+    ],
+    "nearest_equals_hungarian": 7,
+    "n_shared_vocab": 9090
+   }
+  },
+  "D_live_reference_k8→E_live_k8": {
+   "jaccard_top10": {
+    "n_src": 8,
+    "n_tgt": 8,
+    "hungarian_mean": 0.3385,
+    "hungarian_min": 0.1111,
+    "hungarian_max": 0.6667,
+    "hungarian_overlap10": [
+     7,
+     7,
+     4,
+     8,
+     3,
+     4,
+     3,
+     2
+    ],
+    "nearest_equals_hungarian": 7
+   }
+  },
+  "B_live_k10→E_live_k8": {
+   "jaccard_top10": {
+    "n_src": 10,
+    "n_tgt": 8,
+    "hungarian_mean": 0.5774,
+    "hungarian_min": 0.1111,
+    "hungarian_max": 0.8182,
+    "hungarian_overlap10": [
+     2,
+     5,
+     8,
+     8,
+     9,
+     7,
+     9,
+     8
+    ],
+    "nearest_equals_hungarian": 8
+   },
+   "phi_cosine": {
+    "n_src": 10,
+    "n_tgt": 8,
+    "hungarian_mean": 0.8493,
+    "hungarian_min": 0.5489,
+    "hungarian_max": 0.9604,
+    "hungarian_overlap10": [
+     2,
+     5,
+     8,
+     8,
+     9,
+     7,
+     9,
+     8
+    ],
+    "nearest_equals_hungarian": 8,
+    "n_shared_vocab": 12253
+   }
+  }
+ },
+ "frozen_human_label_check": [
+  {
+   "topic": "K0",
+   "human_label": "음원차트기록형(기록·1위·차트·최초)",
+   "auto_label": "기록·1위·발매·차트형",
+   "label_keywords_in_top10": "4/4",
+   "label_keywords_in_top4": "3/4"
+  },
+  {
+   "topic": "K1",
+   "human_label": "동남아현지보도형(보도·매체·인도네시아·기사)",
+   "auto_label": "무대·2026년·보도·8월형",
+   "label_keywords_in_top10": "4/4",
+   "label_keywords_in_top4": "1/4"
+  },
+  {
+   "topic": "K2",
+   "human_label": "예능방송출연형(예능·출연·mbc·sbs)",
+   "auto_label": "출연·예능·mbc·sbs형",
+   "label_keywords_in_top10": "4/4",
+   "label_keywords_in_top4": "4/4"
+  },
+  {
+   "topic": "K3",
+   "human_label": "일본오리콘앨범형(일본·빌보드·오리콘·판매)",
+   "auto_label": "앨범·1위·판매·이상형",
+   "label_keywords_in_top10": "4/4",
+   "label_keywords_in_top4": "1/4"
+  },
+  {
+   "topic": "K4",
+   "human_label": "글로벌음반판매형(million·album·copies·chart)",
+   "auto_label": "million·album·japan·chart형",
+   "label_keywords_in_top10": "4/4",
+   "label_keywords_in_top4": "3/4"
+  },
+  {
+   "topic": "K5",
+   "human_label": "팬클럽공식기부형(공식·팬클럽·기부·콘텐츠)",
+   "auto_label": "공식·팬클럽·유튜브·채널형",
+   "label_keywords_in_top10": "4/4",
+   "label_keywords_in_top4": "2/4"
+  },
+  {
+   "topic": "K6",
+   "human_label": "단독콘서트월드투어형(콘서트·투어·단독·월드투어)",
+   "auto_label": "콘서트·공연·보도·투어형",
+   "label_keywords_in_top10": "4/4",
+   "label_keywords_in_top4": "2/4"
+  },
+  {
+   "topic": "K7",
+   "human_label": "브랜드앰버서더형(브랜드·광고·앰버서더·매진)",
+   "auto_label": "브랜드·모델·광고·앰버서더형",
+   "label_keywords_in_top10": "4/4",
+   "label_keywords_in_top4": "3/4"
+  },
+  {
+   "topic": "K8",
+   "human_label": "월드투어매진형(tour·concert·sold·world)",
+   "auto_label": "tour·concert·fan·sold형",
+   "label_keywords_in_top10": "4/4",
+   "label_keywords_in_top4": "3/4"
+  },
+  {
+   "topic": "K9",
+   "human_label": "영화드라마출연형(드라마·ost·영화·출연)",
+   "auto_label": "드라마·ost·출연·예능형",
+   "label_keywords_in_top10": "4/4",
+   "label_keywords_in_top4": "3/4"
+  }
+ ]
+}
