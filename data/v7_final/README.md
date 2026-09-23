@@ -42,6 +42,6 @@
 실루엣 게이트 타임라인 CSV는 `../silhouette_gate_timeline/corpus_silhouette_timeline_v7_66_2ch.csv`.
 저장소에 없는 최종 산출물: 국내 지역 지수 라이브 JSON(대신 `v7_final_10020/analysis/domestic_regional_index/`의 산출본을 스크립트가 읽음),
 동결 스냅샷의 토픽 간 코사인 거리 행렬·φ(원본 데이터 묶음(`ARCHIVE_README_original.md`)에도 파일로 없었다. 병합 높이만 `persona_decision_space_v7.json`의 `dendro.merges`에 있다).
-동결 7,350건 코퍼스 원본도 없지만 `frozen_snapshot_v7_40/`의 근사 복원본(7,326건)이 그 자리를 대신한다. 그 밖의 미보유분은 루트 README 9절.
+동결 7,350건 코퍼스 원본도 없지만 `frozen_snapshot_v7_40/`의 근사 복원본(7,326건)이 그 자리를 대신한다. 그 복원본과 재구성 토크나이저로 K=10을 다시 적합한 묶음이 `v7_final_10020/analysis/persona_decision_space/topic_phi_cosine/frozen_v7_40/`에 있으나 동결 값(실루엣 0.267)은 재현되지 않았다. 그 밖의 미보유분은 루트 README 9절.
 
 **같은 이름 주의**: `fandom_scores_v6.json`·`lda_v6_diagnostics.json`은 r22 백업 zip(`archive/v6_r22_era_backup.zip`) 안에도 **같은 이름의 r22 시점 파일**이 있다(activity 합 5,612, K=8·M=6·실루엣 0.154). 파일명의 v6은 파이프라인 버전이지 스냅샷 시점이 아니므로, 동결 v7-40 값은 반드시 `data/v7_final/`의 것을 쓴다.

@@ -1,0 +1,68 @@
+{
+  "purpose": "동결 스냅샷 v7-40 모델의 근방 재현 묶음 (근사 코퍼스 7,326건 + 재구성 토크나이저, K=10). 동결 원본 모델이 아니다.",
+  "inputs": {
+    "corpus_sha256": "098a132ec92e1330ebb6bbc2b53241e16d127d8c65ea56431357002d25e336bc",
+    "tokenizer_script_sha256": "9a0c1482113287265085c485f45c0f0d8d212123513c956eb7414b070862eb8c"
+  },
+  "settings": {
+    "count_vectorizer": {
+      "max_df": 0.6,
+      "min_df": 2
+    },
+    "lda": {
+      "n_components": 10,
+      "random_state": 0,
+      "max_iter": 50,
+      "learning_method": "batch"
+    }
+  },
+  "versions": {
+    "python": "3.11.15",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.17.1",
+    "numpy": "2.4.6",
+    "joblib": "1.6.0"
+  },
+  "files": {
+    "count_vectorizer_v7_40.pkl": {
+      "sha256": "6d61b5baf76d5aadf17f0442a5defae5625e9f8d330bed006ab427f6fde24cc5",
+      "bytes": 80489
+    },
+    "frozen_refit_comparison_v7_40.json": {
+      "sha256": "afc4a6153ffa6533e1a13c1fb1b6ba0b177c9d5f6317c07db26f9ea237532fbc",
+      "bytes": 7627
+    },
+    "lda_document_index_v7_40.csv": {
+      "sha256": "827059da970f8cb9bb63344c6a4c3ddf33d85c29ad513b94643d86971b9c4c7a",
+      "bytes": 220285
+    },
+    "lda_model_k10_v7_40.pkl": {
+      "sha256": "73d8b88e3cd91605703c83b3cec50eddfc73444f31933edd7707c76d3336c81e",
+      "bytes": 1147275
+    },
+    "lda_phi_k10_v7_40.csv": {
+      "sha256": "781436ba14d501249a4e4e645d9bf257165bdde6074747776cb72f82518b5993",
+      "bytes": 1395350
+    },
+    "lda_phi_top50_k10_v7_40.csv": {
+      "sha256": "53e5be9f1ed037a2d1fac9127f484fab829a8f1829fe6ad2a9d4abb41e65a245",
+      "bytes": 16710
+    },
+    "lda_vocabulary_v7_40.csv": {
+      "sha256": "c6a51bd3d78b88b0da172941c989adbf34c281d1a5126fe01adb32b46b9364c2",
+      "bytes": 181521
+    },
+    "m_grid_silhouette_k10_v7_40.csv": {
+      "sha256": "4f262e0a223695f932b706ade07893e174fd52c2f136ba0a1530d343a7397f70",
+      "bytes": 275
+    },
+    "topic_cosine_distance_k10_v7_40.csv": {
+      "sha256": "00324709d4911b6d4a6611bd4e7cf2ce4d5e962c139151b442eeb15c9fb24d1c",
+      "bytes": 1319
+    },
+    "topic_linkage_average_k10_v7_40.csv": {
+      "sha256": "213d2eb45f37c682f568f637fd177bf2b12c63e3174d0c5a88b7f03b22b8f3a6",
+      "bytes": 209
+    }
+  }
+}

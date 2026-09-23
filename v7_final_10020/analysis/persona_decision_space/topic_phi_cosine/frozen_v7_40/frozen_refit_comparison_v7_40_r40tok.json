@@ -1,0 +1,495 @@
+{
+ "corpus": {
+  "file": "data/v7_final/frozen_snapshot_v7_40/fandoms_v7_40_frozen_reconstructed.json",
+  "n_bullets": 7326,
+  "n_docs": 7325,
+  "n_vocab": 9567
+ },
+ "frozen_reference": {
+  "K": 10,
+  "M": 5,
+  "silhouette": 0.267,
+  "cut_height": 0.7736394166666667,
+  "merge_heights": [
+   0.4112,
+   0.5902,
+   0.6106,
+   0.715,
+   0.7446,
+   0.8027,
+   0.8869,
+   0.9236,
+   0.9823
+  ],
+  "leaf_order": [
+   4,
+   8,
+   2,
+   9,
+   0,
+   3,
+   5,
+   7,
+   1,
+   6
+  ]
+ },
+ "reconstruction": {
+  "K": 10,
+  "perplexity": 3129.9,
+  "m_grid": [
+   {
+    "m": 4,
+    "silhouette": 0.0618,
+    "labels": [
+     0,
+     0,
+     0,
+     2,
+     1,
+     0,
+     1,
+     0,
+     0,
+     3
+    ]
+   },
+   {
+    "m": 5,
+    "silhouette": 0.0624,
+    "labels": [
+     1,
+     1,
+     1,
+     2,
+     0,
+     1,
+     0,
+     1,
+     4,
+     3
+    ]
+   },
+   {
+    "m": 6,
+    "silhouette": 0.0416,
+    "labels": [
+     0,
+     0,
+     0,
+     5,
+     2,
+     0,
+     3,
+     0,
+     4,
+     1
+    ]
+   },
+   {
+    "m": 7,
+    "silhouette": 0.0376,
+    "labels": [
+     0,
+     0,
+     0,
+     5,
+     6,
+     0,
+     3,
+     2,
+     4,
+     1
+    ]
+   },
+   {
+    "m": 8,
+    "silhouette": 0.0433,
+    "labels": [
+     0,
+     7,
+     0,
+     5,
+     6,
+     0,
+     3,
+     2,
+     4,
+     1
+    ]
+   }
+  ],
+  "best_m": 5,
+  "best_silhouette": 0.0624,
+  "m5_silhouette": 0.0624,
+  "m5_cut_height": 0.8683,
+  "merge_heights": [
+   0.5584,
+   0.7663,
+   0.8211,
+   0.8397,
+   0.8533,
+   0.8834,
+   0.8923,
+   0.8955,
+   0.9589
+  ],
+  "leaf_order": [
+   4,
+   6,
+   3,
+   9,
+   8,
+   7,
+   1,
+   0,
+   2,
+   5
+  ]
+ },
+ "topic_alignment": [
+  {
+   "frozen_topic": 0,
+   "frozen_name": "음원차트기록형(1위·차트·발매·최초)",
+   "frozen_words": [
+    "기록",
+    "1위",
+    "발매",
+    "차트",
+    "데뷔",
+    "최초",
+    "k팝",
+    "그룹",
+    "누적",
+    "앨범"
+   ],
+   "recon_topic": 3,
+   "overlap10": 7,
+   "recon_words": [
+    "기록",
+    "1위",
+    "앨범",
+    "발매",
+    "데뷔",
+    "차트",
+    "빌보드",
+    "최초",
+    "판매량",
+    "일본"
+   ],
+   "frozen_factor": 3
+  },
+  {
+   "frozen_topic": 1,
+   "frozen_name": "해외현지보도형(보도·인도네시아·매체·무대)",
+   "frozen_words": [
+    "무대",
+    "2026년",
+    "보도",
+    "8월",
+    "기사",
+    "인도네시아",
+    "매체",
+    "팬덤",
+    "함께",
+    "공연"
+   ],
+   "recon_topic": 7,
+   "overlap10": 4,
+   "recon_words": [
+    "출연",
+    "예능",
+    "8월",
+    "2026년",
+    "출연해",
+    "무대",
+    "홍보대사",
+    "mbc",
+    "활동",
+    "함께"
+   ],
+   "frozen_factor": 0
+  },
+  {
+   "frozen_topic": 2,
+   "frozen_name": "예능출연형(출연·예능·mbc·sbs)",
+   "frozen_words": [
+    "출연",
+    "예능",
+    "mbc",
+    "sbs",
+    "mc",
+    "kbs",
+    "kbs2",
+    "고정",
+    "공개",
+    "출연해"
+   ],
+   "recon_topic": 8,
+   "overlap10": 0,
+   "recon_words": [
+    "드라마",
+    "공식",
+    "ost",
+    "팬클럽",
+    "참여",
+    "팬카페",
+    "영화",
+    "활동",
+    "tvn",
+    "2024년"
+   ],
+   "frozen_factor": 2
+  },
+  {
+   "frozen_topic": 3,
+   "frozen_name": "글로벌음반판매형(앨범·빌보드·일본·차트)",
+   "frozen_words": [
+    "앨범",
+    "1위",
+    "판매",
+    "이상",
+    "데뷔",
+    "일본",
+    "빌보드",
+    "차트",
+    "오리콘",
+    "ep"
+   ],
+   "recon_topic": 2,
+   "overlap10": 1,
+   "recon_words": [
+    "팬덤",
+    "콘서트",
+    "공연",
+    "데뷔",
+    "전국투어",
+    "대구",
+    "부산",
+    "지역",
+    "활동",
+    "2026년"
+   ],
+   "frozen_factor": 3
+  },
+  {
+   "frozen_topic": 4,
+   "frozen_name": "해외음반성과형(million·album·japan·chart)",
+   "frozen_words": [
+    "million",
+    "album",
+    "japan",
+    "chart",
+    "music",
+    "copies",
+    "pop",
+    "group",
+    "korea",
+    "korean"
+   ],
+   "recon_topic": 6,
+   "overlap10": 5,
+   "recon_words": [
+    "fan",
+    "tour",
+    "concert",
+    "sold",
+    "million",
+    "album",
+    "group",
+    "world",
+    "chart",
+    "pop"
+   ],
+   "frozen_factor": 1
+  },
+  {
+   "frozen_topic": 5,
+   "frozen_name": "팬클럽공식활동형(공식·팬클럽·유튜브·기부)",
+   "frozen_words": [
+    "공식",
+    "팬클럽",
+    "유튜브",
+    "채널",
+    "팬덤",
+    "활동",
+    "기부",
+    "데뷔",
+    "콘텐츠",
+    "2025년"
+   ],
+   "recon_topic": 0,
+   "overlap10": 3,
+   "recon_words": [
+    "태국",
+    "팬들",
+    "기부",
+    "베트남",
+    "팬클럽",
+    "데뷔",
+    "콘서트",
+    "멤버",
+    "원을",
+    "맞아"
+   ],
+   "frozen_factor": 4
+  },
+  {
+   "frozen_topic": 6,
+   "frozen_name": "단독콘서트투어형(콘서트·투어·단독·일본)",
+   "frozen_words": [
+    "콘서트",
+    "공연",
+    "보도",
+    "투어",
+    "단독",
+    "데뷔",
+    "일본",
+    "개최",
+    "태국",
+    "월드투어"
+   ],
+   "recon_topic": 5,
+   "overlap10": 7,
+   "recon_words": [
+    "콘서트",
+    "공연",
+    "보도",
+    "단독",
+    "티켓",
+    "투어",
+    "매체",
+    "서울",
+    "데뷔",
+    "일본"
+   ],
+   "frozen_factor": 0
+  },
+  {
+   "frozen_topic": 7,
+   "frozen_name": "브랜드앰버서더형(브랜드·광고·앰버서더·발탁)",
+   "frozen_words": [
+    "브랜드",
+    "모델",
+    "광고",
+    "앰버서더",
+    "콘서트",
+    "발탁",
+    "매진",
+    "티켓",
+    "2025년",
+    "글로벌"
+   ],
+   "recon_topic": 9,
+   "overlap10": 7,
+   "recon_words": [
+    "브랜드",
+    "모델",
+    "앰버서더",
+    "광고",
+    "발탁",
+    "글로벌",
+    "캠페인",
+    "2025년",
+    "2024년",
+    "활동"
+   ],
+   "frozen_factor": 0
+  },
+  {
+   "frozen_topic": 8,
+   "frozen_name": "월드투어브랜드형(tour·concert·brand·ambassador)",
+   "frozen_words": [
+    "tour",
+    "concert",
+    "fan",
+    "sold",
+    "world",
+    "seoul",
+    "brand",
+    "ambassador",
+    "club",
+    "awards"
+   ],
+   "recon_topic": 4,
+   "overlap10": 1,
+   "recon_words": [
+    "japan",
+    "무대",
+    "ambassador",
+    "oricon",
+    "news",
+    "japanese",
+    "대학축제",
+    "축제",
+    "music",
+    "red"
+   ],
+   "frozen_factor": 1
+  },
+  {
+   "frozen_topic": 9,
+   "frozen_name": "미디어크로스오버형(드라마·ost·영화·수상)",
+   "frozen_words": [
+    "드라마",
+    "ost",
+    "출연",
+    "예능",
+    "영화",
+    "참여",
+    "수상",
+    "프로그램",
+    "나무위키",
+    "mbc"
+   ],
+   "recon_topic": 1,
+   "overlap10": 0,
+   "recon_words": [
+    "유튜브",
+    "보도",
+    "채널",
+    "콘텐츠",
+    "기사",
+    "조회수",
+    "영상",
+    "구독자",
+    "매체",
+    "bts"
+   ],
+   "frozen_factor": 2
+  }
+ ],
+ "topic_alignment_summary": {
+  "overlap_ge8": 0,
+  "overlap_ge5": 4,
+  "mean_overlap": 3.5
+ },
+ "m5_cluster_structure": {
+  "frozen_same_factor_pairs": 6,
+  "also_same_cluster_in_recon": 2,
+  "cluster_to_factor_by_vote": {
+   "0": 1,
+   "1": 0,
+   "2": 3,
+   "3": 0,
+   "4": 2
+  }
+ },
+ "fandom_factor_share": {
+  "pearson_by_factor": {
+   "현장경제형(콘서트·투어·매진)": 0.704,
+   "소비력형(초동·판매·앨범)": 0.874,
+   "미디어노출형(방송·조회수)": 0.563,
+   "차트·확산형(1위·빌보드·기록)": 0.873,
+   "결속형(팬클럽·기부·커뮤니티)": null
+  },
+  "n_fandoms": 100
+ },
+ "factor_diversity": {
+  "pearson": 0.528,
+  "mean_recon": 0.7848,
+  "mean_frozen": 0.8783
+ },
+ "tokenizer_era": "r40",
+ "verdict_note": "근사 코퍼스(3개 팬덤 24건 유실)와 재구성 토크나이저로 얻은 근방 재현이다. 동결 스냅샷 값 자체가 아니다."
+}
