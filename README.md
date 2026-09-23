@@ -169,7 +169,7 @@ flowchart LR
 
 ![경로별(F1∼F5) 점수 분해](assets/readme/fig06_factor_specific_impact.png)
 
-*그림 6. 경로별(F1∼F5) 팬충성도·파급효과 분해 — BTS·임영웅·리센느와 합산 상위 17개 팬덤. 세 팬덤 모두 1위 경로는 F3(현장경제)로 같고, F5(글로벌 확산) 파급효과 기여는 BTS 0.180 · 임영웅 0.103 · 리센느 0.055이다.*
+*그림 6. 경로별(F1∼F5) 팬충성도·파급효과 분해 — BTS·임영웅·리센느와 합산 상위 17개, 총 20개 팬덤. 세 팬덤 모두 1위 경로는 F3(현장경제)로 같고, F5(글로벌 확산) 파급효과 기여는 BTS 0.180 · 임영웅 0.103 · 리센느 0.055이다.*
 
 <p align="center"><img src="assets/readme/fig07b_persona_pca.png" alt="Persona PCA" width="640"></p>
 
