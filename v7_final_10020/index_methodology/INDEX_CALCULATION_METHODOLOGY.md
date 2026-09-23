@@ -163,8 +163,8 @@ Activity(f) = n_loyalty(f) + n_spillover(f)                                    (
 
 ## 한계
 
-1. 식(1)의 문장 단위 중간 결과(개별 근거문장의 EvidenceScore)는 파일로 저장되어 있지 않다.
-   다만 저장소의 코퍼스 10,020건에 산식을 적용하면 팬덤별 합산값이 그대로 재현되므로, 필요하면
-   `verify_v7_final_consistency.py`의 `evidence_score()`로 언제든 다시 산출할 수 있다.
-2. 시간(Time) 하위지표의 분모("코퍼스 전체 연도 범위 수")는 점수 파일에 `years_mentioned`만
-   저장되어 있어, 저장된 `time_coverage`로부터 분모를 역산해 확인했다(최종 파일 12개 연도 범위).
+1. 식(1)의 문장 단위 중간 결과(개별 근거문장의 EvidenceScore)는 원 산출물에는 없었다. 지금은
+   `export_evidence_score_sentences_v7.py`가 `evidence_score_by_sentence_v7.csv`(10,020행: 수치표현 수·보너스 키워드·문장 점수·연도)로
+   저장하며, 팬덤별 합이 `loyalty_raw`/`spillover_raw`와 100/100 일치함을 스크립트가 확인한다.
+2. 시간(Time) 하위지표의 분모("코퍼스 전체 연도 범위 수")도 원 산출물에는 `years_mentioned`만 있었다. 같은 스크립트가
+   `index_intermediate_values_v7.json`에 코퍼스 연도 목록(2015∼2026, 12개)과 `time_coverage` 재현 100/100을 기록한다.

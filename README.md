@@ -1,7 +1,7 @@
 # 국내 대표 팬덤 100개 LDA 토픽모델링 — 팬충성도 × 파급효과 × 팬 요인 구조
 
 > **핵심 요약판.**  보고서(`(분석보고서)…최종.pdf`, `(요약보고서)…최종.pdf`)의 최종 결과·대표 차트·모델 설명을
-> 한 페이지로 압축했다. 라운드별 진행 이력은 생략하고, 저장소의 모든 수치는 `verify_v7_final_consistency.py`(105/105)와 R 교차검증(238/238)으로 파일에서 재현된다.
+> 한 페이지로 압축했다. 라운드별 진행 이력은 생략하고, 저장소의 모든 수치는 `verify_v7_final_consistency.py`(107/107)와 R 교차검증(238/238)으로 파일에서 재현된다.
 
 | 항목 | 내용 |
 |---|---|
@@ -173,7 +173,7 @@ flowchart LR
 | 광고·상업성 지수 | 광고 계약·앰버서더·협찬 문장 비중과 20개 업종 구성 | 광고신호 키워드 31개 → 업종 사전 다중분류 | 1,302건(13.0%). 복지/행정 228 · 패션/의류 209 · 미용 177 · 식음료 169 · 정보/통신 94 |
 | 미디어·콘텐츠 노출 지수 | 예능·유튜브·영화·드라마 노출 | 4개 서브태그 키워드 매칭 | 1,025건(10.2%), 99/100 팬덤 (투어스 0건) |
 | 팬덤결속 지수 | 조직적 결속력 5유형(A 공식팬클럽 · B 팬카페 · C 정체성 · D 기부 · E 오프라인 결집) | 유형별 키워드 매칭 | 923건(9.2%), 상위 임영웅·김재중·김호중·이찬원·정동원 |
-| 매체 크로스오버 지수 | 매체 확산 폭 | 출처 URL의 뉴스 도메인 수 | news_media 6,712건, 서로 다른 매체 1,298개 |
+| 매체 크로스오버 지수 (= 매체 확산 폭 지수; 유입 경로·전환이 아님) | 매체 확산 폭 | 출처 URL의 뉴스 도메인 수 | news_media 6,712건, 서로 다른 매체 1,298개 |
 | 국내 지역 지수 | 17개 시/도 밀착도 | 지역명 텍스트마이닝 | 지역 언급 1,226건, 검출 469, 99/100 팬덤. 서울 편중 뚜렷, 다양성 1위 임영웅(12지역, 0.71) |
 | 멤버 집중도 MCI | 그룹 내 멤버 쏠림 | Σ(멤버 점유율)² (허핀달 방식, 하한 1/멤버수) | 45개 그룹. MCI∼멤버 수 r=−0.728, 멤버 수 통제 후 outcome 설명력 R²<0.05 |
 | 세계 언어 지수 | 해외 확산 | Coverage의 언어 분포 재구성 | 해외언어 4,469건(44.6%), 100/100 팬덤. 영어 2,195(49.1%) · 일본어 · 중국어 순 |
@@ -253,7 +253,7 @@ flowchart LR
 **재현 명령 (저장소 루트, Python 3.10+; scipy·statsmodels·scikit-learn·pandas·matplotlib, 토크나이저는 fugashi unidic-lite jieba pythainlp)**
 
 ```bash
-python verify_v7_final_consistency.py                                        # 보고서 수치 ↔ data/v7_final 105/105
+python verify_v7_final_consistency.py                                        # 보고서 수치 ↔ data/v7_final 107/107
 python Statistics/verify_r_sections_python.py                                # 통계 검정 238개 항목 (R 패키지와 같은 정답지)
 python v7_final_10020/index_methodology/build_index_calculation_notebook.py  # 식(1)~(7) 지표 산정 노트북
 python v7_final_10020/analysis/build_notebooks_v7.py                          # 보조지표·페르소나·토크나이저 노트북 8개
@@ -272,7 +272,7 @@ README.md                                   이 문서 (핵심 요약판)
 3D_포지셔닝맵_국내100팬덤.html + plotly-bundle.js / Persona_결정공간.html   인터랙티브 산출물 (같은 폴더에서 열면 동작)
 qr_codes/                                   두 HTML의 QR 코드 + 아티팩트 링크·해시 대조
 assets/readme/                              이 문서의 그림 (제출 보고서 PDF·보고서 docx 원본 그림 + 데이터에서 다시 그린 그림, 가로 최대 2,400px; Q-Q plot은 Statistics/R_통계검증/outputs/plots/ 의 R 산출물을 직접 참조)
-verify_v7_final_consistency.py              최종 수치 ↔ 파일 정합성 검증 (105/105)
+verify_v7_final_consistency.py              최종 수치 ↔ 파일 정합성 검증 (107/107)
 run_lda_v6.py                               LDA 파이프라인 참고 구현, 구 토크나이저 판 (--data/--out)
 run_lda_v6_live_reference_v7.py             같은 파이프라인 + 14개 언어 라우팅 토크나이저 재구성본 (최종 참고 재적합 재현용, 약 30분)
 data/

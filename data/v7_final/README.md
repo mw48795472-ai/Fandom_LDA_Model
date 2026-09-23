@@ -3,6 +3,7 @@
 | 파일 | 계층 | 내용 |
 |---|---|---|
 | `fandoms_v3_100.json` | 라이브 10,020건 | 근거문장 원본 코퍼스. 100개 팬덤 × `loyalty`/`spillover` 배열, 원소 `{t: 문장, u: 출처 URL}` |
+| `roster_history_v7.csv` | 로스터 이력 | 팬덤 106행(라이브 100 + 제거 6): 들어온 라운드·나간 라운드·교체 상대·동결/라이브 포함 여부·진입 시 불릿 수 (`v7_final_10020/data_export/build_roster_history_v7.py`, 교체 로그 5개에서 생성). 동결·라이브 표를 이어 볼 때 '해당 없음' 판정의 기준 |
 | `frozen_snapshot_v7_40/` | 동결 근사 복원본 7,326건 | 동결 7,350건 코퍼스의 근사 복원본(`fandoms_v7_40_frozen_reconstructed.json`, 평면 CSV, manifest, 후보 검사기). 라이브 목록 앞부분을 동결 건수만큼 자른 것으로 97개 팬덤은 EvidenceScore 지문까지 동결과 일치, BE'O·pH-1·한로로는 r22 백업 시점(유실 24건). 폴더 README 참고 |
 | `bullets_flat_v7_final.csv` | 라이브 10,020건 | 위 JSON을 `fandom, category, bullet_type, text, url` 평면 CSV로 펼친 것 (`v7_final_10020/data_export/build_bullets_flat_csv.py`) |
 | `language_domain_summary_v7.json` | 라이브 10,020건 | 14개 언어권별 근거 건수·도메인 수·상위 도메인 (보고서 표 2-2). 합 10,020건 |

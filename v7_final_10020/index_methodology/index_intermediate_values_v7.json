@@ -1,0 +1,68 @@
+{
+ "formula": "EvidenceScore(t) = 1.0 + 0.5·n_numeric(t) + 0.3·n_bonus_kw(t); loyalty_raw = Σ loyalty 문장, spillover_raw = Σ spillover 문장",
+ "numeric_pattern": "\\d+[\\.,]?\\d*\\s*(만|억|조|%|명|장|위|회|건|주|배|년)",
+ "loyalty_bonus_keywords": [
+  "기부",
+  "돌파",
+  "매진",
+  "출범",
+  "창단",
+  "결성",
+  "총공",
+  "역사",
+  "지속",
+  "확장",
+  "1위",
+  "최초",
+  "신기록",
+  "밀리언셀러",
+  "팬클럽",
+  "팬카페",
+  "결속",
+  "충성",
+  "세대"
+ ],
+ "spillover_bonus_keywords": [
+  "경제효과",
+  "매출",
+  "관광",
+  "지자체",
+  "앰버서더",
+  "모델",
+  "브랜드",
+  "팝업",
+  "협업",
+  "관중",
+  "방문",
+  "상권",
+  "지역",
+  "홍보대사",
+  "수익",
+  "투어",
+  "콘서트",
+  "소비"
+ ],
+ "time_denominator": {
+  "rule": "코퍼스 전체 문장에서 정규식 (?<!\\d)(20[0-2][0-9])(?!\\d) 로 뽑은 2015∼2026 연도의 고유 개수",
+  "corpus_years": [
+   "2015",
+   "2016",
+   "2017",
+   "2018",
+   "2019",
+   "2020",
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025",
+   "2026"
+  ],
+  "n_corpus_years": 12,
+  "time_coverage = len(years_mentioned)/n_corpus_years 재현": "100/100"
+ },
+ "check": {
+  "per_fandom_sum_equals_raw_scores": "100/100",
+  "n_sentences": 10020
+ }
+}
