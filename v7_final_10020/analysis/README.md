@@ -9,7 +9,7 @@
 | `fandom_cohesion_index/` | `FANDOM_COHESION_INDEX_V7.md` + `fandom_cohesion_index_v7.ipynb` |
 | `media_content_exposure_index/` | `MEDIA_CONTENT_EXPOSURE_V7.md` + `media_content_exposure_v7.ipynb` — 노출·크로스오버 지수, r10·r11 교차검증, K=9 |
 | `domestic_regional_index/` | `DOMESTIC_REGIONAL_INDEX_V7.md` + `domestic_regional_index_v7.ipynb` + **`domestic_regional_index_v7.json/.csv`(최종 10,020건 산출본)** |
-| `worldwide_language_index/` | `WORLDWIDE_LANGUAGE_INDEX_V7.md` + `worldwide_language_index_v7.ipynb` — 14개 언어·ln(14) |
+| `worldwide_language_index/` | `WORLDWIDE_LANGUAGE_INDEX_V7.md` + `worldwide_language_index_v7.ipynb` — 14개 언어·ln(14). `BODY_LANGUAGE_V7.md` + `build_body_language_classifier_v7.py` — 불릿 10,020건 본문 언어 병행 판정(문자권 + wordfreq), 도메인 기준과 불일치율·지수 상관 |
 | `group_member_index/` | `GROUP_MEMBER_INDEX_V7.md` + `group_member_index_v7.ipynb` — 45개 그룹 MCI, 상관 재현. `MCI_SAME_PERIOD_V7.md` + `build_mci_same_period_v7.py` — 같은 시점(라이브×라이브) 상관 재산출, 지표 통일 CSV(MCI_excess·HHI_norm), 별칭·동음 감사 CSV |
 | `fan_impact_pathway/` | `FAN_IMPACT_PATHWAY_V7.md` + `fan_impact_pathway_v7.ipynb` — 동결 K=10/M=5 해석 계층 재현 |
 | `persona_decision_space/` | `persona_decision_space_v7.ipynb`(+ Spyder용 `.py`) — `Persona_결정공간.html`의 로직 재현: K→F 배정 10/10, 덴드로그램 절단·군집·잎 순서·가지 색, 상위 2 F → 페르소나 100/100(43/31/17/9), PCA 좌표·loading, 레이더 평균, Factor-specific 500/500. 결과 CSV·그림 3장. 하위 `topic_phi_cosine/`: 최종 코퍼스 10,020건에 K=10·K=8 LDA를 적합해 산출한 φ(토픽×어휘)·토픽 간 코사인 거리 행렬·average-linkage 병합 기록·M-grid 실루엣 CSV + 방법·코드 MD |
