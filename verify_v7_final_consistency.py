@@ -684,6 +684,29 @@ else:
     info("data/v7_final/roster_history_v7.csv 없음")
 
 # ---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
+# [AF] r73 라운드 (data/v7_final/r73_tws_ko/) — 투어스 영문 근거 86건 한국어 재작성, 해석 계층
+# ---------------------------------------------------------------------------
+print("\n[AF] data/v7_final/r73_tws_ko/ — r73 라운드(투어스 재작성)와 채택 해석 계층")
+_r73_dir = D / "r73_tws_ko"
+if (_r73_dir / "fandoms_v3_100_r73.json").exists():
+    _c73 = {f["fandom"]: f for f in json.load(open(_r73_dir / "fandoms_v3_100_r73.json", encoding="utf-8"))}
+    _diff = [(n, t, i) for n, f in _c73.items() for t in ("loyalty", "spillover") for i, it in enumerate(f[t]) if it["t"] != byf[n][t][i]["t"] or it["u"] != byf[n][t][i]["u"]]
+    check("r73 코퍼스 = r72 코퍼스에서 투어스(TWS) 텍스트 86건만 교체(URL·건수 동일, 총 10,020건)",
+          set(_c73) == set(byf) and sum(len(f["loyalty"]) + len(f["spillover"]) for f in _c73.values()) == 10020 and len(_diff) == 86 and {d[0] for d in _diff} == {"투어스(TWS)"}
+          and all(it["u"] == byf[n][t][i]["u"] for n, f in _c73.items() for t in ("loyalty", "spillover") for i, it in enumerate(f[t])), f"차이 {len(_diff)}건")
+    _s73 = {r["fandom"]: r for r in json.load(open(_r73_dir / "fandom_scores_r73.json", encoding="utf-8"))}; _sjby = {r["fandom"]: r for r in sj}
+    _same99 = all(abs(_s73[n]["loyalty_score"] - _sjby[n]["loyalty_score"]) < 1e-9 and abs(_s73[n]["spillover_score"] - _sjby[n]["spillover_score"]) < 1e-9 for n in _s73 if n != "투어스(TWS)")
+    _rank = [r["fandom"] for r in sorted(_s73.values(), key=lambda r: -(r["loyalty_score"] + r["spillover_score"]))].index("투어스(TWS)") + 1
+    check("r73 점수: 투어스 외 99개 팬덤은 r72 라이브 점수와 동일, 투어스 합산 순위 32위(r72 100위)", _same99 and _rank == 32, f"동일 {_same99}, 투어스 {_rank}위")
+    _lp = BASE / "v7_final_10020" / "analysis" / "persona_decision_space" / "live_interpretive_layer" / "live_persona_v7.json"
+    _P = json.load(open(_lp, encoding="utf-8")); _d73 = json.load(open(_r73_dir / "lda_v6_diagnostics_r73.json", encoding="utf-8"))
+    check("r73 해석 계층: K=8·M=5 고정·실루엣 0.092, 페르소나 현장상업형 89·글로벌투어형 8·집단동원형 2·산업확장형 1, 투어스 글로벌투어형",
+          _d73["selected_k"] == 8 and _d73["selected_m_meta_factors"] == 5 and _d73.get("m_forced") == 5 and _d73["meta_factor_silhouette"] == 0.092
+          and _P["persona_counts"] == {"현장상업형": 89, "글로벌투어형": 8, "집단동원형": 2, "산업확장형": 1} and next(f for f in _P["fandoms"] if f["fandom"] == "투어스(TWS)")["persona"] == "글로벌투어형")
+else:
+    info("data/v7_final/r73_tws_ko/ 없음")
+
 n_ok = sum(1 for _, ok in results if ok); n_all = len(results)
 print(f"\n=== 결과: {n_ok}/{n_all} 항목 일치 ({n_all - n_ok}건 불일치) ===")
 sys.exit(0 if n_ok == n_all else 1)
