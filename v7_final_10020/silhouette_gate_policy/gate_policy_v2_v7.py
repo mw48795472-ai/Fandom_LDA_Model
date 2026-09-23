@@ -38,7 +38,7 @@ out = {"v1": {"rule": "M 실루엣(시드 0 한 번) ≥ 0.267", "baseline": V1,
        "decisions": rows}
 json.dump(out, open(HERE / "gate_policy_v2_decisions_v7.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 md = ["# 실루엣 게이트 개편안 v2 (L6) — 단일 실루엣 임계에서 시드 분포·안정성 합의로\n",
-      "현 정책(v1)은 새 재적합의 M 실루엣(시드 하나, 한 번)이 동결 0.267을 넘어야 해석 계층을 교체한다. 0.267은 저장소 재료로 어느 시드로도 재현되지 않고(L3·L7: 40회 중 0회, 최대 0.192), 실루엣 자체가 시드에 따라 두 배 가까이 움직인다. 이 문서는 개편안과, L7의 측정치로 네 적합에 v1·v2를 적용한 판정표다. **2026-09-23 채택. 루트 README 4·5절의 해석 계층이 통과 모델(라이브 K=8)로 바뀌었고, 같은 날 v2.1(텍스트 품질 수정 라운드 = 현직 재측정)에 따라 r73 재적합(`../analysis/persona_decision_space/live_interpretive_layer/`)이 그 자리를 이었다. 최종 보고서 PDF는 v1 정책의 동결 계층 그대로다.** `gate_policy_v2_v7.py`가 만든다.\n",
+      "현 정책(v1)은 새 재적합의 M 실루엣(시드 하나, 한 번)이 동결 0.267을 넘어야 해석 계층을 교체한다. 0.267은 저장소 재료로 어느 시드로도 재현되지 않고(L3·L7: 40회 중 0회, 최대 0.192), 실루엣 자체가 시드에 따라 두 배 가까이 움직인다. 이 문서는 개편안과, L7의 측정치로 네 적합에 v1·v2를 적용한 판정표다. **2026-09-23 채택. 루트 README 4·5절의 해석 계층이 통과 모델(라이브 K=8)로 바뀌었다(`../analysis/persona_decision_space/live_interpretive_layer/`). 최종 보고서 PDF는 v1 정책의 동결 계층 그대로다.** `gate_policy_v2_v7.py`가 만든다.\n",
       "## 1. 제안\n", "| 조건 | 내용 | 근거 |\n|---|---|---|",
       f"| G1 실루엣 | 시드 ≥10개의 채택 M 실루엣 **중앙값** ≥ 현직 모델의 같은 방식 중앙값 (현직 = 동결 근사 재적합 K=10, {inc_med}) | 단일 시드 값은 분포의 한 점(L7) |",
       f"| G2 토픽 안정성 | 시드 쌍 상위 10단어 Jaccard 중앙값 ≥ {JAC} | 측정된 네 적합이 0.39∼0.40; 그 아래면 토픽 라벨을 고정할 수 없다 |",
@@ -53,7 +53,7 @@ r73 = next((k for k in rows if k.startswith("r73")), None)
 if r73:
     a = rows[r73]; b = rows["live_10020_K8"]
     md.append(f"\n**r73(투어스 영문 근거 86건을 한국어로 재작성한 코퍼스) K=8**: M=5 시드 중앙값 {a['M5_median']}(r72 라이브 {b['M5_median']}), Jaccard {a['jaccard_median']}, 최빈 M {a['best_M_mode']}. v2 판정 {'통과' if a['v2_pass'] else '기각'} — "
-              + ("G1(현직 중앙값 이상)을 " + ("통과" if a["G1_sil_median_ge_incumbent"] else "넘지 못한다") + f". 코퍼스 차이는 10,018문서 중 86건(0.9%)뿐이므로 이 차이는 시드 분포의 폭(r72 K=8 M=5 {b['M5_range'][0]}∼{b['M5_range'][1]}) 안에 있다. **정책 v2.1(2026-09-23 채택): 코퍼스를 늘리지 않고 기존 근거의 언어·표기만 고치는 '텍스트 품질 수정 라운드'는 새 후보가 아니라 현직 모델의 재측정으로 본다.** r73은 그 첫 사례이며, 이에 따라 G1 비교 없이 채택됐다(`data/v7_rounds/round_log_r73.json`). 루트 README 4·5절의 해석 계층은 r73 재적합(K=8, M=5 고정, seed 0 실루엣 0.092)의 값이고, r72 계층은 `live_interpretive_layer_r72/`에 보관한다."))
+              + ("G1(현직 중앙값 이상)을 " + ("통과" if a["G1_sil_median_ge_incumbent"] else "넘지 못한다") + ". 코퍼스 차이는 10,018문서 중 86건(0.9%)뿐이므로 이 차이는 시드 분포의 폭(r72 K=8 M=5 0.073∼0.175) 안에 있고, 텍스트 품질 수정 라운드를 모델 품질 게이트로 막을지는 정책 결정 사항이다."))
 inc = rows[INCUMBENT]
 md.append(f"\n현직으로 삼은 {INCUMBENT} 자체가 G3을 {'통과한다' if inc['G3_M_consensus'] else '통과하지 못한다'}: 시드별 최적 M 최빈값이 {inc['best_M_mode']}이고 M=5 중앙값 {inc['M5_median']}은 최적 M 중앙값의 {round(inc['M5_median'] / res[INCUMBENT]['silhouette_best_M']['median'] * 100)}%다. 즉 해석 계층의 M=5(페르소나 5개 F)는 시드 합의가 아니라 seed 0의 선택이었다.")
 md.append(f"\nv1로는 네 적합 모두, 어느 시드로도 기각이다. v2로는 {', '.join(passed) if passed else '없음'} 이 통과한다. 통과의 뜻은 '현직(재현 가능한 기준)보다 나쁘지 않고 시드에 대해 안정적'이지, 좋은 군집이라는 뜻은 아니다(실루엣 0.1 수준은 여전히 약한 구조).\n")

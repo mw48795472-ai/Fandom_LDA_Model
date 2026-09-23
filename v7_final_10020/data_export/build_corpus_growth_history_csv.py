@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-v6~v7 전체 병합·교체 로그 -> 코퍼스 성장 이력 CSV (v6 1차 ~ v7 r73, 최종 10,020건; r73은 투어스 재작성, 순증 0).
+v6~v7 전체 병합·교체 로그 -> 코퍼스 성장 이력 CSV (v6 1차 ~ v7 r72, 최종 10,020건).
 
 입력 (data/v7_rounds/ 는 사용자가 GitHub에 직접 업로드한 원본 로그 전량):
   data/v7_rounds/v6_merge_log.json, v6_3_market_merge_log.json, v6_4_language_merge_log.json (v6 단계 로그 3개)
   data/v7_rounds/merge_log_r*.json (r1~r72; r36~r59는 before_total_bullets/after_total_bullets 키 사용)
   data/v7_rounds/swap_log_r*.json (로스터 교체 r29·r34·r62·r63; r58 교체는 merge_log_r58에 round_type=roster_swap로 기록)
-  data/v7_rounds/round_log_r70.json (재분류만, 순증 0), round_log_r73.json (투어스 86건 재작성, 순증 0)
+  data/v7_rounds/round_log_r70.json (재분류만, 순증 0)
 출력: data/v7_final/corpus_growth_history_v6_v7_full.csv
   컬럼: stage, kind, before_total, after_total, net_new_bullets, n_touched_fandoms, roster_change, note
 검증: 각 행 after_total == 다음 행 before_total (체인 연속성) — 로그 자체의 기록 오차(r21→r22 +1, r22→r23 -1,
@@ -62,8 +62,6 @@ for p in R.glob("swap_log_r*.json"):
                             n_touched_fandoms="", roster_change=label, note=d.get("round", ""))))
 d = load(R / "round_log_r70.json")
 events.append(((70, 0), dict(stage="v7_r70", kind="reclassify", before_total=d["before_total"], after_total=d["after_total"], net_new_bullets=d["net_new_bullets"], n_touched_fandoms="", roster_change="", note="언어별 도메인 표 갱신, 재분류 1건")))
-d = load(R / "round_log_r73.json")
-events.append(((73, 0), dict(stage="v7_r73", kind="rewrite", before_total=d["before_total"], after_total=d["after_total"], net_new_bullets=d["net_new_bullets"], n_touched_fandoms=1, roster_change="", note="투어스(TWS) 영문 근거 86건 한국어 재작성, 순증 0")))
 events.sort(key=lambda e: e[0])
 rows += [e[1] for e in events]
 

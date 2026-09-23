@@ -1,7 +1,7 @@
 # 핵심 수치 요약 (Quick Reference)
 
 보고서에서 반복 인용되는 수치를 한곳에 모은 참고 문서. 각 수치의 근거 파일(`data/v7_final/`)과 계층(동결 스냅샷 7,350건 vs
-라이브 10,020건)을 함께 적었고, `verify_v7_final_consistency.py`로 재계산해 대조했다(110/110 일치).
+라이브 10,020건)을 함께 적었고, `verify_v7_final_consistency.py`로 재계산해 대조했다(107/107 일치).
 
 ## 코퍼스 규모 — 라이브 코퍼스 `data/v7_final/fandoms_v3_100.json`
 - 분석 대상 팬덤: 100개
@@ -26,13 +26,13 @@
   최솟값 8, K=8은 9; 토픽 상위어는 `topic_cards_v7.json`과 동일), `persona_decision_space_v7.json`(Persona_결정공간.html 내장)
 - K=9 추가 검증(`k9_validation_v7.json`, 9,614문서 중간 라운드): K=9를 그리드에 넣어도 승자는 K=8이며, 미디어 토픽은 M≥6에서만
   단독 메타팩터로 분리됨
-- (동결 스냅샷 값. 게이트 v2 채택 뒤 README 4·5절의 해석 계층은 라이브 코퍼스 r73 재적합 — 현장상업형 89 · 글로벌투어형 8 · 집단동원형 2 · 산업확장형 1, `analysis/persona_decision_space/live_interpretive_layer/`. r72 계층(글로벌투어형 62 · 원정소비형 17 · 현장상업형 12 · 집단동원형 9)은 `live_interpretive_layer_r72/`)
+- (동결 스냅샷 값. 게이트 v2 채택 뒤 README 4·5절의 라이브 해석 계층은 글로벌투어형 62 · 원정소비형 17 · 현장상업형 12 · 집단동원형 9 — `analysis/persona_decision_space/live_interpretive_layer/`)
 - 페르소나 4유형: 글로벌투어형(F3+F5, n=43) · 현장상업형(F3+F4, n=31) · 원정소비형(F2+F3, n=17) ·
   집단동원형(F1+F3, n=9) — F3(현장경제 경로)가 4유형 전부의 공통 기반 — `fan_persona_v7.json`
 - 팬덤별 F1∼F5 비중과 동결 스냅샷 점수: `fandom_scores_v6.csv` / `.json` (activity 합 = 7,350). JSON의 raw 점수·coverage_detail로
   min-max 정규화·F 다양성·coverage 가중합이 재현되며, 동결 시점 언어 커버리지 분모는 ln(13)(아랍어 추가 전; 라이브는 ln(14)).
   동결 7,350건 언어 분포: ko 4,183 · en 1,751 · ja 333 · id 193 · th 181 · zh 153 · tl 133 · es 121 · pt 87 · ru 72 · vi 71 · tr 68 · fr 4
-- 라이브 코퍼스(10,020건) 재적합은 K=8, M=5, silhouette=0.046으로 v1 게이트 기각(보고서 시점). 게이트 v2에서는 시드 중앙값 0.102로 통과했고, r73(투어스 영문 근거 86건 한국어 재작성, 순증 0)은 v2.1 '텍스트 품질 수정 라운드' 규칙으로 채택되어 현재 README 해석 계층이다(K=8, M=5 고정, 실루엣 0.092)
+- 라이브 코퍼스(10,020건) 재적합은 K=8, M=5, silhouette=0.046으로 게이트 기각 → 해석 계층에 미반영
   (`lda_v6_diagnostics_live_reference_v7.json`). 그 재적합의 팬덤별 F 비중 5개(현장경제·소비력·결속·브랜드상업·차트확산)와
   factor_diversity·coverage_index·dominant_factor 원본은 `fandom_scores_live_reference_v7.csv` — 99개 팬덤이 현장경제형 우세, 투어스만 소비력형
 

@@ -9,7 +9,6 @@
 | `merge_log_r1.json` ∼ `merge_log_r72.json` (60개) | 리서치 병합 로그. r36∼r59는 `before_total_bullets`/`after_total_bullets` 키, 나머지는 `before_total`/`after_total` 키. r58은 `round_type=roster_swap`(BE'O→빈지노). 마지막 r72가 9,939 → **10,020건**(최종 라이브 코퍼스) |
 | `swap_log_r29.json`, `swap_log_r34.json`, `swap_log_r62.json`, `swap_log_r63.json` | 로스터 교체: 사이먼도미닉→GOT7(r29), 창모→김재중·헤이즈→박서진(r34), 한로로→몬스타엑스(r62), pH-1→투어스(TWS)(r63). r58(BE'O→빈지노)과 합쳐 동결 스냅샷(7,350건)과 라이브 로스터의 3개 차이를 설명 |
 | `round_log_r70.json` | 언어별 도메인 표 갱신 라운드(순증 0, 빈지노 프랑스어 위키 1건 재분류) |
-| `round_log_r73.json` | 텍스트 품질 수정 라운드(순증 0): 투어스(TWS) 영문 근거 86건(90건 중)을 한국어로 재작성. 영문 근거는 한국어 전용 가산 키워드·숫자 패턴에 걸리지 않아 투어스가 합산 100위 아웃라이어였던 수집 언어 편향의 교정. 결과 코퍼스·점수·재적합은 `data/v7_final/r73_tws_ko/`, 게이트 v2.1 채택 근거는 `v7_final_10020/silhouette_gate_policy/SILHOUETTE_GATE_POLICY.md` |
 | `member_pilot_r53_compare.json` ∼ `r55` | 멤버 전수조사 라운드 전후 MCI 비교 |
 | `schema_audit_r74.json` | 최종 코퍼스 스키마 감사: 10,020건, 팬덤 100, LDA 3토큰 미만 제외 2건 |
 
