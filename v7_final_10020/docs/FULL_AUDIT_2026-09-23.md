@@ -24,7 +24,7 @@
 | 게이트·해석 계층 | `gate_policy_v2_v7.py`, `build_live_interpretive_layer_v7.py`, `build_live_layer_figures_v7.py`(PNG 4장), `build_review_sheet_v7.py`(xlsx) | 산출물 동일 |
 | 동결 코퍼스 | `verify_frozen_corpus_candidate.py`(7,326건, 지문 97/100) | 동일 |
 | 타임라인 | `build_silhouette_gate_timeline_v7.py` | 동일 |
-| 검증기 | `verify_v7_final_consistency.py` | 107/107 (r73 채택 뒤 110/110) |
+| 검증기 | `verify_v7_final_consistency.py` | 107/107 |
 
 ## 3. 발견한 문제와 조치
 
@@ -41,15 +41,12 @@
 | README 핵심 수치 ↔ 산출 JSON | 15/15 일치 — 페르소나 62/17/12/9, 상위 15 겹침 12/15, 순위 ρ 0.83, 같은 페르소나 49/97, 4구획 24/17/10/49, 시드 최대 0.192, 부트스트랩 CI 라이브 [0.25, 0.67]·동결 [0.46, 0.77]·차이 0.126, 재현율 추정 0.81/0.57/0.78, 밀도 r 0.43/0.40, 본문 한국어 84.5%, 토픽 대응 Jaccard 0.29/0.33, MCI 같은 시점 r −0.390, 게이트 v2 통과 = 라이브 K=8만 |
 | 낡은 문구(제안이며·채택 전까지·검수는 아직·O/X 판정·본문 미변경) | 저장소 MD에 0건 |
 | 경로 참조 | 바뀐 MD 28개 + 저장소 전체 MD: 실재하지 않는 참조 31건은 전부 글롭·패턴(`*.json`, `{k}`) 또는 원본 데이터 묶음·동봉 패키지의 파일을 '없다/외부'로 설명하는 문맥이었고, 실제 깨진 링크는 0건 |
-| 데이터 정합성 | `verify_v7_final_consistency.py` 107/107(전수조사 시점; r73 채택 뒤 [AF]절 3항목이 더해져 110/110), R 대응 파이썬 238/238, 사전 CSV ↔ 코드 drift 0 |
+| 데이터 정합성 | `verify_v7_final_consistency.py` 107/107, R 대응 파이썬 238/238, 사전 CSV ↔ 코드 drift 0 |
 
 ## 5. 남은 주의점
 
 - 최종 보고서 PDF의 4·5절(동결 해석 계층)과 README 4·5절(라이브 해석 계층)은 게이트 v2 채택으로 의도적으로 다르다(README 8절 명시). `REPORT_DOCX_VERIFICATION.md`의 47/58 대조는 PDF 기준 그대로다.
 - 생성 문서는 앞으로도 스크립트를 고쳐서 바꾼다. 손으로 고친 문구는 다음 재실행 때 사라진다(이번에 확인된 함정).
 - `build_live_layer_figures_v7.py`는 한글 폰트가 필요하다. 전수조사 뒤 저장소에 `fonts/NotoSansCJKkr-*.otf`(서브셋)를 넣어 기본으로 쓰고, `KFONT_PATH`는 대체 경로다.
-
-## 6. 전수조사 이후 변경 (같은 날, r73 채택)
-
-위 4절의 README 핵심 수치 15항목은 r72 라이브 해석 계층 기준이다. 전수조사 뒤 투어스(TWS) 영문 근거 86건을 한국어로 재작성한 r73 라운드가 게이트 v2.1(텍스트 품질 수정 라운드 = 현직 재측정)로 채택되어 README 4·5절이 r73 재적합 값으로 바뀌었다: 페르소나 89/8/2/1, 같은 페르소나 37/97, 4구획 24/17/11/48, 상위 15 겹침 12/15·ρ 0.83은 유지. r72 계층은 `analysis/persona_decision_space/live_interpretive_layer_r72/`에 보관하고, 검증은 `verify_v7_final_consistency.py` [AF]절(110/110)과 `data/v7_rounds/round_log_r73.json`이 맡는다.
+- 투어스(TWS) 영문 근거 86건을 한국어로 재작성한 후보 r73(`data/v7_final/r73_tws_ko/`, 시드 점검 `seed_stability_r73/`)은 게이트 v2 G1 미달로 채택하지 않았다. 한때 README 해석 계층을 r73으로 바꿨다가 저자 결정으로 r72로 되돌렸다(커밋 0f68740 → revert 7ddc0ee).
 - 재적합 4종(시드 전체 실행·동결 재적합·φ 묶음·재구성 토크나이저 재적합)은 이번 조사에서 다시 돌리지 않았다. 저장된 산출물은 앞선 세션의 실행 결과다.

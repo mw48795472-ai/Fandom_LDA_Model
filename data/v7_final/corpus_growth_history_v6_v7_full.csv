@@ -68,4 +68,3 @@ v7_r69,merge,9753,9829,76,63,,,v7_r69_french_reresearch
 v7_r70,reclassify,9829,9829,0,,,,"언어별 도메인 표 갱신, 재분류 1건"
 v7_r71,merge,9829,9939,110,72,,,v7_r71_spanish_country_diversification
 v7_r72,merge,9939,10020,81,15,,,v7 72
-v7_r73,rewrite,10020,10020,0,1,,,"투어스(TWS) 영문 근거 86건 한국어 재작성, 순증 0"
