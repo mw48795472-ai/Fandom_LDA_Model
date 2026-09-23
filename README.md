@@ -260,7 +260,7 @@ python v7_final_10020/analysis/build_notebooks_v7.py                          # 
 python v7_final_10020/analysis/persona_decision_space/build_persona_decision_space_notebook.py
 ```
 
-**저장소에 없는 것**: 최종 참고 재적합을 만든 14개 언어 라우팅 토크나이저(`run_lda_v6_live_reference_v7.py`), 동결 스냅샷의 φ·코사인 거리 행렬(`factor_clustering_structure_v7.json`), 동결 7,350건 코퍼스. 저장소의 `run_lda_v6.py`는 이전 판 토크나이저의 파이프라인이라 10,020건에서 문서 수 9,954건으로 보고서와 다르며 로직 참고용이다. 같은 방법을 최종 코퍼스에 적용한 φ·코사인 거리 산출물은 `v7_final_10020/analysis/persona_decision_space/topic_phi_cosine/`에 있다.
+**저장소에 없는 것**: 최종 참고 재적합을 만든 14개 언어 라우팅 토크나이저(`run_lda_v6_live_reference_v7.py`), 동결 스냅샷의 φ·코사인 거리 행렬(`factor_clustering_structure_v7.json`), 동결 7,350건 코퍼스. 저장소의 `run_lda_v6.py`는 이전 판 토크나이저의 파이프라인이라 10,020건에서 문서 수 9,954건으로 보고서와 다르며 로직 참고용이다. 같은 방법을 최종 코퍼스에 적용한 φ·코사인 거리 산출물과 학습 모델 pickle·단어 사전·manifest는 `v7_final_10020/analysis/persona_decision_space/topic_phi_cosine/`에 있다.
 
 ```
 README.md                                   이 문서 (핵심 요약판)
