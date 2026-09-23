@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """README 5절 그림 3장을 채택된 해석 계층(persona_decision_space/live_interpretive_layer/, 라이브 K=8)으로 그린다.
   fig05_persona_map.png            팬충성도 × 파급효과 평면, 페르소나 4유형 색칠
-  fig06_factor_specific_impact.png BTS·임영웅·리센느 + 합산 상위 17개 팬덤의 F1∼F5 분해(비중 × 점수)
+  fig06_factor_specific_impact.png BTS·임영웅·리센느 + 합산 상위 22개 = 25개 팬덤의 F1∼F5 분해(비중 × 점수)
   fig07b_persona_pca.png           팬덤별 F1∼F5 비중의 PCA 2성분(페르소나 색) + loading 인셋
 글꼴: 저장소 fonts/NotoSansCJKkr-{Regular,Bold}.otf (없으면 KFONT_PATH). 팔레트는 dataviz 검증 통과(색각·대비).
 실행: python v7_final_10020/charts/build_live_layer_figures_v7.py
@@ -45,15 +45,16 @@ ax.set_title("Fan Persona Map — 팬충성도 × 파급효과 평면의 페르�
 ax.legend(loc="lower right", fontsize=9.5, title="페르소나 (상위 2 F 조합)", framealpha=.95); fig.tight_layout(); fig.savefig(OUT / f"fig05_persona_map{SUF}.png"); plt.close(fig)
 
 # fig06
-top = sorted(fs, key=lambda f: -(f["loyalty_score"] + f["spillover_score"]))[:17]; names = ["BTS", "임영웅", "리센느(RESCENE)"] + [f["fandom"] for f in top if f["fandom"] not in ("BTS", "임영웅", "리센느(RESCENE)")]
-byname = {f["fandom"]: f for f in fs}; names = [n for n in names if n in byname][:20]
-fig, axes = plt.subplots(1, 2, figsize=(14, 7.4), dpi=240, sharey=True)
+N_ROWS = 25  # 강조 3팬덤 + 합산 상위 순으로 채워 25개
+HL = ["BTS", "임영웅", "리센느(RESCENE)"]; ranked = [f["fandom"] for f in sorted(fs, key=lambda f: -(f["loyalty_score"] + f["spillover_score"]))]
+byname = {f["fandom"]: f for f in fs}; names = HL + [n for n in ranked if n not in HL][:N_ROWS - len(HL)]
+fig, axes = plt.subplots(1, 2, figsize=(14, 9.6), dpi=240, sharey=True)
 for ax, key, ttl in ((axes[0], "factor_specific_loyalty", "팬충성도 분해 (비중 × 점수)"), (axes[1], "factor_specific_spillover", "파급효과 분해 (비중 × 점수)")):
     ax.set_facecolor(SURF); left = np.zeros(len(names))
     for i, fc in enumerate(FC):
         vals = np.array([byname[n][key].get(fc, 0) for n in names]); ax.barh(range(len(names)), vals, left=left, color=FPAL[i], edgecolor="white", linewidth=1.0, label=FN[fc]); left += vals
     ax.set_yticks(range(len(names))); ax.set_yticklabels(names, fontsize=9.5); ax.invert_yaxis(); ax.set_title(ttl, fontsize=11); ax.grid(axis="x", alpha=.2)
-axes[0].legend(fontsize=8.5, loc="lower right"); fig.suptitle("경로별(F1~F5) 팬충성도·파급효과 분해 — BTS·임영웅·리센느 + 합산 상위 17", fontsize=12, weight="bold"); fig.tight_layout(); fig.savefig(OUT / f"fig06_factor_specific_impact{SUF}.png"); plt.close(fig)
+axes[0].legend(fontsize=8.5, loc="upper right"); fig.suptitle(f"경로별(F1~F5) 팬충성도·파급효과 분해 — BTS·임영웅·리센느 + 합산 상위 {N_ROWS - len(HL)} (총 {len(names)}개 팬덤)", fontsize=12, weight="bold"); fig.tight_layout(); fig.savefig(OUT / f"fig06_factor_specific_impact{SUF}.png"); plt.close(fig)
 
 # fig07b
 sh = np.array([[f["factor_specific_loyalty"][c] / f["loyalty_score"] if f["loyalty_score"] else f["factor_specific_spillover"][c] / f["spillover_score"] for c in FC] for f in fs])
