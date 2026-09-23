@@ -10,7 +10,7 @@
 | 핵심 모델 | **LDA 토픽(K=8) → 메타팩터(M=5) → 파급경로(F1∼F5) → 페르소나(4유형)** 4단계 해석 계층. 라이브 코퍼스 10,020건의 재적합이며, 최종 보고서 PDF의 동결 스냅샷(v7-40, 7,350건, K=10)은 역사 값으로 보관(8절) |
 | 점수 | 근거문장별 EvidenceScore 합산 → min-max 정규화한 **팬충성도·파급효과**, 메타팩터 분포 엔트로피 **팬 요인 다양성**(3D 맵 Z축), 언어·시장·출처·시간·엔티티 가중합 **Coverage Index** |
 | 보조지표 7종 | 광고·상업성 1,302건(13.0%) · 팬덤결속 923건(9.2%) · 미디어·콘텐츠 노출 1,025건(10.2%) · 매체 크로스오버 6,712건(67.0%, 매체 1,298개) · 국내 지역 · 멤버 집중도(MCI) · 세계 언어 — LDA와 무관한 원문 키워드·도메인 매칭 |
-| 인터랙티브 산출물 | [`3D_포지셔닝맵_국내100팬덤.html`](3D_포지셔닝맵_국내100팬덤.html) (+`plotly-bundle.js`) · 단독 실행판 [`3D_포지셔닝맵_국내100팬덤_단독.html`](3D_포지셔닝맵_국내100팬덤_단독.html) (Plotly 내장, 파일 하나로 열림) · [`Persona_결정공간.html`](Persona_결정공간.html) · QR 코드 [`qr_codes/`](qr_codes/) |
+| 인터랙티브 산출물 | [`3D_포지셔닝맵_국내100팬덤.html`](3D_포지셔닝맵_국내100팬덤.html) (+`plotly-bundle.js`) · [`Persona_결정공간.html`](Persona_결정공간.html) · QR 코드 [`qr_codes/`](qr_codes/) |
 
 ---
 
@@ -277,7 +277,6 @@ python v7_final_10020/analysis/persona_decision_space/build_persona_decision_spa
 README.md                                   이 문서 (핵심 요약판)
 (분석보고서)…최종.pdf, (요약보고서)…최종.pdf  제출본
 3D_포지셔닝맵_국내100팬덤.html + plotly-bundle.js / Persona_결정공간.html   인터랙티브 산출물 (같은 폴더에서 열면 동작)
-3D_포지셔닝맵_국내100팬덤_단독.html          위 3D 맵에 plotly-bundle.js를 내장한 단독 실행판 (내용 동일, 1.7MB)
 qr_codes/                                   두 HTML의 QR 코드 + 아티팩트 링크·해시 대조
 assets/readme/                              이 문서의 그림 (제출 보고서 PDF·보고서 docx 원본 그림 + 데이터에서 다시 그린 그림, 가로 최대 2,400px; Q-Q plot은 Statistics/R_통계검증/outputs/plots/ 의 R 산출물을 직접 참조)
 fonts/                                      그림용 한글 글꼴(Noto Sans CJK KR 서브셋, OFL)
