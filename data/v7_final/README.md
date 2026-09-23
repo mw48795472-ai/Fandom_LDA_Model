@@ -3,6 +3,8 @@
 | 파일 | 계층 | 내용 |
 |---|---|---|
 | `fandoms_v3_100.json` | 라이브 10,020건 | 근거문장 원본 코퍼스. 100개 팬덤 × `loyalty`/`spillover` 배열, 원소 `{t: 문장, u: 출처 URL}` |
+| `roster_history_v7.csv` | 로스터 이력 | 팬덤 106행(라이브 100 + 제거 6): 들어온 라운드·나간 라운드·교체 상대·동결/라이브 포함 여부·진입 시 불릿 수 (`v7_final_10020/data_export/build_roster_history_v7.py`, 교체 로그 5개에서 생성). 동결·라이브 표를 이어 볼 때 '해당 없음' 판정의 기준 |
+| `bullet_provenance_v7.csv` | 불릿 시점 태그(소급) | 라이브 10,020건 각 불릿의 추가 라운드 구간: `fandom, bullet_type, idx, text_sha1, added_bin, bin_lower_round, bin_upper_round, bin_source`. 스냅샷 4개(r13 5,099 → r22 5,612 → 동결 근사 7,326 → 라이브 10,020)가 팬덤별 목록의 접두어라는 성질로 역산(`v7_final_10020/data_export/build_bullet_provenance_v7.py`). 구간 ≤r13 4,957 · r14∼r22 493 · r23∼r39 1,781 · r41∼r72 2,524 · 교체 진입 3구간 265. 코퍼스 JSON 자체는 손대지 않음 |
 | `frozen_snapshot_v7_40/` | 동결 근사 복원본 7,326건 | 동결 7,350건 코퍼스의 근사 복원본(`fandoms_v7_40_frozen_reconstructed.json`, 평면 CSV, manifest, 후보 검사기). 라이브 목록 앞부분을 동결 건수만큼 자른 것으로 97개 팬덤은 EvidenceScore 지문까지 동결과 일치, BE'O·pH-1·한로로는 r22 백업 시점(유실 24건). 폴더 README 참고 |
 | `bullets_flat_v7_final.csv` | 라이브 10,020건 | 위 JSON을 `fandom, category, bullet_type, text, url` 평면 CSV로 펼친 것 (`v7_final_10020/data_export/build_bullets_flat_csv.py`) |
 | `language_domain_summary_v7.json` | 라이브 10,020건 | 14개 언어권별 근거 건수·도메인 수·상위 도메인 (보고서 표 2-2). 합 10,020건 |
@@ -35,7 +37,7 @@
 | `fandom_scores_v6.json` | 동결 스냅샷 7,350건 (r22 백업 zip의 동명 파일은 activity 합 5,612) | 위 CSV의 JSON 원본: loyalty_raw/spillover_raw, 불릿 수, factor_share(M=5), coverage_detail(13개 언어 카운트 — 아랍어 추가 전, 언어 엔트로피 분모 ln(13)) |
 | `supplementary_csv/fandom_bullet_share_v6.csv` | v7 r17 (5,454건) | 팬덤별 근거문장 수·비중 (창모·사이먼도미닉·헤이즈 포함 구 로스터) |
 | `supplementary_csv/domestic_regional_pilot_v6_top3.csv` | v7 r24 (5,998건) | 팬덤별 지역 언급·검출 지역 수·다양성·대표지역 top3 요약(중간 라운드 보조 CSV) |
-| `fan_persona_v7.json` | 동결 스냅샷 7,350건 | 페르소나 조합표(10개)·카운트(43/31/17/9)·팬덤별 top2 F·factor_specific_loyalty/spillover(= 비중 × 점수) |
+| `fan_persona_v7.json` | 동결 스냅샷 7,350건 (역사 값; 채택된 라이브 계층은 `v7_final_10020/analysis/persona_decision_space/live_interpretive_layer/live_persona_v7.json`) | 페르소나 조합표(10개)·카운트(43/31/17/9)·팬덤별 top2 F·factor_specific_loyalty/spillover(= 비중 × 점수) |
 | `persona_decision_space_v7.json` | 동결 스냅샷 7,350건 | Persona_결정공간.html 내장 데이터: K=10 토픽명·F코드·덴드로그램 병합 순서·PCA loading/좌표·팬덤별 F1∼F5 비중 (`v7_final_10020/data_export/extract_html_payloads.py`) |
 
 정합성 검증: 저장소 루트의 `verify_v7_final_consistency.py`.

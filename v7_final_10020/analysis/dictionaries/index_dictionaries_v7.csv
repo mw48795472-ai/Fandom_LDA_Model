@@ -1,0 +1,437 @@
+﻿사전,항목,값,출처,비고
+Coverage·시장(MARKET_KEYWORDS),일본,일본,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),일본,도쿄,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),일본,오사카,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),일본,재팬,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),일본,japan,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),일본,tokyo,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),일본,osaka,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),중화권,중국,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),중화권,대만,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),중화권,홍콩,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),중화권,상하이,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),중화권,베이징,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),중화권,china,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),중화권,taiwan,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),중화권,hong kong,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),중화권,beijing,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),중화권,shanghai,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),미국_북미,미국,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),미국_북미,뉴욕,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),미국_북미,북미,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),미국_북미,america,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),미국_북미,usa,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),미국_북미,new york,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),미국_북미,los angeles,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),미국_북미,billboard,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),미국_북미,grammy,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),유럽,유럽,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),유럽,런던,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),유럽,파리,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),유럽,europe,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),유럽,london,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),유럽,paris,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),동남아,동남아,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),동남아,태국,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),동남아,베트남,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),동남아,필리핀,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),동남아,인도네시아,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),동남아,싱가포르,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),동남아,말레이시아,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),동남아,southeast asia,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),동남아,thailand,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),동남아,vietnam,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),동남아,philippines,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),동남아,indonesia,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),동남아,singapore,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),동남아,malaysia,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),글로벌,글로벌,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),글로벌,전세계,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),글로벌,월드투어,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),글로벌,해외,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),글로벌,global,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),글로벌,worldwide,run_lda_v6.py,
+Coverage·시장(MARKET_KEYWORDS),글로벌,world tour,run_lda_v6.py,
+Coverage·엔티티(ENTITY_CATEGORIES),방송사,KBS,run_lda_v6.py,
+Coverage·엔티티(ENTITY_CATEGORIES),방송사,MBC,run_lda_v6.py,
+Coverage·엔티티(ENTITY_CATEGORIES),방송사,SBS,run_lda_v6.py,
+Coverage·엔티티(ENTITY_CATEGORIES),방송사,JTBC,run_lda_v6.py,
+Coverage·엔티티(ENTITY_CATEGORIES),방송사,Mnet,run_lda_v6.py,
+Coverage·엔티티(ENTITY_CATEGORIES),방송사,엠넷,run_lda_v6.py,
+Coverage·엔티티(ENTITY_CATEGORIES),음원차트_국내,멜론,run_lda_v6.py,
+Coverage·엔티티(ENTITY_CATEGORIES),음원차트_국내,지니,run_lda_v6.py,
+Coverage·엔티티(ENTITY_CATEGORIES),음원차트_국내,벅스,run_lda_v6.py,
+Coverage·엔티티(ENTITY_CATEGORIES),음원차트_국내,플로,run_lda_v6.py,
+Coverage·엔티티(ENTITY_CATEGORIES),음원차트_국내,가온,run_lda_v6.py,
+Coverage·엔티티(ENTITY_CATEGORIES),해외차트_시상식,빌보드,run_lda_v6.py,
+Coverage·엔티티(ENTITY_CATEGORIES),해외차트_시상식,Billboard,run_lda_v6.py,
+Coverage·엔티티(ENTITY_CATEGORIES),해외차트_시상식,오리콘,run_lda_v6.py,
+Coverage·엔티티(ENTITY_CATEGORIES),해외차트_시상식,Oricon,run_lda_v6.py,
+Coverage·엔티티(ENTITY_CATEGORIES),해외차트_시상식,AMA,run_lda_v6.py,
+Coverage·엔티티(ENTITY_CATEGORIES),해외차트_시상식,그래미,run_lda_v6.py,
+Coverage·엔티티(ENTITY_CATEGORIES),해외차트_시상식,Grammy,run_lda_v6.py,
+Coverage·엔티티(ENTITY_CATEGORIES),해외차트_시상식,골든디스크,run_lda_v6.py,
+Coverage·엔티티(ENTITY_CATEGORIES),글로벌플랫폼,유튜브,run_lda_v6.py,
+Coverage·엔티티(ENTITY_CATEGORIES),글로벌플랫폼,YouTube,run_lda_v6.py,
+Coverage·엔티티(ENTITY_CATEGORIES),글로벌플랫폼,스포티파이,run_lda_v6.py,
+Coverage·엔티티(ENTITY_CATEGORIES),글로벌플랫폼,Spotify,run_lda_v6.py,
+Coverage·엔티티(ENTITY_CATEGORIES),글로벌플랫폼,넷플릭스,run_lda_v6.py,
+Coverage·엔티티(ENTITY_CATEGORIES),글로벌플랫폼,Netflix,run_lda_v6.py,
+Coverage·엔티티(ENTITY_CATEGORIES),글로벌플랫폼,위버스,run_lda_v6.py,
+Coverage·엔티티(ENTITY_CATEGORIES),글로벌플랫폼,Weverse,run_lda_v6.py,
+Coverage·엔티티(ENTITY_CATEGORIES),글로벌플랫폼,틱톡,run_lda_v6.py,
+Coverage·엔티티(ENTITY_CATEGORIES),글로벌플랫폼,TikTok,run_lda_v6.py,
+Coverage·엔티티(ENTITY_CATEGORIES),글로벌플랫폼,인스타그램,run_lda_v6.py,
+Coverage·엔티티(ENTITY_CATEGORIES),글로벌플랫폼,Instagram,run_lda_v6.py,
+Coverage·엔티티(ENTITY_CATEGORIES),대형공연장,올림픽공원,run_lda_v6.py,
+Coverage·엔티티(ENTITY_CATEGORIES),대형공연장,올림픽홀,run_lda_v6.py,
+Coverage·엔티티(ENTITY_CATEGORIES),대형공연장,KSPO,run_lda_v6.py,
+Coverage·엔티티(ENTITY_CATEGORIES),대형공연장,고척돔,run_lda_v6.py,
+Coverage·엔티티(ENTITY_CATEGORIES),대형공연장,잠실체육관,run_lda_v6.py,
+Coverage·엔티티(ENTITY_CATEGORIES),대형공연장,아레나,run_lda_v6.py,
+Coverage·엔티티(ENTITY_CATEGORIES),대형공연장,코첼라,run_lda_v6.py,
+Coverage·엔티티(ENTITY_CATEGORIES),대형공연장,Coachella,run_lda_v6.py,
+Coverage·엔티티(ENTITY_CATEGORIES),매체_어워드,포브스,run_lda_v6.py,
+Coverage·엔티티(ENTITY_CATEGORIES),매체_어워드,Forbes,run_lda_v6.py,
+Coverage·엔티티(ENTITY_CATEGORIES),매체_어워드,보그,run_lda_v6.py,
+Coverage·엔티티(ENTITY_CATEGORIES),매체_어워드,Vogue,run_lda_v6.py,
+Coverage·엔티티(ENTITY_CATEGORIES),매체_어워드,엘르,run_lda_v6.py,
+Coverage·엔티티(ENTITY_CATEGORIES),매체_어워드,Elle,run_lda_v6.py,
+Coverage·엔티티(ENTITY_CATEGORIES),매체_어워드,서울가요대상,run_lda_v6.py,
+Coverage·언어/출처유형 도메인(EN_GLOBAL_DOMAINS),EN_GLOBAL_DOMAINS,allkpop.com,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(EN_GLOBAL_DOMAINS),EN_GLOBAL_DOMAINS,billboard.com,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(EN_GLOBAL_DOMAINS),EN_GLOBAL_DOMAINS,complex.com,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(EN_GLOBAL_DOMAINS),EN_GLOBAL_DOMAINS,en.wikipedia.org,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(EN_GLOBAL_DOMAINS),EN_GLOBAL_DOMAINS,forbes.com,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(EN_GLOBAL_DOMAINS),EN_GLOBAL_DOMAINS,gizmodo.com,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(EN_GLOBAL_DOMAINS),EN_GLOBAL_DOMAINS,gulfnews.com,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(EN_GLOBAL_DOMAINS),EN_GLOBAL_DOMAINS,hollywoodreporter.com,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(EN_GLOBAL_DOMAINS),EN_GLOBAL_DOMAINS,koreaherald.com,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(EN_GLOBAL_DOMAINS),EN_GLOBAL_DOMAINS,koreatimes.co.kr,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(EN_GLOBAL_DOMAINS),EN_GLOBAL_DOMAINS,koreatimes.com,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(EN_GLOBAL_DOMAINS),EN_GLOBAL_DOMAINS,malaymail.com,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(EN_GLOBAL_DOMAINS),EN_GLOBAL_DOMAINS,news24online.com,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(EN_GLOBAL_DOMAINS),EN_GLOBAL_DOMAINS,nextshark.com,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(EN_GLOBAL_DOMAINS),EN_GLOBAL_DOMAINS,nme.com,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(EN_GLOBAL_DOMAINS),EN_GLOBAL_DOMAINS,pressreader.com,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(EN_GLOBAL_DOMAINS),EN_GLOBAL_DOMAINS,soompi.com,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(EN_GLOBAL_DOMAINS),EN_GLOBAL_DOMAINS,thejakartapost.com,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(EN_GLOBAL_DOMAINS),EN_GLOBAL_DOMAINS,variety.com,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(EN_GLOBAL_DOMAINS),EN_GLOBAL_DOMAINS,vietnam.vn,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(JP_DOMAINS),JP_DOMAINS,asahi.com,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(JP_DOMAINS),JP_DOMAINS,barks.jp,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(JP_DOMAINS),JP_DOMAINS,daily.co.jp,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(JP_DOMAINS),JP_DOMAINS,hochi.news,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(JP_DOMAINS),JP_DOMAINS,mainichi.jp,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(JP_DOMAINS),JP_DOMAINS,natalie.mu,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(JP_DOMAINS),JP_DOMAINS,nikkansports.com,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(JP_DOMAINS),JP_DOMAINS,nikkei.com,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(JP_DOMAINS),JP_DOMAINS,oricon.co.jp,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(JP_DOMAINS),JP_DOMAINS,sponichi.co.jp,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(JP_DOMAINS),JP_DOMAINS,ygex.jp,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(JP_DOMAINS),JP_DOMAINS,yomiuri.co.jp,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(CN_DOMAINS),CN_DOMAINS,163.com,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(CN_DOMAINS),CN_DOMAINS,baidu.com,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(CN_DOMAINS),CN_DOMAINS,douban.com,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(CN_DOMAINS),CN_DOMAINS,ifeng.com,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(CN_DOMAINS),CN_DOMAINS,people.com.cn,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(CN_DOMAINS),CN_DOMAINS,qq.com,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(CN_DOMAINS),CN_DOMAINS,sina.com.cn,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(CN_DOMAINS),CN_DOMAINS,weibo.com,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(CN_DOMAINS),CN_DOMAINS,xinhuanet.com,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(CN_DOMAINS),CN_DOMAINS,zhihu.com,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(ES_DOMAINS),ES_DOMAINS,abc.es,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(ES_DOMAINS),ES_DOMAINS,clarin.com,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(ES_DOMAINS),ES_DOMAINS,elmundo.es,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(ES_DOMAINS),ES_DOMAINS,elpais.com,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(ES_DOMAINS),ES_DOMAINS,infobae.com,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(ES_DOMAINS),ES_DOMAINS,marca.com,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(ES_DOMAINS),ES_DOMAINS,telemundo.com,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(ES_DOMAINS),ES_DOMAINS,univision.com,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(FR_DOMAINS),FR_DOMAINS,francetvinfo.fr,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(FR_DOMAINS),FR_DOMAINS,lefigaro.fr,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(FR_DOMAINS),FR_DOMAINS,lemonde.fr,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(FR_DOMAINS),FR_DOMAINS,leparisien.fr,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(FR_DOMAINS),FR_DOMAINS,liberation.fr,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(COMMUNITY_SOCIAL_DOMAINS),COMMUNITY_SOCIAL_DOMAINS,facebook.com,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(COMMUNITY_SOCIAL_DOMAINS),COMMUNITY_SOCIAL_DOMAINS,instagram.com,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(COMMUNITY_SOCIAL_DOMAINS),COMMUNITY_SOCIAL_DOMAINS,reddit.com,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(COMMUNITY_SOCIAL_DOMAINS),COMMUNITY_SOCIAL_DOMAINS,threads.com,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(COMMUNITY_SOCIAL_DOMAINS),COMMUNITY_SOCIAL_DOMAINS,twitter.com,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(COMMUNITY_SOCIAL_DOMAINS),COMMUNITY_SOCIAL_DOMAINS,x.com,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(WIKI_DOMAINS),WIKI_DOMAINS,en.wikipedia.org,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(WIKI_DOMAINS),WIKI_DOMAINS,ko.wikipedia.org,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(WIKI_DOMAINS),WIKI_DOMAINS,namu.wiki,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+Coverage·언어/출처유형 도메인(WIKI_DOMAINS),WIKI_DOMAINS,wikipedia.org,run_lda_v6.py,구 판(6개 언어). 최종 14개 언어 도메인 허용목록은 원본 소스 유실
+멤버 집중도(MEMBER_ALIASES),BTS/RM,RM,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),BTS/RM,김남준,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),BTS/진,진,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),BTS/진,Jin,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),BTS/진,석진,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),BTS/슈가,슈가,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),BTS/슈가,SUGA,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),BTS/슈가,민윤기,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),BTS/제이홉,제이홉,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),BTS/제이홉,j-hope,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),BTS/제이홉,정호석,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),BTS/지민,지민,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),BTS/지민,Jimin,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),BTS/지민,박지민,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),BTS/뷔,뷔,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),BTS/뷔,V ,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),BTS/뷔,김태형,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),BTS/정국,정국,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),BTS/정국,Jungkook,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),BTS/정국,전정국,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),빅뱅/지드래곤,지드래곤,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),빅뱅/지드래곤,G-DRAGON,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),빅뱅/지드래곤,GD,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),빅뱅/지드래곤,권지용,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),빅뱅/태양,태양,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),빅뱅/태양,TAEYANG,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),빅뱅/태양,동영배,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),빅뱅/대성,대성,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),빅뱅/대성,DAESUNG,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),빅뱅/대성,강대성,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),빅뱅/탑,T.O.P,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),빅뱅/탑,최승현,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),BLACKPINK/지수,지수,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),BLACKPINK/지수,JISOO,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),BLACKPINK/제니,제니,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),BLACKPINK/제니,JENNIE,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),BLACKPINK/로제,로제,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),BLACKPINK/로제,ROSÉ,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),BLACKPINK/로제,ROSE,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),BLACKPINK/리사,리사,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),BLACKPINK/리사,LISA,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),EXO/디오,디오,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),EXO/디오,D.O.,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),EXO/디오,도경수,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),EXO/백현,백현,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),EXO/백현,Baekhyun,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),EXO/카이,카이,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),EXO/카이,Kai,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),EXO/카이,김종인,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),EXO/수호,수호,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),EXO/수호,Suho,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),EXO/찬열,찬열,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),EXO/찬열,Chanyeol,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),EXO/세훈,세훈,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),EXO/세훈,Sehun,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),EXO/시우민,시우민,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),EXO/시우민,Xiumin,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),EXO/첸,첸,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),EXO/첸,Chen,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),EXO/레이,레이,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),EXO/레이,Lay,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),슈퍼주니어/규현,규현,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),슈퍼주니어/규현,Kyuhyun,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),슈퍼주니어/희철,희철,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),슈퍼주니어/희철,Heechul,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),슈퍼주니어/이특,이특,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),슈퍼주니어/이특,Leeteuk,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),슈퍼주니어/신동,신동,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),슈퍼주니어/신동,Shindong,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),슈퍼주니어/은혁,은혁,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),슈퍼주니어/은혁,Eunhyuk,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),슈퍼주니어/동해,동해,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),슈퍼주니어/동해,Donghae,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),슈퍼주니어/시원,시원,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),슈퍼주니어/시원,Siwon,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),슈퍼주니어/예성,예성,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),슈퍼주니어/예성,Yesung,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),샤이니/태민,태민,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),샤이니/태민,TAEMIN,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),샤이니/키,키 ,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),샤이니/키,KEY,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),샤이니/민호,민호,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),샤이니/민호,MINHO,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),샤이니/온유,온유,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),샤이니/온유,ONEW,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),소녀시대/태연,태연,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),소녀시대/태연,TAEYEON,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),소녀시대/윤아,윤아,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),소녀시대/윤아,YOONA,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),소녀시대/수영,수영,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),소녀시대/수영,SOOYOUNG,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),소녀시대/유리,유리,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),소녀시대/유리,YURI,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),소녀시대/서현,서현,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),소녀시대/서현,SEOHYUN,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),소녀시대/티파니,티파니,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),소녀시대/티파니,TIFFANY,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),소녀시대/효연,효연,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),소녀시대/효연,HYOYEON,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),소녀시대/써니,써니,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),소녀시대/써니,Sunny,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),소녀시대/제시카,제시카,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),소녀시대/제시카,Jessica,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),(여자)아이들/전소연,전소연,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),(여자)아이들/전소연,소연,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),(여자)아이들/미연,미연,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),(여자)아이들/민니,민니,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),(여자)아이들/우기,우기,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),(여자)아이들/슈화,슈화,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),마마무/화사,화사,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),마마무/솔라,솔라,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),마마무/문별,문별,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),마마무/휘인,휘인,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),IVE/장원영,장원영,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),IVE/장원영,원영,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),IVE/안유진,안유진,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),IVE/안유진,유진,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),IVE/레이,아이브 레이,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),IVE/레이,Rei,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),IVE/리즈,리즈,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),IVE/가을,가을,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+멤버 집중도(MEMBER_ALIASES),IVE/이서,이서,run_lda_v6.py,파일럿 10그룹 판. 최종 45그룹 별칭은 member_mention_index_v7.json 에 그룹별로 있음
+국내 지역(REGION_KEYWORDS),서울,서울,analysis/build_notebooks_v7.py,
+국내 지역(REGION_KEYWORDS),부산,부산,analysis/build_notebooks_v7.py,
+국내 지역(REGION_KEYWORDS),대구,대구,analysis/build_notebooks_v7.py,
+국내 지역(REGION_KEYWORDS),인천,인천,analysis/build_notebooks_v7.py,
+국내 지역(REGION_KEYWORDS),광주,광주,analysis/build_notebooks_v7.py,
+국내 지역(REGION_KEYWORDS),대전,대전,analysis/build_notebooks_v7.py,
+국내 지역(REGION_KEYWORDS),울산,울산,analysis/build_notebooks_v7.py,
+국내 지역(REGION_KEYWORDS),세종,세종시,analysis/build_notebooks_v7.py,
+국내 지역(REGION_KEYWORDS),세종,세종특별자치시,analysis/build_notebooks_v7.py,
+국내 지역(REGION_KEYWORDS),경기,경기도,analysis/build_notebooks_v7.py,
+국내 지역(REGION_KEYWORDS),경기,수원,analysis/build_notebooks_v7.py,
+국내 지역(REGION_KEYWORDS),경기,성남,analysis/build_notebooks_v7.py,
+국내 지역(REGION_KEYWORDS),경기,부천,analysis/build_notebooks_v7.py,
+국내 지역(REGION_KEYWORDS),경기,안산,analysis/build_notebooks_v7.py,
+국내 지역(REGION_KEYWORDS),경기,화성,analysis/build_notebooks_v7.py,
+국내 지역(REGION_KEYWORDS),경기,의정부,analysis/build_notebooks_v7.py,
+국내 지역(REGION_KEYWORDS),경기,남양주,analysis/build_notebooks_v7.py,
+국내 지역(REGION_KEYWORDS),강원,강원,analysis/build_notebooks_v7.py,
+국내 지역(REGION_KEYWORDS),강원,춘천,analysis/build_notebooks_v7.py,
+국내 지역(REGION_KEYWORDS),강원,강릉,analysis/build_notebooks_v7.py,
+국내 지역(REGION_KEYWORDS),강원,원주,analysis/build_notebooks_v7.py,
+국내 지역(REGION_KEYWORDS),강원,속초,analysis/build_notebooks_v7.py,
+국내 지역(REGION_KEYWORDS),충북,충북,analysis/build_notebooks_v7.py,
+국내 지역(REGION_KEYWORDS),충북,청주,analysis/build_notebooks_v7.py,
+국내 지역(REGION_KEYWORDS),충남,충남,analysis/build_notebooks_v7.py,
+국내 지역(REGION_KEYWORDS),충남,천안,analysis/build_notebooks_v7.py,
+국내 지역(REGION_KEYWORDS),충남,아산,analysis/build_notebooks_v7.py,
+국내 지역(REGION_KEYWORDS),충남,보령,analysis/build_notebooks_v7.py,
+국내 지역(REGION_KEYWORDS),전북,전북,analysis/build_notebooks_v7.py,
+국내 지역(REGION_KEYWORDS),전북,전주,analysis/build_notebooks_v7.py,
+국내 지역(REGION_KEYWORDS),전남,전남,analysis/build_notebooks_v7.py,
+국내 지역(REGION_KEYWORDS),전남,목포,analysis/build_notebooks_v7.py,
+국내 지역(REGION_KEYWORDS),전남,순천,analysis/build_notebooks_v7.py,
+국내 지역(REGION_KEYWORDS),전남,진도,analysis/build_notebooks_v7.py,
+국내 지역(REGION_KEYWORDS),전남,전라남도,analysis/build_notebooks_v7.py,
+국내 지역(REGION_KEYWORDS),경북,경북,analysis/build_notebooks_v7.py,
+국내 지역(REGION_KEYWORDS),경북,포항,analysis/build_notebooks_v7.py,
+국내 지역(REGION_KEYWORDS),경북,경주,analysis/build_notebooks_v7.py,
+국내 지역(REGION_KEYWORDS),경북,김천,analysis/build_notebooks_v7.py,
+국내 지역(REGION_KEYWORDS),경북,구미,analysis/build_notebooks_v7.py,
+국내 지역(REGION_KEYWORDS),경북,울릉,analysis/build_notebooks_v7.py,
+국내 지역(REGION_KEYWORDS),경남,경남,analysis/build_notebooks_v7.py,
+국내 지역(REGION_KEYWORDS),경남,창원,analysis/build_notebooks_v7.py,
+국내 지역(REGION_KEYWORDS),경남,진주,analysis/build_notebooks_v7.py,
+국내 지역(REGION_KEYWORDS),경남,김해,analysis/build_notebooks_v7.py,
+국내 지역(REGION_KEYWORDS),경남,거제,analysis/build_notebooks_v7.py,
+국내 지역(REGION_KEYWORDS),경남,남해,analysis/build_notebooks_v7.py,
+국내 지역(REGION_KEYWORDS),제주,제주,analysis/build_notebooks_v7.py,
+광고·상업성 부정 가드(NEGATION),협찬 부정형,협찬 없이,analysis/build_notebooks_v7.py,
+광고·상업성 부정 가드(NEGATION),협찬 부정형,협찬없이,analysis/build_notebooks_v7.py,
+광고·상업성 부정 가드(NEGATION),협찬 부정형,협찬을 받지,analysis/build_notebooks_v7.py,
+광고·상업성 부정 가드(NEGATION),협찬 부정형,협찬 없는,analysis/build_notebooks_v7.py,
+광고·상업성 부정 가드(NEGATION),협찬 부정형,협찬이 아닌,analysis/build_notebooks_v7.py,
+광고·상업성 부정 가드(NEGATION),협찬 부정형,무협찬,analysis/build_notebooks_v7.py,
+광고·상업성 부정 가드(NEGATION),협찬 부정형,협찬 아닌,analysis/build_notebooks_v7.py,
+세계 언어(ALL_LANGS),ko,한국어,analysis/build_notebooks_v7.py,
+세계 언어(ALL_LANGS),en,영어,analysis/build_notebooks_v7.py,
+세계 언어(ALL_LANGS),ja,일본어,analysis/build_notebooks_v7.py,
+세계 언어(ALL_LANGS),zh,중국어,analysis/build_notebooks_v7.py,
+세계 언어(ALL_LANGS),es,스페인어,analysis/build_notebooks_v7.py,
+세계 언어(ALL_LANGS),fr,프랑스어,analysis/build_notebooks_v7.py,
+세계 언어(ALL_LANGS),th,태국어,analysis/build_notebooks_v7.py,
+세계 언어(ALL_LANGS),id,인도네시아어,analysis/build_notebooks_v7.py,
+세계 언어(ALL_LANGS),vi,베트남어,analysis/build_notebooks_v7.py,
+세계 언어(ALL_LANGS),ru,러시아어,analysis/build_notebooks_v7.py,
+세계 언어(ALL_LANGS),tl,필리핀어,analysis/build_notebooks_v7.py,
+세계 언어(ALL_LANGS),pt,포르투갈어,analysis/build_notebooks_v7.py,
+세계 언어(ALL_LANGS),tr,튀르키예어,analysis/build_notebooks_v7.py,
+세계 언어(ALL_LANGS),ar,아랍어,analysis/build_notebooks_v7.py,
+광고·상업성 신호(AD_SIGNAL_KEYWORDS),광고 신호,앰버서더,data/v7_final/ad_commercial_index_v7.json,
+광고·상업성 신호(AD_SIGNAL_KEYWORDS),광고 신호,앰배서더,data/v7_final/ad_commercial_index_v7.json,
+광고·상업성 신호(AD_SIGNAL_KEYWORDS),광고 신호,홍보대사,data/v7_final/ad_commercial_index_v7.json,
+광고·상업성 신호(AD_SIGNAL_KEYWORDS),광고 신호,광고모델,data/v7_final/ad_commercial_index_v7.json,
+광고·상업성 신호(AD_SIGNAL_KEYWORDS),광고 신호,전속모델,data/v7_final/ad_commercial_index_v7.json,
+광고·상업성 신호(AD_SIGNAL_KEYWORDS),광고 신호,브랜드모델,data/v7_final/ad_commercial_index_v7.json,
+광고·상업성 신호(AD_SIGNAL_KEYWORDS),광고 신호,공식모델,data/v7_final/ad_commercial_index_v7.json,
+광고·상업성 신호(AD_SIGNAL_KEYWORDS),광고 신호,모델로 발탁,data/v7_final/ad_commercial_index_v7.json,
+광고·상업성 신호(AD_SIGNAL_KEYWORDS),광고 신호,새 얼굴,data/v7_final/ad_commercial_index_v7.json,
+광고·상업성 신호(AD_SIGNAL_KEYWORDS),광고 신호,뮤즈,data/v7_final/ad_commercial_index_v7.json,
+광고·상업성 신호(AD_SIGNAL_KEYWORDS),광고 신호,협찬,data/v7_final/ad_commercial_index_v7.json,
+광고·상업성 신호(AD_SIGNAL_KEYWORDS),광고 신호,파트너십,data/v7_final/ad_commercial_index_v7.json,
+광고·상업성 신호(AD_SIGNAL_KEYWORDS),광고 신호,브랜드 파트너,data/v7_final/ad_commercial_index_v7.json,
+광고·상업성 신호(AD_SIGNAL_KEYWORDS),광고 신호,공식 파트너,data/v7_final/ad_commercial_index_v7.json,
+광고·상업성 신호(AD_SIGNAL_KEYWORDS),광고 신호,캠페인,data/v7_final/ad_commercial_index_v7.json,
+광고·상업성 신호(AD_SIGNAL_KEYWORDS),광고 신호,광고,data/v7_final/ad_commercial_index_v7.json,
+광고·상업성 신호(AD_SIGNAL_KEYWORDS),광고 신호,CF ,data/v7_final/ad_commercial_index_v7.json,
+광고·상업성 신호(AD_SIGNAL_KEYWORDS),광고 신호,cf ,data/v7_final/ad_commercial_index_v7.json,
+광고·상업성 신호(AD_SIGNAL_KEYWORDS),광고 신호,화보 촬영,data/v7_final/ad_commercial_index_v7.json,
+광고·상업성 신호(AD_SIGNAL_KEYWORDS),광고 신호,위촬영,data/v7_final/ad_commercial_index_v7.json,
+광고·상업성 신호(AD_SIGNAL_KEYWORDS),광고 신호,홍보영상,data/v7_final/ad_commercial_index_v7.json,
+광고·상업성 신호(AD_SIGNAL_KEYWORDS),광고 신호,PR모델,data/v7_final/ad_commercial_index_v7.json,
+광고·상업성 신호(AD_SIGNAL_KEYWORDS),광고 신호,얼굴로 발탁,data/v7_final/ad_commercial_index_v7.json,
+광고·상업성 신호(AD_SIGNAL_KEYWORDS),광고 신호,공식 후원,data/v7_final/ad_commercial_index_v7.json,
+광고·상업성 신호(AD_SIGNAL_KEYWORDS),광고 신호,후원사,data/v7_final/ad_commercial_index_v7.json,
+광고·상업성 신호(AD_SIGNAL_KEYWORDS),광고 신호,스폰서,data/v7_final/ad_commercial_index_v7.json,
+광고·상업성 신호(AD_SIGNAL_KEYWORDS),광고 신호,브랜드 모델,data/v7_final/ad_commercial_index_v7.json,
+광고·상업성 신호(AD_SIGNAL_KEYWORDS),광고 신호,전속 모델,data/v7_final/ad_commercial_index_v7.json,
+광고·상업성 신호(AD_SIGNAL_KEYWORDS),광고 신호,홍보 모델,data/v7_final/ad_commercial_index_v7.json,
+광고·상업성 신호(AD_SIGNAL_KEYWORDS),광고 신호,모델로 기용,data/v7_final/ad_commercial_index_v7.json,
+광고·상업성 신호(AD_SIGNAL_KEYWORDS),광고 신호,모델 계약,data/v7_final/ad_commercial_index_v7.json,
+광고·상업성 업종 목록(INDUSTRIES),업종,건강/의료,data/v7_final/ad_commercial_index_v7.json,업종별 브랜드·키워드 사전(INDUSTRY_KEYWORDS)은 저장소에 없음
+광고·상업성 업종 목록(INDUSTRIES),업종,식음료,data/v7_final/ad_commercial_index_v7.json,업종별 브랜드·키워드 사전(INDUSTRY_KEYWORDS)은 저장소에 없음
+광고·상업성 업종 목록(INDUSTRIES),업종,가정/생활,data/v7_final/ad_commercial_index_v7.json,업종별 브랜드·키워드 사전(INDUSTRY_KEYWORDS)은 저장소에 없음
+광고·상업성 업종 목록(INDUSTRIES),업종,금융,data/v7_final/ad_commercial_index_v7.json,업종별 브랜드·키워드 사전(INDUSTRY_KEYWORDS)은 저장소에 없음
+광고·상업성 업종 목록(INDUSTRIES),업종,자동차,data/v7_final/ad_commercial_index_v7.json,업종별 브랜드·키워드 사전(INDUSTRY_KEYWORDS)은 저장소에 없음
+광고·상업성 업종 목록(INDUSTRIES),업종,미용,data/v7_final/ad_commercial_index_v7.json,업종별 브랜드·키워드 사전(INDUSTRY_KEYWORDS)은 저장소에 없음
+광고·상업성 업종 목록(INDUSTRIES),업종,스포츠/레저,data/v7_final/ad_commercial_index_v7.json,업종별 브랜드·키워드 사전(INDUSTRY_KEYWORDS)은 저장소에 없음
+광고·상업성 업종 목록(INDUSTRIES),업종,정보/통신,data/v7_final/ad_commercial_index_v7.json,업종별 브랜드·키워드 사전(INDUSTRY_KEYWORDS)은 저장소에 없음
+광고·상업성 업종 목록(INDUSTRIES),업종,여행,data/v7_final/ad_commercial_index_v7.json,업종별 브랜드·키워드 사전(INDUSTRY_KEYWORDS)은 저장소에 없음
+광고·상업성 업종 목록(INDUSTRIES),업종,비즈니스/산업,data/v7_final/ad_commercial_index_v7.json,업종별 브랜드·키워드 사전(INDUSTRY_KEYWORDS)은 저장소에 없음
+광고·상업성 업종 목록(INDUSTRIES),업종,쇼핑,data/v7_final/ad_commercial_index_v7.json,업종별 브랜드·키워드 사전(INDUSTRY_KEYWORDS)은 저장소에 없음
+광고·상업성 업종 목록(INDUSTRIES),업종,엔터테인먼트,data/v7_final/ad_commercial_index_v7.json,업종별 브랜드·키워드 사전(INDUSTRY_KEYWORDS)은 저장소에 없음
+광고·상업성 업종 목록(INDUSTRIES),업종,복지/행정,data/v7_final/ad_commercial_index_v7.json,업종별 브랜드·키워드 사전(INDUSTRY_KEYWORDS)은 저장소에 없음
+광고·상업성 업종 목록(INDUSTRIES),업종,부동산,data/v7_final/ad_commercial_index_v7.json,업종별 브랜드·키워드 사전(INDUSTRY_KEYWORDS)은 저장소에 없음
+광고·상업성 업종 목록(INDUSTRIES),업종,교육,data/v7_final/ad_commercial_index_v7.json,업종별 브랜드·키워드 사전(INDUSTRY_KEYWORDS)은 저장소에 없음
+광고·상업성 업종 목록(INDUSTRIES),업종,게임,data/v7_final/ad_commercial_index_v7.json,업종별 브랜드·키워드 사전(INDUSTRY_KEYWORDS)은 저장소에 없음
+광고·상업성 업종 목록(INDUSTRIES),업종,패션/의류,data/v7_final/ad_commercial_index_v7.json,업종별 브랜드·키워드 사전(INDUSTRY_KEYWORDS)은 저장소에 없음
+광고·상업성 업종 목록(INDUSTRIES),업종,뉴스,data/v7_final/ad_commercial_index_v7.json,업종별 브랜드·키워드 사전(INDUSTRY_KEYWORDS)은 저장소에 없음
+광고·상업성 업종 목록(INDUSTRIES),업종,도서/참고자료,data/v7_final/ad_commercial_index_v7.json,업종별 브랜드·키워드 사전(INDUSTRY_KEYWORDS)은 저장소에 없음
+광고·상업성 업종 목록(INDUSTRIES),업종,기타,data/v7_final/ad_commercial_index_v7.json,업종별 브랜드·키워드 사전(INDUSTRY_KEYWORDS)은 저장소에 없음
+"광고·상업성 업종 키워드(INDUSTRY_KEYWORDS, r65 추가분만)",미용,LUNA,data/v7_rounds/merge_log_r65.json,부분 — 전체 사전 아님
+"광고·상업성 업종 키워드(INDUSTRY_KEYWORDS, r65 추가분만)",미용,리즈케이,data/v7_rounds/merge_log_r65.json,부분 — 전체 사전 아님
+"광고·상업성 업종 키워드(INDUSTRY_KEYWORDS, r65 추가분만)",미용,Lizé Kay,data/v7_rounds/merge_log_r65.json,부분 — 전체 사전 아님
+"광고·상업성 업종 키워드(INDUSTRY_KEYWORDS, r65 추가분만)",미용,달바,data/v7_rounds/merge_log_r65.json,부분 — 전체 사전 아님
+"광고·상업성 업종 키워드(INDUSTRY_KEYWORDS, r65 추가분만)",미용,비비랩(건강/의료 중복 등록도 병행),data/v7_rounds/merge_log_r65.json,부분 — 전체 사전 아님
+"광고·상업성 업종 키워드(INDUSTRY_KEYWORDS, r65 추가분만)",식음료,Hachu,data/v7_rounds/merge_log_r65.json,부분 — 전체 사전 아님
+"광고·상업성 업종 키워드(INDUSTRY_KEYWORDS, r65 추가분만)",패션/의류,RNDM SEASON,data/v7_rounds/merge_log_r65.json,부분 — 전체 사전 아님
+"광고·상업성 업종 키워드(INDUSTRY_KEYWORDS, r65 추가분만)",복지/행정,투게더밴드,data/v7_rounds/merge_log_r65.json,부분 — 전체 사전 아님
+"광고·상업성 업종 키워드(INDUSTRY_KEYWORDS, r65 추가분만)",복지/행정,TOGETHERBAND,data/v7_rounds/merge_log_r65.json,부분 — 전체 사전 아님
+"광고·상업성 업종 키워드(INDUSTRY_KEYWORDS, r65 추가분만)",가정/생활,휴롬,data/v7_rounds/merge_log_r65.json,부분 — 전체 사전 아님
+"광고·상업성 업종 키워드(INDUSTRY_KEYWORDS, r65 추가분만)",가정/생활,일룸,data/v7_rounds/merge_log_r65.json,부분 — 전체 사전 아님
+"광고·상업성 업종 키워드(INDUSTRY_KEYWORDS, r65 추가분만)",가정/생활,슬로우베드,data/v7_rounds/merge_log_r65.json,부분 — 전체 사전 아님
+"광고·상업성 업종 키워드(INDUSTRY_KEYWORDS, r65 추가분만)",건강/의료,비비랩,data/v7_rounds/merge_log_r65.json,부분 — 전체 사전 아님
+팬덤 결속 유형(COHESION categories),유형,A_공식팬클럽·회원제,data/v7_final/fandom_cohesion_index_v7.json,유형별 키워드 목록은 저장소에 없음
+팬덤 결속 유형(COHESION categories),유형,B_팬카페·온라인커뮤니티,data/v7_final/fandom_cohesion_index_v7.json,유형별 키워드 목록은 저장소에 없음
+팬덤 결속 유형(COHESION categories),유형,C_팬덤정체성·문화,data/v7_final/fandom_cohesion_index_v7.json,유형별 키워드 목록은 저장소에 없음
+팬덤 결속 유형(COHESION categories),유형,E_오프라인결집·이벤트,data/v7_final/fandom_cohesion_index_v7.json,유형별 키워드 목록은 저장소에 없음
+팬덤 결속 유형(COHESION categories),유형,D_기부·후원캠페인(팬덤주도),data/v7_final/fandom_cohesion_index_v7.json,유형별 키워드 목록은 저장소에 없음
+팬덤 결속 D 게이트 공존어,D_기부·후원,팬클럽,fandom_cohesion_index_v7.json methodology,
+팬덤 결속 D 게이트 공존어,D_기부·후원,팬카페,fandom_cohesion_index_v7.json methodology,
+팬덤 결속 D 게이트 공존어,D_기부·후원,팬덤,fandom_cohesion_index_v7.json methodology,
+팬덤 결속 D 게이트 공존어,D_기부·후원,팬들,fandom_cohesion_index_v7.json methodology,
+팬덤 결속 D 게이트 공존어,D_기부·후원,함께,fandom_cohesion_index_v7.json methodology,
+팬덤 결속 D 게이트 공존어,D_기부·후원,자발적,fandom_cohesion_index_v7.json methodology,
+팬덤 결속 D 게이트 공존어,D_기부·후원,정회원,fandom_cohesion_index_v7.json methodology,
+팬덤 결속 D 게이트 공존어,D_기부·후원,회원,fandom_cohesion_index_v7.json methodology,
+미디어·콘텐츠 노출 서브태그(subtags),서브태그,예능,data/v7_final/media_exposure_v7.json,서브태그별 확장 키워드는 저장소에 없음(서브태그명 문자열 매칭)
+미디어·콘텐츠 노출 서브태그(subtags),서브태그,유튜브,data/v7_final/media_exposure_v7.json,서브태그별 확장 키워드는 저장소에 없음(서브태그명 문자열 매칭)
+미디어·콘텐츠 노출 서브태그(subtags),서브태그,영화,data/v7_final/media_exposure_v7.json,서브태그별 확장 키워드는 저장소에 없음(서브태그명 문자열 매칭)
+미디어·콘텐츠 노출 서브태그(subtags),서브태그,드라마,data/v7_final/media_exposure_v7.json,서브태그별 확장 키워드는 저장소에 없음(서브태그명 문자열 매칭)

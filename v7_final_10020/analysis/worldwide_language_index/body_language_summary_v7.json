@@ -1,0 +1,195 @@
+{
+ "n_bullets": 10020,
+ "agreement_rate": 0.4924,
+ "per_language": {
+  "ko": {
+   "stored_language_counts": 5551,
+   "domain_reconstructed": 4289,
+   "body": 8463,
+   "domain_bullets_whose_body_agrees": 4007,
+   "mismatch_rate_given_domain": 0.0657,
+   "body_lang_of_domain_bullets": {
+    "ko": 4007,
+    "en": 280,
+    "es": 1,
+    "pt": 1
+   }
+  },
+  "en": {
+   "stored_language_counts": 2195,
+   "domain_reconstructed": 3849,
+   "body": 1333,
+   "domain_bullets_whose_body_agrees": 748,
+   "mismatch_rate_given_domain": 0.8057,
+   "body_lang_of_domain_bullets": {
+    "ko": 3083,
+    "en": 748,
+    "vi": 5,
+    "id": 5
+   }
+  },
+  "ja": {
+   "stored_language_counts": 520,
+   "domain_reconstructed": 453,
+   "body": 37,
+   "domain_bullets_whose_body_agrees": 34,
+   "mismatch_rate_given_domain": 0.9249,
+   "body_lang_of_domain_bullets": {
+    "ko": 287,
+    "en": 131,
+    "ja": 34,
+    "pt": 1
+   }
+  },
+  "zh": {
+   "stored_language_counts": 458,
+   "domain_reconstructed": 390,
+   "body": 25,
+   "domain_bullets_whose_body_agrees": 24,
+   "mismatch_rate_given_domain": 0.9385,
+   "body_lang_of_domain_bullets": {
+    "ko": 302,
+    "en": 61,
+    "zh": 24,
+    "pt": 2
+   }
+  },
+  "es": {
+   "stored_language_counts": 250,
+   "domain_reconstructed": 180,
+   "body": 13,
+   "domain_bullets_whose_body_agrees": 10,
+   "mismatch_rate_given_domain": 0.9444,
+   "body_lang_of_domain_bullets": {
+    "ko": 96,
+    "en": 58,
+    "vi": 16,
+    "es": 10
+   }
+  },
+  "fr": {
+   "stored_language_counts": 101,
+   "domain_reconstructed": 56,
+   "body": 2,
+   "domain_bullets_whose_body_agrees": 0,
+   "mismatch_rate_given_domain": 1.0,
+   "body_lang_of_domain_bullets": {
+    "ko": 55,
+    "en": 1
+   }
+  },
+  "th": {
+   "stored_language_counts": 209,
+   "domain_reconstructed": 187,
+   "body": 26,
+   "domain_bullets_whose_body_agrees": 26,
+   "mismatch_rate_given_domain": 0.861,
+   "body_lang_of_domain_bullets": {
+    "ko": 125,
+    "en": 32,
+    "th": 26,
+    "pt": 2
+   }
+  },
+  "id": {
+   "stored_language_counts": 210,
+   "domain_reconstructed": 203,
+   "body": 25,
+   "domain_bullets_whose_body_agrees": 19,
+   "mismatch_rate_given_domain": 0.9064,
+   "body_lang_of_domain_bullets": {
+    "ko": 176,
+    "id": 19,
+    "en": 8
+   }
+  },
+  "vi": {
+   "stored_language_counts": 85,
+   "domain_reconstructed": 100,
+   "body": 46,
+   "domain_bullets_whose_body_agrees": 23,
+   "mismatch_rate_given_domain": 0.77,
+   "body_lang_of_domain_bullets": {
+    "ko": 75,
+    "vi": 23,
+    "en": 2
+   }
+  },
+  "ru": {
+   "stored_language_counts": 71,
+   "domain_reconstructed": 79,
+   "body": 42,
+   "domain_bullets_whose_body_agrees": 42,
+   "mismatch_rate_given_domain": 0.4684,
+   "body_lang_of_domain_bullets": {
+    "ru": 42,
+    "ko": 35,
+    "en": 2
+   }
+  },
+  "tl": {
+   "stored_language_counts": 137,
+   "domain_reconstructed": 121,
+   "body": 1,
+   "domain_bullets_whose_body_agrees": 0,
+   "mismatch_rate_given_domain": 1.0,
+   "body_lang_of_domain_bullets": {
+    "ko": 111,
+    "en": 9,
+    "vi": 1
+   }
+  },
+  "pt": {
+   "stored_language_counts": 89,
+   "domain_reconstructed": 86,
+   "body": 7,
+   "domain_bullets_whose_body_agrees": 1,
+   "mismatch_rate_given_domain": 0.9884,
+   "body_lang_of_domain_bullets": {
+    "ko": 84,
+    "en": 1,
+    "pt": 1
+   }
+  },
+  "tr": {
+   "stored_language_counts": 71,
+   "domain_reconstructed": 16,
+   "body": 0,
+   "domain_bullets_whose_body_agrees": 0,
+   "mismatch_rate_given_domain": 1.0,
+   "body_lang_of_domain_bullets": {
+    "ko": 16
+   }
+  },
+  "ar": {
+   "stored_language_counts": 73,
+   "domain_reconstructed": 11,
+   "body": 0,
+   "domain_bullets_whose_body_agrees": 0,
+   "mismatch_rate_given_domain": 1.0,
+   "body_lang_of_domain_bullets": {
+    "ko": 11
+   }
+  }
+ },
+ "other_language_candidates": {},
+ "notable": {
+  "domain_ko_but_body_en": 280,
+  "domain_en_but_body_ko": 3083,
+  "domain_default_basis": 1556
+ },
+ "language_coverage_by_fandom": {
+  "stored_key": "language_coverage",
+  "r(stored, domain_reconstructed)": 0.9597,
+  "r(stored, body)": 0.5901,
+  "r(domain_reconstructed, body)": 0.5628,
+  "mean_stored": 0.4795,
+  "mean_body": 0.1672,
+  "mean_domain_reconstructed": 0.4643
+ },
+ "method": {
+  "script": "한글/가나/한자/태국/키릴/아랍/라틴 글자 수 최대 문자권",
+  "latin": "wordfreq zipf 평균, 후보 en es fr id vi tl pt tr; vi·tr 고유 자모 우선",
+  "other": "다른 라틴계 19개 언어가 14개 최대값보다 zipf 0.5 이상 높고 토큰 5개 이상"
+ }
+}

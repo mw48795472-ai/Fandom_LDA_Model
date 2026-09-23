@@ -1,0 +1,104 @@
+{
+ "gate_v2": "라이브 K=8만 통과 (GATE_POLICY_V2_PROPOSAL_V7.md)",
+ "top15_overlap": 12,
+ "top15_live": [
+  "BTS",
+  "TWICE",
+  "임영웅",
+  "BLACKPINK",
+  "NCT",
+  "Stray Kids",
+  "SEVENTEEN",
+  "god",
+  "aespa",
+  "지드래곤 (G-Dragon)",
+  "CORTIS",
+  "아이유",
+  "EXO",
+  "NewJeans",
+  "싸이"
+ ],
+ "top15_frozen": [
+  "BTS",
+  "TWICE",
+  "임영웅",
+  "Stray Kids",
+  "BLACKPINK",
+  "SEVENTEEN",
+  "지드래곤 (G-Dragon)",
+  "NCT",
+  "CORTIS",
+  "aespa",
+  "NewJeans",
+  "RIIZE",
+  "ATEEZ",
+  "레드벨벳",
+  "아이유"
+ ],
+ "rank_spearman_common97": 0.8344,
+ "quadrant_counts_live": {
+  "핵심전략형": 24,
+  "내부결속형": 17,
+  "외부견인형": 10,
+  "주변부": 49
+ },
+ "persona_counts_live": {
+  "글로벌투어형": 62,
+  "원정소비형": 17,
+  "현장상업형": 12,
+  "집단동원형": 9
+ },
+ "persona_counts_frozen": {
+  "글로벌투어형": 43,
+  "집단동원형": 9,
+  "원정소비형": 17,
+  "현장상업형": 31
+ },
+ "persona_same_common97": "49/97",
+ "F3_top_pathway_share": {
+  "live": "99/100",
+  "frozen": "96/100"
+ },
+ "persona_migration_top": [
+  {
+   "from": "글로벌투어형",
+   "to": "글로벌투어형",
+   "n": 34
+  },
+  {
+   "from": "현장상업형",
+   "to": "글로벌투어형",
+   "n": 16
+  },
+  {
+   "from": "원정소비형",
+   "to": "원정소비형",
+   "n": 8
+  },
+  {
+   "from": "현장상업형",
+   "to": "원정소비형",
+   "n": 6
+  },
+  {
+   "from": "집단동원형",
+   "to": "글로벌투어형",
+   "n": 5
+  },
+  {
+   "from": "원정소비형",
+   "to": "글로벌투어형",
+   "n": 5
+  },
+  {
+   "from": "현장상업형",
+   "to": "집단동원형",
+   "n": 5
+  },
+  {
+   "from": "글로벌투어형",
+   "to": "현장상업형",
+   "n": 4
+  }
+ ]
+}

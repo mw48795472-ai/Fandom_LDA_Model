@@ -1,0 +1,635 @@
+{
+ "purpose": "L18: MCI ↔ outcome 상관을 같은 시점(라이브 10,020건 MCI × 라이브 점수)으로 재산출하고, 지표 3종(원시 MCI / MCI_excess / 정규화 HHI)과 세 시점 조합을 한 표에 둔다",
+ "metric_definitions": {
+  "mci": "Σ share_i², 하한 1/n",
+  "mci_excess": "MCI − 1/n",
+  "hhi_norm": "(MCI − 1/n)/(1 − 1/n), 0(완전 균등)∼1(한 명 독점)"
+ },
+ "pairings": {
+  "stored_v7_55_x_frozen": {
+   "label": "v7-55 MCI(8,981건) × 동결 outcome(7,350건) — 저장된 member_pilot_mci_correlation_v7.json",
+   "n_groups": 45,
+   "mci_vs_member_count": {
+    "pearson_r": -0.7489
+   },
+   "correlations": {
+    "loyalty_score": {
+     "mci_raw": {
+      "pearson_r": -0.3932,
+      "pearson_p": 0.007536936106906217,
+      "r_squared": 0.1546
+     },
+     "mci_excess": {
+      "pearson_r": -0.0686,
+      "pearson_p": 0.6542698836616502,
+      "r_squared": 0.0047
+     }
+    },
+    "spillover_score": {
+     "mci_raw": {
+      "pearson_r": -0.0776,
+      "pearson_p": 0.6125100919380759,
+      "r_squared": 0.006
+     },
+     "mci_excess": {
+      "pearson_r": 0.1888,
+      "pearson_p": 0.21409022196456723,
+      "r_squared": 0.0357
+     }
+    },
+    "coverage_index": {
+     "mci_raw": {
+      "pearson_r": -0.039,
+      "pearson_p": 0.799103370867739,
+      "r_squared": 0.0015
+     },
+     "mci_excess": {
+      "pearson_r": 0.1571,
+      "pearson_p": 0.302693591055249,
+      "r_squared": 0.0247
+     }
+    },
+    "factor_diversity": {
+     "mci_raw": {
+      "pearson_r": -0.0547,
+      "pearson_p": 0.7210359920742079,
+      "r_squared": 0.003
+     },
+     "mci_excess": {
+      "pearson_r": -0.1425,
+      "pearson_p": 0.3505599888163837,
+      "r_squared": 0.0203
+     }
+    }
+   }
+  },
+  "final_x_frozen": {
+   "label": "최종 MCI(10,020건) × 동결 outcome(7,350건) — 시점 불일치, 비교용",
+   "n_groups": 45,
+   "mci_vs_member_count": {
+    "n": 45,
+    "pearson_r": -0.728,
+    "pearson_p": 0.0,
+    "pearson_ci95": [
+     -0.8417,
+     -0.5525
+    ],
+    "r_squared": 0.5299,
+    "spearman_rho": -0.7194,
+    "spearman_p": 0.0
+   },
+   "correlations": {
+    "loyalty_score": {
+     "mci_raw": {
+      "n": 45,
+      "pearson_r": -0.3849,
+      "pearson_p": 0.009036,
+      "pearson_ci95": [
+       -0.6096,
+       -0.103
+      ],
+      "r_squared": 0.1481,
+      "spearman_rho": -0.3037,
+      "spearman_p": 0.042519
+     },
+     "mci_excess": {
+      "n": 45,
+      "pearson_r": -0.0443,
+      "pearson_p": 0.772462,
+      "pearson_ci95": [
+       -0.3335,
+       0.2525
+      ],
+      "r_squared": 0.002,
+      "spearman_rho": -0.0474,
+      "spearman_p": 0.757309
+     },
+     "hhi_norm": {
+      "n": 45,
+      "pearson_r": -0.1341,
+      "pearson_p": 0.37992,
+      "pearson_ci95": [
+       -0.4114,
+       0.166
+      ],
+      "r_squared": 0.018,
+      "spearman_rho": -0.1034,
+      "spearman_p": 0.4992
+     }
+    },
+    "spillover_score": {
+     "mci_raw": {
+      "n": 45,
+      "pearson_r": -0.0663,
+      "pearson_p": 0.665125,
+      "pearson_ci95": [
+       -0.353,
+       0.2317
+      ],
+      "r_squared": 0.0044,
+      "spearman_rho": 0.0125,
+      "spearman_p": 0.935295
+     },
+     "mci_excess": {
+      "n": 45,
+      "pearson_r": 0.2138,
+      "pearson_p": 0.158558,
+      "pearson_ci95": [
+       -0.0851,
+       0.4773
+      ],
+      "r_squared": 0.0457,
+      "spearman_rho": 0.0802,
+      "spearman_p": 0.600267
+     },
+     "hhi_norm": {
+      "n": 45,
+      "pearson_r": 0.1447,
+      "pearson_p": 0.343084,
+      "pearson_ci95": [
+       -0.1555,
+       0.4203
+      ],
+      "r_squared": 0.0209,
+      "spearman_rho": 0.0718,
+      "spearman_p": 0.639227
+     }
+    },
+    "coverage_index": {
+     "mci_raw": {
+      "n": 45,
+      "pearson_r": -0.056,
+      "pearson_p": 0.714862,
+      "pearson_ci95": [
+       -0.3439,
+       0.2415
+      ],
+      "r_squared": 0.0031,
+      "spearman_rho": -0.074,
+      "spearman_p": 0.628878
+     },
+     "mci_excess": {
+      "n": 45,
+      "pearson_r": 0.1275,
+      "pearson_p": 0.403765,
+      "pearson_ci95": [
+       -0.1725,
+       0.4059
+      ],
+      "r_squared": 0.0163,
+      "spearman_rho": 0.0135,
+      "spearman_p": 0.929992
+     },
+     "hhi_norm": {
+      "n": 45,
+      "pearson_r": 0.1155,
+      "pearson_p": 0.450089,
+      "pearson_ci95": [
+       -0.1843,
+       0.3956
+      ],
+      "r_squared": 0.0133,
+      "spearman_rho": 0.0218,
+      "spearman_p": 0.886748
+     }
+    },
+    "factor_diversity": {
+     "mci_raw": {
+      "n": 45,
+      "pearson_r": -0.0622,
+      "pearson_p": 0.684916,
+      "pearson_ci95": [
+       -0.3493,
+       0.2357
+      ],
+      "r_squared": 0.0039,
+      "spearman_rho": -0.1202,
+      "spearman_p": 0.431425
+     },
+     "mci_excess": {
+      "n": 45,
+      "pearson_r": -0.1565,
+      "pearson_p": 0.304438,
+      "pearson_ci95": [
+       -0.4303,
+       0.1436
+      ],
+      "r_squared": 0.0245,
+      "spearman_rho": -0.0483,
+      "spearman_p": 0.752738
+     },
+     "hhi_norm": {
+      "n": 45,
+      "pearson_r": -0.0916,
+      "pearson_p": 0.549665,
+      "pearson_ci95": [
+       -0.375,
+       0.2075
+      ],
+      "r_squared": 0.0084,
+      "spearman_rho": -0.0343,
+      "spearman_p": 0.823213
+     }
+    }
+   },
+   "regression_mci_plus_member_count": {
+    "loyalty_score": {
+     "r_squared": 0.2551,
+     "adj_r_squared": 0.2197,
+     "coefficients": {
+      "intercept": {
+       "coef": 0.2918,
+       "se": 0.1672,
+       "t": 1.745,
+       "p": 0.088277
+      },
+      "mci": {
+       "coef": -0.0645,
+       "se": 0.3336,
+       "t": -0.193,
+       "p": 0.847578
+      },
+      "member_count": {
+       "coef": 0.0368,
+       "se": 0.015,
+       "t": 2.456,
+       "p": 0.018253
+      }
+     },
+     "vif": {
+      "mci": 2.127,
+      "member_count": 2.127
+     }
+    },
+    "spillover_score": {
+     "r_squared": 0.0616,
+     "adj_r_squared": 0.0169,
+     "coefficients": {
+      "intercept": {
+       "coef": 0.1002,
+       "se": 0.1961,
+       "t": 0.511,
+       "p": 0.612097
+      },
+      "mci": {
+       "coef": 0.3365,
+       "se": 0.3912,
+       "t": 0.86,
+       "p": 0.394563
+      },
+      "member_count": {
+       "coef": 0.0281,
+       "se": 0.0176,
+       "t": 1.6,
+       "p": 0.117204
+      }
+     },
+     "vif": {
+      "mci": 2.127,
+      "member_count": 2.127
+     }
+    },
+    "coverage_index": {
+     "r_squared": 0.0474,
+     "adj_r_squared": 0.002,
+     "coefficients": {
+      "intercept": {
+       "coef": 0.5939,
+       "se": 0.1195,
+       "t": 4.97,
+       "p": 1.2e-05
+      },
+      "mci": {
+       "coef": 0.1817,
+       "se": 0.2384,
+       "t": 0.762,
+       "p": 0.450255
+      },
+      "member_count": {
+       "coef": 0.015,
+       "se": 0.0107,
+       "t": 1.397,
+       "p": 0.169732
+      }
+     },
+     "vif": {
+      "mci": 2.127,
+      "member_count": 2.127
+     }
+    },
+    "factor_diversity": {
+     "r_squared": 0.0606,
+     "adj_r_squared": 0.0159,
+     "coefficients": {
+      "intercept": {
+       "coef": 0.813,
+       "se": 0.0514,
+       "t": 15.806,
+       "p": 0.0
+      },
+      "mci": {
+       "coef": 0.0898,
+       "se": 0.1026,
+       "t": 0.875,
+       "p": 0.38662
+      },
+      "member_count": {
+       "coef": 0.0074,
+       "se": 0.0046,
+       "t": 1.593,
+       "p": 0.118574
+      }
+     },
+     "vif": {
+      "mci": 2.127,
+      "member_count": 2.127
+     }
+    }
+   }
+  },
+  "final_x_live": {
+   "label": "최종 MCI(10,020건) × 라이브 outcome(10,020건) — 같은 시점 (이 파일의 본 결과)",
+   "n_groups": 45,
+   "mci_vs_member_count": {
+    "n": 45,
+    "pearson_r": -0.728,
+    "pearson_p": 0.0,
+    "pearson_ci95": [
+     -0.8417,
+     -0.5525
+    ],
+    "r_squared": 0.5299,
+    "spearman_rho": -0.7194,
+    "spearman_p": 0.0
+   },
+   "correlations": {
+    "loyalty_score": {
+     "mci_raw": {
+      "n": 45,
+      "pearson_r": -0.3898,
+      "pearson_p": 0.008132,
+      "pearson_ci95": [
+       -0.6131,
+       -0.1086
+      ],
+      "r_squared": 0.1519,
+      "spearman_rho": -0.3386,
+      "spearman_p": 0.022909
+     },
+     "mci_excess": {
+      "n": 45,
+      "pearson_r": -0.1168,
+      "pearson_p": 0.444682,
+      "pearson_ci95": [
+       -0.3968,
+       0.183
+      ],
+      "r_squared": 0.0137,
+      "spearman_rho": -0.1478,
+      "spearman_p": 0.332517
+     },
+     "hhi_norm": {
+      "n": 45,
+      "pearson_r": -0.1864,
+      "pearson_p": 0.220133,
+      "pearson_ci95": [
+       -0.4551,
+       0.1133
+      ],
+      "r_squared": 0.0348,
+      "spearman_rho": -0.1976,
+      "spearman_p": 0.193307
+     }
+    },
+    "spillover_score": {
+     "mci_raw": {
+      "n": 45,
+      "pearson_r": -0.2278,
+      "pearson_p": 0.132295,
+      "pearson_ci95": [
+       -0.4887,
+       0.0704
+      ],
+      "r_squared": 0.0519,
+      "spearman_rho": -0.1725,
+      "spearman_p": 0.257217
+     },
+     "mci_excess": {
+      "n": 45,
+      "pearson_r": 0.0567,
+      "pearson_p": 0.711652,
+      "pearson_ci95": [
+       -0.2409,
+       0.3445
+      ],
+      "r_squared": 0.0032,
+      "spearman_rho": -0.0227,
+      "spearman_p": 0.882183
+     },
+     "hhi_norm": {
+      "n": 45,
+      "pearson_r": -0.0129,
+      "pearson_p": 0.932875,
+      "pearson_ci95": [
+       -0.3053,
+       0.2817
+      ],
+      "r_squared": 0.0002,
+      "spearman_rho": -0.0478,
+      "spearman_p": 0.755369
+     }
+    },
+    "coverage_index": {
+     "mci_raw": {
+      "n": 45,
+      "pearson_r": -0.0215,
+      "pearson_p": 0.888447,
+      "pearson_ci95": [
+       -0.3131,
+       0.2738
+      ],
+      "r_squared": 0.0005,
+      "spearman_rho": 0.0015,
+      "spearman_p": 0.992288
+     },
+     "mci_excess": {
+      "n": 45,
+      "pearson_r": 0.1356,
+      "pearson_p": 0.374633,
+      "pearson_ci95": [
+       -0.1645,
+       0.4127
+      ],
+      "r_squared": 0.0184,
+      "spearman_rho": 0.0377,
+      "spearman_p": 0.805674
+     },
+     "hhi_norm": {
+      "n": 45,
+      "pearson_r": 0.1271,
+      "pearson_p": 0.405437,
+      "pearson_ci95": [
+       -0.1729,
+       0.4055
+      ],
+      "r_squared": 0.0162,
+      "spearman_rho": 0.044,
+      "spearman_p": 0.774219
+     }
+    },
+    "factor_diversity": {
+     "mci_raw": {
+      "n": 45,
+      "pearson_r": -0.0644,
+      "pearson_p": 0.674045,
+      "pearson_ci95": [
+       -0.3513,
+       0.2335
+      ],
+      "r_squared": 0.0042,
+      "spearman_rho": 0.0281,
+      "spearman_p": 0.854453
+     },
+     "mci_excess": {
+      "n": 45,
+      "pearson_r": 0.1672,
+      "pearson_p": 0.272307,
+      "pearson_ci95": [
+       -0.1329,
+       0.4392
+      ],
+      "r_squared": 0.028,
+      "spearman_rho": 0.1996,
+      "spearman_p": 0.188754
+     },
+     "hhi_norm": {
+      "n": 45,
+      "pearson_r": 0.1289,
+      "pearson_p": 0.398827,
+      "pearson_ci95": [
+       -0.1711,
+       0.407
+      ],
+      "r_squared": 0.0166,
+      "spearman_rho": 0.1915,
+      "spearman_p": 0.207572
+     }
+    }
+   },
+   "regression_mci_plus_member_count": {
+    "loyalty_score": {
+     "r_squared": 0.2042,
+     "adj_r_squared": 0.1663,
+     "coefficients": {
+      "intercept": {
+       "coef": 0.378,
+       "se": 0.1917,
+       "t": 1.972,
+       "p": 0.055233
+      },
+      "mci": {
+       "coef": -0.28,
+       "se": 0.3824,
+       "t": -0.732,
+       "p": 0.468156
+      },
+      "member_count": {
+       "coef": 0.0286,
+       "se": 0.0172,
+       "t": 1.661,
+       "p": 0.104165
+      }
+     },
+     "vif": {
+      "mci": 2.127,
+      "member_count": 2.127
+     }
+    },
+    "spillover_score": {
+     "r_squared": 0.0928,
+     "adj_r_squared": 0.0496,
+     "coefficients": {
+      "intercept": {
+       "coef": 0.1987,
+       "se": 0.1909,
+       "t": 1.041,
+       "p": 0.303838
+      },
+      "mci": {
+       "coef": -0.0232,
+       "se": 0.3808,
+       "t": -0.061,
+       "p": 0.951626
+      },
+      "member_count": {
+       "coef": 0.0236,
+       "se": 0.0171,
+       "t": 1.376,
+       "p": 0.176089
+      }
+     },
+     "vif": {
+      "mci": 2.127,
+      "member_count": 2.127
+     }
+    },
+    "coverage_index": {
+     "r_squared": 0.0492,
+     "adj_r_squared": 0.004,
+     "coefficients": {
+      "intercept": {
+       "coef": 0.6364,
+       "se": 0.0968,
+       "t": 6.575,
+       "p": 0.0
+      },
+      "mci": {
+       "coef": 0.1874,
+       "se": 0.1931,
+       "t": 0.97,
+       "p": 0.337391
+      },
+      "member_count": {
+       "coef": 0.0127,
+       "se": 0.0087,
+       "t": 1.468,
+       "p": 0.149629
+      }
+     },
+     "vif": {
+      "mci": 2.127,
+      "member_count": 2.127
+     }
+    },
+    "factor_diversity": {
+     "r_squared": 0.0498,
+     "adj_r_squared": 0.0046,
+     "coefficients": {
+      "intercept": {
+       "coef": 0.6885,
+       "se": 0.096,
+       "t": 7.168,
+       "p": 0.0
+      },
+      "mci": {
+       "coef": 0.1419,
+       "se": 0.1916,
+       "t": 0.741,
+       "p": 0.462998
+      },
+      "member_count": {
+       "coef": 0.0122,
+       "se": 0.0086,
+       "t": 1.421,
+       "p": 0.162687
+      }
+     },
+     "vif": {
+      "mci": 2.127,
+      "member_count": 2.127
+     }
+    }
+   }
+  }
+ }
+}

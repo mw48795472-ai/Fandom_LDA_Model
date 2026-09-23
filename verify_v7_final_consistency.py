@@ -667,6 +667,23 @@ else:
     info("data/v7_final/frozen_snapshot_v7_40/ 없음")
 
 # ---------------------------------------------------------------------------
+# [AE] 로스터 이력 (data/v7_final/roster_history_v7.csv)
+# ---------------------------------------------------------------------------
+print("\n[AE] data/v7_final/roster_history_v7.csv — 로스터 이력")
+_rh_path = D / "roster_history_v7.csv"
+if _rh_path.exists():
+    _rh = list(csv.DictReader(open(_rh_path, encoding="utf-8-sig")))
+    _rh_live = {r["fandom"] for r in _rh if r["status"] == "live"}
+    _rh_frozen = {r["fandom"] for r in _rh if r["in_frozen_v7_40"] == "Y"}
+    check("라이브 100개 = 코퍼스 로스터, 동결 100개 = 동결 점수 로스터, 제거 6개", _rh_live == set(byf) and _rh_frozen == {r["fandom"] for r in fzj} and sum(r["status"] == "removed" for r in _rh) == 6,
+          f"live {len(_rh_live)}, frozen {len(_rh_frozen)}, removed {sum(r['status']=='removed' for r in _rh)}")
+    check("동결 이후 교체 3건: 빈지노(r58)·몬스타엑스(r62)·투어스(TWS)(r63) 진입, BE'O·한로로·pH-1 제거",
+          {r["fandom"]: r["entered_round"] for r in _rh if r["status"] == "live" and r["in_frozen_v7_40"] == "N"} == {"빈지노": "r58", "몬스타엑스": "r62", "투어스(TWS)": "r63"}
+          and {r["fandom"] for r in _rh if r["status"] == "removed" and r["in_frozen_v7_40"] == "Y"} == {"BE'O", "한로로", "pH-1"})
+else:
+    info("data/v7_final/roster_history_v7.csv 없음")
+
+# ---------------------------------------------------------------------------
 n_ok = sum(1 for _, ok in results if ok); n_all = len(results)
 print(f"\n=== 결과: {n_ok}/{n_all} 항목 일치 ({n_all - n_ok}건 불일치) ===")
 sys.exit(0 if n_ok == n_all else 1)

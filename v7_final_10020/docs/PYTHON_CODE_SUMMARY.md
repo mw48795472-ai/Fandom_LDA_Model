@@ -14,7 +14,7 @@
 
 | 분류 | 스크립트 | 입력 | 출력·확인 |
 |---|---|---|---|
-| 정합성 검증(루트) | `verify_v7_final_consistency.py` | `data/v7_final/*` 전부 | 보고서·KEY_FINDINGS 수치 105개 항목을 파일에서 재계산해 일치/불일치 출력 (105/105; [AD]절 4항목이 동결 코퍼스 근사 복원본 검증) |
+| 정합성 검증(루트) | `verify_v7_final_consistency.py` | `data/v7_final/*` 전부 | 보고서·KEY_FINDINGS 수치 107개 항목을 파일에서 재계산해 일치/불일치 출력 (107/107; [AD]절 4항목이 동결 코퍼스 근사 복원본 검증) |
 | 토크나이저 재구성 검증 ①② | `v7_final_10020/analysis/tokenizer/live_reference_tokenizer/verify_tokenizer_reconstruction_v7.py` | `run_lda_v6_live_reference_v7.py`의 토크나이저 절(마커 exec), 코퍼스 10,020건, `wordcloud_by_language_v7.json`, `lda_excluded_bullets_v7.json` | 문서 수·제외 2건·8개 버킷 통계·상위 30단어 카운트·자기인용 건수 대조 → `tokenizer_reconstruction_check_v7.json` (약 20초, wordfreq 필요) |
 | 토크나이저 재구성 검증 ③ | 같은 폴더 `compare_live_reference_refit_v7.py` | `output/lda_live_reference_v7/` 산출물, `lda_v6_diagnostics_live_reference_v7.json`, `fandom_scores_live_reference_v7.json` | K-grid 7개 K 지표·선택 K/M/실루엣·토픽 상위어 대응·factor_diversity 상관 → `live_reference_refit_comparison_v7.json` |
 | 토크나이저 재구성 문서 | 같은 폴더 `build_tokenizer_reconstruction_md_v7.py` | 위 두 JSON | `TOKENIZER_RECONSTRUCTION_V7.md` |
@@ -32,6 +32,23 @@
 | 지수 CSV | `v7_final_10020/indices_csv/build_domestic_regional_index_csv.py` | `v7_final_10020/analysis/domestic_regional_index/domestic_regional_index_v7.json` | `output/indices_csv/domestic_regional_index_v7.csv` |
 | 지수 CSV | `v7_final_10020/indices_csv/build_worldwide_language_index_csv.py` | `worldwide_language_pilot_live_reference_v7.json` | `output/indices_csv/worldwide_language_index_v7.csv` |
 | 데이터 export | `v7_final_10020/data_export/extract_html_payloads.py` | `3D_포지셔닝맵_국내100팬덤.html`, `Persona_결정공간.html` | HTML 내장 데이터 객체를 그대로 복사 → `chart3d_payload_live_reference_v7.json`, `persona_decision_space_v7.json` |
+| 데이터 export | `v7_final_10020/data_export/build_roster_history_v7.py` | `data/v7_rounds/swap_log_r29·r34·r62·r63.json`, `merge_log_r58.json`, 라이브 코퍼스, 동결 점수 JSON | `data/v7_final/roster_history_v7.csv` 106행 (라이브 100 + 제거 6, 진입·제거 라운드·교체 상대·동결/라이브 포함) |
+| 데이터 export | `v7_final_10020/data_export/build_bullet_provenance_v7.py` | `archive/v7_r13_corpus_5099.json`, `archive/v6_r22_era_backup.zip`의 r22 코퍼스, 동결 근사 복원본, 라이브 코퍼스, `roster_history_v7.csv` | `data/v7_final/bullet_provenance_v7.csv` 10,020행 — 불릿별 추가 라운드 구간(≤r13 / r14∼r22 / r23∼r39 / r41∼r72, 교체 진입 팬덤은 진입 라운드 하한). 구간 누적 합 = 스냅샷 건수 3/3 일치, 접두어 위반 0(여자친구 r56 수정 1건 허용) |
+| 누락 검수 표본 | `v7_final_10020/analysis/build_unmatched_audit_samples_v7.py` | 코퍼스, 광고·미디어 지수 JSON(사전), `build_notebooks_v7.py`의 REGION_KEYWORDS·NEGATION | `analysis/unmatched_audit/` — 지표 3종 매칭 재현(광고 1,308 vs 원본 1,302, 미디어 1,025/1,025), 근접 누락 통계 JSON, 미매칭 표본 200건 × 3 CSV(모델 판독 Y/N 기록), `UNMATCHED_AUDIT_V7.md`(재현율 추정 광고 0.81·미디어 0.57·지역 0.78, 95% CI); `--summarize`로 검수 집계 |
+| 해석 계층 그림 | `v7_final_10020/charts/build_live_layer_figures_v7.py` (`KFONT_PATH`로 한글 폰트) | `live_interpretive_layer/` JSON·CSV, 3D payload | `assets/readme/fig05_persona_map.png`·`fig06_factor_specific_impact.png`·`fig07a_persona_k_to_f.png`·`fig07b_persona_pca.png` + `live_pca_v7.json` (동결 판은 `*_frozen_v7_40.png`) |
+| 라이브 해석 계층 | `v7_final_10020/analysis/persona_decision_space/build_live_interpretive_layer_v7.py` | 라이브 점수 JSON(factor_share), 라이브 진단 JSON(topic_to_factor), `fan_persona_v7.json`(정의표), `factor_pathway_map_v7.json`, 3D payload(표본 평균) | `live_interpretive_layer/` — 라이브 순위표(4구획 24/17/10/49 재현)·K→F·페르소나 JSON·동결→라이브 이동표·요약 |
+| 검수 엑셀 | `v7_final_10020/analysis/unmatched_audit/build_review_sheet_v7.py` | 표본 CSV 3개, 사전 후보 CSV, 근접 누락 통계 | `review_sheet_v7.xlsx` — 안내·정의결정(질문 12개, 선택지·영향·권장)·광고·미디어·지역(모델 판독·사유 + 판정 옵션 A∼E 드롭다운·추가할 표현)·사전후보(처리 옵션)·집계(수식) 시트 |
+| 게이트 개편안 | `v7_final_10020/silhouette_gate_policy/gate_policy_v2_v7.py` | `seed_stability_summary_v7.json`(L7) | `gate_policy_v2_decisions_v7.json`·`GATE_POLICY_V2_PROPOSAL_V7.md` — v1(0.267 단일 시드)·v2(G1∼G4) 규칙과 적합 4건 판정표 |
+| 노출량 공변량 | `v7_final_10020/index_methodology/build_exposure_adjusted_scores_v7.py` | 라이브·동결 점수 JSON(loyalty_raw·n_bullets) | `exposure_adjusted_scores_v7.csv`(팬덤 100 × 스냅샷 2: 원 점수·밀도·노출량 잔차), `exposure_adjustment_summary_v7.json`, `EXPOSURE_ADJUSTMENT_V7.md` — 정의별 건수 상관·판별타당도 r·활동 통제 편상관·순위 이동 |
+| 강건 회귀 | `Statistics/robust_regression_v7.py` | 라이브·동결 점수 JSON | `Statistics/robust_regression_v7.json`·`ROBUST_REGRESSION_V7.md` — OLS / Huber RLM / 분위회귀(q=0.5) / 영향점 5개 제외 OLS 의 계수·SE·p와 부호·유의성 일치 여부 |
+| 지역 언급 유형 | `v7_final_10020/analysis/domestic_regional_index/build_regional_mention_types_v7.py` | 코퍼스, `build_notebooks_v7.py`의 REGION_KEYWORDS(괄호 짝 추출), 원 지수 JSON | `region_mentions_by_type_v7.csv`(언급 1,226건: 매치 판정·엄격 지역·연고/활동/기타), `domestic_regional_index_by_type_v7.csv`(팬덤 100: 세 열 + 엄격 지수), `homonym_audit_v7.json`, `REGIONAL_MENTION_TYPES_V7.md` — 원 지수 100/100 재현 |
+| 본문 언어 병행 판정 | `v7_final_10020/analysis/worldwide_language_index/build_body_language_classifier_v7.py` | 코퍼스, 라이브 점수 JSON(language_counts·language_coverage), tokenizer 폴더의 도메인 분류기(import) | `bullet_language_body_vs_domain_v7.csv` 10,020행(도메인 언어 vs 본문 언어), `body_language_summary_v7.json`, `BODY_LANGUAGE_V7.md` — 일치 49.2%, 본문 한국어 84.5%, 지수 상관 |
+| 부트스트랩 CI | `Statistics/bootstrap_ci_v7.py` | 라이브·동결 점수 JSON, `index_methodology/evidence_score_by_sentence_v7.csv` | `Statistics/bootstrap_ci_v7.json`·`BOOTSTRAP_CI_V7.md`·`bootstrap_r_distributions_v7.png` — 팬덤 부트스트랩(B=2,000) r·회귀계수·χ² p 의 95% CI, 97개 공통 팬덤 r 차이 CI, 동결 건수로의 코퍼스 축소 반복(R=1,000)과 건수 구조 진단 |
+| MCI 같은 시점 재산출 | `v7_final_10020/analysis/group_member_index/build_mci_same_period_v7.py` | `member_mention_index_v7.json`, `member_pilot_mci_correlation_v7.json`, 라이브·동결 점수 JSON, 코퍼스 | `member_mci_unified_v7.csv`(45개 그룹 MCI·하한·excess·HHI_norm), `member_mci_correlation_live_v7.json`(세 시점 조합 상관·회귀·VIF), `member_alias_audit_v7.csv`(273명 기록 vs 재계수), `MCI_SAME_PERIOD_V7.md` |
+| 지표 사전 고정 | `v7_final_10020/analysis/dictionaries/export_index_dictionaries_v7.py` | `run_lda_v6.py`·`analysis/build_notebooks_v7.py`(ast/괄호 짝 추출), 보조지표 JSON 4종, `merge_log_r65.json` | `index_dictionaries_v7.csv` 436행(사전 19종) + `DICTIONARIES_V7.md`(지표별 사전 유무·건수·출처 표; 저장소에 없는 사전 2종은 '없음'으로 명시) |
+| 토픽 대응 자동화 | `v7_final_10020/analysis/persona_decision_space/topic_phi_cosine/build_topic_alignment_v7.py` | 동결 진단 JSON(상위 10단어), 이 폴더 φ K=10/K=8, `frozen_v7_40/` φ, 라이브 원본 참고 진단, `topic_cards_v7.json` | `topic_alignment/` — 모델 쌍 6개의 토픽 대응(φ 코사인 또는 상위 10단어 Jaccard, 헝가리안 1:1 + 최근접) CSV·자동 라벨(상위 4단어) CSV·요약 JSON·MD, φ 문서 6절 표를 마커 사이에 재생성 |
+| 시드 안정성 | `v7_final_10020/analysis/persona_decision_space/topic_phi_cosine/build_seed_stability_v7.py` | 라이브 10,020건·동결 근사 7,326건, 재구성 토크나이저 마커 절 | `seed_stability/` — 코퍼스×K∈{8,10}×시드 0∼9 의 M=4∼8 실루엣 CSV, 시드 쌍별 토픽 Jaccard CSV, 요약 JSON, `SEED_STABILITY_V7.md` (약 30분) |
+| 지표 중간 산출 | `v7_final_10020/index_methodology/export_evidence_score_sentences_v7.py` | 코퍼스 10,020건, `verify_v7_final_consistency.py`의 산식(ast), `run_lda_v6.py`의 `years_in`(ast) | `evidence_score_by_sentence_v7.csv` 10,020행 + `index_intermediate_values_v7.json`(코퍼스 연도 12개, 팬덤별 합 = raw 100/100, time_coverage 100/100) |
 | 데이터 export | `v7_final_10020/data_export/build_bullets_flat_csv.py` | `fandoms_v3_100.json` (`--src`) | `bullets_flat_v7_final.csv` 10,020행 (`--expected`로 행 수 대조). 동결 근사 복원본의 `bullets_flat_v7_40_frozen_reconstructed.csv`(7,326행)도 `--src/--out/--expected 7326`으로 같은 스크립트가 만든다 |
 | 데이터 export | `v7_final_10020/data_export/build_lda_k_grid_csv.py` | `lda_v6_diagnostics_live_reference_v7.json` (`--src`) | `lda_k_grid_live_reference_v7.csv` (K 후보별 perplexity·coherence·diversity·stability, `selected` 플래그) |
 | 데이터 export | `v7_final_10020/data_export/build_corpus_growth_history_csv.py` | `data/v7_rounds/v6*_merge_log.json` + `merge_log_r*.json`·`swap_log_r*.json`·`round_log_r70.json` | `corpus_growth_history_v6_v7_full.csv` — v6 1차∼v7 r72(10,020건) 성장 이력, 체인 불연속을 `chain_gap`에 기록, 타임라인 CSV와 대조 |
@@ -58,7 +75,7 @@
 R² 0.847·VIF 1.93·민감도·LOO·3D축 독립성까지 KEY_FINDINGS 값이 그대로 나온다. 4분면
 χ²(8.34/10.2273)도 점수 0.5 초과 여부 2×2표로 재현된다. 그 밖에 동결 스냅샷(activity 합 7,350,
 페르소나 43/31/17/9), 라이브 참고 재적합(K=8/M=5/0.046 게이트 기각), 언어 커버리지 분모
-ln(14)/ln(13), 보조지표 7종의 집계 합, 성장 이력·타임라인 CSV 대조, 동결 코퍼스 근사 복원본(97개 팬덤 지문·접두어·r22 교체분)까지 105개 항목을 확인한다.
+ln(14)/ln(13), 보조지표 7종의 집계 합, 성장 이력·타임라인 CSV 대조, 동결 코퍼스 근사 복원본(97개 팬덤 지문·접두어·r22 교체분), 로스터 이력까지 107개 항목을 확인한다.
 
 ## B. 원본 파이프라인 — `run_lda_v6.py`
 

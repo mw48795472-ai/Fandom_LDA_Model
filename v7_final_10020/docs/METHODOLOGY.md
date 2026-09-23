@@ -20,6 +20,8 @@
 
 ## 2. LDA 토픽모델링 → K→M→Persona→Loyalty/Spillover 4단계 해석 계층
 
+> 이 절의 수치(K=10 토픽, 페르소나 43/31/17/9)는 동결 스냅샷 v7-40의 값이다. 게이트 v2 채택(4절 개정) 뒤 루트 README 4·5절은 라이브 K=8 해석 계층(페르소나 62/17/12/9, `analysis/persona_decision_space/live_interpretive_layer/`)을 쓴다.
+
 | 계층 | 담는 질문 | 정의 |
 |---|---|---|
 | K (Topic) | 무엇을 하는가 | LDA 토픽 기반 배제 |
@@ -153,6 +155,8 @@ EvidenceScore(f) = Σ[1.0 + 0.5·n_num(t) + 0.3·n_kx(t)] — 충성도(Loyalty)
    시점의 참고 재적합도 K=8·M=5·silhouette=0.046으로 기각분이며, 그 진단값(K-grid 포함)은
    `data/v7_final/lda_v6_diagnostics_live_reference_v7.json`에, 같은 값이 3D 포지셔닝맵 payload에도 들어 있다.
 
+**개정 (2026-09-23, 게이트 v2 채택).** 위 1∼4는 최종 보고서 시점의 규칙이다. 기준선 0.267이 저장소 재료로 어느 시드로도 재현되지 않고(40회 적합 중 0회) 실루엣·최적 M·토픽 상위어가 시드에 따라 크게 움직인다는 측정(`analysis/persona_decision_space/topic_phi_cosine/seed_stability/`) 뒤, 게이트를 (G1) 시드 ≥10 실루엣 중앙값 ≥ 재현 가능한 현직 중앙값 · (G2) 시드 쌍 토픽 Jaccard 중앙값 ≥ 0.35 · (G3) 최적 M 합의 · (G4) 재현 가능한 기준 — 으로 바꿨다(`silhouette_gate_policy/GATE_POLICY_V2_PROPOSAL_V7.md`). 통과한 라이브 K=8 참고 재적합이 루트 README 4·5절의 해석 계층이며(`analysis/persona_decision_space/live_interpretive_layer/`), 이 문서 2절의 K=10 토픽·페르소나 43/31/17/9는 동결 스냅샷의 역사 값이다.
+
 ## 5. 보조지표 7종 (LDA와 독립적, 원문 문자열 매칭 기반)
 
 LDA 기반 3축(파급효과·팬충성도·팬요인 다양성) 구조를 보완하는, 통계적 재군집화를 거치지 않아 투명하고
@@ -163,7 +167,7 @@ LDA 기반 3축(파급효과·팬충성도·팬요인 다양성) 구조를 보�
 | 광고·상업성 지수 (Ad/Commercial Index) | 팬덤 근거문장에서 광고 계약·모델·협찬 등 상업적 문장 비중과 20개 업종별 구성 | 1단계: 24개 광고신호 키워드로 판정 → 2단계: 업종사전+대화로 상세분류(KT 업종 구분 기준) |
 | 미디어·콘텐츠 노출 지수 (Media/Content Exposure Index) | 예능·유튜브·영화·드라마 등 미디어 콘텐츠에 노출된 정도 | 원문에서 예능/유튜브/영화/드라마 4종 서브태그 키워드 직접 매칭 |
 | 팬덤결속 지수 (Fandom Cohesion Index) | 팬덤의 조직적 결속력을 5개 활동 유형(A∼E)으로 나누는 지표 | A 공식팬클럽·회원제 / B 팬카페·온라인커뮤니티 / C 팬덤정체성·문화 / D 기부·후원캠페인 / E 오프라인결집·이벤트 |
-| 매체 크로스오버 지수 (Media Crossover Index) | 팬덤을 다룬 서로 다른 언론매체(도메인) 수로 측정하는 대리(proxy) 지표 | 근거문장 출처 URL을 도메인화해 news_media로 분류한 매체 대상으로 상이 도메인 수 집계 |
+| 매체 크로스오버 지수 (Media Crossover Index — 측정 대상은 '매체 확산 폭'이며 팬 유입 경로·전환이 아님) | 팬덤을 다룬 서로 다른 언론매체(도메인) 수로 측정하는 대리(proxy) 지표 | 근거문장 출처 URL을 도메인화해 news_media로 분류한 매체 대상으로 상이 도메인 수 집계 |
 | 국내 지역 지수 (Domestic Regional Index) | 팬덤의 국내(17개 시/도) 지역 밀착도를 측정하는 지표 | 근거문장 내 국내 지역명(17개 시/도 및 대표 도시) 언급 횟수 기반, 고향/연고와 투어/행사를 구분하지 않고 합산 |
 | 세계 언어 지수 (Worldwide Language Index) | 팬덤 글로벌 확산 정도를 출처 매체 언어 축으로 측정하는 지표 | 근거문장 출처 매체 언어(language_of()) 기준 집계. ko를 분리해 해외 확산 비중(foreign_ratio)·다양성(foreign_diversity) 별도 산출 |
 | 멤버 집중도 지수 (Member Concentration Index, MCI) | 그룹 팬덤 내에서 근거 문장이 특정 멤버에게 얼마나 쏠려있는지 측정하는 지표 | 멤버별 언급 점유율을 구한 뒤 점유율의 허핀달-허쉬만 지수 방식(MCI=Σ(점유율)²)으로 산출 |

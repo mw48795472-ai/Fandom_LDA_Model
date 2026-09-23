@@ -1,0 +1,386 @@
+{
+ "methods": [
+  "OLS",
+  "Huber(RLM)",
+  "Quantile(q=0.5)",
+  "OLS w/o Cook's top5"
+ ],
+ "results": {
+  "live_10020": {
+   "spillover ~ loyalty + activity": {
+    "OLS": {
+     "coef": {
+      "loyalty_score": -0.1996,
+      "activity": 0.0064
+     },
+     "se": {
+      "loyalty_score": 0.0429,
+      "activity": 0.0003
+     },
+     "p": {
+      "loyalty_score": 1e-05,
+      "activity": 0.0
+     },
+     "n": 100
+    },
+    "Huber(RLM)": {
+     "coef": {
+      "loyalty_score": -0.2037,
+      "activity": 0.0063
+     },
+     "se": {
+      "loyalty_score": 0.0409,
+      "activity": 0.0003
+     },
+     "p": {
+      "loyalty_score": 0.0,
+      "activity": 0.0
+     },
+     "n": 100
+    },
+    "Quantile(q=0.5)": {
+     "coef": {
+      "loyalty_score": -0.1965,
+      "activity": 0.0063
+     },
+     "se": {
+      "loyalty_score": 0.0541,
+      "activity": 0.0004
+     },
+     "p": {
+      "loyalty_score": 0.00045,
+      "activity": 0.0
+     },
+     "n": 100
+    },
+    "OLS w/o Cook's top5": {
+     "coef": {
+      "loyalty_score": -0.2128,
+      "activity": 0.0063
+     },
+     "se": {
+      "loyalty_score": 0.0419,
+      "activity": 0.0003
+     },
+     "p": {
+      "loyalty_score": 0.0,
+      "activity": 0.0
+     },
+     "n": 95
+    },
+    "dropped_top5": [
+     "이효리",
+     "임영웅",
+     "투어스(TWS)",
+     "SEVENTEEN",
+     "TWICE"
+    ],
+    "agreement": {
+     "loyalty_score": {
+      "same_sign_all": true,
+      "same_significance_all": true,
+      "sign_OLS": -1,
+      "significant": {
+       "OLS": true,
+       "Huber(RLM)": true,
+       "Quantile(q=0.5)": true,
+       "OLS w/o Cook's top5": true
+      }
+     },
+     "activity": {
+      "same_sign_all": true,
+      "same_significance_all": true,
+      "sign_OLS": 1,
+      "significant": {
+       "OLS": true,
+       "Huber(RLM)": true,
+       "Quantile(q=0.5)": true,
+       "OLS w/o Cook's top5": true
+      }
+     }
+    }
+   },
+   "factor_diversity ~ loyalty + spillover": {
+    "OLS": {
+     "coef": {
+      "loyalty_score": -0.073,
+      "spillover_score": 0.3008
+     },
+     "se": {
+      "loyalty_score": 0.044,
+      "spillover_score": 0.0564
+     },
+     "p": {
+      "loyalty_score": 0.10036,
+      "spillover_score": 0.0
+     },
+     "n": 100
+    },
+    "Huber(RLM)": {
+     "coef": {
+      "loyalty_score": -0.0698,
+      "spillover_score": 0.2948
+     },
+     "se": {
+      "loyalty_score": 0.0462,
+      "spillover_score": 0.0592
+     },
+     "p": {
+      "loyalty_score": 0.13042,
+      "spillover_score": 0.0
+     },
+     "n": 100
+    },
+    "Quantile(q=0.5)": {
+     "coef": {
+      "loyalty_score": -0.0982,
+      "spillover_score": 0.3251
+     },
+     "se": {
+      "loyalty_score": 0.0677,
+      "spillover_score": 0.0869
+     },
+     "p": {
+      "loyalty_score": 0.15018,
+      "spillover_score": 0.00031
+     },
+     "n": 100
+    },
+    "OLS w/o Cook's top5": {
+     "coef": {
+      "loyalty_score": -0.0693,
+      "spillover_score": 0.3604
+     },
+     "se": {
+      "loyalty_score": 0.0473,
+      "spillover_score": 0.0631
+     },
+     "p": {
+      "loyalty_score": 0.14613,
+      "spillover_score": 0.0
+     },
+     "n": 95
+    },
+    "dropped_top5": [
+     "god",
+     "이효리",
+     "BTS",
+     "투어스(TWS)",
+     "지드래곤 (G-Dragon)"
+    ],
+    "agreement": {
+     "loyalty_score": {
+      "same_sign_all": true,
+      "same_significance_all": true,
+      "sign_OLS": -1,
+      "significant": {
+       "OLS": false,
+       "Huber(RLM)": false,
+       "Quantile(q=0.5)": false,
+       "OLS w/o Cook's top5": false
+      }
+     },
+     "spillover_score": {
+      "same_sign_all": true,
+      "same_significance_all": true,
+      "sign_OLS": 1,
+      "significant": {
+       "OLS": true,
+       "Huber(RLM)": true,
+       "Quantile(q=0.5)": true,
+       "OLS w/o Cook's top5": true
+      }
+     }
+    }
+   }
+  },
+  "frozen_7350": {
+   "spillover ~ loyalty + activity": {
+    "OLS": {
+     "coef": {
+      "loyalty_score": -0.3136,
+      "activity": 0.0087
+     },
+     "se": {
+      "loyalty_score": 0.065,
+      "activity": 0.0005
+     },
+     "p": {
+      "loyalty_score": 1e-05,
+      "activity": 0.0
+     },
+     "n": 100
+    },
+    "Huber(RLM)": {
+     "coef": {
+      "loyalty_score": -0.3117,
+      "activity": 0.0085
+     },
+     "se": {
+      "loyalty_score": 0.0617,
+      "activity": 0.0005
+     },
+     "p": {
+      "loyalty_score": 0.0,
+      "activity": 0.0
+     },
+     "n": 100
+    },
+    "Quantile(q=0.5)": {
+     "coef": {
+      "loyalty_score": -0.3348,
+      "activity": 0.0085
+     },
+     "se": {
+      "loyalty_score": 0.078,
+      "activity": 0.0006
+     },
+     "p": {
+      "loyalty_score": 4e-05,
+      "activity": 0.0
+     },
+     "n": 100
+    },
+    "OLS w/o Cook's top5": {
+     "coef": {
+      "loyalty_score": -0.2917,
+      "activity": 0.0083
+     },
+     "se": {
+      "loyalty_score": 0.0619,
+      "activity": 0.0005
+     },
+     "p": {
+      "loyalty_score": 1e-05,
+      "activity": 0.0
+     },
+     "n": 95
+    },
+    "dropped_top5": [
+     "임영웅",
+     "SEVENTEEN",
+     "이효리",
+     "TWICE",
+     "지드래곤 (G-Dragon)"
+    ],
+    "agreement": {
+     "loyalty_score": {
+      "same_sign_all": true,
+      "same_significance_all": true,
+      "sign_OLS": -1,
+      "significant": {
+       "OLS": true,
+       "Huber(RLM)": true,
+       "Quantile(q=0.5)": true,
+       "OLS w/o Cook's top5": true
+      }
+     },
+     "activity": {
+      "same_sign_all": true,
+      "same_significance_all": true,
+      "sign_OLS": 1,
+      "significant": {
+       "OLS": true,
+       "Huber(RLM)": true,
+       "Quantile(q=0.5)": true,
+       "OLS w/o Cook's top5": true
+      }
+     }
+    }
+   },
+   "factor_diversity ~ loyalty + spillover": {
+    "OLS": {
+     "coef": {
+      "loyalty_score": 0.0267,
+      "spillover_score": -0.043
+     },
+     "se": {
+      "loyalty_score": 0.0371,
+      "spillover_score": 0.0412
+     },
+     "p": {
+      "loyalty_score": 0.47257,
+      "spillover_score": 0.29938
+     },
+     "n": 100
+    },
+    "Huber(RLM)": {
+     "coef": {
+      "loyalty_score": 0.0308,
+      "spillover_score": -0.0442
+     },
+     "se": {
+      "loyalty_score": 0.0363,
+      "spillover_score": 0.0404
+     },
+     "p": {
+      "loyalty_score": 0.39732,
+      "spillover_score": 0.27366
+     },
+     "n": 100
+    },
+    "Quantile(q=0.5)": {
+     "coef": {
+      "loyalty_score": 0.0688,
+      "spillover_score": -0.0561
+     },
+     "se": {
+      "loyalty_score": 0.0419,
+      "spillover_score": 0.0466
+     },
+     "p": {
+      "loyalty_score": 0.10412,
+      "spillover_score": 0.23163
+     },
+     "n": 100
+    },
+    "OLS w/o Cook's top5": {
+     "coef": {
+      "loyalty_score": 0.0301,
+      "spillover_score": -0.0533
+     },
+     "se": {
+      "loyalty_score": 0.0352,
+      "spillover_score": 0.0397
+     },
+     "p": {
+      "loyalty_score": 0.3952,
+      "spillover_score": 0.18308
+     },
+     "n": 95
+    },
+    "dropped_top5": [
+     "지드래곤 (G-Dragon)",
+     "레드벨벳",
+     "pH-1",
+     "임영웅",
+     "에픽하이"
+    ],
+    "agreement": {
+     "loyalty_score": {
+      "same_sign_all": true,
+      "same_significance_all": true,
+      "sign_OLS": 1,
+      "significant": {
+       "OLS": false,
+       "Huber(RLM)": false,
+       "Quantile(q=0.5)": false,
+       "OLS w/o Cook's top5": false
+      }
+     },
+     "spillover_score": {
+      "same_sign_all": true,
+      "same_significance_all": true,
+      "sign_OLS": -1,
+      "significant": {
+       "OLS": false,
+       "Huber(RLM)": false,
+       "Quantile(q=0.5)": false,
+       "OLS w/o Cook's top5": false
+      }
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,198 @@
+{
+ "ad": {
+  "matched": 1308,
+  "matched_original_json": 1302,
+  "unmatched": 8712,
+  "near_miss_unmatched_with_hint": 284,
+  "near_miss_share_of_unmatched": 0.0326,
+  "recall_upper_bound_if_all_near_miss_are_true": 0.8216,
+  "hint_terms": {
+   "협업": 154,
+   "출시": 38,
+   "콜라보": 35,
+   "굿즈": 33,
+   "팝업스토어": 19,
+   "한정판": 12,
+   "쇼핑": 12,
+   "론칭": 11,
+   "제품": 11,
+   "컬래버": 8,
+   "단독 판매": 1
+  },
+  "hint_lexicon": [
+   "콜라보",
+   "컬래버",
+   "협업",
+   "엠버서더",
+   "론칭",
+   "출시",
+   "팝업스토어",
+   "굿즈",
+   "한정판",
+   "단독 판매",
+   "제품",
+   "쇼핑"
+  ]
+ },
+ "media": {
+  "matched": 1025,
+  "matched_original_json": 1025,
+  "unmatched": 8995,
+  "near_miss_unmatched_with_hint": 214,
+  "near_miss_share_of_unmatched": 0.0238,
+  "recall_upper_bound_if_all_near_miss_are_true": 0.8273,
+  "hint_terms": {
+   "라디오": 47,
+   "위버스": 29,
+   "다큐": 24,
+   "뮤지컬": 20,
+   "넷플릭스": 15,
+   "애니메이션": 13,
+   "고정 출연": 12,
+   "방송 출연": 10,
+   "웨이브": 10,
+   "틱톡": 8,
+   "토크쇼": 6,
+   "OTT": 6,
+   "연극": 5,
+   "쿠팡플레이": 4,
+   "디즈니": 4,
+   "숏폼": 4,
+   "티빙": 3,
+   "TV 출연": 2,
+   "시트콤": 2,
+   "브이라이브": 1
+  },
+  "hint_lexicon": [
+   "다큐",
+   "라디오",
+   "팟캐스트",
+   "OTT",
+   "넷플릭스",
+   "디즈니",
+   "티빙",
+   "웨이브",
+   "쿠팡플레이",
+   "시트콤",
+   "토크쇼",
+   "뮤지컬",
+   "연극",
+   "틱톡",
+   "숏폼",
+   "브이라이브",
+   "위버스",
+   "애니메이션",
+   "방송 출연",
+   "TV 출연",
+   "고정 출연"
+  ]
+ },
+ "region": {
+  "matched": 940,
+  "matched_original_json": null,
+  "unmatched": 9080,
+  "near_miss_unmatched_with_hint": 93,
+  "near_miss_share_of_unmatched": 0.0102,
+  "recall_upper_bound_if_all_near_miss_are_true": 0.91,
+  "hint_terms": {
+   "동해": 24,
+   "고양": 20,
+   "전국 투어": 12,
+   "지방": 9,
+   "사천": 5,
+   "일산": 4,
+   "정선": 4,
+   "고성": 3,
+   "평창": 3,
+   "수도권": 2,
+   "파주": 2,
+   "김포": 2,
+   "지역 축제": 1,
+   "군산": 1,
+   "여수": 1,
+   "충주": 1,
+   "안동": 1,
+   "용인": 1
+  },
+  "hint_lexicon": [
+   "고양",
+   "일산",
+   "용인",
+   "파주",
+   "평택",
+   "여수",
+   "광양",
+   "군산",
+   "익산",
+   "안동",
+   "통영",
+   "사천",
+   "밀양",
+   "양산",
+   "제천",
+   "충주",
+   "서산",
+   "태안",
+   "동해",
+   "삼척",
+   "평창",
+   "정선",
+   "김포",
+   "수도권",
+   "지방",
+   "전국 투어",
+   "지역 축제",
+   "고성"
+  ]
+ },
+ "review_results": {
+  "reviewer": "모델 판독(Claude) — 사람 검수 아님. 표본 200건 × 3, seed 0",
+  "per_index": {
+   "ad": {
+    "reviewed": 200,
+    "should_have_matched": 7,
+    "miss_share": 0.035,
+    "miss_share_ci95": [
+     0.0171,
+     0.0705
+    ],
+    "estimated_missed_bullets": 305,
+    "recall_estimate": 0.811,
+    "recall_ci95": [
+     0.681,
+     0.898
+    ]
+   },
+   "media": {
+    "reviewed": 200,
+    "should_have_matched": 17,
+    "miss_share": 0.085,
+    "miss_share_ci95": [
+     0.0537,
+     0.1319
+    ],
+    "estimated_missed_bullets": 765,
+    "recall_estimate": 0.573,
+    "recall_ci95": [
+     0.464,
+     0.68
+    ]
+   },
+   "region": {
+    "reviewed": 200,
+    "should_have_matched": 6,
+    "miss_share": 0.03,
+    "miss_share_ci95": [
+     0.0138,
+     0.0639
+    ],
+    "estimated_missed_bullets": 272,
+    "recall_estimate": 0.775,
+    "recall_ci95": [
+     0.618,
+     0.882
+    ]
+   }
+  }
+ }
+}

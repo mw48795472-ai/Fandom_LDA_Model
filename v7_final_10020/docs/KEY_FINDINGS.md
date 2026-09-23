@@ -1,7 +1,7 @@
 # 핵심 수치 요약 (Quick Reference)
 
 보고서에서 반복 인용되는 수치를 한곳에 모은 참고 문서. 각 수치의 근거 파일(`data/v7_final/`)과 계층(동결 스냅샷 7,350건 vs
-라이브 10,020건)을 함께 적었고, `verify_v7_final_consistency.py`로 재계산해 대조했다(105/105 일치).
+라이브 10,020건)을 함께 적었고, `verify_v7_final_consistency.py`로 재계산해 대조했다(107/107 일치).
 
 ## 코퍼스 규모 — 라이브 코퍼스 `data/v7_final/fandoms_v3_100.json`
 - 분석 대상 팬덤: 100개
@@ -26,6 +26,7 @@
   최솟값 8, K=8은 9; 토픽 상위어는 `topic_cards_v7.json`과 동일), `persona_decision_space_v7.json`(Persona_결정공간.html 내장)
 - K=9 추가 검증(`k9_validation_v7.json`, 9,614문서 중간 라운드): K=9를 그리드에 넣어도 승자는 K=8이며, 미디어 토픽은 M≥6에서만
   단독 메타팩터로 분리됨
+- (동결 스냅샷 값. 게이트 v2 채택 뒤 README 4·5절의 라이브 해석 계층은 글로벌투어형 62 · 원정소비형 17 · 현장상업형 12 · 집단동원형 9 — `analysis/persona_decision_space/live_interpretive_layer/`)
 - 페르소나 4유형: 글로벌투어형(F3+F5, n=43) · 현장상업형(F3+F4, n=31) · 원정소비형(F2+F3, n=17) ·
   집단동원형(F1+F3, n=9) — F3(현장경제 경로)가 4유형 전부의 공통 기반 — `fan_persona_v7.json`
 - 팬덤별 F1∼F5 비중과 동결 스냅샷 점수: `fandom_scores_v6.csv` / `.json` (activity 합 = 7,350). JSON의 raw 점수·coverage_detail로
@@ -124,6 +125,6 @@
   r=-0.393(p=0.008, R²=0.155)이 가장 크지만 MCI∼멤버 수 r=-0.749로, 멤버 수를 뺀 MCI_excess 기준으로는 어떤 outcome과도
   유의하지 않음(최대 R²=0.036). 최종 10,020건 MCI로 재계산하면 r=-0.385, MCI∼멤버 수 r=-0.728, MCI_excess 최대 R²=0.046
   (상세 보고서 7.4절 표와 전부 일치 — `Statistics/R_통계검증/` 7.4절 35/35. 그 패키지의 `data/member_mention_pilot_v7.json`은
-  `member_mention_index_v7.json`과 값이 같고 키 이름만 `mci_pilot`/`mci_index`로 다르다)
+  `member_mention_index_v7.json`과 값이 같고 키 이름만 `mci_pilot`/`mci_index`로 다르다). 시점을 맞춘 재산출(최종 MCI × 라이브 점수 10,020건)도 같은 결론: 원시 r=-0.390, MCI_excess 최대 R²=0.028, 정규화 HHI 최대 R²=0.035 (`analysis/group_member_index/MCI_SAME_PERIOD_V7.md`)
 - K=10 토픽 카드(`topic_cards_v7.json`): 토픽별 상위 키워드·대표 불릿 3건·대표 팬덤 5개·연결 F 경로. 명칭은 METHODOLOGY.md
   2-1 표와 동일

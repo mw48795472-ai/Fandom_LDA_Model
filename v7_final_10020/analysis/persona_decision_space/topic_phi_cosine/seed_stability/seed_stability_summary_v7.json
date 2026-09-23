@@ -1,0 +1,213 @@
+{
+ "settings": {
+  "seeds": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ],
+  "K": [
+   8,
+   10
+  ],
+  "lda": "max_iter=50, batch",
+  "vectorizer": "max_df=0.6, min_df=2",
+  "tokenizer": "run_lda_v6_live_reference_v7.py 마커 절"
+ },
+ "reference": {
+  "frozen_snapshot_silhouette": 0.267,
+  "live_reference_silhouette": 0.046
+ },
+ "results": {
+  "live_10020_K8": {
+   "corpus": "live_10020",
+   "K": 8,
+   "n_seeds": 10,
+   "silhouette_M5": {
+    "min": 0.0728,
+    "median": 0.1018,
+    "max": 0.1751,
+    "values": [
+     0.076,
+     0.1751,
+     0.1291,
+     0.1103,
+     0.1021,
+     0.1031,
+     0.0748,
+     0.0961,
+     0.1015,
+     0.0728
+    ]
+   },
+   "silhouette_best_M": {
+    "min": 0.0728,
+    "median": 0.1167,
+    "max": 0.1919,
+    "best_M_by_seed": [
+     6,
+     4,
+     5,
+     5,
+     4,
+     5,
+     5,
+     4,
+     6,
+     5
+    ]
+   },
+   "topic_jaccard_top10": {
+    "min": 0.2279,
+    "median": 0.3954,
+    "max": 0.5316
+   },
+   "n_seeds_M5_ge_0267": 0,
+   "n_seeds_best_ge_0267": 0
+  },
+  "live_10020_K10": {
+   "corpus": "live_10020",
+   "K": 10,
+   "n_seeds": 10,
+   "silhouette_M5": {
+    "min": 0.0606,
+    "median": 0.0911,
+    "max": 0.173,
+    "values": [
+     0.1115,
+     0.0924,
+     0.0804,
+     0.119,
+     0.1334,
+     0.0606,
+     0.0898,
+     0.0691,
+     0.173,
+     0.0736
+    ]
+   },
+   "silhouette_best_M": {
+    "min": 0.0822,
+    "median": 0.1087,
+    "max": 0.1734,
+    "best_M_by_seed": [
+     5,
+     6,
+     7,
+     6,
+     4,
+     7,
+     6,
+     6,
+     6,
+     8
+    ]
+   },
+   "topic_jaccard_top10": {
+    "min": 0.3232,
+    "median": 0.3929,
+    "max": 0.5242
+   },
+   "n_seeds_M5_ge_0267": 0,
+   "n_seeds_best_ge_0267": 0
+  },
+  "frozen_approx_7326_K8": {
+   "corpus": "frozen_approx_7326",
+   "K": 8,
+   "n_seeds": 10,
+   "silhouette_M5": {
+    "min": 0.0402,
+    "median": 0.0858,
+    "max": 0.127,
+    "values": [
+     0.0626,
+     0.0759,
+     0.0402,
+     0.1049,
+     0.0578,
+     0.1117,
+     0.1266,
+     0.0957,
+     0.127,
+     0.0538
+    ]
+   },
+   "silhouette_best_M": {
+    "min": 0.0459,
+    "median": 0.1201,
+    "max": 0.1697,
+    "best_M_by_seed": [
+     6,
+     4,
+     4,
+     4,
+     6,
+     6,
+     5,
+     4,
+     4,
+     6
+    ]
+   },
+   "topic_jaccard_top10": {
+    "min": 0.3204,
+    "median": 0.4026,
+    "max": 0.5263
+   },
+   "n_seeds_M5_ge_0267": 0,
+   "n_seeds_best_ge_0267": 0
+  },
+  "frozen_approx_7326_K10": {
+   "corpus": "frozen_approx_7326",
+   "K": 10,
+   "n_seeds": 10,
+   "silhouette_M5": {
+    "min": 0.0554,
+    "median": 0.0972,
+    "max": 0.1364,
+    "values": [
+     0.07,
+     0.0554,
+     0.0779,
+     0.1245,
+     0.1257,
+     0.1216,
+     0.0841,
+     0.1002,
+     0.0941,
+     0.1364
+    ]
+   },
+   "silhouette_best_M": {
+    "min": 0.079,
+    "median": 0.1191,
+    "max": 0.1617,
+    "best_M_by_seed": [
+     6,
+     4,
+     6,
+     6,
+     5,
+     4,
+     7,
+     4,
+     5,
+     4
+    ]
+   },
+   "topic_jaccard_top10": {
+    "min": 0.331,
+    "median": 0.4044,
+    "max": 0.485
+   },
+   "n_seeds_M5_ge_0267": 0,
+   "n_seeds_best_ge_0267": 0
+  }
+ }
+}

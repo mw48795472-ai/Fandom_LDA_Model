@@ -160,11 +160,13 @@ Activity(f) = n_loyalty(f) + n_spillover(f)                                    (
 - `verify_v7_final_consistency.py` (저장소 루트) — [C]·[V]·[Z] 항목에서 식(1)의 원점수 재현과
   ln(14)/ln(13) 분모를 코퍼스·점수 파일로 직접 확인한다.
 - `data/v7_final/README.md` — 두 점수 파일과 코퍼스 파일의 계층 구분.
+- `EXPOSURE_ADJUSTMENT_V7.md` + `build_exposure_adjusted_scores_v7.py` (같은 폴더, L12) — 같은 문장 점수에서 건수에 덜 의존하는 정의(밀도·노출량 잔차)를 만들어 원 지수와 나란히 둔 병행 분석과 `exposure_adjusted_scores_v7.csv`.
 
 ## 한계
 
-1. 식(1)의 문장 단위 중간 결과(개별 근거문장의 EvidenceScore)는 파일로 저장되어 있지 않다.
-   다만 저장소의 코퍼스 10,020건에 산식을 적용하면 팬덤별 합산값이 그대로 재현되므로, 필요하면
-   `verify_v7_final_consistency.py`의 `evidence_score()`로 언제든 다시 산출할 수 있다.
-2. 시간(Time) 하위지표의 분모("코퍼스 전체 연도 범위 수")는 점수 파일에 `years_mentioned`만
-   저장되어 있어, 저장된 `time_coverage`로부터 분모를 역산해 확인했다(최종 파일 12개 연도 범위).
+1. 식(1)의 문장 단위 중간 결과(개별 근거문장의 EvidenceScore)는 원 산출물에는 없었다. 지금은
+   `export_evidence_score_sentences_v7.py`가 `evidence_score_by_sentence_v7.csv`(10,020행: 수치표현 수·보너스 키워드·문장 점수·연도)로
+   저장하며, 팬덤별 합이 `loyalty_raw`/`spillover_raw`와 100/100 일치함을 스크립트가 확인한다.
+2. 시간(Time) 하위지표의 분모("코퍼스 전체 연도 범위 수")도 원 산출물에는 `years_mentioned`만 있었다. 같은 스크립트가
+   `index_intermediate_values_v7.json`에 코퍼스 연도 목록(2015∼2026, 12개)과 `time_coverage` 재현 100/100을 기록한다.
+3. **식(1)·(2)의 점수는 조사 노출량(팬덤별 수집 불릿 수)에 비례한다.** 합의 min-max 라 점수와 건수의 r이 라이브 0.90(충성도)·0.96(파급효과), 동결 0.94·0.96이다. 활동을 통제한 충성도·파급효과 편상관은 음수(−0.38)로, 판별타당도 r(0.49 vs 동결 0.64)의 반전은 건수 구조의 산물이다. 문장당 평균 EvidenceScore(밀도) 정의로 보면 r은 라이브 0.43·동결 0.40으로 두 스냅샷 모두 기준(|r|<0.5)을 만족하고 상위 15 순위는 5/15만 겹친다(`EXPOSURE_ADJUSTMENT_V7.md`). 원 지수는 '규모', 밀도는 '근거 한 건의 밀도'라는 다른 질문이므로 병기한다.

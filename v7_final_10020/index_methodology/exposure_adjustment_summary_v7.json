@@ -1,0 +1,223 @@
+{
+ "definitions": {
+  "original": "minmax(Σ EvidenceScore)",
+  "density": "minmax(mean EvidenceScore per sentence)",
+  "exposure_residual": "minmax(residual of log Σ on log n)"
+ },
+ "live_10020": {
+  "label": "live_10020",
+  "n": 100,
+  "definitions": {
+   "original": {
+    "r_loyalty_vs_n_loyalty": 0.9035,
+    "r_spillover_vs_n_spillover": 0.9596,
+    "r_loyalty_vs_activity": 0.694,
+    "r_spillover_vs_activity": 0.9019,
+    "r_loyalty_spillover": {
+     "r": 0.4932,
+     "p": 0.0
+    },
+    "partial_r_given_activity": {
+     "r": -0.3764,
+     "p": 0.000114
+    },
+    "spearman_rank_vs_original_loyalty": 1.0,
+    "spearman_rank_vs_original_spillover": 1.0,
+    "top15_by_sum": [
+     "BTS",
+     "TWICE",
+     "임영웅",
+     "BLACKPINK",
+     "NCT",
+     "Stray Kids",
+     "SEVENTEEN",
+     "god",
+     "aespa",
+     "지드래곤 (G-Dragon)",
+     "CORTIS",
+     "아이유",
+     "EXO",
+     "NewJeans",
+     "싸이"
+    ],
+    "top15_overlap_with_original": 15
+   },
+   "density": {
+    "r_loyalty_vs_n_loyalty": -0.1923,
+    "r_spillover_vs_n_spillover": 0.0939,
+    "r_loyalty_vs_activity": -0.1757,
+    "r_spillover_vs_activity": 0.0943,
+    "r_loyalty_spillover": {
+     "r": 0.4292,
+     "p": 8e-06
+    },
+    "partial_r_given_activity": {
+     "r": 0.4546,
+     "p": 2e-06
+    },
+    "spearman_rank_vs_original_loyalty": 0.1728,
+    "spearman_rank_vs_original_spillover": 0.3975,
+    "top15_by_sum": [
+     "임영웅",
+     "god",
+     "HOT",
+     "아이유",
+     "박서진",
+     "김재중",
+     "리센느(RESCENE)",
+     "싸이",
+     "슈퍼주니어",
+     "송가인",
+     "윤하",
+     "김동률",
+     "브라운아이즈",
+     "지드래곤 (G-Dragon)",
+     "ATEEZ"
+    ],
+    "top15_overlap_with_original": 5
+   },
+   "exposure_residual": {
+    "r_loyalty_vs_n_loyalty": -0.024,
+    "r_spillover_vs_n_spillover": -0.0039,
+    "r_loyalty_vs_activity": -0.0451,
+    "r_spillover_vs_activity": 0.0007,
+    "r_loyalty_spillover": {
+     "r": 0.496,
+     "p": 0.0
+    },
+    "partial_r_given_activity": {
+     "r": 0.4965,
+     "p": 0.0
+    },
+    "spearman_rank_vs_original_loyalty": 0.3468,
+    "spearman_rank_vs_original_spillover": 0.3045,
+    "top15_by_sum": [
+     "임영웅",
+     "god",
+     "아이유",
+     "HOT",
+     "김재중",
+     "박서진",
+     "리센느(RESCENE)",
+     "슈퍼주니어",
+     "싸이",
+     "송가인",
+     "윤하",
+     "김동률",
+     "지드래곤 (G-Dragon)",
+     "ATEEZ",
+     "브라운아이즈"
+    ],
+    "top15_overlap_with_original": 5
+   }
+  }
+ },
+ "frozen_7350": {
+  "label": "frozen_7350",
+  "n": 100,
+  "definitions": {
+   "original": {
+    "r_loyalty_vs_n_loyalty": 0.9449,
+    "r_spillover_vs_n_spillover": 0.956,
+    "r_loyalty_vs_activity": 0.8307,
+    "r_spillover_vs_activity": 0.8974,
+    "r_loyalty_spillover": {
+     "r": 0.6375,
+     "p": 0.0
+    },
+    "partial_r_given_activity": {
+     "r": -0.2544,
+     "p": 0.010649
+    },
+    "spearman_rank_vs_original_loyalty": 1.0,
+    "spearman_rank_vs_original_spillover": 1.0,
+    "top15_by_sum": [
+     "BTS",
+     "TWICE",
+     "임영웅",
+     "Stray Kids",
+     "BLACKPINK",
+     "SEVENTEEN",
+     "지드래곤 (G-Dragon)",
+     "NCT",
+     "CORTIS",
+     "aespa",
+     "NewJeans",
+     "RIIZE",
+     "ATEEZ",
+     "레드벨벳",
+     "아이유"
+    ],
+    "top15_overlap_with_original": 15
+   },
+   "density": {
+    "r_loyalty_vs_n_loyalty": -0.2509,
+    "r_spillover_vs_n_spillover": 0.0843,
+    "r_loyalty_vs_activity": -0.2122,
+    "r_spillover_vs_activity": 0.0695,
+    "r_loyalty_spillover": {
+     "r": 0.4027,
+     "p": 3.3e-05
+    },
+    "partial_r_given_activity": {
+     "r": 0.4306,
+     "p": 8e-06
+    },
+    "spearman_rank_vs_original_loyalty": 0.0723,
+    "spearman_rank_vs_original_spillover": 0.3626,
+    "top15_by_sum": [
+     "김동률",
+     "임영웅",
+     "박서진",
+     "싸이",
+     "김재중",
+     "HOT",
+     "god",
+     "리센느(RESCENE)",
+     "GOT7",
+     "아이유",
+     "송가인",
+     "브라운아이즈",
+     "지드래곤 (G-Dragon)",
+     "슈퍼주니어",
+     "ATEEZ"
+    ],
+    "top15_overlap_with_original": 4
+   },
+   "exposure_residual": {
+    "r_loyalty_vs_n_loyalty": -0.042,
+    "r_spillover_vs_n_spillover": -0.0112,
+    "r_loyalty_vs_activity": -0.0241,
+    "r_spillover_vs_activity": -0.0248,
+    "r_loyalty_spillover": {
+     "r": 0.4293,
+     "p": 8e-06
+    },
+    "partial_r_given_activity": {
+     "r": 0.4291,
+     "p": 8e-06
+    },
+    "spearman_rank_vs_original_loyalty": 0.2705,
+    "spearman_rank_vs_original_spillover": 0.2743,
+    "top15_by_sum": [
+     "김동률",
+     "임영웅",
+     "싸이",
+     "박서진",
+     "김재중",
+     "HOT",
+     "god",
+     "리센느(RESCENE)",
+     "GOT7",
+     "아이유",
+     "송가인",
+     "지드래곤 (G-Dragon)",
+     "ATEEZ",
+     "슈퍼주니어",
+     "BTOB"
+    ],
+    "top15_overlap_with_original": 4
+   }
+  }
+ }
+}
