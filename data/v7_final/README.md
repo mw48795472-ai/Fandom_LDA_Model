@@ -3,6 +3,7 @@
 | 파일 | 계층 | 내용 |
 |---|---|---|
 | `fandoms_v3_100.json` | 라이브 10,020건 | 근거문장 원본 코퍼스. 100개 팬덤 × `loyalty`/`spillover` 배열, 원소 `{t: 문장, u: 출처 URL}` |
+| `frozen_snapshot_v7_40/` | 동결 근사 복원본 7,326건 | 동결 7,350건 코퍼스의 근사 복원본(`fandoms_v7_40_frozen_reconstructed.json`, 평면 CSV, manifest, 후보 검사기). 라이브 목록 앞부분을 동결 건수만큼 자른 것으로 97개 팬덤은 EvidenceScore 지문까지 동결과 일치, BE'O·pH-1·한로로는 r22 백업 시점(유실 24건). 폴더 README 참고 |
 | `bullets_flat_v7_final.csv` | 라이브 10,020건 | 위 JSON을 `fandom, category, bullet_type, text, url` 평면 CSV로 펼친 것 (`v7_final_10020/data_export/build_bullets_flat_csv.py`) |
 | `language_domain_summary_v7.json` | 라이브 10,020건 | 14개 언어권별 근거 건수·도메인 수·상위 도메인 (보고서 표 2-2). 합 10,020건 |
 | `chart3d_payload_live_reference_v7.json` | 라이브 10,020건 | 3D 포지셔닝맵 HTML 내장 payload: 100개 팬덤 loyalty/spillover/diversity/coverage/activity/quadrant, 표본 평균 0.37103/0.26605, 4구획 24/17/10/49, 라이브 재적합 K=8/M=5/실루엣 0.046 (`v7_final_10020/data_export/extract_html_payloads.py`) |
@@ -40,6 +41,7 @@
 정합성 검증: 저장소 루트의 `verify_v7_final_consistency.py`.
 실루엣 게이트 타임라인 CSV는 `../silhouette_gate_timeline/corpus_silhouette_timeline_v7_66_2ch.csv`.
 저장소에 없는 최종 산출물: 국내 지역 지수 라이브 JSON(대신 `v7_final_10020/analysis/domestic_regional_index/`의 산출본을 스크립트가 읽음),
-동결 스냅샷의 토픽 간 코사인 거리 행렬·φ(원본 데이터 묶음(`ARCHIVE_README_original.md`)에도 파일로 없었다. 병합 높이만 `persona_decision_space_v7.json`의 `dendro.merges`에 있다). 그 밖의 미보유분은 루트 README 9절.
+동결 스냅샷의 토픽 간 코사인 거리 행렬·φ(원본 데이터 묶음(`ARCHIVE_README_original.md`)에도 파일로 없었다. 병합 높이만 `persona_decision_space_v7.json`의 `dendro.merges`에 있다).
+동결 7,350건 코퍼스 원본도 없지만 `frozen_snapshot_v7_40/`의 근사 복원본(7,326건)이 그 자리를 대신한다. 그 밖의 미보유분은 루트 README 9절.
 
 **같은 이름 주의**: `fandom_scores_v6.json`·`lda_v6_diagnostics.json`은 r22 백업 zip(`archive/v6_r22_era_backup.zip`) 안에도 **같은 이름의 r22 시점 파일**이 있다(activity 합 5,612, K=8·M=6·실루엣 0.154). 파일명의 v6은 파이프라인 버전이지 스냅샷 시점이 아니므로, 동결 v7-40 값은 반드시 `data/v7_final/`의 것을 쓴다.

@@ -1,7 +1,7 @@
 # 국내 대표 팬덤 100개 LDA 토픽모델링 — 팬충성도 × 파급효과 × 팬 요인 구조
 
 > **핵심 요약판.**  보고서(`(분석보고서)…최종.pdf`, `(요약보고서)…최종.pdf`)의 최종 결과·대표 차트·모델 설명을
-> 한 페이지로 압축했다. 라운드별 진행 이력은 생략하고, 저장소의 모든 수치는 `verify_v7_final_consistency.py`(101/101)와 R 교차검증(238/238)으로 파일에서 재현된다.
+> 한 페이지로 압축했다. 라운드별 진행 이력은 생략하고, 저장소의 모든 수치는 `verify_v7_final_consistency.py`(105/105)와 R 교차검증(238/238)으로 파일에서 재현된다.
 
 | 항목 | 내용 |
 |---|---|
@@ -75,9 +75,9 @@ flowchart LR
 |---|---|---|
 | EvidenceScore | Σ_t [1.0 + 0.5·n_num(t) + 0.3·n_kx(t)] — 문장당 기본 1점 + 수치표현 0.5 + 보너스 키워드(충성도 19·파급효과 18) 0.3 | 코퍼스에서 100/100 원점수 재현 |
 | 팬충성도·파급효과 | 원점수의 표본 내 min-max 정규화 (0∼1) | 3D 맵 payload와 100/100 일치 |
-| Coverage Index | 0.30·언어 엔트로피(ln 14) + 0.25·시장/6 + 0.20·출처유형/3 + 0.15·연도/12 + 0.10·엔티티/6 | 0/100 불일치 |
-| 팬 요인 다양성 | −Σ pₘ ln pₘ / ln M — 메타팩터 비중 분포의 정규화 엔트로피 | 0/100 불일치 |
-| 활동량 | 충성도 + 파급효과 근거문장 수 (합 10,020) | 0/100 불일치 |
+| Coverage Index | 0.30·언어 엔트로피(ln 14) + 0.25·시장/6 + 0.20·출처유형/3 + 0.15·연도/12 + 0.10·엔티티/6 | 100/100 일치 (불일치 0) |
+| 팬 요인 다양성 | −Σ pₘ ln pₘ / ln M — 메타팩터 비중 분포의 정규화 엔트로피 | 100/100 일치 (불일치 0) |
+| 활동량 | 충성도 + 파급효과 근거문장 수 (합 10,020) | 100/100 일치 (불일치 0) |
 
 **두 데이터 계층** — 같은 팬덤의 점수가 파일마다 다르게 보이는 이유
 
@@ -241,7 +241,7 @@ flowchart LR
 ## 8. 한계 및 결론
 
 - 전수조사가 아니라 뉴스·위키·공개 커뮤니티 표본이며, SNS는 2차 보도로만 반영된다.
-- 해석 계층(K→F→페르소나, 전체 순위표)은 v7-40 스냅샷(7,350건)에 고정되어 있고, 로스터 교체 3건(BE'O→빈지노 · 한로로→몬스타엑스 · pH-1→투어스)을 포함한 라이브 코퍼스는 보조지표에만 반영된다.
+- 해석 계층(K→F→페르소나, 전체 순위표)은 v7-40 스냅샷(7,350건)에 고정되어 있고, 로스터 교체 3건(BE'O→빈지노 · 한로로→몬스타엑스 · pH-1→투어스)을 포함한 라이브 코퍼스는 보조지표에만 반영된다. 동결 코퍼스 원본은 남아 있지 않아 `data/v7_final/frozen_snapshot_v7_40/`의 근사 복원본(97개 팬덤은 문장 집합까지 동일, 교체된 3개 팬덤은 r22 시점까지, 7,326/7,350건)으로 대신한다.
 - 판별타당도(|r|<0.5)와 Z축 독립성은 스냅샷에 따라 결론이 뒤집혔다. 단일 스냅샷만으로 통계적 결론을 확정하기 어렵다는 근거다.
 - 보조지표는 사전에 없는 표현(다큐멘터리·라디오, 사전 밖 브랜드명)을 포착하지 못하고, MCI는 멤버 수가 적을수록 구조적으로 높다.
 - 그럼에도 다중회귀·4구획·민감도 분석의 트레이드오프 구조는 두 스냅샷 모두에서 같았다. 팬덤 영향력은 **크기(점수)와 구조(요인 다양성·경로)를 함께** 봐야 한다는 것이 이 분석의 결론이다.
@@ -253,14 +253,16 @@ flowchart LR
 **재현 명령 (저장소 루트, Python 3.10+; scipy·statsmodels·scikit-learn·pandas·matplotlib, 토크나이저는 fugashi unidic-lite jieba pythainlp)**
 
 ```bash
-python verify_v7_final_consistency.py                                        # 보고서 수치 ↔ data/v7_final 101/101
+python verify_v7_final_consistency.py                                        # 보고서 수치 ↔ data/v7_final 105/105
 python Statistics/verify_r_sections_python.py                                # 통계 검정 238개 항목 (R 패키지와 같은 정답지)
 python v7_final_10020/index_methodology/build_index_calculation_notebook.py  # 식(1)~(7) 지표 산정 노트북
 python v7_final_10020/analysis/build_notebooks_v7.py                          # 보조지표·페르소나·토크나이저 노트북 8개
 python v7_final_10020/analysis/persona_decision_space/build_persona_decision_space_notebook.py
 ```
 
-**저장소에 없는 것**: 최종 참고 재적합을 만든 14개 언어 라우팅 토크나이저(`run_lda_v6_live_reference_v7.py`), 동결 스냅샷의 φ·코사인 거리 행렬(원본 데이터 묶음에도 파일로 없었고 병합 높이 9개만 `Persona_결정공간.html`에 남아 있음), 동결 7,350건 코퍼스. 세 가지 모두 git 이력 전체와 백업 zip을 내용 기준으로 검색해 부재를 확인했다(다른 이름으로 들어 있지 않음). 저장소의 `run_lda_v6.py`는 이전 판 토크나이저의 파이프라인이라 10,020건에서 문서 수 9,954건으로 보고서와 다르며 로직 참고용이다. 같은 방법을 최종 코퍼스에 적용한 φ·코사인 거리 산출물과 학습 모델 pickle·단어 사전·manifest는 `v7_final_10020/analysis/persona_decision_space/topic_phi_cosine/`에 있다.
+**동결 코퍼스**: 원본 7,350건 파일은 원본 데이터 묶음에도 git 이력에도 없다(내용 기준으로 전수 검색). 대신 `data/v7_final/frozen_snapshot_v7_40/`에 **근사 복원본(7,326/7,350건)** 을 둔다. 라이브 코퍼스에서 팬덤별 목록 앞부분을 동결 시점 건수만큼 잘라낸 것으로, 97개 팬덤은 EvidenceScore 지문(`fandom_scores_v6.json`의 loyalty_raw/spillover_raw)이 1e-6 안에서 일치해 문장 집합까지 동결과 같고, 동결 이후 교체된 BE'O·pH-1·한로로 3개만 r22 백업 시점(유실 24건)이다. 방법·검증·한계는 그 폴더의 README와 manifest에 있다.
+
+**저장소에 없는 것**: 최종 참고 재적합을 만든 14개 언어 라우팅 토크나이저(`run_lda_v6_live_reference_v7.py`)와 동결 스냅샷의 φ·코사인 거리 행렬(원본 데이터 묶음에도 파일로 없었고 병합 높이 9개만 `Persona_결정공간.html`에 남아 있음). 둘 다 git 이력 전체와 백업 zip을 내용 기준으로 검색해 부재를 확인했다. 동결 모델의 재적합은 토크나이저가 재구성되어야 가능하다. 저장소의 `run_lda_v6.py`는 이전 판 토크나이저의 파이프라인이라 10,020건에서 문서 수 9,954건으로 보고서와 다르며 로직 참고용이다. 같은 방법을 최종 코퍼스에 적용한 φ·코사인 거리 산출물과 학습 모델 pickle·단어 사전·manifest는 `v7_final_10020/analysis/persona_decision_space/topic_phi_cosine/`에 있다.
 
 ```
 README.md                                   이 문서 (핵심 요약판)
@@ -268,10 +270,11 @@ README.md                                   이 문서 (핵심 요약판)
 3D_포지셔닝맵_국내100팬덤.html + plotly-bundle.js / Persona_결정공간.html   인터랙티브 산출물 (같은 폴더에서 열면 동작)
 qr_codes/                                   두 HTML의 QR 코드 + 아티팩트 링크·해시 대조
 assets/readme/                              이 문서의 그림 (제출 보고서 PDF·보고서 docx 원본 그림 + 데이터에서 다시 그린 그림, 가로 최대 2,400px; Q-Q plot은 Statistics/R_통계검증/outputs/plots/ 의 R 산출물을 직접 참조)
-verify_v7_final_consistency.py              최종 수치 ↔ 파일 정합성 검증 (101/101)
+verify_v7_final_consistency.py              최종 수치 ↔ 파일 정합성 검증 (105/105)
 run_lda_v6.py                               LDA 파이프라인 참고 구현 (--data/--out)
 data/
   v7_final/            최종 코퍼스 10,020건 + 최종 산출물 + 동결 스냅샷 산출물 (폴더 README)
+    frozen_snapshot_v7_40/   동결 7,350건 코퍼스 근사 복원본(7,326건, 97개 팬덤 문장 동일) + manifest + 후보 검사기
   v7_rounds/           v6 단계 로그 3개 + v7 병합·교체 로그 전량 (마지막 r72가 10,020건)
   silhouette_gate_timeline/  실루엣 게이트 타임라인 CSV (v4 종료~r66 2차)
 v7_final_10020/        ★ 10,020건 기준 문서·코드·노트북 전부 (폴더 README)

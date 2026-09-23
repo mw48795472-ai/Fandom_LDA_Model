@@ -1,7 +1,7 @@
 # 핵심 수치 요약 (Quick Reference)
 
 보고서에서 반복 인용되는 수치를 한곳에 모은 참고 문서. 각 수치의 근거 파일(`data/v7_final/`)과 계층(동결 스냅샷 7,350건 vs
-라이브 10,020건)을 함께 적었고, `verify_v7_final_consistency.py`로 재계산해 대조했다(101/101 일치).
+라이브 10,020건)을 함께 적었고, `verify_v7_final_consistency.py`로 재계산해 대조했다(105/105 일치).
 
 ## 코퍼스 규모 — 라이브 코퍼스 `data/v7_final/fandoms_v3_100.json`
 - 분석 대상 팬덤: 100개

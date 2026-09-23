@@ -1,0 +1,1207 @@
+{
+ "title": "v7-40 동결 스냅샷(7,350건) 코퍼스 근사 복원본",
+ "status": "근사 복원 — 97/100 팬덤은 문장 집합까지 동결과 동일(EvidenceScore 지문 일치), BE'O·pH-1·한로로 3개는 r22 백업 시점까지만",
+ "target_total": 7350,
+ "reconstructed_total": 7326,
+ "lost_bullets": 24,
+ "fully_reconstructed": {
+  "fandoms": 97,
+  "bullets": 7231
+ },
+ "partial": [
+  {
+   "fandom": "pH-1",
+   "frozen_loyalty": 18,
+   "frozen_spillover": 26,
+   "recon_loyalty": 13,
+   "recon_spillover": 21,
+   "evidence_score_fingerprint": "partial",
+   "lost": 10,
+   "source": "r22 백업(archive/v6_r22_era_backup.zip)",
+   "status": "부분 복원(r22 시점까지)",
+   "residual_frozen_raw_minus_r22": {
+    "loyalty": 7.3,
+    "spillover": 7.1
+   }
+  },
+  {
+   "fandom": "한로로",
+   "frozen_loyalty": 17,
+   "frozen_spillover": 24,
+   "recon_loyalty": 16,
+   "recon_spillover": 17,
+   "evidence_score_fingerprint": "partial",
+   "lost": 8,
+   "source": "r22 백업(archive/v6_r22_era_backup.zip)",
+   "status": "부분 복원(r22 시점까지)",
+   "residual_frozen_raw_minus_r22": {
+    "loyalty": 1.0,
+    "spillover": 8.9
+   }
+  },
+  {
+   "fandom": "BE'O",
+   "frozen_loyalty": 12,
+   "frozen_spillover": 22,
+   "recon_loyalty": 11,
+   "recon_spillover": 17,
+   "evidence_score_fingerprint": "partial",
+   "lost": 6,
+   "source": "r22 백업(archive/v6_r22_era_backup.zip)",
+   "status": "부분 복원(r22 시점까지)",
+   "residual_frozen_raw_minus_r22": {
+    "loyalty": 1.5,
+    "spillover": 6.5
+   }
+  }
+ ],
+ "method": {
+  "step1_prefix_cut": "fandom_scores_v6.json(동결 스냅샷)의 팬덤별 n_loyalty_bullets / n_spillover_bullets 만큼 라이브 코퍼스(fandoms_v3_100.json, 10,020건)의 각 목록 앞부분을 잘라냄. 병합 파이프라인은 신규 근거를 목록 끝에 추가하므로 앞부분 = v7-40 시점 문장. (같은 발상을 v7_final_10020/analysis/build_notebooks_v7.py의 국내 지역 지수 노트북 3절이 동결 근사에 이미 쓰고 있다)",
+  "step2_r56_revert": "여자친구 spillover 1건은 r56 문장 수정('해당 플랫폼' → '쇼피(Shopee)') 이후 값이 라이브에 있어 수정 전 문장으로 되돌림. 되돌린 뒤 여자친구의 EvidenceScore 지문이 동결값과 일치.",
+  "step3_r22_patch": "동결 이후 교체되어 라이브에 없는 BE'O(r58)·pH-1(r63)·한로로(r62)는 archive/v6_r22_era_backup.zip의 r22 시점 불릿(28·34·33건)을 그대로 씀. 최초 재구성본의 v5 시점 불릿(15·12·17건)은 r22 목록의 정확한 접두어였다."
+ },
+ "validation": {
+  "evidence_score_fingerprint": "97/100 팬덤에서 EvidenceScore 재계산값이 fandom_scores_v6.json의 loyalty_raw/spillover_raw와 오차 1e-6 안에서 일치. 이 점수는 각 문장의 숫자 패턴·키워드에서 계산되므로 건수가 아니라 문장 집합이 같다는 뜻",
+  "prefix_hypothesis_independent_test": "r13 스냅샷(5,099건)·r22 스냅샷(5,612건)을 라이브 목록과 대조하면 팬덤×유형 188개 중 187개가 라이브 목록의 정확한 접두어. 유일한 예외는 r56에 수정된 여자친구 spillover 문장 1건",
+  "post_freeze_new_domains": "r68(아랍어)·r71(스페인어)에서 처음 인용된 도메인(bloglabanana.com, ar.wikipedia.org, fr.wikipedia.org, larepublica.pe, asiaholic.net 등)이 잘라낸 앞부분에 0건, 전부 뒷부분에 있음",
+  "per_fandom_tail_vs_logs": "97개 팬덤 모두 뒷부분 길이 ≥ 병합 로그의 r41 이후 추가 건수 합(위반 0건)",
+  "r22_patch_consistency": "3개 팬덤 6개 목록 모두: 동결 raw 점수 − r22 불릿 점수 ≥ 유실 건수 × 1.0(문장 1건 최소 점수). 모순 없음",
+  "checker": "verify_frozen_corpus_candidate.py 결과 3/7 (구조·로스터 통과, 건수·지문 97/100). verify_v7_final_consistency.py [AD]절에도 항목으로 포함"
+ },
+ "known_limits": [
+  "BE'O·pH-1·한로로의 r23~r39 추가분 24건(6·10·8)은 교체 시 삭제되어 저장소 어디에도 원문이 없다. 동결 스냅샷 자체가 아니라 근사 복원본이다.",
+  "r74 스키마 감사에서 고친 필드(agentId 혼입 3건, 잘못된 URL 1건, source_type 값 1건)는 수정 후 값. 수정 전 원형은 로그에 없어 복원 불가.",
+  "일부 문장의 'st'/'source_type' 필드는 동결 이후 부여됐을 수 있음(LDA 학습에는 't'만 사용).",
+  "이 코퍼스로 동결 모델(K=10·M=5·실루엣 0.267)을 재적합하려면 14개 언어 라우팅 토크나이저(run_lda_v6_live_reference_v7.py)가 더 필요하다. 아직 저장소에 없다."
+ ],
+ "files": {
+  "fandoms_v7_40_frozen_reconstructed.json": {
+   "sha256": "098a132ec92e1330ebb6bbc2b53241e16d127d8c65ea56431357002d25e336bc",
+   "bytes": 1967791
+  },
+  "bullets_flat_v7_40_frozen_reconstructed.csv": {
+   "sha256": "0ab4f88a290b8cd48eb9cd1c573433efd58f954b8650fc7d4b9ac5200d414b9c",
+   "bytes": 1944715
+  }
+ },
+ "inputs": {
+  "data/v7_final/fandoms_v3_100.json": "b123a5bf7ab79bce88b78441408847d3177042a38d41c3f24dd7c68de7dd289c",
+  "data/v7_final/fandom_scores_v6.json": "268a3ee58946f97fdfb3a8d3f2a339b841ddba2d5acf4c47d70f476e4067e492",
+  "archive/v6_r22_era_backup.zip::v6_r22_era/data/v6_r22_snapshot/fandoms_v3_100.json": "8150fb26c2bdaa90c7bd1dd19b0b4f72e1ed7e38565603e2cea44c93b5182da8",
+  "최초 재구성본(사용자 제공, v5 시점 3개 팬덤 포함, 7,275건)": "3baa44dbab897015"
+ },
+ "per_fandom": [
+  {
+   "fandom": "BTS",
+   "frozen_loyalty": 62,
+   "frozen_spillover": 108,
+   "recon_loyalty": 62,
+   "recon_spillover": 108,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "TWICE",
+   "frozen_loyalty": 59,
+   "frozen_spillover": 85,
+   "recon_loyalty": 59,
+   "recon_spillover": 85,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "임영웅",
+   "frozen_loyalty": 50,
+   "frozen_spillover": 62,
+   "recon_loyalty": 50,
+   "recon_spillover": 62,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "Stray Kids",
+   "frozen_loyalty": 53,
+   "frozen_spillover": 85,
+   "recon_loyalty": 53,
+   "recon_spillover": 85,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "BLACKPINK",
+   "frozen_loyalty": 51,
+   "frozen_spillover": 95,
+   "recon_loyalty": 51,
+   "recon_spillover": 95,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "SEVENTEEN",
+   "frozen_loyalty": 66,
+   "frozen_spillover": 64,
+   "recon_loyalty": 66,
+   "recon_spillover": 64,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "지드래곤 (G-Dragon)",
+   "frozen_loyalty": 35,
+   "frozen_spillover": 75,
+   "recon_loyalty": 35,
+   "recon_spillover": 75,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "NCT",
+   "frozen_loyalty": 50,
+   "frozen_spillover": 66,
+   "recon_loyalty": 50,
+   "recon_spillover": 66,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "CORTIS",
+   "frozen_loyalty": 39,
+   "frozen_spillover": 72,
+   "recon_loyalty": 39,
+   "recon_spillover": 72,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "aespa",
+   "frozen_loyalty": 44,
+   "frozen_spillover": 70,
+   "recon_loyalty": 44,
+   "recon_spillover": 70,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "NewJeans",
+   "frozen_loyalty": 36,
+   "frozen_spillover": 86,
+   "recon_loyalty": 36,
+   "recon_spillover": 86,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "RIIZE",
+   "frozen_loyalty": 39,
+   "frozen_spillover": 61,
+   "recon_loyalty": 39,
+   "recon_spillover": 61,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "ATEEZ",
+   "frozen_loyalty": 34,
+   "frozen_spillover": 54,
+   "recon_loyalty": 34,
+   "recon_spillover": 54,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "레드벨벳",
+   "frozen_loyalty": 49,
+   "frozen_spillover": 46,
+   "recon_loyalty": 49,
+   "recon_spillover": 46,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "아이유",
+   "frozen_loyalty": 36,
+   "frozen_spillover": 45,
+   "recon_loyalty": 36,
+   "recon_spillover": 45,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "싸이",
+   "frozen_loyalty": 26,
+   "frozen_spillover": 58,
+   "recon_loyalty": 26,
+   "recon_spillover": 58,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "GOT7",
+   "frozen_loyalty": 29,
+   "frozen_spillover": 54,
+   "recon_loyalty": 29,
+   "recon_spillover": 54,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "워너원",
+   "frozen_loyalty": 42,
+   "frozen_spillover": 53,
+   "recon_loyalty": 42,
+   "recon_spillover": 53,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "LE SSERAFIM",
+   "frozen_loyalty": 34,
+   "frozen_spillover": 75,
+   "recon_loyalty": 34,
+   "recon_spillover": 75,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "이영지",
+   "frozen_loyalty": 34,
+   "frozen_spillover": 60,
+   "recon_loyalty": 34,
+   "recon_spillover": 60,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "EXO",
+   "frozen_loyalty": 36,
+   "frozen_spillover": 54,
+   "recon_loyalty": 36,
+   "recon_spillover": 54,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "DAY6",
+   "frozen_loyalty": 46,
+   "frozen_spillover": 39,
+   "recon_loyalty": 46,
+   "recon_spillover": 39,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "아일릿",
+   "frozen_loyalty": 29,
+   "frozen_spillover": 60,
+   "recon_loyalty": 29,
+   "recon_spillover": 60,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "영탁",
+   "frozen_loyalty": 33,
+   "frozen_spillover": 50,
+   "recon_loyalty": 33,
+   "recon_spillover": 50,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "(여자)아이들",
+   "frozen_loyalty": 29,
+   "frozen_spillover": 54,
+   "recon_loyalty": 29,
+   "recon_spillover": 54,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "BABYMONSTER",
+   "frozen_loyalty": 45,
+   "frozen_spillover": 52,
+   "recon_loyalty": 45,
+   "recon_spillover": 52,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "송가인",
+   "frozen_loyalty": 30,
+   "frozen_spillover": 44,
+   "recon_loyalty": 30,
+   "recon_spillover": 44,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "엔믹스",
+   "frozen_loyalty": 45,
+   "frozen_spillover": 48,
+   "recon_loyalty": 45,
+   "recon_spillover": 48,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "IKON",
+   "frozen_loyalty": 46,
+   "frozen_spillover": 35,
+   "recon_loyalty": 46,
+   "recon_spillover": 35,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "박재범",
+   "frozen_loyalty": 40,
+   "frozen_spillover": 49,
+   "recon_loyalty": 40,
+   "recon_spillover": 49,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "지코",
+   "frozen_loyalty": 23,
+   "frozen_spillover": 56,
+   "recon_loyalty": 23,
+   "recon_spillover": 56,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "리센느(RESCENE)",
+   "frozen_loyalty": 26,
+   "frozen_spillover": 40,
+   "recon_loyalty": 26,
+   "recon_spillover": 40,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "김호중",
+   "frozen_loyalty": 33,
+   "frozen_spillover": 40,
+   "recon_loyalty": 33,
+   "recon_spillover": 40,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "아이오아이",
+   "frozen_loyalty": 37,
+   "frozen_spillover": 33,
+   "recon_loyalty": 37,
+   "recon_spillover": 33,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "최예나",
+   "frozen_loyalty": 31,
+   "frozen_spillover": 52,
+   "recon_loyalty": 31,
+   "recon_spillover": 52,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "BTOB",
+   "frozen_loyalty": 35,
+   "frozen_spillover": 30,
+   "recon_loyalty": 35,
+   "recon_spillover": 30,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "god",
+   "frozen_loyalty": 29,
+   "frozen_spillover": 28,
+   "recon_loyalty": 29,
+   "recon_spillover": 28,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "이찬원",
+   "frozen_loyalty": 27,
+   "frozen_spillover": 50,
+   "recon_loyalty": 27,
+   "recon_spillover": 50,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "소녀시대",
+   "frozen_loyalty": 25,
+   "frozen_spillover": 51,
+   "recon_loyalty": 25,
+   "recon_spillover": 51,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "빅뱅",
+   "frozen_loyalty": 25,
+   "frozen_spillover": 47,
+   "recon_loyalty": 25,
+   "recon_spillover": 47,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "박서진",
+   "frozen_loyalty": 22,
+   "frozen_spillover": 38,
+   "recon_loyalty": 22,
+   "recon_spillover": 38,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "CNBLUE",
+   "frozen_loyalty": 28,
+   "frozen_spillover": 44,
+   "recon_loyalty": 28,
+   "recon_spillover": 44,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "정동원",
+   "frozen_loyalty": 33,
+   "frozen_spillover": 44,
+   "recon_loyalty": 33,
+   "recon_spillover": 44,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "프로미스나인",
+   "frozen_loyalty": 23,
+   "frozen_spillover": 45,
+   "recon_loyalty": 23,
+   "recon_spillover": 45,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "샤이니",
+   "frozen_loyalty": 29,
+   "frozen_spillover": 36,
+   "recon_loyalty": 29,
+   "recon_spillover": 36,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "오마이걸",
+   "frozen_loyalty": 29,
+   "frozen_spillover": 46,
+   "recon_loyalty": 29,
+   "recon_spillover": 46,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "A-pink",
+   "frozen_loyalty": 32,
+   "frozen_spillover": 38,
+   "recon_loyalty": 32,
+   "recon_spillover": 38,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "마마무",
+   "frozen_loyalty": 31,
+   "frozen_spillover": 42,
+   "recon_loyalty": 31,
+   "recon_spillover": 42,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "동방신기",
+   "frozen_loyalty": 26,
+   "frozen_spillover": 44,
+   "recon_loyalty": 26,
+   "recon_spillover": 44,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "로이킴",
+   "frozen_loyalty": 27,
+   "frozen_spillover": 47,
+   "recon_loyalty": 27,
+   "recon_spillover": 47,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "Hearts2Hearts",
+   "frozen_loyalty": 20,
+   "frozen_spillover": 50,
+   "recon_loyalty": 20,
+   "recon_spillover": 50,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "권은비",
+   "frozen_loyalty": 21,
+   "frozen_spillover": 61,
+   "recon_loyalty": 21,
+   "recon_spillover": 61,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "성시경",
+   "frozen_loyalty": 31,
+   "frozen_spillover": 40,
+   "recon_loyalty": 31,
+   "recon_spillover": 40,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "슈퍼주니어",
+   "frozen_loyalty": 24,
+   "frozen_spillover": 38,
+   "recon_loyalty": 24,
+   "recon_spillover": 38,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "츄",
+   "frozen_loyalty": 30,
+   "frozen_spillover": 42,
+   "recon_loyalty": 30,
+   "recon_spillover": 42,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "Crush",
+   "frozen_loyalty": 32,
+   "frozen_spillover": 51,
+   "recon_loyalty": 32,
+   "recon_spillover": 51,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "QWER",
+   "frozen_loyalty": 30,
+   "frozen_spillover": 39,
+   "recon_loyalty": 30,
+   "recon_spillover": 39,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "여자친구",
+   "frozen_loyalty": 37,
+   "frozen_spillover": 33,
+   "recon_loyalty": 37,
+   "recon_spillover": 33,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "ITZY",
+   "frozen_loyalty": 31,
+   "frozen_spillover": 45,
+   "recon_loyalty": 31,
+   "recon_spillover": 45,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "나훈아",
+   "frozen_loyalty": 27,
+   "frozen_spillover": 32,
+   "recon_loyalty": 27,
+   "recon_spillover": 32,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "STAYC",
+   "frozen_loyalty": 34,
+   "frozen_spillover": 39,
+   "recon_loyalty": 34,
+   "recon_spillover": 39,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "다비치",
+   "frozen_loyalty": 26,
+   "frozen_spillover": 39,
+   "recon_loyalty": 26,
+   "recon_spillover": 39,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "악동뮤지션",
+   "frozen_loyalty": 20,
+   "frozen_spillover": 45,
+   "recon_loyalty": 20,
+   "recon_spillover": 45,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "IVE",
+   "frozen_loyalty": 27,
+   "frozen_spillover": 43,
+   "recon_loyalty": 27,
+   "recon_spillover": 43,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "10CM",
+   "frozen_loyalty": 30,
+   "frozen_spillover": 38,
+   "recon_loyalty": 30,
+   "recon_spillover": 38,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "김재중",
+   "frozen_loyalty": 24,
+   "frozen_spillover": 29,
+   "recon_loyalty": 24,
+   "recon_spillover": 29,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "HOT",
+   "frozen_loyalty": 20,
+   "frozen_spillover": 33,
+   "recon_loyalty": 20,
+   "recon_spillover": 33,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "이효리",
+   "frozen_loyalty": 9,
+   "frozen_spillover": 62,
+   "recon_loyalty": 9,
+   "recon_spillover": 62,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "보아",
+   "frozen_loyalty": 25,
+   "frozen_spillover": 35,
+   "recon_loyalty": 25,
+   "recon_spillover": 35,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "에픽하이",
+   "frozen_loyalty": 39,
+   "frozen_spillover": 29,
+   "recon_loyalty": 39,
+   "recon_spillover": 29,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "청하",
+   "frozen_loyalty": 17,
+   "frozen_spillover": 51,
+   "recon_loyalty": 17,
+   "recon_spillover": 51,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "윤하",
+   "frozen_loyalty": 20,
+   "frozen_spillover": 33,
+   "recon_loyalty": 20,
+   "recon_spillover": 33,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "케이윌",
+   "frozen_loyalty": 32,
+   "frozen_spillover": 30,
+   "recon_loyalty": 32,
+   "recon_spillover": 30,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "조용필",
+   "frozen_loyalty": 23,
+   "frozen_spillover": 36,
+   "recon_loyalty": 23,
+   "recon_spillover": 36,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "잭스키스",
+   "frozen_loyalty": 26,
+   "frozen_spillover": 28,
+   "recon_loyalty": 26,
+   "recon_spillover": 28,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "박정현",
+   "frozen_loyalty": 16,
+   "frozen_spillover": 42,
+   "recon_loyalty": 16,
+   "recon_spillover": 42,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "김연자",
+   "frozen_loyalty": 17,
+   "frozen_spillover": 42,
+   "recon_loyalty": 17,
+   "recon_spillover": 42,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "빅마마",
+   "frozen_loyalty": 21,
+   "frozen_spillover": 29,
+   "recon_loyalty": 21,
+   "recon_spillover": 29,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "볼빨간사춘기",
+   "frozen_loyalty": 24,
+   "frozen_spillover": 33,
+   "recon_loyalty": 24,
+   "recon_spillover": 33,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "엄정화",
+   "frozen_loyalty": 16,
+   "frozen_spillover": 43,
+   "recon_loyalty": 16,
+   "recon_spillover": 43,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "FTISLAND",
+   "frozen_loyalty": 22,
+   "frozen_spillover": 34,
+   "recon_loyalty": 22,
+   "recon_spillover": 34,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "다이나믹듀오",
+   "frozen_loyalty": 21,
+   "frozen_spillover": 26,
+   "recon_loyalty": 21,
+   "recon_spillover": 26,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "비비",
+   "frozen_loyalty": 23,
+   "frozen_spillover": 33,
+   "recon_loyalty": 23,
+   "recon_spillover": 33,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "카더가든",
+   "frozen_loyalty": 19,
+   "frozen_spillover": 39,
+   "recon_loyalty": 19,
+   "recon_spillover": 39,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "sg워너비",
+   "frozen_loyalty": 20,
+   "frozen_spillover": 27,
+   "recon_loyalty": 20,
+   "recon_spillover": 27,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "장윤정",
+   "frozen_loyalty": 14,
+   "frozen_spillover": 40,
+   "recon_loyalty": 14,
+   "recon_spillover": 40,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "이승철",
+   "frozen_loyalty": 14,
+   "frozen_spillover": 31,
+   "recon_loyalty": 14,
+   "recon_spillover": 31,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "윤도현",
+   "frozen_loyalty": 16,
+   "frozen_spillover": 27,
+   "recon_loyalty": 16,
+   "recon_spillover": 27,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "린",
+   "frozen_loyalty": 16,
+   "frozen_spillover": 28,
+   "recon_loyalty": 16,
+   "recon_spillover": 28,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "잔나비",
+   "frozen_loyalty": 16,
+   "frozen_spillover": 31,
+   "recon_loyalty": 16,
+   "recon_spillover": 31,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "백지영",
+   "frozen_loyalty": 16,
+   "frozen_spillover": 33,
+   "recon_loyalty": 16,
+   "recon_spillover": 33,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "김동률",
+   "frozen_loyalty": 13,
+   "frozen_spillover": 17,
+   "recon_loyalty": 13,
+   "recon_spillover": 17,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "Zion.T",
+   "frozen_loyalty": 13,
+   "frozen_spillover": 33,
+   "recon_loyalty": 13,
+   "recon_spillover": 33,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "박효신",
+   "frozen_loyalty": 15,
+   "frozen_spillover": 19,
+   "recon_loyalty": 15,
+   "recon_spillover": 19,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "pH-1",
+   "frozen_loyalty": 18,
+   "frozen_spillover": 26,
+   "recon_loyalty": 13,
+   "recon_spillover": 21,
+   "evidence_score_fingerprint": "partial",
+   "lost": 10,
+   "source": "r22 백업(archive/v6_r22_era_backup.zip)",
+   "status": "부분 복원(r22 시점까지)",
+   "residual_frozen_raw_minus_r22": {
+    "loyalty": 7.3,
+    "spillover": 7.1
+   }
+  },
+  {
+   "fandom": "한로로",
+   "frozen_loyalty": 17,
+   "frozen_spillover": 24,
+   "recon_loyalty": 16,
+   "recon_spillover": 17,
+   "evidence_score_fingerprint": "partial",
+   "lost": 8,
+   "source": "r22 백업(archive/v6_r22_era_backup.zip)",
+   "status": "부분 복원(r22 시점까지)",
+   "residual_frozen_raw_minus_r22": {
+    "loyalty": 1.0,
+    "spillover": 8.9
+   }
+  },
+  {
+   "fandom": "이문세",
+   "frozen_loyalty": 11,
+   "frozen_spillover": 28,
+   "recon_loyalty": 11,
+   "recon_spillover": 28,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "브라운아이즈",
+   "frozen_loyalty": 10,
+   "frozen_spillover": 21,
+   "recon_loyalty": 10,
+   "recon_spillover": 21,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "거미",
+   "frozen_loyalty": 16,
+   "frozen_spillover": 22,
+   "recon_loyalty": 16,
+   "recon_spillover": 22,
+   "evidence_score_fingerprint": "match",
+   "lost": 0,
+   "source": "라이브 코퍼스 앞부분",
+   "status": "복원 완료(문장 집합 동일)"
+  },
+  {
+   "fandom": "BE'O",
+   "frozen_loyalty": 12,
+   "frozen_spillover": 22,
+   "recon_loyalty": 11,
+   "recon_spillover": 17,
+   "evidence_score_fingerprint": "partial",
+   "lost": 6,
+   "source": "r22 백업(archive/v6_r22_era_backup.zip)",
+   "status": "부분 복원(r22 시점까지)",
+   "residual_frozen_raw_minus_r22": {
+    "loyalty": 1.5,
+    "spillover": 6.5
+   }
+  }
+ ]
+}

@@ -642,6 +642,31 @@ else:
     info("v7_final_10020/analysis/domestic_regional_index/domestic_regional_index_v7.json 없음", "python v7_final_10020/analysis/build_notebooks_v7.py domestic 으로 생성")
 
 # ---------------------------------------------------------------------------
+# [AD] 동결 스냅샷 코퍼스 근사 복원본 (data/v7_final/frozen_snapshot_v7_40/)
+# ---------------------------------------------------------------------------
+print("\n[AD] data/v7_final/frozen_snapshot_v7_40/fandoms_v7_40_frozen_reconstructed.json — 동결 7,350건 코퍼스 근사 복원본")
+_fr_path = D / "frozen_snapshot_v7_40" / "fandoms_v7_40_frozen_reconstructed.json"
+if _fr_path.exists():
+    import zipfile as _zf
+    _rec = {f["fandom"]: f for f in json.load(open(_fr_path, encoding="utf-8"))}
+    _fz = {r["fandom"]: r for r in fzj}
+    _r22 = {f["fandom"]: f for f in json.loads(_zf.ZipFile(BASE / "archive" / "v6_r22_era_backup.zip").read("v6_r22_era/data/v6_r22_snapshot/fandoms_v3_100.json"))}
+    _partial = {"BE'O", "pH-1", "한로로"}
+    _n = sum(len(f["loyalty"]) + len(f["spillover"]) for f in _rec.values())
+    check("로스터 = 동결 로스터 100개 (BE'O·pH-1·한로로 포함), 총 7,326건 = 7,350 − 유실 24", set(_rec) == set(_fz) and _n == 7326, f"{len(_rec)}개, {_n:,}건")
+    _fp = [k for k in _fz if k not in _partial and (len(_rec[k]["loyalty"]), len(_rec[k]["spillover"])) == (_fz[k]["n_loyalty_bullets"], _fz[k]["n_spillover_bullets"])
+           and abs(evidence_score(_rec[k]["loyalty"], LOYALTY_BONUS_KW) - _fz[k]["loyalty_raw"]) < 1e-6 and abs(evidence_score(_rec[k]["spillover"], SPILLOVER_BONUS_KW) - _fz[k]["spillover_raw"]) < 1e-6]
+    check("97개 공통 팬덤: 건수 + EvidenceScore 지문(loyalty_raw/spillover_raw, 1e-6) 97/97 일치 — 문장 집합이 동결과 동일", len(_fp) == 97, f"{len(_fp)}/97")
+    _pref = sum(1 for k in _fz if k not in _partial for tag in ("loyalty", "spillover")
+                if [it["t"] for it in byf[k][tag]][:len(_rec[k][tag])] == [it["t"] for it in _rec[k][tag]])
+    check("97개 팬덤 불릿 = 라이브 목록의 접두어 (194개 목록 중 193 — 예외 1은 r56 수정 문장을 되돌린 여자친구 spillover)", _pref == 193, f"{_pref}/194")
+    _r22ok = all([it["t"] for it in _rec[k][tag]] == [it["t"] for it in _r22[k][tag]] for k in _partial for tag in ("loyalty", "spillover"))
+    _lost = sum(_fz[k]["activity"] - len(_rec[k]["loyalty"]) - len(_rec[k]["spillover"]) for k in _partial)
+    check("BE'O·pH-1·한로로 = r22 백업 불릿 그대로(28·34·33건), 유실 24건(6·10·8)", _r22ok and _lost == 24, f"유실 {_lost}")
+else:
+    info("data/v7_final/frozen_snapshot_v7_40/ 없음")
+
+# ---------------------------------------------------------------------------
 n_ok = sum(1 for _, ok in results if ok); n_all = len(results)
 print(f"\n=== 결과: {n_ok}/{n_all} 항목 일치 ({n_all - n_ok}건 불일치) ===")
 sys.exit(0 if n_ok == n_all else 1)

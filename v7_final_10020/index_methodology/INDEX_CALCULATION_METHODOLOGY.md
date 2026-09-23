@@ -141,7 +141,7 @@ Activity(f) = n_loyalty(f) + n_spillover(f)                                    (
 ## 종합
 
 1. **식(1)∼(7) 전부 저장소 데이터로 재현된다.** EvidenceScore(식 1)는 최종 코퍼스 10,020건에서
-   원점수를 0/100 불일치로 재현하고, min-max(식 2)·Coverage 가중합(식 3)·언어 엔트로피(식 4)·
+   원점수를 100/100 일치(불일치 0)로 재현하고, min-max(식 2)·Coverage 가중합(식 3)·언어 엔트로피(식 4)·
    FactorDiversity(식 6)·Activity(식 7)는 최종·동결 두 점수 파일 모두에서 100개 팬덤 전량 일치한다.
 2. **식(4)의 분모만 계층에 따라 다르다.** 최종 10,020건은 ln(14), 동결 v7-40은 ln(13). 보고서
    Ⅲ장의 "14개 언어"는 최종 코퍼스 기준이다.
@@ -153,7 +153,7 @@ Activity(f) = n_loyalty(f) + n_spillover(f)                                    (
 - `index_calculation_v7.ipynb` (같은 폴더, 실행 결과 포함; Jupyter 없이 Spyder·VS Code에서 열려면 같은 내용의 `# %%` 셀 스크립트 `index_calculation_v7.py`) — 식(1)∼(7)을
   코퍼스 10,020건에 직접 적용해 100개 팬덤의 지표를 **산정**하는 노트북. 문장별 EvidenceScore 분해 예시, min-max, 활동량,
   커버리지 하위지표 5개와 가중합, 팩터 다양성·주 팩터, 4구획·χ²까지 만들어 `index_calculation_v7_result.csv`(100행×17열)로 저장하고
-  마지막 절에서 최종 산출 파일과 전량 대조한다(8개 항목 전부 0/100 불일치). 생성기는 `build_index_calculation_notebook.py`.
+  마지막 절에서 최종 산출 파일과 전량 대조한다(8개 항목 전부 100/100 일치, 불일치 0). 생성기는 `build_index_calculation_notebook.py`.
 - `verify_index_calculation_formulas.py` (같은 폴더) — 위 7개 식을 함수로 정리하고,
   `fandom_scores_live_reference_v7.json` 100개 팬덤 전체에 대해 식(2)(3)(6)(7) 재검증을 재현하는
   스크립트. 구현 시 주의점 두 가지(창단/창당, `n_num` 정의)를 예시 문장으로 함께 출력한다.
