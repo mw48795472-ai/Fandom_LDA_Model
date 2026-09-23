@@ -1,0 +1,7152 @@
+[
+  {
+    "fandom": "BTS",
+    "fanclub": "ARMY(아미)",
+    "category": "K-pop 보이그룹",
+    "loyalty_raw": 118.49999999999997,
+    "spillover_raw": 263.8000000000003,
+    "n_loyalty_bullets": 74,
+    "n_spillover_bullets": 153,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.4813,
+      "미디어노출형(방송·조회수)": 0.2181,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0909,
+      "소비력형(초동·판매·앨범)": 0.0844,
+      "차트·확산형(1위·빌보드·기록)": 0.1253
+    },
+    "factor_diversity": 0.8518,
+    "coverage_index": 0.791,
+    "coverage_detail": {
+      "n_evidence": 227,
+      "language_coverage": 0.567,
+      "language_counts": {
+        "ko": 146,
+        "en": 51,
+        "ja": 15,
+        "es": 11,
+        "zh": 4
+      },
+      "market_coverage": 1.0,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "유럽",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "news_media": 177,
+        "reference_wiki": 50
+      },
+      "time_coverage": 0.917,
+      "years_mentioned": [
+        "2015",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 1.0,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "매체_어워드",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.972,
+    "spillover_score": 1.0,
+    "activity": 227,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "TWICE",
+    "fanclub": "ONCE 원스",
+    "category": "K-pop 걸그룹",
+    "loyalty_raw": 116.19999999999996,
+    "spillover_raw": 224.9000000000001,
+    "n_loyalty_bullets": 71,
+    "n_spillover_bullets": 120,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.3617,
+      "미디어노출형(방송·조회수)": 0.252,
+      "결속형(팬클럽·기부·커뮤니티)": 0.1168,
+      "소비력형(초동·판매·앨범)": 0.0966,
+      "차트·확산형(1위·빌보드·기록)": 0.1729
+    },
+    "factor_diversity": 0.929,
+    "coverage_index": 0.854,
+    "coverage_detail": {
+      "n_evidence": 191,
+      "language_coverage": 0.57,
+      "language_counts": {
+        "en": 36,
+        "ko": 122,
+        "ja": 24,
+        "es": 8,
+        "zh": 1
+      },
+      "market_coverage": 1.0,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "유럽",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 1.0,
+      "source_type_counts": {
+        "reference_wiki": 55,
+        "news_media": 134,
+        "community_social": 2
+      },
+      "time_coverage": 1.0,
+      "years_mentioned": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.833,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "매체_어워드",
+        "방송사",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.947,
+    "spillover_score": 0.821,
+    "activity": 191,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "임영웅",
+    "fanclub": "영웅시대",
+    "category": "트로트",
+    "loyalty_raw": 116.49999999999996,
+    "spillover_raw": 158.6,
+    "n_loyalty_bullets": 59,
+    "n_spillover_bullets": 72,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.2759,
+      "미디어노출형(방송·조회수)": 0.2518,
+      "결속형(팬클럽·기부·커뮤니티)": 0.1704,
+      "소비력형(초동·판매·앨범)": 0.0804,
+      "차트·확산형(1위·빌보드·기록)": 0.2216
+    },
+    "factor_diversity": 0.9572,
+    "coverage_index": 0.663,
+    "coverage_detail": {
+      "n_evidence": 131,
+      "language_coverage": 0.239,
+      "language_counts": {
+        "ko": 116,
+        "en": 12,
+        "zh": 2,
+        "ja": 1
+      },
+      "market_coverage": 0.833,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 1.0,
+      "source_type_counts": {
+        "news_media": 121,
+        "reference_wiki": 9,
+        "community_social": 1
+      },
+      "time_coverage": 0.667,
+      "years_mentioned": [
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.833,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.95,
+    "spillover_score": 0.517,
+    "activity": 131,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "BLACKPINK",
+    "fanclub": "BLINK / 블링크",
+    "category": "K-pop 걸그룹",
+    "loyalty_raw": 91.39999999999998,
+    "spillover_raw": 209.80000000000018,
+    "n_loyalty_bullets": 60,
+    "n_spillover_bullets": 135,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.3634,
+      "미디어노출형(방송·조회수)": 0.1488,
+      "결속형(팬클럽·기부·커뮤니티)": 0.1106,
+      "소비력형(초동·판매·앨범)": 0.1837,
+      "차트·확산형(1위·빌보드·기록)": 0.1934
+    },
+    "factor_diversity": 0.9469,
+    "coverage_index": 0.783,
+    "coverage_detail": {
+      "n_evidence": 195,
+      "language_coverage": 0.595,
+      "language_counts": {
+        "en": 43,
+        "ko": 123,
+        "ja": 8,
+        "zh": 8,
+        "es": 13
+      },
+      "market_coverage": 1.0,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "유럽",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "reference_wiki": 54,
+        "news_media": 141
+      },
+      "time_coverage": 0.917,
+      "years_mentioned": [
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.833,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "매체_어워드",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.674,
+    "spillover_score": 0.752,
+    "activity": 195,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "NCT",
+    "fanclub": "NCTzen(엔시티즌)",
+    "category": "K-pop 보이그룹",
+    "loyalty_raw": 105.79999999999997,
+    "spillover_raw": 154.39999999999998,
+    "n_loyalty_bullets": 67,
+    "n_spillover_bullets": 97,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.4244,
+      "미디어노출형(방송·조회수)": 0.2648,
+      "결속형(팬클럽·기부·커뮤니티)": 0.1003,
+      "소비력형(초동·판매·앨범)": 0.0632,
+      "차트·확산형(1위·빌보드·기록)": 0.1473
+    },
+    "factor_diversity": 0.8717,
+    "coverage_index": 0.818,
+    "coverage_detail": {
+      "n_evidence": 164,
+      "language_coverage": 0.49,
+      "language_counts": {
+        "en": 38,
+        "ko": 112,
+        "ja": 10,
+        "es": 2,
+        "zh": 2
+      },
+      "market_coverage": 1.0,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "유럽",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 1.0,
+      "source_type_counts": {
+        "reference_wiki": 46,
+        "news_media": 116,
+        "community_social": 2
+      },
+      "time_coverage": 0.917,
+      "years_mentioned": [
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.833,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.832,
+    "spillover_score": 0.498,
+    "activity": 164,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "Stray Kids",
+    "fanclub": "STAY(스테이)",
+    "category": "K-pop 보이그룹",
+    "loyalty_raw": 94.39999999999998,
+    "spillover_raw": 174.79999999999995,
+    "n_loyalty_bullets": 58,
+    "n_spillover_bullets": 105,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.4409,
+      "미디어노출형(방송·조회수)": 0.2109,
+      "결속형(팬클럽·기부·커뮤니티)": 0.1013,
+      "소비력형(초동·판매·앨범)": 0.0842,
+      "차트·확산형(1위·빌보드·기록)": 0.1627
+    },
+    "factor_diversity": 0.8855,
+    "coverage_index": 0.795,
+    "coverage_detail": {
+      "n_evidence": 163,
+      "language_coverage": 0.554,
+      "language_counts": {
+        "ko": 89,
+        "en": 58,
+        "es": 7,
+        "ja": 9
+      },
+      "market_coverage": 1.0,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "유럽",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 1.0,
+      "source_type_counts": {
+        "reference_wiki": 53,
+        "news_media": 108,
+        "community_social": 2
+      },
+      "time_coverage": 0.75,
+      "years_mentioned": [
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.667,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "방송사",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.707,
+    "spillover_score": 0.591,
+    "activity": 163,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "SEVENTEEN",
+    "fanclub": "CARAT(캐럿)",
+    "category": "K-pop 보이그룹",
+    "loyalty_raw": 110.09999999999997,
+    "spillover_raw": 132.39999999999998,
+    "n_loyalty_bullets": 71,
+    "n_spillover_bullets": 86,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.359,
+      "미디어노출형(방송·조회수)": 0.2533,
+      "결속형(팬클럽·기부·커뮤니티)": 0.1002,
+      "소비력형(초동·판매·앨범)": 0.0853,
+      "차트·확산형(1위·빌보드·기록)": 0.2022
+    },
+    "factor_diversity": 0.9192,
+    "coverage_index": 0.835,
+    "coverage_detail": {
+      "n_evidence": 157,
+      "language_coverage": 0.507,
+      "language_counts": {
+        "ko": 81,
+        "en": 67,
+        "ja": 5,
+        "es": 4
+      },
+      "market_coverage": 1.0,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "유럽",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 1.0,
+      "source_type_counts": {
+        "reference_wiki": 68,
+        "news_media": 87,
+        "community_social": 2
+      },
+      "time_coverage": 1.0,
+      "years_mentioned": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.833,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "매체_어워드",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.88,
+    "spillover_score": 0.397,
+    "activity": 157,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "god",
+    "fanclub": "fangod",
+    "category": "원로그룹",
+    "loyalty_raw": 120.99999999999994,
+    "spillover_raw": 83.19999999999999,
+    "n_loyalty_bullets": 51,
+    "n_spillover_bullets": 48,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.5243,
+      "미디어노출형(방송·조회수)": 0.2105,
+      "결속형(팬클럽·기부·커뮤니티)": 0.1506,
+      "소비력형(초동·판매·앨범)": 0.0296,
+      "차트·확산형(1위·빌보드·기록)": 0.085
+    },
+    "factor_diversity": 0.7862,
+    "coverage_index": 0.531,
+    "coverage_detail": {
+      "n_evidence": 99,
+      "language_coverage": 0.159,
+      "language_counts": {
+        "ko": 92,
+        "en": 6,
+        "zh": 1
+      },
+      "market_coverage": 0.667,
+      "markets_mentioned": [
+        "동남아",
+        "미국_북미",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "news_media": 72,
+        "reference_wiki": 27
+      },
+      "time_coverage": 0.667,
+      "years_mentioned": [
+        "2018",
+        "2019",
+        "2020",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.833,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 1.0,
+    "spillover_score": 0.171,
+    "activity": 99,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "aespa",
+    "fanclub": "MY 마이",
+    "category": "K-pop 걸그룹",
+    "loyalty_raw": 82.4,
+    "spillover_raw": 168.9000000000001,
+    "n_loyalty_bullets": 55,
+    "n_spillover_bullets": 103,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.3642,
+      "미디어노출형(방송·조회수)": 0.3288,
+      "결속형(팬클럽·기부·커뮤니티)": 0.109,
+      "소비력형(초동·판매·앨범)": 0.0808,
+      "차트·확산형(1위·빌보드·기록)": 0.1172
+    },
+    "factor_diversity": 0.8884,
+    "coverage_index": 0.766,
+    "coverage_detail": {
+      "n_evidence": 158,
+      "language_coverage": 0.483,
+      "language_counts": {
+        "en": 31,
+        "ko": 113,
+        "es": 7,
+        "ja": 4,
+        "zh": 3
+      },
+      "market_coverage": 1.0,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "유럽",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 1.0,
+      "source_type_counts": {
+        "reference_wiki": 63,
+        "news_media": 94,
+        "community_social": 1
+      },
+      "time_coverage": 0.583,
+      "years_mentioned": [
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.833,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.574,
+    "spillover_score": 0.564,
+    "activity": 158,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "지드래곤 (G-Dragon)",
+    "fanclub": "VIP",
+    "category": "힙합",
+    "loyalty_raw": 84.39999999999996,
+    "spillover_raw": 163.0,
+    "n_loyalty_bullets": 47,
+    "n_spillover_bullets": 86,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.5029,
+      "미디어노출형(방송·조회수)": 0.262,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0975,
+      "소비력형(초동·판매·앨범)": 0.0198,
+      "차트·확산형(1위·빌보드·기록)": 0.1177
+    },
+    "factor_diversity": 0.7785,
+    "coverage_index": 0.75,
+    "coverage_detail": {
+      "n_evidence": 133,
+      "language_coverage": 0.444,
+      "language_counts": {
+        "ko": 103,
+        "en": 17,
+        "ja": 4,
+        "zh": 5,
+        "es": 4
+      },
+      "market_coverage": 1.0,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "유럽",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 1.0,
+      "source_type_counts": {
+        "news_media": 128,
+        "community_social": 2,
+        "reference_wiki": 3
+      },
+      "time_coverage": 0.667,
+      "years_mentioned": [
+        "2015",
+        "2016",
+        "2017",
+        "2020",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.667,
+      "entity_types_mentioned": [
+        "대형공연장",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.596,
+    "spillover_score": 0.537,
+    "activity": 133,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "CORTIS",
+    "fanclub": "Coer / 코어",
+    "category": "K-pop 보이그룹",
+    "loyalty_raw": 81.1,
+    "spillover_raw": 145.29999999999995,
+    "n_loyalty_bullets": 50,
+    "n_spillover_bullets": 85,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.4801,
+      "미디어노출형(방송·조회수)": 0.1947,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0274,
+      "소비력형(초동·판매·앨범)": 0.0546,
+      "차트·확산형(1위·빌보드·기록)": 0.2432
+    },
+    "factor_diversity": 0.7904,
+    "coverage_index": 0.722,
+    "coverage_detail": {
+      "n_evidence": 135,
+      "language_coverage": 0.282,
+      "language_counts": {
+        "en": 11,
+        "ko": 118,
+        "ja": 1,
+        "zh": 3,
+        "es": 2
+      },
+      "market_coverage": 1.0,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "유럽",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 1.0,
+      "source_type_counts": {
+        "reference_wiki": 26,
+        "news_media": 104,
+        "community_social": 5
+      },
+      "time_coverage": 0.583,
+      "years_mentioned": [
+        "2015",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 1.0,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "매체_어워드",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.56,
+    "spillover_score": 0.456,
+    "activity": 135,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "아이유",
+    "fanclub": "유애나",
+    "category": "솔로",
+    "loyalty_raw": 83.89999999999996,
+    "spillover_raw": 137.79999999999995,
+    "n_loyalty_bullets": 42,
+    "n_spillover_bullets": 68,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.2971,
+      "미디어노출형(방송·조회수)": 0.3182,
+      "결속형(팬클럽·기부·커뮤니티)": 0.1737,
+      "소비력형(초동·판매·앨범)": 0.0789,
+      "차트·확산형(1위·빌보드·기록)": 0.1322
+    },
+    "factor_diversity": 0.93,
+    "coverage_index": 0.853,
+    "coverage_detail": {
+      "n_evidence": 110,
+      "language_coverage": 0.51,
+      "language_counts": {
+        "ko": 78,
+        "en": 18,
+        "zh": 5,
+        "ja": 8,
+        "es": 1
+      },
+      "market_coverage": 1.0,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "유럽",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 1.0,
+      "source_type_counts": {
+        "reference_wiki": 34,
+        "news_media": 75,
+        "community_social": 1
+      },
+      "time_coverage": 1.0,
+      "years_mentioned": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 1.0,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "매체_어워드",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.591,
+    "spillover_score": 0.421,
+    "activity": 110,
+    "dominant_factor": "미디어노출형(방송·조회수)"
+  },
+  {
+    "fandom": "EXO",
+    "fanclub": "EXO-L",
+    "category": "K-pop 보이그룹",
+    "loyalty_raw": 81.19999999999999,
+    "spillover_raw": 130.59999999999994,
+    "n_loyalty_bullets": 47,
+    "n_spillover_bullets": 74,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.3802,
+      "미디어노출형(방송·조회수)": 0.2698,
+      "결속형(팬클럽·기부·커뮤니티)": 0.1253,
+      "소비력형(초동·판매·앨범)": 0.0744,
+      "차트·확산형(1위·빌보드·기록)": 0.1504
+    },
+    "factor_diversity": 0.9069,
+    "coverage_index": 0.813,
+    "coverage_detail": {
+      "n_evidence": 121,
+      "language_coverage": 0.376,
+      "language_counts": {
+        "ko": 96,
+        "en": 19,
+        "ja": 2,
+        "zh": 3,
+        "es": 1
+      },
+      "market_coverage": 1.0,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "유럽",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 1.0,
+      "source_type_counts": {
+        "news_media": 88,
+        "reference_wiki": 32,
+        "community_social": 1
+      },
+      "time_coverage": 1.0,
+      "years_mentioned": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 1.0,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "매체_어워드",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.561,
+    "spillover_score": 0.388,
+    "activity": 121,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "NewJeans",
+    "fanclub": "Bunnies / 버니즈",
+    "category": "K-pop 걸그룹",
+    "loyalty_raw": 65.19999999999999,
+    "spillover_raw": 165.19999999999996,
+    "n_loyalty_bullets": 44,
+    "n_spillover_bullets": 110,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.2601,
+      "미디어노출형(방송·조회수)": 0.2538,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0953,
+      "소비력형(초동·판매·앨범)": 0.2129,
+      "차트·확산형(1위·빌보드·기록)": 0.178
+    },
+    "factor_diversity": 0.9685,
+    "coverage_index": 0.684,
+    "coverage_detail": {
+      "n_evidence": 154,
+      "language_coverage": 0.571,
+      "language_counts": {
+        "en": 60,
+        "ko": 79,
+        "zh": 8,
+        "es": 6,
+        "ja": 1
+      },
+      "market_coverage": 1.0,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "유럽",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "reference_wiki": 40,
+        "news_media": 114
+      },
+      "time_coverage": 0.417,
+      "years_mentioned": [
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.667,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "매체_어워드",
+        "방송사",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.385,
+    "spillover_score": 0.547,
+    "activity": 154,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "싸이",
+    "fanclub": "PSYcho",
+    "category": "솔로",
+    "loyalty_raw": 62.399999999999984,
+    "spillover_raw": 167.20000000000007,
+    "n_loyalty_bullets": 30,
+    "n_spillover_bullets": 92,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.5361,
+      "미디어노출형(방송·조회수)": 0.2179,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0522,
+      "소비력형(초동·판매·앨범)": 0.0666,
+      "차트·확산형(1위·빌보드·기록)": 0.1272
+    },
+    "factor_diversity": 0.7848,
+    "coverage_index": 0.66,
+    "coverage_detail": {
+      "n_evidence": 122,
+      "language_coverage": 0.339,
+      "language_counts": {
+        "ko": 100,
+        "en": 17,
+        "ja": 1,
+        "zh": 3,
+        "es": 1
+      },
+      "market_coverage": 1.0,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "유럽",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "reference_wiki": 25,
+        "news_media": 97
+      },
+      "time_coverage": 0.833,
+      "years_mentioned": [
+        "2015",
+        "2017",
+        "2018",
+        "2019",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.5,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "방송사",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.354,
+    "spillover_score": 0.556,
+    "activity": 122,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "ATEEZ",
+    "fanclub": "ATINY / 에이티니",
+    "category": "K-pop 보이그룹",
+    "loyalty_raw": 76.79999999999998,
+    "spillover_raw": 132.29999999999995,
+    "n_loyalty_bullets": 42,
+    "n_spillover_bullets": 71,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.4181,
+      "미디어노출형(방송·조회수)": 0.1749,
+      "결속형(팬클럽·기부·커뮤니티)": 0.1244,
+      "소비력형(초동·판매·앨범)": 0.0902,
+      "차트·확산형(1위·빌보드·기록)": 0.1922
+    },
+    "factor_diversity": 0.909,
+    "coverage_index": 0.785,
+    "coverage_detail": {
+      "n_evidence": 113,
+      "language_coverage": 0.519,
+      "language_counts": {
+        "en": 33,
+        "ko": 70,
+        "es": 6,
+        "ja": 4
+      },
+      "market_coverage": 1.0,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "유럽",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 1.0,
+      "source_type_counts": {
+        "community_social": 2,
+        "news_media": 89,
+        "reference_wiki": 22
+      },
+      "time_coverage": 0.75,
+      "years_mentioned": [
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.667,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "방송사",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.513,
+    "spillover_score": 0.396,
+    "activity": 113,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "RIIZE",
+    "fanclub": "BRIIZE(브리즈)",
+    "category": "K-pop 보이그룹",
+    "loyalty_raw": 83.89999999999996,
+    "spillover_raw": 110.79999999999995,
+    "n_loyalty_bullets": 45,
+    "n_spillover_bullets": 76,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.4222,
+      "미디어노출형(방송·조회수)": 0.2213,
+      "결속형(팬클럽·기부·커뮤니티)": 0.1776,
+      "소비력형(초동·판매·앨범)": 0.0865,
+      "차트·확산형(1위·빌보드·기록)": 0.0925
+    },
+    "factor_diversity": 0.8926,
+    "coverage_index": 0.706,
+    "coverage_detail": {
+      "n_evidence": 121,
+      "language_coverage": 0.534,
+      "language_counts": {
+        "ko": 75,
+        "en": 32,
+        "ja": 12,
+        "es": 1,
+        "zh": 1
+      },
+      "market_coverage": 1.0,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "유럽",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "reference_wiki": 38,
+        "news_media": 83
+      },
+      "time_coverage": 0.417,
+      "years_mentioned": [
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 1.0,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "매체_어워드",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.591,
+    "spillover_score": 0.298,
+    "activity": 121,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "워너원",
+    "fanclub": "워너블(Wannable)",
+    "category": "K-pop 보이그룹",
+    "loyalty_raw": 73.09999999999998,
+    "spillover_raw": 131.49999999999994,
+    "n_loyalty_bullets": 48,
+    "n_spillover_bullets": 75,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.4379,
+      "미디어노출형(방송·조회수)": 0.277,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0585,
+      "소비력형(초동·판매·앨범)": 0.0864,
+      "차트·확산형(1위·빌보드·기록)": 0.1402
+    },
+    "factor_diversity": 0.8514,
+    "coverage_index": 0.689,
+    "coverage_detail": {
+      "n_evidence": 123,
+      "language_coverage": 0.365,
+      "language_counts": {
+        "ko": 95,
+        "en": 22,
+        "ja": 6
+      },
+      "market_coverage": 1.0,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "유럽",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "news_media": 87,
+        "reference_wiki": 36
+      },
+      "time_coverage": 0.75,
+      "years_mentioned": [
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.833,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "매체_어워드",
+        "방송사",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.472,
+    "spillover_score": 0.393,
+    "activity": 123,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "소녀시대",
+    "fanclub": "SONE/소원",
+    "category": "K-pop 걸그룹",
+    "loyalty_raw": 59.99999999999999,
+    "spillover_raw": 162.79999999999998,
+    "n_loyalty_bullets": 33,
+    "n_spillover_bullets": 89,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.3315,
+      "미디어노출형(방송·조회수)": 0.3053,
+      "결속형(팬클럽·기부·커뮤니티)": 0.1245,
+      "소비력형(초동·판매·앨범)": 0.1082,
+      "차트·확산형(1위·빌보드·기록)": 0.1305
+    },
+    "factor_diversity": 0.9283,
+    "coverage_index": 0.714,
+    "coverage_detail": {
+      "n_evidence": 122,
+      "language_coverage": 0.548,
+      "language_counts": {
+        "en": 25,
+        "ko": 80,
+        "ja": 12,
+        "zh": 4,
+        "es": 1
+      },
+      "market_coverage": 0.833,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "reference_wiki": 56,
+        "news_media": 66
+      },
+      "time_coverage": 0.833,
+      "years_mentioned": [
+        "2015",
+        "2017",
+        "2018",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.833,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.327,
+    "spillover_score": 0.536,
+    "activity": 122,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "HOT",
+    "fanclub": "Club H.O.T.",
+    "category": "원로그룹",
+    "loyalty_raw": 80.29999999999998,
+    "spillover_raw": 113.59999999999998,
+    "n_loyalty_bullets": 37,
+    "n_spillover_bullets": 60,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.4978,
+      "미디어노출형(방송·조회수)": 0.1672,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0971,
+      "소비력형(초동·판매·앨범)": 0.0732,
+      "차트·확산형(1위·빌보드·기록)": 0.1647
+    },
+    "factor_diversity": 0.8457,
+    "coverage_index": 0.468,
+    "coverage_detail": {
+      "n_evidence": 97,
+      "language_coverage": 0.24,
+      "language_counts": {
+        "ko": 85,
+        "en": 10,
+        "zh": 2
+      },
+      "market_coverage": 0.5,
+      "markets_mentioned": [
+        "동남아",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "reference_wiki": 42,
+        "news_media": 55
+      },
+      "time_coverage": 0.583,
+      "years_mentioned": [
+        "2016",
+        "2018",
+        "2019",
+        "2020",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.5,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "방송사"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.551,
+    "spillover_score": 0.31,
+    "activity": 97,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "BABYMONSTER",
+    "fanclub": "MONSTIEZ",
+    "category": "K-pop 걸그룹",
+    "loyalty_raw": 82.39999999999998,
+    "spillover_raw": 106.09999999999997,
+    "n_loyalty_bullets": 55,
+    "n_spillover_bullets": 77,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.4779,
+      "미디어노출형(방송·조회수)": 0.1885,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0883,
+      "소비력형(초동·판매·앨범)": 0.0832,
+      "차트·확산형(1위·빌보드·기록)": 0.162
+    },
+    "factor_diversity": 0.8596,
+    "coverage_index": 0.717,
+    "coverage_detail": {
+      "n_evidence": 132,
+      "language_coverage": 0.501,
+      "language_counts": {
+        "en": 25,
+        "ja": 15,
+        "ko": 90,
+        "zh": 1,
+        "es": 1
+      },
+      "market_coverage": 1.0,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "유럽",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 1.0,
+      "source_type_counts": {
+        "reference_wiki": 35,
+        "news_media": 95,
+        "community_social": 2
+      },
+      "time_coverage": 0.333,
+      "years_mentioned": [
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.667,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "방송사",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.574,
+    "spillover_score": 0.276,
+    "activity": 132,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "(여자)아이들",
+    "fanclub": "NEVERLAND 네버랜드",
+    "category": "K-pop 걸그룹",
+    "loyalty_raw": 71.19999999999997,
+    "spillover_raw": 129.79999999999998,
+    "n_loyalty_bullets": 43,
+    "n_spillover_bullets": 75,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.44,
+      "미디어노출형(방송·조회수)": 0.2389,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0937,
+      "소비력형(초동·판매·앨범)": 0.0704,
+      "차트·확산형(1위·빌보드·기록)": 0.1569
+    },
+    "factor_diversity": 0.8715,
+    "coverage_index": 0.812,
+    "coverage_detail": {
+      "n_evidence": 118,
+      "language_coverage": 0.554,
+      "language_counts": {
+        "en": 31,
+        "ko": 70,
+        "zh": 15,
+        "ja": 2
+      },
+      "market_coverage": 1.0,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "유럽",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 1.0,
+      "source_type_counts": {
+        "reference_wiki": 32,
+        "news_media": 84,
+        "community_social": 2
+      },
+      "time_coverage": 0.75,
+      "years_mentioned": [
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.833,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.451,
+    "spillover_score": 0.385,
+    "activity": 118,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "박서진",
+    "fanclub": "닻별",
+    "category": "트로트",
+    "loyalty_raw": 79.09999999999998,
+    "spillover_raw": 110.59999999999997,
+    "n_loyalty_bullets": 33,
+    "n_spillover_bullets": 66,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.2819,
+      "미디어노출형(방송·조회수)": 0.4083,
+      "결속형(팬클럽·기부·커뮤니티)": 0.1987,
+      "소비력형(초동·판매·앨범)": 0.0229,
+      "차트·확산형(1위·빌보드·기록)": 0.0882
+    },
+    "factor_diversity": 0.8354,
+    "coverage_index": 0.443,
+    "coverage_detail": {
+      "n_evidence": 99,
+      "language_coverage": 0.131,
+      "language_counts": {
+        "ko": 94,
+        "ja": 2,
+        "en": 3
+      },
+      "market_coverage": 0.5,
+      "markets_mentioned": [
+        "글로벌",
+        "미국_북미",
+        "일본"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "reference_wiki": 6,
+        "news_media": 93
+      },
+      "time_coverage": 0.75,
+      "years_mentioned": [
+        "2015",
+        "2018",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.333,
+      "entity_types_mentioned": [
+        "대형공연장",
+        "방송사"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.538,
+    "spillover_score": 0.297,
+    "activity": 99,
+    "dominant_factor": "미디어노출형(방송·조회수)"
+  },
+  {
+    "fandom": "LE SSERAFIM",
+    "fanclub": "FEARNOT 피어나",
+    "category": "K-pop 걸그룹",
+    "loyalty_raw": 62.699999999999996,
+    "spillover_raw": 148.29999999999995,
+    "n_loyalty_bullets": 44,
+    "n_spillover_bullets": 99,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.3661,
+      "미디어노출형(방송·조회수)": 0.2696,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0803,
+      "소비력형(초동·판매·앨범)": 0.1352,
+      "차트·확산형(1위·빌보드·기록)": 0.1488
+    },
+    "factor_diversity": 0.9182,
+    "coverage_index": 0.781,
+    "coverage_detail": {
+      "n_evidence": 143,
+      "language_coverage": 0.63,
+      "language_counts": {
+        "en": 34,
+        "ko": 82,
+        "es": 7,
+        "ja": 18,
+        "zh": 2
+      },
+      "market_coverage": 1.0,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "유럽",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 1.0,
+      "source_type_counts": {
+        "reference_wiki": 34,
+        "news_media": 108,
+        "community_social": 1
+      },
+      "time_coverage": 0.5,
+      "years_mentioned": [
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.667,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "방송사",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.357,
+    "spillover_score": 0.47,
+    "activity": 143,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "GOT7",
+    "fanclub": "I GOT7 (아가새)",
+    "category": "K-pop 보이그룹",
+    "loyalty_raw": 73.49999999999999,
+    "spillover_raw": 122.09999999999994,
+    "n_loyalty_bullets": 38,
+    "n_spillover_bullets": 69,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.5026,
+      "미디어노출형(방송·조회수)": 0.2109,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0373,
+      "소비력형(초동·판매·앨범)": 0.0193,
+      "차트·확산형(1위·빌보드·기록)": 0.23
+    },
+    "factor_diversity": 0.7523,
+    "coverage_index": 0.745,
+    "coverage_detail": {
+      "n_evidence": 107,
+      "language_coverage": 0.372,
+      "language_counts": {
+        "ko": 73,
+        "en": 33,
+        "zh": 1
+      },
+      "market_coverage": 1.0,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "유럽",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "news_media": 87,
+        "reference_wiki": 20
+      },
+      "time_coverage": 1.0,
+      "years_mentioned": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 1.0,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "매체_어워드",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.476,
+    "spillover_score": 0.349,
+    "activity": 107,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "레드벨벳",
+    "fanclub": "ReVeluv/레베럽",
+    "category": "K-pop 걸그룹",
+    "loyalty_raw": 81.1,
+    "spillover_raw": 103.59999999999995,
+    "n_loyalty_bullets": 53,
+    "n_spillover_bullets": 65,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.5126,
+      "미디어노출형(방송·조회수)": 0.1979,
+      "결속형(팬클럽·기부·커뮤니티)": 0.1045,
+      "소비력형(초동·판매·앨범)": 0.0966,
+      "차트·확산형(1위·빌보드·기록)": 0.0884
+    },
+    "factor_diversity": 0.8322,
+    "coverage_index": 0.77,
+    "coverage_detail": {
+      "n_evidence": 118,
+      "language_coverage": 0.51,
+      "language_counts": {
+        "en": 24,
+        "ko": 82,
+        "es": 5,
+        "ja": 5,
+        "zh": 2
+      },
+      "market_coverage": 1.0,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "유럽",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "reference_wiki": 39,
+        "news_media": 79
+      },
+      "time_coverage": 1.0,
+      "years_mentioned": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.833,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.56,
+    "spillover_score": 0.264,
+    "activity": 118,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "DAY6",
+    "fanclub": "My Day / 마이데이",
+    "category": "K-pop 보이그룹 /록",
+    "loyalty_raw": 86.69999999999999,
+    "spillover_raw": 83.99999999999997,
+    "n_loyalty_bullets": 54,
+    "n_spillover_bullets": 47,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.5743,
+      "미디어노출형(방송·조회수)": 0.1872,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0932,
+      "소비력형(초동·판매·앨범)": 0.0593,
+      "차트·확산형(1위·빌보드·기록)": 0.086
+    },
+    "factor_diversity": 0.7654,
+    "coverage_index": 0.762,
+    "coverage_detail": {
+      "n_evidence": 101,
+      "language_coverage": 0.345,
+      "language_counts": {
+        "en": 21,
+        "ko": 78,
+        "ja": 1,
+        "es": 1
+      },
+      "market_coverage": 1.0,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "유럽",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 1.0,
+      "source_type_counts": {
+        "reference_wiki": 29,
+        "news_media": 71,
+        "community_social": 1
+      },
+      "time_coverage": 0.833,
+      "years_mentioned": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2022",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.833,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.622,
+    "spillover_score": 0.174,
+    "activity": 101,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "영탁",
+    "fanclub": "영탁이딱이야/영탁앤블루스",
+    "category": "트로트",
+    "loyalty_raw": 73.8,
+    "spillover_raw": 106.89999999999993,
+    "n_loyalty_bullets": 39,
+    "n_spillover_bullets": 65,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.4411,
+      "미디어노출형(방송·조회수)": 0.2501,
+      "결속형(팬클럽·기부·커뮤니티)": 0.1585,
+      "소비력형(초동·판매·앨범)": 0.0942,
+      "차트·확산형(1위·빌보드·기록)": 0.056
+    },
+    "factor_diversity": 0.8597,
+    "coverage_index": 0.567,
+    "coverage_detail": {
+      "n_evidence": 104,
+      "language_coverage": 0.153,
+      "language_counts": {
+        "ko": 97,
+        "en": 6,
+        "zh": 1
+      },
+      "market_coverage": 0.667,
+      "markets_mentioned": [
+        "동남아",
+        "미국_북미",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 1.0,
+      "source_type_counts": {
+        "news_media": 73,
+        "reference_wiki": 30,
+        "community_social": 1
+      },
+      "time_coverage": 0.583,
+      "years_mentioned": [
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.667,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "매체_어워드",
+        "방송사",
+        "음원차트_국내"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.48,
+    "spillover_score": 0.28,
+    "activity": 104,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "몬스타엑스",
+    "fanclub": "몬베베(MONBEBE)",
+    "category": "K-pop 보이그룹",
+    "loyalty_raw": 81.39999999999998,
+    "spillover_raw": 85.89999999999999,
+    "n_loyalty_bullets": 41,
+    "n_spillover_bullets": 55,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.5263,
+      "미디어노출형(방송·조회수)": 0.1938,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0794,
+      "소비력형(초동·판매·앨범)": 0.0119,
+      "차트·확산형(1위·빌보드·기록)": 0.1886
+    },
+    "factor_diversity": 0.7607,
+    "coverage_index": 0.771,
+    "coverage_detail": {
+      "n_evidence": 96,
+      "language_coverage": 0.294,
+      "language_counts": {
+        "ko": 82,
+        "en": 10,
+        "ja": 3,
+        "es": 1
+      },
+      "market_coverage": 1.0,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "유럽",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 1.0,
+      "source_type_counts": {
+        "news_media": 91,
+        "community_social": 4,
+        "reference_wiki": 1
+      },
+      "time_coverage": 1.0,
+      "years_mentioned": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.833,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "매체_어워드",
+        "방송사",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.563,
+    "spillover_score": 0.183,
+    "activity": 96,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "이찬원",
+    "fanclub": "찬스 / Chan's",
+    "category": "트로트",
+    "loyalty_raw": 68.3,
+    "spillover_raw": 116.19999999999995,
+    "n_loyalty_bullets": 37,
+    "n_spillover_bullets": 69,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.3114,
+      "미디어노출형(방송·조회수)": 0.3288,
+      "결속형(팬클럽·기부·커뮤니티)": 0.1451,
+      "소비력형(초동·판매·앨범)": 0.1092,
+      "차트·확산형(1위·빌보드·기록)": 0.1055
+    },
+    "factor_diversity": 0.9247,
+    "coverage_index": 0.469,
+    "coverage_detail": {
+      "n_evidence": 106,
+      "language_coverage": 0.217,
+      "language_counts": {
+        "ko": 96,
+        "en": 7,
+        "zh": 1,
+        "ja": 2
+      },
+      "market_coverage": 0.333,
+      "markets_mentioned": [
+        "글로벌",
+        "일본"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "news_media": 82,
+        "reference_wiki": 24
+      },
+      "time_coverage": 0.583,
+      "years_mentioned": [
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 1.0,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "매체_어워드",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.419,
+    "spillover_score": 0.322,
+    "activity": 106,
+    "dominant_factor": "미디어노출형(방송·조회수)"
+  },
+  {
+    "fandom": "정동원",
+    "fanclub": "우주총동원",
+    "category": "트로트",
+    "loyalty_raw": 75.69999999999999,
+    "spillover_raw": 89.69999999999997,
+    "n_loyalty_bullets": 48,
+    "n_spillover_bullets": 59,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.4633,
+      "미디어노출형(방송·조회수)": 0.2271,
+      "결속형(팬클럽·기부·커뮤니티)": 0.1626,
+      "소비력형(초동·판매·앨범)": 0.0636,
+      "차트·확산형(1위·빌보드·기록)": 0.0834
+    },
+    "factor_diversity": 0.8517,
+    "coverage_index": 0.544,
+    "coverage_detail": {
+      "n_evidence": 107,
+      "language_coverage": 0.231,
+      "language_counts": {
+        "ko": 95,
+        "zh": 3,
+        "en": 9
+      },
+      "market_coverage": 0.5,
+      "markets_mentioned": [
+        "미국_북미",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 1.0,
+      "source_type_counts": {
+        "reference_wiki": 28,
+        "news_media": 77,
+        "community_social": 2
+      },
+      "time_coverage": 0.667,
+      "years_mentioned": [
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.5,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "방송사",
+        "음원차트_국내"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.501,
+    "spillover_score": 0.201,
+    "activity": 107,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "투어스(TWS)",
+    "fanclub": "42",
+    "category": "K-pop 보이그룹",
+    "loyalty_raw": 60.899999999999984,
+    "spillover_raw": 125.4999999999999,
+    "n_loyalty_bullets": 32,
+    "n_spillover_bullets": 58,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.4909,
+      "미디어노출형(방송·조회수)": 0.1731,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0938,
+      "소비력형(초동·판매·앨범)": 0.0253,
+      "차트·확산형(1위·빌보드·기록)": 0.2169
+    },
+    "factor_diversity": 0.8074,
+    "coverage_index": 0.673,
+    "coverage_detail": {
+      "n_evidence": 90,
+      "language_coverage": 0.424,
+      "language_counts": {
+        "en": 34,
+        "ko": 54,
+        "ja": 2
+      },
+      "market_coverage": 0.833,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 1.0,
+      "source_type_counts": {
+        "news_media": 80,
+        "reference_wiki": 5,
+        "community_social": 5
+      },
+      "time_coverage": 0.25,
+      "years_mentioned": [
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 1.0,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "매체_어워드",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.337,
+    "spillover_score": 0.365,
+    "activity": 90,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "IKON",
+    "fanclub": "iKONIC / 아이코닉",
+    "category": "K-pop 보이그룹",
+    "loyalty_raw": 82.79999999999998,
+    "spillover_raw": 71.29999999999998,
+    "n_loyalty_bullets": 54,
+    "n_spillover_bullets": 42,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.5133,
+      "미디어노출형(방송·조회수)": 0.1573,
+      "결속형(팬클럽·기부·커뮤니티)": 0.1467,
+      "소비력형(초동·판매·앨범)": 0.056,
+      "차트·확산형(1위·빌보드·기록)": 0.1268
+    },
+    "factor_diversity": 0.8313,
+    "coverage_index": 0.712,
+    "coverage_detail": {
+      "n_evidence": 96,
+      "language_coverage": 0.444,
+      "language_counts": {
+        "en": 22,
+        "ko": 68,
+        "ja": 2,
+        "es": 4
+      },
+      "market_coverage": 1.0,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "유럽",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "reference_wiki": 26,
+        "news_media": 70
+      },
+      "time_coverage": 0.75,
+      "years_mentioned": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.833,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.579,
+    "spillover_score": 0.116,
+    "activity": 96,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "아이오아이",
+    "fanclub": "앙둥이",
+    "category": "K-pop 걸그룹",
+    "loyalty_raw": 78.8,
+    "spillover_raw": 78.39999999999999,
+    "n_loyalty_bullets": 45,
+    "n_spillover_bullets": 50,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.3461,
+      "미디어노출형(방송·조회수)": 0.3484,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0689,
+      "소비력형(초동·판매·앨범)": 0.0472,
+      "차트·확산형(1위·빌보드·기록)": 0.1893
+    },
+    "factor_diversity": 0.8564,
+    "coverage_index": 0.564,
+    "coverage_detail": {
+      "n_evidence": 95,
+      "language_coverage": 0.325,
+      "language_counts": {
+        "en": 18,
+        "ko": 75,
+        "zh": 2
+      },
+      "market_coverage": 0.667,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "news_media": 68,
+        "reference_wiki": 27
+      },
+      "time_coverage": 0.667,
+      "years_mentioned": [
+        "2016",
+        "2017",
+        "2019",
+        "2021",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.667,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.535,
+    "spillover_score": 0.149,
+    "activity": 95,
+    "dominant_factor": "미디어노출형(방송·조회수)"
+  },
+  {
+    "fandom": "이영지",
+    "fanclub": null,
+    "category": "힙합",
+    "loyalty_raw": 67.59999999999998,
+    "spillover_raw": 104.49999999999993,
+    "n_loyalty_bullets": 39,
+    "n_spillover_bullets": 68,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.4077,
+      "미디어노출형(방송·조회수)": 0.3662,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0781,
+      "소비력형(초동·판매·앨범)": 0.0324,
+      "차트·확산형(1위·빌보드·기록)": 0.1156
+    },
+    "factor_diversity": 0.8036,
+    "coverage_index": 0.728,
+    "coverage_detail": {
+      "n_evidence": 107,
+      "language_coverage": 0.358,
+      "language_counts": {
+        "ko": 85,
+        "en": 17,
+        "ja": 4,
+        "zh": 1
+      },
+      "market_coverage": 1.0,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "유럽",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 1.0,
+      "source_type_counts": {
+        "community_social": 3,
+        "news_media": 92,
+        "reference_wiki": 12
+      },
+      "time_coverage": 0.583,
+      "years_mentioned": [
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.833,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.411,
+    "spillover_score": 0.269,
+    "activity": 107,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "박효신",
+    "fanclub": "소울트리",
+    "category": "발라드",
+    "loyalty_raw": 74.69999999999997,
+    "spillover_raw": 86.39999999999998,
+    "n_loyalty_bullets": 37,
+    "n_spillover_bullets": 54,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.4684,
+      "미디어노출형(방송·조회수)": 0.2083,
+      "결속형(팬클럽·기부·커뮤니티)": 0.1197,
+      "소비력형(초동·판매·앨범)": 0.0539,
+      "차트·확산형(1위·빌보드·기록)": 0.1498
+    },
+    "factor_diversity": 0.8561,
+    "coverage_index": 0.592,
+    "coverage_detail": {
+      "n_evidence": 91,
+      "language_coverage": 0.239,
+      "language_counts": {
+        "ko": 79,
+        "en": 11,
+        "ja": 1
+      },
+      "market_coverage": 0.667,
+      "markets_mentioned": [
+        "글로벌",
+        "미국_북미",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "news_media": 60,
+        "reference_wiki": 31
+      },
+      "time_coverage": 0.917,
+      "years_mentioned": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.833,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.49,
+    "spillover_score": 0.185,
+    "activity": 91,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "아일릿",
+    "fanclub": "글릿(GLLIT)",
+    "category": "K-pop 걸그룹",
+    "loyalty_raw": 60.19999999999999,
+    "spillover_raw": 119.39999999999993,
+    "n_loyalty_bullets": 31,
+    "n_spillover_bullets": 76,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.3068,
+      "미디어노출형(방송·조회수)": 0.2924,
+      "결속형(팬클럽·기부·커뮤니티)": 0.055,
+      "소비력형(초동·판매·앨범)": 0.0945,
+      "차트·확산형(1위·빌보드·기록)": 0.2513
+    },
+    "factor_diversity": 0.9019,
+    "coverage_index": 0.596,
+    "coverage_detail": {
+      "n_evidence": 107,
+      "language_coverage": 0.403,
+      "language_counts": {
+        "ko": 81,
+        "en": 20,
+        "ja": 4,
+        "zh": 2
+      },
+      "market_coverage": 0.833,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "news_media": 81,
+        "reference_wiki": 26
+      },
+      "time_coverage": 0.333,
+      "years_mentioned": [
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.833,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.33,
+    "spillover_score": 0.337,
+    "activity": 107,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "이효리",
+    "fanclub": "Hyori Together(효리투게더)",
+    "category": "솔로",
+    "loyalty_raw": 30.800000000000004,
+    "spillover_raw": 188.49999999999991,
+    "n_loyalty_bullets": 17,
+    "n_spillover_bullets": 103,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.2715,
+      "미디어노출형(방송·조회수)": 0.4713,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0716,
+      "소비력형(초동·판매·앨범)": 0.0769,
+      "차트·확산형(1위·빌보드·기록)": 0.1087
+    },
+    "factor_diversity": 0.83,
+    "coverage_index": 0.547,
+    "coverage_detail": {
+      "n_evidence": 120,
+      "language_coverage": 0.324,
+      "language_counts": {
+        "ko": 95,
+        "en": 23,
+        "zh": 1,
+        "ja": 1
+      },
+      "market_coverage": 0.667,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "reference_wiki": 48,
+        "news_media": 72
+      },
+      "time_coverage": 0.667,
+      "years_mentioned": [
+        "2017",
+        "2018",
+        "2020",
+        "2021",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.5,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "방송사",
+        "음원차트_국내"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.006,
+    "spillover_score": 0.654,
+    "activity": 120,
+    "dominant_factor": "미디어노출형(방송·조회수)"
+  },
+  {
+    "fandom": "송가인",
+    "fanclub": "AGAIN/어게인",
+    "category": "트로트",
+    "loyalty_raw": 61.400000000000006,
+    "spillover_raw": 113.89999999999996,
+    "n_loyalty_bullets": 34,
+    "n_spillover_bullets": 58,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.4716,
+      "미디어노출형(방송·조회수)": 0.2996,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0893,
+      "소비력형(초동·판매·앨범)": 0.0555,
+      "차트·확산형(1위·빌보드·기록)": 0.084
+    },
+    "factor_diversity": 0.8076,
+    "coverage_index": 0.494,
+    "coverage_detail": {
+      "n_evidence": 92,
+      "language_coverage": 0.133,
+      "language_counts": {
+        "ko": 87,
+        "en": 4,
+        "ja": 1
+      },
+      "market_coverage": 0.5,
+      "markets_mentioned": [
+        "미국_북미",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "reference_wiki": 31,
+        "news_media": 61
+      },
+      "time_coverage": 0.75,
+      "years_mentioned": [
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.833,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "매체_어워드",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.343,
+    "spillover_score": 0.312,
+    "activity": 92,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "김동률",
+    "fanclub": null,
+    "category": "발라드",
+    "loyalty_raw": 75.29999999999998,
+    "spillover_raw": 78.89999999999998,
+    "n_loyalty_bullets": 37,
+    "n_spillover_bullets": 46,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.5466,
+      "미디어노출형(방송·조회수)": 0.2434,
+      "결속형(팬클럽·기부·커뮤니티)": 0.052,
+      "소비력형(초동·판매·앨범)": 0.0441,
+      "차트·확산형(1위·빌보드·기록)": 0.114
+    },
+    "factor_diversity": 0.7537,
+    "coverage_index": 0.578,
+    "coverage_detail": {
+      "n_evidence": 83,
+      "language_coverage": 0.274,
+      "language_counts": {
+        "ko": 72,
+        "en": 8,
+        "zh": 1,
+        "ja": 2
+      },
+      "market_coverage": 0.833,
+      "markets_mentioned": [
+        "글로벌",
+        "미국_북미",
+        "유럽",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "news_media": 39,
+        "reference_wiki": 44
+      },
+      "time_coverage": 0.583,
+      "years_mentioned": [
+        "2015",
+        "2018",
+        "2019",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.667,
+      "entity_types_mentioned": [
+        "대형공연장",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.496,
+    "spillover_score": 0.151,
+    "activity": 83,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "슈퍼주니어",
+    "fanclub": "E.L.F.",
+    "category": "K-pop 보이그룹",
+    "loyalty_raw": 62.399999999999984,
+    "spillover_raw": 107.79999999999995,
+    "n_loyalty_bullets": 31,
+    "n_spillover_bullets": 58,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.4368,
+      "미디어노출형(방송·조회수)": 0.2676,
+      "결속형(팬클럽·기부·커뮤니티)": 0.1484,
+      "소비력형(초동·판매·앨범)": 0.0792,
+      "차트·확산형(1위·빌보드·기록)": 0.068
+    },
+    "factor_diversity": 0.8583,
+    "coverage_index": 0.645,
+    "coverage_detail": {
+      "n_evidence": 89,
+      "language_coverage": 0.359,
+      "language_counts": {
+        "ko": 68,
+        "en": 18,
+        "zh": 3
+      },
+      "market_coverage": 0.833,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "news_media": 58,
+        "reference_wiki": 31
+      },
+      "time_coverage": 0.75,
+      "years_mentioned": [
+        "2015",
+        "2017",
+        "2019",
+        "2020",
+        "2021",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.833,
+      "entity_types_mentioned": [
+        "대형공연장",
+        "매체_어워드",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.354,
+    "spillover_score": 0.284,
+    "activity": 89,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "박재범",
+    "fanclub": "JWalkerz",
+    "category": "힙합",
+    "loyalty_raw": 66.6,
+    "spillover_raw": 96.79999999999995,
+    "n_loyalty_bullets": 49,
+    "n_spillover_bullets": 61,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.5129,
+      "미디어노출형(방송·조회수)": 0.2572,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0781,
+      "소비력형(초동·판매·앨범)": 0.0679,
+      "차트·확산형(1위·빌보드·기록)": 0.0838
+    },
+    "factor_diversity": 0.7961,
+    "coverage_index": 0.727,
+    "coverage_detail": {
+      "n_evidence": 110,
+      "language_coverage": 0.298,
+      "language_counts": {
+        "ko": 96,
+        "en": 7,
+        "zh": 3,
+        "ja": 3,
+        "es": 1
+      },
+      "market_coverage": 1.0,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "유럽",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 1.0,
+      "source_type_counts": {
+        "reference_wiki": 12,
+        "community_social": 2,
+        "news_media": 96
+      },
+      "time_coverage": 0.917,
+      "years_mentioned": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.5,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "방송사",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.4,
+    "spillover_score": 0.233,
+    "activity": 110,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "윤하",
+    "fanclub": "Y.HOLICS/홀릭스",
+    "category": "솔로",
+    "loyalty_raw": 72.69999999999999,
+    "spillover_raw": 81.69999999999997,
+    "n_loyalty_bullets": 33,
+    "n_spillover_bullets": 50,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.4045,
+      "미디어노출형(방송·조회수)": 0.2331,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0714,
+      "소비력형(초동·판매·앨범)": 0.0842,
+      "차트·확산형(1위·빌보드·기록)": 0.2069
+    },
+    "factor_diversity": 0.8875,
+    "coverage_index": 0.726,
+    "coverage_detail": {
+      "n_evidence": 83,
+      "language_coverage": 0.448,
+      "language_counts": {
+        "ko": 56,
+        "en": 21,
+        "ja": 6
+      },
+      "market_coverage": 0.667,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "일본"
+      ],
+      "source_type_coverage": 1.0,
+      "source_type_counts": {
+        "community_social": 2,
+        "news_media": 42,
+        "reference_wiki": 39
+      },
+      "time_coverage": 0.833,
+      "years_mentioned": [
+        "2015",
+        "2016",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 1.0,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "매체_어워드",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.467,
+    "spillover_score": 0.164,
+    "activity": 83,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "빅뱅",
+    "fanclub": "V.I.P",
+    "category": "K-pop 보이그룹",
+    "loyalty_raw": 56.499999999999986,
+    "spillover_raw": 118.59999999999992,
+    "n_loyalty_bullets": 31,
+    "n_spillover_bullets": 66,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.4878,
+      "미디어노출형(방송·조회수)": 0.2375,
+      "결속형(팬클럽·기부·커뮤니티)": 0.1131,
+      "소비력형(초동·판매·앨범)": 0.0803,
+      "차트·확산형(1위·빌보드·기록)": 0.0813
+    },
+    "factor_diversity": 0.8355,
+    "coverage_index": 0.701,
+    "coverage_detail": {
+      "n_evidence": 97,
+      "language_coverage": 0.405,
+      "language_counts": {
+        "ko": 71,
+        "en": 20,
+        "ja": 6
+      },
+      "market_coverage": 1.0,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "유럽",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "news_media": 65,
+        "reference_wiki": 32
+      },
+      "time_coverage": 0.75,
+      "years_mentioned": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2020",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.833,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.289,
+    "spillover_score": 0.333,
+    "activity": 97,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "리센느(RESCENE)",
+    "fanclub": "REMINE 리마인",
+    "category": "K-pop 걸그룹",
+    "loyalty_raw": 62.899999999999984,
+    "spillover_raw": 103.09999999999997,
+    "n_loyalty_bullets": 31,
+    "n_spillover_bullets": 54,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.2784,
+      "미디어노출형(방송·조회수)": 0.2566,
+      "결속형(팬클럽·기부·커뮤니티)": 0.2296,
+      "소비력형(초동·판매·앨범)": 0.0525,
+      "차트·확산형(1위·빌보드·기록)": 0.1828
+    },
+    "factor_diversity": 0.9371,
+    "coverage_index": 0.62,
+    "coverage_detail": {
+      "n_evidence": 85,
+      "language_coverage": 0.262,
+      "language_counts": {
+        "ko": 72,
+        "en": 12,
+        "ja": 1
+      },
+      "market_coverage": 0.833,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 1.0,
+      "source_type_counts": {
+        "news_media": 68,
+        "community_social": 2,
+        "reference_wiki": 15
+      },
+      "time_coverage": 0.333,
+      "years_mentioned": [
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.833,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "매체_어워드",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.359,
+    "spillover_score": 0.262,
+    "activity": 85,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "엔믹스",
+    "fanclub": "NSWER/엔써",
+    "category": "K-pop 걸그룹",
+    "loyalty_raw": 63.3,
+    "spillover_raw": 101.69999999999995,
+    "n_loyalty_bullets": 47,
+    "n_spillover_bullets": 63,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.4181,
+      "미디어노출형(방송·조회수)": 0.2737,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0772,
+      "소비력형(초동·판매·앨범)": 0.094,
+      "차트·확산형(1위·빌보드·기록)": 0.1371
+    },
+    "factor_diversity": 0.877,
+    "coverage_index": 0.681,
+    "coverage_detail": {
+      "n_evidence": 110,
+      "language_coverage": 0.409,
+      "language_counts": {
+        "en": 18,
+        "ko": 84,
+        "es": 6,
+        "ja": 2
+      },
+      "market_coverage": 1.0,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "유럽",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "reference_wiki": 30,
+        "news_media": 80
+      },
+      "time_coverage": 0.5,
+      "years_mentioned": [
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 1.0,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "매체_어워드",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.364,
+    "spillover_score": 0.256,
+    "activity": 110,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "QWER",
+    "fanclub": "바위게/BAWIGE",
+    "category": "K-pop 걸그룹",
+    "loyalty_raw": 62.59999999999999,
+    "spillover_raw": 103.19999999999996,
+    "n_loyalty_bullets": 39,
+    "n_spillover_bullets": 64,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.3768,
+      "미디어노출형(방송·조회수)": 0.3125,
+      "결속형(팬클럽·기부·커뮤니티)": 0.1055,
+      "소비력형(초동·판매·앨범)": 0.0735,
+      "차트·확산형(1위·빌보드·기록)": 0.1316
+    },
+    "factor_diversity": 0.8869,
+    "coverage_index": 0.593,
+    "coverage_detail": {
+      "n_evidence": 103,
+      "language_coverage": 0.296,
+      "language_counts": {
+        "ko": 83,
+        "en": 19,
+        "zh": 1
+      },
+      "market_coverage": 0.833,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 1.0,
+      "source_type_counts": {
+        "news_media": 64,
+        "reference_wiki": 38,
+        "community_social": 1
+      },
+      "time_coverage": 0.417,
+      "years_mentioned": [
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.333,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.356,
+    "spillover_score": 0.263,
+    "activity": 103,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "BTOB",
+    "fanclub": "Melody / 멜로디",
+    "category": "K-pop 보이그룹",
+    "loyalty_raw": 74.19999999999999,
+    "spillover_raw": 73.59999999999998,
+    "n_loyalty_bullets": 41,
+    "n_spillover_bullets": 41,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.4462,
+      "미디어노출형(방송·조회수)": 0.1748,
+      "결속형(팬클럽·기부·커뮤니티)": 0.1548,
+      "소비력형(초동·판매·앨범)": 0.0693,
+      "차트·확산형(1위·빌보드·기록)": 0.1549
+    },
+    "factor_diversity": 0.8871,
+    "coverage_index": 0.637,
+    "coverage_detail": {
+      "n_evidence": 82,
+      "language_coverage": 0.402,
+      "language_counts": {
+        "en": 25,
+        "ko": 55,
+        "ja": 2
+      },
+      "market_coverage": 0.667,
+      "markets_mentioned": [
+        "동남아",
+        "미국_북미",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "reference_wiki": 32,
+        "news_media": 50
+      },
+      "time_coverage": 1.0,
+      "years_mentioned": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.667,
+      "entity_types_mentioned": [
+        "대형공연장",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.484,
+    "spillover_score": 0.127,
+    "activity": 82,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "김호중",
+    "fanclub": "아리스 / ARISS",
+    "category": "트로트",
+    "loyalty_raw": 72.39999999999998,
+    "spillover_raw": 77.6,
+    "n_loyalty_bullets": 39,
+    "n_spillover_bullets": 52,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.241,
+      "미디어노출형(방송·조회수)": 0.1965,
+      "결속형(팬클럽·기부·커뮤니티)": 0.2489,
+      "소비력형(초동·판매·앨범)": 0.0967,
+      "차트·확산형(1위·빌보드·기록)": 0.2169
+    },
+    "factor_diversity": 0.9731,
+    "coverage_index": 0.59,
+    "coverage_detail": {
+      "n_evidence": 91,
+      "language_coverage": 0.202,
+      "language_counts": {
+        "ko": 83,
+        "en": 6,
+        "zh": 1,
+        "ja": 1
+      },
+      "market_coverage": 0.833,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "news_media": 70,
+        "reference_wiki": 21
+      },
+      "time_coverage": 0.583,
+      "years_mentioned": [
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 1.0,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "매체_어워드",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.464,
+    "spillover_score": 0.145,
+    "activity": 91,
+    "dominant_factor": "결속형(팬클럽·기부·커뮤니티)"
+  },
+  {
+    "fandom": "김재중",
+    "fanclub": "BOSS BABIES",
+    "category": "솔로",
+    "loyalty_raw": 70.89999999999998,
+    "spillover_raw": 80.69999999999999,
+    "n_loyalty_bullets": 39,
+    "n_spillover_bullets": 38,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.6182,
+      "미디어노출형(방송·조회수)": 0.1924,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0998,
+      "소비력형(초동·판매·앨범)": 0.0137,
+      "차트·확산형(1위·빌보드·기록)": 0.0759
+    },
+    "factor_diversity": 0.6827,
+    "coverage_index": 0.672,
+    "coverage_detail": {
+      "n_evidence": 77,
+      "language_coverage": 0.197,
+      "language_counts": {
+        "ko": 71,
+        "en": 3,
+        "zh": 2,
+        "ja": 1
+      },
+      "market_coverage": 0.833,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 1.0,
+      "source_type_counts": {
+        "reference_wiki": 18,
+        "news_media": 58,
+        "community_social": 1
+      },
+      "time_coverage": 0.917,
+      "years_mentioned": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.667,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "방송사",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.448,
+    "spillover_score": 0.159,
+    "activity": 77,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "잭스키스",
+    "fanclub": "YELLOWKIES",
+    "category": "원로그룹",
+    "loyalty_raw": 75.6,
+    "spillover_raw": 68.39999999999999,
+    "n_loyalty_bullets": 41,
+    "n_spillover_bullets": 44,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.3184,
+      "미디어노출형(방송·조회수)": 0.2935,
+      "결속형(팬클럽·기부·커뮤니티)": 0.1895,
+      "소비력형(초동·판매·앨범)": 0.0751,
+      "차트·확산형(1위·빌보드·기록)": 0.1235
+    },
+    "factor_diversity": 0.9272,
+    "coverage_index": 0.556,
+    "coverage_detail": {
+      "n_evidence": 85,
+      "language_coverage": 0.312,
+      "language_counts": {
+        "ko": 72,
+        "en": 8,
+        "ja": 4,
+        "zh": 1
+      },
+      "market_coverage": 0.667,
+      "markets_mentioned": [
+        "글로벌",
+        "미국_북미",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "reference_wiki": 40,
+        "news_media": 45
+      },
+      "time_coverage": 0.417,
+      "years_mentioned": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2025"
+      ],
+      "entity_coverage": 1.0,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "매체_어워드",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.499,
+    "spillover_score": 0.103,
+    "activity": 85,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "IVE",
+    "fanclub": "DIVE 다이브",
+    "category": "K-pop 걸그룹",
+    "loyalty_raw": 60.69999999999999,
+    "spillover_raw": 103.89999999999998,
+    "n_loyalty_bullets": 38,
+    "n_spillover_bullets": 62,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.396,
+      "미디어노출형(방송·조회수)": 0.2056,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0895,
+      "소비력형(초동·판매·앨범)": 0.1531,
+      "차트·확산형(1위·빌보드·기록)": 0.1557
+    },
+    "factor_diversity": 0.9227,
+    "coverage_index": 0.702,
+    "coverage_detail": {
+      "n_evidence": 100,
+      "language_coverage": 0.534,
+      "language_counts": {
+        "en": 33,
+        "ko": 59,
+        "zh": 3,
+        "ja": 4,
+        "es": 1
+      },
+      "market_coverage": 1.0,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "유럽",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "reference_wiki": 37,
+        "news_media": 63
+      },
+      "time_coverage": 0.5,
+      "years_mentioned": [
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.833,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.335,
+    "spillover_score": 0.266,
+    "activity": 100,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "ITZY",
+    "fanclub": "MIDZY 믿지",
+    "category": "K-pop 걸그룹",
+    "loyalty_raw": 60.199999999999996,
+    "spillover_raw": 101.19999999999996,
+    "n_loyalty_bullets": 41,
+    "n_spillover_bullets": 66,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.3931,
+      "미디어노출형(방송·조회수)": 0.268,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0791,
+      "소비력형(초동·판매·앨범)": 0.1248,
+      "차트·확산형(1위·빌보드·기록)": 0.135
+    },
+    "factor_diversity": 0.9014,
+    "coverage_index": 0.849,
+    "coverage_detail": {
+      "n_evidence": 107,
+      "language_coverage": 0.579,
+      "language_counts": {
+        "en": 33,
+        "es": 4,
+        "ko": 62,
+        "ja": 6,
+        "zh": 2
+      },
+      "market_coverage": 1.0,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "유럽",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 1.0,
+      "source_type_counts": {
+        "reference_wiki": 37,
+        "news_media": 68,
+        "community_social": 2
+      },
+      "time_coverage": 0.833,
+      "years_mentioned": [
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 1.0,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "매체_어워드",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.33,
+    "spillover_score": 0.253,
+    "activity": 107,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "지코",
+    "fanclub": "COMMON/코몬",
+    "category": "힙합",
+    "loyalty_raw": 46.3,
+    "spillover_raw": 130.59999999999997,
+    "n_loyalty_bullets": 28,
+    "n_spillover_bullets": 73,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.4383,
+      "미디어노출형(방송·조회수)": 0.3515,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0514,
+      "소비력형(초동·판매·앨범)": 0.0215,
+      "차트·확산형(1위·빌보드·기록)": 0.1373
+    },
+    "factor_diversity": 0.7684,
+    "coverage_index": 0.749,
+    "coverage_detail": {
+      "n_evidence": 101,
+      "language_coverage": 0.44,
+      "language_counts": {
+        "ko": 74,
+        "en": 19,
+        "ja": 6,
+        "zh": 2
+      },
+      "market_coverage": 0.833,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 1.0,
+      "source_type_counts": {
+        "reference_wiki": 26,
+        "news_media": 74,
+        "community_social": 1
+      },
+      "time_coverage": 0.833,
+      "years_mentioned": [
+        "2015",
+        "2016",
+        "2018",
+        "2019",
+        "2020",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.833,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.176,
+    "spillover_score": 0.388,
+    "activity": 101,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "오마이걸",
+    "fanclub": "Miracle/미라클",
+    "category": "K-pop 걸그룹",
+    "loyalty_raw": 58.1,
+    "spillover_raw": 100.19999999999999,
+    "n_loyalty_bullets": 34,
+    "n_spillover_bullets": 64,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.2973,
+      "미디어노출형(방송·조회수)": 0.4188,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0843,
+      "소비력형(초동·판매·앨범)": 0.0867,
+      "차트·확산형(1위·빌보드·기록)": 0.113
+    },
+    "factor_diversity": 0.8648,
+    "coverage_index": 0.636,
+    "coverage_detail": {
+      "n_evidence": 98,
+      "language_coverage": 0.343,
+      "language_counts": {
+        "en": 15,
+        "ko": 79,
+        "ja": 3,
+        "zh": 1
+      },
+      "market_coverage": 0.667,
+      "markets_mentioned": [
+        "동남아",
+        "미국_북미",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "reference_wiki": 34,
+        "news_media": 64
+      },
+      "time_coverage": 1.0,
+      "years_mentioned": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.833,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.307,
+    "spillover_score": 0.249,
+    "activity": 98,
+    "dominant_factor": "미디어노출형(방송·조회수)"
+  },
+  {
+    "fandom": "여자친구",
+    "fanclub": "BUDDY/버디",
+    "category": "K-pop 걸그룹",
+    "loyalty_raw": 64.89999999999999,
+    "spillover_raw": 83.7,
+    "n_loyalty_bullets": 44,
+    "n_spillover_bullets": 49,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.5294,
+      "미디어노출형(방송·조회수)": 0.1639,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0558,
+      "소비력형(초동·판매·앨범)": 0.1147,
+      "차트·확산형(1위·빌보드·기록)": 0.1362
+    },
+    "factor_diversity": 0.8164,
+    "coverage_index": 0.76,
+    "coverage_detail": {
+      "n_evidence": 93,
+      "language_coverage": 0.478,
+      "language_counts": {
+        "en": 19,
+        "ko": 64,
+        "ja": 9,
+        "zh": 1
+      },
+      "market_coverage": 1.0,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "유럽",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "reference_wiki": 37,
+        "news_media": 56
+      },
+      "time_coverage": 1.0,
+      "years_mentioned": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.833,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.381,
+    "spillover_score": 0.173,
+    "activity": 93,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "프로미스나인",
+    "fanclub": "flover 플로버",
+    "category": "K-pop 걸그룹",
+    "loyalty_raw": 58.89999999999999,
+    "spillover_raw": 96.79999999999995,
+    "n_loyalty_bullets": 34,
+    "n_spillover_bullets": 55,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.373,
+      "미디어노출형(방송·조회수)": 0.2797,
+      "결속형(팬클럽·기부·커뮤니티)": 0.049,
+      "소비력형(초동·판매·앨범)": 0.0847,
+      "차트·확산형(1위·빌보드·기록)": 0.2137
+    },
+    "factor_diversity": 0.8765,
+    "coverage_index": 0.686,
+    "coverage_detail": {
+      "n_evidence": 89,
+      "language_coverage": 0.507,
+      "language_counts": {
+        "en": 27,
+        "ko": 56,
+        "ja": 2,
+        "zh": 2,
+        "es": 2
+      },
+      "market_coverage": 0.833,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "reference_wiki": 31,
+        "news_media": 58
+      },
+      "time_coverage": 0.833,
+      "years_mentioned": [
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.667,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.315,
+    "spillover_score": 0.233,
+    "activity": 89,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "Hearts2Hearts",
+    "fanclub": "S2U(하츄)",
+    "category": "K-pop 걸그룹",
+    "loyalty_raw": 46.7,
+    "spillover_raw": 124.09999999999992,
+    "n_loyalty_bullets": 27,
+    "n_spillover_bullets": 75,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.3714,
+      "미디어노출형(방송·조회수)": 0.2875,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0705,
+      "소비력형(초동·판매·앨범)": 0.1155,
+      "차트·확산형(1위·빌보드·기록)": 0.1551
+    },
+    "factor_diversity": 0.9019,
+    "coverage_index": 0.683,
+    "coverage_detail": {
+      "n_evidence": 102,
+      "language_coverage": 0.47,
+      "language_counts": {
+        "en": 28,
+        "ko": 67,
+        "zh": 1,
+        "ja": 6
+      },
+      "market_coverage": 0.833,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 1.0,
+      "source_type_counts": {
+        "news_media": 62,
+        "community_social": 5,
+        "reference_wiki": 35
+      },
+      "time_coverage": 0.333,
+      "years_mentioned": [
+        "2020",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.833,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "매체_어워드",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.181,
+    "spillover_score": 0.359,
+    "activity": 102,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "A-pink",
+    "fanclub": "Pink Panda 판다",
+    "category": "K-pop 걸그룹",
+    "loyalty_raw": 55.8,
+    "spillover_raw": 102.19999999999996,
+    "n_loyalty_bullets": 35,
+    "n_spillover_bullets": 60,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.4029,
+      "미디어노출형(방송·조회수)": 0.3091,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0805,
+      "소비력형(초동·판매·앨범)": 0.0732,
+      "차트·확산형(1위·빌보드·기록)": 0.1342
+    },
+    "factor_diversity": 0.8656,
+    "coverage_index": 0.673,
+    "coverage_detail": {
+      "n_evidence": 95,
+      "language_coverage": 0.424,
+      "language_counts": {
+        "en": 22,
+        "ko": 68,
+        "ja": 4,
+        "zh": 1
+      },
+      "market_coverage": 0.833,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "reference_wiki": 38,
+        "news_media": 57
+      },
+      "time_coverage": 0.917,
+      "years_mentioned": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.667,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.281,
+    "spillover_score": 0.258,
+    "activity": 95,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "최예나",
+    "fanclub": "지구미/Jigumi",
+    "category": "솔로",
+    "loyalty_raw": 60.79999999999999,
+    "spillover_raw": 88.39999999999998,
+    "n_loyalty_bullets": 39,
+    "n_spillover_bullets": 57,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.3207,
+      "미디어노출형(방송·조회수)": 0.3073,
+      "결속형(팬클럽·기부·커뮤니티)": 0.1548,
+      "소비력형(초동·판매·앨범)": 0.0787,
+      "차트·확산형(1위·빌보드·기록)": 0.1385
+    },
+    "factor_diversity": 0.9258,
+    "coverage_index": 0.628,
+    "coverage_detail": {
+      "n_evidence": 96,
+      "language_coverage": 0.274,
+      "language_counts": {
+        "ko": 82,
+        "en": 11,
+        "ja": 3
+      },
+      "market_coverage": 0.833,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 1.0,
+      "source_type_counts": {
+        "news_media": 70,
+        "community_social": 4,
+        "reference_wiki": 22
+      },
+      "time_coverage": 0.583,
+      "years_mentioned": [
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.5,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "방송사",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.336,
+    "spillover_score": 0.195,
+    "activity": 96,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "브라운아이즈",
+    "fanclub": "Back To The Soul Flight",
+    "category": "발라드",
+    "loyalty_raw": 56.09999999999999,
+    "spillover_raw": 94.99999999999999,
+    "n_loyalty_bullets": 29,
+    "n_spillover_bullets": 53,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.2402,
+      "미디어노출형(방송·조회수)": 0.3199,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0526,
+      "소비력형(초동·판매·앨범)": 0.0639,
+      "차트·확산형(1위·빌보드·기록)": 0.3234
+    },
+    "factor_diversity": 0.8717,
+    "coverage_index": 0.464,
+    "coverage_detail": {
+      "n_evidence": 82,
+      "language_coverage": 0.268,
+      "language_counts": {
+        "ko": 69,
+        "en": 12,
+        "ja": 1
+      },
+      "market_coverage": 0.333,
+      "markets_mentioned": [
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "reference_wiki": 49,
+        "news_media": 33
+      },
+      "time_coverage": 0.667,
+      "years_mentioned": [
+        "2015",
+        "2017",
+        "2018",
+        "2020",
+        "2021",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "entity_coverage": 0.667,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.284,
+    "spillover_score": 0.225,
+    "activity": 82,
+    "dominant_factor": "차트·확산형(1위·빌보드·기록)"
+  },
+  {
+    "fandom": "샤이니",
+    "fanclub": "SHINee WORLD/샤월",
+    "category": "K-pop 보이그룹",
+    "loyalty_raw": 63.39999999999999,
+    "spillover_raw": 77.09999999999995,
+    "n_loyalty_bullets": 36,
+    "n_spillover_bullets": 41,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.5945,
+      "미디어노출형(방송·조회수)": 0.191,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0724,
+      "소비력형(초동·판매·앨범)": 0.0113,
+      "차트·확산형(1위·빌보드·기록)": 0.1308
+    },
+    "factor_diversity": 0.7036,
+    "coverage_index": 0.72,
+    "coverage_detail": {
+      "n_evidence": 77,
+      "language_coverage": 0.385,
+      "language_counts": {
+        "ko": 56,
+        "en": 19,
+        "es": 1,
+        "ja": 1
+      },
+      "market_coverage": 1.0,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "유럽",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "news_media": 55,
+        "reference_wiki": 22
+      },
+      "time_coverage": 0.917,
+      "years_mentioned": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.833,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.365,
+    "spillover_score": 0.143,
+    "activity": 77,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "마마무",
+    "fanclub": "MOOMOO/무무",
+    "category": "K-pop 걸그룹",
+    "loyalty_raw": 53.099999999999994,
+    "spillover_raw": 100.09999999999995,
+    "n_loyalty_bullets": 35,
+    "n_spillover_bullets": 59,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.4207,
+      "미디어노출형(방송·조회수)": 0.2732,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0806,
+      "소비력형(초동·판매·앨범)": 0.0846,
+      "차트·확산형(1위·빌보드·기록)": 0.1409
+    },
+    "factor_diversity": 0.8741,
+    "coverage_index": 0.835,
+    "coverage_detail": {
+      "n_evidence": 94,
+      "language_coverage": 0.449,
+      "language_counts": {
+        "ko": 66,
+        "en": 23,
+        "ja": 2,
+        "es": 2,
+        "zh": 1
+      },
+      "market_coverage": 1.0,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "유럽",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 1.0,
+      "source_type_counts": {
+        "reference_wiki": 38,
+        "community_social": 1,
+        "news_media": 55
+      },
+      "time_coverage": 1.0,
+      "years_mentioned": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 1.0,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "매체_어워드",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.251,
+    "spillover_score": 0.248,
+    "activity": 94,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "STAYC",
+    "fanclub": "SWITH/스윗",
+    "category": "K-pop 걸그룹",
+    "loyalty_raw": 60.49999999999999,
+    "spillover_raw": 78.9,
+    "n_loyalty_bullets": 42,
+    "n_spillover_bullets": 50,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.4538,
+      "미디어노출형(방송·조회수)": 0.2079,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0591,
+      "소비력형(초동·판매·앨범)": 0.0956,
+      "차트·확산형(1위·빌보드·기록)": 0.1836
+    },
+    "factor_diversity": 0.8624,
+    "coverage_index": 0.669,
+    "coverage_detail": {
+      "n_evidence": 92,
+      "language_coverage": 0.383,
+      "language_counts": {
+        "ko": 72,
+        "en": 14,
+        "ja": 5,
+        "zh": 1
+      },
+      "market_coverage": 1.0,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "유럽",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "reference_wiki": 37,
+        "news_media": 55
+      },
+      "time_coverage": 0.583,
+      "years_mentioned": [
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.833,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.333,
+    "spillover_score": 0.151,
+    "activity": 92,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "동방신기",
+    "fanclub": "카시오페아/Cassiopeia",
+    "category": "K-pop 보이그룹",
+    "loyalty_raw": 56.3,
+    "spillover_raw": 85.49999999999999,
+    "n_loyalty_bullets": 31,
+    "n_spillover_bullets": 51,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.4798,
+      "미디어노출형(방송·조회수)": 0.1422,
+      "결속형(팬클럽·기부·커뮤니티)": 0.1509,
+      "소비력형(초동·판매·앨범)": 0.0925,
+      "차트·확산형(1위·빌보드·기록)": 0.1347
+    },
+    "factor_diversity": 0.8731,
+    "coverage_index": 0.665,
+    "coverage_detail": {
+      "n_evidence": 82,
+      "language_coverage": 0.509,
+      "language_counts": {
+        "en": 22,
+        "ko": 50,
+        "ja": 10
+      },
+      "market_coverage": 0.833,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "news_media": 55,
+        "reference_wiki": 27
+      },
+      "time_coverage": 0.917,
+      "years_mentioned": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.333,
+      "entity_types_mentioned": [
+        "대형공연장",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.287,
+    "spillover_score": 0.181,
+    "activity": 82,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "나훈아",
+    "fanclub": null,
+    "category": "트로트",
+    "loyalty_raw": 67.29999999999997,
+    "spillover_raw": 58.099999999999994,
+    "n_loyalty_bullets": 33,
+    "n_spillover_bullets": 37,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.5829,
+      "미디어노출형(방송·조회수)": 0.1556,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0978,
+      "소비력형(초동·판매·앨범)": 0.0768,
+      "차트·확산형(1위·빌보드·기록)": 0.0868
+    },
+    "factor_diversity": 0.771,
+    "coverage_index": 0.515,
+    "coverage_detail": {
+      "n_evidence": 70,
+      "language_coverage": 0.313,
+      "language_counts": {
+        "ko": 60,
+        "en": 4,
+        "ja": 4,
+        "zh": 2
+      },
+      "market_coverage": 0.667,
+      "markets_mentioned": [
+        "동남아",
+        "미국_북미",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "news_media": 47,
+        "reference_wiki": 23
+      },
+      "time_coverage": 0.583,
+      "years_mentioned": [
+        "2017",
+        "2019",
+        "2020",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.333,
+      "entity_types_mentioned": [
+        "대형공연장",
+        "방송사"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.408,
+    "spillover_score": 0.056,
+    "activity": 70,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "츄",
+    "fanclub": "꼬띠/KKOTI",
+    "category": "솔로",
+    "loyalty_raw": 51.09999999999999,
+    "spillover_raw": 96.99999999999997,
+    "n_loyalty_bullets": 34,
+    "n_spillover_bullets": 59,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.2686,
+      "미디어노출형(방송·조회수)": 0.4152,
+      "결속형(팬클럽·기부·커뮤니티)": 0.1347,
+      "소비력형(초동·판매·앨범)": 0.0881,
+      "차트·확산형(1위·빌보드·기록)": 0.0933
+    },
+    "factor_diversity": 0.8845,
+    "coverage_index": 0.663,
+    "coverage_detail": {
+      "n_evidence": 93,
+      "language_coverage": 0.322,
+      "language_counts": {
+        "ko": 72,
+        "en": 20,
+        "zh": 1
+      },
+      "market_coverage": 0.833,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 1.0,
+      "source_type_counts": {
+        "news_media": 53,
+        "reference_wiki": 39,
+        "community_social": 1
+      },
+      "time_coverage": 0.833,
+      "years_mentioned": [
+        "2015",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.333,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "방송사"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.229,
+    "spillover_score": 0.234,
+    "activity": 93,
+    "dominant_factor": "미디어노출형(방송·조회수)"
+  },
+  {
+    "fandom": "볼빨간사춘기",
+    "fanclub": "LoBoly(러볼리)",
+    "category": "솔로",
+    "loyalty_raw": 60.29999999999999,
+    "spillover_raw": 72.9,
+    "n_loyalty_bullets": 38,
+    "n_spillover_bullets": 50,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.2635,
+      "미디어노출형(방송·조회수)": 0.3378,
+      "결속형(팬클럽·기부·커뮤니티)": 0.1773,
+      "소비력형(초동·판매·앨범)": 0.0737,
+      "차트·확산형(1위·빌보드·기록)": 0.1477
+    },
+    "factor_diversity": 0.9317,
+    "coverage_index": 0.64,
+    "coverage_detail": {
+      "n_evidence": 88,
+      "language_coverage": 0.232,
+      "language_counts": {
+        "ko": 77,
+        "en": 10,
+        "ja": 1
+      },
+      "market_coverage": 0.667,
+      "markets_mentioned": [
+        "동남아",
+        "미국_북미",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 1.0,
+      "source_type_counts": {
+        "reference_wiki": 36,
+        "news_media": 49,
+        "community_social": 3
+      },
+      "time_coverage": 0.917,
+      "years_mentioned": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.667,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.331,
+    "spillover_score": 0.124,
+    "activity": 88,
+    "dominant_factor": "미디어노출형(방송·조회수)"
+  },
+  {
+    "fandom": "sg워너비",
+    "fanclub": "사랑방",
+    "category": "발라드",
+    "loyalty_raw": 63.8,
+    "spillover_raw": 64.0,
+    "n_loyalty_bullets": 36,
+    "n_spillover_bullets": 39,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.4094,
+      "미디어노출형(방송·조회수)": 0.3453,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0768,
+      "소비력형(초동·판매·앨범)": 0.0636,
+      "차트·확산형(1위·빌보드·기록)": 0.105
+    },
+    "factor_diversity": 0.8337,
+    "coverage_index": 0.547,
+    "coverage_detail": {
+      "n_evidence": 75,
+      "language_coverage": 0.267,
+      "language_counts": {
+        "ko": 65,
+        "en": 8,
+        "ja": 1,
+        "zh": 1
+      },
+      "market_coverage": 0.5,
+      "markets_mentioned": [
+        "동남아",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "reference_wiki": 47,
+        "news_media": 28
+      },
+      "time_coverage": 0.833,
+      "years_mentioned": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.833,
+      "entity_types_mentioned": [
+        "대형공연장",
+        "매체_어워드",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.369,
+    "spillover_score": 0.083,
+    "activity": 75,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "10CM",
+    "fanclub": "CENTINER(센치너)",
+    "category": "솔로",
+    "loyalty_raw": 60.499999999999986,
+    "spillover_raw": 71.09999999999998,
+    "n_loyalty_bullets": 37,
+    "n_spillover_bullets": 48,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.4532,
+      "미디어노출형(방송·조회수)": 0.1643,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0691,
+      "소비력형(초동·판매·앨범)": 0.0733,
+      "차트·확산형(1위·빌보드·기록)": 0.2401
+    },
+    "factor_diversity": 0.8538,
+    "coverage_index": 0.723,
+    "coverage_detail": {
+      "n_evidence": 85,
+      "language_coverage": 0.354,
+      "language_counts": {
+        "ko": 57,
+        "en": 28
+      },
+      "market_coverage": 0.833,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 1.0,
+      "source_type_counts": {
+        "reference_wiki": 38,
+        "community_social": 3,
+        "news_media": 44
+      },
+      "time_coverage": 0.833,
+      "years_mentioned": [
+        "2016",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.833,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.333,
+    "spillover_score": 0.115,
+    "activity": 85,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "CNBLUE",
+    "fanclub": "BOICE(보이스)",
+    "category": "K-pop 보이그룹 /록",
+    "loyalty_raw": 50.79999999999998,
+    "spillover_raw": 93.59999999999997,
+    "n_loyalty_bullets": 33,
+    "n_spillover_bullets": 51,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.3694,
+      "미디어노출형(방송·조회수)": 0.1468,
+      "결속형(팬클럽·기부·커뮤니티)": 0.1234,
+      "소비력형(초동·판매·앨범)": 0.1061,
+      "차트·확산형(1위·빌보드·기록)": 0.2543
+    },
+    "factor_diversity": 0.9283,
+    "coverage_index": 0.774,
+    "coverage_detail": {
+      "n_evidence": 84,
+      "language_coverage": 0.523,
+      "language_counts": {
+        "en": 22,
+        "ko": 50,
+        "ja": 12
+      },
+      "market_coverage": 1.0,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "유럽",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "reference_wiki": 29,
+        "news_media": 55
+      },
+      "time_coverage": 1.0,
+      "years_mentioned": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.833,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.226,
+    "spillover_score": 0.219,
+    "activity": 84,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "로이킴",
+    "fanclub": "로이로제",
+    "category": "발라드",
+    "loyalty_raw": 51.59999999999999,
+    "spillover_raw": 91.0,
+    "n_loyalty_bullets": 30,
+    "n_spillover_bullets": 59,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.4021,
+      "미디어노출형(방송·조회수)": 0.3427,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0838,
+      "소비력형(초동·판매·앨범)": 0.0497,
+      "차트·확산형(1위·빌보드·기록)": 0.1217
+    },
+    "factor_diversity": 0.8367,
+    "coverage_index": 0.614,
+    "coverage_detail": {
+      "n_evidence": 89,
+      "language_coverage": 0.353,
+      "language_counts": {
+        "ko": 70,
+        "en": 16,
+        "zh": 1,
+        "ja": 2
+      },
+      "market_coverage": 0.667,
+      "markets_mentioned": [
+        "글로벌",
+        "미국_북미",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "news_media": 41,
+        "reference_wiki": 48
+      },
+      "time_coverage": 0.833,
+      "years_mentioned": [
+        "2015",
+        "2016",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.833,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.235,
+    "spillover_score": 0.207,
+    "activity": 89,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "성시경",
+    "fanclub": "퍼플오션/PURPLEOCEAN KOREA",
+    "category": "발라드",
+    "loyalty_raw": 61.399999999999984,
+    "spillover_raw": 65.39999999999999,
+    "n_loyalty_bullets": 37,
+    "n_spillover_bullets": 43,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.4371,
+      "미디어노출형(방송·조회수)": 0.2911,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0839,
+      "소비력형(초동·판매·앨범)": 0.1138,
+      "차트·확산형(1위·빌보드·기록)": 0.074
+    },
+    "factor_diversity": 0.8506,
+    "coverage_index": 0.608,
+    "coverage_detail": {
+      "n_evidence": 80,
+      "language_coverage": 0.389,
+      "language_counts": {
+        "ko": 62,
+        "en": 13,
+        "ja": 4,
+        "zh": 1
+      },
+      "market_coverage": 0.5,
+      "markets_mentioned": [
+        "미국_북미",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "news_media": 65,
+        "reference_wiki": 15
+      },
+      "time_coverage": 1.0,
+      "years_mentioned": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.833,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "매체_어워드",
+        "방송사",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.343,
+    "spillover_score": 0.089,
+    "activity": 80,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "Crush",
+    "fanclub": "CrushBomb(크러쉬밤)",
+    "category": "솔로",
+    "loyalty_raw": 49.0,
+    "spillover_raw": 94.39999999999996,
+    "n_loyalty_bullets": 35,
+    "n_spillover_bullets": 64,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.388,
+      "미디어노출형(방송·조회수)": 0.2564,
+      "결속형(팬클럽·기부·커뮤니티)": 0.1444,
+      "소비력형(초동·판매·앨범)": 0.0824,
+      "차트·확산형(1위·빌보드·기록)": 0.1288
+    },
+    "factor_diversity": 0.9105,
+    "coverage_index": 0.714,
+    "coverage_detail": {
+      "n_evidence": 99,
+      "language_coverage": 0.339,
+      "language_counts": {
+        "ko": 79,
+        "en": 17,
+        "ja": 2,
+        "zh": 1
+      },
+      "market_coverage": 0.833,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "유럽",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 1.0,
+      "source_type_counts": {
+        "news_media": 75,
+        "community_social": 2,
+        "reference_wiki": 22
+      },
+      "time_coverage": 0.917,
+      "years_mentioned": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.667,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.206,
+    "spillover_score": 0.222,
+    "activity": 99,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "빈지노",
+    "fanclub": null,
+    "category": "힙합",
+    "loyalty_raw": 52.599999999999994,
+    "spillover_raw": 82.89999999999999,
+    "n_loyalty_bullets": 27,
+    "n_spillover_bullets": 52,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.313,
+      "미디어노출형(방송·조회수)": 0.4172,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0245,
+      "소비력형(초동·판매·앨범)": 0.0165,
+      "차트·확산형(1위·빌보드·기록)": 0.2287
+    },
+    "factor_diversity": 0.7608,
+    "coverage_index": 0.556,
+    "coverage_detail": {
+      "n_evidence": 79,
+      "language_coverage": 0.269,
+      "language_counts": {
+        "ko": 69,
+        "en": 7,
+        "zh": 2,
+        "ja": 1
+      },
+      "market_coverage": 0.667,
+      "markets_mentioned": [
+        "글로벌",
+        "미국_북미",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "news_media": 59,
+        "reference_wiki": 20
+      },
+      "time_coverage": 0.833,
+      "years_mentioned": [
+        "2015",
+        "2016",
+        "2017",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "entity_coverage": 0.5,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "방송사",
+        "음원차트_국내"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.246,
+    "spillover_score": 0.169,
+    "activity": 79,
+    "dominant_factor": "미디어노출형(방송·조회수)"
+  },
+  {
+    "fandom": "빅마마",
+    "fanclub": "둥지",
+    "category": "발라드",
+    "loyalty_raw": 59.800000000000004,
+    "spillover_raw": 65.1,
+    "n_loyalty_bullets": 31,
+    "n_spillover_bullets": 42,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.2824,
+      "미디어노출형(방송·조회수)": 0.2752,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0587,
+      "소비력형(초동·판매·앨범)": 0.0621,
+      "차트·확산형(1위·빌보드·기록)": 0.3215
+    },
+    "factor_diversity": 0.8799,
+    "coverage_index": 0.353,
+    "coverage_detail": {
+      "n_evidence": 73,
+      "language_coverage": 0.261,
+      "language_counts": {
+        "ko": 60,
+        "en": 13
+      },
+      "market_coverage": 0.0,
+      "markets_mentioned": [],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "reference_wiki": 59,
+        "news_media": 14
+      },
+      "time_coverage": 0.5,
+      "years_mentioned": [
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025"
+      ],
+      "entity_coverage": 0.667,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "매체_어워드",
+        "방송사",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.325,
+    "spillover_score": 0.088,
+    "activity": 73,
+    "dominant_factor": "차트·확산형(1위·빌보드·기록)"
+  },
+  {
+    "fandom": "다비치",
+    "fanclub": "다비치코드",
+    "category": "발라드",
+    "loyalty_raw": 54.300000000000004,
+    "spillover_raw": 76.39999999999999,
+    "n_loyalty_bullets": 29,
+    "n_spillover_bullets": 51,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.2747,
+      "미디어노출형(방송·조회수)": 0.4433,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0357,
+      "소비력형(초동·판매·앨범)": 0.0766,
+      "차트·확산형(1위·빌보드·기록)": 0.1698
+    },
+    "factor_diversity": 0.8278,
+    "coverage_index": 0.621,
+    "coverage_detail": {
+      "n_evidence": 80,
+      "language_coverage": 0.36,
+      "language_counts": {
+        "ko": 61,
+        "en": 17,
+        "ja": 1,
+        "zh": 1
+      },
+      "market_coverage": 0.667,
+      "markets_mentioned": [
+        "글로벌",
+        "미국_북미",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "news_media": 38,
+        "reference_wiki": 42
+      },
+      "time_coverage": 0.75,
+      "years_mentioned": [
+        "2015",
+        "2016",
+        "2018",
+        "2019",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 1.0,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "매체_어워드",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.265,
+    "spillover_score": 0.14,
+    "activity": 80,
+    "dominant_factor": "미디어노출형(방송·조회수)"
+  },
+  {
+    "fandom": "에픽하이",
+    "fanclub": null,
+    "category": "힙합",
+    "loyalty_raw": 61.09999999999999,
+    "spillover_raw": 59.19999999999999,
+    "n_loyalty_bullets": 46,
+    "n_spillover_bullets": 41,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.6103,
+      "미디어노출형(방송·조회수)": 0.1874,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0536,
+      "소비력형(초동·판매·앨범)": 0.0593,
+      "차트·확산형(1위·빌보드·기록)": 0.0894
+    },
+    "factor_diversity": 0.7179,
+    "coverage_index": 0.732,
+    "coverage_detail": {
+      "n_evidence": 87,
+      "language_coverage": 0.344,
+      "language_counts": {
+        "ko": 74,
+        "zh": 2,
+        "ja": 5,
+        "en": 4,
+        "es": 2
+      },
+      "market_coverage": 1.0,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "유럽",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 1.0,
+      "source_type_counts": {
+        "news_media": 69,
+        "reference_wiki": 15,
+        "community_social": 3
+      },
+      "time_coverage": 0.75,
+      "years_mentioned": [
+        "2016",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.667,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.34,
+    "spillover_score": 0.061,
+    "activity": 87,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "장윤정",
+    "fanclub": "레모네이드",
+    "category": "트로트",
+    "loyalty_raw": 43.00000000000001,
+    "spillover_raw": 99.49999999999999,
+    "n_loyalty_bullets": 27,
+    "n_spillover_bullets": 65,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.3237,
+      "미디어노출형(방송·조회수)": 0.3675,
+      "결속형(팬클럽·기부·커뮤니티)": 0.123,
+      "소비력형(초동·판매·앨범)": 0.0528,
+      "차트·확산형(1위·빌보드·기록)": 0.133
+    },
+    "factor_diversity": 0.8788,
+    "coverage_index": 0.576,
+    "coverage_detail": {
+      "n_evidence": 92,
+      "language_coverage": 0.295,
+      "language_counts": {
+        "ko": 79,
+        "en": 8,
+        "ja": 4,
+        "zh": 1
+      },
+      "market_coverage": 0.5,
+      "markets_mentioned": [
+        "미국_북미",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 1.0,
+      "source_type_counts": {
+        "news_media": 57,
+        "reference_wiki": 33,
+        "community_social": 2
+      },
+      "time_coverage": 0.75,
+      "years_mentioned": [
+        "2017",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.5,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "방송사"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.14,
+    "spillover_score": 0.246,
+    "activity": 92,
+    "dominant_factor": "미디어노출형(방송·조회수)"
+  },
+  {
+    "fandom": "보아",
+    "fanclub": "Jumping BoA",
+    "category": "솔로",
+    "loyalty_raw": 55.49999999999999,
+    "spillover_raw": 68.59999999999998,
+    "n_loyalty_bullets": 30,
+    "n_spillover_bullets": 46,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.5256,
+      "미디어노출형(방송·조회수)": 0.1965,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0761,
+      "소비력형(초동·판매·앨범)": 0.0955,
+      "차트·확산형(1위·빌보드·기록)": 0.1063
+    },
+    "factor_diversity": 0.8179,
+    "coverage_index": 0.582,
+    "coverage_detail": {
+      "n_evidence": 76,
+      "language_coverage": 0.468,
+      "language_counts": {
+        "ko": 54,
+        "en": 13,
+        "ja": 8,
+        "zh": 1
+      },
+      "market_coverage": 0.667,
+      "markets_mentioned": [
+        "동남아",
+        "미국_북미",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "reference_wiki": 26,
+        "news_media": 50
+      },
+      "time_coverage": 0.5,
+      "years_mentioned": [
+        "2016",
+        "2018",
+        "2021",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.667,
+      "entity_types_mentioned": [
+        "대형공연장",
+        "매체_어워드",
+        "방송사",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.278,
+    "spillover_score": 0.104,
+    "activity": 76,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "거미",
+    "fanclub": "지연민트향기",
+    "category": "발라드",
+    "loyalty_raw": 51.19999999999999,
+    "spillover_raw": 78.3,
+    "n_loyalty_bullets": 34,
+    "n_spillover_bullets": 53,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.4014,
+      "미디어노출형(방송·조회수)": 0.3961,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0584,
+      "소비력형(초동·판매·앨범)": 0.0619,
+      "차트·확산형(1위·빌보드·기록)": 0.0821
+    },
+    "factor_diversity": 0.7932,
+    "coverage_index": 0.66,
+    "coverage_detail": {
+      "n_evidence": 87,
+      "language_coverage": 0.104,
+      "language_counts": {
+        "ko": 83,
+        "en": 4
+      },
+      "market_coverage": 0.833,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 1.0,
+      "source_type_counts": {
+        "news_media": 57,
+        "community_social": 1,
+        "reference_wiki": 29
+      },
+      "time_coverage": 0.917,
+      "years_mentioned": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.833,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.23,
+    "spillover_score": 0.148,
+    "activity": 87,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "조용필",
+    "fanclub": "위대한탄생/이터널리",
+    "category": "발라드",
+    "loyalty_raw": 46.099999999999994,
+    "spillover_raw": 89.29999999999998,
+    "n_loyalty_bullets": 28,
+    "n_spillover_bullets": 53,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.3174,
+      "미디어노출형(방송·조회수)": 0.2693,
+      "결속형(팬클럽·기부·커뮤니티)": 0.1024,
+      "소비력형(초동·판매·앨범)": 0.1139,
+      "차트·확산형(1위·빌보드·기록)": 0.197
+    },
+    "factor_diversity": 0.9434,
+    "coverage_index": 0.539,
+    "coverage_detail": {
+      "n_evidence": 81,
+      "language_coverage": 0.423,
+      "language_counts": {
+        "ko": 62,
+        "en": 12,
+        "ja": 3,
+        "zh": 4
+      },
+      "market_coverage": 0.667,
+      "markets_mentioned": [
+        "글로벌",
+        "미국_북미",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "news_media": 37,
+        "reference_wiki": 44
+      },
+      "time_coverage": 0.417,
+      "years_mentioned": [
+        "2018",
+        "2021",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.5,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "방송사",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.174,
+    "spillover_score": 0.199,
+    "activity": 81,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "이승철",
+    "fanclub": "새침떼기",
+    "category": "발라드",
+    "loyalty_raw": 42.19999999999999,
+    "spillover_raw": 95.79999999999998,
+    "n_loyalty_bullets": 24,
+    "n_spillover_bullets": 54,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.4253,
+      "미디어노출형(방송·조회수)": 0.2633,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0939,
+      "소비력형(초동·판매·앨범)": 0.0613,
+      "차트·확산형(1위·빌보드·기록)": 0.1562
+    },
+    "factor_diversity": 0.8688,
+    "coverage_index": 0.565,
+    "coverage_detail": {
+      "n_evidence": 78,
+      "language_coverage": 0.302,
+      "language_counts": {
+        "ko": 66,
+        "zh": 2,
+        "en": 9,
+        "ja": 1
+      },
+      "market_coverage": 0.667,
+      "markets_mentioned": [
+        "동남아",
+        "미국_북미",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "news_media": 50,
+        "reference_wiki": 28
+      },
+      "time_coverage": 0.833,
+      "years_mentioned": [
+        "2015",
+        "2016",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.5,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "방송사"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.131,
+    "spillover_score": 0.229,
+    "activity": 78,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "권은비",
+    "fanclub": "RUBI",
+    "category": "솔로",
+    "loyalty_raw": 43.800000000000004,
+    "spillover_raw": 91.29999999999997,
+    "n_loyalty_bullets": 25,
+    "n_spillover_bullets": 65,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.3083,
+      "미디어노출형(방송·조회수)": 0.3375,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0925,
+      "소비력형(초동·판매·앨범)": 0.1148,
+      "차트·확산형(1위·빌보드·기록)": 0.1469
+    },
+    "factor_diversity": 0.9195,
+    "coverage_index": 0.71,
+    "coverage_detail": {
+      "n_evidence": 90,
+      "language_coverage": 0.436,
+      "language_counts": {
+        "ko": 62,
+        "en": 22,
+        "ja": 6
+      },
+      "market_coverage": 0.833,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "유럽",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 1.0,
+      "source_type_counts": {
+        "news_media": 61,
+        "community_social": 3,
+        "reference_wiki": 26
+      },
+      "time_coverage": 0.583,
+      "years_mentioned": [
+        "2019",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.833,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "매체_어워드",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.149,
+    "spillover_score": 0.208,
+    "activity": 90,
+    "dominant_factor": "미디어노출형(방송·조회수)"
+  },
+  {
+    "fandom": "윤도현",
+    "fanclub": null,
+    "category": "록",
+    "loyalty_raw": 50.49999999999999,
+    "spillover_raw": 72.59999999999998,
+    "n_loyalty_bullets": 29,
+    "n_spillover_bullets": 42,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.424,
+      "미디어노출형(방송·조회수)": 0.3453,
+      "결속형(팬클럽·기부·커뮤니티)": 0.115,
+      "소비력형(초동·판매·앨범)": 0.0445,
+      "차트·확산형(1위·빌보드·기록)": 0.0713
+    },
+    "factor_diversity": 0.8117,
+    "coverage_index": 0.625,
+    "coverage_detail": {
+      "n_evidence": 71,
+      "language_coverage": 0.277,
+      "language_counts": {
+        "ko": 61,
+        "en": 8,
+        "ja": 1,
+        "zh": 1
+      },
+      "market_coverage": 1.0,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "유럽",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "reference_wiki": 31,
+        "news_media": 40
+      },
+      "time_coverage": 0.833,
+      "years_mentioned": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2020",
+        "2021",
+        "2022",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.333,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "방송사"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.223,
+    "spillover_score": 0.122,
+    "activity": 71,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "린",
+    "fanclub": "린사사",
+    "category": "발라드",
+    "loyalty_raw": 39.39999999999999,
+    "spillover_raw": 92.99999999999999,
+    "n_loyalty_bullets": 23,
+    "n_spillover_bullets": 55,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.3795,
+      "미디어노출형(방송·조회수)": 0.3523,
+      "결속형(팬클럽·기부·커뮤니티)": 0.107,
+      "소비력형(초동·판매·앨범)": 0.0461,
+      "차트·확산형(1위·빌보드·기록)": 0.1151
+    },
+    "factor_diversity": 0.8482,
+    "coverage_index": 0.517,
+    "coverage_detail": {
+      "n_evidence": 78,
+      "language_coverage": 0.222,
+      "language_counts": {
+        "ko": 69,
+        "en": 8,
+        "zh": 1
+      },
+      "market_coverage": 0.5,
+      "markets_mentioned": [
+        "미국_북미",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "reference_wiki": 39,
+        "news_media": 39
+      },
+      "time_coverage": 0.833,
+      "years_mentioned": [
+        "2015",
+        "2016",
+        "2018",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.667,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "매체_어워드",
+        "방송사",
+        "음원차트_국내"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.1,
+    "spillover_score": 0.216,
+    "activity": 78,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "다이나믹듀오",
+    "fanclub": null,
+    "category": "힙합",
+    "loyalty_raw": 49.19999999999999,
+    "spillover_raw": 68.89999999999998,
+    "n_loyalty_bullets": 26,
+    "n_spillover_bullets": 42,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.4632,
+      "미디어노출형(방송·조회수)": 0.2701,
+      "결속형(팬클럽·기부·커뮤니티)": 0.076,
+      "소비력형(초동·판매·앨범)": 0.0529,
+      "차트·확산형(1위·빌보드·기록)": 0.1378
+    },
+    "factor_diversity": 0.8292,
+    "coverage_index": 0.601,
+    "coverage_detail": {
+      "n_evidence": 68,
+      "language_coverage": 0.227,
+      "language_counts": {
+        "ko": 60,
+        "en": 7,
+        "zh": 1
+      },
+      "market_coverage": 0.833,
+      "markets_mentioned": [
+        "글로벌",
+        "미국_북미",
+        "유럽",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "reference_wiki": 17,
+        "news_media": 51
+      },
+      "time_coverage": 0.833,
+      "years_mentioned": [
+        "2015",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.667,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.208,
+    "spillover_score": 0.105,
+    "activity": 68,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "악동뮤지션",
+    "fanclub": "악카데미 AKKADEMY",
+    "category": "혼성",
+    "loyalty_raw": 39.5,
+    "spillover_raw": 90.69999999999999,
+    "n_loyalty_bullets": 23,
+    "n_spillover_bullets": 51,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.3389,
+      "미디어노출형(방송·조회수)": 0.3042,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0834,
+      "소비력형(초동·판매·앨범)": 0.1276,
+      "차트·확산형(1위·빌보드·기록)": 0.146
+    },
+    "factor_diversity": 0.9193,
+    "coverage_index": 0.697,
+    "coverage_detail": {
+      "n_evidence": 74,
+      "language_coverage": 0.447,
+      "language_counts": {
+        "ko": 52,
+        "en": 17,
+        "zh": 4,
+        "ja": 1
+      },
+      "market_coverage": 0.833,
+      "markets_mentioned": [
+        "동남아",
+        "미국_북미",
+        "유럽",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "news_media": 50,
+        "reference_wiki": 24
+      },
+      "time_coverage": 0.917,
+      "years_mentioned": [
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.833,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.101,
+    "spillover_score": 0.205,
+    "activity": 74,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "FTISLAND",
+    "fanclub": "Primadonna / 프리마돈나",
+    "category": "K-pop 보이그룹 /록",
+    "loyalty_raw": 47.99999999999999,
+    "spillover_raw": 68.29999999999998,
+    "n_loyalty_bullets": 31,
+    "n_spillover_bullets": 42,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.3292,
+      "미디어노출형(방송·조회수)": 0.2688,
+      "결속형(팬클럽·기부·커뮤니티)": 0.1428,
+      "소비력형(초동·판매·앨범)": 0.1438,
+      "차트·확산형(1위·빌보드·기록)": 0.1153
+    },
+    "factor_diversity": 0.9475,
+    "coverage_index": 0.729,
+    "coverage_detail": {
+      "n_evidence": 73,
+      "language_coverage": 0.431,
+      "language_counts": {
+        "en": 27,
+        "ko": 44,
+        "ja": 2
+      },
+      "market_coverage": 0.833,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 1.0,
+      "source_type_counts": {
+        "reference_wiki": 31,
+        "news_media": 41,
+        "community_social": 1
+      },
+      "time_coverage": 0.833,
+      "years_mentioned": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.667,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "방송사",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.195,
+    "spillover_score": 0.102,
+    "activity": 73,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "케이윌",
+    "fanclub": "형나잇",
+    "category": "발라드",
+    "loyalty_raw": 56.29999999999999,
+    "spillover_raw": 45.99999999999999,
+    "n_loyalty_bullets": 36,
+    "n_spillover_bullets": 35,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.406,
+      "미디어노출형(방송·조회수)": 0.3604,
+      "결속형(팬클럽·기부·커뮤니티)": 0.072,
+      "소비력형(초동·판매·앨범)": 0.1069,
+      "차트·확산형(1위·빌보드·기록)": 0.0547
+    },
+    "factor_diversity": 0.8209,
+    "coverage_index": 0.559,
+    "coverage_detail": {
+      "n_evidence": 71,
+      "language_coverage": 0.378,
+      "language_counts": {
+        "ko": 56,
+        "en": 11,
+        "ja": 2,
+        "zh": 2
+      },
+      "market_coverage": 0.5,
+      "markets_mentioned": [
+        "글로벌",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "news_media": 55,
+        "reference_wiki": 16
+      },
+      "time_coverage": 0.917,
+      "years_mentioned": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.5,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "방송사",
+        "음원차트_국내"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.287,
+    "spillover_score": 0.0,
+    "activity": 71,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "청하",
+    "fanclub": "HAART/구 별하랑",
+    "category": "솔로",
+    "loyalty_raw": 36.300000000000004,
+    "spillover_raw": 91.59999999999998,
+    "n_loyalty_bullets": 20,
+    "n_spillover_bullets": 59,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.2235,
+      "미디어노출형(방송·조회수)": 0.3711,
+      "결속형(팬클럽·기부·커뮤니티)": 0.1312,
+      "소비력형(초동·판매·앨범)": 0.1,
+      "차트·확산형(1위·빌보드·기록)": 0.1742
+    },
+    "factor_diversity": 0.9344,
+    "coverage_index": 0.728,
+    "coverage_detail": {
+      "n_evidence": 79,
+      "language_coverage": 0.384,
+      "language_counts": {
+        "ko": 53,
+        "en": 25,
+        "ja": 1
+      },
+      "market_coverage": 0.833,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "유럽",
+        "일본"
+      ],
+      "source_type_coverage": 1.0,
+      "source_type_counts": {
+        "reference_wiki": 37,
+        "news_media": 40,
+        "community_social": 2
+      },
+      "time_coverage": 0.917,
+      "years_mentioned": [
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.667,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.066,
+    "spillover_score": 0.209,
+    "activity": 79,
+    "dominant_factor": "미디어노출형(방송·조회수)"
+  },
+  {
+    "fandom": "Zion.T",
+    "fanclub": null,
+    "category": "솔로",
+    "loyalty_raw": 38.9,
+    "spillover_raw": 83.1,
+    "n_loyalty_bullets": 24,
+    "n_spillover_bullets": 55,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.3688,
+      "미디어노출형(방송·조회수)": 0.363,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0384,
+      "소비력형(초동·판매·앨범)": 0.1128,
+      "차트·확산형(1위·빌보드·기록)": 0.1171
+    },
+    "factor_diversity": 0.8438,
+    "coverage_index": 0.707,
+    "coverage_detail": {
+      "n_evidence": 79,
+      "language_coverage": 0.439,
+      "language_counts": {
+        "ko": 55,
+        "en": 20,
+        "zh": 2,
+        "ja": 2
+      },
+      "market_coverage": 0.833,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "news_media": 47,
+        "reference_wiki": 32
+      },
+      "time_coverage": 1.0,
+      "years_mentioned": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.833,
+      "entity_types_mentioned": [
+        "대형공연장",
+        "매체_어워드",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.095,
+    "spillover_score": 0.17,
+    "activity": 79,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "김연자",
+    "fanclub": "모아나",
+    "category": "트로트",
+    "loyalty_raw": 37.599999999999994,
+    "spillover_raw": 85.29999999999997,
+    "n_loyalty_bullets": 21,
+    "n_spillover_bullets": 52,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.429,
+      "미디어노출형(방송·조회수)": 0.3224,
+      "결속형(팬클럽·기부·커뮤니티)": 0.056,
+      "소비력형(초동·판매·앨범)": 0.1083,
+      "차트·확산형(1위·빌보드·기록)": 0.0843
+    },
+    "factor_diversity": 0.8318,
+    "coverage_index": 0.505,
+    "coverage_detail": {
+      "n_evidence": 73,
+      "language_coverage": 0.198,
+      "language_counts": {
+        "ko": 66,
+        "ja": 6,
+        "en": 1
+      },
+      "market_coverage": 0.5,
+      "markets_mentioned": [
+        "글로벌",
+        "미국_북미",
+        "일본"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "news_media": 41,
+        "reference_wiki": 32
+      },
+      "time_coverage": 0.917,
+      "years_mentioned": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.5,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "방송사",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.08,
+    "spillover_score": 0.18,
+    "activity": 73,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "이문세",
+    "fanclub": "마굿간",
+    "category": "발라드",
+    "loyalty_raw": 35.2,
+    "spillover_raw": 90.09999999999997,
+    "n_loyalty_bullets": 20,
+    "n_spillover_bullets": 50,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.4784,
+      "미디어노출형(방송·조회수)": 0.3325,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0458,
+      "소비력형(초동·판매·앨범)": 0.0597,
+      "차트·확산형(1위·빌보드·기록)": 0.0836
+    },
+    "factor_diversity": 0.7679,
+    "coverage_index": 0.518,
+    "coverage_detail": {
+      "n_evidence": 70,
+      "language_coverage": 0.185,
+      "language_counts": {
+        "ko": 64,
+        "en": 5,
+        "zh": 1
+      },
+      "market_coverage": 0.5,
+      "markets_mentioned": [
+        "글로벌",
+        "미국_북미",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "reference_wiki": 39,
+        "news_media": 31
+      },
+      "time_coverage": 0.917,
+      "years_mentioned": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.667,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "방송사",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.054,
+    "spillover_score": 0.202,
+    "activity": 70,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "카더가든",
+    "fanclub": null,
+    "category": "솔로",
+    "loyalty_raw": 38.8,
+    "spillover_raw": 74.89999999999998,
+    "n_loyalty_bullets": 26,
+    "n_spillover_bullets": 48,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.2694,
+      "미디어노출형(방송·조회수)": 0.3882,
+      "결속형(팬클럽·기부·커뮤니티)": 0.108,
+      "소비력형(초동·판매·앨범)": 0.0935,
+      "차트·확산형(1위·빌보드·기록)": 0.141
+    },
+    "factor_diversity": 0.9063,
+    "coverage_index": 0.485,
+    "coverage_detail": {
+      "n_evidence": 74,
+      "language_coverage": 0.174,
+      "language_counts": {
+        "ko": 69,
+        "zh": 1,
+        "en": 3,
+        "ja": 1
+      },
+      "market_coverage": 0.667,
+      "markets_mentioned": [
+        "글로벌",
+        "미국_북미",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "reference_wiki": 40,
+        "news_media": 34
+      },
+      "time_coverage": 0.667,
+      "years_mentioned": [
+        "2017",
+        "2018",
+        "2019",
+        "2021",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.333,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "방송사"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.094,
+    "spillover_score": 0.133,
+    "activity": 74,
+    "dominant_factor": "미디어노출형(방송·조회수)"
+  },
+  {
+    "fandom": "백지영",
+    "fanclub": "루즈/ROUGE",
+    "category": "발라드",
+    "loyalty_raw": 40.199999999999996,
+    "spillover_raw": 71.69999999999999,
+    "n_loyalty_bullets": 24,
+    "n_spillover_bullets": 48,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.3864,
+      "미디어노출형(방송·조회수)": 0.3312,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0811,
+      "소비력형(초동·판매·앨범)": 0.0858,
+      "차트·확산형(1위·빌보드·기록)": 0.1155
+    },
+    "factor_diversity": 0.8681,
+    "coverage_index": 0.633,
+    "coverage_detail": {
+      "n_evidence": 72,
+      "language_coverage": 0.303,
+      "language_counts": {
+        "ko": 58,
+        "en": 13,
+        "zh": 1
+      },
+      "market_coverage": 0.833,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "reference_wiki": 26,
+        "news_media": 46
+      },
+      "time_coverage": 1.0,
+      "years_mentioned": [
+        "2015",
+        "2016",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.5,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "방송사",
+        "음원차트_국내"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.109,
+    "spillover_score": 0.118,
+    "activity": 72,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "비비",
+    "fanclub": "pookïe",
+    "category": "솔로",
+    "loyalty_raw": 35.599999999999994,
+    "spillover_raw": 77.69999999999999,
+    "n_loyalty_bullets": 26,
+    "n_spillover_bullets": 48,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.4023,
+      "미디어노출형(방송·조회수)": 0.3166,
+      "결속형(팬클럽·기부·커뮤니티)": 0.1098,
+      "소비력형(초동·판매·앨범)": 0.0795,
+      "차트·확산형(1위·빌보드·기록)": 0.0918
+    },
+    "factor_diversity": 0.8658,
+    "coverage_index": 0.714,
+    "coverage_detail": {
+      "n_evidence": 74,
+      "language_coverage": 0.42,
+      "language_counts": {
+        "en": 19,
+        "ko": 52,
+        "zh": 2,
+        "ja": 1
+      },
+      "market_coverage": 0.833,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 1.0,
+      "source_type_counts": {
+        "community_social": 2,
+        "reference_wiki": 26,
+        "news_media": 46
+      },
+      "time_coverage": 0.75,
+      "years_mentioned": [
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.667,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "방송사",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.058,
+    "spillover_score": 0.146,
+    "activity": 74,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "잔나비",
+    "fanclub": "MONKEY HOTEL/잔팬",
+    "category": "록",
+    "loyalty_raw": 33.0,
+    "spillover_raw": 79.69999999999997,
+    "n_loyalty_bullets": 20,
+    "n_spillover_bullets": 49,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.4372,
+      "미디어노출형(방송·조회수)": 0.3516,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0323,
+      "소비력형(초동·판매·앨범)": 0.0782,
+      "차트·확산형(1위·빌보드·기록)": 0.1007
+    },
+    "factor_diversity": 0.7894,
+    "coverage_index": 0.725,
+    "coverage_detail": {
+      "n_evidence": 69,
+      "language_coverage": 0.126,
+      "language_counts": {
+        "ko": 66,
+        "zh": 1,
+        "en": 1,
+        "ja": 1
+      },
+      "market_coverage": 1.0,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "유럽",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 1.0,
+      "source_type_counts": {
+        "news_media": 33,
+        "reference_wiki": 35,
+        "community_social": 1
+      },
+      "time_coverage": 0.917,
+      "years_mentioned": [
+        "2015",
+        "2017",
+        "2018",
+        "2019",
+        "2020",
+        "2021",
+        "2022",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 1.0,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "대형공연장",
+        "매체_어워드",
+        "방송사",
+        "음원차트_국내",
+        "해외차트_시상식"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.03,
+    "spillover_score": 0.155,
+    "activity": 69,
+    "dominant_factor": "현장경제형(콘서트·투어·매진)"
+  },
+  {
+    "fandom": "엄정화",
+    "fanclub": "Temtation(템테이션)",
+    "category": "솔로",
+    "loyalty_raw": 30.300000000000004,
+    "spillover_raw": 85.89999999999998,
+    "n_loyalty_bullets": 20,
+    "n_spillover_bullets": 51,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.3335,
+      "미디어노출형(방송·조회수)": 0.3795,
+      "결속형(팬클럽·기부·커뮤니티)": 0.0745,
+      "소비력형(초동·판매·앨범)": 0.0866,
+      "차트·확산형(1위·빌보드·기록)": 0.1258
+    },
+    "factor_diversity": 0.87,
+    "coverage_index": 0.456,
+    "coverage_detail": {
+      "n_evidence": 71,
+      "language_coverage": 0.339,
+      "language_counts": {
+        "ko": 50,
+        "en": 21
+      },
+      "market_coverage": 0.333,
+      "markets_mentioned": [
+        "미국_북미",
+        "일본"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "reference_wiki": 37,
+        "news_media": 34
+      },
+      "time_coverage": 0.583,
+      "years_mentioned": [
+        "2017",
+        "2020",
+        "2021",
+        "2023",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.5,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "방송사",
+        "음원차트_국내"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.0,
+    "spillover_score": 0.183,
+    "activity": 71,
+    "dominant_factor": "미디어노출형(방송·조회수)"
+  },
+  {
+    "fandom": "박정현",
+    "fanclub": "Lena",
+    "category": "발라드",
+    "loyalty_raw": 30.600000000000005,
+    "spillover_raw": 83.29999999999997,
+    "n_loyalty_bullets": 18,
+    "n_spillover_bullets": 52,
+    "factor_share": {
+      "현장경제형(콘서트·투어·매진)": 0.2841,
+      "미디어노출형(방송·조회수)": 0.4464,
+      "결속형(팬클럽·기부·커뮤니티)": 0.052,
+      "소비력형(초동·판매·앨범)": 0.0853,
+      "차트·확산형(1위·빌보드·기록)": 0.1322
+    },
+    "factor_diversity": 0.838,
+    "coverage_index": 0.607,
+    "coverage_detail": {
+      "n_evidence": 70,
+      "language_coverage": 0.386,
+      "language_counts": {
+        "ko": 56,
+        "en": 8,
+        "zh": 4,
+        "ja": 2
+      },
+      "market_coverage": 0.833,
+      "markets_mentioned": [
+        "글로벌",
+        "동남아",
+        "미국_북미",
+        "일본",
+        "중화권"
+      ],
+      "source_type_coverage": 0.667,
+      "source_type_counts": {
+        "reference_wiki": 45,
+        "news_media": 25
+      },
+      "time_coverage": 0.667,
+      "years_mentioned": [
+        "2015",
+        "2016",
+        "2017",
+        "2019",
+        "2022",
+        "2024",
+        "2025",
+        "2026"
+      ],
+      "entity_coverage": 0.5,
+      "entity_types_mentioned": [
+        "글로벌플랫폼",
+        "방송사",
+        "음원차트_국내"
+      ],
+      "weights": {
+        "language": 0.3,
+        "market": 0.25,
+        "source_type": 0.2,
+        "time": 0.15,
+        "entity": 0.1
+      }
+    },
+    "loyalty_score": 0.003,
+    "spillover_score": 0.171,
+    "activity": 70,
+    "dominant_factor": "미디어노출형(방송·조회수)"
+  }
+]
