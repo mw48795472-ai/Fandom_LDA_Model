@@ -144,5 +144,55 @@
    "지역 축제",
    "고성"
   ]
+ },
+ "review_results": {
+  "reviewer": "모델 판독(Claude) — 사람 검수 아님. 표본 200건 × 3, seed 0",
+  "per_index": {
+   "ad": {
+    "reviewed": 200,
+    "should_have_matched": 7,
+    "miss_share": 0.035,
+    "miss_share_ci95": [
+     0.0171,
+     0.0705
+    ],
+    "estimated_missed_bullets": 305,
+    "recall_estimate": 0.811,
+    "recall_ci95": [
+     0.681,
+     0.898
+    ]
+   },
+   "media": {
+    "reviewed": 200,
+    "should_have_matched": 17,
+    "miss_share": 0.085,
+    "miss_share_ci95": [
+     0.0537,
+     0.1319
+    ],
+    "estimated_missed_bullets": 765,
+    "recall_estimate": 0.573,
+    "recall_ci95": [
+     0.464,
+     0.68
+    ]
+   },
+   "region": {
+    "reviewed": 200,
+    "should_have_matched": 6,
+    "miss_share": 0.03,
+    "miss_share_ci95": [
+     0.0138,
+     0.0639
+    ],
+    "estimated_missed_bullets": 272,
+    "recall_estimate": 0.775,
+    "recall_ci95": [
+     0.618,
+     0.882
+    ]
+   }
+  }
  }
 }

@@ -16,7 +16,7 @@
 | `persona_decision_space/live_interpretive_layer/` | `LIVE_INTERPRETIVE_LAYER_V7.md` + `../build_live_interpretive_layer_v7.py` — 게이트 v2 통과 모델(라이브 K=8 참고 재적합)의 상위 15·K→F·페르소나를 동결과 같은 규칙으로 만들어 대조한 병행 트랙(채택 전까지 본문 미변경) |
 | `tokenizer/` | 스크립트 3종(`*_v7.py`), 문서 2종(`*_V7.md`), `tokenizer_script_routing_v7.ipynb`, `csv/bullet_token_frequency_v7_final.csv`(43,162 토큰), `stopwords/`(언어별 불용어 MD·CSV + 코드에서 추출하는 스크립트) |
 | `dictionaries/` | `export_index_dictionaries_v7.py` + `index_dictionaries_v7.csv`(436행) + `DICTIONARIES_V7.md` — 보조지표·Coverage 계산에 쓰인 키워드·도메인·별칭 사전을 코드/JSON에서 추출해 한 파일로 고정(`--check`로 코드↔CSV drift 검사), 저장소에 없는 사전 2종(업종 키워드 전체·결속 유형 키워드)은 '없음' 표기 |
-| `unmatched_audit/` | `UNMATCHED_AUDIT_V7.md` + `near_miss_stats_v7.json` + 지표별 미매칭 표본 200건 CSV(검수 열 공란) — 광고·미디어·지역 지수의 매칭을 재현해 사전 밖 유사 표현이 든 미매칭 불릿을 세고 사람 검수 표본을 둔다(`../build_unmatched_audit_samples_v7.py`, `--summarize`로 검수 집계) |
+| `unmatched_audit/` | `UNMATCHED_AUDIT_V7.md` + `near_miss_stats_v7.json` + 지표별 미매칭 표본 200건 CSV(검수 열 공란) — 광고·미디어·지역 지수의 매칭을 재현해 사전 밖 유사 표현이 든 미매칭 불릿을 세고 검수 표본을 둔다(`../build_unmatched_audit_samples_v7.py`, `--summarize`로 검수 집계). 표본은 모델이 판독(사람 검수 아님): 재현율 추정 광고 0.81 · 미디어 0.57 · 지역 0.78 |
 | `technical_specification/` | `LDA_V7_FINAL_TECHNICAL_SPECIFICATION.md` — 최종 제출본 기준 방법론·수치·근거 파일 |
 
 ## 실행

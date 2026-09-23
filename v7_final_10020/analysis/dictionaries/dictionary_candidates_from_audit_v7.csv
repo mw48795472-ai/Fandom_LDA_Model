@@ -1,0 +1,10 @@
+﻿index,candidate_terms,evidence,n_in_review_sample
+ad,brand ambassador|ambassador|endorsement|endorsements|brand model|spokesmodel|promotional face|campaign face,영문 불릿의 상업 계약 신호 — 표본 7건 중 6건,6
+ad,화보 공개|브랜드 화보,'화보 촬영'만 있어 '화보 공개'를 놓침,1
+media,런닝맨|아는 형님|나는 가수다|나는가수다|쇼미더머니|히든싱어|미스터트롯|더 팬|아이돌학교|겟잇뷰티|불후의 명곡|유 퀴즈|복면가왕|주간아이돌|킹덤,예능·서바이벌 프로그램명(서브태그 단어 없이 등장),11
+media,라디오|Inter-FM|FM4U|파워FM,라디오 출연·진행,2
+media,서바이벌|경연|오디션 프로그램|MC|진행자|심사위원,예능 형식어,3
+media,documentary|show|variety|バラエティ|番組|late show,영문·일문 방송 표현,4
+media,방송 출연|특집 방송|시청률|V LIVE|브이라이브,방송 노출 일반어,3
+region,Seoul|Incheon|Daegu|Busan|Gwangju|Daejeon|Ulsan|Uijeongbu|Suwon|Jeju|Gyeonggi|Gangwon,영문 지명 — 표본 6건 중 3건,3
+region,봉화|철원|해남|명량|경상북도|경상남도|전라북도|충청남도|충청북도|강원도|경기도 광주,사전 밖 군 단위·도 전체명,3
