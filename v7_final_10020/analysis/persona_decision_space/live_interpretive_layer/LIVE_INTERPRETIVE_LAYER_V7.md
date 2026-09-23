@@ -60,7 +60,7 @@
 | 집단동원형 | 원정소비형 | 1 |
 
 ## 4. 읽는 법
-1. README 4·5절의 표·그림(상위 15, 페르소나 62/17/12/9, 그림 5∼7)은 이 폴더의 값이다(`charts/build_live_layer_figures_v7.py`). 동결 값(43/31/17/9)은 `../persona_decision_space_v7.ipynb`와 `data/v7_final/fan_persona_v7.json`에 그대로 있다.
+1. README 4·5절의 표·그림(상위 15, K→F 표, 페르소나 62/17/12/9, 그림 5·6·7)은 이 폴더의 값이다(`charts/build_live_layer_figures_v7.py`). 동결 값(43/31/17/9)은 `../persona_decision_space_v7.ipynb`와 `data/v7_final/fan_persona_v7.json`에 그대로 있다.
 2. 라이브 K=8의 φ·문서-토픽 분포는 저장소에 없다(원본 참고 재적합의 저장 산출물은 F 비중까지). 덴드로그램·PCA 그림은 재구성 토크나이저의 재적합(`topic_phi_cosine/`)으로만 그릴 수 있고 그 값은 원본과 근방값이다(L2).
 3. 점수 자체가 건수 구조에 좌우된다는 L10·L12의 결론은 이 계층에도 그대로 적용된다.
 

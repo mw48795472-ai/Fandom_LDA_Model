@@ -78,7 +78,7 @@ md.append("\n## 2. K → F (라이브 K=8)\n| 토픽 | 이름 | 상위 10단어 
 for k in k2f: md.append(f"| {k['topic']} | {k['topic_name']} | {k['top10']} | {k['raw_factor']} | {k['F']} {k['F_name']} |")
 md.append("\n## 3. 페르소나 이동 (동결 → 라이브, 공통 97개)\n| 동결 | 라이브 | 팬덤 수 |\n|---|---|---|")
 for (a, b), n in sorted(mig.items(), key=lambda kv: -kv[1]): md.append(f"| {a} | {b} | {n} |")
-md.append("\n## 4. 읽는 법\n1. README 4·5절의 표·그림(상위 15, 페르소나 62/17/12/9, 그림 5∼7)은 이 폴더의 값이다(`charts/build_live_layer_figures_v7.py`). 동결 값(43/31/17/9)은 `../persona_decision_space_v7.ipynb`와 `data/v7_final/fan_persona_v7.json`에 그대로 있다.\n2. 라이브 K=8의 φ·문서-토픽 분포는 저장소에 없다(원본 참고 재적합의 저장 산출물은 F 비중까지). 덴드로그램·PCA 그림은 재구성 토크나이저의 재적합(`topic_phi_cosine/`)으로만 그릴 수 있고 그 값은 원본과 근방값이다(L2).\n3. 점수 자체가 건수 구조에 좌우된다는 L10·L12의 결론은 이 계층에도 그대로 적용된다.\n")
+md.append("\n## 4. 읽는 법\n1. README 4·5절의 표·그림(상위 15, K→F 표, 페르소나 62/17/12/9, 그림 5·6·7)은 이 폴더의 값이다(`charts/build_live_layer_figures_v7.py`). 동결 값(43/31/17/9)은 `../persona_decision_space_v7.ipynb`와 `data/v7_final/fan_persona_v7.json`에 그대로 있다.\n2. 라이브 K=8의 φ·문서-토픽 분포는 저장소에 없다(원본 참고 재적합의 저장 산출물은 F 비중까지). 덴드로그램·PCA 그림은 재구성 토크나이저의 재적합(`topic_phi_cosine/`)으로만 그릴 수 있고 그 값은 원본과 근방값이다(L2).\n3. 점수 자체가 건수 구조에 좌우된다는 L10·L12의 결론은 이 계층에도 그대로 적용된다.\n")
 md.append("## 5. 파일\n| 파일 | 내용 |\n|---|---|\n| `live_top15_v7.csv` / `live_full_ranking_v7.csv` | 라이브 순위표(구획·대표 F·동결 순위 병기) |\n| `live_k_to_f_v7.csv` | 라이브 K=8 토픽 → raw 요인 → F |\n| `live_persona_v7.json` | 팬덤별 상위 2 F·페르소나·F별 분해, 카운트 |\n| `persona_migration_v7.csv` | 동결→라이브 페르소나 이동표 |\n| `live_vs_frozen_summary_v7.json` | 요약 |\n")
 (OUT / "LIVE_INTERPRETIVE_LAYER_V7.md").write_text("\n".join(md) + "\n", encoding="utf-8")
 print(json.dumps(summary, ensure_ascii=False)[:1200])
