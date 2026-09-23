@@ -296,6 +296,7 @@ v7_final_10020/        ★ 10,020건 기준 문서·코드·노트북 전부 (�
   index_methodology/     지표 산식 문서 + 식(1)~(7) 산정 노트북(ipynb + Spyder용 .py) + 재검증 스크립트
   charts/ indices_csv/ data_export/   그림·지수 CSV·데이터 추출 스크립트 (출력은 output/)
   silhouette_gate_policy/  tokenizer_wordcloud_report/  report_scripts/
+시계열분석/           별개의 탐색 분석: 근거문장 시점 태그 → 팬덤×연도 패널(점수 밀도·경로 비중 추이), MD·ipynb·R·상세명세서 (본 분석 수치와 무관)
 Statistics/R_통계검증/  보고서 2.1·2.2·3.8·7.4절 통계량을 R 표준 함수로 재계산 (238/238, RUN_ALL.R 하나로 실행)
 Statistics/verify_r_sections_python.py   같은 238개 항목의 파이썬 판
 Statistics/bootstrap_ci_v7.py + BOOTSTRAP_CI_V7.md   팬덤 부트스트랩 CI(라이브·동결·97개 공통 차이)와 코퍼스 축소 반복 — 판별타당도 결론의 불확실성
