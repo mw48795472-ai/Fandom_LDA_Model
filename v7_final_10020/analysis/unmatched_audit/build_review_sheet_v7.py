@@ -136,5 +136,9 @@ import zipfile, io
 src = (HERE / "review_sheet_v7.xlsx").read_bytes(); buf = io.BytesIO()
 with zipfile.ZipFile(io.BytesIO(src)) as zin, zipfile.ZipFile(buf, "w", zipfile.ZIP_DEFLATED) as zout:
     for item in sorted(zin.infolist(), key=lambda i: i.filename):
-        zi = zipfile.ZipInfo(item.filename, date_time=(2026, 9, 23, 0, 0, 0)); zi.compress_type = zipfile.ZIP_DEFLATED; zout.writestr(zi, zin.read(item.filename))
+        data = zin.read(item.filename)
+        if item.filename == "docProps/core.xml":  # openpyxl이 저장 시각을 덮어쓰므로 고정값으로 치환
+            import re as _re; data = _re.sub(rb"(<dcterms:modified[^>]*>)[^<]*(</dcterms:modified>)", rb"\g<1>2026-09-23T00:00:00Z\g<2>", data)
+            data = _re.sub(rb"(<dcterms:created[^>]*>)[^<]*(</dcterms:created>)", rb"\g<1>2026-09-23T00:00:00Z\g<2>", data)
+        zi = zipfile.ZipInfo(item.filename, date_time=(2026, 9, 23, 0, 0, 0)); zi.compress_type = zipfile.ZIP_DEFLATED; zout.writestr(zi, data)
 (HERE / "review_sheet_v7.xlsx").write_bytes(buf.getvalue()); print("wrote review_sheet_v7.xlsx", stats, "decisions", len(DECISIONS))
