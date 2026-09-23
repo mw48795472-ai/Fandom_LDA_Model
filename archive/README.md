@@ -18,6 +18,6 @@ zip 안의 `data/v6_r22_snapshot/`에는 `data/v7_final/`과 **이름이 같은 
 
 ## 이 zip에 없는 것
 
-동결 7,350건 코퍼스 원본, 14개 언어 라우팅 토크나이저(`run_lda_v6_live_reference_v7.py`), 동결 모델의 φ·코사인 거리 행렬은 이 zip에도, git 이력 어디에도 없다(내용 기준으로 전수 검색함).
+동결 7,350건 코퍼스 원본, 14개 언어 라우팅 토크나이저(`run_lda_v6_live_reference_v7.py`) 원본 소스, 동결 모델의 φ·코사인 거리 행렬은 이 zip에도, git 이력 어디에도 없다(내용 기준으로 전수 검색함). 앞의 둘은 각각 근사 복원본(`data/v7_final/frozen_snapshot_v7_40/`)과 재구성본(저장소 루트 `run_lda_v6_live_reference_v7.py`)으로 대신한다.
 
 다만 동결 코퍼스는 `data/v7_final/frozen_snapshot_v7_40/`에 근사 복원본(7,326/7,350건)이 있고, 그 복원본에서 동결 이후 교체된 BE'O·pH-1·한로로 3개 팬덤의 문장은 **이 zip의 r22 시점 코퍼스에서 가져온 것**이다(28·34·33건). 이 zip이 보고서 본문에 기여하는 유일한 지점이다. 자세한 내용은 루트 README 9절.

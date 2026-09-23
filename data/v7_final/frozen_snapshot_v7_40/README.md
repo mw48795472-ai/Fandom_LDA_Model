@@ -25,5 +25,5 @@
 ## 이 파일로 할 수 있는 것과 없는 것
 
 - 동결 시점 값의 근사 재현(지역 지수 표 15 등)에는 그대로 쓸 수 있다. 97개 팬덤은 정확하고 3개 팬덤은 r22 수준이다.
-- 동결 모델(K=10·M=5·실루엣 0.267)의 재적합은 아직 안 된다. 14개 언어 라우팅 토크나이저(`run_lda_v6_live_reference_v7.py`)가 저장소에 없기 때문이다. 토크나이저가 재구성되면 `v7_final_10020/analysis/persona_decision_space/topic_phi_cosine/build_topic_phi_cosine_v7.py`의 입력을 이 파일로 바꿔 돌리고, 그 문서 9절 4항의 기준(토픽 상위어·토픽→F·절단 높이·실루엣·F 비중)으로 검증한다. 3개 팬덤 24건이 빠져 있으므로 마지막 자리까지 같으리라 기대할 수는 없다.
+- 동결 모델(K=10·M=5·실루엣 0.267)의 재적합은 아직 하지 않았다. 재료는 갖춰졌다: 이 코퍼스와 재구성 라우팅 토크나이저(저장소 루트 `run_lda_v6_live_reference_v7.py`, `v7_final_10020/analysis/tokenizer/live_reference_tokenizer/`). `run_lda_v6_live_reference_v7.py --data data/v7_final/frozen_snapshot_v7_40/fandoms_v7_40_frozen_reconstructed.json`으로 돌린 뒤 `topic_phi_cosine/` 문서 9절 4항의 기준(토픽 상위어·토픽→F·절단 높이·실루엣·F 비중)으로 검증한다. 3개 팬덤 24건 유실과 토크나이저 잔차 때문에 마지막 자리까지 같으리라 기대할 수는 없다.
 - "동결 스냅샷"이라고 부르지 않는다. 문서·표에서는 **동결 근사 복원본(7,326/7,350)** 으로 표기한다.

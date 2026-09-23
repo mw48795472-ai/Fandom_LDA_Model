@@ -49,8 +49,9 @@ from sklearn.metrics import silhouette_score
 # 주의: 이 파일은 최종 토크나이저 개편 이전 판의 파이프라인이다. 최종 제출본의 라이브 참고 재적합
 # (data/v7_final/lda_v6_diagnostics_live_reference_v7.json, 10,020건, K=8/M=5/실루엣 0.046)은
 # 이후 토크나이저 개편(v7 38~39라운드, 14개 언어 문자권별 라우팅)을 거친
-# run_lda_v6_live_reference_v7.py(소스 유실)로 산출된 것이라, 이 스크립트를 10,020건 코퍼스에 그대로
-# 돌리면 문서 수·어휘·K-grid 수치가 달라진다(README.md "재현성 범위" 참고).
+# run_lda_v6_live_reference_v7.py 로 산출된 것이라, 이 스크립트를 10,020건 코퍼스에 그대로
+# 돌리면 문서 수·어휘·K-grid 수치가 달라진다. 원본 소스는 유실됐고 저장소 루트의 run_lda_v6_live_reference_v7.py 는
+# 이 파일 위에 라우팅 토크나이저를 다시 붙인 재구성본이다(v7_final_10020/analysis/tokenizer/live_reference_tokenizer/).
 # ------------------------------------------------------------------------------------------
 _BASE = Path(__file__).resolve().parent
 _ap = argparse.ArgumentParser(description="LDA v6 pipeline (K-grid -> Meta Factor -> Fan Factor Matrix -> scores)")

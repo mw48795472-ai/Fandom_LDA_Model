@@ -15,6 +15,9 @@
 | 분류 | 스크립트 | 입력 | 출력·확인 |
 |---|---|---|---|
 | 정합성 검증(루트) | `verify_v7_final_consistency.py` | `data/v7_final/*` 전부 | 보고서·KEY_FINDINGS 수치 105개 항목을 파일에서 재계산해 일치/불일치 출력 (105/105; [AD]절 4항목이 동결 코퍼스 근사 복원본 검증) |
+| 토크나이저 재구성 검증 ①② | `v7_final_10020/analysis/tokenizer/live_reference_tokenizer/verify_tokenizer_reconstruction_v7.py` | `run_lda_v6_live_reference_v7.py`의 토크나이저 절(마커 exec), 코퍼스 10,020건, `wordcloud_by_language_v7.json`, `lda_excluded_bullets_v7.json` | 문서 수·제외 2건·8개 버킷 통계·상위 30단어 카운트·자기인용 건수 대조 → `tokenizer_reconstruction_check_v7.json` (약 20초, wordfreq 필요) |
+| 토크나이저 재구성 검증 ③ | 같은 폴더 `compare_live_reference_refit_v7.py` | `output/lda_live_reference_v7/` 산출물, `lda_v6_diagnostics_live_reference_v7.json`, `fandom_scores_live_reference_v7.json` | K-grid 7개 K 지표·선택 K/M/실루엣·토픽 상위어 대응·factor_diversity 상관 → `live_reference_refit_comparison_v7.json` |
+| 토크나이저 재구성 문서 | 같은 폴더 `build_tokenizer_reconstruction_md_v7.py` | 위 두 JSON | `TOKENIZER_RECONSTRUCTION_V7.md` |
 | 동결 코퍼스 검사기 | `data/v7_final/frozen_snapshot_v7_40/verify_frozen_corpus_candidate.py` | 후보 코퍼스 JSON (인자 없으면 같은 폴더의 근사 복원본), `fandom_scores_v6.json`, r22 백업 zip, `verify_v7_final_consistency.py`의 EvidenceScore(ast) | 7항목 판정(구조·총 7,350·로스터·팬덤별 건수·EvidenceScore 지문 100/100·activity) + 라이브·r22 포함 관계 참고치. 근사 복원본은 3/7(97개 팬덤 지문 일치) |
 | 파이프라인(루트) | `run_lda_v6.py` | 코퍼스 JSON (`--data`, 기본 `fandoms_v3_100.json`) | `output/lda_rerun/` — 토큰화→LDA K 탐색→K→M 재군집화→실루엣 게이트→점수·페르소나 |
 | 차트 | `v7_final_10020/charts/build_cohesion_index_v7.py` | `fandom_cohesion_index_v7.json` | 팬덤결속 지수 좌우 2패널 PNG/SVG (`output/charts/`) |
@@ -64,8 +67,18 @@ v6∼v7 파이프라인 실물이다(재구성본이 아님). 토큰화 → `Lat
 최종 코퍼스 → `output/lda_rerun/`). 단 이 파일의 토크나이저는 14개 언어 문자권 라우팅
 (fugashi·jieba·pythainlp 추가 경로) 이전 판이라, 최종 참고 재적합(10,020건 → 3토큰 미만 제외
 후 10,018건, K=8/M=5/실루엣 0.046)을 만든 `run_lda_v6_live_reference_v7.py`와 문서 수가 다르다
-(이 스크립트로 10,020건을 돌리면 9,954건). 라우팅 판의 소스는 저장소에 없고, 그 실행 결과는
-`lda_v6_diagnostics_live_reference_v7.json`·`wordcloud_by_language_v7.json`으로 남아 있다.
+(이 스크립트로 10,020건을 돌리면 9,954건). 라우팅 판의 원본 소스는 저장소에 없고, 그 실행 결과는
+`lda_v6_diagnostics_live_reference_v7.json`·`wordcloud_by_language_v7.json`으로 남아 있다. 이 실행 결과를 목표값으로
+라우팅 토크나이저를 다시 붙인 재구성본이 저장소 루트의 `run_lda_v6_live_reference_v7.py`다(아래 B-1).
+
+## B-1. 라우팅 토크나이저 재구성본 — `run_lda_v6_live_reference_v7.py`
+
+`run_lda_v6.py`와 파이프라인이 같고 토크나이저 절(`# === TOKENIZER BEGIN/END ===`)만 다르다: 도메인 조각 제거 →
+일반 경로(정규식 `[가-힣A-Za-z0-9À-ɏḀ-ỿЀ-ӿ]{2,}`, 조사 접미사, 한국어 41·영어 118+확장·7개 라틴어권·러시아어 불용어,
+순수 숫자 제외, 등록 도메인 라벨 기준 자기인용 슬러그 제거) → 가나/한자/태국 문자 분기로 fugashi·jieba·pythainlp 추가.
+검증은 `v7_final_10020/analysis/tokenizer/live_reference_tokenizer/`의 세 스크립트가 한다(표 A 참고). 원본과의 대조:
+문서 10,018/10,018, 제외 2건 일치, 총 토큰 170,726/170,725, 8개 버킷 상위 30단어 238/240, 선택 K=8(원본 8)·M=6(원본 5)·
+실루엣 0.081(원본 0.046). 기본 출력 `output/lda_live_reference_v7/`, 약 30분(K-grid 7개 × 시드 안정성 3회).
 
 ## C. 차트 생성 스크립트 (matplotlib)
 

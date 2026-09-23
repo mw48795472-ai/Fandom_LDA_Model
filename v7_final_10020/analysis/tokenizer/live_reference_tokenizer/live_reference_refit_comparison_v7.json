@@ -1,0 +1,392 @@
+{
+ "k_grid": [
+  {
+   "k": 8,
+   "perplexity": [
+    3591.0,
+    3468.8,
+    122.2
+   ],
+   "coherence": [
+    -2.372,
+    -2.39,
+    0.018
+   ],
+   "diversity": [
+    0.887,
+    0.875,
+    0.012
+   ],
+   "stability": [
+    0.478,
+    0.421,
+    0.057
+   ],
+   "composite_rank_sum": [
+    5,
+    5
+   ]
+  },
+  {
+   "k": 10,
+   "perplexity": [
+    3696.5,
+    3613.8,
+    82.7
+   ],
+   "coherence": [
+    -2.427,
+    -2.512,
+    0.085
+   ],
+   "diversity": [
+    0.81,
+    0.78,
+    0.03
+   ],
+   "stability": [
+    0.508,
+    0.421,
+    0.087
+   ],
+   "composite_rank_sum": [
+    7,
+    15
+   ]
+  },
+  {
+   "k": 12,
+   "perplexity": [
+    3707.4,
+    3679.9,
+    27.5
+   ],
+   "coherence": [
+    -2.514,
+    -2.503,
+    -0.011
+   ],
+   "diversity": [
+    0.808,
+    0.783,
+    0.025
+   ],
+   "stability": [
+    0.4,
+    0.37,
+    0.03
+   ],
+   "composite_rank_sum": [
+    15,
+    15
+   ]
+  },
+  {
+   "k": 15,
+   "perplexity": [
+    3754.0,
+    3723.9,
+    30.1
+   ],
+   "coherence": [
+    -2.469,
+    -2.66,
+    0.191
+   ],
+   "diversity": [
+    0.747,
+    0.787,
+    -0.04
+   ],
+   "stability": [
+    0.393,
+    0.362,
+    0.031
+   ],
+   "composite_rank_sum": [
+    17,
+    18
+   ]
+  },
+  {
+   "k": 20,
+   "perplexity": [
+    3876.8,
+    3828.5,
+    48.3
+   ],
+   "coherence": [
+    -2.508,
+    -2.486,
+    -0.022
+   ],
+   "diversity": [
+    0.775,
+    0.72,
+    0.055
+   ],
+   "stability": [
+    0.366,
+    0.347,
+    0.019
+   ],
+   "composite_rank_sum": [
+    19,
+    20
+   ]
+  },
+  {
+   "k": 25,
+   "perplexity": [
+    4055.3,
+    3885.6,
+    169.7
+   ],
+   "coherence": [
+    -2.495,
+    -2.347,
+    -0.148
+   ],
+   "diversity": [
+    0.744,
+    0.796,
+    -0.052
+   ],
+   "stability": [
+    0.341,
+    0.333,
+    0.008
+   ],
+   "composite_rank_sum": [
+    23,
+    16
+   ]
+  },
+  {
+   "k": 30,
+   "perplexity": [
+    4183.9,
+    4065.0,
+    118.9
+   ],
+   "coherence": [
+    -2.524,
+    -2.542,
+    0.018
+   ],
+   "diversity": [
+    0.75,
+    0.787,
+    -0.037
+   ],
+   "stability": [
+    0.315,
+    0.344,
+    -0.029
+   ],
+   "composite_rank_sum": [
+    26,
+    23
+   ]
+  }
+ ],
+ "selection": {
+  "selected_k": [
+   8,
+   8
+  ],
+  "selected_m": [
+   6,
+   5
+  ],
+  "silhouette": [
+   0.081,
+   0.046
+  ]
+ },
+ "topic_alignment": [
+  {
+   "orig_topic": 0,
+   "orig_words": [
+    "브랜드",
+    "광고",
+    "모델",
+    "앰버서더",
+    "발탁",
+    "캠페인"
+   ],
+   "best_recon_topic": 3,
+   "overlap10": 8,
+   "recon_words": [
+    "브랜드",
+    "광고",
+    "모델",
+    "앰버서더",
+    "발탁",
+    "캠페인"
+   ]
+  },
+  {
+   "orig_topic": 1,
+   "orig_words": [
+    "기록",
+    "1위",
+    "앨범",
+    "발매",
+    "데뷔",
+    "차트"
+   ],
+   "best_recon_topic": 7,
+   "overlap10": 10,
+   "recon_words": [
+    "기록",
+    "1위",
+    "앨범",
+    "발매",
+    "데뷔",
+    "차트"
+   ]
+  },
+  {
+   "orig_topic": 2,
+   "orig_words": [
+    "콘서트",
+    "공연",
+    "보도",
+    "단독",
+    "매체",
+    "투어"
+   ],
+   "best_recon_topic": 0,
+   "overlap10": 6,
+   "recon_words": [
+    "콘서트",
+    "2026년",
+    "공연",
+    "2025년",
+    "서울",
+    "단독"
+   ]
+  },
+  {
+   "orig_topic": 3,
+   "orig_words": [
+    "fan",
+    "japan",
+    "tour",
+    "concert",
+    "sold",
+    "album"
+   ],
+   "best_recon_topic": 2,
+   "overlap10": 9,
+   "recon_words": [
+    "tour",
+    "fan",
+    "japan",
+    "concert",
+    "sold",
+    "world"
+   ]
+  },
+  {
+   "orig_topic": 4,
+   "orig_words": [
+    "무대",
+    "2026년",
+    "함께",
+    "축제",
+    "페스티벌",
+    "화제"
+   ],
+   "best_recon_topic": 4,
+   "overlap10": 3,
+   "recon_words": [
+    "공식",
+    "유튜브",
+    "팬클럽",
+    "채널",
+    "무대",
+    "팬덤"
+   ]
+  },
+  {
+   "orig_topic": 5,
+   "orig_words": [
+    "출연",
+    "데뷔",
+    "예능",
+    "일본",
+    "2026년",
+    "활동"
+   ],
+   "best_recon_topic": 0,
+   "overlap10": 3,
+   "recon_words": [
+    "콘서트",
+    "2026년",
+    "공연",
+    "2025년",
+    "서울",
+    "단독"
+   ]
+  },
+  {
+   "orig_topic": 6,
+   "orig_words": [
+    "공식",
+    "팬클럽",
+    "활동",
+    "중국",
+    "팬덤",
+    "보도"
+   ],
+   "best_recon_topic": 4,
+   "overlap10": 4,
+   "recon_words": [
+    "공식",
+    "유튜브",
+    "팬클럽",
+    "채널",
+    "무대",
+    "팬덤"
+   ]
+  },
+  {
+   "orig_topic": 7,
+   "orig_words": [
+    "ost",
+    "드라마",
+    "기부",
+    "수상",
+    "2025년",
+    "팬클럽"
+   ],
+   "best_recon_topic": 1,
+   "overlap10": 3,
+   "recon_words": [
+    "ost",
+    "드라마",
+    "홍보대사",
+    "참여",
+    "위촉",
+    "활동"
+   ]
+  }
+ ],
+ "scores": {
+  "loyalty_spillover_raw_match": [
+   100,
+   100
+  ],
+  "factor_diversity_pearson": 0.7331278209963463,
+  "factor_diversity_mean": [
+   0.9113,
+   0.7698
+  ],
+  "dominant_factor_label_match": [
+   75,
+   100
+  ]
+ }
+}
