@@ -36,6 +36,6 @@ CoverageIndex             = 0.30·언어 + 0.25·시장 + 0.20·출처유형 + 0
 
 ## 4. 한계
 
-1. 멤버명 언급 수 기반 텍스트마이닝 지수다. 별칭·동음 오매칭(예: SEVENTEEN "준"이 "기준"에 부분 일치) 가능성은 최종 파이프라인의 별칭 처리에 의존한다.
-2. 상관분석 JSON은 v7-55 시점(8,981건) MCI × 동결 outcome이라 최종 MCI 재계산값과 소폭 다르다(위 5).
-3. 2인 그룹(FTISLAND·동방신기)은 MCI 하한이 0.5라 원시 MCI 순위가 구조적으로 높다 — `mci_excess`를 함께 본다.
+1. 멤버명 언급 수 기반 텍스트마이닝 지수다. 별칭·동음 오매칭(예: SEVENTEEN "준"이 "기준"에 부분 일치) 가능성은 최종 파이프라인의 별칭 처리에 의존한다. 기록된 언급 수를 불릿에서 다시 세어 대조한 감사(`member_alias_audit_v7.csv`, L18)에서는 273명 중 244명이 단순 부분 문자열 수와 같고, 23명은 별칭·영문명이 반영돼 더 많으며, 6명(Stray Kids 한, NCT 텐, ATEEZ 산, IVE 레이, SEVENTEEN 준, 빅뱅 탑)은 부분 문자열보다 적어 동음 필터가 있었음을 보여준다. 원본 별칭 사전은 파일럿 10그룹 분만 남아 있다(`analysis/dictionaries/`).
+2. 상관분석 JSON은 v7-55 시점(8,981건) MCI × 동결 outcome이라 최종 MCI 재계산값과 소폭 다르다(위 5). 시점을 맞춘 재산출(최종 MCI × 라이브 outcome 10,020건, `MCI_SAME_PERIOD_V7.md`·`member_mci_correlation_live_v7.json`)에서도 원시 MCI∼팬충성도 r=−0.390(R² 0.152), MCI_excess 최대 R² 0.028, 정규화 HHI 최대 R² 0.035로 결론은 같다.
+3. 2인 그룹(FTISLAND·동방신기)은 MCI 하한이 0.5라 원시 MCI 순위가 구조적으로 높다 — `mci_excess`를 함께 본다. 45개 그룹의 원시 MCI·하한·MCI_excess·정규화 HHI((MCI−1/n)/(1−1/n))를 `member_mci_unified_v7.csv`에 고정했다. README 표의 MCI 열은 아직 원시 값이다.

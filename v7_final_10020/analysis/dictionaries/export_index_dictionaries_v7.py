@@ -12,7 +12,8 @@
   analysis/build_notebooks_v7.py   ALL_LANGS / LANG_LABEL(14개 언어)
 
 출력: 이 폴더 index_dictionaries_v7.csv (사전, 항목, 값, 출처) + DICTIONARIES_V7.md(사전별 유무·건수·출처 표)
-실행: python v7_final_10020/analysis/dictionaries/export_index_dictionaries_v7.py
+실행: python v7_final_10020/analysis/dictionaries/export_index_dictionaries_v7.py          (CSV·MD 생성)
+      python v7_final_10020/analysis/dictionaries/export_index_dictionaries_v7.py --check  (저장 CSV ↔ 코드·JSON 사전 drift 검사, 불일치면 exit 1)
 """
 import ast, csv, json, re
 from pathlib import Path
@@ -82,6 +83,14 @@ for kw in (m.group(1).split("/") if m else []): add("팬덤 결속 D 게이트 �
 me = json.load(open(D / "media_exposure_v7.json", encoding="utf-8"))
 for t in me["subtags"]: add("미디어·콘텐츠 노출 서브태그(subtags)", "서브태그", t, "data/v7_final/media_exposure_v7.json", "서브태그별 확장 키워드는 저장소에 없음(서브태그명 문자열 매칭)")
 
+import sys
+if "--check" in sys.argv:
+    # 저장된 CSV와 코드·JSON에서 방금 뽑은 사전이 같은지 검사한다. 사전을 바꾸고 CSV를 함께 커밋하지 않으면 여기서 걸린다.
+    saved = [{k: r[k] for k in ("사전", "항목", "값")} for r in csv.DictReader(open(HERE / "index_dictionaries_v7.csv", encoding="utf-8-sig"))]
+    now = [{k: r[k] for k in ("사전", "항목", "값")} for r in rows]
+    diff = [r for r in now if r not in saved] + [r for r in saved if r not in now]
+    print(f"[--check] 코드·JSON 사전 {len(now)}행 vs 저장 CSV {len(saved)}행 → {'일치' if not diff else f'불일치 {len(diff)}행: ' + str(diff[:5])}")
+    sys.exit(1 if diff else 0)
 with open(HERE / "index_dictionaries_v7.csv", "w", encoding="utf-8-sig", newline="") as f:
     w = csv.DictWriter(f, fieldnames=["사전", "항목", "값", "출처", "비고"]); w.writeheader(); w.writerows(rows)
 
@@ -109,6 +118,6 @@ row("멤버 집중도(MCI)", "멤버 별칭 (파일럿 10그룹)", "멤버 집�
 row("세계 언어 지수", "14개 언어 코드·라벨", "세계 언어(ALL_LANGS)", "`analysis/build_notebooks_v7.py`")
 md.append("| 토크나이저 | 언어별 불용어 | 있음 | 1,503+ | `analysis/tokenizer/stopwords/` (별도 정리) + 재구성본 `run_lda_v6_live_reference_v7.py` |")
 md.append(f"\n합계 {len(rows)}행. 없음으로 표시된 두 사전(광고 업종 키워드 전체, 결속 유형 키워드)은 원본 산출물 JSON에 집계값만 남아 있어 복원할 수 없다. "
-          "다음 라운드부터는 지수 스크립트가 이 CSV를 읽도록 하고, 사전을 바꿀 때 CSV를 함께 커밋하는 것이 L4의 남은 절반이다.\n")
+          "`--check` 모드가 저장 CSV와 코드·JSON의 사전을 대조해 어긋나면 실패하므로, 사전을 바꿀 때는 이 스크립트를 다시 돌려 CSV를 함께 커밋한다. 지수 스크립트(노트북 생성기)가 코드 안 사전 대신 이 CSV를 읽게 바꾸는 일은 다음 라운드 몫이다.\n")
 (HERE / "DICTIONARIES_V7.md").write_text("\n".join(md) + "\n", encoding="utf-8")
 print(f"wrote {len(rows)} rows;", dict(cnt))

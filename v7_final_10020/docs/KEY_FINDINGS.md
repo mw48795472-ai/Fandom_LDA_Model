@@ -124,6 +124,6 @@
   r=-0.393(p=0.008, R²=0.155)이 가장 크지만 MCI∼멤버 수 r=-0.749로, 멤버 수를 뺀 MCI_excess 기준으로는 어떤 outcome과도
   유의하지 않음(최대 R²=0.036). 최종 10,020건 MCI로 재계산하면 r=-0.385, MCI∼멤버 수 r=-0.728, MCI_excess 최대 R²=0.046
   (상세 보고서 7.4절 표와 전부 일치 — `Statistics/R_통계검증/` 7.4절 35/35. 그 패키지의 `data/member_mention_pilot_v7.json`은
-  `member_mention_index_v7.json`과 값이 같고 키 이름만 `mci_pilot`/`mci_index`로 다르다)
+  `member_mention_index_v7.json`과 값이 같고 키 이름만 `mci_pilot`/`mci_index`로 다르다). 시점을 맞춘 재산출(최종 MCI × 라이브 점수 10,020건)도 같은 결론: 원시 r=-0.390, MCI_excess 최대 R²=0.028, 정규화 HHI 최대 R²=0.035 (`analysis/group_member_index/MCI_SAME_PERIOD_V7.md`)
 - K=10 토픽 카드(`topic_cards_v7.json`): 토픽별 상위 키워드·대표 불릿 3건·대표 팬덤 5개·연결 F 경로. 명칭은 METHODOLOGY.md
   2-1 표와 동일
