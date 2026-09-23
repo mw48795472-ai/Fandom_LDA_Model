@@ -128,4 +128,13 @@ for i, (k, nm) in enumerate(NAMES.items(), 2):
     for c in (15, 16): sh.cell(row=i, column=c).number_format = "0.000"
 sh.cell(row=6, column=1, value="확정 누락 = A + B. C(경계)는 정의결정에서 '포함'을 고른 경우에만 누락으로 세며, 그 상한이 '경계 포함 시' 열이다. E·미판정은 누락 아님으로 계산된다. 재현율 = 매칭 / (매칭 + 미매칭 × 표본 누락 비율).")
 for col, w in zip("ABCDEFGHIJKLMNOP", [8, 6, 8, 14, 14, 8, 8, 8, 8, 14, 12, 14, 8, 8, 12, 16]): sh.column_dimensions[col].width = w
-wb.save(HERE / "review_sheet_v7.xlsx"); print("wrote review_sheet_v7.xlsx", stats, "decisions", len(DECISIONS))
+import datetime
+wb.properties.created = wb.properties.modified = datetime.datetime(2026, 9, 23, 0, 0, 0)  # 재실행 시 바이트 동일
+wb.save(HERE / "review_sheet_v7.xlsx")
+# zip 항목의 수정 시각을 고정해 재실행 시 바이트가 같도록 한다
+import zipfile, io
+src = (HERE / "review_sheet_v7.xlsx").read_bytes(); buf = io.BytesIO()
+with zipfile.ZipFile(io.BytesIO(src)) as zin, zipfile.ZipFile(buf, "w", zipfile.ZIP_DEFLATED) as zout:
+    for item in sorted(zin.infolist(), key=lambda i: i.filename):
+        zi = zipfile.ZipInfo(item.filename, date_time=(2026, 9, 23, 0, 0, 0)); zi.compress_type = zipfile.ZIP_DEFLATED; zout.writestr(zi, zin.read(item.filename))
+(HERE / "review_sheet_v7.xlsx").write_bytes(buf.getvalue()); print("wrote review_sheet_v7.xlsx", stats, "decisions", len(DECISIONS))

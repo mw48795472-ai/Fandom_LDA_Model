@@ -310,4 +310,4 @@ archive/v6_r22_era_backup.zip   최종 코퍼스 확정 이전(v7 r22, 5,612건)
                                 zip 안의 fandom_scores_v6.json·lda_v6_diagnostics.json은 data/v7_final의 동결(v7-40) 파일과 이름만 같은 r22 시점 값(archive/README.md 참고)
 ```
 
-**검증 상태**: 파이썬 26개 컴파일 · 노트북 10개 실행 오류 0 · 스크립트 22개 실행 및 재실행 산출물 동일 · 보고서 docx 대조 47/58 수치 일치(문장 오기 12건은 `REPORT_DOCX_VERIFICATION.md`).
+**검증 상태** (2026-09-23 전수조사, `v7_final_10020/docs/FULL_AUDIT_2026-09-23.md`): 파이썬 52개 컴파일 오류 0 · 노트북 10개 실행 오류 0 · 스크립트 30개 재실행 산출물 동일(생성 문서·JSON·CSV·PNG·xlsx 바이트 일치) · verify 107/107 · R 대응 238/238 · README 핵심 수치 15항목 ↔ 산출 JSON 일치 · 문서 경로 참조 전수 확인 · 보고서 docx 대조 47/58 수치 일치(문장 오기 12건은 `REPORT_DOCX_VERIFICATION.md`; 4·5절은 게이트 v2 채택으로 PDF와 의도적으로 다름).
