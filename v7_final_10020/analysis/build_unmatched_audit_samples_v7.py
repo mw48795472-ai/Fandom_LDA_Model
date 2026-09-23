@@ -38,15 +38,18 @@ ORIG_TOTAL = {"ad": ad["total_ad_bullets"], "media": media["total_media_bullets"
 
 bullets = [(fd["fandom"], tag, i, it["t"]) for fd in corpus for tag in ("loyalty", "spillover") for i, it in enumerate(fd[tag])]
 if "--summarize-xlsx" in sys.argv:
-    # 저자가 O/X를 적은 unmatched_audit/review_sheet_v7.xlsx 에서 확정 누락 수와 재현율을 계산한다
+    # 저자가 판정 옵션(A∼E)을 적은 unmatched_audit/review_sheet_v7.xlsx 집계: 확정 누락 = A+B, 경계(C)는 별도, 정의결정·사전후보 시트의 선택도 같이 출력
     from openpyxl import load_workbook
     wb = load_workbook(OUT / "review_sheet_v7.xlsx", data_only=True); res = {}
     for k, nm in (("ad", "광고"), ("media", "미디어"), ("region", "지역")):
         rows = list(wb[nm].iter_rows(min_row=2, values_only=True)); n = len(rows)
-        judged = [(r[5], (r[7] or "").strip().upper()) for r in rows]
-        y_o = sum(1 for m, a in judged if m == "Y" and a == "O"); n_x = sum(1 for m, a in judged if m == "N" and a == "X"); done = sum(1 for _, a in judged if a in ("O", "X"))
-        miss = (y_o + n_x) / n; matched = sum(1 for b in bullets if MATCH[k](b[3])); un = len(bullets) - matched
-        res[k] = {"reviewed_by_author": done, "confirmed_missed": y_o + n_x, "model_Y_confirmed": y_o, "model_N_overturned": n_x, "miss_share": round(miss, 4), "recall_estimate": round(matched / (matched + un * miss), 3) if (matched + un * miss) else None}
+        cat = [(r[7] or "").strip()[:1] for r in rows]; cnt = {c: cat.count(c) for c in "ABCDE"}
+        miss = (cnt["A"] + cnt["B"]) / n; miss_c = (cnt["A"] + cnt["B"] + cnt["C"]) / n
+        matched = sum(1 for b_ in bullets if MATCH[k](b_[3])); un = len(bullets) - matched
+        res[k] = {"judged": sum(cnt.values()), "counts": cnt, "terms_to_add": sorted({(r[8] or "").strip() for r in rows if (r[7] or "").startswith("A") and (r[8] or "").strip()}),
+                  "miss_share": round(miss, 4), "miss_share_incl_borderline": round(miss_c, 4), "recall_estimate": round(matched / (matched + un * miss), 3), "recall_incl_borderline": round(matched / (matched + un * miss_c), 3)}
+    res["definition_decisions"] = [{"q": r[1], "choice": r[5], "memo": r[6]} for r in wb["정의결정"].iter_rows(min_row=2, values_only=True) if r[1]]
+    res["dictionary_candidates"] = [{"index": r[0], "terms": r[1], "action": r[5], "revised": r[6]} for r in wb["사전후보"].iter_rows(min_row=2, values_only=True) if r[1]]
     print(json.dumps(res, ensure_ascii=False, indent=1)); sys.exit()
 if "--summarize" in sys.argv:
     res = {}
