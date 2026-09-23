@@ -20,7 +20,7 @@
 | 차트 | `v7_final_10020/charts/build_cohesion_index_v7_right_only.py` | 〃 | 우측 패널(상위 25개 팬덤) 단독 PNG/SVG |
 | 차트 | `v7_final_10020/charts/build_aux_indices_100_v7.py` | 보조지표 JSON 7종(광고·미디어 노출·결속·크로스오버·국내 지역·MCI·세계 언어) | 100개 팬덤 전체(MCI는 45개 그룹) 그래프 7장 → `assets/readme/100개_보조지표/` (README 6절의 상위 20·25 그림의 전체판, 1~50위/51~100위 두 패널·x축 공유) |
 | 차트 | `v7_final_10020/charts/build_persona_map_v7.py` | `fandom_scores_v6.json`, `fan_persona_v7.json` (동결 스냅샷) | Fan Persona Map(팬충성도×파급효과, 페르소나 4유형 색) PNG 2종 — 강조 표시 있음/없음 |
-| 차트 | `v7_final_10020/charts/build_persona_cluster_split_boxed.py` | `persona_decision_space_v7.json`(HTML 내장 병합 기록·shares; 원본 `factor_clustering_structure_v7.json`이 있으면 그것을 우선)·`fan_persona_v7.json` (동결 스냅샷) | 덴드로그램 PNG + PCA biplot PNG (2개 분리) |
+| 차트 | `v7_final_10020/charts/build_persona_cluster_split_boxed.py` | `persona_decision_space_v7.json`(HTML 내장 병합 기록·shares; 동결 코사인 거리 행렬 파일 `topic_cosine_distance_frozen_v7_40.json`이 나중에 생기면 그것을 우선 — 원본 묶음에는 없음)·`fan_persona_v7.json` (동결 스냅샷) | 덴드로그램 PNG + PCA biplot PNG (2개 분리) |
 | 차트 | `v7_final_10020/silhouette_gate_policy/build_silhouette_gate_timeline_v7.py` | `data/silhouette_gate_timeline/corpus_silhouette_timeline_v7_66_2ch.csv` | 코퍼스 규모 vs 실루엣 이중축 타임라인 PNG/SVG, 게이트 구간 20회 기각·r=+0.15 자체 재계산 |
 | 지수 CSV | `v7_final_10020/indices_csv/build_ad_commercial_index_csv.py` | `ad_commercial_index_v7.json` | `output/indices_csv/ad_commercial_index_v7.csv` |
 | 지수 CSV | `v7_final_10020/indices_csv/build_domestic_regional_index_csv.py` | `v7_final_10020/analysis/domestic_regional_index/domestic_regional_index_v7.json` | `output/indices_csv/domestic_regional_index_v7.csv` |
@@ -82,7 +82,7 @@ y축 라벨을 굵게 강조.
 크기만 단독 이미지에 맞게 재조정했다.
 
 **`build_persona_cluster_split_boxed.py`** — 두 개의 독립된 분석을 각각 별도 PNG로 생성한다.
-1. *덴드로그램*: 동결 스냅샷의 토픽 간 코사인거리 행렬(`factor_clustering_structure_v7.json`, 저장소 미포함)이 있으면
+1. *덴드로그램*: 동결 스냅샷의 토픽 간 코사인거리 행렬(`topic_cosine_distance_frozen_v7_40.json` — 원본 데이터 묶음에 없던 파일이며, 동결 코퍼스 복원 후 재적합하면 이 이름으로 둔다)이 있으면
    `scipy.cluster.hierarchy.linkage`로 병합 트리를 계산하고, 없으면 `persona_decision_space_v7.json`의 average-linkage 병합 기록을
    linkage 행렬로 옮겨 같은 덴드로그램을 그린다. 이어서
    (average-linkage)로 계층적 군집화하고, K→M 절단선을 `fcluster`로 계산해 덴드로그램을 그린다.

@@ -29,9 +29,9 @@
 | `fandom_cohesion_index_v7.json` / `.csv` | 라이브 10,020건 | 팬덤결속 지수: 5개 유형(A∼E) 키워드 매칭, 결속 불릿 923건(9.2%), D(기부·후원) 팬덤 공존어 게이트 검증치 포함. `v7_final_10020/charts/build_cohesion_index_v7*.py` 입력 |
 | `chart3d_correlation_live_v7.json` | 라이브 10,020건 | 3D 매트릭스 축 독립성: 3축 쌍별 상관·정규성·다중회귀(factor_diversity ∼ loyalty + spillover)·VIF·영향점·LOO·민감도 |
 | `topic_cards_v7.json` | 동결 스냅샷 7,350건 | K=10 토픽 카드: 명칭(v7_final_10020/docs/METHODOLOGY.md 2-1 표와 동일)·상위 10개 키워드·대표 불릿 3건·대표 팬덤 5개·연결 F 경로 |
-| `fandom_scores_v6.csv` | 동결 스냅샷 7,350건 | 팬덤별 loyalty/spillover/coverage/factor_diversity/dominant_factor/activity + F1∼F5 비중(컬럼: 현장경제형=F3, 소비력형=F2, 미디어노출형=F4, 차트·확산형=F5, 결속형=F1). activity 합 = 7,350. 파일명의 v6은 파이프라인 버전 |
-| `lda_v6_diagnostics_frozen_v7_40.json` | 동결 스냅샷 7,350건 | 동결 진단 원본(업로드 파일명 `lda_v6_diagnostics.json`): K-grid, selected_k=10, M=5, 실루엣 0.267, 토픽 상위어(=topic_cards), 토픽→F 배정 |
-| `fandom_scores_v6.json` | 동결 스냅샷 7,350건 | 위 CSV의 JSON 원본: loyalty_raw/spillover_raw, 불릿 수, factor_share(M=5), coverage_detail(13개 언어 카운트 — 아랍어 추가 전, 언어 엔트로피 분모 ln(13)) |
+| `fandom_scores_v6.csv` | 동결 스냅샷 7,350건 (r22 백업 zip의 동명 파일과 다름) | 팬덤별 loyalty/spillover/coverage/factor_diversity/dominant_factor/activity + F1∼F5 비중(컬럼: 현장경제형=F3, 소비력형=F2, 미디어노출형=F4, 차트·확산형=F5, 결속형=F1). activity 합 = 7,350. 파일명의 v6은 파이프라인 버전 |
+| `lda_v6_diagnostics_frozen_v7_40.json` | 동결 스냅샷 7,350건 | 동결 진단 원본(업로드 파일명 `lda_v6_diagnostics.json` — r22 백업 zip에 같은 이름의 r22 진단(K=8·M=6·0.154)이 따로 있어 저장소에서는 접미사로 구분): K-grid, selected_k=10, M=5, 실루엣 0.267, 토픽 상위어(=topic_cards), 토픽→F 배정 |
+| `fandom_scores_v6.json` | 동결 스냅샷 7,350건 (r22 백업 zip의 동명 파일은 activity 합 5,612) | 위 CSV의 JSON 원본: loyalty_raw/spillover_raw, 불릿 수, factor_share(M=5), coverage_detail(13개 언어 카운트 — 아랍어 추가 전, 언어 엔트로피 분모 ln(13)) |
 | `supplementary_csv/fandom_bullet_share_v6.csv` | v7 r17 (5,454건) | 팬덤별 근거문장 수·비중 (창모·사이먼도미닉·헤이즈 포함 구 로스터) |
 | `supplementary_csv/domestic_regional_pilot_v6_top3.csv` | v7 r24 (5,998건) | 팬덤별 지역 언급·검출 지역 수·다양성·대표지역 top3 요약(중간 라운드 보조 CSV) |
 | `fan_persona_v7.json` | 동결 스냅샷 7,350건 | 페르소나 조합표(10개)·카운트(43/31/17/9)·팬덤별 top2 F·factor_specific_loyalty/spillover(= 비중 × 점수) |
@@ -40,4 +40,6 @@
 정합성 검증: 저장소 루트의 `verify_v7_final_consistency.py`.
 실루엣 게이트 타임라인 CSV는 `../silhouette_gate_timeline/corpus_silhouette_timeline_v7_66_2ch.csv`.
 저장소에 없는 최종 산출물: 국내 지역 지수 라이브 JSON(대신 `v7_final_10020/analysis/domestic_regional_index/`의 산출본을 스크립트가 읽음),
-`factor_clustering_structure_v7.json`. 그 밖의 미보유분은 루트 README 3절.
+동결 스냅샷의 토픽 간 코사인 거리 행렬·φ(원본 데이터 묶음(`ARCHIVE_README_original.md`)에도 파일로 없었다. 병합 높이만 `persona_decision_space_v7.json`의 `dendro.merges`에 있다). 그 밖의 미보유분은 루트 README 9절.
+
+**같은 이름 주의**: `fandom_scores_v6.json`·`lda_v6_diagnostics.json`은 r22 백업 zip(`archive/v6_r22_era_backup.zip`) 안에도 **같은 이름의 r22 시점 파일**이 있다(activity 합 5,612, K=8·M=6·실루엣 0.154). 파일명의 v6은 파이프라인 버전이지 스냅샷 시점이 아니므로, 동결 v7-40 값은 반드시 `data/v7_final/`의 것을 쓴다.
