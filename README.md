@@ -262,7 +262,9 @@ python v7_final_10020/analysis/persona_decision_space/build_persona_decision_spa
 
 **동결 코퍼스**: 원본 7,350건 파일은 원본 데이터 묶음에도 git 이력에도 없다(내용 기준으로 전수 검색). 대신 `data/v7_final/frozen_snapshot_v7_40/`에 **근사 복원본(7,326/7,350건)** 을 둔다. 라이브 코퍼스에서 팬덤별 목록 앞부분을 동결 시점 건수만큼 잘라낸 것으로, 97개 팬덤은 EvidenceScore 지문(`fandom_scores_v6.json`의 loyalty_raw/spillover_raw)이 1e-6 안에서 일치해 문장 집합까지 동결과 같고, 동결 이후 교체된 BE'O·pH-1·한로로 3개만 r22 백업 시점(유실 24건)이다. 방법·검증·한계는 그 폴더의 README와 manifest에 있다.
 
-**저장소에 없는 것**: 최종 참고 재적합을 만든 14개 언어 라우팅 토크나이저(`run_lda_v6_live_reference_v7.py`)와 동결 스냅샷의 φ·코사인 거리 행렬(원본 데이터 묶음에도 파일로 없었고 병합 높이 9개만 `Persona_결정공간.html`에 남아 있음). 둘 다 git 이력 전체와 백업 zip을 내용 기준으로 검색해 부재를 확인했다. 동결 모델의 재적합은 토크나이저가 재구성되어야 가능하다. 저장소의 `run_lda_v6.py`는 이전 판 토크나이저의 파이프라인이라 10,020건에서 문서 수 9,954건으로 보고서와 다르며 로직 참고용이다. 같은 방법을 최종 코퍼스에 적용한 φ·코사인 거리 산출물과 학습 모델 pickle·단어 사전·manifest는 `v7_final_10020/analysis/persona_decision_space/topic_phi_cosine/`에 있다.
+**라우팅 토크나이저**: 최종 참고 재적합을 만든 `run_lda_v6_live_reference_v7.py`의 원본 소스도 없었다(git 이력·백업 zip 내용 검색). 저장소 루트의 같은 이름 파일은 **재구성본**이다. `run_lda_v6.py` 파이프라인 위에 14개 언어 라우팅 토크나이저를 다시 붙여, 원본 실행 결과와 대조하면 LDA 문서 10,018/10,018, 제외 2건 문장·토큰 일치, 총 토큰 170,726/170,725, 8개 버킷 상위 30단어 카운트 238/240 일치, 재적합 선택 K=8(원본 8)·M=6(원본 5)·실루엣 0.081(원본 0.046)이다. 불용어 목록의 글자 단위 동일성은 보장하지 못하며 방법·잔차는 `v7_final_10020/analysis/tokenizer/live_reference_tokenizer/TOKENIZER_RECONSTRUCTION_V7.md`에 있다. `run_lda_v6.py`는 이전 판 토크나이저 판(10,020건에서 문서 9,954건)으로 로직 참고용이다.
+
+**저장소에 없는 것**: 동결 스냅샷의 φ·코사인 거리 행렬·학습 모델(원본 데이터 묶음에도 파일로 없었고 병합 높이 9개만 `Persona_결정공간.html`에 남아 있음). 동결 근사 코퍼스와 재구성 토크나이저로 재적합하면 '근방 재현'은 가능하나 아직 하지 않았다. 같은 방법을 최종 코퍼스에 적용한 φ·코사인 거리 산출물과 학습 모델 pickle·단어 사전·manifest는 `v7_final_10020/analysis/persona_decision_space/topic_phi_cosine/`에 있다.
 
 ```
 README.md                                   이 문서 (핵심 요약판)
@@ -271,7 +273,8 @@ README.md                                   이 문서 (핵심 요약판)
 qr_codes/                                   두 HTML의 QR 코드 + 아티팩트 링크·해시 대조
 assets/readme/                              이 문서의 그림 (제출 보고서 PDF·보고서 docx 원본 그림 + 데이터에서 다시 그린 그림, 가로 최대 2,400px; Q-Q plot은 Statistics/R_통계검증/outputs/plots/ 의 R 산출물을 직접 참조)
 verify_v7_final_consistency.py              최종 수치 ↔ 파일 정합성 검증 (105/105)
-run_lda_v6.py                               LDA 파이프라인 참고 구현 (--data/--out)
+run_lda_v6.py                               LDA 파이프라인 참고 구현, 구 토크나이저 판 (--data/--out)
+run_lda_v6_live_reference_v7.py             같은 파이프라인 + 14개 언어 라우팅 토크나이저 재구성본 (최종 참고 재적합 재현용, 약 30분)
 data/
   v7_final/            최종 코퍼스 10,020건 + 최종 산출물 + 동결 스냅샷 산출물 (폴더 README)
     frozen_snapshot_v7_40/   동결 7,350건 코퍼스 근사 복원본(7,326건, 97개 팬덤 문장 동일) + manifest + 후보 검사기

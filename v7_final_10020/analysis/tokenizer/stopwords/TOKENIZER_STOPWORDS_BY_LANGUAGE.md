@@ -10,7 +10,7 @@
 | B | `analysis/tokenizer/build_bullet_token_frequency_csv_v7.py` | 최종 코퍼스 10,020건 토큰 빈도 CSV(`csv/bullet_token_frequency_v7_final.csv`) — 일반 경로 + 일본어(fugashi)·중국어(jieba)·태국어(pythainlp) 추가 경로 | 한국어 74, 영어 75, 라틴 통합 53, 러시아어 21, 일본어 29, 중국어 32 |
 | C | `pythainlp 5.3.7` `corpus.thai_stopwords()` | B의 태국어 경로가 그대로 쓰는 라이브러리 내장 목록 | 태국어 1030 |
 
-**원 보고서의 14개 언어 라우팅 토크나이저(`run_lda_v6_live_reference_v7.py`)와의 관계.** 보고서 7.7절(`tokenizer_wordcloud_report/TOKENIZER_WORDCLOUD_REPORT.md` 표 1)은 STOPWORDS 41종·ENGLISH_STOPWORDS 64종·7개 라틴어권 언어별 세트를 합친 ALL_LATIN_STOPWORDS·RUSSIAN_STOPWORDS·JAPANESE_STOPWORDS 28종·CHINESE_STOPWORDS 60여 종·pythainlp 내장 태국어 불용어를 쓴다고 서술한다. 그 소스는 저장소에 없다. 저장소에 실제로 있는 목록은 A(그 이전 판 파이프라인)와 B(같은 구조를 독자 구현한 병행 파일럿)이며, 태국어(C)만 원 보고서와 동일한 라이브러리 목록이다. 따라서 B의 한국어·영어·라틴·러시아어·일본어·중국어 목록은 원 보고서 목록과 **개수와 내용이 다르다**.
+**원 보고서의 14개 언어 라우팅 토크나이저(`run_lda_v6_live_reference_v7.py`)와의 관계.** (원본 실행 결과에 맞춰 재구성한 목록은 `../live_reference_tokenizer/`의 재구성본에 따로 있다.) 보고서 7.7절(`tokenizer_wordcloud_report/TOKENIZER_WORDCLOUD_REPORT.md` 표 1)은 STOPWORDS 41종·ENGLISH_STOPWORDS 64종·7개 라틴어권 언어별 세트를 합친 ALL_LATIN_STOPWORDS·RUSSIAN_STOPWORDS·JAPANESE_STOPWORDS 28종·CHINESE_STOPWORDS 60여 종·pythainlp 내장 태국어 불용어를 쓴다고 서술한다. 그 소스는 저장소에 없다. 저장소에 실제로 있는 목록은 A(그 이전 판 파이프라인)와 B(같은 구조를 독자 구현한 병행 파일럿)이며, 태국어(C)만 원 보고서와 동일한 라이브러리 목록이다. 따라서 B의 한국어·영어·라틴·러시아어·일본어·중국어 목록은 원 보고서 목록과 **개수와 내용이 다르다**.
 
 ## 개수 요약
 

@@ -1,5 +1,5 @@
 """
-LDA v6 — Topic Factoring + Fan Impact Model (Second Expanded-Corpus Round)
+LDA v6 pipeline + 14-language routing tokenizer (reconstruction of run_lda_v6_live_reference_v7.py)
 Same methodology as v5 (multi-K LDA selection, Topic->Meta Factor compression, Fan Factor
 Matrix, Coverage Index, Factor Diversity, Member Mention Pilot). The ONLY change from v5 is
 the input corpus: the user asked to roughly double the evidence base ("두배로 증가"). Two
@@ -46,18 +46,17 @@ from sklearn.metrics import silhouette_score
 #
 #   기본값: 최종 라이브 코퍼스(data/v7_final/fandoms_v3_100.json, 10,020건) -> 출력 output/lda_rerun/
 #
-# 주의: 이 파일은 최종 토크나이저 개편 이전 판의 파이프라인이다. 최종 제출본의 라이브 참고 재적합
-# (data/v7_final/lda_v6_diagnostics_live_reference_v7.json, 10,020건, K=8/M=5/실루엣 0.046)은
-# 이후 토크나이저 개편(v7 38~39라운드, 14개 언어 문자권별 라우팅)을 거친
-# run_lda_v6_live_reference_v7.py 로 산출된 것이라, 이 스크립트를 10,020건 코퍼스에 그대로
-# 돌리면 문서 수·어휘·K-grid 수치가 달라진다. 원본 소스는 유실됐고 저장소 루트의 run_lda_v6_live_reference_v7.py 는
-# 이 파일 위에 라우팅 토크나이저를 다시 붙인 재구성본이다(v7_final_10020/analysis/tokenizer/live_reference_tokenizer/).
+# 이 파일은 최종 참고 재적합(data/v7_final/lda_v6_diagnostics_live_reference_v7.json, 10,020건→10,018문서,
+# K=8/M=5/실루엣 0.046)을 만든 run_lda_v6_live_reference_v7.py 의 **재구성본**이다. 원본 소스는 유실되어
+# 저장소의 run_lda_v6.py(구 토크나이저 판)에 v7 38·76·77 라운드의 14개 언어 라우팅 토크나이저를 다시 붙였다.
+# 파이프라인(K-grid → K→M 재군집 → 실루엣 게이트 → 점수·페르소나)은 run_lda_v6.py 와 같고 토크나이저 절(1a)만 다르다.
+# 재구성 방법·검증 결과·잔차는 v7_final_10020/analysis/tokenizer/live_reference_tokenizer/ 참고.
 # ------------------------------------------------------------------------------------------
 _BASE = Path(__file__).resolve().parent
 _ap = argparse.ArgumentParser(description="LDA v6 pipeline (K-grid -> Meta Factor -> Fan Factor Matrix -> scores)")
 _ap.add_argument("--data", default=str(_BASE / "data" / "v7_final" / "fandoms_v3_100.json"),
                  help="근거문장 코퍼스 JSON (fandoms_v3_100.json 스키마)")
-_ap.add_argument("--out", default=str(_BASE / "output" / "lda_rerun"), help="산출물 저장 디렉터리")
+_ap.add_argument("--out", default=str(_BASE / "output" / "lda_live_reference_v7"), help="산출물 저장 디렉터리")
 _args = _ap.parse_args()
 DATA = _args.data
 OUT = _args.out
@@ -77,14 +76,27 @@ print(f"[0] DATA={DATA}\n[0] OUT={OUT}")
 #    album/chart vocabulary that IS meaningful) still map to a real label instead of the
 #    "기타형" default.)
 # ============================================================
+# ============================================================
+# 1a. 14개 언어 라우팅 토크나이저 (v7 38·76·77 라운드 사양의 재구성)
+#   구조: strip_domain_fragments → tokenize_generic(정규식 일반 경로: 한국어·영어·7개 라틴어권·러시아어, 조사 접미사 제거,
+#         언어별 불용어, 순수 숫자 제외, 자기인용 매체명 슬러그 제거) → 본문에 가나가 있으면 tokenize_ja(fugashi), 가나 없이
+#         한자가 있으면 tokenize_zh(jieba), 태국 문자가 있으면 tokenize_th(pythainlp newmm) 를 추가(additive).
+#   재구성 근거·검증: v7_final_10020/analysis/tokenizer/live_reference_tokenizer/TOKENIZER_RECONSTRUCTION_V7.md
+#   (원본 소스는 유실. 아래 (b) 목록은 wordcloud_by_language_v7.json 의 버킷별 토큰 수·상위 30단어, 재적합 제외 2건 등을
+#    목표로 맞춘 것이며 원본 목록과 글자 단위로 같다는 보장은 없다.)
+# === TOKENIZER BEGIN ===
+import fugashi
+import jieba
+from pythainlp.corpus import thai_stopwords
+from pythainlp.tokenize import word_tokenize as thai_word_tokenize
+
+# --- (a) 원 파이프라인(run_lda_v6.py) 정의 그대로: 한국어 조사 접미사·한국어 불용어(30)·영어 불용어(118)
 PARTICLES = ["으로부터","까지","에서부터","이라는","라는","에서","으로","까지","부터","에게","한테","에는","에도",
              "이나","라도","이며","하며","되어","됐다","했다","한다","됨","임","은","는","이","가","을","를",
              "의","와","과","도","만","로","에","고","서","다","며"]
 STOPWORDS = {"있다","없다","되다","됐다","한다","했다","이다","아니다","통해","위해","대해","대한","관련",
              "이후","당시","통한","밝혔다","전했다","나타났다","것으로","것이다","것을","것은","것이",
              "라고","이라고","하는","되는","있는","없는"}
-# English function/stopwords (v6.1 fix): standard closed-class words that carry no topical
-# signal but were previously passing straight through the [가-힣A-Za-z0-9]{2,} token filter.
 ENGLISH_STOPWORDS = {
     "the","and","of","in","on","at","for","with","from","to","by","as","is","was","were",
     "be","been","being","this","that","these","those","it","its","his","her","their","our",
@@ -97,32 +109,167 @@ ENGLISH_STOPWORDS = {
     "has","had","will","would","can","could","should","may","might","did","does","do",
     "an","a","are","about","up","out","officially","recently","previously","currently",
 }
+ENGLISH_STOPWORDS_R38_EXTRA = {  # v7 38 확장분 재구성 — 기능어(전치사·대명사·접속사·부사)만. 동사류는 원본 top-30·총계 대조상 유지되는 것으로 판단
+    "through","without","within","against","toward","towards","upon","until","once","every","same","own","only","just","still",
+    "even","yet","here","there","how","why","because","around","again","later","early","last","next","them","him",
+    "itself","himself","herself","themselves","due","along","behind","beyond","despite","although","though","whether",
+    "either","neither","nor","however","therefore","thus","already","till","various","several",
+}
+# --- (b) v7 38 신설분 재구성: 한국어 bare 조사 11종, 7개 라틴어권·러시아어 불용어, 영어 확장 불용어, 일본어·중국어 불용어, 태국어는 pythainlp 내장
+STOPWORDS_R38_EXTRA = {"에서", "만에", "따르면", "에는", "에도", "까지", "부터", "에게", "라며", "이에", "때문"}   # 한국어 bare-token 조사·연결어 11종 (v7 38: 30 → 41)
+LATIN_STOPWORDS = {
+    # es
+    "el","la","los","las","de","del","en","un","una","que","por","para","con","su","sus","es","se","lo","al","y","o","como","más",
+    # fr
+    "le","les","des","et","une","dans","sur","avec","pour","au","aux","du","est","ce","qui","ne","pas","plus","son","sa","ses",
+    # pt
+    "os","as","um","uma","do","da","dos","das","no","na","nos","nas","é","não","com","mais","ao","são","foi","ser","também","pelo","pela",
+    # id / ms
+    "yang","dan","di","ke","dari","untuk","pada","dengan","ini","itu","juga","akan","telah","adalah","oleh","sebagai","tidak","ada",
+    "tersebut","sekali","boleh","benar","sudah","saat","hingga","karena","tentang","seperti","bahwa","agar","namun","atau","tetapi","jika","kami","kita","mereka","dia","ia","anda","saya","lebih","bisa","harus",
+    # vi
+    "và","của","là","có","cho","trong","được","này","với","các","những","một","đã","để","từ","không","khi","tại","về",
+    "người","rất","cũng","trên","nhiều","sẽ","bị",
+    # tr
+    "ve","bir","bu","için","ile","olarak","da","de","gibi","daha","çok","ise","ya","ama",
+    # tl
+    "ang","ng","sa","mga","na","ay","at","si","ni","kay","ito",
+}
+RUSSIAN_STOPWORDS = {"и","в","не","на","что","с","по","для","как","это","к","из","за","от","но","а","же","то","его","её","их",
+                     "он","она","они","мы","вы","я","у","о","об","до","при","бы","ли","так","все","этот","эта","эти","также","или","уже",
+                     "ни","этом","том","после","когда","этой"}
+JAPANESE_STOPWORDS = {"する","いる","ある","こと","もの","ため","よう","これ","それ","あれ","この","その","なる","できる","という","いう","さん","たち",
+                      "ない","くる","いく","みる","しまう","くれる","もらう","ところ","とき","ほう"}  # 28종 재구성 (표면형 대조)
+CHINESE_STOPWORDS = {"的","了","在","是","和","与","也","都","就","而","及","或","对","但","而且","因为","所以","一个","这个","那个","为","被",
+                     "着","地","得","很","又","并","以","之","其","此","有","我","你","他","她","它","们","这","那","个","上","下","中","不","人","会","可以",
+                     "到","从","把","将","于","所","等","与","及","或","但是","还","还是","已","已经","没有","什么","怎么","如何","于是","因此"}
+THAI_STOPWORDS = set(thai_stopwords())
 
-def tokenize(text):
-    tokens = re.findall(r"[가-힣A-Za-z0-9]{2,}", text)
+RE_KANA = re.compile(r"[぀-ヿ]")
+RE_HANZI = re.compile(r"[一-鿿]")
+RE_THAI = re.compile(r"[฀-๿]")
+TOKEN_RE = re.compile(r"[가-힣A-Za-z0-9À-ɏḀ-ỿЀ-ӿ]{2,}")
+DOMAIN_RE = re.compile(r"(?<![\w.])(?:[a-z0-9-]+\.)+(?:[a-z]{2,})(?![\w.])", re.I)
+_PARTICLES_SORTED = sorted(PARTICLES, key=len, reverse=True)
+_tagger = fugashi.Tagger()
+_JA_KEEP_POS = {"名詞", "動詞", "形容詞"}
+MIN_CJK_LEN = 2
+MIN_TH_LEN = 2
+
+
+def _tok_domain_of(url):
+    try:
+        d = urlparse(url).netloc.lower()
+        return d[4:] if d.startswith("www.") else d
+    except Exception:
+        return ""
+
+
+def strip_domain_fragments(text):
+    return DOMAIN_RE.sub(" ", text)
+
+
+SLUG_RULE = "R"   # "B3": 3글자 이상 첫 라벨+이어붙임 / "R": 등록 도메인 라벨(co.kr·co.jp 등 2단 접미 인식) / "RD": R + 하이픈 분할
+_SLD2 = {"co", "com", "net", "org", "ne", "or", "ac", "go", "gov", "edu", "mil", "web", "info", "biz", "tv"}
+
+
+def self_citation_slugs(url):
+    d = _tok_domain_of(url)
+    if not d:
+        return set()
+    labels = [x for x in d.split(".") if x]
+    if len(labels) < 2:
+        return set()
+    if SLUG_RULE == "B3":
+        first = next((x for x in labels if len(x) >= 3), labels[0])
+        return {first.lower(), "".join(labels).lower()}
+    reg = labels[-3] if (len(labels) >= 3 and len(labels[-1]) == 2 and labels[-2] in _SLD2) else labels[-2]
+    slugs = {reg.lower()}
+    if SLUG_RULE == "RD":
+        slugs |= {x for x in re.split(r"[^a-z0-9]+", reg.lower()) if len(x) >= 2}
+    return slugs
+
+
+def _strip_particle(tt):
+    for p in _PARTICLES_SORTED:
+        if len(tt) > len(p) + 1 and tt.endswith(p):
+            return tt[: -len(p)]
+    return tt
+
+
+def tokenize_generic(text, url=""):
+    slugs = self_citation_slugs(url) if url else set()
     out = []
-    for t in tokens:
-        tt = t
-        for p in sorted(PARTICLES, key=len, reverse=True):
-            if len(tt) > len(p) + 1 and tt.endswith(p):
-                tt = tt[: -len(p)]
-                break
-        if len(tt) < 2 or tt in STOPWORDS:
+    for t in TOKEN_RE.findall(text):
+        tt = _strip_particle(t)
+        if len(tt) < 2 or tt in STOPWORDS or tt in STOPWORDS_R38_EXTRA:
             continue
         low = tt.lower()
-        if low in ENGLISH_STOPWORDS:
+        if low in ENGLISH_STOPWORDS or low in ENGLISH_STOPWORDS_R38_EXTRA or low in LATIN_STOPWORDS or low in RUSSIAN_STOPWORDS:
             continue
-        if tt.isdigit():  # bare numbers ("000", "2025") carry no topical meaning on their own
+        if tt.isdigit():
+            continue
+        if low in slugs:
             continue
         out.append(tt)
     return out
+
+
+def tokenize_ja(text):
+    out = []
+    for w in _tagger(text):
+        s = w.surface
+        if len(s) >= MIN_CJK_LEN and w.feature.pos1 in _JA_KEEP_POS and s not in JAPANESE_STOPWORDS and (RE_KANA.search(s) or RE_HANZI.search(s)):
+            out.append(s)
+    return out
+
+
+def tokenize_zh(text):
+    out = []
+    for w in jieba.cut(text):
+        w = w.strip()
+        if len(w) >= MIN_CJK_LEN and w not in CHINESE_STOPWORDS and RE_HANZI.search(w):
+            out.append(w)
+    return out
+
+
+def tokenize_th(text):
+    out = []
+    for w in thai_word_tokenize(text, engine="newmm"):
+        w = w.strip()
+        if len(w) >= MIN_TH_LEN and w not in THAI_STOPWORDS and RE_THAI.search(w):
+            out.append(w)
+    return out
+
+
+def tokenize(text, url=""):
+    text = strip_domain_fragments(text)
+    toks = tokenize_generic(text, url)
+    if RE_KANA.search(text):
+        toks += tokenize_ja(text)
+    elif RE_HANZI.search(text):
+        toks += tokenize_zh(text)
+    if RE_THAI.search(text):
+        toks += tokenize_th(text)
+    return toks
+
+
+def tokenize_parts(text, url=""):
+    """검증용: (generic, ja, zh, th) 를 따로 돌려준다."""
+    text = strip_domain_fragments(text)
+    g = tokenize_generic(text, url)
+    ja = tokenize_ja(text) if RE_KANA.search(text) else []
+    zh = tokenize_zh(text) if (not RE_KANA.search(text) and RE_HANZI.search(text)) else []
+    th = tokenize_th(text) if RE_THAI.search(text) else []
+    return g, ja, zh, th
+# === TOKENIZER END ===
 
 docs, raw_texts, meta = [], [], []
 for fd in fandoms:
     for tag in ("loyalty", "spillover"):
         for item in fd.get(tag, []):
             txt, url = item["t"], item.get("u", "")
-            toks = tokenize(txt)
+            toks = tokenize(txt, url)
             if len(toks) < 3:
                 continue
             docs.append(" ".join(toks))

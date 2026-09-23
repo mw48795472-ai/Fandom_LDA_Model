@@ -48,6 +48,6 @@ CSV의 문자권은 토큰 표면형에 어떤 문자가 있는지로 사후 분
 
 ## 한계
 
-1. 원본 불용어 목록(STOPWORDS 41종·ENGLISH 64종·CHINESE 60여종·JAPANESE 28종 등)은 저장소에 없다 — 이 구현의 목록은 새로 만든 것이며 태국어만 pythainlp 내장 불용어를 그대로 쓴다.
+1. 원본 불용어 목록(STOPWORDS 41종·ENGLISH 64종·CHINESE 60여종·JAPANESE 28종 등)은 저장소에 없다 — 이 구현의 목록은 새로 만든 것이며 태국어만 pythainlp 내장 불용어를 그대로 쓴다. 원본 실행 결과에 맞춰 재구성한 목록은 `live_reference_tokenizer/`의 재구성본(저장소 루트 `run_lda_v6_live_reference_v7.py`)에 있다.
 2. 따라서 절대 빈도는 원본과 비교할 수 없고, 상위 어휘의 존재 여부(3절)와 문자권 분기(노트북)만 대조한다.
 3. fugashi(unidic-lite)·jieba·pythainlp 설치가 필요하다(wheel이 없는 환경에서는 jieba·unidic-lite를 sdist에서 수동 설치).

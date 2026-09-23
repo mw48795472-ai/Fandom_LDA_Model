@@ -8,8 +8,8 @@
   },
   "tokenizer": {
     "source": "run_lda_v6.py 의 PARTICLES/STOPWORDS/ENGLISH_STOPWORDS/tokenize() 를 ast 로 추출해 그대로 실행",
-    "run_lda_v6_sha256": "e128b53cd6575df1b71844424dfe078401c14318dc951b7ceff8f2bd8caecc12",
-    "note": "보고서의 14개 언어 라우팅 토크나이저(run_lda_v6_live_reference_v7.py)가 아니므로 문서 수가 10,018건과 다르다"
+    "run_lda_v6_sha256": "128cc6d8fcc0e6ce09daf44f38cdde99b06470c8ed88591bbb617d64a296731d",
+    "note": "보고서의 14개 언어 라우팅 토크나이저(재구성본 run_lda_v6_live_reference_v7.py)가 아니라 구 토크나이저이므로 문서 수가 10,018건과 다르다"
   },
   "count_vectorizer": {
     "max_df": 0.6,

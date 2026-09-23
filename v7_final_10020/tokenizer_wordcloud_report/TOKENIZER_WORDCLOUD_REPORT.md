@@ -234,6 +234,10 @@ jieba는 건너뛰도록 해 이중 토큰화를 막았다(원인7, v7 76라운�
   PARTICLES 조사 제거 규칙, `self_citation_slugs` 자기인용 슬러그 추출 로직 — 이 문서에
   함수 이름만 언급되고 전체 구현은 실려 있지 않다. 따라서 `build_bullet_token_frequency_csv_v7.py`의
   토큰 빈도 CSV는 독자 정의 불용어를 쓴 병행 산출물이며 표 2의 토큰 총계와 절대값이 같지 않다.
-- 14개 언어 라우팅 토크나이저를 반영한 `run_lda_v6_live_reference_v7.py`의 소스. 저장소의
+- 14개 언어 라우팅 토크나이저를 반영한 `run_lda_v6_live_reference_v7.py`의 **원본** 소스. 저장소의
   `run_lda_v6.py`(구 토크나이저)를 10,020건에 돌리면 3토큰 미만 제외 후 문서 수가 9,954건으로
   보고서의 10,018건과 다르다.
+
+**[추가] 재구성본:** 위 두 항목을 이 문서의 사양과 표 2·`wordcloud_by_language_v7.json`·제외 2건을 목표값으로 다시 만든
+`run_lda_v6_live_reference_v7.py`(저장소 루트)가 있다. 문서 10,018/10,018, 총 토큰 170,726/170,725, 8개 버킷 상위 30단어 카운트
+238/240 일치. 방법·잔차는 `analysis/tokenizer/live_reference_tokenizer/TOKENIZER_RECONSTRUCTION_V7.md`.
