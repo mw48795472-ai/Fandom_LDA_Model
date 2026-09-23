@@ -1,0 +1,135 @@
+{
+ "v1": {
+  "rule": "M 실루엣(시드 0 한 번) ≥ 0.267",
+  "baseline": 0.267,
+  "baseline_reproducible": false
+ },
+ "v2": {
+  "G1": "시드 ≥10 M=5 실루엣 중앙값 ≥ 현직(frozen_approx_7326_K10) 중앙값 0.0972",
+  "G2": "시드 쌍 토픽 Jaccard 중앙값 ≥ 0.35",
+  "G3": "시드별 최적 M 최빈값 = 채택 M, 또는 채택 M 중앙값 ≥ 최적 M 중앙값의 90%",
+  "G4": "현직 기준값은 저장소 재료로 같은 방식으로 재측정 가능해야 함 → 기준을 동결 근사 재적합으로 이전"
+ },
+ "decisions": {
+  "live_10020_K8": {
+   "corpus": "live_10020",
+   "K": 8,
+   "seed0_M5": 0.076,
+   "v1_pass(seed0 ≥ 0.267)": false,
+   "v1_any_seed_pass": false,
+   "M5_median": 0.1018,
+   "M5_range": [
+    0.0728,
+    0.1751
+   ],
+   "jaccard_median": 0.3954,
+   "best_M_mode": 5,
+   "best_M_by_seed": [
+    6,
+    4,
+    5,
+    5,
+    4,
+    5,
+    5,
+    4,
+    6,
+    5
+   ],
+   "G1_sil_median_ge_incumbent": true,
+   "G2_jaccard_ge_0.35": true,
+   "G3_M_consensus": true,
+   "v2_pass": true
+  },
+  "live_10020_K10": {
+   "corpus": "live_10020",
+   "K": 10,
+   "seed0_M5": 0.1115,
+   "v1_pass(seed0 ≥ 0.267)": false,
+   "v1_any_seed_pass": false,
+   "M5_median": 0.0911,
+   "M5_range": [
+    0.0606,
+    0.173
+   ],
+   "jaccard_median": 0.3929,
+   "best_M_mode": 6,
+   "best_M_by_seed": [
+    5,
+    6,
+    7,
+    6,
+    4,
+    7,
+    6,
+    6,
+    6,
+    8
+   ],
+   "G1_sil_median_ge_incumbent": false,
+   "G2_jaccard_ge_0.35": true,
+   "G3_M_consensus": false,
+   "v2_pass": false
+  },
+  "frozen_approx_7326_K8": {
+   "corpus": "frozen_approx_7326",
+   "K": 8,
+   "seed0_M5": 0.0626,
+   "v1_pass(seed0 ≥ 0.267)": false,
+   "v1_any_seed_pass": false,
+   "M5_median": 0.0858,
+   "M5_range": [
+    0.0402,
+    0.127
+   ],
+   "jaccard_median": 0.4026,
+   "best_M_mode": 4,
+   "best_M_by_seed": [
+    6,
+    4,
+    4,
+    4,
+    6,
+    6,
+    5,
+    4,
+    4,
+    6
+   ],
+   "G1_sil_median_ge_incumbent": false,
+   "G2_jaccard_ge_0.35": true,
+   "G3_M_consensus": false,
+   "v2_pass": false
+  },
+  "frozen_approx_7326_K10": {
+   "corpus": "frozen_approx_7326",
+   "K": 10,
+   "seed0_M5": 0.07,
+   "v1_pass(seed0 ≥ 0.267)": false,
+   "v1_any_seed_pass": false,
+   "M5_median": 0.0972,
+   "M5_range": [
+    0.0554,
+    0.1364
+   ],
+   "jaccard_median": 0.4044,
+   "best_M_mode": 4,
+   "best_M_by_seed": [
+    6,
+    4,
+    6,
+    6,
+    5,
+    4,
+    7,
+    4,
+    5,
+    4
+   ],
+   "G1_sil_median_ge_incumbent": true,
+   "G2_jaccard_ge_0.35": true,
+   "G3_M_consensus": false,
+   "v2_pass": false
+  }
+ }
+}
