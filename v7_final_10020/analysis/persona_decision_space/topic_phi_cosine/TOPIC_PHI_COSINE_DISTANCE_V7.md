@@ -194,7 +194,27 @@ cut_height = (Z[K-M-1, 2] + Z[K-M, 2]) / 2                             # M개 �
 | `topic_cosine_distance_k8_v7_final.csv` | 토픽 간 코사인 거리 8×8 + 토픽 라벨 |
 | `topic_linkage_average_k8_v7_final.csv` | average-linkage 병합 기록 (HTML `dendro.merges`와 같은 형식) |
 | `m_grid_silhouette_k8_v7_final.csv` | M=4∼7 실루엣과 M별 토픽 배정 |
+| `lda_model_k10_v7_final.pkl`, `lda_model_k8_v7_final.pkl` | 학습된 `LatentDirichletAllocation` 객체(joblib, compress=3). `components_`가 φ 원본(비정규화), `transform(X)`로 문서-토픽 분포 재계산 가능 |
+| `count_vectorizer_v7_final.pkl` | 학습된 `CountVectorizer`(단어 사전 `vocabulary_` 포함, K 공통). 위 모델의 열 순서와 같다 |
+| `lda_vocabulary_v7_final.csv` | 단어 사전 12,253개: col(φ 열 번호), word, df(문서빈도), tf(총 빈도) |
+| `lda_document_index_v7_final.csv` | DTM 행 순서 9,954행: doc_id, fandom, bullet_type, idx_in_fandom_array(`fandoms_v3_100.json` 배열 위치), n_tokens |
+| `model_bundle_manifest_v7_final.json` | 시드·LDA/벡터라이저 인자·코퍼스 SHA-256·패키지 버전·파일별 SHA-256·재로드 검증 결과 |
 | `build_topic_phi_cosine_v7.py` | 위 파일 전부와 이 문서를 만드는 스크립트 |
+
+## 모델 묶음(pickle·단어 사전) 사용법
+
+φ CSV만으로는 문서-토픽 분포를 다시 만들 수 없으므로 학습 모델과 단어 사전을 같이 둔다. 다시 불러 쓰는 방법:
+
+```python
+import joblib, numpy as np
+vec = joblib.load("count_vectorizer_v7_final.pkl")
+lda = joblib.load("lda_model_k10_v7_final.pkl")
+X = vec.transform(docs)                 # docs: lda_document_index_v7_final.csv 순서로 tokenize() 한 문장을 공백으로 이은 문자열
+theta = lda.transform(X)               # 문서 × 토픽 (행 합 1)
+phi = lda.components_ / lda.components_.sum(axis=1, keepdims=True)   # = lda_phi_k10_v7_final.csv
+```
+
+스크립트는 저장 직후 pickle을 다시 불러 φ CSV(허용오차 1e-7)·DTM과 같은지 확인하고 `model_bundle_manifest_v7_final.json`에 패키지 버전(scikit-learn 1.9.1, scipy 1.17.1, numpy 2.4.6)과 파일별 SHA-256을 남긴다. 동결 스냅샷(7,350건) 모델은 여기 없다. 7,350건 코퍼스와 라우팅 토크나이저가 확보되면 같은 파일 구성으로 `frozen_v7_40/` 하위에 추가한다.
 
 ## 한계
 

@@ -18,18 +18,28 @@ K=8(최종 코퍼스 참고 재적합 승자)을 적합하고, 파이프라인 [
   topic_cosine_distance_{k}_v7_final.csv   토픽 간 코사인 거리 행렬 (K×K)
   topic_linkage_average_{k}_v7_final.csv   average-linkage 병합 기록 (id, left, right, height, size)
   m_grid_silhouette_{k}_v7_final.csv       M=4∼8 실루엣과 M별 토픽 배정
+  lda_model_{k}_v7_final.pkl               학습된 LatentDirichletAllocation 객체 (joblib) — components_ 가 φ 원본
+  count_vectorizer_v7_final.pkl            학습된 CountVectorizer (단어 사전 vocabulary_ 포함, K 공통)
+  lda_vocabulary_v7_final.csv              단어 사전: 열 번호(col), 단어, 문서빈도(df), 총 빈도(tf)
+  lda_document_index_v7_final.csv          DTM 행 순서: doc_id, 팬덤, loyalty/spillover, 코퍼스 내 idx, 토큰 수
+  model_bundle_manifest_v7_final.json      시드·LDA/벡터라이저 인자·패키지 버전·파일별 SHA-256
   TOPIC_PHI_COSINE_DISTANCE_V7.md          방법·코드·결과 정리(이 스크립트가 생성)
 
 실행: python v7_final_10020/analysis/persona_decision_space/topic_phi_cosine/build_topic_phi_cosine_v7.py   (저장소 안 어느 폴더에서든, 1∼3분)
 """
 import ast
 import csv
+import hashlib
 import json
+import platform
 import sys
 import time
 from pathlib import Path
 
+import joblib
 import numpy as np
+import scipy
+import sklearn
 from scipy.cluster.hierarchy import dendrogram, fcluster, linkage
 from scipy.spatial.distance import squareform
 from sklearn.cluster import AgglomerativeClustering
@@ -78,17 +88,31 @@ docs, meta = [], []
 n_bullets = 0
 for fd in fandoms:
     for tag in ("loyalty", "spillover"):
-        for item in fd.get(tag, []):
+        for idx, item in enumerate(fd.get(tag, [])):
             n_bullets += 1
             toks = tokenize(item["t"])
             if len(toks) < 3:
                 continue
             docs.append(" ".join(toks))
-            meta.append((fd["fandom"], tag))
+            meta.append((fd["fandom"], tag, idx, len(toks)))
 vectorizer = CountVectorizer(max_df=0.6, min_df=2, token_pattern=r"(?u)\b\w+\b")
 X = vectorizer.fit_transform(docs)
 vocab = vectorizer.get_feature_names_out()
 print(f"[1] 불릿 {n_bullets:,}건 → 3토큰 이상 문서 {len(docs):,}건, 어휘 {len(vocab):,}개, DTM {X.shape}")
+
+# --- 2-1. 벡터라이저·단어 사전·문서 순서를 저장한다 (모델 pickle 과 함께 있어야 doc-topic 을 다시 계산할 수 있다) --------
+VEC_PARAMS = dict(max_df=0.6, min_df=2, token_pattern=r"(?u)\b\w+\b")
+joblib.dump(vectorizer, OUT_DIR / "count_vectorizer_v7_final.pkl", compress=3)
+df_counts = np.asarray((X > 0).sum(axis=0)).ravel()
+tf_counts = np.asarray(X.sum(axis=0)).ravel()
+with open(OUT_DIR / "lda_vocabulary_v7_final.csv", "w", encoding="utf-8-sig", newline="") as f:
+    w = csv.writer(f); w.writerow(["col", "word", "df", "tf"])
+    for i, word in enumerate(vocab):
+        w.writerow([i, word, int(df_counts[i]), int(tf_counts[i])])
+with open(OUT_DIR / "lda_document_index_v7_final.csv", "w", encoding="utf-8-sig", newline="") as f:
+    w = csv.writer(f); w.writerow(["doc_id", "fandom", "bullet_type", "idx_in_fandom_array", "n_tokens"])
+    for d, (fandom, tag, idx, ntok) in enumerate(meta):
+        w.writerow([d, fandom, tag, idx, ntok])
 
 # 동결 스냅샷의 덴드로그램(HTML 내장) — 비교용
 with open(DATA / "persona_decision_space_v7.json", encoding="utf-8") as f:
@@ -101,7 +125,9 @@ with open(DATA / "lda_v6_diagnostics_live_reference_v7.json", encoding="utf-8") 
 results = {}
 for K in K_LIST:
     t0 = time.time()
-    lda = LatentDirichletAllocation(n_components=K, random_state=0, max_iter=50, learning_method="batch").fit(X)
+    LDA_PARAMS = dict(n_components=K, random_state=0, max_iter=50, learning_method="batch")
+    lda = LatentDirichletAllocation(**LDA_PARAMS).fit(X)
+    joblib.dump(lda, OUT_DIR / f"lda_model_k{K}_v7_final.pkl", compress=3)
     topic_word = lda.components_                                    # (K, V) — 파이프라인의 phi (비정규화)
     phi = topic_word / topic_word.sum(axis=1, keepdims=True)         # 행 합 1 인 확률 분포
     top_words = [[vocab[i] for i in topic_word[t].argsort()[::-1][:10]] for t in range(K)]
@@ -162,6 +188,48 @@ for K in K_LIST:
     results[K] = dict(K=K, n_docs=len(docs), vocab=len(vocab), perplexity=round(float(lda.perplexity(X)), 1), top_words=top_words, labels=labels,
                       cos_dist=cos_dist, mgrid=mgrid, best=best, merges=merges, leaf_order=leaf_order, cut_height=cut_height,
                       scipy_labels=scipy_labels.tolist())
+
+# --- 5-1. 모델 묶음 manifest: 다시 불러 φ CSV 와 같은지 확인한 뒤 시드·인자·버전·해시를 남긴다 -----------------------
+def sha256(path):
+    h = hashlib.sha256()
+    with open(path, "rb") as f:
+        for chunk in iter(lambda: f.read(1 << 20), b""):
+            h.update(chunk)
+    return h.hexdigest()
+
+
+vec_loaded = joblib.load(OUT_DIR / "count_vectorizer_v7_final.pkl")
+assert list(vec_loaded.get_feature_names_out()) == list(vocab), "벡터라이저 pickle 의 단어 사전이 다름"
+X_loaded = vec_loaded.transform(docs)
+assert (X_loaded != X).nnz == 0, "벡터라이저 pickle 로 만든 DTM 이 다름"
+bundle_files = ["count_vectorizer_v7_final.pkl", "lda_vocabulary_v7_final.csv", "lda_document_index_v7_final.csv"]
+for K in K_LIST:
+    lda_loaded = joblib.load(OUT_DIR / f"lda_model_k{K}_v7_final.pkl")
+    phi_loaded = lda_loaded.components_ / lda_loaded.components_.sum(axis=1, keepdims=True)
+    with open(OUT_DIR / f"lda_phi_k{K}_v7_final.csv", encoding="utf-8-sig") as f:
+        rows = list(csv.reader(f))
+    assert rows[0][1:] == list(vocab), f"K={K} φ CSV 의 어휘 열이 pickle 과 다름"
+    phi_csv = np.array([[float(v) for v in r[1:]] for r in rows[1:]])
+    assert np.allclose(phi_csv, phi_loaded, atol=1e-7), f"K={K} pickle 의 φ 가 CSV 와 다름"
+    results[K]["doc_topic_argmax_share"] = np.bincount(lda_loaded.transform(X).argmax(axis=1), minlength=K).tolist()
+    bundle_files += [f"lda_model_k{K}_v7_final.pkl", f"lda_phi_k{K}_v7_final.csv", f"lda_phi_top50_k{K}_v7_final.csv",
+                     f"topic_cosine_distance_k{K}_v7_final.csv", f"topic_linkage_average_k{K}_v7_final.csv", f"m_grid_silhouette_k{K}_v7_final.csv"]
+manifest = {
+    "purpose": "최종 코퍼스 10,020건 참고 재적합의 모델 묶음. 동결 스냅샷(v7-40, 7,350건)의 모델이 아니다. 동결 모델 묶음은 7,350건 코퍼스와 라우팅 토크나이저가 확보되면 같은 형식으로 추가한다.",
+    "corpus": {"file": "data/v7_final/fandoms_v3_100.json", "sha256": sha256(DATA / "fandoms_v3_100.json"), "n_bullets": n_bullets, "n_docs_after_min3_filter": len(docs)},
+    "tokenizer": {"source": "run_lda_v6.py 의 PARTICLES/STOPWORDS/ENGLISH_STOPWORDS/tokenize() 를 ast 로 추출해 그대로 실행", "run_lda_v6_sha256": sha256(REPO / "run_lda_v6.py"),
+                  "note": "보고서의 14개 언어 라우팅 토크나이저(run_lda_v6_live_reference_v7.py)가 아니므로 문서 수가 10,018건과 다르다"},
+    "count_vectorizer": VEC_PARAMS | {"n_vocab": int(len(vocab))},
+    "lda": {str(K): dict(n_components=K, random_state=0, max_iter=50, learning_method="batch", perplexity=results[K]["perplexity"],
+                         best_m=results[K]["best"]["m"], best_silhouette=results[K]["best"]["silhouette"],
+                         doc_topic_argmax_share=results[K]["doc_topic_argmax_share"]) for K in K_LIST},
+    "reload_check": "pickle 을 다시 불러 φ CSV(atol 1e-7)·DTM 과 일치함을 확인한 뒤 이 manifest 를 썼다",
+    "versions": {"python": platform.python_version(), "scikit-learn": sklearn.__version__, "scipy": scipy.__version__, "numpy": np.__version__, "joblib": joblib.__version__},
+    "files": {name: {"sha256": sha256(OUT_DIR / name), "bytes": (OUT_DIR / name).stat().st_size} for name in bundle_files},
+}
+with open(OUT_DIR / "model_bundle_manifest_v7_final.json", "w", encoding="utf-8") as f:
+    json.dump(manifest, f, ensure_ascii=False, indent=2)
+print("[5-1] 모델 묶음 재로드 검증 통과, manifest 기록")
 
 # --- 6. MD 생성 ------------------------------------------------------------------------------
 def fmt_matrix(K, M, labels):
@@ -242,7 +310,20 @@ for K in K_LIST:
     md.append(f"| `topic_cosine_distance_{s}_v7_final.csv` | 토픽 간 코사인 거리 {K}×{K} + 토픽 라벨 |")
     md.append(f"| `topic_linkage_average_{s}_v7_final.csv` | average-linkage 병합 기록 (HTML `dendro.merges`와 같은 형식) |")
     md.append(f"| `m_grid_silhouette_{s}_v7_final.csv` | M=4∼{min(8, K-1)} 실루엣과 M별 토픽 배정 |")
+md.append("| `lda_model_k10_v7_final.pkl`, `lda_model_k8_v7_final.pkl` | 학습된 `LatentDirichletAllocation` 객체(joblib, compress=3). `components_`가 φ 원본(비정규화), `transform(X)`로 문서-토픽 분포 재계산 가능 |")
+md.append("| `count_vectorizer_v7_final.pkl` | 학습된 `CountVectorizer`(단어 사전 `vocabulary_` 포함, K 공통). 위 모델의 열 순서와 같다 |")
+md.append(f"| `lda_vocabulary_v7_final.csv` | 단어 사전 {R10['vocab']:,}개: col(φ 열 번호), word, df(문서빈도), tf(총 빈도) |")
+md.append(f"| `lda_document_index_v7_final.csv` | DTM 행 순서 {R10['n_docs']:,}행: doc_id, fandom, bullet_type, idx_in_fandom_array(`fandoms_v3_100.json` 배열 위치), n_tokens |")
+md.append("| `model_bundle_manifest_v7_final.json` | 시드·LDA/벡터라이저 인자·코퍼스 SHA-256·패키지 버전·파일별 SHA-256·재로드 검증 결과 |")
 md.append("| `build_topic_phi_cosine_v7.py` | 위 파일 전부와 이 문서를 만드는 스크립트 |\n")
+md.append("## 모델 묶음(pickle·단어 사전) 사용법\n")
+md.append("φ CSV만으로는 문서-토픽 분포를 다시 만들 수 없으므로 학습 모델과 단어 사전을 같이 둔다. 다시 불러 쓰는 방법:\n")
+md.append("```python\nimport joblib, numpy as np\nvec = joblib.load(\"count_vectorizer_v7_final.pkl\")\nlda = joblib.load(\"lda_model_k10_v7_final.pkl\")\n"
+          "X = vec.transform(docs)                 # docs: lda_document_index_v7_final.csv 순서로 tokenize() 한 문장을 공백으로 이은 문자열\n"
+          "theta = lda.transform(X)               # 문서 × 토픽 (행 합 1)\nphi = lda.components_ / lda.components_.sum(axis=1, keepdims=True)   # = lda_phi_k10_v7_final.csv\n```\n")
+md.append(f"스크립트는 저장 직후 pickle을 다시 불러 φ CSV(허용오차 1e-7)·DTM과 같은지 확인하고 `model_bundle_manifest_v7_final.json`에 "
+          f"패키지 버전(scikit-learn {sklearn.__version__}, scipy {scipy.__version__}, numpy {np.__version__})과 파일별 SHA-256을 남긴다. "
+          "동결 스냅샷(7,350건) 모델은 여기 없다. 7,350건 코퍼스와 라우팅 토크나이저가 확보되면 같은 파일 구성으로 `frozen_v7_40/` 하위에 추가한다.\n")
 md.append("## 한계\n")
 md.append("1. **동결 스냅샷의 φ가 아니다.** 7,350건 코퍼스와 14개 언어 라우팅 토크나이저가 저장소에 없으므로, HTML 덴드로그램의 병합 높이"
           f"({frozen_heights})를 이 폴더의 값으로 재현할 수는 없다. HTML 덴드로그램 자체의 절단·군집·잎 순서 재현은 `../persona_decision_space_v7.ipynb` 2절이 HTML 기록값으로 한다.\n"

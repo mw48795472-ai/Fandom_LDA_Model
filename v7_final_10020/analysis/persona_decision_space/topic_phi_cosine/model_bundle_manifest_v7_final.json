@@ -1,0 +1,132 @@
+{
+  "purpose": "최종 코퍼스 10,020건 참고 재적합의 모델 묶음. 동결 스냅샷(v7-40, 7,350건)의 모델이 아니다. 동결 모델 묶음은 7,350건 코퍼스와 라우팅 토크나이저가 확보되면 같은 형식으로 추가한다.",
+  "corpus": {
+    "file": "data/v7_final/fandoms_v3_100.json",
+    "sha256": "b123a5bf7ab79bce88b78441408847d3177042a38d41c3f24dd7c68de7dd289c",
+    "n_bullets": 10020,
+    "n_docs_after_min3_filter": 9954
+  },
+  "tokenizer": {
+    "source": "run_lda_v6.py 의 PARTICLES/STOPWORDS/ENGLISH_STOPWORDS/tokenize() 를 ast 로 추출해 그대로 실행",
+    "run_lda_v6_sha256": "e128b53cd6575df1b71844424dfe078401c14318dc951b7ceff8f2bd8caecc12",
+    "note": "보고서의 14개 언어 라우팅 토크나이저(run_lda_v6_live_reference_v7.py)가 아니므로 문서 수가 10,018건과 다르다"
+  },
+  "count_vectorizer": {
+    "max_df": 0.6,
+    "min_df": 2,
+    "token_pattern": "(?u)\\b\\w+\\b",
+    "n_vocab": 12253
+  },
+  "lda": {
+    "10": {
+      "n_components": 10,
+      "random_state": 0,
+      "max_iter": 50,
+      "learning_method": "batch",
+      "perplexity": 3460.2,
+      "best_m": 7,
+      "best_silhouette": 0.0803,
+      "doc_topic_argmax_share": [
+        460,
+        659,
+        650,
+        1301,
+        1521,
+        1050,
+        1151,
+        1254,
+        1113,
+        795
+      ]
+    },
+    "8": {
+      "n_components": 8,
+      "random_state": 0,
+      "max_iter": 50,
+      "learning_method": "batch",
+      "perplexity": 3512.6,
+      "best_m": 4,
+      "best_silhouette": 0.0694,
+      "doc_topic_argmax_share": [
+        638,
+        818,
+        892,
+        1717,
+        1676,
+        1387,
+        1230,
+        1596
+      ]
+    }
+  },
+  "reload_check": "pickle 을 다시 불러 φ CSV(atol 1e-7)·DTM 과 일치함을 확인한 뒤 이 manifest 를 썼다",
+  "versions": {
+    "python": "3.11.15",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.17.1",
+    "numpy": "2.4.6",
+    "joblib": "1.6.0"
+  },
+  "files": {
+    "count_vectorizer_v7_final.pkl": {
+      "sha256": "5244d39890d711595d57ac85efbb8c16f4bc6e263749601d4517a92c15dea1cd",
+      "bytes": 103977
+    },
+    "lda_vocabulary_v7_final.csv": {
+      "sha256": "c70cd6c24da9aeb0b5f010c3d338ba5d35a3aac62d04f53519a34899f2322fcf",
+      "bytes": 239079
+    },
+    "lda_document_index_v7_final.csv": {
+      "sha256": "5758817a85ef94e997797ae3dd1aa958873ccf32394d5bfe4b592332e35ef61c",
+      "bytes": 302985
+    },
+    "lda_model_k10_v7_final.pkl": {
+      "sha256": "cf26bbf037d31a5703d75babdef1e28b1a15d804d669725cc1bd2982966f6dd3",
+      "bytes": 1501668
+    },
+    "lda_phi_k10_v7_final.csv": {
+      "sha256": "f80b852266aabd78ff940789a990d261808c91f19e41219c723e229288745d12",
+      "bytes": 1810285
+    },
+    "lda_phi_top50_k10_v7_final.csv": {
+      "sha256": "be256a1939c6bd17cde2125c888b5058befc2356a7137310a21cf19e506cb556",
+      "bytes": 16782
+    },
+    "topic_cosine_distance_k10_v7_final.csv": {
+      "sha256": "cdc20255b358f15143da0f2eaf7f1b34eb592bccf37febe4fb3cf740ea9dec06",
+      "bytes": 1351
+    },
+    "topic_linkage_average_k10_v7_final.csv": {
+      "sha256": "ff70b43d746d363680b07c652e52df586ce954193f582eb43e5df90e4fa39de1",
+      "bytes": 210
+    },
+    "m_grid_silhouette_k10_v7_final.csv": {
+      "sha256": "a651a9bca2c51ae891d315c22ac960c0532b98012237b0c17b17f01f42fe169a",
+      "bytes": 277
+    },
+    "lda_model_k8_v7_final.pkl": {
+      "sha256": "afcac548732b6ca5a411d9b33cabc3d00c3b719db68f5ee14527332124b0cd53",
+      "bytes": 1293116
+    },
+    "lda_phi_k8_v7_final.csv": {
+      "sha256": "33e429c7aec31a86498f3fca0d32cd6090c145f16a989116597b8160a145ae62",
+      "bytes": 1471117
+    },
+    "lda_phi_top50_k8_v7_final.csv": {
+      "sha256": "5d142289dde371f57065ec19397258fd5b2af578db9fecdd4c36c3abc0327fb4",
+      "bytes": 13357
+    },
+    "topic_cosine_distance_k8_v7_final.csv": {
+      "sha256": "d2c84395fa4e70a2b7dc2c419037a404f5336df0c5350141f9026de92ed8e4ba",
+      "bytes": 936
+    },
+    "topic_linkage_average_k8_v7_final.csv": {
+      "sha256": "6fc96a31d8d33f03b71e40dba88fb136c651dc8733e84a66967062e493277009",
+      "bytes": 164
+    },
+    "m_grid_silhouette_k8_v7_final.csv": {
+      "sha256": "f2e33dcd03573c239686e3efccce59cf39e5c54c4e53cc1199202962ea975eae",
+      "bytes": 209
+    }
+  }
+}
