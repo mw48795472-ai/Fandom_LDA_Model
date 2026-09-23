@@ -56,7 +56,7 @@ def mgrid(tw):
     return out
 
 
-rows, jrows, summary = [], [], {}
+rows, jrows, summary, all_tops = [], [], {}, {}
 for cname, cpath in CORPORA.items():
     X, vocab = dtm_of(cpath)
     print(f"[{cname}] DTM {X.shape}")
@@ -68,8 +68,9 @@ for cname, cpath in CORPORA.items():
             tops[s] = [set(tw[t].argsort()[::-1][:10].tolist()) for t in range(K)]
             g = mgrid(tw); sils[s] = g
             best_m = max(g, key=g.get)
-            rows.append({"corpus": cname, "K": K, "seed": s, **{f"sil_M{m}": v for m, v in g.items()}, "best_M": best_m, "best_sil": g[best_m], "perplexity": round(float(lda.perplexity(X)), 1)})
-            print(f"  K={K} seed={s} best M={best_m} sil={g[best_m]} M5={g.get(5)}  ({time.time()-t0:.0f}s)")
+            rows.append({"corpus": cname, "K": K, "seed": s, **{f"sil_M{m}": g.get(m, "") for m in range(4, 9)}, "best_M": best_m, "best_sil": g[best_m], "perplexity": round(float(lda.perplexity(X)), 1)})
+            print(f"  K={K} seed={s} best M={best_m} sil={g[best_m]} M5={g.get(5)}  ({time.time()-t0:.0f}s)", flush=True)
+            all_tops[f"{cname}_K{K}_s{s}"] = [sorted(t) for t in tops[s]]; json.dump({"rows": rows, "tops": all_tops}, open(OUT / "_checkpoint_rows.json", "w"), ensure_ascii=False)  # 중간 저장(적합 결과 유실 방지)
         # 시드 쌍별 토픽 안정성: 상위 10단어 Jaccard 를 헝가리안으로 1:1 대응해 평균
         jac = []
         for a, b in combinations(SEEDS, 2):
@@ -82,8 +83,9 @@ for cname, cpath in CORPORA.items():
                                     "silhouette_best_M": {"min": min(bests), "median": statistics.median(bests), "max": max(bests), "best_M_by_seed": bm},
                                     "topic_jaccard_top10": {"min": round(min(jac), 4), "median": round(statistics.median(jac), 4), "max": round(max(jac), 4)},
                                     "n_seeds_M5_ge_0267": sum(v >= FROZEN_SIL for v in m5), "n_seeds_best_ge_0267": sum(v >= FROZEN_SIL for v in bests)}
+(OUT / "_checkpoint_rows.json").unlink(missing_ok=True)
 with open(OUT / "seed_silhouette_grid_v7.csv", "w", encoding="utf-8-sig", newline="") as f:
-    w = csv.DictWriter(f, fieldnames=list(rows[0].keys())); w.writeheader(); w.writerows(rows)
+    w = csv.DictWriter(f, fieldnames=["corpus", "K", "seed"] + [f"sil_M{m}" for m in range(4, 9)] + ["best_M", "best_sil", "perplexity"]); w.writeheader(); w.writerows(rows)
 with open(OUT / "seed_topic_jaccard_v7.csv", "w", encoding="utf-8-sig", newline="") as f:
     w = csv.DictWriter(f, fieldnames=list(jrows[0].keys())); w.writeheader(); w.writerows(jrows)
 json.dump({"settings": {"seeds": SEEDS, "K": KS, "lda": "max_iter=50, batch", "vectorizer": "max_df=0.6, min_df=2", "tokenizer": "run_lda_v6_live_reference_v7.py 마커 절"},
