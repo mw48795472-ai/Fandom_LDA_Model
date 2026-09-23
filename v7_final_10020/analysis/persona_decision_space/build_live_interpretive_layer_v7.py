@@ -6,7 +6,7 @@
 동결 값과 대조한다(97개 공통 팬덤). **보고서 본문·동결 산출물은 바꾸지 않는다.** 채택 여부는 저자 결정(L6).
 F 코드: 동결 factor_pathway_map_v7.json 의 raw 라벨→F 매핑을 그대로 쓰고, 라이브에만 있는 '브랜드·상업형(광고·앰버서더)'은 F4 산업전이(Fan → Brand/Industry) 정의에 직접 부합하므로 F4로 둔다
 (동결에서는 미디어노출형이 F4였다 — 같은 F 코드가 다른 raw 내용을 담는 지점이며 문서에 명시).
-출력 (live_interpretive_layer/): live_top15_v7.csv, live_full_ranking_v7.csv, live_k_to_f_v7.csv, live_persona_v7.json, persona_migration_v7.csv, live_vs_frozen_summary_v7.json, LIVE_INTERPRETIVE_LAYER_V7.md
+출력 (live_interpretive_layer/): live_top15_v7.csv, live_full_ranking_v7.csv, live_k_to_f_v7.csv, live_persona_v7.json, live_persona_v7.csv, persona_migration_v7.csv, live_vs_frozen_summary_v7.json, LIVE_INTERPRETIVE_LAYER_V7.md
 실행: python v7_final_10020/analysis/persona_decision_space/build_live_interpretive_layer_v7.py
 """
 import csv, json
@@ -54,6 +54,15 @@ pc = Counter(p["persona"] for p in pers)
 json.dump({"model": "라이브 K=8 참고 재적합(10,018문서, M=5, 실루엣 0.046; 게이트 v2 통과)", "f_code_note": "브랜드·상업형(광고·앰버서더) → F4 산업전이. 동결에서는 미디어노출형이 F4였다.", "persona_table_definition": PERSONA,
            "persona_counts": dict(pc), "frozen_persona_counts": fp["persona_counts"], "fandoms": pers}, open(OUT / "live_persona_v7.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 common = [p for p in pers if p["frozen_persona"]]; mig = Counter((p["frozen_persona"], p["persona"]) for p in common)
+# 페르소나 CSV: 유형별로 묶은 팬덤 100개(합산 순위·점수·구획·상위 2 F 비중·동결 페르소나)
+_rk = {r["fandom"]: r for r in full}; _order = sorted(pc, key=lambda k: -pc[k])
+with open(OUT / "live_persona_v7.csv", "w", encoding="utf-8-sig", newline="") as f:
+    w = csv.writer(f); w.writerow(["페르소나", "F 조합", "팬덤", "카테고리", "합산 순위", "팬충성도", "파급효과", "4구획", "1위 F", "1위 F 비중", "2위 F", "2위 F 비중", "동결 페르소나"])
+    for per in _order:
+        for p_ in sorted((x for x in pers if x["persona"] == per), key=lambda x: _rk[x["fandom"]]["rank"]):
+            t1, t2 = p_["top2_factors"]; cat = next(r["category"] for r in live if r["fandom"] == p_["fandom"])
+            w.writerow([per, "+".join(sorted(c["f_code"] for c in (t1, t2))), p_["fandom"], cat, _rk[p_["fandom"]]["rank"], p_["loyalty_score"], p_["spillover_score"], _rk[p_["fandom"]]["quadrant"],
+                        t1["f_code"] + " " + t1["f_name"], t1["share"], t2["f_code"] + " " + t2["f_name"], t2["share"], p_["frozen_persona"] or "해당 없음(동결 로스터 밖)"])
 with open(OUT / "persona_migration_v7.csv", "w", encoding="utf-8-sig", newline="") as f:
     w = csv.writer(f); w.writerow(["frozen_persona", "live_persona", "n_fandoms", "fandoms"])
     for (a, b), n in sorted(mig.items(), key=lambda kv: -kv[1]): w.writerow([a, b, n, "|".join(p["fandom"] for p in common if p["frozen_persona"] == a and p["persona"] == b)])
@@ -79,6 +88,6 @@ for k in k2f: md.append(f"| {k['topic']} | {k['topic_name']} | {k['top10']} | {k
 md.append("\n## 3. 페르소나 이동 (동결 → 라이브, 공통 97개)\n| 동결 | 라이브 | 팬덤 수 |\n|---|---|---|")
 for (a, b), n in sorted(mig.items(), key=lambda kv: -kv[1]): md.append(f"| {a} | {b} | {n} |")
 md.append("\n## 4. 읽는 법\n1. README 4·5절의 표·그림(상위 15, K→F 표, 페르소나 62/17/12/9, 그림 5·6·7)은 이 폴더의 값이다(`charts/build_live_layer_figures_v7.py`). 동결 값(43/31/17/9)은 `../persona_decision_space_v7.ipynb`와 `data/v7_final/fan_persona_v7.json`에 그대로 있다.\n2. 라이브 K=8의 φ·문서-토픽 분포는 저장소에 없다(원본 참고 재적합의 저장 산출물은 F 비중까지). 덴드로그램·PCA 그림은 재구성 토크나이저의 재적합(`topic_phi_cosine/`)으로만 그릴 수 있고 그 값은 원본과 근방값이다(L2).\n3. 점수 자체가 건수 구조에 좌우된다는 L10·L12의 결론은 이 계층에도 그대로 적용된다.\n")
-md.append("## 5. 파일\n| 파일 | 내용 |\n|---|---|\n| `live_top15_v7.csv` / `live_full_ranking_v7.csv` | 라이브 순위표(구획·대표 F·동결 순위 병기) |\n| `live_k_to_f_v7.csv` | 라이브 K=8 토픽 → raw 요인 → F |\n| `live_persona_v7.json` | 팬덤별 상위 2 F·페르소나·F별 분해, 카운트 |\n| `persona_migration_v7.csv` | 동결→라이브 페르소나 이동표 |\n| `live_vs_frozen_summary_v7.json` | 요약 |\n")
+md.append("## 5. 파일\n| 파일 | 내용 |\n|---|---|\n| `live_top15_v7.csv` / `live_full_ranking_v7.csv` | 라이브 순위표(구획·대표 F·동결 순위 병기) |\n| `live_k_to_f_v7.csv` | 라이브 K=8 토픽 → raw 요인 → F |\n| `live_persona_v7.json` | 팬덤별 상위 2 F·페르소나·F별 분해, 카운트 |\n| `live_persona_v7.csv` | 유형별로 묶은 팬덤 100개: 합산 순위·점수·4구획·상위 2 F 비중·동결 페르소나 |\n| `persona_migration_v7.csv` | 동결→라이브 페르소나 이동표 |\n| `live_vs_frozen_summary_v7.json` | 요약 |\n")
 (OUT / "LIVE_INTERPRETIVE_LAYER_V7.md").write_text("\n".join(md) + "\n", encoding="utf-8")
 print(json.dumps(summary, ensure_ascii=False)[:1200])
