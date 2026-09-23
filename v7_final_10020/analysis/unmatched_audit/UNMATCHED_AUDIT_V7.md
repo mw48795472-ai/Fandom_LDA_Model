@@ -88,6 +88,9 @@
 사전 추가 후보를 `analysis/dictionaries/dictionary_candidates_from_audit_v7.csv`에 정리했다(L4 CSV에 넣고 지수를 다시 산출하는 것은 다음 단계).
 
 ## 1. 사람 검수 절차
+
+**저자용 시트**: `review_sheet_v7.xlsx`(`build_review_sheet_v7.py`) — 시트 광고·미디어·지역에 표본 200건씩, 모델 판독(Y/N)·사유가 들어 있고 '저자 판정(O/X)' 열을 채우면 집계 시트가 확정 누락 수와 재현율을 다시 계산한다(`--summarize-xlsx`로도 집계). 사전후보 시트에는 후보 9묶음의 채택(O/X) 열이 있다.
+
 1. `unmatched_sample_{ad,media,region}_v7.csv`(각 200건, seed 0 무작위)의 `검수` 열에 Y(그 지표에 잡혔어야 함) / N 을 적고, Y면 `사유·놓친 표현`에 표현을 적는다.
 2. `python build_unmatched_audit_samples_v7.py --summarize` 가 표본별 누락 비율을 낸다. 누락 재현율 추정 = 매칭 / (매칭 + 미매칭 × 누락 비율).
 3. `사유·놓친 표현` 열의 표현을 모아 사전에 넣고(`analysis/dictionaries/index_dictionaries_v7.csv`, L4) 지수를 다시 산출한다.

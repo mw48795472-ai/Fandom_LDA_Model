@@ -7,7 +7,8 @@
 을 만든다. 결속 지수는 유형별 키워드 사전이 저장소에 없어(L4) 재현·검수 대상에서 뺀다.
 출력 (analysis/unmatched_audit/): unmatched_sample_{ad,media,region}_v7.csv, near_miss_stats_v7.json, UNMATCHED_AUDIT_V7.md
 실행: python v7_final_10020/analysis/build_unmatched_audit_samples_v7.py            (표본·통계 생성)
-      python v7_final_10020/analysis/build_unmatched_audit_samples_v7.py --summarize (검수 결과 집계)
+      python v7_final_10020/analysis/build_unmatched_audit_samples_v7.py --summarize (CSV 검수 열 집계)
+      python v7_final_10020/analysis/build_unmatched_audit_samples_v7.py --summarize-xlsx (저자가 O/X를 적은 unmatched_audit/review_sheet_v7.xlsx 집계)
 """
 import csv, json, random, re, sys
 from collections import Counter
@@ -36,6 +37,17 @@ HINTS = {k: [h for h in v if not any(h in kw or kw in h for kw in (SIGNALS if k 
 ORIG_TOTAL = {"ad": ad["total_ad_bullets"], "media": media["total_media_bullets"], "region": None}
 
 bullets = [(fd["fandom"], tag, i, it["t"]) for fd in corpus for tag in ("loyalty", "spillover") for i, it in enumerate(fd[tag])]
+if "--summarize-xlsx" in sys.argv:
+    # 저자가 O/X를 적은 unmatched_audit/review_sheet_v7.xlsx 에서 확정 누락 수와 재현율을 계산한다
+    from openpyxl import load_workbook
+    wb = load_workbook(OUT / "review_sheet_v7.xlsx", data_only=True); res = {}
+    for k, nm in (("ad", "광고"), ("media", "미디어"), ("region", "지역")):
+        rows = list(wb[nm].iter_rows(min_row=2, values_only=True)); n = len(rows)
+        judged = [(r[5], (r[7] or "").strip().upper()) for r in rows]
+        y_o = sum(1 for m, a in judged if m == "Y" and a == "O"); n_x = sum(1 for m, a in judged if m == "N" and a == "X"); done = sum(1 for _, a in judged if a in ("O", "X"))
+        miss = (y_o + n_x) / n; matched = sum(1 for b in bullets if MATCH[k](b[3])); un = len(bullets) - matched
+        res[k] = {"reviewed_by_author": done, "confirmed_missed": y_o + n_x, "model_Y_confirmed": y_o, "model_N_overturned": n_x, "miss_share": round(miss, 4), "recall_estimate": round(matched / (matched + un * miss), 3) if (matched + un * miss) else None}
+    print(json.dumps(res, ensure_ascii=False, indent=1)); sys.exit()
 if "--summarize" in sys.argv:
     res = {}
     for k in MATCH:
