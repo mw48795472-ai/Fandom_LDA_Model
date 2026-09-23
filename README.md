@@ -59,13 +59,13 @@
 ```mermaid
 flowchart LR
     A["근거 문장 10,020건<br/>(100개 팬덤 × loyalty/spillover)"] --> B["토크나이저<br/>일반 경로 + 일·중·태 형태소 추가 경로"]
-    B --> C["LDA K=10<br/>(perplexity·coherence·diversity·stability 합성순위)"]
+    B --> C["LDA K=8<br/>(perplexity·coherence·diversity·stability 합성순위)"]
     C --> D["메타팩터 M=5<br/>φ 코사인거리 average-linkage, 실루엣 최대 M"]
     D --> E["파급경로 F1∼F5<br/>Fan→Fan / Market / Event·Local / Brand·Industry / Media·Global"]
     E --> F["페르소나 4유형<br/>팬덤별 상위 2개 F 조합"]
     A --> G["EvidenceScore → 팬충성도·파급효과<br/>Coverage Index · 팬 요인 다양성"]
     A --> H["보조지표 7종<br/>키워드·도메인 매칭(LDA 무관)"]
-    D -. "실루엣 게이트: 0.267 미만이면 기각 → v7-40 스냅샷 유지" .-> D
+    D -. "게이트 v2: 시드 ≥10 실루엣 중앙값 ≥ 현직 · 토픽 Jaccard ≥ 0.35 · M 합의 → 통과 시 해석 계층 갱신" .-> D
 ```
 
 **지표 산식** (전체 정의와 검증: [`v7_final_10020/index_methodology/`](v7_final_10020/index_methodology/))
