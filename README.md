@@ -261,9 +261,11 @@ flowchart LR
 
 ## 9. 저장소 안내
 
-**재현 명령 (저장소 루트, Python 3.10+; scipy·statsmodels·scikit-learn·pandas·matplotlib, 토크나이저는 fugashi unidic-lite jieba pythainlp)**
+**재현 명령 (저장소 루트, Python 3.10+)** — 새 복제본에서 아래 순서로 전부 돌아간다(2026-09-24 점검: 스크립트 60여 개 종료 코드 0, 재실행 산출물이 커밋본과 바이트 일치).
 
 ```bash
+python -m pip install -r requirements.txt                                     # 의존성 (R은 Statistics/R_통계검증/install_packages.R)
+python run_lda_v6_live_reference_v7.py                                       # LDA 재적합(재구성 토크나이저, 약 20분) → output/lda_live_reference_v7/
 python verify_v7_final_consistency.py                                        # 보고서 수치 ↔ data/v7_final 107/107
 python Statistics/verify_r_sections_python.py                                # 통계 검정 238개 항목 (R 패키지와 같은 정답지)
 python v7_final_10020/index_methodology/build_index_calculation_notebook.py  # 식(1)~(7) 지표 산정 노트북

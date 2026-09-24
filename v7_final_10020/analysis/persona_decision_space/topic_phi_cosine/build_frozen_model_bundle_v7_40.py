@@ -12,7 +12,8 @@
       topic_cosine_distance_k10, topic_linkage_average_k10, m_grid_silhouette_k10, frozen_refit_comparison_v7_40.json, manifest
 실행: python build_frozen_model_bundle_v7_40.py [--era r40]   (약 2분)
   --era r40 : 동결 시점(v7-40)은 v7 76·77 라운드의 토크나이저 변경(일본어 불용어, 가나+한자 불릿의 fugashi 단독 처리, 자기인용 슬러그
-              제거) 이전이므로, 그 세 가지를 끈 "r40 시점 토크나이저"로 적합해 frozen_v7_40_r40tok/ 에 따로 저장한다.
+              제거) 이전이므로, 그 세 가지를 끈 "r40 시점 토크나이저"로 적합한다. 묶음은 output/frozen_v7_40_r40tok/(저장소 밖),
+              대조 JSON은 frozen_v7_40/frozen_refit_comparison_v7_40_r40tok.json (build_frozen_bundle_md_v7_40.py 가 읽는 파일)
 """
 import csv, hashlib, json, platform, re, sys
 from pathlib import Path
@@ -32,7 +33,8 @@ HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[3]
 D = REPO / "data" / "v7_final"
 ERA = "r40" if "--era" in sys.argv and sys.argv[sys.argv.index("--era") + 1] == "r40" else "final"
-OUT = HERE / ("frozen_v7_40_r40tok" if ERA == "r40" else "frozen_v7_40"); OUT.mkdir(exist_ok=True)
+# r40 시점 묶음(pickle·CSV)은 저장소에 두지 않고 output/ 에 쓴다. 문서가 읽는 대조 JSON만 frozen_v7_40/…_r40tok.json 으로 복사한다
+OUT = (REPO / "output" / "frozen_v7_40_r40tok") if ERA == "r40" else (HERE / "frozen_v7_40"); OUT.mkdir(parents=True, exist_ok=True)
 CORPUS = D / "frozen_snapshot_v7_40" / "fandoms_v7_40_frozen_reconstructed.json"
 K, M_TARGET = 10, 5
 
@@ -164,6 +166,8 @@ comp = {
     "verdict_note": "근사 코퍼스(3개 팬덤 24건 유실)와 재구성 토크나이저로 얻은 근방 재현이다. 동결 스냅샷 값 자체가 아니다.",
 }
 json.dump(comp, open(OUT / "frozen_refit_comparison_v7_40.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+if ERA == "r40":
+    json.dump(comp, open(HERE / "frozen_v7_40" / "frozen_refit_comparison_v7_40_r40tok.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 
 
 def sha(p):

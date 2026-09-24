@@ -65,6 +65,7 @@ for cand in [REPO / "fonts" / "NotoSansCJKkr-Regular.otf", Path("/usr/share/font
              Path("/usr/share/fonts/truetype/nanum/NanumGothic.ttf"), Path("C:/Windows/Fonts/malgun.ttf"),
              Path("/System/Library/Fonts/AppleSDGothicNeo.ttc"), Path("/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc")]:
     if cand.exists():
+        fm.fontManager.addfont(str(cand)); [fm.fontManager.addfont(str(b)) for b in (REPO / "fonts").glob("NotoSansCJKkr-*.otf")]
         _font = fm.FontProperties(fname=str(cand)); plt.rcParams["font.family"] = _font.get_name(); break
 plt.rcParams["axes.unicode_minus"] = False
 import warnings; warnings.filterwarnings("ignore", message="Glyph")

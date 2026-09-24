@@ -312,6 +312,8 @@ md.append("### C. 스크립트·문서\n")
 md.append("| 파일 | 내용 |\n|---|---|")
 md.append("| `build_topic_phi_cosine_v7.py` | A·B 전부와 이 문서를 만든다. 저장소 안 어느 폴더에서 실행해도 된다 (약 1∼3분) |")
 md.append("| `frozen_v7_40/` + `build_frozen_model_bundle_v7_40.py`, `build_frozen_bundle_md_v7_40.py` | 동결 근사 코퍼스 + 재구성 토크나이저로 K=10을 적합한 같은 구성의 묶음과 동결 값 대조 문서 (재현되지 않음) |")
+md.append('| `topic_alignment/` + `build_topic_alignment_v7.py` | 다섯 모델(동결 스냅샷·이 폴더 K=10/K=8·동결 근사 재적합·라이브 원본 참고) 토픽의 자동 대응(φ 코사인 또는 상위 10단어 Jaccard, 헝가리안 1:1)과 자동 라벨(상위 4단어) — 6절 표의 생성원 |')
+md.append('| `seed_stability/` + `build_seed_stability_v7.py` | 시드 0∼9 × K∈{8,10} × 코퍼스 2개(라이브·동결 근사)의 M=4∼8 실루엣 그리드, 시드 쌍별 토픽 Jaccard, 요약 JSON, `SEED_STABILITY_V7.md` (0.267 도달 0/40, 최대 0.192) |')
 md.append("| `TOPIC_PHI_COSINE_DISTANCE_V7.md` | 이 문서 (스크립트가 생성하므로 손으로 고치지 않는다) |\n")
 
 md.append("## 3. 방법 — 단계별 코드\n")
@@ -363,13 +365,13 @@ for R in (R10, R8):
     md.append("")
 
 md.append("## 6. 동결 스냅샷(K=10)과의 대조\n")
-md.append("토픽 번호는 적합마다 임의로 매겨지므로 번호로 대응시킬 수 없다. 여기서는 **상위 10단어의 겹침 수**로 동결 토픽 K0∼K9마다 이 폴더 K=10에서 가장 가까운 토픽을 찾았다. "
-          "겹침 수는 기계적 지표이며 의미 대응을 보증하지 않는다.\n")
-md.append("| 동결 토픽 | 동결 상위 10단어 | 동결 F | 가장 가까운 T (겹침) | 그 T의 상위 10단어 |\n|---|---|---|---|---|")
-for k in range(10):
-    fw = set(frozen_words[k])
-    best_t, best_n = max(((t, len(fw & set(R10["top_words"][t]))) for t in range(10)), key=lambda x: (x[1], -x[0]))
-    md.append(f"| K{k} {frozen_names[k]} | {', '.join(frozen_words[k])} | F{frozen_t2f[k]} {frozen_flabel[frozen_t2f[k]]} | T{best_t} ({best_n}/10) | {', '.join(R10['top_words'][best_t])} |")
+md.append("토픽 번호는 적합마다 임의로 매겨지므로 번호로 대응시킬 수 없다. 여기서는 **상위 10단어의 겹침 수**로 동결 토픽 K0∼K9마다 이 폴더 K=10에서 가장 가까운 토픽을 찾았다. 아래 표는 `build_topic_alignment_v7.py`가 생성한다(마커 사이). '가장 가까운 T'는 최대 겹침이라 여러 K가 같은 T로 몰릴 수 있고, '헝가리안 1:1 T'는 상위 10단어 Jaccard의 1:1 최적 대응이다. 둘이 다른 행(4/10)이 동결 토픽 둘이 라이브 토픽 하나로 합쳐진 자리다. φ가 있는 모델 쌍의 코사인 대응과 자동 라벨 규칙은 `topic_alignment/TOPIC_ALIGNMENT_V7.md`에 있다. 겹침 수는 기계적 지표이며 의미 대응을 보증하지 않는다.\n")
+_B0, _B1 = "<!-- ALIGNMENT TABLE BEGIN (build_topic_alignment_v7.py 가 생성) -->", "<!-- ALIGNMENT TABLE END -->"
+_prev = (OUT_DIR / "TOPIC_PHI_COSINE_DISTANCE_V7.md").read_text(encoding="utf-8") if (OUT_DIR / "TOPIC_PHI_COSINE_DISTANCE_V7.md").exists() else ""
+if _B0 in _prev and _B1 in _prev:  # 표는 build_topic_alignment_v7.py 가 채운다 — 이 스크립트를 다시 돌려도 지우지 않는다
+    md.append(_prev[_prev.index(_B0):_prev.index(_B1) + len(_B1)])
+else:
+    md.append(_B0 + "\n| 동결 토픽 | 동결 상위 10단어 | 동결 F | 가장 가까운 T (겹침) | 헝가리안 1:1 T (겹침) | 그 T의 상위 10단어 |\n|---|---|---|---|---|---|\n" + _B1)
 md.append("")
 md.append("| 구분 | 동결 스냅샷 | 이 폴더 K=10 |\n|---|---|---|")
 md.append(f"| 코퍼스 / 문서 | 7,350건 / — | 10,020건 / {R10['n_docs']:,}건 |")
@@ -405,12 +407,14 @@ md.append(f"- 소요 시간 약 1∼3분(LDA 적합 K=10·K=8 각 30∼40초). �
 md.append("## 9. 한계와 다음 단계\n")
 md.append("1. **동결 스냅샷의 φ·모델이 아니다.** 동결 코퍼스는 근사 복원본(97개 팬덤 동일, 3개 팬덤 24건 유실), 토크나이저는 재구성본이라 원본과 글자 단위로 같지 않으므로, HTML 덴드로그램의 병합 높이"
           f"({frozen_heights})를 이 폴더의 값으로 재현할 수는 없다. HTML 덴드로그램 자체의 절단·군집·잎 순서 재현은 `../persona_decision_space_v7.ipynb` 2절이 HTML 기록값으로 한다.\n"
-          "2. 토픽 번호(T0∼T9)는 적합마다 임의로 매겨지므로 동결 스냅샷의 K0∼K9와 번호가 대응하지 않는다. 6절의 겹침 표는 참고용이다.\n"
+          '2. 토픽 번호(T0∼T9)는 적합마다 임의로 매겨지므로 동결 스냅샷의 K0∼K9와 번호가 대응하지 않는다. 6절의 겹침 표와 `topic_alignment/`의 대응표는 스크립트가 만들지만(L8), 동결 φ가 없어 동결 스냅샷과의 대응은 상위 10단어 Jaccard에 머문다. 헝가리안 1:1 대응 평균 Jaccard는 동결→이 폴더 0.29, 동결→동결 근사 재적합 0.33이고 두 쌍 모두 동결 토픽 하나(K8 월드투어브랜드형)는 겹침 0으로 짝이 없다.\n'
           "3. 토크나이저가 구판이라 문서 수(9,954)와 어휘가 공식 라이브 참고 재적합(10,018)과 다르다. 재구성 라우팅 토크나이저(`run_lda_v6_live_reference_v7.py`의 마커 절)로 1단계를 바꿔 돌리면 10,018문서가 된다.\n"
           "4. **동결 모델 묶음의 검증 기준과 결과** — `frozen_v7_40/`의 묶음이 동결 모델이라고 말하려면 다음이 전부 맞아야 한다: "
           "① 토픽별 상위 10단어가 `lda_v6_diagnostics_frozen_v7_40.json`의 `topics_top_words`와 일치, ② 토픽→F 배정이 `topic_to_factor`와 일치, "
           f"③ M=5 실루엣 {frozen_dendro['silhouette']}·절단 높이 {frozen_dendro['cut_height']:.4f}·병합 높이 {frozen_heights}가 재현, "
           "④ 팬덤별 F 비중이 `fandom_scores_v6.json`의 `factor_share`와 일치, ⑤ activity 합 7,350. 결과: ⑤만 근사(7,326)로 만족하고 ①은 10개 중 1개, ③은 실루엣 0.07로 불만족, ④는 두 F만 r≈0.75~0.82 — 재현 실패로 기록(`frozen_v7_40/FROZEN_MODEL_REFIT_V7_40.md`).\n")
+md[-1] = md[-1].rstrip("\n")
+md += ['5. **단일 시드의 한계는 측정했다.** 이 폴더의 모델과 `frozen_v7_40/`의 모델은 모두 `random_state=0` 한 번의 적합이다. 시드 0∼9 × K∈{8,10} × 코퍼스 2개를 돌린 결과(`seed_stability/SEED_STABILITY_V7.md`) M=5 실루엣은 라이브 K=8 0.073∼0.175, 동결 근사 K=10 0.055∼0.136이고 0.267에 닿는 시드는 40회 중 0회다. 최적 M은 시드마다 4∼8 사이에서 바뀌고 시드 간 토픽 상위 10단어 Jaccard 중앙값은 0.39∼0.40이라, 이 폴더의 토픽 번호·상위어·M=5 군집은 시드 하나의 결과로 읽어야 한다. 시드별 φ의 헝가리안 대응은 그 스크립트에 있으므로 동결·라이브 토픽 대응 자동화(L8)에 그대로 쓸 수 있다.', '']
 (OUT_DIR / "TOPIC_PHI_COSINE_DISTANCE_V7.md").write_text("\n".join(md) + "\n", encoding="utf-8")
 print("wrote", OUT_DIR / "TOPIC_PHI_COSINE_DISTANCE_V7.md")
 for p in sorted(OUT_DIR.glob("*.csv")):

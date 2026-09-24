@@ -26,7 +26,7 @@ def _find_korean_font():
                   "C:/Windows/Fonts/malgun.ttf", "/System/Library/Fonts/AppleSDGothicNeo.ttc", "/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc"]
     for c in candidates:
         if c and os.path.exists(c):
-            fp = fm.FontProperties(fname=c); fm.fontManager.addfont(c); plt.rcParams["font.family"] = fp.get_name(); return fp
+            fp = fm.FontProperties(fname=c); fm.fontManager.addfont(c); plt.rcParams["font.family"] = fp.get_name(); [fm.fontManager.addfont(str(b)) for b in (BASE / "fonts").glob("NotoSansCJKkr-*.otf")]; return fp
     print("[warn] 한글 폰트를 찾지 못했습니다 — KFONT_PATH 환경변수로 지정하세요."); return None
 
 

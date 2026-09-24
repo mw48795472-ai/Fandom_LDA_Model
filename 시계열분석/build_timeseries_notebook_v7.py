@@ -7,6 +7,15 @@
 import subprocess, sys
 from pathlib import Path
 
+def _strip_exec_times(p):
+    """실행 시각을 지우고 셀 id를 고정해, 다시 실행해도 노트북 파일이 바이트 단위로 같게 한다."""
+    import nbformat as _nbf
+    _nb = _nbf.read(str(p), as_version=4)
+    for _i, _c in enumerate(_nb.cells):  # 실행 시각 제거 + 셀 id를 순서 번호로 고정(nbformat 기본값은 무작위)
+        _c.metadata.pop("execution", None); _c["id"] = f"cell-{_i:03d}"
+    _nbf.write(_nb, str(p))
+
+
 import nbformat
 from nbformat.v4 import new_code_cell as code, new_markdown_cell as md, new_notebook
 
@@ -69,5 +78,5 @@ nb = new_notebook(cells=cells, metadata={"kernelspec": {"name": "python3", "disp
 out = HERE / "시계열_패널분석_v7.ipynb"; nbformat.write(nb, out)
 print("wrote", out)
 if "--no-exec" not in sys.argv:
-    subprocess.run([sys.executable, "-m", "jupyter", "nbconvert", "--to", "notebook", "--execute", "--inplace", "--ExecutePreprocessor.timeout=600", str(out)], check=True, cwd=str(HERE))
+    subprocess.run([sys.executable, "-m", "jupyter", "nbconvert", "--to", "notebook", "--execute", "--inplace", "--ExecutePreprocessor.timeout=600", str(out)], check=True, cwd=str(HERE)); _strip_exec_times(out)
     print("executed")

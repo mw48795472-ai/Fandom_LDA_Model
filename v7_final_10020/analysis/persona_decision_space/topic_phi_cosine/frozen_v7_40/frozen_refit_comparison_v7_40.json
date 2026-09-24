@@ -490,5 +490,6 @@
   "mean_recon": 0.8108,
   "mean_frozen": 0.8783
  },
+ "tokenizer_era": "final",
  "verdict_note": "근사 코퍼스(3개 팬덤 24건 유실)와 재구성 토크나이저로 얻은 근방 재현이다. 동결 스냅샷 값 자체가 아니다."
 }

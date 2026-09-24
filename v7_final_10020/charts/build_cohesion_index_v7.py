@@ -37,6 +37,7 @@ _font = _find_korean_font()
 if _font:
     KFONT = fm.FontProperties(fname=_font)
     fm.fontManager.addfont(_font)
+    for _b in (BASE / "fonts").glob("NotoSansCJKkr-*.otf"): fm.fontManager.addfont(str(_b))  # Regular·Bold 둘 다 등록(굵은 제목)
     plt.rcParams["font.family"] = KFONT.get_name()
 else:
     KFONT = fm.FontProperties()

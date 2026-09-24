@@ -1,5 +1,5 @@
 {
-  "purpose": "동결 스냅샷 v7-40 모델의 근방 재현 묶음 (근사 코퍼스 7,326건 + 재구성 토크나이저, K=10). 동결 원본 모델이 아니다.",
+  "purpose": "동결 스냅샷 v7-40 모델의 근방 재현 묶음 (근사 코퍼스 7,326건 + 재구성 토크나이저[final 시점 설정], K=10). 동결 원본 모델이 아니다.",
   "inputs": {
     "corpus_sha256": "098a132ec92e1330ebb6bbc2b53241e16d127d8c65ea56431357002d25e336bc",
     "tokenizer_script_sha256": "9a0c1482113287265085c485f45c0f0d8d212123513c956eb7414b070862eb8c"
@@ -29,8 +29,12 @@
       "bytes": 80489
     },
     "frozen_refit_comparison_v7_40.json": {
-      "sha256": "afc4a6153ffa6533e1a13c1fb1b6ba0b177c9d5f6317c07db26f9ea237532fbc",
-      "bytes": 7627
+      "sha256": "9a60a8995adbf5113cb201a46f22de385efa54873f518b2b90da98b8d10a1e4f",
+      "bytes": 7654
+    },
+    "frozen_refit_comparison_v7_40_r40tok.json": {
+      "sha256": "a8d82e175aabae777ab933d5a808073d23227c009a2500e8e6f5240641d5d0ed",
+      "bytes": 7651
     },
     "lda_document_index_v7_40.csv": {
       "sha256": "827059da970f8cb9bb63344c6a4c3ddf33d85c29ad513b94643d86971b9c4c7a",
@@ -47,6 +51,10 @@
     "lda_phi_top50_k10_v7_40.csv": {
       "sha256": "53e5be9f1ed037a2d1fac9127f484fab829a8f1829fe6ad2a9d4abb41e65a245",
       "bytes": 16710
+    },
+    "lda_v6_diagnostics_frozen_refit_v7_40.json": {
+      "sha256": "5923ec2439087d135a24950124c5a519bddf344cd0e43906c0e2f942baf9d81f",
+      "bytes": 4112
     },
     "lda_vocabulary_v7_40.csv": {
       "sha256": "c6a51bd3d78b88b0da172941c989adbf34c281d1a5126fe01adb32b46b9364c2",
