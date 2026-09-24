@@ -1,0 +1,26 @@
+# 파이썬 의존성 — 저장소 전체 스크립트·노트북을 처음부터 다시 돌릴 때 필요한 패키지
+# 설치: python -m pip install -r requirements.txt   (Python 3.10 이상; 2026-09-24 새 복제본 전체 재실행에 쓴 버전을 하한으로 둠)
+
+# 수치·통계·모델
+numpy>=2.4
+scipy>=1.17
+pandas>=3.0
+scikit-learn>=1.9
+statsmodels>=0.15
+joblib>=1.6
+
+# 그림·엑셀·노트북
+matplotlib>=3.11
+openpyxl>=3.1
+nbformat>=5.11
+nbconvert>=7.17
+ipykernel>=7.3
+
+# 토크나이저(일·중·태 형태소, 영어 빈도 판정) — run_lda_v6_live_reference_v7.py 와 토크나이저 검증 스크립트
+fugashi>=1.5
+unidic-lite
+jieba>=0.42
+pythainlp>=5.3
+wordfreq>=3.1
+
+# R 쪽 의존성은 Statistics/R_통계검증/install_packages.R, 보고서 docx 빌드(Node.js)는 npm install docx

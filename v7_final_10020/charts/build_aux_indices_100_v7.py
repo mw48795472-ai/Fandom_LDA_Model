@@ -38,10 +38,10 @@ def _pick(env, cands):
             return fm.FontProperties(fname=c)
     return None
 
-REG = _pick("KFONT_PATH", [str(BASE / "fonts" / "NotoSansKR-Regular.ttf"), "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc",
+REG = _pick("KFONT_PATH", [str(BASE / "fonts" / "NotoSansCJKkr-Regular.otf"), str(BASE / "fonts" / "NotoSansKR-Regular.ttf"), "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc",
                             "C:/Windows/Fonts/malgun.ttf", "/System/Library/Fonts/AppleSDGothicNeo.ttc",
                             "/usr/share/fonts/truetype/nanum/NanumGothic.ttf", "/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc"])
-BOLD = _pick("KFONT_BOLD_PATH", [str(BASE / "fonts" / "NotoSansKR-Bold.ttf"), "C:/Windows/Fonts/malgunbd.ttf",
+BOLD = _pick("KFONT_BOLD_PATH", [str(BASE / "fonts" / "NotoSansCJKkr-Bold.otf"), str(BASE / "fonts" / "NotoSansKR-Bold.ttf"), "C:/Windows/Fonts/malgunbd.ttf",
                                   "/usr/share/fonts/truetype/nanum/NanumGothicBold.ttf"]) or REG
 if REG is None:
     print("[warn] 한글 폰트를 찾지 못했습니다 — KFONT_PATH 로 지정하세요.")

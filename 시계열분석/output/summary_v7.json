@@ -1,0 +1,496 @@
+{
+ "A_time_tags": {
+  "n": 10020,
+  "by_source": {
+   "text": 5996,
+   "none": 3490,
+   "url": 522,
+   "relative": 12
+  },
+  "tagged": 6530,
+  "tagged_share": 0.6517,
+  "in_range_2015_2026": 5758,
+  "event_year_dist": {
+   "2015": 124,
+   "2016": 192,
+   "2017": 159,
+   "2018": 211,
+   "2019": 231,
+   "2020": 272,
+   "2021": 215,
+   "2022": 351,
+   "2023": 487,
+   "2024": 735,
+   "2025": 1258,
+   "2026": 1523
+  },
+  "before_2015": 772,
+  "text_url_both": 741,
+  "text_url_same_year": 664,
+  "text_url_within_1y": 710,
+  "multi_year_sentences": 1005
+ },
+ "B_panel": {
+  "n_cells": 847,
+  "n_valid_cells": 414,
+  "fandoms_ge3_valid_years": 85,
+  "fandoms_ge5_valid_years": 39,
+  "fandoms_excluded_lt3": [
+   "CORTIS",
+   "아이오아이",
+   "잭스키스",
+   "Hearts2Hearts",
+   "A-pink",
+   "브라운아이즈",
+   "sg워너비",
+   "보아",
+   "이승철",
+   "FTISLAND",
+   "케이윌",
+   "김연자",
+   "이문세",
+   "백지영",
+   "박정현"
+  ],
+  "raw_score_reconciliation": "100/100",
+  "top8": [
+   "BTS",
+   "TWICE",
+   "임영웅",
+   "BLACKPINK",
+   "NCT",
+   "Stray Kids",
+   "SEVENTEEN",
+   "god"
+  ],
+  "trend": {
+   "n_fandoms_tested": 25,
+   "n_volume_tested": 59,
+   "volume_rho_positive": 54,
+   "volume_rho_median": 0.718,
+   "loyalty_density_sig_up": 0,
+   "loyalty_density_sig_down": 0,
+   "spillover_density_sig_up": 0,
+   "spillover_density_sig_down": 1,
+   "loyalty_density_rho_median": -0.2,
+   "spillover_density_rho_median": -0.059
+  }
+ },
+ "E_collection_bias": {
+  "year_totals": {
+   "2015": 124,
+   "2016": 192,
+   "2017": 159,
+   "2018": 211,
+   "2019": 231,
+   "2020": 272,
+   "2021": 215,
+   "2022": 351,
+   "2023": 487,
+   "2024": 735,
+   "2025": 1258,
+   "2026": 1523
+  },
+  "late_share_by_year": {
+   "2015": 0.3306,
+   "2016": 0.3333,
+   "2017": 0.3208,
+   "2018": 0.3175,
+   "2019": 0.3636,
+   "2020": 0.3382,
+   "2021": 0.293,
+   "2022": 0.265,
+   "2023": 0.2587,
+   "2024": 0.2667,
+   "2025": 0.2814,
+   "2026": 0.3283
+  },
+  "share_2025_2026": 0.483,
+  "late_round_share_coef": {
+   "loyalty_density": [
+    0.1556,
+    0.38601553513066617
+   ],
+   "spillover_density": [
+    -0.029,
+    0.8013901286030839
+   ]
+  }
+ },
+ "C_factor_by_year": {
+  "n_docs_theta": 9954,
+  "replica_topic_map": {
+   "0": {
+    "official_topic": 7,
+    "F": "F1",
+    "jaccard_top10": 0.1111
+   },
+   "1": {
+    "official_topic": 3,
+    "F": "F2",
+    "jaccard_top10": 0.6667
+   },
+   "2": {
+    "official_topic": 5,
+    "F": "F3",
+    "jaccard_top10": 0.25
+   },
+   "3": {
+    "official_topic": 2,
+    "F": "F3",
+    "jaccard_top10": 0.25
+   },
+   "4": {
+    "official_topic": 6,
+    "F": "F3",
+    "jaccard_top10": 0.1765
+   },
+   "5": {
+    "official_topic": 4,
+    "F": "F3",
+    "jaccard_top10": 0.1765
+   },
+   "6": {
+    "official_topic": 1,
+    "F": "F5",
+    "jaccard_top10": 0.5385
+   },
+   "7": {
+    "official_topic": 0,
+    "F": "F4",
+    "jaccard_top10": 0.5385
+   }
+  },
+  "aggregate_vs_official_factor_share_r": {
+   "F1": 0.4,
+   "F2": 0.899,
+   "F3": 0.801,
+   "F4": 0.809,
+   "F5": 0.559
+  },
+  "aggregate_vs_official_mean_abs_diff": 0.0423,
+  "theta_persona_same_as_official": "40/100",
+  "fandoms_with_persona_years": 100,
+  "changed_first_to_last": 63,
+  "any_switch": 88,
+  "persona_by_year": {
+   "2015": {
+    "집단동원형": 3,
+    "글로벌결속형": 1,
+    "글로벌투어형": 1,
+    "원정소비형": 1,
+    "현장상업형": 1
+   },
+   "2016": {
+    "산업확장형": 1,
+    "글로벌투어형": 3,
+    "원정소비형": 3,
+    "집단동원형": 1,
+    "현장상업형": 6,
+    "브랜드동반형": 2
+   },
+   "2017": {
+    "글로벌투어형": 3,
+    "현장상업형": 4,
+    "원정소비형": 2,
+    "글로벌결속형": 2
+   },
+   "2018": {
+    "집단동원형": 7,
+    "브랜드동반형": 2,
+    "글로벌투어형": 2,
+    "현장상업형": 2,
+    "원정소비형": 1
+   },
+   "2019": {
+    "현장상업형": 8,
+    "글로벌투어형": 7,
+    "글로벌결속형": 1,
+    "집단동원형": 3,
+    "원정소비형": 2
+   },
+   "2020": {
+    "집단동원형": 5,
+    "원정소비형": 1,
+    "현장상업형": 8,
+    "산업확장형": 1,
+    "글로벌결속형": 1,
+    "글로벌투어형": 4,
+    "글로벌소비형": 1
+   },
+   "2021": {
+    "현장상업형": 9,
+    "산업확장형": 1,
+    "글로벌소비형": 1,
+    "원정소비형": 3,
+    "글로벌투어형": 1
+   },
+   "2022": {
+    "글로벌투어형": 9,
+    "산업확장형": 3,
+    "집단동원형": 5,
+    "현장상업형": 12,
+    "원정소비형": 3
+   },
+   "2023": {
+    "현장상업형": 22,
+    "글로벌투어형": 8,
+    "집단동원형": 9,
+    "원정소비형": 5,
+    "산업확장형": 1,
+    "브랜드동반형": 1
+   },
+   "2024": {
+    "현장상업형": 26,
+    "글로벌투어형": 14,
+    "집단동원형": 8,
+    "원정소비형": 9,
+    "글로벌소비형": 1
+   },
+   "2025": {
+    "현장상업형": 35,
+    "글로벌투어형": 26,
+    "원정소비형": 8,
+    "집단동원형": 15,
+    "소비상업형": 1,
+    "글로벌소비형": 1
+   },
+   "2026": {
+    "현장상업형": 43,
+    "글로벌투어형": 27,
+    "원정소비형": 6,
+    "집단동원형": 10,
+    "글로벌소비형": 1
+   }
+  }
+ },
+ "regressions": {
+  "loyalty_density": {
+   "n_cells": 272,
+   "n_fandoms": 98,
+   "r2_fandom_fe": 0.537,
+   "r2_two_way_fe": 0.5899,
+   "year_fe_F": 1.914,
+   "year_fe_p": 0.040884743139956076,
+   "year_effects_vs_2015": {
+    "C(year_c)[T.2016]": 0.5419,
+    "C(year_c)[T.2017]": 0.0291,
+    "C(year_c)[T.2018]": 0.0185,
+    "C(year_c)[T.2019]": -0.1001,
+    "C(year_c)[T.2020]": 0.3384,
+    "C(year_c)[T.2021]": 0.192,
+    "C(year_c)[T.2022]": 0.048,
+    "C(year_c)[T.2023]": -0.1018,
+    "C(year_c)[T.2024]": -0.0506,
+    "C(year_c)[T.2025]": -0.1126,
+    "C(year_c)[T.2026]": -0.1294
+   },
+   "late_round_share_coef": 0.1556,
+   "late_round_share_p": 0.38601553513066617
+  },
+  "spillover_density": {
+   "n_cells": 373,
+   "n_fandoms": 99,
+   "r2_fandom_fe": 0.4202,
+   "r2_two_way_fe": 0.4598,
+   "year_fe_F": 1.748,
+   "year_fe_p": 0.06334663397825141,
+   "year_effects_vs_2015": {
+    "C(year_c)[T.2016]": 0.0554,
+    "C(year_c)[T.2017]": 0.2016,
+    "C(year_c)[T.2018]": 0.0266,
+    "C(year_c)[T.2019]": 0.2489,
+    "C(year_c)[T.2020]": 0.1094,
+    "C(year_c)[T.2021]": 0.0605,
+    "C(year_c)[T.2022]": 0.1793,
+    "C(year_c)[T.2023]": 0.0062,
+    "C(year_c)[T.2024]": 0.1229,
+    "C(year_c)[T.2025]": -0.0172,
+    "C(year_c)[T.2026]": 0.0174
+   },
+   "late_round_share_coef": -0.029,
+   "late_round_share_p": 0.8013901286030839
+  },
+  "log_volume": {
+   "r2_two_way_fe": 0.5804,
+   "year_effects_vs_2015": {
+    "C(year_c)[T.2016]": -0.2251,
+    "C(year_c)[T.2017]": -0.2572,
+    "C(year_c)[T.2018]": 0.0924,
+    "C(year_c)[T.2019]": -0.069,
+    "C(year_c)[T.2020]": 0.0785,
+    "C(year_c)[T.2021]": -0.1486,
+    "C(year_c)[T.2022]": -0.2045,
+    "C(year_c)[T.2023]": -0.012,
+    "C(year_c)[T.2024]": 0.1522,
+    "C(year_c)[T.2025]": 0.4492,
+    "C(year_c)[T.2026]": 0.6081
+   }
+  },
+  "loyalty_spillover_panel": {
+   "pooled_coef": 0.2754,
+   "pooled_p": 1.3841931714404416e-06,
+   "within_coef_two_way_fe": 0.067,
+   "within_p": 0.439905214140706,
+   "n_cells": 231
+  }
+ },
+ "year_summary": [
+  {
+   "year": 2015,
+   "n_sentences": 124,
+   "n_fandoms_any": 44,
+   "n_fandoms_valid": 3,
+   "r_density": "",
+   "p_density": "",
+   "rho_density": "",
+   "r_sum": "",
+   "mean_loyalty_density": "",
+   "mean_spillover_density": ""
+  },
+  {
+   "year": 2016,
+   "n_sentences": 192,
+   "n_fandoms_any": 49,
+   "n_fandoms_valid": 2,
+   "r_density": "",
+   "p_density": "",
+   "rho_density": "",
+   "r_sum": "",
+   "mean_loyalty_density": "",
+   "mean_spillover_density": ""
+  },
+  {
+   "year": 2017,
+   "n_sentences": 159,
+   "n_fandoms_any": 52,
+   "n_fandoms_valid": 2,
+   "r_density": "",
+   "p_density": "",
+   "rho_density": "",
+   "r_sum": "",
+   "mean_loyalty_density": "",
+   "mean_spillover_density": ""
+  },
+  {
+   "year": 2018,
+   "n_sentences": 211,
+   "n_fandoms_any": 56,
+   "n_fandoms_valid": 7,
+   "r_density": "",
+   "p_density": "",
+   "rho_density": "",
+   "r_sum": "",
+   "mean_loyalty_density": "",
+   "mean_spillover_density": ""
+  },
+  {
+   "year": 2019,
+   "n_sentences": 231,
+   "n_fandoms_any": 56,
+   "n_fandoms_valid": 9,
+   "r_density": "",
+   "p_density": "",
+   "rho_density": "",
+   "r_sum": "",
+   "mean_loyalty_density": "",
+   "mean_spillover_density": ""
+  },
+  {
+   "year": 2020,
+   "n_sentences": 272,
+   "n_fandoms_any": 69,
+   "n_fandoms_valid": 7,
+   "r_density": "",
+   "p_density": "",
+   "rho_density": "",
+   "r_sum": "",
+   "mean_loyalty_density": "",
+   "mean_spillover_density": ""
+  },
+  {
+   "year": 2021,
+   "n_sentences": 215,
+   "n_fandoms_any": 69,
+   "n_fandoms_valid": 4,
+   "r_density": "",
+   "p_density": "",
+   "rho_density": "",
+   "r_sum": "",
+   "mean_loyalty_density": "",
+   "mean_spillover_density": ""
+  },
+  {
+   "year": 2022,
+   "n_sentences": 351,
+   "n_fandoms_any": 77,
+   "n_fandoms_valid": 11,
+   "r_density": "",
+   "p_density": "",
+   "rho_density": "",
+   "r_sum": "",
+   "mean_loyalty_density": "",
+   "mean_spillover_density": ""
+  },
+  {
+   "year": 2023,
+   "n_sentences": 487,
+   "n_fandoms_any": 82,
+   "n_fandoms_valid": 23,
+   "r_density": 0.3107,
+   "p_density": 0.149,
+   "rho_density": 0.3179,
+   "r_sum": 0.2515,
+   "mean_loyalty_density": 1.7718,
+   "mean_spillover_density": 1.6652
+  },
+  {
+   "year": 2024,
+   "n_sentences": 735,
+   "n_fandoms_any": 97,
+   "n_fandoms_valid": 28,
+   "r_density": 0.0181,
+   "p_density": 0.9273,
+   "rho_density": 0.0834,
+   "r_sum": 0.6245,
+   "mean_loyalty_density": 1.8284,
+   "mean_spillover_density": 1.8219
+  },
+  {
+   "year": 2025,
+   "n_sentences": 1258,
+   "n_fandoms_any": 100,
+   "n_fandoms_valid": 64,
+   "r_density": 0.2763,
+   "p_density": 0.0271,
+   "rho_density": 0.2893,
+   "r_sum": 0.4469,
+   "mean_loyalty_density": 1.8632,
+   "mean_spillover_density": 1.7815
+  },
+  {
+   "year": 2026,
+   "n_sentences": 1523,
+   "n_fandoms_any": 96,
+   "n_fandoms_valid": 71,
+   "r_density": 0.275,
+   "p_density": 0.0203,
+   "rho_density": 0.2383,
+   "r_sum": 0.4697,
+   "mean_loyalty_density": 1.8277,
+   "mean_spillover_density": 1.7564
+  }
+ ],
+ "settings": {
+  "years": [
+   2015,
+   2026
+  ],
+  "min_cell": 5,
+  "min_axis": 3,
+  "min_fandoms_year": 20,
+  "min_cells_trend": 4,
+  "bootstrap_B": 1000,
+  "seed": 0
+ }
+}

@@ -521,7 +521,7 @@ dr_df = pd.DataFrame(rows).sort_values(["총지역언급", "팬덤"], ascending=
 dr_df.to_csv(OUT_DIR / "domestic_regional_index_v7.csv", index=False, encoding="utf-8-sig")
 dr_df.index += 1
 n_zero = int((dr_df["총지역언급"] == 0).sum())
-print(f"저장: {OUT_DIR / 'domestic_regional_index_v7.json'} / .csv")
+print("저장: v7_final_10020/analysis/domestic_regional_index/domestic_regional_index_v7.json / .csv")
 print(f"팬덤 커버리지: {100 - n_zero}/100 (0건 팬덤 {n_zero}개: {list(dr_df[dr_df['총지역언급'] == 0]['팬덤'])})")
 print(f"검출 지역 수 합계(n_regions_hit 합): {int(dr_df['검출지역수'].sum())} / 1,700 | 총 지역언급 {int(dr_df['총지역언급'].sum())}건")
 dr_df.head(18)

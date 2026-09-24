@@ -1,6 +1,8 @@
 __pycache__/
 *.pyc
 output/
+# 시계열분석/ 은 결과 MD·R 코드가 output/ 의 CSV·그림을 참조하므로 커밋한다
+!시계열분석/output/
 .ipynb_checkpoints/
 
 # R 패키지 data/ 는 저장소 원본(data/v7_final)에서 실행 시 복사되는 사본 — member_mention_pilot_v7.json 만 커밋
